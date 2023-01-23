@@ -1,0 +1,40 @@
+.header {
+  height: 56px;
+
+  margin: 0 auto;
+  padding: 0 24px;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  background: #ffffff;
+  border-bottom: 1px solid #f1f1f1;
+
+  &_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    height: 100%;
+  }
+
+  &_box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-bottom: 41px;
+  text-align: center;
+  margin-top: 80px;
+  font-size: 14px;
+  color: #a6a6a6;
+}
