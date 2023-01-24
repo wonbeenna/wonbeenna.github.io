@@ -1,4 +1,6 @@
-const fetchPosts = async () => {
+import {postsPerPage} from "../config";
+
+const fetchPosts = async ({ offset = 0, limit = postsPerPage, category = '' } = {}) => {
 	const posts = await Promise.all(
 		Object.entries(import.meta.glob('/src/lib/_posts/**/*.md')).map(async ([path, resolver]) => {
 			const { metadata } = await resolver();
@@ -7,8 +9,21 @@ const fetchPosts = async () => {
 		})
 	);
 
-	const sortedPosts = posts
-		.sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)))
+	let sortedPosts = posts.sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)));
+
+	if (category) {
+		sortedPosts = sortedPosts.filter(post => post.category === category)
+	}
+
+	if (offset) {
+		sortedPosts = sortedPosts.slice(offset)
+	}
+
+	if (limit && limit < sortedPosts.length && limit != -1) {
+		sortedPosts = sortedPosts.slice(0, limit)
+	}
+
+	sortedPosts = sortedPosts
 		.map((post) => ({
 			slug: post.slug,
 			title: post.title,

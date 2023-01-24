@@ -1,6 +1,7 @@
 <script>
 	import PostCard from "$lib/components/Posts/PostCard.svelte";
 	import "$lib/styles/_main.scss"
+	import Pagination from "$lib/components/Posts/Pagination.svelte";
 	export let data
 </script>
 
@@ -21,4 +22,5 @@
 				category={post.category}
 		/>
 	{/each}
+	<Pagination currentPage={1} totalPosts={data.total} />
 </ol>
