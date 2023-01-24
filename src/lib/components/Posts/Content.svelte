@@ -3,4 +3,5 @@
     export let content;
 </script>
 
-<svelte:component this={content} />
+{@html content}
+

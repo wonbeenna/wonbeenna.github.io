@@ -1,8 +1,8 @@
 import {postsPerPage} from "../config";
 
-const fetchPosts = async ({ offset = 0, limit = postsPerPage, category = '' } = {}) => {
+const fetchPosts = async ({ offset = 0, limit, category = '' } = {}) => {
 	const posts = await Promise.all(
-		Object.entries(import.meta.glob('/src/lib/_posts/**/*.md')).map(async ([path, resolver]) => {
+		Object.entries(import.meta.glob('/src/lib/_posts/*.md')).map(async ([path, resolver]) => {
 			const { metadata } = await resolver();
 			const slug = path.split('/').pop()?.slice(0, -3);
 			return { ...metadata, slug };

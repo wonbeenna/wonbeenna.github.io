@@ -1,12 +1,12 @@
 import { postsPerPage } from '$lib/config'
+import fetchPosts from '$lib/utils/fetchPosts'
 import { redirect } from '@sveltejs/kit'
-import fetchPosts from "$lib/utils/fetchPosts";
 
 export const load = async ({ url, params, fetch }) => {
   const page = parseInt(params.page) || 1
 
   if (page <= 1) {
-    throw redirect(301, '/')
+    throw redirect(301, '/blog')
   }
 
   let offset = (page * postsPerPage) - postsPerPage
