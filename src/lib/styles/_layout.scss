@@ -1,6 +1,5 @@
 .header {
   height: 56px;
-
   margin: 0 auto;
   padding: 0 24px;
 
@@ -17,6 +16,7 @@
     justify-content: space-between;
     margin: auto;
     height: 100%;
+    max-width: 970px;
   }
 
   &_box {

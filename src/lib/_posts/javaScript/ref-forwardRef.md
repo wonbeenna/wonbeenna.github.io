@@ -46,7 +46,7 @@ const [test, setTest] = useState('')
 
 위와같이 state로 상태를 관리하게 되면, state가 변하면서 이를 업데이트 하기 위해 계속해서 리렌더링이 된다.
 
-<img src="javaScript/ref.gif" width="100%" alt="post image"/>
+<img src="ref.gif" width="100%" alt="post image"/>
 
 이는 React에서 제어하는 컴포넌트다.
 
@@ -60,7 +60,7 @@ const [test, setTest] = useState('')
     <input ref={inputRef} onChange={(e) => testHandler(e)} />
 ```
 
-<img src="javaScript/ref(1).gif" width="100%" alt="post image"/>
+<img src="ref(1).gif" width="100%" alt="post image"/>
 
 ref를 사용하면 인풋값이 변경되어도 리렌더링이 발생하지 않는다.
 

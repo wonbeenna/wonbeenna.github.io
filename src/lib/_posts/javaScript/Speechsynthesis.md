@@ -27,7 +27,7 @@ speechSynthesis.getVoices();
 로 지원하는 음성 목록을 확인할 수 있다.
 
 
-<img src="javaScript/speechsynthesis.png" width="100%" alt="post image"/>
+<img src="speechsynthesis.png" width="100%" alt="post image"/>
 
 문제는,, 브라우저마다 또는 OS마다 지원하는 음성이 달라서 모두 동일하지 못했다,
 

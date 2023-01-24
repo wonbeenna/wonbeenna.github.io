@@ -40,7 +40,7 @@ package.json / script
 "build": "ANALYZE=true next build",
 ```
 
-<img src="javaScript/bundle-analyzer.png" width="100%" alt="bundle-analyzer"/>
+<img src="bundle-analyzer.png" width="100%" alt="bundle-analyzer"/>
 
 
 이런식으로 html이 실행된다.

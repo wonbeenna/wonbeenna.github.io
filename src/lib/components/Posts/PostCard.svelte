@@ -5,10 +5,11 @@
     export let titleImage
     export let date
     export let path
+    export let category
 </script>
 
 <li class="card">
-    <a class="card_link" href={`/blog/${path}`}>
+    <a class="card_link" href={`/blog/${category}/${path}`}>
         <div class="card_image_wrapper">
             <img class="card_image"
                  src={titleImage}

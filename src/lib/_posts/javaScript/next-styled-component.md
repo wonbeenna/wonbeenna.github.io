@@ -10,7 +10,7 @@ Nextjs에서 styled-components를 사용하면 서버상에서 html을 불러온
 
 이때 초기 페이지 로딩시 사용자가 보게 되는 화면은, 스타일링이 전혀 적용되지않은 html문서를 잠깐 보게 되는 문제가 있다.
 
-<img src="javaScript/next-styled-component.png" width="100%" alt="post image"/>
+<img src="next-styled-component.png" width="100%" alt="post image"/>
 
 네트워크 탭에서 받아온 문서(페이지)를 보면 style에 관한 정보는 없고, html만 내려온다.
 
@@ -110,4 +110,4 @@ return {
 }
 ```
 
-<img src="javaScript/next-styled-component(1).png" width="100%" alt="post image"/>
+<img src="next-styled-component(1).png" width="100%" alt="post image"/>

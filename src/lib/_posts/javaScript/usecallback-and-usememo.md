@@ -50,7 +50,7 @@ export default App;
 
 위와 같은 코드에서 App에 state가 변경되기 때문에 Count도 렌더링 될것이다.
 
-<img src="javaScript/use.gif" width="100%" alt="post image"/>
+<img src="use.gif" width="100%" alt="post image"/>
 
 부모컴포넌트의 state가 변경되었고,
 
@@ -83,7 +83,7 @@ const handleClick = useCallback(() => {
 
 useCallback으로 감싸주면 handleClick은 메모이제이션되어 새로 생성되지않고, props로 전달되기 때문에 리렌더링이 발생하지 않는다.
 
-<img src="javaScript/use(1).gif" width="100%" alt="post image"/>
+<img src="use(1).gif" width="100%" alt="post image"/>
 
 ---
 

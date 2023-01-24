@@ -13,16 +13,13 @@
          <a href="/">
             <img src={logo} width="60" height="56" alt="logo" />
          </a>
+      </div>
+      <div class="header_box">
          <div class="header_box">
-            <a href="/blog">
-               <h3>Blog</h3>
-            </a>
             <a href="/about">
                <h3>About</h3>
             </a>
          </div>
-      </div>
-      <div class="header_box">
          <a href={'https://github.com/wonbeenna'} target="_blank" rel="noopener noreferrer">
             <img src={github}
                  alt="github"

@@ -1,8 +1,8 @@
 const fetchPosts = async () => {
 	const posts = await Promise.all(
-		Object.entries(import.meta.glob('/src/lib/_posts/*.md')).map(async ([path, resolver]) => {
+		Object.entries(import.meta.glob('/src/lib/_posts/**/*.md')).map(async ([path, resolver]) => {
 			const { metadata } = await resolver();
-			const slug = path.split('/').pop().slice(0, -3);
+			const slug = path.split('/').pop()?.slice(0, -3);
 			return { ...metadata, slug };
 		})
 	);
