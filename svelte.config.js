@@ -5,6 +5,8 @@ import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import autoprefixer from 'autoprefixer';
 
+const dev = process.env.NODE_ENV === 'development';
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
@@ -25,7 +27,13 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		prerender: {
+			entries: ['/api/posts.json', '/api/posts/count', '/api/posts/page/[page]', '/blog/category', '/blog/category/[category]', '/blog/page', '/blog/page/[page]']
+		},
+		paths: {
+			base: dev ? '' : '/been-blog',
+		}
 	}
 };
 

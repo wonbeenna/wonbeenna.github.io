@@ -1,15 +1,15 @@
 <script>
     import '$lib/styles/_post.scss'
+    import {base} from "$app/paths";
     export let title
     export let description
     export let titleImage
     export let date
     export let path
-    export let category
 </script>
 
 <li class="card">
-    <a class="card_link" href={`/blog/${path}`}>
+    <a class="card_link" href={`${base}/blog/${path}`}>
         <div class="card_image_wrapper">
             <img class="card_image"
                  src={titleImage}

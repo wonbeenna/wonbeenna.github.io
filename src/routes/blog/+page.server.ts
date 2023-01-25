@@ -1,13 +1,14 @@
 import { postsPerPage } from "$lib/config";
 import fetchPosts from "$lib/utils/fetchPosts";
+import {base} from "$app/paths";
 
-export const load = async ({ url }) => {
+export const load = async ({ fetch }) => {
 	const options = {
 		limit: postsPerPage
 	}
 	const { posts } = await fetchPosts(options)
 
-	const totalRes = await fetch(`${url.origin}/api/posts/count`)
+	const totalRes = await fetch(`${base}/api/posts/count`)
 	const total = await totalRes.json()
 
 	return { posts, total };

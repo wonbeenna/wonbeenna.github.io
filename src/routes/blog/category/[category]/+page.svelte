@@ -1,6 +1,7 @@
 <script>
   	import { postsPerPage } from '$lib/config.js'
 	import PostList from "$lib/components/Posts/PostList.svelte";
+	import {base} from "$app/paths";
 
 	export let data
     const { page, posts, category, total } = data
@@ -22,5 +23,5 @@
 {:else}
 	<p><strong>Ope!</strong> Sorry, couldn't find any posts in the category "{category}".</p>
 
-	<p><a href="/blog">Back to blog</a></p>
+	<p><a href="{base}/blog">Back to blog</a></p>
 {/if}

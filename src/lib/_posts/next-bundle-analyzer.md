@@ -3,7 +3,7 @@ title: next/bundle-analyzer
 date: 2022-02-22
 description: next/bundle-analyzer로 번들 크기 확인하기
 category: javaScript
-titleImage: /postIcon/logo192.png
+titleImage: /been-blog/postIcon/logo192.png
 ---
 
 
@@ -40,7 +40,7 @@ package.json / script
 "build": "ANALYZE=true next build",
 ```
 
-<img src="bundle-analyzer.png" width="100%" alt="bundle-analyzer"/>
+<img src="/been-blog/blog/javaScript/bundle-analyzer.png" width="100%" alt="bundle-analyzer"/>
 
 
 이런식으로 html이 실행된다.

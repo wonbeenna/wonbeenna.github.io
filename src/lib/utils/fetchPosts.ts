@@ -1,4 +1,4 @@
-import {postsPerPage} from "../config";
+import {postsPerPage} from "$lib/config";
 
 const fetchPosts = async ({ offset = 0, limit = postsPerPage, category = '' } = {}) => {
 	const posts = await Promise.all(

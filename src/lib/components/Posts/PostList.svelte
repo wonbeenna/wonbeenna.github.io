@@ -12,7 +12,6 @@
                 description={post.description}
                 titleImage={post.titleImage}
                 date={post.date}
-                category={post.category}
         />
     {/each}
 </ol>

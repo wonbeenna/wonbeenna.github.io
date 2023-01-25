@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>{data.title}</title>
+	<title>{data.meta.title}</title>
 </svelte:head>
 
 <Post data={data} />

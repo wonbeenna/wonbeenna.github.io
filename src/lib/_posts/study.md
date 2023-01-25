@@ -3,7 +3,7 @@ title: 6주간 스터디하며 배운것들
 date: 2022-10-21
 description: 6주간 진행한 스터디에서 얻은 것들
 category: til
-titleImage: /postIcon/til.webp
+titleImage: /been-blog/postIcon/til.webp
 ---
 
 ### 1\. Utility Type

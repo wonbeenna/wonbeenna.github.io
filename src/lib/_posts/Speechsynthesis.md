@@ -3,7 +3,7 @@ title: Speechsynthesis & Google TTS
 date: 2022-01-22
 description: 프로젝트 진행하며 경험해본 Speechsynthesis & Google TTS
 category: javaScript
-titleImage: /postIcon/logo192.png
+titleImage: /been-blog/postIcon/logo192.png
 ---
 
 이번에 유지보수하면서 진행했던 TTS (Text-to-Speech)
@@ -27,7 +27,7 @@ speechSynthesis.getVoices();
 로 지원하는 음성 목록을 확인할 수 있다.
 
 
-<img src="speechsynthesis.png" width="100%" alt="post image"/>
+<img src="/been-blog/blog/javaScript/speechsynthesis.png" width="100%" alt="post image"/>
 
 문제는,, 브라우저마다 또는 OS마다 지원하는 음성이 달라서 모두 동일하지 못했다,
 

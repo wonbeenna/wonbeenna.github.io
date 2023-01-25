@@ -3,14 +3,14 @@ title: Next.js styled-component 적용 문제에 대해(_document.tsx)
 date: 2022-08-22
 description: next.js와 styled-component 사용시 발생한 에러
 category: javaScript
-titleImage: /postIcon/Nextjs.svg
+titleImage: /been-blog/postIcon/Nextjs.svg
 ---
 
 Nextjs에서 styled-components를 사용하면 서버상에서 html을 불러온 뒤, hydrate과정에서 js를 입혀 스타일이 적용된다.
 
 이때 초기 페이지 로딩시 사용자가 보게 되는 화면은, 스타일링이 전혀 적용되지않은 html문서를 잠깐 보게 되는 문제가 있다.
 
-<img src="next-styled-component.png" width="100%" alt="post image"/>
+<img src="/been-blog/blog/javaScript/next-styled-component.png" width="100%" alt="post image"/>
 
 네트워크 탭에서 받아온 문서(페이지)를 보면 style에 관한 정보는 없고, html만 내려온다.
 
@@ -110,4 +110,4 @@ return {
 }
 ```
 
-<img src="next-styled-component(1).png" width="100%" alt="post image"/>
+<img src="/been-blog/blog/javaScript/next-styled-component(1).png" width="100%" alt="post image"/>

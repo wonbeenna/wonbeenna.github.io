@@ -3,7 +3,7 @@ title: IntersectionObserver로 데이터 요청해보기
 date: 2022-05-04
 description: IntersectionObserver를 활용해 스크롤 위치에서 데이터 불러오기
 category: javaScript
-titleImage: /postIcon/logo192.png
+titleImage: /been-blog/postIcon/logo192.png
 ---
 
 프로젝트를 진행하면서, 프로필 페이지에 유저정보와 포인트, 펫정보, 관심사 등 세로로 길게~~배치된 UI, 각각의 정보들을 서버에서 데이터를 하나하나 받아와 보여줘야 했다.
@@ -20,7 +20,7 @@ titleImage: /postIcon/logo192.png
 
 이전에 강의에서 이미지 Lazy로딩을 배웠었는데, 이미지 대신에 데이터 요청을 해보면 어떨까 생각했다.
 
-<img src="intersectionObserver.png" width="100%" alt="post image">
+<img src="/been-blog/blog/javaScript/intersectionObserver.png" width="100%" alt="post image">
 
 컴포넌트가 마운트 되자마자 모든 데이터들이 요청된다.
 
@@ -99,7 +99,7 @@ const {userKeywords, isValidating, error} = useUserKeywords(loaded)
 
 ref에 사용자의 view가 도달하면 userKeywords를 요청해 데이터를 받아온다.
 
-<img src="intersectionObserver(1).gif" width="100%" alt="post image">
+<img src="/been-blog/blog/javaScript/intersectionObserver(1).gif" width="100%" alt="post image">
 
 과거에는 getBoundingClientRect() 를 사용해 구현했다고 하는데, 리플로우 현상이나 성능면에서 보완하고자 요즘엔 intersection Observer를 사용해 타겟을 관찰한다고 한다. 
 

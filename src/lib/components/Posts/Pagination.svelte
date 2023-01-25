@@ -1,33 +1,13 @@
 <script>
 	import { postsPerPage } from '$lib/config.js'
-	import { page } from '$lib/utils/store'
+	import {base} from "$app/paths";
 
 	export let currentPage
 	export let totalPosts
-	export let path = '/blog/page'
-
-	let postPage;
-
-	page.subscribe(value => {
-		postPage = value;
-	})
+	export let path = `/blog/page`
 
 	let pagesAvailable
 	$: pagesAvailable = Math.ceil(totalPosts / postsPerPage)
-
-	const handlePrevPage = () => {
-		if(postPage <= 1){
-			return;
-		}
-		page.update(n => n - 1);
-	}
-
-	const handleNextPage = () => {
-		if(postPage >= pagesAvailable){
-			return;
-		}
-		page.update(n => n + 1);
-	}
 </script>
 
 {#key currentPage}
@@ -35,12 +15,12 @@
 		<nav class="pagination" aria-label="Pagination navigation">
 			<ul class="pagination_list_wrapper">
 				<li>
-					<a href="{path}/{postPage}" on:click={handlePrevPage}>
+					<a href="{base}{path}/{currentPage <= 1 ? currentPage : currentPage - 1}">
 						이전 페이지
 					</a>
 				</li>
 				<li>
-					<a href="{path}/{postPage}" on:click={handleNextPage}>
+					<a href="{base}{path}/{currentPage >= pagesAvailable ? currentPage : currentPage + 1}">
 						다음 페이지
 					</a>
 				</li>
