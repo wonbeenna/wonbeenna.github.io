@@ -6,7 +6,7 @@ export const load = async ({ params }) => {
 
 		return {
 			PostContent: post.default.render().html,
-			meta: { ...post.metadata, slug: params.post }
+			meta: { ...post.metadata, date: new Intl.DateTimeFormat('ko-KR').format(new Date(post.metadata.date)), slug: params.post }
 		}
 	} catch(err) {
 		throw error(404, err)

@@ -130,3 +130,20 @@
     }
   }
 }
+
+.pagination {
+
+  &_list{
+    &_wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+    }
+  }
+
+  &_link {
+  }
+}

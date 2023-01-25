@@ -1,7 +1,7 @@
 import { postsPerPage } from "$lib/config";
 import fetchPosts from "$lib/utils/fetchPosts";
 
-export const load = async ({url}) => {
+export const load = async ({ url }) => {
 	const options = {
 		limit: postsPerPage
 	}

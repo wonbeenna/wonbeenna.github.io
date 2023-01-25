@@ -1,6 +1,8 @@
-export const load = async ({ url, fetch }) => {
-	const res = await fetch(`${url.origin}/api/posts.json`)
-	let posts = await res.json()
+import fetchPosts from "$lib/utils/fetchPosts"
+
+export const load = async () => {
+	const options = { limit: -1 }
+	const { posts } = await fetchPosts(options)
 
 	let uniqueCategories = {}
 
