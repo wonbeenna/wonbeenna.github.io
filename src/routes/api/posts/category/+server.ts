@@ -7,7 +7,7 @@ export const GET = async () => {
     const options = { limit: -1 }
     const { posts } = await fetchPosts(options)
 
-    let uniqueCategories = {}
+    const uniqueCategories = {}
 
     posts.forEach(post => {
         if (uniqueCategories.hasOwnProperty(post.category)) {

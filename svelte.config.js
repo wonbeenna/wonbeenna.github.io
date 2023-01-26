@@ -29,7 +29,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		prerender: {
-			entries: ['/api/posts.json', '/api/posts/count', '/api/posts/page/[page]', '/api/posts/category', '/blog/category/[category]', '/blog/page', '/blog/page/[page]']
+			entries: ['*', '/api/posts.json', '/api/posts/count', '/api/posts/page/[page]', '/api/posts/category', '/page/[page]', '/blog/category/[category]']
 		},
 		paths: {
 			base: dev ? '' : '/been-blog',

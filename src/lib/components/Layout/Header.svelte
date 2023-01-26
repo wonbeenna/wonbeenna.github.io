@@ -23,11 +23,6 @@
             <img src={`${base}/icons/been-logo.svg`} width="60" height="56" alt="logo" />
          </a>
          <div class="header_box">
-            <a href="{base}/blog">
-               <h3>Blog</h3>
-            </a>
-         </div>
-         <div class="header_box">
             <a href="{base}/about">
                <h3>About</h3>
             </a>

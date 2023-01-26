@@ -7,7 +7,7 @@ export const load = async ({ params, fetch }) => {
   const page = parseInt(params.page) || 1
 
   if (page <= 1) {
-    throw redirect(301, `${base}/blog`)
+    throw redirect(301, `${base}`)
   }
 
   const offset = (page * postsPerPage) - postsPerPage

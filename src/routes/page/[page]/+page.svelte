@@ -23,5 +23,5 @@
 
 	<p>Sorry, no posts to show here.</p>
 
-	<a href="{base}/blog">Back to blog</a>
+	<a href="{base}">Back to blog</a>
 {/if}
