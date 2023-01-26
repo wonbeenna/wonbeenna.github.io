@@ -7,8 +7,7 @@
   top: 0;
   z-index: 10;
 
-  background: #ffffff;
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid var(--gray--200);
 
   &_section {
     display: flex;
@@ -36,5 +35,5 @@
   text-align: center;
   margin-top: 80px;
   font-size: 14px;
-  color: #a6a6a6;
+  color: var(--gray--600);
 }

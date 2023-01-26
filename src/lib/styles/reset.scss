@@ -1,3 +1,39 @@
+:root {
+    --primary-gradient-01: #2ca2b4;
+    --primary-gradient-02: #7f87ff;
+    --primary-gradient-03: #5598de;
+    --primary-gradient-04: #f65aad;
+    --primary-gradient-05: #ec3d43;
+
+    --white: #ffffff;
+    --black: #333333;
+
+    --gray--100: #f7f7f7;
+    --gray--200: #f1f1f1;
+    --gray--300: #e7e7e7;
+    --gray--400: #dddddd;
+    --gray--500: #c7c7c7;
+    --gray--600: #a6a6a6;
+    --gray--700: #858585;
+    --gray--800: #777777;
+    --gray--900: #626262;
+
+    --bg-gray: #fff;
+    --bg-color: #fff;
+}
+
+[data-theme="dark"] {
+    --primary-color: #2b3f63;
+    --bg-gray: #242526;
+    --bg-color: #1c1a1d;
+    --black: #ddd;
+    --gray--700: var(--gray--500);
+}
+
+header {
+    background-color: var(--bg-gray);
+}
+
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
@@ -6,6 +42,9 @@ html {
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+
+    background-color: var(--bg-color);
+    color: var(--black);
 }
 
 main {
@@ -15,16 +54,6 @@ main {
 h1 {
     font-size: 2em;
     margin: 0.67em 0;
-    color: #333333;
-}
-
-h2,
-h3,
-span,
-div,
-li,
-p {
-    color: #333333;
 }
 
 hr {
@@ -50,6 +79,7 @@ abbr[title] {
 b,
 strong {
     font-weight: bolder;
+    word-wrap: break-word;
 }
 
 code,
