@@ -146,3 +146,15 @@
     }
   }
 }
+
+.category {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0 0 50px;
+  border-bottom: 1px solid var(--gray--300);
+
+  &_list {
+    font-size: 18px;
+  }
+}

@@ -1,13 +1,9 @@
 <script>
-  	import { postsPerPage } from '$lib/config.js'
 	import PostList from "$lib/components/Posts/PostList.svelte";
 	import {base} from "$app/paths";
 
 	export let data
     const { page, posts, category, total } = data
-
-	$: lowerBound = (page * postsPerPage) - (postsPerPage - 1) || 1
-	$: upperBound = Math.min(page * postsPerPage, total)
 </script>
 
 

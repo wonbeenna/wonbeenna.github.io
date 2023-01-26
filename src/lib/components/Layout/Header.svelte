@@ -3,7 +3,7 @@
     import {base} from "$app/paths";
     import { onMount } from 'svelte';
 
-    let currentTheme;
+    $: currentTheme = 'light';
 
     const setTheme = (theme) => {
        currentTheme = theme;

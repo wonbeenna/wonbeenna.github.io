@@ -11,5 +11,8 @@ export const load = async ({ fetch }) => {
 	const totalRes = await fetch(`${base}/api/posts/count`)
 	const total = await totalRes.json()
 
-	return { posts, total };
+	const categoriesRes = await fetch(`${base}/api/posts/category`)
+	const categories = await categoriesRes.json();
+
+	return { posts, total, categories };
 };
