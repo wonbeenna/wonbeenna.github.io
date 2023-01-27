@@ -1,5 +1,5 @@
 <script>
-	import { postsPerPage } from '$lib/config.js'
+	import { postsPerPage } from '$lib/config.ts'
 	import {base} from "$app/paths";
 
 	export let currentPage
