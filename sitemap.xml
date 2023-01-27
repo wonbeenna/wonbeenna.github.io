@@ -3,62 +3,62 @@
     
     <sitemap>
       <loc>https://wonbeenna.github.io/been-blog/blog/conditional-rendering</loc>
-      <lastmod>{p.date}</lastmod>
+      <lastmod>2022. 12. 29.</lastmod>
     </sitemap>
   
     <sitemap>
       <loc>https://wonbeenna.github.io/been-blog/blog/usecallback-and-usememo</loc>
-      <lastmod>{p.date}</lastmod>
+      <lastmod>2022. 12. 28.</lastmod>
     </sitemap>
   
     <sitemap>
       <loc>https://wonbeenna.github.io/been-blog/blog/study</loc>
-      <lastmod>{p.date}</lastmod>
+      <lastmod>2022. 10. 21.</lastmod>
     </sitemap>
   
     <sitemap>
       <loc>https://wonbeenna.github.io/been-blog/blog/next-styled-component</loc>
-      <lastmod>{p.date}</lastmod>
+      <lastmod>2022. 8. 22.</lastmod>
     </sitemap>
   
     <sitemap>
       <loc>https://wonbeenna.github.io/been-blog/blog/intersectionObserver</loc>
-      <lastmod>{p.date}</lastmod>
+      <lastmod>2022. 5. 4.</lastmod>
     </sitemap>
   
     <sitemap>
       <loc>https://wonbeenna.github.io/been-blog/blog/next-bundle-analyzer</loc>
-      <lastmod>{p.date}</lastmod>
+      <lastmod>2022. 2. 22.</lastmod>
     </sitemap>
   
     <sitemap>
       <loc>https://wonbeenna.github.io/been-blog/blog/ref-forwardRef</loc>
-      <lastmod>{p.date}</lastmod>
+      <lastmod>2022. 2. 9.</lastmod>
     </sitemap>
   
     <sitemap>
       <loc>https://wonbeenna.github.io/been-blog/blog/Speechsynthesis</loc>
-      <lastmod>{p.date}</lastmod>
+      <lastmod>2022. 1. 22.</lastmod>
     </sitemap>
   
     <sitemap>
       <loc>https://wonbeenna.github.io/been-blog/blog/svelte-react</loc>
-      <lastmod>{p.date}</lastmod>
+      <lastmod>2021. 12. 12.</lastmod>
     </sitemap>
   
     <sitemap>
       <loc>https://wonbeenna.github.io/been-blog/blog/thinking-in-react-2</loc>
-      <lastmod>{p.date}</lastmod>
+      <lastmod>2021. 12. 12.</lastmod>
     </sitemap>
   
     <sitemap>
       <loc>https://wonbeenna.github.io/been-blog/blog/thinking-in-react</loc>
-      <lastmod>{p.date}</lastmod>
+      <lastmod>2021. 11. 20.</lastmod>
     </sitemap>
   
     <sitemap>
       <loc>https://wonbeenna.github.io/been-blog/blog/react-hook</loc>
-      <lastmod>{p.date}</lastmod>
+      <lastmod>2021. 11. 7.</lastmod>
     </sitemap>
   
     </sitemapindex>
