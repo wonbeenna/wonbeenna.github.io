@@ -1,1 +1,1 @@
-<div class="footer">Copyright © Been.</div>
+<footer class="footer">Copyright © Been.</footer>
