@@ -26,4 +26,39 @@
       <lastmod>Wed May 04 2022 00:00:00 GMT+0900 (대한민국 표준시)</lastmod>
     </sitemap>
   
+    <sitemap>
+      <loc>https://wonbeenna.github.io/been-blog/blog/next-bundle-analyzer</loc>
+      <lastmod>Tue Feb 22 2022 00:00:00 GMT+0900 (대한민국 표준시)</lastmod>
+    </sitemap>
+  
+    <sitemap>
+      <loc>https://wonbeenna.github.io/been-blog/blog/ref-forwardRef</loc>
+      <lastmod>Wed Feb 09 2022 00:00:00 GMT+0900 (대한민국 표준시)</lastmod>
+    </sitemap>
+  
+    <sitemap>
+      <loc>https://wonbeenna.github.io/been-blog/blog/Speechsynthesis</loc>
+      <lastmod>Sat Jan 22 2022 00:00:00 GMT+0900 (대한민국 표준시)</lastmod>
+    </sitemap>
+  
+    <sitemap>
+      <loc>https://wonbeenna.github.io/been-blog/blog/svelte-react</loc>
+      <lastmod>Sun Dec 12 2021 00:00:00 GMT+0900 (대한민국 표준시)</lastmod>
+    </sitemap>
+  
+    <sitemap>
+      <loc>https://wonbeenna.github.io/been-blog/blog/thinking-in-react-2</loc>
+      <lastmod>Sun Dec 12 2021 00:00:00 GMT+0900 (대한민국 표준시)</lastmod>
+    </sitemap>
+  
+    <sitemap>
+      <loc>https://wonbeenna.github.io/been-blog/blog/thinking-in-react</loc>
+      <lastmod>Sat Nov 20 2021 00:00:00 GMT+0900 (대한민국 표준시)</lastmod>
+    </sitemap>
+  
+    <sitemap>
+      <loc>https://wonbeenna.github.io/been-blog/blog/react-hook</loc>
+      <lastmod>Sun Nov 07 2021 00:00:00 GMT+0900 (대한민국 표준시)</lastmod>
+    </sitemap>
+  
     </sitemapindex>
