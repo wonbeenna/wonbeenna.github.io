@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Been</title>
+        <link>undefined</link>
+        <description>Been dev-note</description>
+        <lastBuildDate>Fri, 27 Jan 2023 17:12:47 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>ko</language>
+        <copyright>Copyright ©Been</copyright>
+        <item>
+            <title><![CDATA[리액트 조건부 렌더링에 대한 생각]]></title>
+            <link>https://wonbeenna.github.io/been-blog/blog/conditional-rendering</link>
+            <guid>conditional-rendering</guid>
+            <pubDate>Wed, 28 Dec 2022 15:00:00 GMT</pubDate>
+            <description><![CDATA[해외 블로그를 보며 정리한 조건부 렌더링에 대한 생각]]></description>
+        </item>
+        <item>
+            <title><![CDATA[useCallback, useMemo 무조건 좋은가?]]></title>
+            <link>https://wonbeenna.github.io/been-blog/blog/usecallback-and-usememo</link>
+            <guid>usecallback-and-usememo</guid>
+            <pubDate>Tue, 27 Dec 2022 15:00:00 GMT</pubDate>
+            <description><![CDATA[useCallback과 useMemo에 대한 생각 정리]]></description>
+        </item>
+        <item>
+            <title><![CDATA[6주간 스터디하며 배운것들]]></title>
+            <link>https://wonbeenna.github.io/been-blog/blog/study</link>
+            <guid>study</guid>
+            <pubDate>Thu, 20 Oct 2022 15:00:00 GMT</pubDate>
+            <description><![CDATA[6주간 진행한 스터디에서 얻은 것들]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Next.js styled-component 적용 문제에 대해(_document.tsx)]]></title>
+            <link>https://wonbeenna.github.io/been-blog/blog/next-styled-component</link>
+            <guid>next-styled-component</guid>
+            <pubDate>Sun, 21 Aug 2022 15:00:00 GMT</pubDate>
+            <description><![CDATA[next.js와 styled-component 사용시 발생한 에러]]></description>
+        </item>
+        <item>
+            <title><![CDATA[IntersectionObserver로 데이터 요청해보기]]></title>
+            <link>https://wonbeenna.github.io/been-blog/blog/intersectionObserver</link>
+            <guid>intersectionObserver</guid>
+            <pubDate>Tue, 03 May 2022 15:00:00 GMT</pubDate>
+            <description><![CDATA[IntersectionObserver를 활용해 스크롤 위치에서 데이터 불러오기]]></description>
+        </item>
+    </channel>
+</rss>
