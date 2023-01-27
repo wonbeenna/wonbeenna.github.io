@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>Been</title>
-        <link>undefined</link>
+        <title>Been blog</title>
+        <link>https://wonbeenna.github.io/been-blog/</link>
         <description>Been dev-note</description>
-        <lastBuildDate>Fri, 27 Jan 2023 17:26:25 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 27 Jan 2023 17:34:01 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ko</language>
@@ -12,84 +12,84 @@
         <item>
             <title><![CDATA[리액트 조건부 렌더링에 대한 생각]]></title>
             <link>https://wonbeenna.github.io/been-blog/blog/conditional-rendering</link>
-            <guid>conditional-rendering</guid>
+            <guid>https://wonbeenna.github.io/been-blog/blog/conditional-rendering</guid>
             <pubDate>Wed, 28 Dec 2022 15:00:00 GMT</pubDate>
             <description><![CDATA[해외 블로그를 보며 정리한 조건부 렌더링에 대한 생각]]></description>
         </item>
         <item>
             <title><![CDATA[useCallback, useMemo 무조건 좋은가?]]></title>
             <link>https://wonbeenna.github.io/been-blog/blog/usecallback-and-usememo</link>
-            <guid>usecallback-and-usememo</guid>
+            <guid>https://wonbeenna.github.io/been-blog/blog/usecallback-and-usememo</guid>
             <pubDate>Tue, 27 Dec 2022 15:00:00 GMT</pubDate>
             <description><![CDATA[useCallback과 useMemo에 대한 생각 정리]]></description>
         </item>
         <item>
             <title><![CDATA[6주간 스터디하며 배운것들]]></title>
             <link>https://wonbeenna.github.io/been-blog/blog/study</link>
-            <guid>study</guid>
+            <guid>https://wonbeenna.github.io/been-blog/blog/study</guid>
             <pubDate>Thu, 20 Oct 2022 15:00:00 GMT</pubDate>
             <description><![CDATA[6주간 진행한 스터디에서 얻은 것들]]></description>
         </item>
         <item>
             <title><![CDATA[Next.js styled-component 적용 문제에 대해(_document.tsx)]]></title>
             <link>https://wonbeenna.github.io/been-blog/blog/next-styled-component</link>
-            <guid>next-styled-component</guid>
+            <guid>https://wonbeenna.github.io/been-blog/blog/next-styled-component</guid>
             <pubDate>Sun, 21 Aug 2022 15:00:00 GMT</pubDate>
             <description><![CDATA[next.js와 styled-component 사용시 발생한 에러]]></description>
         </item>
         <item>
             <title><![CDATA[IntersectionObserver로 데이터 요청해보기]]></title>
             <link>https://wonbeenna.github.io/been-blog/blog/intersectionObserver</link>
-            <guid>intersectionObserver</guid>
+            <guid>https://wonbeenna.github.io/been-blog/blog/intersectionObserver</guid>
             <pubDate>Tue, 03 May 2022 15:00:00 GMT</pubDate>
             <description><![CDATA[IntersectionObserver를 활용해 스크롤 위치에서 데이터 불러오기]]></description>
         </item>
         <item>
             <title><![CDATA[next/bundle-analyzer]]></title>
             <link>https://wonbeenna.github.io/been-blog/blog/next-bundle-analyzer</link>
-            <guid>next-bundle-analyzer</guid>
+            <guid>https://wonbeenna.github.io/been-blog/blog/next-bundle-analyzer</guid>
             <pubDate>Mon, 21 Feb 2022 15:00:00 GMT</pubDate>
             <description><![CDATA[next/bundle-analyzer로 번들 크기 확인하기]]></description>
         </item>
         <item>
             <title><![CDATA[리액트 ref 와 forwardRef (with. react-hook-form)]]></title>
             <link>https://wonbeenna.github.io/been-blog/blog/ref-forwardRef</link>
-            <guid>ref-forwardRef</guid>
+            <guid>https://wonbeenna.github.io/been-blog/blog/ref-forwardRef</guid>
             <pubDate>Tue, 08 Feb 2022 15:00:00 GMT</pubDate>
             <description><![CDATA[react-hook-form 라이브러리와 ref의 동작]]></description>
         </item>
         <item>
             <title><![CDATA[Speechsynthesis & Google TTS]]></title>
             <link>https://wonbeenna.github.io/been-blog/blog/Speechsynthesis</link>
-            <guid>Speechsynthesis</guid>
+            <guid>https://wonbeenna.github.io/been-blog/blog/Speechsynthesis</guid>
             <pubDate>Fri, 21 Jan 2022 15:00:00 GMT</pubDate>
             <description><![CDATA[프로젝트 진행하며 경험해본 Speechsynthesis & Google TTS]]></description>
         </item>
         <item>
             <title><![CDATA[스벨트와 리액트]]></title>
             <link>https://wonbeenna.github.io/been-blog/blog/svelte-react</link>
-            <guid>svelte-react</guid>
+            <guid>https://wonbeenna.github.io/been-blog/blog/svelte-react</guid>
             <pubDate>Sat, 11 Dec 2021 15:00:00 GMT</pubDate>
             <description><![CDATA[스벨트와 리액트에 대해 정리한 글]]></description>
         </item>
         <item>
             <title><![CDATA[React 처럼 생각하기(2)]]></title>
             <link>https://wonbeenna.github.io/been-blog/blog/thinking-in-react-2</link>
-            <guid>thinking-in-react-2</guid>
+            <guid>https://wonbeenna.github.io/been-blog/blog/thinking-in-react-2</guid>
             <pubDate>Sat, 11 Dec 2021 15:00:00 GMT</pubDate>
             <description><![CDATA[리액트 문서 보며 정리]]></description>
         </item>
         <item>
             <title><![CDATA[React 처럼 생각하기]]></title>
             <link>https://wonbeenna.github.io/been-blog/blog/thinking-in-react</link>
-            <guid>thinking-in-react</guid>
+            <guid>https://wonbeenna.github.io/been-blog/blog/thinking-in-react</guid>
             <pubDate>Fri, 19 Nov 2021 15:00:00 GMT</pubDate>
             <description><![CDATA[리액트 문서 보며 정리]]></description>
         </item>
         <item>
             <title><![CDATA[React Hook의 동작]]></title>
             <link>https://wonbeenna.github.io/been-blog/blog/react-hook</link>
-            <guid>react-hook</guid>
+            <guid>https://wonbeenna.github.io/been-blog/blog/react-hook</guid>
             <pubDate>Sat, 06 Nov 2021 15:00:00 GMT</pubDate>
             <description><![CDATA[React Hook의 동작에 대해]]></description>
         </item>
