@@ -11,12 +11,12 @@
       xmlns:xhtml="http://www.w3.org/1999/xhtml"
     >
         <url>
-            <loc>"https://wonbeenna.github.io/been-blog/"</loc>
+            <loc>https://wonbeenna.github.io/been-blog/</loc>
             <priority>1.0</priority>
         </url>
         
         <url>
-            <loc>"https://wonbeenna.github.io/been-blog/abote"</loc>
+            <loc>https://wonbeenna.github.io/been-blog/about</loc>
             <priority>1.0</priority>
         </url>
         
