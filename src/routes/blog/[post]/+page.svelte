@@ -14,7 +14,7 @@
     		description: data.meta.description,
     		images: [
     		  {
-    		   url: `https://wonbeenna.github.io/${data.meta.titleImage}`,
+    		   url: `https://wonbeenna.github.io${data.meta.titleImage}`,
  		       alt: 'titleImage'
  		     },
  		   ],
