@@ -10,8 +10,8 @@
 </script>
 
 <svelte:head>
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="{base}/rss.xml" />
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="{base}/sitemap.xml" />
+    <link rel="alternate" type="application/rss+xml" href="{base}/rss.xml" />
+    <link rel="sitemap" type="application/xml" href="{base}/sitemap.xml" />
 </svelte:head>
 
 <Header />
