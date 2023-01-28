@@ -12,6 +12,15 @@
 <svelte:head>
 	<link rel="alternate" type="application/rss+xml" href="/rss.xml" />
 	<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+	<script async src="https://www.googletagmanager.com/gtag/js?id={import.meta.env.VITE_GOOGLE_GTAG}"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'G-N720D51XEK');
+	</script>
 </svelte:head>
 
 <Header />
