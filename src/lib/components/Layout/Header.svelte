@@ -30,7 +30,7 @@
 		<div class="header_box">
 			<a href={'https://github.com/wonbeenna'} target="_blank" rel="noopener noreferrer">
 				<img
-					src={currentTheme === 'dark' ? `$/icons/github-light.svg` : `/icons/github.svg`}
+					src={currentTheme === 'dark' ? `/icons/github-light.svg` : `/icons/github.svg`}
 					alt="github"
 					width={30}
 					height={30}
