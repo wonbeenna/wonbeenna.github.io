@@ -11,132 +11,132 @@
       xmlns:xhtml="http://www.w3.org/1999/xhtml"
     >
         <url>
-            <loc>https://wonbeenna.github.io/been-blog/</loc>
+            <loc>https://wonbeenna.github.io/</loc>
             <priority>1.0</priority>
         </url>
         
         <url>
-            <loc>https://wonbeenna.github.io/been-blog/about</loc>
+            <loc>https://wonbeenna.github.io/about</loc>
             <priority>1.0</priority>
         </url>
         
     
     <url>
-      <loc>https://wonbeenna.github.io/been-blog/blog/react-testing-4</loc>
+      <loc>https://wonbeenna.github.io/blog/react-testing-4</loc>
       <lastmod>2023-01-01T15:00:00.000Z</lastmod>
       <priority>1.0</priority>
     </url>
   
     <url>
-      <loc>https://wonbeenna.github.io/been-blog/blog/conditional-rendering</loc>
+      <loc>https://wonbeenna.github.io/blog/conditional-rendering</loc>
       <lastmod>2022-12-28T15:00:00.000Z</lastmod>
       <priority>1.0</priority>
     </url>
   
     <url>
-      <loc>https://wonbeenna.github.io/been-blog/blog/usecallback-and-usememo</loc>
+      <loc>https://wonbeenna.github.io/blog/usecallback-and-usememo</loc>
       <lastmod>2022-12-27T15:00:00.000Z</lastmod>
       <priority>1.0</priority>
     </url>
   
     <url>
-      <loc>https://wonbeenna.github.io/been-blog/blog/react-testing-3</loc>
+      <loc>https://wonbeenna.github.io/blog/react-testing-3</loc>
       <lastmod>2022-12-25T15:00:00.000Z</lastmod>
       <priority>1.0</priority>
     </url>
   
     <url>
-      <loc>https://wonbeenna.github.io/been-blog/blog/react-testing-2</loc>
+      <loc>https://wonbeenna.github.io/blog/react-testing-2</loc>
       <lastmod>2022-12-13T15:00:00.000Z</lastmod>
       <priority>1.0</priority>
     </url>
   
     <url>
-      <loc>https://wonbeenna.github.io/been-blog/blog/react-testing-1</loc>
+      <loc>https://wonbeenna.github.io/blog/react-testing-1</loc>
       <lastmod>2022-12-09T15:00:00.000Z</lastmod>
       <priority>1.0</priority>
     </url>
   
     <url>
-      <loc>https://wonbeenna.github.io/been-blog/blog/study</loc>
+      <loc>https://wonbeenna.github.io/blog/study</loc>
       <lastmod>2022-10-20T15:00:00.000Z</lastmod>
       <priority>1.0</priority>
     </url>
   
     <url>
-      <loc>https://wonbeenna.github.io/been-blog/blog/storybook</loc>
+      <loc>https://wonbeenna.github.io/blog/storybook</loc>
       <lastmod>2022-10-10T15:00:00.000Z</lastmod>
       <priority>1.0</priority>
     </url>
   
     <url>
-      <loc>https://wonbeenna.github.io/been-blog/blog/next-styled-component</loc>
+      <loc>https://wonbeenna.github.io/blog/next-styled-component</loc>
       <lastmod>2022-08-21T15:00:00.000Z</lastmod>
       <priority>1.0</priority>
     </url>
   
     <url>
-      <loc>https://wonbeenna.github.io/been-blog/blog/intersectionObserver</loc>
+      <loc>https://wonbeenna.github.io/blog/intersectionObserver</loc>
       <lastmod>2022-05-03T15:00:00.000Z</lastmod>
       <priority>1.0</priority>
     </url>
   
     <url>
-      <loc>https://wonbeenna.github.io/been-blog/blog/next-bundle-analyzer</loc>
+      <loc>https://wonbeenna.github.io/blog/next-bundle-analyzer</loc>
       <lastmod>2022-02-21T15:00:00.000Z</lastmod>
       <priority>1.0</priority>
     </url>
   
     <url>
-      <loc>https://wonbeenna.github.io/been-blog/blog/ref-forwardRef</loc>
+      <loc>https://wonbeenna.github.io/blog/ref-forwardRef</loc>
       <lastmod>2022-02-08T15:00:00.000Z</lastmod>
       <priority>1.0</priority>
     </url>
   
     <url>
-      <loc>https://wonbeenna.github.io/been-blog/blog/Speechsynthesis</loc>
+      <loc>https://wonbeenna.github.io/blog/Speechsynthesis</loc>
       <lastmod>2022-01-21T15:00:00.000Z</lastmod>
       <priority>1.0</priority>
     </url>
   
     <url>
-      <loc>https://wonbeenna.github.io/been-blog/blog/web-optimization-3</loc>
+      <loc>https://wonbeenna.github.io/blog/web-optimization-3</loc>
       <lastmod>2022-01-03T15:00:00.000Z</lastmod>
       <priority>1.0</priority>
     </url>
   
     <url>
-      <loc>https://wonbeenna.github.io/been-blog/blog/web-optimization-2</loc>
+      <loc>https://wonbeenna.github.io/blog/web-optimization-2</loc>
       <lastmod>2022-01-02T15:00:00.000Z</lastmod>
       <priority>1.0</priority>
     </url>
   
     <url>
-      <loc>https://wonbeenna.github.io/been-blog/blog/web-optimization</loc>
+      <loc>https://wonbeenna.github.io/blog/web-optimization</loc>
       <lastmod>2021-12-31T15:00:00.000Z</lastmod>
       <priority>1.0</priority>
     </url>
   
     <url>
-      <loc>https://wonbeenna.github.io/been-blog/blog/svelte-react</loc>
+      <loc>https://wonbeenna.github.io/blog/svelte-react</loc>
       <lastmod>2021-12-11T15:00:00.000Z</lastmod>
       <priority>1.0</priority>
     </url>
   
     <url>
-      <loc>https://wonbeenna.github.io/been-blog/blog/thinking-in-react-2</loc>
+      <loc>https://wonbeenna.github.io/blog/thinking-in-react-2</loc>
       <lastmod>2021-12-11T15:00:00.000Z</lastmod>
       <priority>1.0</priority>
     </url>
   
     <url>
-      <loc>https://wonbeenna.github.io/been-blog/blog/thinking-in-react</loc>
+      <loc>https://wonbeenna.github.io/blog/thinking-in-react</loc>
       <lastmod>2021-11-19T15:00:00.000Z</lastmod>
       <priority>1.0</priority>
     </url>
   
     <url>
-      <loc>https://wonbeenna.github.io/been-blog/blog/react-hook</loc>
+      <loc>https://wonbeenna.github.io/blog/react-hook</loc>
       <lastmod>2021-11-06T15:00:00.000Z</lastmod>
       <priority>1.0</priority>
     </url>
