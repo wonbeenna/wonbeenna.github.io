@@ -8,14 +8,20 @@
 		<link href="../../_app/immutable/assets/_layout-3f947a59.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/_main-13531142.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/_post-337fee93.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../_app/immutable/start-dea8f78c.js">
+		<link rel="modulepreload" href="../../_app/immutable/start-05deedb1.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/index-1a5c47a3.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons-0421c9ef.js">
-		<link rel="modulepreload" href="../../_app/immutable/components/pages/_layout.svelte-fb0575ac.js">
+		<link rel="modulepreload" href="../../_app/immutable/components/pages/_layout.svelte-6bf0b28d.js">
 		<link rel="modulepreload" href="../../_app/immutable/modules/pages/_layout.ts-0e5b168f.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/_layout-6a830c33.js">
 		<link rel="modulepreload" href="../../_app/immutable/components/pages/blog/_category_/_post_/_page.svelte-55632d16.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/MetaTags-bd417668.js"><title>리액트 테스팅(4)</title><!-- HEAD_svelte-nnkqs9_START --><link rel="alternate" type="application/rss+xml" href="/rss.xml"><link rel="sitemap" type="application/xml" href="/sitemap.xml"><!-- HEAD_svelte-nnkqs9_END --><!-- HEAD_svelte-1h7w4y4_START --><meta name="robots" content="index,follow"><meta name="googlebot" content="index,follow"><meta name="description" content="jest와 react-testing-library"><meta property="og:url" content="https://wonbeenna.github.io/blog/javaScript/react-testing-4">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/MetaTags-bd417668.js"><title>리액트 테스팅(4)</title><!-- HEAD_svelte-1pdu3v9_START --><link rel="alternate" type="application/rss+xml" href="/rss.xml"><link rel="sitemap" type="application/xml" href="/sitemap.xml"><!-- HEAD_svelte-1pdu3v9_END --><!-- HEAD_svelte-opaqrw_START --><script async src="https://www.googletagmanager.com/gtag/js?id=G-N720D51XEK"></script><script>window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'G-N720D51XEK');
+	</script><!-- HEAD_svelte-opaqrw_END --><!-- HEAD_svelte-1h7w4y4_START --><meta name="robots" content="index,follow"><meta name="googlebot" content="index,follow"><meta name="description" content="jest와 react-testing-library"><meta property="og:url" content="https://wonbeenna.github.io/blog/javaScript/react-testing-4">
 
     
 
@@ -36,6 +42,7 @@
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
+
 
 
 
@@ -373,14 +380,14 @@
 <footer class="footer">Copyright © Been.</footer>
 
 
-		<script type="module" data-sveltekit-hydrate="18bmwl9">
-			import { start } from "../../_app/immutable/start-dea8f78c.js";
+		<script type="module" data-sveltekit-hydrate="161qryv">
+			import { start } from "../../_app/immutable/start-05deedb1.js";
 
 			start({
 				env: {},
 				paths: {"assets":"","base":""},
-				target: document.querySelector('[data-sveltekit-hydrate="18bmwl9"]').parentNode,
-				version: "1674938811100",
+				target: document.querySelector('[data-sveltekit-hydrate="161qryv"]').parentNode,
+				version: "1674941071082",
 				hydrate: {
 					node_ids: [0, 6],
 					data: [null,{type:"data",data:{PostContent:"\u003Ch3 id=\"provider-테스팅-해보기\"\u003E\u003Ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#provider-테스팅-해보기\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003EProvider 테스팅 해보기\u003C\u002Fh3\u003E\n\u003Cpre class=\"language-js\"\u003E\u003C!-- HTML_TAG_START --\u003E\u003Ccode class=\"language-js\"\u003E\u003Cspan class=\"token function\"\u003Erender\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E&lt;\u003C\u002Fspan\u003EOptions optionType\u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\"token string\"\u003E\"scoops\"\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E\u002F\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E\u003E\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\u003Cspan class=\"token literal-property property\"\u003Ewrapper\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E OrderDetailsProvider\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C!-- HTML_TAG_END --\u003E\u003C\u002Fpre\u003E\n\u003Cp\u003E테스트 wrapper에 Provider로 감싸주면 된다.\u003C\u002Fp\u003E\n\u003Cp\u003E여기서는 redux나 recoil 등 다른 라이브러리도 가능\u003C\u002Fp\u003E\n\u003Chr\u003E\n\u003Cp\u003E전역적으로도 사용이 가능\u003C\u002Fp\u003E\n\u003Cpre class=\"language-js\"\u003E\u003C!-- HTML_TAG_START --\u003E\u003Ccode class=\"language-js\"\u003E\u003Cspan class=\"token keyword\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003Erender\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E'@testing-library\u002Freact'\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\u003Cspan class=\"token keyword\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003EOrderDetailsProvider\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E'..\u002Fcontexts\u002FOrderDetails'\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E \u003Cspan class=\"token function-variable function\"\u003ErenderWithContext\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003E\u003Cspan class=\"token parameter\"\u003Eui\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E options\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E=\u003E\u003C\u002Fspan\u003E \u003Cspan class=\"token function\"\u003Erender\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Eui\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\u003Cspan class=\"token literal-property property\"\u003Ewrapper\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E OrderDetailsProvider\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E...\u003C\u002Fspan\u003Eoptions\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Eexport\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E*\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E'@testing-library\u002Freact'\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Eexport\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003ErenderWithContext \u003Cspan class=\"token keyword\"\u003Eas\u003C\u002Fspan\u003E render\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C!-- HTML_TAG_END --\u003E\u003C\u002Fpre\u003E",meta:{title:"리액트 테스팅(4)",date:"2023. 1. 2.",description:"jest와 react-testing-library",category:"javaScript",titleImage:"\u002FpostIcon\u002Ftest.png",slug:"react-testing-4"}},uses:{params:["category","post"]}}],
