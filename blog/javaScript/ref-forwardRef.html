@@ -5,17 +5,16 @@
 		<link rel="icon" href="../../favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content="">
-		<link href="../../_app/immutable/assets/_layout-a2aafea5.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/_layout-3f947a59.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/_main-13531142.css" rel="stylesheet">
-		<link href="../../_app/immutable/assets/_page-1c11e0db.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/_post-337fee93.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../_app/immutable/start-d3cd90a4.js">
+		<link rel="modulepreload" href="../../_app/immutable/start-41af2fe1.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/index-cde32f97.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons-f83ae44e.js">
-		<link rel="modulepreload" href="../../_app/immutable/components/pages/_layout.svelte-fab78e83.js">
+		<link rel="modulepreload" href="../../_app/immutable/components/pages/_layout.svelte-c2bbfb53.js">
 		<link rel="modulepreload" href="../../_app/immutable/modules/pages/_layout.ts-0e5b168f.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/_layout-6a830c33.js">
-		<link rel="modulepreload" href="../../_app/immutable/components/pages/blog/_category_/_post_/_page.svelte-acb802e0.js">
+		<link rel="modulepreload" href="../../_app/immutable/components/pages/blog/_category_/_post_/_page.svelte-e4094703.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/MetaTags-81b6e252.js"><title>리액트 ref 와 forwardRef (with. react-hook-form)</title><!-- HEAD_svelte-1pdu3v9_START --><link rel="alternate" type="application/rss+xml" href="/rss.xml"><link rel="sitemap" type="application/xml" href="/sitemap.xml"><!-- HEAD_svelte-1pdu3v9_END --><!-- HEAD_svelte-1h7w4y4_START --><meta name="robots" content="index,follow"><meta name="googlebot" content="index,follow"><meta name="description" content="react-hook-form 라이브러리와 ref의 동작"><meta property="og:url" content="https://wonbeenna.github.io/blog/javaScript/ref-forwardRef">
 
     
@@ -52,7 +51,7 @@
 <article><aside><div class="post_title_wrapper"><h1 class="post_title">리액트 ref 와 forwardRef (with. react-hook-form)</h1>
 			<h2 class="card_post_description">react-hook-form 라이브러리와 ref의 동작</h2>
 			<p class="card_post_date">2022. 2. 9.</p></div>
-		<!-- HTML_TAG_START --><p>이번 새로운 프로젝트에 사용하게 된 react-hook-form과 씨름하면서 정리해본 ref와 react-hook-form의 간단한 원리에 대해 정리해보자.</p>
+		<!-- HTML_TAG_START --><div><p>이번 새로운 프로젝트에 사용하게 된 react-hook-form과 씨름하면서 정리해본 ref와 react-hook-form의 간단한 원리에 대해 정리해보자.</p>
 <hr>
 <h3 id="ref란"><a aria-hidden="true" tabindex="-1" href="#ref란"><span class="icon icon-link"></span></a><strong>ref</strong>란?</h3>
 <p>React에서는 props를 통해서만 부모와 자식간의 컴포넌트에 상호작용을 할 수 있다.</p>
@@ -106,19 +105,323 @@
   return &lt;input ref=&#123;ref&#125; /&gt;;
 &#125;);</code><!-- HTML_TAG_END --></pre>
 <hr>
-<p>ref는 특정 DOM에 접근해 애니메이션을 이용할때만 주로 사용했었는데, 이번 기회에 조금 더 자세하게 들여다 본것 같다.🤔</p><!-- HTML_TAG_END --></aside></article></main>
+<p>ref는 특정 DOM에 접근해 애니메이션을 이용할때만 주로 사용했었는데, 이번 기회에 조금 더 자세하게 들여다 본것 같다.🤔</p></div>
+<style>
+    code[class*='language-'],
+    pre[class*='language-'] {
+    color: #e3eaf2 !important;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    hyphens: none;
+    border-radius: 12px;
+    }
+
+    pre[class*='language-']::-moz-selection,
+    pre[class*='language-'] ::-moz-selection,
+    code[class*='language-']::-moz-selection,
+    code[class*='language-'] ::-moz-selection {
+    background: #3c526d !important;
+    }
+
+    pre[class*='language-']::-moz-selection, pre[class*='language-'] ::-moz-selection, code[class*='language-']::-moz-selection, code[class*='language-'] ::-moz-selection {
+    background: #3c526d !important;
+    }
+
+    pre[class*='language-']::selection,
+    pre[class*='language-'] ::selection,
+    code[class*='language-']::selection,
+    code[class*='language-'] ::selection {
+    background: #3c526d !important;
+    }
+
+    /* Code blocks */
+    pre[class*='language-'] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+    }
+
+    :not(pre) > code[class*='language-'],
+    pre[class*='language-'] {
+    background: #111b27 !important;
+    }
+
+    /* Inline code */
+    :not(pre) > code[class*='language-'] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    white-space: normal;
+    }
+
+    .code-line {
+    color: #e3eaf2 !important;
+    }
+
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+    color: #8da1b9 !important;
+    }
+
+    .token.punctuation {
+    color: #e3eaf2 !important;
+    }
+
+    .token.delimiter.important,
+    .token.selector .parent,
+    .token.tag,
+    .token.tag .token.punctuation {
+    color: #66cccc !important;
+    }
+
+    .token.attr-name,
+    .token.boolean,
+    .token.boolean.important,
+    .token.number,
+    .token.constant,
+    .token.selector .token.attribute {
+    color: #e6d37a !important;
+    }
+
+    .token.class-name,
+    .token.key,
+    .token.parameter,
+    .token.property,
+    .token.property-access,
+    .token.variable {
+    color: #6cb8e6 !important;
+    }
+
+    .token.attr-value,
+    .token.inserted,
+    .token.color,
+    .token.selector .token.value,
+    .token.string,
+    .token.string .token.url-link {
+    color: #91d076 !important;
+    }
+
+    .token.builtin,
+    .token.keyword-array,
+    .token.package,
+    .token.regex {
+    color: #f4adf4 !important;
+    }
+
+    .token.function,
+    .token.selector .token.class,
+    .token.selector .token.id,
+    .token.maybe-class-name {
+    color: #c699e3 !important;
+    }
+
+    .token.atrule .token.rule,
+    .token.combinator,
+    .token.keyword,
+    .token.operator,
+    .token.pseudo-class,
+    .token.pseudo-element,
+    .token.selector,
+    .token.unit {
+    color: #e9ae7e !important;
+    }
+
+    .token.deleted,
+    .token.important {
+    color: #cd6660 !important;
+    }
+
+    .token.keyword-this,
+    .token.this {
+    color: #6cb8e6 !important;
+    }
+
+    .token.important,
+    .token.keyword-this,
+    .token.this,
+    .token.bold {
+    font-weight: bold;
+    }
+
+    .token.delimiter.important {
+    font-weight: inherit;
+    }
+
+    .token.italic {
+    font-style: italic;
+    }
+
+    .token.entity {
+    cursor: help;
+    }
+
+    .language-markdown .token.title,
+    .language-markdown .token.title .token.punctuation {
+    color: #6cb8e6 !important;
+    font-weight: bold;
+    }
+
+    .language-markdown .token.blockquote.punctuation {
+    color: #f4adf4 !important;
+    }
+
+    .language-markdown .token.code {
+    color: #66cccc !important;
+    }
+
+    .language-markdown .token.hr.punctuation {
+    color: #6cb8e6 !important;
+    }
+
+    .language-markdown .token.url .token.content {
+    color: #91d076 !important;
+    }
+
+    .language-markdown .token.url-link {
+    color: #e6d37a !important;
+    }
+
+    .language-markdown .token.list.punctuation {
+    color: #f4adf4 !important;
+    }
+
+    .language-markdown .token.table-header {
+    color: #e3eaf2 !important;
+    }
+
+    .language-json .token.operator {
+    color: #e3eaf2;
+    }
+
+    .language-scss .token.variable {
+    color: #66cccc !important;
+    }
+
+    .token.token.tab:not(:empty):before,
+    .token.token.cr:before,
+    .token.token.lf:before,
+    .token.token.space:before {
+    color: #8da1b9 !important;
+    }
+
+    /* overrides color-values for the Toolbar plugin
+       * https://prismjs.com/plugins/toolbar/
+       */
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > a,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > button {
+    color: #111b27 !important;
+    background: #6cb8e6 !important;
+    }
+
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:hover,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:focus,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:hover,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:focus {
+    color: #111b27 !important;
+    background: #6cb8e6da !important;
+    text-decoration: none;
+    }
+
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > span,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:hover,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:focus {
+    color: #111b27 !important;
+    background: #8da1b9 !important;
+    }
+
+    .line-highlight.line-highlight {
+    background: #3c526d5f !important;
+    background: linear-gradient(to right, #3c526d5f 70%, #3c526d55) !important;
+    }
+
+    .line-highlight.line-highlight:before,
+    .line-highlight.line-highlight[data-end]:after {
+    background-color: #8da1b9 !important;
+    color: #111b27 !important;
+    box-shadow: 0 1px #3c526d !important;
+    }
+
+    pre[id].linkable-line-numbers.linkable-line-numbers span.line-numbers-rows > span:hover:before {
+    background-color: #8da1b918 !important;
+    }
+
+    .line-numbers.line-numbers .line-numbers-rows {
+    border-right: 1px solid #0b121b !important;
+    background: #0b121b7a !important;
+    }
+
+    .line-numbers .line-numbers-rows > span:before {
+    color: #8da1b9da !important;
+    }
+
+    .rainbow-braces .token.token.punctuation.brace-level-1,
+    .rainbow-braces .token.token.punctuation.brace-level-5,
+    .rainbow-braces .token.token.punctuation.brace-level-9 {
+    color: #e6d37a !important;
+    }
+
+    .rainbow-braces .token.token.punctuation.brace-level-2,
+    .rainbow-braces .token.token.punctuation.brace-level-6,
+    .rainbow-braces .token.token.punctuation.brace-level-10 {
+    color: #f4adf4;
+    }
+
+    .rainbow-braces .token.token.punctuation.brace-level-3,
+    .rainbow-braces .token.token.punctuation.brace-level-7,
+    .rainbow-braces .token.token.punctuation.brace-level-11 {
+    color: #6cb8e6 !important;
+    }
+
+    .rainbow-braces .token.token.punctuation.brace-level-4,
+    .rainbow-braces .token.token.punctuation.brace-level-8,
+    .rainbow-braces .token.token.punctuation.brace-level-12 {
+    color: #c699e3 !important;
+    }
+
+    pre.diff-highlight > code .token.token.deleted:not(.prefix),
+    pre > code.diff-highlight .token.token.deleted:not(.prefix) {
+    background-color: #cd66601f !important;
+    }
+
+    pre.diff-highlight > code .token.token.inserted:not(.prefix),
+    pre > code.diff-highlight .token.token.inserted:not(.prefix) {
+    background-color: #91d0761f !important;
+    }
+
+    .command-line .command-line-prompt {
+    border-right: 1px solid #0b121b !important;
+    }
+
+    .command-line .command-line-prompt > span:before {
+    color: #8da1b9da !important;
+    }
+
+    .content-link{
+    color: var(--primary-color);
+    }</style><!-- HTML_TAG_END --></aside></article></main>
 
 <footer class="footer">Copyright © Been.</footer>
 
 
-		<script type="module" data-sveltekit-hydrate="1hu7vw">
-			import { start } from "../../_app/immutable/start-d3cd90a4.js";
+		<script type="module" data-sveltekit-hydrate="10i2j1l">
+			import { start } from "../../_app/immutable/start-41af2fe1.js";
 
 			start({
 				env: {},
 				paths: {"assets":"","base":""},
-				target: document.querySelector('[data-sveltekit-hydrate="1hu7vw"]').parentNode,
-				version: "1674933198624",
+				target: document.querySelector('[data-sveltekit-hydrate="10i2j1l"]').parentNode,
+				version: "1674934688395",
 				hydrate: {
 					node_ids: [0, 6],
 					data: [null,{type:"data",data:{PostContent:"\u003Cp\u003E이번 새로운 프로젝트에 사용하게 된 react-hook-form과 씨름하면서 정리해본 ref와 react-hook-form의 간단한 원리에 대해 정리해보자.\u003C\u002Fp\u003E\n\u003Chr\u003E\n\u003Ch3 id=\"ref란\"\u003E\u003Ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#ref란\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003Cstrong\u003Eref\u003C\u002Fstrong\u003E란?\u003C\u002Fh3\u003E\n\u003Cp\u003EReact에서는 props를 통해서만 부모와 자식간의 컴포넌트에 상호작용을 할 수 있다.\u003C\u002Fp\u003E\n\u003Cp\u003E자식 컴포넌트에 props를 전달해 props의 값이 변경되면 자식 컴포넌트는 다시 렌더링이 된다.\u003C\u002Fp\u003E\n\u003Cp\u003E그러나 props를 통한 방법이 아닌 직접적으로 자식 컴포넌트를 수정해야되는 일이 생길 수 있는데..\u003C\u002Fp\u003E\n\u003Ch3 id=\"ref를-사용해야-할-때\"\u003E\u003Ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#ref를-사용해야-할-때\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003ERef를 사용해야 할 때\u003C\u002Fh3\u003E\n\u003Cul\u003E\u003Cli\u003E포커스, 텍스트 선택영역, 혹은 미디어의 재생을 관리할 때.\u003C\u002Fli\u003E\n\u003Cli\u003E애니메이션을 직접적으로 실행시킬 때.\u003C\u002Fli\u003E\n\u003Cli\u003E서드 파티 DOM 라이브러리를 React와 같이 사용할 때.\u003C\u002Fli\u003E\u003C\u002Ful\u003E\n\u003Cp\u003E우선 DOM에 직접적으로 접근하는 방법은 건너 뛰고, react-hook-form과 관련된 \u003Cstrong\u003E비제어 컴포넌트 제어\u003C\u002Fstrong\u003E에 관해 알아보자.\u003C\u002Fp\u003E\n\u003Cp\u003E\u003Cstrong\u003Ereact-hook-form\u003C\u002Fstrong\u003E의 가장 큰 목적은 퍼포먼스이며, \u003Cstrong\u003E비제어 컴포넌트\u003C\u002Fstrong\u003E를 사용하고 있기 때문에 다른 라이브러리(formik, redux-form 등) 에 비해 타이핑이나 값이 변경될 때 리랜더링이 일어나는 양을 줄여준다.\u003C\u002Fp\u003E\n\u003Cp\u003E여기서 비제어 컴포넌트란, \u003C\u002Fp\u003E\n\u003Cp\u003EReact에서 제어하지 않고, 바닐라 JS를 이용해 제어하는 컴포넌트를 비제어 컴포넌트라 한다.\u003C\u002Fp\u003E\n\u003Cp\u003E쉽게말해 React가 관여하지 않는다. (재조정, 비교 등)\u003C\u002Fp\u003E\n\u003Cp\u003E이런 비제어 컴포넌트를 제어하기 위해서, DOM에 접근하는 역할을 ref가 한다.\u003C\u002Fp\u003E\n\u003Cp\u003E예를들어\u003C\u002Fp\u003E\n\u003Cpre class=\"language-javascript\"\u003E\u003C!-- HTML_TAG_START --\u003E\u003Ccode class=\"language-javascript\"\u003E\u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E[\u003C\u002Fspan\u003Etest\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E setTest\u003Cspan class=\"token punctuation\"\u003E]\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\"token function\"\u003EuseState\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003E\u003Cspan class=\"token string\"\u003E''\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\n\u003Cspan class=\"token operator\"\u003E&lt;\u003C\u002Fspan\u003Einput value\u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003Etest\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E onChange\u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003E\u003Cspan class=\"token parameter\"\u003Ee\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E=\u003E\u003C\u002Fspan\u003E \u003Cspan class=\"token function\"\u003EsetTest\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Ee\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003Etarget\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003Evalue\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E\u002F\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C!-- HTML_TAG_END --\u003E\u003C\u002Fpre\u003E\n\u003Cp\u003E위와같이 state로 상태를 관리하게 되면, state가 변하면서 이를 업데이트 하기 위해 계속해서 리렌더링이 된다.\u003C\u002Fp\u003E\n\u003Cimg src=\"\u002Fblog\u002FjavaScript\u002Fref.gif\" width=\"100%\" alt=\"post image\"\u003E\n\u003Cp\u003E이는 React에서 제어하는 컴포넌트다.\u003C\u002Fp\u003E\n\u003Cp\u003E그러면 굳이 인풋에 값만 변하는건데 불필요한 리렌더링이 필요하지 않을 수 있다.\u003C\u002Fp\u003E\n\u003Cpre class=\"language-undefined\"\u003E\u003C!-- HTML_TAG_START --\u003E\u003Ccode class=\"language-undefined\"\u003E  const inputRef = useRef(null)\n  const testHandler = (e) =&gt; &#123;\n    inputRef.current.value = e.target.value\n  &#125;\n    &lt;input ref=&#123;inputRef&#125; onChange=&#123;(e) =&gt; testHandler(e)&#125; \u002F&gt;\u003C\u002Fcode\u003E\u003C!-- HTML_TAG_END --\u003E\u003C\u002Fpre\u003E\n\u003Cimg src=\"\u002Fblog\u002FjavaScript\u002Fref(1).gif\" width=\"100%\" alt=\"post image\"\u003E\n\u003Cp\u003Eref를 사용하면 인풋값이 변경되어도 리렌더링이 발생하지 않는다.\u003C\u002Fp\u003E\n\u003Chr\u003E\n\u003Ch3 id=\"ref-와-함수형-컴포넌트\"\u003E\u003Ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#ref-와-함수형-컴포넌트\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003ERef 와 함수형 컴포넌트\u003C\u002Fh3\u003E\n\u003Cul\u003E\u003Cli\u003E함수 컴포넌트는 인스턴스가 없기 때문에 \u003Cstrong\u003E함수 컴포넌트에 ref 어트리뷰트를 사용할 수 없습니다\u003C\u002Fstrong\u003E.\u003C\u002Fli\u003E\u003C\u002Ful\u003E\n\u003Cp\u003E사실 위 예제는 클래스형 컴포넌트에서 작성해야 적합했지만, 함수형 컴포넌트에서도 ref는 사용할 수 있다.\u003C\u002Fp\u003E\n\u003Cp\u003E다만 상태값이 바뀔 때 마다 다시 실행되는 함수형 컴포넌트의 특성때문에 기존과는 다른 방식을 사용한다.\u003C\u002Fp\u003E\n\u003Cp\u003E위 예제에서 사용한 \u003Cstrong\u003EuseRef는 hook으로 함수의 렌더링의 상관없이\u003C\u002Fstrong\u003E 상태 값을 유지한다.\u003C\u002Fp\u003E\n\u003Chr\u003E\n\u003Ch3 id=\"forwardref\"\u003E\u003Ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#forwardref\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003EforwardRef\u003C\u002Fh3\u003E\n\u003Cp\u003Ereact-hook-form을 사용하면서 \u003C\u002Fp\u003E\n\u003Cp\u003E\u003Cstrong\u003EWarning: Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()?\u003C\u002Fstrong\u003E\u003C\u002Fp\u003E\n\u003Cp\u003E이런 에러를 만나게 됐는데, ref 기반으로 구성된 react-hook-form이 ref를 \u003Cstrong\u003E자식요소(인풋컴포넌트)에 전달\u003C\u002Fstrong\u003E하기 때문에 발생한 에러였다.\u003C\u002Fp\u003E\n\u003Cp\u003Eref는 React에서 props로 사용하지 못하는 것 중에 하나였는데, 대표적인 Key값과 동일하게 \u003Cstrong\u003Eprops로 사용할 수 없다\u003C\u002Fstrong\u003E.\u003C\u002Fp\u003E\n\u003Cp\u003EReact에서 ref를 props로 사용하려면 forwardRef를 사용해 자식요소로 ref를 전달할 수 있다.\u003C\u002Fp\u003E\n\u003Cp\u003E자식 컴포넌트를 forwardRef()함수로 감싸주고, props와 ref를 받아 사용할 수 있다.\u003C\u002Fp\u003E\n\u003Cpre class=\"language-undefined\"\u003E\u003C!-- HTML_TAG_START --\u003E\u003Ccode class=\"language-undefined\"\u003Econst Input = forwardRef((props, ref) =&gt; &#123;\n  return &lt;input ref=&#123;ref&#125; \u002F&gt;;\n&#125;);\u003C\u002Fcode\u003E\u003C!-- HTML_TAG_END --\u003E\u003C\u002Fpre\u003E\n\u003Cp\u003E추가로 eslint 에러나 개발자 도구에서 forwardRef사용시 이름이 나오지 않는 에러는\u003C\u002Fp\u003E\n\u003Cp\u003EdisplayName 속성에 이름을 설정하거나, 익명함수 대신 이름있는 함수를 넘겨 주면 된다.\u003C\u002Fp\u003E\n\u003Cpre class=\"language-undefined\"\u003E\u003C!-- HTML_TAG_START --\u003E\u003Ccode class=\"language-undefined\"\u003EInput.displayName = &quot;Input&quot;;\u003C\u002Fcode\u003E\u003C!-- HTML_TAG_END --\u003E\u003C\u002Fpre\u003E\n\u003Cpre class=\"language-undefined\"\u003E\u003C!-- HTML_TAG_START --\u003E\u003Ccode class=\"language-undefined\"\u003Econst Input = forwardRef(function Input(props, ref) &#123;\n  return &lt;input ref=&#123;ref&#125; \u002F&gt;;\n&#125;);\u003C\u002Fcode\u003E\u003C!-- HTML_TAG_END --\u003E\u003C\u002Fpre\u003E\n\u003Chr\u003E\n\u003Cp\u003Eref는 특정 DOM에 접근해 애니메이션을 이용할때만 주로 사용했었는데, 이번 기회에 조금 더 자세하게 들여다 본것 같다.🤔\u003C\u002Fp\u003E",meta:{title:"리액트 ref 와 forwardRef (with. react-hook-form)",date:"2022. 2. 9.",description:"react-hook-form 라이브러리와 ref의 동작",category:"javaScript",titleImage:"\u002FpostIcon\u002Flogo192.png",slug:"ref-forwardRef"}},uses:{params:["category","post"]}}],

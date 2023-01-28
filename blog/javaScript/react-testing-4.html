@@ -5,17 +5,16 @@
 		<link rel="icon" href="../../favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content="">
-		<link href="../../_app/immutable/assets/_layout-a2aafea5.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/_layout-3f947a59.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/_main-13531142.css" rel="stylesheet">
-		<link href="../../_app/immutable/assets/_page-1c11e0db.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/_post-337fee93.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../_app/immutable/start-d3cd90a4.js">
+		<link rel="modulepreload" href="../../_app/immutable/start-41af2fe1.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/index-cde32f97.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons-f83ae44e.js">
-		<link rel="modulepreload" href="../../_app/immutable/components/pages/_layout.svelte-fab78e83.js">
+		<link rel="modulepreload" href="../../_app/immutable/components/pages/_layout.svelte-c2bbfb53.js">
 		<link rel="modulepreload" href="../../_app/immutable/modules/pages/_layout.ts-0e5b168f.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/_layout-6a830c33.js">
-		<link rel="modulepreload" href="../../_app/immutable/components/pages/blog/_category_/_post_/_page.svelte-acb802e0.js">
+		<link rel="modulepreload" href="../../_app/immutable/components/pages/blog/_category_/_post_/_page.svelte-e4094703.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/MetaTags-81b6e252.js"><title>리액트 테스팅(4)</title><!-- HEAD_svelte-1pdu3v9_START --><link rel="alternate" type="application/rss+xml" href="/rss.xml"><link rel="sitemap" type="application/xml" href="/sitemap.xml"><!-- HEAD_svelte-1pdu3v9_END --><!-- HEAD_svelte-1h7w4y4_START --><meta name="robots" content="index,follow"><meta name="googlebot" content="index,follow"><meta name="description" content="jest와 react-testing-library"><meta property="og:url" content="https://wonbeenna.github.io/blog/javaScript/react-testing-4">
 
     
@@ -52,7 +51,7 @@
 <article><aside><div class="post_title_wrapper"><h1 class="post_title">리액트 테스팅(4)</h1>
 			<h2 class="card_post_description">jest와 react-testing-library</h2>
 			<p class="card_post_date">2023. 1. 2.</p></div>
-		<!-- HTML_TAG_START --><h3 id="provider-테스팅-해보기"><a aria-hidden="true" tabindex="-1" href="#provider-테스팅-해보기"><span class="icon icon-link"></span></a>Provider 테스팅 해보기</h3>
+		<!-- HTML_TAG_START --><div><h3 id="provider-테스팅-해보기"><a aria-hidden="true" tabindex="-1" href="#provider-테스팅-해보기"><span class="icon icon-link"></span></a>Provider 테스팅 해보기</h3>
 <pre class="language-js"><!-- HTML_TAG_START --><code class="language-js"><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>Options optionType<span class="token operator">=</span><span class="token string">"scoops"</span> <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token literal-property property">wrapper</span><span class="token operator">:</span> OrderDetailsProvider<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
 <p>테스트 wrapper에 Provider로 감싸주면 된다.</p>
 <p>여기서는 redux나 recoil 등 다른 라이브러리도 가능</p>
@@ -65,19 +64,323 @@
 
 <span class="token keyword">export</span> <span class="token operator">*</span> <span class="token keyword">from</span> <span class="token string">'@testing-library/react'</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token punctuation">&#123;</span>renderWithContext <span class="token keyword">as</span> render<span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre><!-- HTML_TAG_END --></aside></article></main>
+<span class="token keyword">export</span> <span class="token punctuation">&#123;</span>renderWithContext <span class="token keyword">as</span> render<span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre></div>
+<style>
+    code[class*='language-'],
+    pre[class*='language-'] {
+    color: #e3eaf2 !important;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    hyphens: none;
+    border-radius: 12px;
+    }
+
+    pre[class*='language-']::-moz-selection,
+    pre[class*='language-'] ::-moz-selection,
+    code[class*='language-']::-moz-selection,
+    code[class*='language-'] ::-moz-selection {
+    background: #3c526d !important;
+    }
+
+    pre[class*='language-']::-moz-selection, pre[class*='language-'] ::-moz-selection, code[class*='language-']::-moz-selection, code[class*='language-'] ::-moz-selection {
+    background: #3c526d !important;
+    }
+
+    pre[class*='language-']::selection,
+    pre[class*='language-'] ::selection,
+    code[class*='language-']::selection,
+    code[class*='language-'] ::selection {
+    background: #3c526d !important;
+    }
+
+    /* Code blocks */
+    pre[class*='language-'] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+    }
+
+    :not(pre) > code[class*='language-'],
+    pre[class*='language-'] {
+    background: #111b27 !important;
+    }
+
+    /* Inline code */
+    :not(pre) > code[class*='language-'] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    white-space: normal;
+    }
+
+    .code-line {
+    color: #e3eaf2 !important;
+    }
+
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+    color: #8da1b9 !important;
+    }
+
+    .token.punctuation {
+    color: #e3eaf2 !important;
+    }
+
+    .token.delimiter.important,
+    .token.selector .parent,
+    .token.tag,
+    .token.tag .token.punctuation {
+    color: #66cccc !important;
+    }
+
+    .token.attr-name,
+    .token.boolean,
+    .token.boolean.important,
+    .token.number,
+    .token.constant,
+    .token.selector .token.attribute {
+    color: #e6d37a !important;
+    }
+
+    .token.class-name,
+    .token.key,
+    .token.parameter,
+    .token.property,
+    .token.property-access,
+    .token.variable {
+    color: #6cb8e6 !important;
+    }
+
+    .token.attr-value,
+    .token.inserted,
+    .token.color,
+    .token.selector .token.value,
+    .token.string,
+    .token.string .token.url-link {
+    color: #91d076 !important;
+    }
+
+    .token.builtin,
+    .token.keyword-array,
+    .token.package,
+    .token.regex {
+    color: #f4adf4 !important;
+    }
+
+    .token.function,
+    .token.selector .token.class,
+    .token.selector .token.id,
+    .token.maybe-class-name {
+    color: #c699e3 !important;
+    }
+
+    .token.atrule .token.rule,
+    .token.combinator,
+    .token.keyword,
+    .token.operator,
+    .token.pseudo-class,
+    .token.pseudo-element,
+    .token.selector,
+    .token.unit {
+    color: #e9ae7e !important;
+    }
+
+    .token.deleted,
+    .token.important {
+    color: #cd6660 !important;
+    }
+
+    .token.keyword-this,
+    .token.this {
+    color: #6cb8e6 !important;
+    }
+
+    .token.important,
+    .token.keyword-this,
+    .token.this,
+    .token.bold {
+    font-weight: bold;
+    }
+
+    .token.delimiter.important {
+    font-weight: inherit;
+    }
+
+    .token.italic {
+    font-style: italic;
+    }
+
+    .token.entity {
+    cursor: help;
+    }
+
+    .language-markdown .token.title,
+    .language-markdown .token.title .token.punctuation {
+    color: #6cb8e6 !important;
+    font-weight: bold;
+    }
+
+    .language-markdown .token.blockquote.punctuation {
+    color: #f4adf4 !important;
+    }
+
+    .language-markdown .token.code {
+    color: #66cccc !important;
+    }
+
+    .language-markdown .token.hr.punctuation {
+    color: #6cb8e6 !important;
+    }
+
+    .language-markdown .token.url .token.content {
+    color: #91d076 !important;
+    }
+
+    .language-markdown .token.url-link {
+    color: #e6d37a !important;
+    }
+
+    .language-markdown .token.list.punctuation {
+    color: #f4adf4 !important;
+    }
+
+    .language-markdown .token.table-header {
+    color: #e3eaf2 !important;
+    }
+
+    .language-json .token.operator {
+    color: #e3eaf2;
+    }
+
+    .language-scss .token.variable {
+    color: #66cccc !important;
+    }
+
+    .token.token.tab:not(:empty):before,
+    .token.token.cr:before,
+    .token.token.lf:before,
+    .token.token.space:before {
+    color: #8da1b9 !important;
+    }
+
+    /* overrides color-values for the Toolbar plugin
+       * https://prismjs.com/plugins/toolbar/
+       */
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > a,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > button {
+    color: #111b27 !important;
+    background: #6cb8e6 !important;
+    }
+
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:hover,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:focus,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:hover,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:focus {
+    color: #111b27 !important;
+    background: #6cb8e6da !important;
+    text-decoration: none;
+    }
+
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > span,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:hover,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:focus {
+    color: #111b27 !important;
+    background: #8da1b9 !important;
+    }
+
+    .line-highlight.line-highlight {
+    background: #3c526d5f !important;
+    background: linear-gradient(to right, #3c526d5f 70%, #3c526d55) !important;
+    }
+
+    .line-highlight.line-highlight:before,
+    .line-highlight.line-highlight[data-end]:after {
+    background-color: #8da1b9 !important;
+    color: #111b27 !important;
+    box-shadow: 0 1px #3c526d !important;
+    }
+
+    pre[id].linkable-line-numbers.linkable-line-numbers span.line-numbers-rows > span:hover:before {
+    background-color: #8da1b918 !important;
+    }
+
+    .line-numbers.line-numbers .line-numbers-rows {
+    border-right: 1px solid #0b121b !important;
+    background: #0b121b7a !important;
+    }
+
+    .line-numbers .line-numbers-rows > span:before {
+    color: #8da1b9da !important;
+    }
+
+    .rainbow-braces .token.token.punctuation.brace-level-1,
+    .rainbow-braces .token.token.punctuation.brace-level-5,
+    .rainbow-braces .token.token.punctuation.brace-level-9 {
+    color: #e6d37a !important;
+    }
+
+    .rainbow-braces .token.token.punctuation.brace-level-2,
+    .rainbow-braces .token.token.punctuation.brace-level-6,
+    .rainbow-braces .token.token.punctuation.brace-level-10 {
+    color: #f4adf4;
+    }
+
+    .rainbow-braces .token.token.punctuation.brace-level-3,
+    .rainbow-braces .token.token.punctuation.brace-level-7,
+    .rainbow-braces .token.token.punctuation.brace-level-11 {
+    color: #6cb8e6 !important;
+    }
+
+    .rainbow-braces .token.token.punctuation.brace-level-4,
+    .rainbow-braces .token.token.punctuation.brace-level-8,
+    .rainbow-braces .token.token.punctuation.brace-level-12 {
+    color: #c699e3 !important;
+    }
+
+    pre.diff-highlight > code .token.token.deleted:not(.prefix),
+    pre > code.diff-highlight .token.token.deleted:not(.prefix) {
+    background-color: #cd66601f !important;
+    }
+
+    pre.diff-highlight > code .token.token.inserted:not(.prefix),
+    pre > code.diff-highlight .token.token.inserted:not(.prefix) {
+    background-color: #91d0761f !important;
+    }
+
+    .command-line .command-line-prompt {
+    border-right: 1px solid #0b121b !important;
+    }
+
+    .command-line .command-line-prompt > span:before {
+    color: #8da1b9da !important;
+    }
+
+    .content-link{
+    color: var(--primary-color);
+    }</style><!-- HTML_TAG_END --></aside></article></main>
 
 <footer class="footer">Copyright © Been.</footer>
 
 
-		<script type="module" data-sveltekit-hydrate="1ianr88">
-			import { start } from "../../_app/immutable/start-d3cd90a4.js";
+		<script type="module" data-sveltekit-hydrate="18bmwl9">
+			import { start } from "../../_app/immutable/start-41af2fe1.js";
 
 			start({
 				env: {},
 				paths: {"assets":"","base":""},
-				target: document.querySelector('[data-sveltekit-hydrate="1ianr88"]').parentNode,
-				version: "1674933198624",
+				target: document.querySelector('[data-sveltekit-hydrate="18bmwl9"]').parentNode,
+				version: "1674934688395",
 				hydrate: {
 					node_ids: [0, 6],
 					data: [null,{type:"data",data:{PostContent:"\u003Ch3 id=\"provider-테스팅-해보기\"\u003E\u003Ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#provider-테스팅-해보기\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003EProvider 테스팅 해보기\u003C\u002Fh3\u003E\n\u003Cpre class=\"language-js\"\u003E\u003C!-- HTML_TAG_START --\u003E\u003Ccode class=\"language-js\"\u003E\u003Cspan class=\"token function\"\u003Erender\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E&lt;\u003C\u002Fspan\u003EOptions optionType\u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\"token string\"\u003E\"scoops\"\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E\u002F\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E\u003E\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\u003Cspan class=\"token literal-property property\"\u003Ewrapper\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E OrderDetailsProvider\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C!-- HTML_TAG_END --\u003E\u003C\u002Fpre\u003E\n\u003Cp\u003E테스트 wrapper에 Provider로 감싸주면 된다.\u003C\u002Fp\u003E\n\u003Cp\u003E여기서는 redux나 recoil 등 다른 라이브러리도 가능\u003C\u002Fp\u003E\n\u003Chr\u003E\n\u003Cp\u003E전역적으로도 사용이 가능\u003C\u002Fp\u003E\n\u003Cpre class=\"language-js\"\u003E\u003C!-- HTML_TAG_START --\u003E\u003Ccode class=\"language-js\"\u003E\u003Cspan class=\"token keyword\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003Erender\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E'@testing-library\u002Freact'\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\u003Cspan class=\"token keyword\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003EOrderDetailsProvider\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E'..\u002Fcontexts\u002FOrderDetails'\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E \u003Cspan class=\"token function-variable function\"\u003ErenderWithContext\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003E\u003Cspan class=\"token parameter\"\u003Eui\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E options\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E=\u003E\u003C\u002Fspan\u003E \u003Cspan class=\"token function\"\u003Erender\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Eui\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\u003Cspan class=\"token literal-property property\"\u003Ewrapper\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E OrderDetailsProvider\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E...\u003C\u002Fspan\u003Eoptions\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Eexport\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E*\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E'@testing-library\u002Freact'\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Eexport\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003ErenderWithContext \u003Cspan class=\"token keyword\"\u003Eas\u003C\u002Fspan\u003E render\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C!-- HTML_TAG_END --\u003E\u003C\u002Fpre\u003E",meta:{title:"리액트 테스팅(4)",date:"2023. 1. 2.",description:"jest와 react-testing-library",category:"javaScript",titleImage:"\u002FpostIcon\u002Ftest.png",slug:"react-testing-4"}},uses:{params:["category","post"]}}],
