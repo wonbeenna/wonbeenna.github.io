@@ -1,16 +1,14 @@
 <script>
-	import PostList from "$lib/components/Posts/PostList.svelte";
-	import {base} from "$app/paths";
+	import PostList from '$lib/components/Posts/PostList.svelte';
+	import { base } from '$app/paths';
 
-	export let data
-    const { page, posts, category, total } = data
+	export let data;
+	const { page, posts, category, total } = data;
 </script>
-
 
 <svelte:head>
 	<title>Category: {category}</title>
 </svelte:head>
-
 
 <h1>Blog category: {category}</h1>
 

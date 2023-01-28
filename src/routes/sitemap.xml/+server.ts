@@ -1,19 +1,19 @@
-import fetchPosts from "../../lib/utils/fetchPosts";
+import fetchPosts from '../../lib/utils/fetchPosts';
 
-export const prerender = true
+export const prerender = true;
 
 export const GET = async () => {
-    const { posts } = await fetchPosts({ limit: -1 })
-    const links = posts.map(
-        p => `
+	const { posts } = await fetchPosts({ limit: -1 });
+	const links = posts.map(
+		(p) => `
     <url>
       <loc>https://wonbeenna.github.io/been-blog/blog/${p.slug}</loc>
       <lastmod>${new Date(p.date).toISOString()}</lastmod>
       <priority>1.0</priority>
     </url>
-  `,
-    )
-    const xml = `
+  `
+	);
+	const xml = `
     <?xml version="1.0" encoding="UTF-8"?>
     <urlset
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -38,6 +38,6 @@ export const GET = async () => {
         
     ${links.join('')}
     </urlset>
-  `.trim()
-    return new Response(xml, { headers: { 'Content-Type': 'text/xml; charset=utf-8' } })
-}
+  `.trim();
+	return new Response(xml, { headers: { 'Content-Type': 'text/xml; charset=utf-8' } });
+};

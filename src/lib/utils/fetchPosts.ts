@@ -1,4 +1,4 @@
-import {postsPerPage} from "$lib/config";
+import { postsPerPage } from '$lib/config';
 
 const fetchPosts = async ({ offset = 0, limit = postsPerPage, category = '' } = {}) => {
 	const posts = await Promise.all(
@@ -12,26 +12,25 @@ const fetchPosts = async ({ offset = 0, limit = postsPerPage, category = '' } = 
 	let sortedPosts = posts.sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)));
 
 	if (category) {
-		sortedPosts = sortedPosts.filter(post => post.category === category)
+		sortedPosts = sortedPosts.filter((post) => post.category === category);
 	}
 
 	if (offset) {
-		sortedPosts = sortedPosts.slice(offset)
+		sortedPosts = sortedPosts.slice(offset);
 	}
 
 	if (limit && limit < sortedPosts.length && limit != -1) {
-		sortedPosts = sortedPosts.slice(0, limit)
+		sortedPosts = sortedPosts.slice(0, limit);
 	}
 
-	sortedPosts = sortedPosts
-		.map((post) => ({
-			slug: post.slug,
-			title: post.title,
-			description: post.description,
-			category: post.category,
-			titleImage: post.titleImage,
-			date: new Intl.DateTimeFormat('ko-KR').format(new Date(post.date))
-		}));
+	sortedPosts = sortedPosts.map((post) => ({
+		slug: post.slug,
+		title: post.title,
+		description: post.description,
+		category: post.category,
+		titleImage: post.titleImage,
+		date: new Intl.DateTimeFormat('ko-KR').format(new Date(post.date))
+	}));
 
 	return {
 		posts: sortedPosts

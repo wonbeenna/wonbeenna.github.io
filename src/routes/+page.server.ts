@@ -1,17 +1,17 @@
-import { postsPerPage } from "$lib/config";
-import fetchPosts from "$lib/utils/fetchPosts";
-import {base} from "$app/paths";
+import { postsPerPage } from '$lib/config';
+import fetchPosts from '$lib/utils/fetchPosts';
+import { base } from '$app/paths';
 
 export const load = async ({ fetch }) => {
 	const options = {
 		limit: postsPerPage
-	}
-	const { posts } = await fetchPosts(options)
+	};
+	const { posts } = await fetchPosts(options);
 
-	const totalRes = await fetch(`${base}/api/posts/count`)
-	const total = await totalRes.json()
+	const totalRes = await fetch(`${base}/api/posts/count`);
+	const total = await totalRes.json();
 
-	const categoriesRes = await fetch(`${base}/api/posts/category`)
+	const categoriesRes = await fetch(`${base}/api/posts/category`);
 	const categories = await categoriesRes.json();
 
 	return { posts, total, categories };

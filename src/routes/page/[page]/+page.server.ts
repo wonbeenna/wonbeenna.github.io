@@ -1,25 +1,25 @@
-import { postsPerPage } from '$lib/config'
-import fetchPosts from '$lib/utils/fetchPosts'
-import { redirect } from '@sveltejs/kit'
-import {base} from "$app/paths";
+import { postsPerPage } from '$lib/config';
+import fetchPosts from '$lib/utils/fetchPosts';
+import { redirect } from '@sveltejs/kit';
+import { base } from '$app/paths';
 
 export const load = async ({ params, fetch }) => {
-  const page = parseInt(params.page) || 1
+	const page = parseInt(params.page) || 1;
 
-  if (page <= 1) {
-    throw redirect(301, `${base}`)
-  }
+	if (page <= 1) {
+		throw redirect(301, `${base}`);
+	}
 
-  const offset = (page * postsPerPage) - postsPerPage
+	const offset = page * postsPerPage - postsPerPage;
 
-  const { posts } = await fetchPosts({ offset })
+	const { posts } = await fetchPosts({ offset });
 
-  const totalPostsRes = await fetch(`${base}/api/posts/count`)
-  const total = await totalPostsRes.json()
+	const totalPostsRes = await fetch(`${base}/api/posts/count`);
+	const total = await totalPostsRes.json();
 
-  return {
-    posts,
-    page,
-    totalPosts: total
-  }
-}
+	return {
+		posts,
+		page,
+		totalPosts: total
+	};
+};
