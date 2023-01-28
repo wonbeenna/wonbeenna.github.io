@@ -1,6 +1,6 @@
 ## Been Blog
 
-web :
+web : https://wonbeenna.github.io/been-blog/
 
 ---
 - sveltekit

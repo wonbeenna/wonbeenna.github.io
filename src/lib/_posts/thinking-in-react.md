@@ -25,11 +25,10 @@ titleImage: /been-blog/postIcon/logo192.png
 ```
 
 -   목업
-
-![목업](https://beta.reactjs.org/images/docs/s_thinking-in-react_ui.png)
+<img src="https://beta.reactjs.org/images/docs/s_thinking-in-react_ui.png" width=100% alt='mock'>
 
 ### 1, UI를 컴포넌트로 나누기
-![컴포넌트](https://beta.reactjs.org/images/docs/s_thinking-in-react_ui_outline.png)
+<img src="https://beta.reactjs.org/images/docs/s_thinking-in-react_ui_outline.png" width=100% alt="ui">
 
 1.  FilterableProductTable (회색)은 전체 앱을 포함합니다.
 2.  SearchBar (파란색)은 사용자 입력을 받습니다.
