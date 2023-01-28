@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=undefined>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../../favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../../_app/immutable/assets/_layout-a2aafea5.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/_main-13531142.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/_page-1c11e0db.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/_post-337fee93.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/start-d3cd90a4.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index-cde32f97.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons-f83ae44e.js">
+		<link rel="modulepreload" href="../../_app/immutable/components/pages/_layout.svelte-fab78e83.js">
+		<link rel="modulepreload" href="../../_app/immutable/modules/pages/_layout.ts-0e5b168f.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/_layout-6a830c33.js">
+		<link rel="modulepreload" href="../../_app/immutable/components/pages/blog/_category_/_post_/_page.svelte-acb802e0.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/MetaTags-81b6e252.js"><title>리액트 테스팅(4)</title><!-- HEAD_svelte-1pdu3v9_START --><link rel="alternate" type="application/rss+xml" href="/rss.xml"><link rel="sitemap" type="application/xml" href="/sitemap.xml"><!-- HEAD_svelte-1pdu3v9_END --><!-- HEAD_svelte-1h7w4y4_START --><meta name="robots" content="index,follow"><meta name="googlebot" content="index,follow"><meta name="description" content="jest와 react-testing-library"><meta property="og:url" content="https://wonbeenna.github.io/blog/javaScript/react-testing-4">
+
+    
+
+    <meta property="og:title" content="리액트 테스팅(4)">
+
+    <meta property="og:description" content="jest와 react-testing-library">
+
+    <meta property="og:image" content="https://wonbeenna.github.io/postIcon/test.png">
+        <meta property="og:image:alt" content="titleImage">
+        
+        
+
+    
+
+    
+
+    <meta property="og:site_name" content="Been-blog 리액트 테스팅(4)"><!-- HEAD_svelte-1h7w4y4_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+
+
+
+
+<header class="header"><section class="header_section"><div class="header_box"><a href="/"><img src="/icons/been-logo.svg" width="60" height="56" alt="logo"></a>
+			<div class="header_box"><a href="/about"><h3>About</h3></a></div></div>
+		<div class="header_box"><a href="https://github.com/wonbeenna" target="_blank" rel="noopener noreferrer"><img src="/icons/github.svg" alt="github" width="30" height="30"></a>
+			<a href="mailto:nwbnwb@naver.com"><img src="/icons/mail.svg" alt="email" width="34" height="34"></a>
+			<button><img src="/icons/moon.svg" alt="어두운 테마" width="30" height="30"></button></div></section></header>
+
+<main>
+
+<article><aside><div class="post_title_wrapper"><h1 class="post_title">리액트 테스팅(4)</h1>
+			<h2 class="card_post_description">jest와 react-testing-library</h2>
+			<p class="card_post_date">2023. 1. 2.</p></div>
+		<!-- HTML_TAG_START --><h3 id="provider-테스팅-해보기"><a aria-hidden="true" tabindex="-1" href="#provider-테스팅-해보기"><span class="icon icon-link"></span></a>Provider 테스팅 해보기</h3>
+<pre class="language-js"><!-- HTML_TAG_START --><code class="language-js"><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>Options optionType<span class="token operator">=</span><span class="token string">"scoops"</span> <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token literal-property property">wrapper</span><span class="token operator">:</span> OrderDetailsProvider<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
+<p>테스트 wrapper에 Provider로 감싸주면 된다.</p>
+<p>여기서는 redux나 recoil 등 다른 라이브러리도 가능</p>
+<hr>
+<p>전역적으로도 사용이 가능</p>
+<pre class="language-js"><!-- HTML_TAG_START --><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span>render<span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@testing-library/react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span>OrderDetailsProvider<span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'../contexts/OrderDetails'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">renderWithContext</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">ui<span class="token punctuation">,</span> options</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">render</span><span class="token punctuation">(</span>ui<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token literal-property property">wrapper</span><span class="token operator">:</span> OrderDetailsProvider<span class="token punctuation">,</span> <span class="token operator">...</span>options<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token operator">*</span> <span class="token keyword">from</span> <span class="token string">'@testing-library/react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token punctuation">&#123;</span>renderWithContext <span class="token keyword">as</span> render<span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre><!-- HTML_TAG_END --></aside></article></main>
+
+<footer class="footer">Copyright © Been.</footer>
+
+
+		<script type="module" data-sveltekit-hydrate="1ianr88">
+			import { start } from "../../_app/immutable/start-d3cd90a4.js";
+
+			start({
+				env: {},
+				paths: {"assets":"","base":""},
+				target: document.querySelector('[data-sveltekit-hydrate="1ianr88"]').parentNode,
+				version: "1674933198624",
+				hydrate: {
+					node_ids: [0, 6],
+					data: [null,{type:"data",data:{PostContent:"\u003Ch3 id=\"provider-테스팅-해보기\"\u003E\u003Ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#provider-테스팅-해보기\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003EProvider 테스팅 해보기\u003C\u002Fh3\u003E\n\u003Cpre class=\"language-js\"\u003E\u003C!-- HTML_TAG_START --\u003E\u003Ccode class=\"language-js\"\u003E\u003Cspan class=\"token function\"\u003Erender\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E&lt;\u003C\u002Fspan\u003EOptions optionType\u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\"token string\"\u003E\"scoops\"\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E\u002F\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E\u003E\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\u003Cspan class=\"token literal-property property\"\u003Ewrapper\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E OrderDetailsProvider\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C!-- HTML_TAG_END --\u003E\u003C\u002Fpre\u003E\n\u003Cp\u003E테스트 wrapper에 Provider로 감싸주면 된다.\u003C\u002Fp\u003E\n\u003Cp\u003E여기서는 redux나 recoil 등 다른 라이브러리도 가능\u003C\u002Fp\u003E\n\u003Chr\u003E\n\u003Cp\u003E전역적으로도 사용이 가능\u003C\u002Fp\u003E\n\u003Cpre class=\"language-js\"\u003E\u003C!-- HTML_TAG_START --\u003E\u003Ccode class=\"language-js\"\u003E\u003Cspan class=\"token keyword\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003Erender\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E'@testing-library\u002Freact'\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\u003Cspan class=\"token keyword\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003EOrderDetailsProvider\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E'..\u002Fcontexts\u002FOrderDetails'\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E \u003Cspan class=\"token function-variable function\"\u003ErenderWithContext\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003E\u003Cspan class=\"token parameter\"\u003Eui\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E options\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E=\u003E\u003C\u002Fspan\u003E \u003Cspan class=\"token function\"\u003Erender\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Eui\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\u003Cspan class=\"token literal-property property\"\u003Ewrapper\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E OrderDetailsProvider\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E...\u003C\u002Fspan\u003Eoptions\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Eexport\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E*\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E'@testing-library\u002Freact'\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Eexport\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003ErenderWithContext \u003Cspan class=\"token keyword\"\u003Eas\u003C\u002Fspan\u003E render\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C!-- HTML_TAG_END --\u003E\u003C\u002Fpre\u003E",meta:{title:"리액트 테스팅(4)",date:"2023. 1. 2.",description:"jest와 react-testing-library",category:"javaScript",titleImage:"\u002FpostIcon\u002Ftest.png",slug:"react-testing-4"}},uses:{params:["category","post"]}}],
+					form: null,
+					error: null
+				}
+			});
+		</script>
+	</div>
+	</body>
+</html>
