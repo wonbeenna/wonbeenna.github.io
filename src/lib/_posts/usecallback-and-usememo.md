@@ -3,7 +3,7 @@ title: useCallback, useMemo 무조건 좋은가?
 date: 2022-12-28
 description: useCallback과 useMemo에 대한 생각 정리
 category: javaScript
-titleImage: /been-blog/postIcon/logo192.png
+titleImage: /postIcon/logo192.png
 ---
 
 예전부터 궁금했었던 부분이었다.
@@ -50,7 +50,7 @@ export default App;
 
 위와 같은 코드에서 App에 state가 변경되기 때문에 Count도 렌더링 될것이다.
 
-<img src="/been-blog/blog/javaScript/use.gif" width="100%" alt="post image"/>
+<img src="/blog/javaScript/use.gif" width="100%" alt="post image"/>
 
 부모컴포넌트의 state가 변경되었고,
 
@@ -83,7 +83,7 @@ const handleClick = useCallback(() => {
 
 useCallback으로 감싸주면 handleClick은 메모이제이션되어 새로 생성되지않고, props로 전달되기 때문에 리렌더링이 발생하지 않는다.
 
-<img src="/been-blog/blog/javaScript/use(1).gif" width="100%" alt="post image"/>
+<img src="/blog/javaScript/use(1).gif" width="100%" alt="post image"/>
 
 ---
 

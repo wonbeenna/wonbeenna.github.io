@@ -3,7 +3,7 @@ title: 웹성능 최적화(3)
 date: 2022-01-04
 description: 웹성능 최적화3
 category: javaScript
-titleImage: /been-blog/postIcon/logo192.png
+titleImage: /postIcon/logo192.png
 ---
 
 **[유동균님의 강의](https://www.inflearn.com/course/%EC%9B%B9-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EB%A6%AC%EC%95%A1%ED%8A%B8-1)를 보며 정리한 글 입니다.**
@@ -22,7 +22,7 @@ titleImage: /been-blog/postIcon/logo192.png
 
 4\. Web font (FOIT, FOUT)
 
-<img src="/been-blog/blog/javaScript/web-optimization-3-1.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization-3-1.png" width="100%" alt="post image"/>
 
 여러 이미지를 로드할 때, 먼저 불러온 이미지 자리를 나중에 불러온 이미지가 밀어내게 되면서 레이아웃 변경이 계속 발생한다.
 
@@ -34,7 +34,7 @@ titleImage: /been-blog/postIcon/logo192.png
 
 이때 Wrap에 고정값을 정해주고 Image는 그 값을 따라가기만 하면 된다. 여기서는 16:9 비율로 지정하기 위해 9 / 16 = 56.25%로 높이를 잡고 Image를 그 안에 넣는 방식으로 했다.
 
-<img src="/been-blog/blog/javaScript/web-optimization-3-2.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization-3-2.png" width="100%" alt="post image"/>
 
 컨텐츠가 새로 들어오면서 기존 컨텐츠를 밀어내지 않도록 컨텐츠를 그려줄 곳에 미리 자리를 만들어 놓는것이다.
 
@@ -54,7 +54,7 @@ npm i react-lazyload
 
 ### 3\. useSelect 렌더링 문제
 
-<img src="/been-blog/blog/javaScript/web-optimization-3-3.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization-3-3.png" width="100%" alt="post image"/>
 
 리액트 dev-tool에서 Highlight updates ... 를 체크해 컴포넌트가 렌더링되는걸 확인할 수 있다.
 

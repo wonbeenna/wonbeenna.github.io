@@ -1,6 +1,6 @@
 <script>
 	import '$lib/styles/_post.scss';
-	import { base } from '$app/paths';
+
 	export let title;
 	export let description;
 	export let titleImage;
@@ -9,7 +9,7 @@
 </script>
 
 <li class="card">
-	<a class="card_link" href={`${base}/blog/${path}`}>
+	<a class="card_link" href={`/blog/${path}`}>
 		<div class="card_image_wrapper">
 			<img
 				class="card_image"

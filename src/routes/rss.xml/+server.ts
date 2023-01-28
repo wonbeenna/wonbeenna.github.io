@@ -8,8 +8,8 @@ export const GET = async () => {
 	const feed = new Feed({
 		title: 'Been blog',
 		description: 'Been dev-note',
-		id: 'https://wonbeenna.github.io/been-blog/',
-		link: 'https://wonbeenna.github.io/been-blog/',
+		id: 'https://wonbeenna.github.io',
+		link: 'https://wonbeenna.github.io',
 		language: 'ko',
 		copyright: 'Copyright ©Been',
 		author: {
@@ -22,8 +22,8 @@ export const GET = async () => {
 		feed.addItem({
 			title: p.title,
 			id: p.slug,
-			guid: `https://wonbeenna.github.io/been-blog/blog/${p.slug}`,
-			link: `https://wonbeenna.github.io/been-blog/blog/${p.slug}`,
+			guid: `https://wonbeenna.github.io/blog/${p.slug}`,
+			link: `https://wonbeenna.github.io/blog/${p.slug}`,
 			description: p.description,
 			date: new Date(p.date)
 		});

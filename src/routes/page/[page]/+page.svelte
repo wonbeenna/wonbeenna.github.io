@@ -1,7 +1,6 @@
 <script>
 	import Pagination from '$lib/components/Posts/Pagination.svelte';
 	import PostList from '$lib/components/Posts/PostList.svelte';
-	import { base } from '$app/paths';
 
 	export let data;
 	const { page, totalPosts, posts } = data;
@@ -21,5 +20,5 @@
 
 	<p>Sorry, no posts to show here.</p>
 
-	<a href={base}>Back to blog</a>
+	<a href="/">Back to blog</a>
 {/if}

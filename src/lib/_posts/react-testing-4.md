@@ -3,7 +3,7 @@ title: 리액트 테스팅(4)
 date: 2023-01-02
 description: jest와 react-testing-library
 category: javaScript
-titleImage: /been-blog/postIcon/test.png
+titleImage: /postIcon/test.png
 ---
 
 ### Provider 테스팅 해보기

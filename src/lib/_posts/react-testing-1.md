@@ -3,7 +3,7 @@ title: 리액트 테스팅(1)
 date: 2022-12-10
 description: jest와 react-testing-library
 category: javaScript
-titleImage: /been-blog/postIcon/test.png
+titleImage: /postIcon/test.png
 ---
 
 ### * Jest - Facebook에서 만든 테스팅 프레임 워크.

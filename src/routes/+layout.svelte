@@ -5,13 +5,13 @@
 	import '$lib/styles/reset.scss';
 	import '$lib/styles/_main.scss';
 	import { fade } from 'svelte/transition';
-	import { base } from '$app/paths';
+
 	export let data;
 </script>
 
 <svelte:head>
-	<link rel="alternate" type="application/rss+xml" href="{base}/rss.xml" />
-	<link rel="sitemap" type="application/xml" href="{base}/sitemap.xml" />
+	<link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+	<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 </svelte:head>
 
 <Header />

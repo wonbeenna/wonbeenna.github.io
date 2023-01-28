@@ -3,7 +3,7 @@ title: 리액트 테스팅(3)
 date: 2022-12-26
 description: jest와 react-testing-library
 category: javaScript
-titleImage: /been-blog/postIcon/test.png
+titleImage: /postIcon/test.png
 ---
 
 ### fireEvent를 userEvent로 바꿔보기

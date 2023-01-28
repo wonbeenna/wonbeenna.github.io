@@ -3,7 +3,7 @@ title: 웹성능 최적화(2)
 date: 2022-01-03
 description: 웹성능 최적화2
 category: javaScript
-titleImage: /been-blog/postIcon/logo192.png
+titleImage: /postIcon/logo192.png
 ---
 
 **[유동균님의 강의](https://inf.run/4zeg)를 보며 정리한 글 입니다.**
@@ -12,7 +12,7 @@ titleImage: /been-blog/postIcon/logo192.png
 
 ### 1\. 이미지 지연(lazy) 로딩
 
-<img src="/been-blog/blog/javaScript/web-optimization-2-1.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization-2-1.png" width="100%" alt="post image"/>
 
 예제에서 네트워크를 6메가비트로 맞춰놓았다.
 
@@ -63,7 +63,7 @@ observer.observe(element객체)
 }
 ```
 
-<img src="/been-blog/blog/javaScript/web-optimization-2-2.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization-2-2.png" width="100%" alt="post image"/>
 
 스크롤을 내려 이미지가 **보이거나 사라질때** 콘솔이 찍힌다.
 
@@ -85,7 +85,7 @@ useEffect(() => {
 }, [])
 ```
 
-<img src="/been-blog/blog/javaScript/web-optimization-2-3.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization-2-3.png" width="100%" alt="post image"/>
 
 위와는 다르게 화면안에 이미지가 **보일 때만** 콘솔이 찍힌다.
 
@@ -121,7 +121,7 @@ useEffect(() => {
 }
 ```
 
-<img src="/been-blog/blog/javaScript/web-optimization-2-4.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization-2-4.png" width="100%" alt="post image"/>
 
 동영상을 먼저 로드하고, 이미지를 불러옴
 
@@ -148,7 +148,7 @@ useEffect(() => {
 
 이미지 포맷은 [https://squoosh.app/](https://squoosh.app/) 를 사용했다.
 
-<img src="/been-blog/blog/javaScript/web-optimization-2-5.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization-2-5.png" width="100%" alt="post image"/>
 
 예제에서 브라우저에 보일 크기는 300 x 300 이므로 **x2**를해 600 x 600으로 포맷
 
@@ -203,7 +203,7 @@ useEffect(() => {
 }​
 ```
 
-<img src="/been-blog/blog/javaScript/web-optimization-2-6.gif" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization-2-6.gif" width="100%" alt="post image"/>
 
 -   fontfaceobserver 라이브러리를 사용해 시각적인 효과
 
@@ -261,7 +261,7 @@ return (
 
 필요한 글자만 가져와서 사용 "ABCDEFGHIJKLMNOPQR"
 
-<img src="/been-blog/blog/javaScript/web-optimization-2-7.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization-2-7.png" width="100%" alt="post image"/>
 
 변환하지 않은 폰트는 포함되지 않음
 
@@ -280,7 +280,7 @@ return (
 }
 ```
 
-<img src="/been-blog/blog/javaScript/web-optimization-2-8.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization-2-8.png" width="100%" alt="post image"/>
 
 Subset은 렌더링 하는 텍스트에 폰트가 필요하지 않아도 폰트를 로드하지만 unicode-range를 사용하면 폰트가 필요하지 않으면 로드하지 않는다
 
@@ -296,7 +296,7 @@ Base64 encode 해 불러오는 방식
 <link rel="preload" href="BMYEONSUNG.woff2" as="font" type="font/woff2" crossorigin>
 ```
 
-<img src="/been-blog/blog/javaScript/web-optimization-2-9.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization-2-9.png" width="100%" alt="post image"/>
 
 CSS가 로드되기 전에 폰트가 먼저 로드됨
 

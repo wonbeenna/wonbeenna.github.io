@@ -1,4 +1,4 @@
-import fetchPosts from '../../lib/utils/fetchPosts';
+import fetchPosts from '$lib/utils/fetchPosts';
 
 export const prerender = true;
 
@@ -7,7 +7,7 @@ export const GET = async () => {
 	const links = posts.map(
 		(p) => `
     <url>
-      <loc>https://wonbeenna.github.io/been-blog/blog/${p.slug}</loc>
+      <loc>https://wonbeenna.github.io/blog/${p.slug}</loc>
       <lastmod>${new Date(p.date).toISOString()}</lastmod>
       <priority>1.0</priority>
     </url>
@@ -27,12 +27,12 @@ export const GET = async () => {
       xmlns:xhtml="http://www.w3.org/1999/xhtml"
     >
         <url>
-            <loc>https://wonbeenna.github.io/been-blog/</loc>
+            <loc>https://wonbeenna.github.io/</loc>
             <priority>1.0</priority>
         </url>
         
         <url>
-            <loc>https://wonbeenna.github.io/been-blog/about</loc>
+            <loc>https://wonbeenna.github.io/about</loc>
             <priority>1.0</priority>
         </url>
         

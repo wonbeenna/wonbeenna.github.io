@@ -3,7 +3,7 @@ title: Storybook 써보기
 date: 2022-10-11
 description: 스터디 하면서 처음 써본 Storybook
 category: javaScript
-titleImage: /been-blog/postIcon/storybook.png
+titleImage: /postIcon/storybook.png
 ---
 
 이번에 스터디를 하면서 처음 스토리북을 써보게 되었다.
@@ -21,7 +21,7 @@ titleImage: /been-blog/postIcon/storybook.png
 
 **디자인 시스템이 뭔데?**
 
-<img src="/been-blog/blog/javaScript/storybook.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/storybook.png" width="100%" alt="post image"/>
 
 내가 생각하기에 디자인 시스템이란 하나의 프로덕트를 만드는데 있어서 디자인 적인 가이드 라인 및 디자인 원칙 = 색상, 아이콘, 타이포그래피 등 을 체계적으로 관리하고 문서화하는것 이라 생각한다.
 
@@ -86,7 +86,7 @@ export type Color = "basic" | "active" | "danger" | "warning";
 
 을 작성했다.
 
-<img src="/been-blog/blog/javaScript/storybook.gif" width="100%" alt="post image"/>
+<img src="/blog/javaScript/storybook.gif" width="100%" alt="post image"/>
 
 /src/stories/Chip.stories.tsx
 

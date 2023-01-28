@@ -3,7 +3,7 @@ title: 웹성능 최적화(1)
 date: 2022-01-01
 description: 웹성능 최적화1
 category: javaScript
-titleImage: /been-blog/postIcon/logo192.png
+titleImage: /postIcon/logo192.png
 ---
 
 **[유동균님의 강의](https://www.inflearn.com/course/%EC%9B%B9-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EB%A6%AC%EC%95%A1%ED%8A%B8-1)를 보며 정리한 글 입니다.**
@@ -12,8 +12,8 @@ titleImage: /been-blog/postIcon/logo192.png
 
 ### 1\. 구글 개발자 도구 Audits(LightHouse) 툴을 이용한 페이지 검사
 
-<img class="post-md-image" src="/been-blog/blog/javaScript/web-optimization1.png" width="100%" alt="post image"/>
-<img src="/been-blog/blog/javaScript/web-optimization2.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization1.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization2.png" width="100%" alt="post image"/>
 
 **Opportunities** = 리소스의 관점(로딩성능)
 
@@ -23,7 +23,7 @@ titleImage: /been-blog/postIcon/logo192.png
 
 ### 2\. 이미지 사이즈 최적화 - 로딩 성능
 
-<img src="/been-blog/blog/javaScript/web-optimization3.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization3.png" width="100%" alt="post image"/>
 
 실제 이미지와 렌더링된 이미지의 크기가 다르다
 
@@ -41,8 +41,8 @@ CDN 구축은 진행하지 않았다.
 
 크롬 개발자도구 -> 성능에서 새로고침을 누르면 페이지의 작업을 분석해준다.
 
-<img src="/been-blog/blog/javaScript/web-optimization4.png" width="100%" alt="post image"/>
-<img src="/been-blog/blog/javaScript/web-optimization5.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization4.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization5.png" width="100%" alt="post image"/>
 
 1.  HTML파싱
 2.  JS 로드
@@ -100,21 +100,21 @@ Suspense는 fallback을 받아 import하는 도중에 띄어준다.
 
 여기서 브라우저가 60FPS 아래로 그리게 된다면 쟁크 현상이 발생함.
 
-<img src="/been-blog/blog/javaScript/web-optimization6.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization6.png" width="100%" alt="post image"/>
 
 1. DOM + CSSOM
 
-<img src="/been-blog/blog/javaScript/web-optimization7.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization7.png" width="100%" alt="post image"/>
 
 2. Render Tree
 
-<img src="/been-blog/blog/javaScript/web-optimization8.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization8.png" width="100%" alt="post image"/>
 
 위 DOM과 CSSOM을 조합해 RenderTree를 만들어 낸다.
 
 3. Layout
 
-<img src="/been-blog/blog/javaScript/web-optimization9.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization9.png" width="100%" alt="post image"/>
 
 위치나 크기를 계산해 화면에 레이아웃을 그린다.
 
@@ -124,7 +124,7 @@ Suspense는 fallback을 받아 import하는 도중에 띄어준다.
 
 5. Composite
 
-<img src="/been-blog/blog/javaScript/web-optimization10.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization10.png" width="100%" alt="post image"/>
 
 각 레이어들을 합성하는 과정
 
@@ -140,7 +140,7 @@ Suspense는 fallback을 받아 import하는 도중에 띄어준다.
 
 따라서 transform, opacity 등(GPU가 관여하는 속성)을 사용하는게 가장 빠르고 끊김없이 보여줄 수 있다.
 
-<img src="/been-blog/blog/javaScript/web-optimization11.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization11.png" width="100%" alt="post image"/>
 
 ---
 
@@ -178,7 +178,7 @@ function App() {
 
 #### Lazy Loading의 단점
 
-<img src="/been-blog/blog/javaScript/web-optimization12.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization12.png" width="100%" alt="post image"/>
 
 우리가 모달을 클릭한순간 모달에 관련된 파일을 불러오고 JS를 Evaluate한다.
 
@@ -188,7 +188,7 @@ function App() {
 
 #### **\- 컴포넌트 Preload**
 
-<img src="/been-blog/blog/javaScript/web-optimization13.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization13.png" width="100%" alt="post image"/>
 
 이를 개선하기 위해서 모달을 열기 이전에 모달과 관련된 코드를 미리 로드해 둔다.
 
@@ -205,11 +205,11 @@ const handleMouseEnter = () => {
 <ButtonModal onClick={() => { setShowModal(true) }} onMouseEnter={handleMouseEnter}>올림픽 사진 보기</ButtonModal>
 ```
 
-<img src="/been-blog/blog/javaScript/web-optimization14.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization14.png" width="100%" alt="post image"/>
 
 2. 최초 페이지 로드가 되고, 모든 컴포넌트의 마운트가 끝났을 때(ComponentDidMount)
 
-<img src="/been-blog/blog/javaScript/web-optimization15.png" width="100%" alt="post image"/>
+<img src="/blog/javaScript/web-optimization15.png" width="100%" alt="post image"/>
 
 ```js
 useEffect(() => {

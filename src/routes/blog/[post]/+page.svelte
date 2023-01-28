@@ -9,7 +9,7 @@
 	title={data.meta.title}
 	description={data.meta.description}
 	openGraph={{
-		url: `https://wonbeenna.github.io/been-blog/blog/${data.meta.slug}`,
+		url: `https://wonbeenna.github.io/blog/${data.meta.slug}`,
 		title: data.meta.title,
 		description: data.meta.description,
 		images: [

@@ -3,7 +3,7 @@ title: React Hook의 동작
 date: 2021-11-07
 description: React Hook의 동작에 대해
 category: javaScript
-titleImage: /been-blog/postIcon/logo192.png
+titleImage: /postIcon/logo192.png
 ---
 
 ## React Hook

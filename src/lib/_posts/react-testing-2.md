@@ -3,7 +3,7 @@ title: 리액트 테스팅(2)
 date: 2022-12-14
 description: jest와 react-testing-library
 category: javaScript
-titleImage: /been-blog/postIcon/test.png
+titleImage: /postIcon/test.png
 ---
 
 ### * Mock Service Worker
