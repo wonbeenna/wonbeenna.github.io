@@ -22,8 +22,8 @@ export const GET = async () => {
 		feed.addItem({
 			title: p.title,
 			id: p.slug,
-			guid: `https://wonbeenna.github.io/blog/${p.slug}`,
-			link: `https://wonbeenna.github.io/blog/${p.slug}`,
+			guid: `https://wonbeenna.github.io/blog/${p.category}/${p.slug}`,
+			link: `https://wonbeenna.github.io/blog/${p.category}/${p.slug}`,
 			description: p.description,
 			date: new Date(p.date)
 		});

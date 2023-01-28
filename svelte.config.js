@@ -35,7 +35,8 @@ const config = {
 				'/api/posts/page/[page]',
 				'/api/posts/category',
 				'/page/[page]',
-				'/blog/category/[category]'
+				'/blog/category/[category]',
+				'/blog/[category]'
 			]
 		}
 	}

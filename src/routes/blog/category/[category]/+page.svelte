@@ -2,7 +2,7 @@
 	import PostList from '$lib/components/Posts/PostList.svelte';
 
 	export let data;
-	const { page, posts, category, total } = data;
+	const { posts, category } = data;
 </script>
 
 <svelte:head>

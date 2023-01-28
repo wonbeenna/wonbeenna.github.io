@@ -4,12 +4,13 @@
 	export let title;
 	export let description;
 	export let titleImage;
+	export let category;
 	export let date;
 	export let path;
 </script>
 
 <li class="card">
-	<a class="card_link" href={`/blog/${path}`}>
+	<a class="card_link" href={`/blog/${category}/${path}`}>
 		<div class="card_image_wrapper">
 			<img
 				class="card_image"

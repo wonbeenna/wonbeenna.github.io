@@ -10,6 +10,7 @@
 			path={post.slug}
 			title={post.title}
 			description={post.description}
+			category={post.category}
 			titleImage={post.titleImage}
 			date={post.date}
 		/>

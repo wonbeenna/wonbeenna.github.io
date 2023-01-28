@@ -7,7 +7,7 @@ export const GET = async () => {
 	const links = posts.map(
 		(p) => `
     <url>
-      <loc>https://wonbeenna.github.io/blog/${p.slug}</loc>
+      <loc>https://wonbeenna.github.io/blog/${p.category}/${p.slug}</loc>
       <lastmod>${new Date(p.date).toISOString()}</lastmod>
       <priority>1.0</priority>
     </url>
