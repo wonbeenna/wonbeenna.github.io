@@ -1,0 +1,1 @@
+{"type":"data","nodes":[null,{"type":"data","data":[{"posts":1,"page":9,"totalPosts":10},[2],{"slug":3,"title":4,"description":5,"category":6,"titleImage":7,"date":8},"react-hook","React Hook의 동작","React Hook의 동작에 대해","javaScript","\u002FpostIcon\u002Flogo192.png","2021. 11. 7.",5,21],"uses":{"dependencies":["http://sveltekit-prerender/api/posts/count"],"params":["page"]}}]}
