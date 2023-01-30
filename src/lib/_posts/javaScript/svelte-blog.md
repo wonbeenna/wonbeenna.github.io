@@ -83,7 +83,7 @@ src/routes/+page.svelte
 <Pagination currentPage={1} totalPosts={data.total} />
 
 ```
-+page.svelte는 페이지와 연결된 로드 함수이며, 데이터를 로드한 다음 페이지가 로드된 데이터를 넘겨 받아 렌더링한다.
++page.js는 페이지와 연결된 로드 함수이며, 데이터를 로드한 다음 페이지가 로드된 데이터를 넘겨 받아 렌더링한다.
 SSR, CSR 모두 렌더링 할 수 있다.
 
 +page.server.js 는 항상 서버측에서 로드가 실행된다.
