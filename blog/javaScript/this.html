@@ -15,21 +15,21 @@
 		<link rel="modulepreload" href="../../_app/immutable/modules/pages/_layout.ts-0e5b168f.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/_layout-6a830c33.js">
 		<link rel="modulepreload" href="../../_app/immutable/components/pages/blog/_category_/_post_/_page.svelte-55632d16.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/MetaTags-bd417668.js"><title>리액트 테스팅(4)</title><!-- HEAD_svelte-1pdu3v9_START --><link rel="alternate" type="application/rss+xml" href="/rss.xml"><link rel="sitemap" type="application/xml" href="/sitemap.xml"><!-- HEAD_svelte-1pdu3v9_END --><!-- HEAD_svelte-opaqrw_START --><script async src="https://www.googletagmanager.com/gtag/js?id=G-N720D51XEK"></script><script>window.dataLayer = window.dataLayer || [];
+		<link rel="modulepreload" href="../../_app/immutable/chunks/MetaTags-bd417668.js"><title>JavaScript this</title><!-- HEAD_svelte-1pdu3v9_START --><link rel="alternate" type="application/rss+xml" href="/rss.xml"><link rel="sitemap" type="application/xml" href="/sitemap.xml"><!-- HEAD_svelte-1pdu3v9_END --><!-- HEAD_svelte-opaqrw_START --><script async src="https://www.googletagmanager.com/gtag/js?id=G-N720D51XEK"></script><script>window.dataLayer = window.dataLayer || [];
 		function gtag() {
 			dataLayer.push(arguments);
 		}
 		gtag('js', new Date());
 		gtag('config', 'G-N720D51XEK');
-	</script><!-- HEAD_svelte-opaqrw_END --><!-- HEAD_svelte-1h7w4y4_START --><meta name="robots" content="index,follow"><meta name="googlebot" content="index,follow"><meta name="description" content="jest와 react-testing-library"><meta property="og:url" content="https://wonbeenna.github.io/blog/javaScript/react-testing-4">
+	</script><!-- HEAD_svelte-opaqrw_END --><!-- HEAD_svelte-1h7w4y4_START --><meta name="robots" content="index,follow"><meta name="googlebot" content="index,follow"><meta name="description" content="사내 스터디 this"><meta property="og:url" content="https://wonbeenna.github.io/blog/javaScript/this">
 
     
 
-    <meta property="og:title" content="리액트 테스팅(4)">
+    <meta property="og:title" content="JavaScript this">
 
-    <meta property="og:description" content="jest와 react-testing-library">
+    <meta property="og:description" content="사내 스터디 this">
 
-    <meta property="og:image" content="https://wonbeenna.github.io/postIcon/test.png">
+    <meta property="og:image" content="https://wonbeenna.github.io/postIcon/javascript.png">
         <meta property="og:image:alt" content="titleImage">
         
         
@@ -38,7 +38,7 @@
 
     
 
-    <meta property="og:site_name" content="Been-blog 리액트 테스팅(4)"><!-- HEAD_svelte-1h7w4y4_END -->
+    <meta property="og:site_name" content="Been-blog JavaScript this"><!-- HEAD_svelte-1h7w4y4_END -->
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
@@ -55,23 +55,41 @@
 
 <main>
 
-<article><aside><div class="post_title_wrapper"><h1 class="post_title">리액트 테스팅(4)</h1>
-			<h2 class="card_post_description">jest와 react-testing-library</h2>
-			<p class="card_post_date">2023. 1. 2.</p></div>
-		<!-- HTML_TAG_START --><div><h3 id="provider-테스팅-해보기"><a aria-hidden="true" tabindex="-1" href="#provider-테스팅-해보기"><span class="icon icon-link"></span></a>Provider 테스팅 해보기</h3>
-<pre class="language-js"><!-- HTML_TAG_START --><code class="language-js"><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>Options optionType<span class="token operator">=</span><span class="token string">"scoops"</span> <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token literal-property property">wrapper</span><span class="token operator">:</span> OrderDetailsProvider<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
-<p>테스트 wrapper에 Provider로 감싸주면 된다.</p>
-<p>여기서는 redux나 recoil 등 다른 라이브러리도 가능</p>
+<article><aside><div class="post_title_wrapper"><h1 class="post_title">JavaScript this</h1>
+			<h2 class="card_post_description">사내 스터디 this</h2>
+			<p class="card_post_date">2023. 2. 2.</p></div>
+		<!-- HTML_TAG_START --><div><p>자바스크립트의 함수는 호출될 때, 매개변수 이외에 <code>arguments</code> 객체와 <code>this</code>를 암묵적으로 전달 받는다.</p>
+<ul><li>Java의 <code>this</code> 는 인스턴스 자신을 가르키는 참조변수</li>
+<li>this가 객체 자신에 대한 참조 값을 가지고 있다.</li></ul>
+<p>하지만 자바스크립트의 <code>this</code> 는 함수 호출 방식에 따라 <code>this</code> 에 바인딩 되는 객체가 달라진다</p>
 <hr>
-<p>전역적으로도 사용이 가능</p>
-<pre class="language-js"><!-- HTML_TAG_START --><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span>render<span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@testing-library/react'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token punctuation">&#123;</span>OrderDetailsProvider<span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'../contexts/OrderDetails'</span><span class="token punctuation">;</span>
-
-<span class="token keyword">const</span> <span class="token function-variable function">renderWithContext</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">ui<span class="token punctuation">,</span> options</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">render</span><span class="token punctuation">(</span>ui<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token literal-property property">wrapper</span><span class="token operator">:</span> OrderDetailsProvider<span class="token punctuation">,</span> <span class="token operator">...</span>options<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">export</span> <span class="token operator">*</span> <span class="token keyword">from</span> <span class="token string">'@testing-library/react'</span><span class="token punctuation">;</span>
-
-<span class="token keyword">export</span> <span class="token punctuation">&#123;</span>renderWithContext <span class="token keyword">as</span> render<span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre></div>
+<h3 id="일반-함수-호출"><a aria-hidden="true" tabindex="-1" href="#일반-함수-호출"><span class="icon icon-link"></span></a>일반 함수 호출</h3>
+<img src="/blog/javaScript/this-1.png" width="100%" alt="post image">
+<ul><li>this → 전역 (window) 객체에 바인딩 됨</li>
+<li>기본적으로 <code>this</code> 는 전역객체에 바인딩 되고, 내부 함수의 경우에도 전역객체에 바인딩 됨</li></ul>
+<img src="/blog/javaScript/this-2.png" width="100%" alt="post image">
+<ul><li><strong>내부함수는 일반 함수, 메소드, 콜백함수 어디에서 선언되었든 관게없이 this는 전역객체를 바인딩한다.</strong></li></ul>
+<hr>
+<h3 id="객체-메소드-호출"><a aria-hidden="true" tabindex="-1" href="#객체-메소드-호출"><span class="icon icon-link"></span></a>객체 메소드 호출</h3>
+<img src="/blog/javaScript/this-3.png" width="100%" alt="post image">
+<ul><li>해당 메소드의 객체에 바인딩 됨</li></ul>
+<img src="/blog/javaScript/this-4.png" width="100%" alt="post image">
+<ul><li>프로토타입 객체도 메소드를 가질 수 있다.</li></ul>
+<p>프로토 타입 방식이란 자바스크립트에서 객체를 상속하기 위해 사용된다 (템플릿 같은 것)</p>
+<hr>
+<h3 id="생성자-함수-호출"><a aria-hidden="true" tabindex="-1" href="#생성자-함수-호출"><span class="icon icon-link"></span></a>생성자 함수 호출</h3>
+<ul><li>생성자 함수란 객체를 생성하는 역할을 함</li>
+<li><strong>기존 함수에 new 연산자를 붙여서 호출하면 해당 함수는 생성자 함수로 동작</strong></li></ul>
+<img src="/blog/javaScript/this-5.png" width="100%" alt="post image">
+<ol><li>빈 객체 생성 및 this 바인딩 → 2. this를 통한 프로퍼티 생성 → 3. 생성된 객체 반환</li></ol>
+<hr>
+<h3 id="applycallbind-호출"><a aria-hidden="true" tabindex="-1" href="#applycallbind-호출"><span class="icon icon-link"></span></a>apply/call/bind 호출</h3>
+<ul><li>this 객체에 명시적으로 바인딩 하는 방법</li></ul>
+<hr>
+<p>일반 함수</p>
+<ul><li>일반 함수 → 화살표 함수</li>
+<li>생성자 함수 → class</li>
+<li>객체 메서드 → 객체 메서드 축약형</li></ul></div>
 <style>
     code[class*='language-'],
     pre[class*='language-'] {
@@ -380,17 +398,17 @@
 <footer class="footer">Copyright © Been.</footer>
 
 
-		<script type="module" data-sveltekit-hydrate="161qryv">
+		<script type="module" data-sveltekit-hydrate="bpnws5">
 			import { start } from "../../_app/immutable/start-b3b87bb6.js";
 
 			start({
 				env: {},
 				paths: {"assets":"","base":""},
-				target: document.querySelector('[data-sveltekit-hydrate="161qryv"]').parentNode,
+				target: document.querySelector('[data-sveltekit-hydrate="bpnws5"]').parentNode,
 				version: "1675343118946",
 				hydrate: {
 					node_ids: [0, 6],
-					data: [null,{type:"data",data:{PostContent:"\u003Ch3 id=\"provider-테스팅-해보기\"\u003E\u003Ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#provider-테스팅-해보기\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003EProvider 테스팅 해보기\u003C\u002Fh3\u003E\n\u003Cpre class=\"language-js\"\u003E\u003C!-- HTML_TAG_START --\u003E\u003Ccode class=\"language-js\"\u003E\u003Cspan class=\"token function\"\u003Erender\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E&lt;\u003C\u002Fspan\u003EOptions optionType\u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\"token string\"\u003E\"scoops\"\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E\u002F\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E\u003E\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\u003Cspan class=\"token literal-property property\"\u003Ewrapper\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E OrderDetailsProvider\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C!-- HTML_TAG_END --\u003E\u003C\u002Fpre\u003E\n\u003Cp\u003E테스트 wrapper에 Provider로 감싸주면 된다.\u003C\u002Fp\u003E\n\u003Cp\u003E여기서는 redux나 recoil 등 다른 라이브러리도 가능\u003C\u002Fp\u003E\n\u003Chr\u003E\n\u003Cp\u003E전역적으로도 사용이 가능\u003C\u002Fp\u003E\n\u003Cpre class=\"language-js\"\u003E\u003C!-- HTML_TAG_START --\u003E\u003Ccode class=\"language-js\"\u003E\u003Cspan class=\"token keyword\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003Erender\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E'@testing-library\u002Freact'\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\u003Cspan class=\"token keyword\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003EOrderDetailsProvider\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E'..\u002Fcontexts\u002FOrderDetails'\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E \u003Cspan class=\"token function-variable function\"\u003ErenderWithContext\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003E\u003Cspan class=\"token parameter\"\u003Eui\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E options\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E=\u003E\u003C\u002Fspan\u003E \u003Cspan class=\"token function\"\u003Erender\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Eui\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\u003Cspan class=\"token literal-property property\"\u003Ewrapper\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E OrderDetailsProvider\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E...\u003C\u002Fspan\u003Eoptions\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Eexport\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E*\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E'@testing-library\u002Freact'\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Eexport\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003ErenderWithContext \u003Cspan class=\"token keyword\"\u003Eas\u003C\u002Fspan\u003E render\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C!-- HTML_TAG_END --\u003E\u003C\u002Fpre\u003E",meta:{title:"리액트 테스팅(4)",date:"2023. 1. 2.",description:"jest와 react-testing-library",category:"javaScript",titleImage:"\u002FpostIcon\u002Ftest.png",slug:"react-testing-4"}},uses:{params:["category","post"]}}],
+					data: [null,{type:"data",data:{PostContent:"\u003Cp\u003E자바스크립트의 함수는 호출될 때, 매개변수 이외에 \u003Ccode\u003Earguments\u003C\u002Fcode\u003E 객체와 \u003Ccode\u003Ethis\u003C\u002Fcode\u003E를 암묵적으로 전달 받는다.\u003C\u002Fp\u003E\n\u003Cul\u003E\u003Cli\u003EJava의 \u003Ccode\u003Ethis\u003C\u002Fcode\u003E 는 인스턴스 자신을 가르키는 참조변수\u003C\u002Fli\u003E\n\u003Cli\u003Ethis가 객체 자신에 대한 참조 값을 가지고 있다.\u003C\u002Fli\u003E\u003C\u002Ful\u003E\n\u003Cp\u003E하지만 자바스크립트의 \u003Ccode\u003Ethis\u003C\u002Fcode\u003E 는 함수 호출 방식에 따라 \u003Ccode\u003Ethis\u003C\u002Fcode\u003E 에 바인딩 되는 객체가 달라진다\u003C\u002Fp\u003E\n\u003Chr\u003E\n\u003Ch3 id=\"일반-함수-호출\"\u003E\u003Ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#일반-함수-호출\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E일반 함수 호출\u003C\u002Fh3\u003E\n\u003Cimg src=\"\u002Fblog\u002FjavaScript\u002Fthis-1.png\" width=\"100%\" alt=\"post image\"\u003E\n\u003Cul\u003E\u003Cli\u003Ethis → 전역 (window) 객체에 바인딩 됨\u003C\u002Fli\u003E\n\u003Cli\u003E기본적으로 \u003Ccode\u003Ethis\u003C\u002Fcode\u003E 는 전역객체에 바인딩 되고, 내부 함수의 경우에도 전역객체에 바인딩 됨\u003C\u002Fli\u003E\u003C\u002Ful\u003E\n\u003Cimg src=\"\u002Fblog\u002FjavaScript\u002Fthis-2.png\" width=\"100%\" alt=\"post image\"\u003E\n\u003Cul\u003E\u003Cli\u003E\u003Cstrong\u003E내부함수는 일반 함수, 메소드, 콜백함수 어디에서 선언되었든 관게없이 this는 전역객체를 바인딩한다.\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\u003C\u002Ful\u003E\n\u003Chr\u003E\n\u003Ch3 id=\"객체-메소드-호출\"\u003E\u003Ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#객체-메소드-호출\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E객체 메소드 호출\u003C\u002Fh3\u003E\n\u003Cimg src=\"\u002Fblog\u002FjavaScript\u002Fthis-3.png\" width=\"100%\" alt=\"post image\"\u003E\n\u003Cul\u003E\u003Cli\u003E해당 메소드의 객체에 바인딩 됨\u003C\u002Fli\u003E\u003C\u002Ful\u003E\n\u003Cimg src=\"\u002Fblog\u002FjavaScript\u002Fthis-4.png\" width=\"100%\" alt=\"post image\"\u003E\n\u003Cul\u003E\u003Cli\u003E프로토타입 객체도 메소드를 가질 수 있다.\u003C\u002Fli\u003E\u003C\u002Ful\u003E\n\u003Cp\u003E프로토 타입 방식이란 자바스크립트에서 객체를 상속하기 위해 사용된다 (템플릿 같은 것)\u003C\u002Fp\u003E\n\u003Chr\u003E\n\u003Ch3 id=\"생성자-함수-호출\"\u003E\u003Ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#생성자-함수-호출\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E생성자 함수 호출\u003C\u002Fh3\u003E\n\u003Cul\u003E\u003Cli\u003E생성자 함수란 객체를 생성하는 역할을 함\u003C\u002Fli\u003E\n\u003Cli\u003E\u003Cstrong\u003E기존 함수에 new 연산자를 붙여서 호출하면 해당 함수는 생성자 함수로 동작\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\u003C\u002Ful\u003E\n\u003Cimg src=\"\u002Fblog\u002FjavaScript\u002Fthis-5.png\" width=\"100%\" alt=\"post image\"\u003E\n\u003Col\u003E\u003Cli\u003E빈 객체 생성 및 this 바인딩 → 2. this를 통한 프로퍼티 생성 → 3. 생성된 객체 반환\u003C\u002Fli\u003E\u003C\u002Fol\u003E\n\u003Chr\u003E\n\u003Ch3 id=\"applycallbind-호출\"\u003E\u003Ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#applycallbind-호출\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003Eapply\u002Fcall\u002Fbind 호출\u003C\u002Fh3\u003E\n\u003Cul\u003E\u003Cli\u003Ethis 객체에 명시적으로 바인딩 하는 방법\u003C\u002Fli\u003E\u003C\u002Ful\u003E\n\u003Chr\u003E\n\u003Cp\u003E일반 함수\u003C\u002Fp\u003E\n\u003Cul\u003E\u003Cli\u003E일반 함수 → 화살표 함수\u003C\u002Fli\u003E\n\u003Cli\u003E생성자 함수 → class\u003C\u002Fli\u003E\n\u003Cli\u003E객체 메서드 → 객체 메서드 축약형\u003C\u002Fli\u003E\u003C\u002Ful\u003E",meta:{title:"JavaScript this",date:"2023. 2. 2.",description:"사내 스터디 this",category:"javaScript",titleImage:"\u002FpostIcon\u002Fjavascript.png",slug:"this"}},uses:{params:["category","post"]}}],
 					form: null,
 					error: null
 				}
