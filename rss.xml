@@ -4,11 +4,18 @@
         <title>Been blog</title>
         <link>https://wonbeenna.github.io</link>
         <description>Been dev-note</description>
-        <lastBuildDate>Thu, 02 Feb 2023 13:05:27 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 17 Feb 2023 17:56:01 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ko</language>
         <copyright>Copyright ©Been</copyright>
+        <item>
+            <title><![CDATA[Nextjs에서 tailwind 써보기]]></title>
+            <link>https://wonbeenna.github.io/blog/javaScript/tailwindcss</link>
+            <guid>https://wonbeenna.github.io/blog/javaScript/tailwindcss</guid>
+            <pubDate>Fri, 17 Feb 2023 15:00:00 GMT</pubDate>
+            <description><![CDATA[공식문서 보면서 tailwind 써보기]]></description>
+        </item>
         <item>
             <title><![CDATA[JavaScript this]]></title>
             <link>https://wonbeenna.github.io/blog/javaScript/this</link>
