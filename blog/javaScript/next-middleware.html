@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=undefined>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../../favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../../_app/immutable/assets/_layout-7d321ece.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/_main-13531142.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/_post-337fee93.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/start-b3b87bb6.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index-1a5c47a3.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons-0421c9ef.js">
+		<link rel="modulepreload" href="../../_app/immutable/components/pages/_layout.svelte-646c509c.js">
+		<link rel="modulepreload" href="../../_app/immutable/modules/pages/_layout.ts-0e5b168f.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/_layout-6a830c33.js">
+		<link rel="modulepreload" href="../../_app/immutable/components/pages/blog/_category_/_post_/_page.svelte-55632d16.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/MetaTags-bd417668.js"><title>Next.js middleware와 getServerSideProps</title><!-- HEAD_svelte-1pdu3v9_START --><link rel="alternate" type="application/rss+xml" href="/rss.xml"><link rel="sitemap" type="application/xml" href="/sitemap.xml"><!-- HEAD_svelte-1pdu3v9_END --><!-- HEAD_svelte-opaqrw_START --><script async src="https://www.googletagmanager.com/gtag/js?id=G-N720D51XEK"></script><script>window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'G-N720D51XEK');
+	</script><!-- HEAD_svelte-opaqrw_END --><!-- HEAD_svelte-1h7w4y4_START --><meta name="robots" content="index,follow"><meta name="googlebot" content="index,follow"><meta name="description" content="세션방식의 로그인 인증, middleware와 getServerSideProps를 사용해 구현한 기록"><meta property="og:url" content="https://wonbeenna.github.io/blog/javaScript/next-middleware">
+
+    
+
+    <meta property="og:title" content="Next.js middleware와 getServerSideProps">
+
+    <meta property="og:description" content="세션방식의 로그인 인증, middleware와 getServerSideProps를 사용해 구현한 기록">
+
+    <meta property="og:image" content="https://wonbeenna.github.io/postIcon/Nextjs.svg">
+        <meta property="og:image:alt" content="titleImage">
+        
+        
+
+    
+
+    
+
+    <meta property="og:site_name" content="Been-blog Next.js middleware와 getServerSideProps"><!-- HEAD_svelte-1h7w4y4_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+
+
+
+
+
+<header class="header"><section class="header_section"><div class="header_box"><a href="/"><img src="/icons/been-logo.svg" width="60" height="56" alt="logo"></a>
+			<div class="header_box"><a href="/about"><h3>About</h3></a></div></div>
+		<div class="header_box"><a href="https://github.com/wonbeenna" target="_blank" rel="noopener noreferrer"><img src="/icons/github.svg" alt="github" width="30" height="30"></a>
+			<a href="mailto:nwbnwb@naver.com"><img src="/icons/mail.svg" alt="email" width="34" height="34"></a>
+			<button><img src="/icons/moon.svg" alt="어두운 테마" width="30" height="30"></button></div></section></header>
+
+<main>
+
+<article><aside><div class="post_title_wrapper"><h1 class="post_title">Next.js middleware와 getServerSideProps</h1>
+			<h2 class="card_post_description">세션방식의 로그인 인증, middleware와 getServerSideProps를 사용해 구현한 기록</h2>
+			<p class="card_post_date">2023. 2. 22.</p></div>
+		<!-- HTML_TAG_START --><div><p>인증방식에는 대표적으로 두가지가 있다.</p>
+<p>제일 많이 사용하는 세션 방식과 토큰 방식</p>
+<ul><li>인증 -&gt; 유저가 누구인지 확인</li>
+<li>인가 -&gt; 유저의 요청에 대한 권한을 확인하고 허가</li></ul>
+<hr>
+<h3 id="세션방식"><a aria-hidden="true" tabindex="-1" href="#세션방식"><span class="icon icon-link"></span></a>세션방식</h3>
+<ul><li>로그인 요청 -&gt; 서버에서 세션 key-value로 구분해 정보를 저장</li>
+<li>서버 -&gt; 클라이언트 측으로 http header cookie에 세션 id를 담아 전달</li>
+<li>클라이언트 쪽에서 response값으로 cookie에 저장된 세션을 확인할 수 있는데, 브라우저에 저장</li></ul>
+<p>세션 방식은 HTTP요청이 노출되어도 세션 자체에는 의미있는 값이 없기 때문에 보안상 유리할 수 있다.</p>
+<p>각 사용자마다 고유한 id를 갖고 있기 때문에 매번 회원정보를 확인할 필요가 없다.</p>
+<p>서버에 따로 세션 저장소를 두기 때문에 사용자가 많아지면 서버에 부담이 간다.</p>
+<p>각 브라우저들은 보안상의 이슈로 서버와 프론트간의 도메인이 같아야 쿠키가 전달된다.</p>
+<ul><li><p>프론트 측에서는 Axios 사용시 <code>withCredentials: true</code>설정을 통해 서로 다른 도메인간의 요청에도 credential 정보를 받을 것인지 설정해야 한다.</p></li>
+<li><p>서버 측에서는 응답 헤더의 Access-Control-Allow-Credentials 항목을 true로 설정해야 하고,
+응답 헤더의 Access-Control-Allow-Origin의 값을 와일드 카드(’*’) 제외하고 설정 되어야 한다.</p></li></ul>
+<hr>
+<p>우선 localhost와 서버상의 도메인이 달라 proxy 설정을 해줬다.</p>
+<pre class="language-ts"><!-- HTML_TAG_START --><code class="language-ts"><span class="token comment">// pages/api/[...path].ts</span>
+<span class="token keyword">import</span> <span class="token keyword">type</span> <span class="token punctuation">&#123;</span> NextApiRequest<span class="token punctuation">,</span> NextApiResponse <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"next"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> httpProxyMiddleware <span class="token keyword">from</span> <span class="token string">"next-http-proxy-middleware"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  api<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    externalResolver<span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span>req<span class="token operator">:</span> NextApiRequest<span class="token punctuation">,</span> res<span class="token operator">:</span> NextApiResponse<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token function">httpProxyMiddleware</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>
+        target<span class="token operator">:</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NEXT_PUBLIC_API_URL</span><span class="token punctuation">,</span>
+        changeOrigin<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        pathRewrite<span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">&#123;</span>
+            patternStr<span class="token operator">:</span> <span class="token string">"^/api/"</span><span class="token punctuation">,</span>
+            replaceStr<span class="token operator">:</span> <span class="token string">"/"</span><span class="token punctuation">,</span>
+          <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        cookieDomainRewrite<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+          <span class="token string-property property">"*"</span><span class="token operator">:</span> <span class="token string">"localhost"</span><span class="token punctuation">,</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
+<pre class="language-ts"><!-- HTML_TAG_START --><code class="language-ts"><span class="token comment">/** @type &#123;import('next').NextConfig&#125; */</span>
+<span class="token keyword">const</span> nextConfig <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  swcMinify<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  reactStrictMode<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  compiler<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    styledComponents<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    removeConsole<span class="token operator">:</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">===</span> <span class="token string">"production"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token keyword">async</span> <span class="token function">rewrites</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">===</span> <span class="token string">"production"</span>
+      <span class="token operator">?</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">&#123;</span>
+            source<span class="token operator">:</span> <span class="token string">"/api/:path*"</span><span class="token punctuation">,</span>
+            destination<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">&#96;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NEXT_PUBLIC_API_URL</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">/:path*</span><span class="token template-punctuation string">&#96;</span></span><span class="token punctuation">,</span>
+          <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span>
+      <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+<span class="token punctuation">&#123;</span><span class="token operator">...</span><span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
+<hr>
+<p>위 처럼 설정해 주니 서버에서 보낸 cookie가 localhost 브라우저에 잘 들어왔다.</p>
+<p>여기서 고민했던 부분이 csr환경이 아닌 next의 ssr환경인 프론트측 서버단에서는 유저인증을 어떻게 확인할 것인가 였다.</p>
+<p>우선 로그인 상태와 비로그인 상태에서 접근불가능한 페이지 접근시 리다이렉트를 시키는 방법으로 진행했다.</p>
+<p>Nextjs middleware는 root폴더에 middleware.ts 파일을 만들어 주면 페이지 라우팅 되기 전에 middleware가 자동으로 실행된다.</p>
+<p>Nextjs에서 지원하는 middleware는 들어오는 요청에 따라서 req, res, header를 다시 작성하거나 리디렉션 등을 수정하거나 재작성할 수 있다.</p>
+<pre class="language-ts"><!-- HTML_TAG_START --><code class="language-ts"><span class="token keyword">import</span> <span class="token keyword">type</span> <span class="token punctuation">&#123;</span> NextRequest <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"next/server"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> fetchAuth<span class="token punctuation">,</span> inValidateAuth<span class="token punctuation">,</span> validateAuth <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"@/lib/validateUser"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> validatedUrl <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token string">"/users/sign-in"</span><span class="token punctuation">,</span>
+  <span class="token string">"/users/sign-up/normal"</span><span class="token punctuation">,</span>
+  <span class="token string">"/users/sign-up/social"</span><span class="token punctuation">,</span>
+  <span class="token string">"/users/sign-up/vendor"</span><span class="token punctuation">,</span>
+  <span class="token string">"/users/password/reset"</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> inValidateUrl <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"/users/my-page"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">middleware</span><span class="token punctuation">(</span>req<span class="token operator">:</span> NextRequest<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">const</span> url <span class="token operator">=</span> req<span class="token punctuation">.</span>nextUrl<span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>validatedUrl<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>url<span class="token punctuation">.</span>pathname<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> <span class="token keyword">await</span> <span class="token function">validateAuth</span><span class="token punctuation">(</span>req<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>inValidateUrl<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>url<span class="token punctuation">.</span>pathname<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> <span class="token keyword">await</span> <span class="token function">inValidateAuth</span><span class="token punctuation">(</span>req<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token keyword">return</span> <span class="token keyword">await</span> <span class="token function">fetchAuth</span><span class="token punctuation">(</span>req<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  matcher<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"/((?!api|_next/static|_next/image|favicon.ico|assets).*)"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
+<pre class="language-ts"><!-- HTML_TAG_START --><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> NextRequest<span class="token punctuation">,</span> NextResponse <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"next/server"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">validateUser</span> <span class="token operator">=</span> <span class="token punctuation">(</span>req<span class="token operator">:</span> NextRequest<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">return</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"url"</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>
+    method<span class="token operator">:</span> <span class="token string">"get"</span><span class="token punctuation">,</span>
+    mode<span class="token operator">:</span> <span class="token string">"cors"</span><span class="token punctuation">,</span>
+    credentials<span class="token operator">:</span> <span class="token string">"same-origin"</span><span class="token punctuation">,</span>
+    headers<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+      <span class="token string-property property">"Content-Type"</span><span class="token operator">:</span> <span class="token string">"application/json"</span><span class="token punctuation">,</span>
+      cookie<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">&#96;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>req<span class="token punctuation">.</span>headers<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">"cookie"</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">&#96;</span></span><span class="token punctuation">,</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">&#123;</span><span class="token operator">...</span><span class="token punctuation">&#125;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">fetchAuth</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span>req<span class="token operator">:</span> NextRequest<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">const</span> res <span class="token operator">=</span> NextResponse<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">validateUser</span><span class="token punctuation">(</span>req<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">await</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>ok<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            res<span class="token punctuation">.</span>cookies<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">"user"</span><span class="token punctuation">,</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>response<span class="token punctuation">.</span>ok<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            res<span class="token punctuation">.</span>cookies<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token string">"user"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            res<span class="token punctuation">.</span>cookies<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token string">"user.sid"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">"Validate Error"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
+<p>처음에 이런식으로 미들웨어를 구현했다. matcher로 페이지단만 확인했고, 페이지 라우팅시 유저 인증에 성공하면 cookie를 통해 유저정보와 세션을 전달했다.</p>
+<p>또 인증성공시 접근 x, 비인증시 접근 x 한 url을 확인해 리다이렉트 시키도록 했다.</p>
+<p>처음 해봤던 작업이었고, 제대로 구현한지 확신이 들지 않아 코드리뷰를 요청했다.</p>
+<p>middleware를 사용하지 않고 hocs를 사용해 auth를 호출하고, axios config에 headers를 전달하는 방법으로 알려주셨다.</p>
+<pre class="language-ts"><!-- HTML_TAG_START --><code class="language-ts"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> GetServerSideProps<span class="token punctuation">,</span> GetServerSidePropsContext <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"next"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> getAuth <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"@/models/auth"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> merge <span class="token keyword">from</span> <span class="token string">"lodash/merge"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> validatedUrl <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token string">"/users/sign-in"</span><span class="token punctuation">,</span>
+  <span class="token string">"/users/sign-up/normal"</span><span class="token punctuation">,</span>
+  <span class="token string">"/users/sign-up/social"</span><span class="token punctuation">,</span>
+  <span class="token string">"/users/sign-up/vendor"</span><span class="token punctuation">,</span>
+  <span class="token string">"/users/password/reset"</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> inValidateUrl <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token string">"/users/my-page"</span><span class="token punctuation">,</span>
+  <span class="token string">"/users/my-page/profile"</span><span class="token punctuation">,</span>
+  <span class="token string">"/users/my-page/review"</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">withAuth</span><span class="token punctuation">(</span>getServerSideProps<span class="token operator">?</span><span class="token operator">:</span> GetServerSideProps<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">return</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>context<span class="token operator">:</span> GetServerSidePropsContext<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">const</span> url <span class="token operator">=</span> context<span class="token punctuation">.</span>req<span class="token punctuation">.</span>url <span class="token keyword">as</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">getAuth</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span> headers<span class="token operator">:</span> context<span class="token punctuation">.</span>req<span class="token punctuation">.</span>headers <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      user <span class="token operator">=</span> res<span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>inValidateUrl<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>user<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">return</span> <span class="token punctuation">&#123;</span>
+        redirect<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+          permanent<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+          destination<span class="token operator">:</span> <span class="token string">"/users/sign-in"</span><span class="token punctuation">,</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#123;</span><span class="token operator">...</span><span class="token punctuation">&#125;</span>
+    <span class="token keyword">const</span> ret <span class="token operator">=</span> <span class="token keyword">await</span> getServerSideProps<span class="token operator">?.</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">merge</span><span class="token punctuation">(</span>ret<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> props<span class="token operator">:</span> <span class="token punctuation">&#123;</span> user <span class="token punctuation">&#125;</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+<p>middleware는 nextjs에서 서버도 같이 구성해 사용하면 좋을거라고 조언을 주셨다.</p>
+<pre class="language-ts"><!-- HTML_TAG_START --><code class="language-ts"><span class="token comment">// page/*</span>
+<span class="token punctuation">&#123;</span><span class="token operator">...</span><span class="token punctuation">&#125;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> getServerSideProps <span class="token operator">=</span> <span class="token function">withAuth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">&#123;</span><span class="token operator">...</span><span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre></div>
+<style>
+    code[class*='language-'],
+    pre[class*='language-'] {
+    color: #e3eaf2 !important;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    hyphens: none;
+    border-radius: 12px;
+    }
+
+    pre[class*='language-']::-moz-selection,
+    pre[class*='language-'] ::-moz-selection,
+    code[class*='language-']::-moz-selection,
+    code[class*='language-'] ::-moz-selection {
+    background: #3c526d !important;
+    }
+
+    pre[class*='language-']::-moz-selection, pre[class*='language-'] ::-moz-selection, code[class*='language-']::-moz-selection, code[class*='language-'] ::-moz-selection {
+    background: #3c526d !important;
+    }
+
+    pre[class*='language-']::selection,
+    pre[class*='language-'] ::selection,
+    code[class*='language-']::selection,
+    code[class*='language-'] ::selection {
+    background: #3c526d !important;
+    }
+
+    /* Code blocks */
+    pre[class*='language-'] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+    }
+
+    :not(pre) > code[class*='language-'],
+    pre[class*='language-'] {
+    background: #111b27 !important;
+    }
+
+    /* Inline code */
+    :not(pre) > code[class*='language-'] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    white-space: normal;
+    }
+
+    .code-line {
+    color: #e3eaf2 !important;
+    }
+
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+    color: #8da1b9 !important;
+    }
+
+    .token.punctuation {
+    color: #e3eaf2 !important;
+    }
+
+    .token.delimiter.important,
+    .token.selector .parent,
+    .token.tag,
+    .token.tag .token.punctuation {
+    color: #66cccc !important;
+    }
+
+    .token.attr-name,
+    .token.boolean,
+    .token.boolean.important,
+    .token.number,
+    .token.constant,
+    .token.selector .token.attribute {
+    color: #e6d37a !important;
+    }
+
+    .token.class-name,
+    .token.key,
+    .token.parameter,
+    .token.property,
+    .token.property-access,
+    .token.variable {
+    color: #6cb8e6 !important;
+    }
+
+    .token.attr-value,
+    .token.inserted,
+    .token.color,
+    .token.selector .token.value,
+    .token.string,
+    .token.string .token.url-link {
+    color: #91d076 !important;
+    }
+
+    .token.builtin,
+    .token.keyword-array,
+    .token.package,
+    .token.regex {
+    color: #f4adf4 !important;
+    }
+
+    .token.function,
+    .token.selector .token.class,
+    .token.selector .token.id,
+    .token.maybe-class-name {
+    color: #c699e3 !important;
+    }
+
+    .token.atrule .token.rule,
+    .token.combinator,
+    .token.keyword,
+    .token.operator,
+    .token.pseudo-class,
+    .token.pseudo-element,
+    .token.selector,
+    .token.unit {
+    color: #e9ae7e !important;
+    }
+
+    .token.deleted,
+    .token.important {
+    color: #cd6660 !important;
+    }
+
+    .token.keyword-this,
+    .token.this {
+    color: #6cb8e6 !important;
+    }
+
+    .token.important,
+    .token.keyword-this,
+    .token.this,
+    .token.bold {
+    font-weight: bold;
+    }
+
+    .token.delimiter.important {
+    font-weight: inherit;
+    }
+
+    .token.italic {
+    font-style: italic;
+    }
+
+    .token.entity {
+    cursor: help;
+    }
+
+    .language-markdown .token.title,
+    .language-markdown .token.title .token.punctuation {
+    color: #6cb8e6 !important;
+    font-weight: bold;
+    }
+
+    .language-markdown .token.blockquote.punctuation {
+    color: #f4adf4 !important;
+    }
+
+    .language-markdown .token.code {
+    color: #66cccc !important;
+    }
+
+    .language-markdown .token.hr.punctuation {
+    color: #6cb8e6 !important;
+    }
+
+    .language-markdown .token.url .token.content {
+    color: #91d076 !important;
+    }
+
+    .language-markdown .token.url-link {
+    color: #e6d37a !important;
+    }
+
+    .language-markdown .token.list.punctuation {
+    color: #f4adf4 !important;
+    }
+
+    .language-markdown .token.table-header {
+    color: #e3eaf2 !important;
+    }
+
+    .language-json .token.operator {
+    color: #e3eaf2;
+    }
+
+    .language-scss .token.variable {
+    color: #66cccc !important;
+    }
+
+    .token.token.tab:not(:empty):before,
+    .token.token.cr:before,
+    .token.token.lf:before,
+    .token.token.space:before {
+    color: #8da1b9 !important;
+    }
+
+    /* overrides color-values for the Toolbar plugin
+       * https://prismjs.com/plugins/toolbar/
+       */
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > a,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > button {
+    color: #111b27 !important;
+    background: #6cb8e6 !important;
+    }
+
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:hover,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:focus,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:hover,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:focus {
+    color: #111b27 !important;
+    background: #6cb8e6da !important;
+    text-decoration: none;
+    }
+
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > span,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:hover,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:focus {
+    color: #111b27 !important;
+    background: #8da1b9 !important;
+    }
+
+    .line-highlight.line-highlight {
+    background: #3c526d5f !important;
+    background: linear-gradient(to right, #3c526d5f 70%, #3c526d55) !important;
+    }
+
+    .line-highlight.line-highlight:before,
+    .line-highlight.line-highlight[data-end]:after {
+    background-color: #8da1b9 !important;
+    color: #111b27 !important;
+    box-shadow: 0 1px #3c526d !important;
+    }
+
+    pre[id].linkable-line-numbers.linkable-line-numbers span.line-numbers-rows > span:hover:before {
+    background-color: #8da1b918 !important;
+    }
+
+    .line-numbers.line-numbers .line-numbers-rows {
+    border-right: 1px solid #0b121b !important;
+    background: #0b121b7a !important;
+    }
+
+    .line-numbers .line-numbers-rows > span:before {
+    color: #8da1b9da !important;
+    }
+
+    .rainbow-braces .token.token.punctuation.brace-level-1,
+    .rainbow-braces .token.token.punctuation.brace-level-5,
+    .rainbow-braces .token.token.punctuation.brace-level-9 {
+    color: #e6d37a !important;
+    }
+
+    .rainbow-braces .token.token.punctuation.brace-level-2,
+    .rainbow-braces .token.token.punctuation.brace-level-6,
+    .rainbow-braces .token.token.punctuation.brace-level-10 {
+    color: #f4adf4;
+    }
+
+    .rainbow-braces .token.token.punctuation.brace-level-3,
+    .rainbow-braces .token.token.punctuation.brace-level-7,
+    .rainbow-braces .token.token.punctuation.brace-level-11 {
+    color: #6cb8e6 !important;
+    }
+
+    .rainbow-braces .token.token.punctuation.brace-level-4,
+    .rainbow-braces .token.token.punctuation.brace-level-8,
+    .rainbow-braces .token.token.punctuation.brace-level-12 {
+    color: #c699e3 !important;
+    }
+
+    pre.diff-highlight > code .token.token.deleted:not(.prefix),
+    pre > code.diff-highlight .token.token.deleted:not(.prefix) {
+    background-color: #cd66601f !important;
+    }
+
+    pre.diff-highlight > code .token.token.inserted:not(.prefix),
+    pre > code.diff-highlight .token.token.inserted:not(.prefix) {
+    background-color: #91d0761f !important;
+    }
+
+    .command-line .command-line-prompt {
+    border-right: 1px solid #0b121b !important;
+    }
+
+    .command-line .command-line-prompt > span:before {
+    color: #8da1b9da !important;
+    }
+
+    .content-link{
+    color: var(--primary-color);
+    }</style><!-- HTML_TAG_END --></aside></article></main>
+
+<footer class="footer">Copyright © Been.</footer>
+
+
+		<script type="module" data-sveltekit-hydrate="15x533i">
+			import { start } from "../../_app/immutable/start-b3b87bb6.js";
+
+			start({
+				env: {},
+				paths: {"assets":"","base":""},
+				target: document.querySelector('[data-sveltekit-hydrate="15x533i"]').parentNode,
+				version: "1676995902746",
+				hydrate: {
+					node_ids: [0, 6],
+					data: [null,{type:"data",data:{PostContent:"\u003Cp\u003E인증방식에는 대표적으로 두가지가 있다.\u003C\u002Fp\u003E\n\u003Cp\u003E제일 많이 사용하는 세션 방식과 토큰 방식\u003C\u002Fp\u003E\n\u003Cul\u003E\u003Cli\u003E인증 -&gt; 유저가 누구인지 확인\u003C\u002Fli\u003E\n\u003Cli\u003E인가 -&gt; 유저의 요청에 대한 권한을 확인하고 허가\u003C\u002Fli\u003E\u003C\u002Ful\u003E\n\u003Chr\u003E\n\u003Ch3 id=\"세션방식\"\u003E\u003Ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#세션방식\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E세션방식\u003C\u002Fh3\u003E\n\u003Cul\u003E\u003Cli\u003E로그인 요청 -&gt; 서버에서 세션 key-value로 구분해 정보를 저장\u003C\u002Fli\u003E\n\u003Cli\u003E서버 -&gt; 클라이언트 측으로 http header cookie에 세션 id를 담아 전달\u003C\u002Fli\u003E\n\u003Cli\u003E클라이언트 쪽에서 response값으로 cookie에 저장된 세션을 확인할 수 있는데, 브라우저에 저장\u003C\u002Fli\u003E\u003C\u002Ful\u003E\n\u003Cp\u003E세션 방식은 HTTP요청이 노출되어도 세션 자체에는 의미있는 값이 없기 때문에 보안상 유리할 수 있다.\u003C\u002Fp\u003E\n\u003Cp\u003E각 사용자마다 고유한 id를 갖고 있기 때문에 매번 회원정보를 확인할 필요가 없다.\u003C\u002Fp\u003E\n\u003Cp\u003E서버에 따로 세션 저장소를 두기 때문에 사용자가 많아지면 서버에 부담이 간다.\u003C\u002Fp\u003E\n\u003Cp\u003E각 브라우저들은 보안상의 이슈로 서버와 프론트간의 도메인이 같아야 쿠키가 전달된다.\u003C\u002Fp\u003E\n\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E프론트 측에서는 Axios 사용시 \u003Ccode\u003EwithCredentials: true\u003C\u002Fcode\u003E설정을 통해 서로 다른 도메인간의 요청에도 credential 정보를 받을 것인지 설정해야 한다.\u003C\u002Fp\u003E\u003C\u002Fli\u003E\n\u003Cli\u003E\u003Cp\u003E서버 측에서는 응답 헤더의 Access-Control-Allow-Credentials 항목을 true로 설정해야 하고,\n응답 헤더의 Access-Control-Allow-Origin의 값을 와일드 카드(’*’) 제외하고 설정 되어야 한다.\u003C\u002Fp\u003E\u003C\u002Fli\u003E\u003C\u002Ful\u003E\n\u003Chr\u003E\n\u003Cp\u003E우선 localhost와 서버상의 도메인이 달라 proxy 설정을 해줬다.\u003C\u002Fp\u003E\n\u003Cpre class=\"language-ts\"\u003E\u003C!-- HTML_TAG_START --\u003E\u003Ccode class=\"language-ts\"\u003E\u003Cspan class=\"token comment\"\u003E\u002F\u002F pages\u002Fapi\u002F[...path].ts\u003C\u002Fspan\u003E\n\u003Cspan class=\"token keyword\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Etype\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E NextApiRequest\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E NextApiResponse \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E\"next\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\u003Cspan class=\"token keyword\"\u003Eimport\u003C\u002Fspan\u003E httpProxyMiddleware \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E\"next-http-proxy-middleware\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Eexport\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E config \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n  api\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n    externalResolver\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token boolean\"\u003Etrue\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Eexport\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Edefault\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Ereq\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E NextApiRequest\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E res\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E NextApiResponse\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E=\u003E\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n    \u003Cspan class=\"token function\"\u003EhttpProxyMiddleware\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Ereq\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E res\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n        target\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E process\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003Eenv\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003E\u003Cspan class=\"token constant\"\u003ENEXT_PUBLIC_API_URL\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n        changeOrigin\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token boolean\"\u003Etrue\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n        pathRewrite\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E[\u003C\u002Fspan\u003E\n          \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n            patternStr\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E\"^\u002Fapi\u002F\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n            replaceStr\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E\"\u002F\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n          \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n        \u003Cspan class=\"token punctuation\"\u003E]\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n        cookieDomainRewrite\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n          \u003Cspan class=\"token string-property property\"\u003E\"*\"\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E\"localhost\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n        \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n      \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\n    \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C!-- HTML_TAG_END --\u003E\u003C\u002Fpre\u003E\n\u003Cpre class=\"language-ts\"\u003E\u003C!-- HTML_TAG_START --\u003E\u003Ccode class=\"language-ts\"\u003E\u003Cspan class=\"token comment\"\u003E\u002F** @type &#123;import('next').NextConfig&#125; *\u002F\u003C\u002Fspan\u003E\n\u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E nextConfig \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n  swcMinify\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token boolean\"\u003Etrue\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n  reactStrictMode\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token boolean\"\u003Etrue\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n  compiler\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n    styledComponents\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token boolean\"\u003Etrue\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n    removeConsole\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E process\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003Eenv\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003E\u003Cspan class=\"token constant\"\u003ENODE_ENV\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E===\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E\"production\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token keyword\"\u003Easync\u003C\u002Fspan\u003E \u003Cspan class=\"token function\"\u003Erewrites\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n    \u003Cspan class=\"token keyword\"\u003Ereturn\u003C\u002Fspan\u003E process\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003Eenv\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003E\u003Cspan class=\"token constant\"\u003ENODE_ENV\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E===\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E\"production\"\u003C\u002Fspan\u003E\n      \u003Cspan class=\"token operator\"\u003E?\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E[\u003C\u002Fspan\u003E\n          \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n            source\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E\"\u002Fapi\u002F:path*\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n            destination\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token template-string\"\u003E\u003Cspan class=\"token template-punctuation string\"\u003E&#96;\u003C\u002Fspan\u003E\u003Cspan class=\"token interpolation\"\u003E\u003Cspan class=\"token interpolation-punctuation punctuation\"\u003E$&#123;\u003C\u002Fspan\u003Eprocess\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003Eenv\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003E\u003Cspan class=\"token constant\"\u003ENEXT_PUBLIC_API_URL\u003C\u002Fspan\u003E\u003Cspan class=\"token interpolation-punctuation punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\"token string\"\u003E\u002F:path*\u003C\u002Fspan\u003E\u003Cspan class=\"token template-punctuation string\"\u003E&#96;\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n          \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n        \u003Cspan class=\"token punctuation\"\u003E]\u003C\u002Fspan\u003E\n      \u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E[\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E]\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n\u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E...\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\n\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C!-- HTML_TAG_END --\u003E\u003C\u002Fpre\u003E\n\u003Chr\u003E\n\u003Cp\u003E위 처럼 설정해 주니 서버에서 보낸 cookie가 localhost 브라우저에 잘 들어왔다.\u003C\u002Fp\u003E\n\u003Cp\u003E여기서 고민했던 부분이 csr환경이 아닌 next의 ssr환경인 프론트측 서버단에서는 유저인증을 어떻게 확인할 것인가 였다.\u003C\u002Fp\u003E\n\u003Cp\u003E우선 로그인 상태와 비로그인 상태에서 접근불가능한 페이지 접근시 리다이렉트를 시키는 방법으로 진행했다.\u003C\u002Fp\u003E\n\u003Cp\u003ENextjs middleware는 root폴더에 middleware.ts 파일을 만들어 주면 페이지 라우팅 되기 전에 middleware가 자동으로 실행된다.\u003C\u002Fp\u003E\n\u003Cp\u003ENextjs에서 지원하는 middleware는 들어오는 요청에 따라서 req, res, header를 다시 작성하거나 리디렉션 등을 수정하거나 재작성할 수 있다.\u003C\u002Fp\u003E\n\u003Cpre class=\"language-ts\"\u003E\u003C!-- HTML_TAG_START --\u003E\u003Ccode class=\"language-ts\"\u003E\u003Cspan class=\"token keyword\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Etype\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E NextRequest \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E\"next\u002Fserver\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\u003Cspan class=\"token keyword\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E fetchAuth\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E inValidateAuth\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E validateAuth \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E\"@\u002Flib\u002FvalidateUser\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E validatedUrl \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E[\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token string\"\u003E\"\u002Fusers\u002Fsign-in\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token string\"\u003E\"\u002Fusers\u002Fsign-up\u002Fnormal\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token string\"\u003E\"\u002Fusers\u002Fsign-up\u002Fsocial\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token string\"\u003E\"\u002Fusers\u002Fsign-up\u002Fvendor\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token string\"\u003E\"\u002Fusers\u002Fpassword\u002Freset\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n\u003Cspan class=\"token punctuation\"\u003E]\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E inValidateUrl \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E[\u003C\u002Fspan\u003E\u003Cspan class=\"token string\"\u003E\"\u002Fusers\u002Fmy-page\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E]\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Eexport\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Easync\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efunction\u003C\u002Fspan\u003E \u003Cspan class=\"token function\"\u003Emiddleware\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Ereq\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E NextRequest\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E url \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E req\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003EnextUrl\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n  \u003Cspan class=\"token keyword\"\u003Eif\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003EvalidatedUrl\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003E\u003Cspan class=\"token function\"\u003Eincludes\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Eurl\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003Epathname\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n    \u003Cspan class=\"token keyword\"\u003Ereturn\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Eawait\u003C\u002Fspan\u003E \u003Cspan class=\"token function\"\u003EvalidateAuth\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Ereq\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\n\n  \u003Cspan class=\"token keyword\"\u003Eif\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003EinValidateUrl\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003E\u003Cspan class=\"token function\"\u003Eincludes\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Eurl\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003Epathname\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n    \u003Cspan class=\"token keyword\"\u003Ereturn\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Eawait\u003C\u002Fspan\u003E \u003Cspan class=\"token function\"\u003EinValidateAuth\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Ereq\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\n\n  \u003Cspan class=\"token keyword\"\u003Ereturn\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Eawait\u003C\u002Fspan\u003E \u003Cspan class=\"token function\"\u003EfetchAuth\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Ereq\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Eexport\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E config \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n  matcher\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E[\u003C\u002Fspan\u003E\u003Cspan class=\"token string\"\u003E\"\u002F((?!api|_next\u002Fstatic|_next\u002Fimage|favicon.ico|assets).*)\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E]\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C!-- HTML_TAG_END --\u003E\u003C\u002Fpre\u003E\n\u003Cpre class=\"language-ts\"\u003E\u003C!-- HTML_TAG_START --\u003E\u003Ccode class=\"language-ts\"\u003E\u003Cspan class=\"token keyword\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E NextRequest\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E NextResponse \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E\"next\u002Fserver\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Eexport\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E \u003Cspan class=\"token function-variable function\"\u003EvalidateUser\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Ereq\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E NextRequest\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E=\u003E\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token keyword\"\u003Ereturn\u003C\u002Fspan\u003E \u003Cspan class=\"token function\"\u003Efetch\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003E\u003Cspan class=\"token string\"\u003E\"url\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n    method\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E\"get\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n    mode\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E\"cors\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n    credentials\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E\"same-origin\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n    headers\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n      \u003Cspan class=\"token string-property property\"\u003E\"Content-Type\"\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E\"application\u002Fjson\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n      cookie\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token template-string\"\u003E\u003Cspan class=\"token template-punctuation string\"\u003E&#96;\u003C\u002Fspan\u003E\u003Cspan class=\"token interpolation\"\u003E\u003Cspan class=\"token interpolation-punctuation punctuation\"\u003E$&#123;\u003C\u002Fspan\u003Ereq\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003Eheaders\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003E\u003Cspan class=\"token function\"\u003Eget\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003E\u003Cspan class=\"token string\"\u003E\"cookie\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token interpolation-punctuation punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\"token template-punctuation string\"\u003E&#96;\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n    \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E...\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Eexport\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E \u003Cspan class=\"token function-variable function\"\u003EfetchAuth\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Easync\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Ereq\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E NextRequest\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E=\u003E\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n    \u003Cspan class=\"token keyword\"\u003Etry\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n        \u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E res \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E NextResponse\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003E\u003Cspan class=\"token function\"\u003Enext\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n        \u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E response \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Eawait\u003C\u002Fspan\u003E \u003Cspan class=\"token function\"\u003EvalidateUser\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Ereq\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n        \u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E data \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Eawait\u003C\u002Fspan\u003E response\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003E\u003Cspan class=\"token function\"\u003Ejson\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n        \u003Cspan class=\"token keyword\"\u003Eif\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Eresponse\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003Eok\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n            res\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003Ecookies\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003E\u003Cspan class=\"token function\"\u003Eset\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003E\u003Cspan class=\"token string\"\u003E\"user\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E \u003Cspan class=\"token constant\"\u003EJSON\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003E\u003Cspan class=\"token function\"\u003Estringify\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Edata\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n            \u003Cspan class=\"token keyword\"\u003Ereturn\u003C\u002Fspan\u003E res\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n        \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\n\n        \u003Cspan class=\"token keyword\"\u003Eif\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E!\u003C\u002Fspan\u003Eresponse\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003Eok\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n            res\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003Ecookies\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003E\u003Cspan class=\"token function\"\u003Edelete\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003E\u003Cspan class=\"token string\"\u003E\"user\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n            res\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003Ecookies\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003E\u003Cspan class=\"token function\"\u003Edelete\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003E\u003Cspan class=\"token string\"\u003E\"user.sid\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n            \u003Cspan class=\"token keyword\"\u003Ereturn\u003C\u002Fspan\u003E res\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n        \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\n    \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Ecatch\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Ee\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n        \u003Cspan class=\"token keyword\"\u003Ethrow\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Enew\u003C\u002Fspan\u003E \u003Cspan class=\"token class-name\"\u003EError\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003E\u003Cspan class=\"token string\"\u003E\"Validate Error\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n    \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\n\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C!-- HTML_TAG_END --\u003E\u003C\u002Fpre\u003E\n\u003Cp\u003E처음에 이런식으로 미들웨어를 구현했다. matcher로 페이지단만 확인했고, 페이지 라우팅시 유저 인증에 성공하면 cookie를 통해 유저정보와 세션을 전달했다.\u003C\u002Fp\u003E\n\u003Cp\u003E또 인증성공시 접근 x, 비인증시 접근 x 한 url을 확인해 리다이렉트 시키도록 했다.\u003C\u002Fp\u003E\n\u003Cp\u003E처음 해봤던 작업이었고, 제대로 구현한지 확신이 들지 않아 코드리뷰를 요청했다.\u003C\u002Fp\u003E\n\u003Cp\u003Emiddleware를 사용하지 않고 hocs를 사용해 auth를 호출하고, axios config에 headers를 전달하는 방법으로 알려주셨다.\u003C\u002Fp\u003E\n\u003Cpre class=\"language-ts\"\u003E\u003C!-- HTML_TAG_START --\u003E\u003Ccode class=\"language-ts\"\u003E\u003Cspan class=\"token keyword\"\u003Eimport\u003C\u002Fspan\u003E React \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E\"react\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\u003Cspan class=\"token keyword\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E GetServerSideProps\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E GetServerSidePropsContext \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E\"next\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\u003Cspan class=\"token keyword\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E getAuth \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E\"@\u002Fmodels\u002Fauth\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\u003Cspan class=\"token keyword\"\u003Eimport\u003C\u002Fspan\u003E merge \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E\"lodash\u002Fmerge\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E validatedUrl \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E[\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token string\"\u003E\"\u002Fusers\u002Fsign-in\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token string\"\u003E\"\u002Fusers\u002Fsign-up\u002Fnormal\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token string\"\u003E\"\u002Fusers\u002Fsign-up\u002Fsocial\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token string\"\u003E\"\u002Fusers\u002Fsign-up\u002Fvendor\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token string\"\u003E\"\u002Fusers\u002Fpassword\u002Freset\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n\u003Cspan class=\"token punctuation\"\u003E]\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E inValidateUrl \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E[\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token string\"\u003E\"\u002Fusers\u002Fmy-page\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token string\"\u003E\"\u002Fusers\u002Fmy-page\u002Fprofile\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token string\"\u003E\"\u002Fusers\u002Fmy-page\u002Freview\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n\u003Cspan class=\"token punctuation\"\u003E]\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Eexport\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Edefault\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efunction\u003C\u002Fspan\u003E \u003Cspan class=\"token function\"\u003EwithAuth\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003EgetServerSideProps\u003Cspan class=\"token operator\"\u003E?\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E GetServerSideProps\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token keyword\"\u003Ereturn\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Easync\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efunction\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Econtext\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E GetServerSidePropsContext\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n    \u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E url \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E context\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003Ereq\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003Eurl \u003Cspan class=\"token keyword\"\u003Eas\u003C\u002Fspan\u003E \u003Cspan class=\"token builtin\"\u003Estring\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n    \u003Cspan class=\"token keyword\"\u003Elet\u003C\u002Fspan\u003E user \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Enull\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n    \u003Cspan class=\"token keyword\"\u003Etry\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n      \u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E res \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Eawait\u003C\u002Fspan\u003E \u003Cspan class=\"token function\"\u003EgetAuth\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E headers\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E context\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003Ereq\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003Eheaders \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n      user \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E res\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003Edata\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n    \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Ecatch\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Ee\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\n    \u003Cspan class=\"token keyword\"\u003Eif\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003EinValidateUrl\u003Cspan class=\"token punctuation\"\u003E.\u003C\u002Fspan\u003E\u003Cspan class=\"token function\"\u003Eincludes\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Eurl\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E&amp;&amp;\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E!\u003C\u002Fspan\u003Euser\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n      \u003Cspan class=\"token keyword\"\u003Ereturn\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n        redirect\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\n          permanent\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token boolean\"\u003Efalse\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n          destination\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E\"\u002Fusers\u002Fsign-in\"\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n        \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E\n      \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n    \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\n    \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E...\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\n    \u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E ret \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Eawait\u003C\u002Fspan\u003E getServerSideProps\u003Cspan class=\"token operator\"\u003E?.\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Econtext\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n    \u003Cspan class=\"token keyword\"\u003Ereturn\u003C\u002Fspan\u003E \u003Cspan class=\"token function\"\u003Emerge\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003Eret\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E props\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E user \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n  \u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C!-- HTML_TAG_END --\u003E\u003C\u002Fpre\u003E\n\u003Cp\u003Emiddleware는 nextjs에서 서버도 같이 구성해 사용하면 좋을거라고 조언을 주셨다.\u003C\u002Fp\u003E\n\u003Cpre class=\"language-ts\"\u003E\u003C!-- HTML_TAG_START --\u003E\u003Ccode class=\"language-ts\"\u003E\u003Cspan class=\"token comment\"\u003E\u002F\u002F page\u002F*\u003C\u002Fspan\u003E\n\u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E...\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token keyword\"\u003Eexport\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E getServerSideProps \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\"token function\"\u003EwithAuth\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token punctuation\"\u003E&#123;\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E...\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E&#125;\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C!-- HTML_TAG_END --\u003E\u003C\u002Fpre\u003E",meta:{title:"Next.js middleware와 getServerSideProps",date:"2023. 2. 22.",description:"세션방식의 로그인 인증, middleware와 getServerSideProps를 사용해 구현한 기록",category:"javaScript",titleImage:"\u002FpostIcon\u002FNextjs.svg",slug:"next-middleware"}},uses:{params:["category","post"]}}],
+					form: null,
+					error: null
+				}
+			});
+		</script>
+	</div>
+	</body>
+</html>
