@@ -2,7 +2,7 @@
 title: JavaScript this
 date: 2023-02-02
 description: 사내 스터디 this
-category: javaScript
+category: study
 titleImage: /postIcon/javascript.png
 ---
 
