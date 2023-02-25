@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=undefined>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../../favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../../_app/immutable/assets/_layout-7d321ece.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/_main-13531142.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/_post-337fee93.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/start-cdf85411.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index-1a5c47a3.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons-0421c9ef.js">
+		<link rel="modulepreload" href="../../_app/immutable/components/pages/_layout.svelte-7487a47c.js">
+		<link rel="modulepreload" href="../../_app/immutable/modules/pages/_layout.ts-0e5b168f.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/_layout-6a830c33.js">
+		<link rel="modulepreload" href="../../_app/immutable/components/pages/blog/_category_/_post_/_page.svelte-55632d16.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/MetaTags-bd417668.js"><title>브라우저에 url을 검색하면?</title><!-- HEAD_svelte-1pdu3v9_START --><link rel="alternate" type="application/rss+xml" href="/rss.xml"><link rel="sitemap" type="application/xml" href="/sitemap.xml"><!-- HEAD_svelte-1pdu3v9_END --><!-- HEAD_svelte-opaqrw_START --><script async src="https://www.googletagmanager.com/gtag/js?id=G-N720D51XEK"></script><script>window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'G-N720D51XEK');
+	</script><!-- HEAD_svelte-opaqrw_END --><!-- HEAD_svelte-1h7w4y4_START --><meta name="robots" content="index,follow"><meta name="googlebot" content="index,follow"><meta name="description" content="사내 스터디"><meta property="og:url" content="https://wonbeenna.github.io/blog/study/browser">
+
+    
+
+    <meta property="og:title" content="브라우저에 url을 검색하면?">
+
+    <meta property="og:description" content="사내 스터디">
+
+    <meta property="og:image" content="https://wonbeenna.github.io/postIcon/javascript.png">
+        <meta property="og:image:alt" content="titleImage">
+        
+        
+
+    
+
+    
+
+    <meta property="og:site_name" content="Been-blog 브라우저에 url을 검색하면?"><!-- HEAD_svelte-1h7w4y4_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+
+
+
+
+
+<header class="header"><section class="header_section"><div class="header_box"><a href="/"><img src="/icons/been-logo.svg" width="60" height="56" alt="logo"></a>
+			<div class="header_box"><a href="/about"><h3>About</h3></a></div></div>
+		<div class="header_box"><a href="https://github.com/wonbeenna" target="_blank" rel="noopener noreferrer"><img src="/icons/github.svg" alt="github" width="30" height="30"></a>
+			<a href="mailto:nwbnwb@naver.com"><img src="/icons/mail.svg" alt="email" width="34" height="34"></a>
+			<button><img src="/icons/moon.svg" alt="어두운 테마" width="30" height="30"></button></div></section></header>
+
+<main>
+
+<article><aside><div class="post_title_wrapper"><h1 class="post_title">브라우저에 url을 검색하면?</h1>
+			<h2 class="card_post_description">사내 스터디</h2>
+			<p class="card_post_date">2023. 2. 25.</p></div>
+		<!-- HTML_TAG_START --><div><p>대기열 → 캐싱 → DNS → 라우팅 → ARP → 초기연결 → 컨텐츠 다운로드 → 브라우저 렌더링</p>
+<p>이런 과정을 비캡슐화, 캡슐화 과정을 거침</p>
+<h3 id="대기열"><a aria-hidden="true" tabindex="-1" href="#대기열"><span class="icon icon-link"></span></a>대기열</h3>
+<h3 id="캐싱"><a aria-hidden="true" tabindex="-1" href="#캐싱"><span class="icon icon-link"></span></a>캐싱</h3>
+<ul><li>공유프록시캐시</li>
+<li>브라우저 캐시</li></ul>
+<p>요청된 값의 결과값을 저장하고 다시 요청하는 기술</p>
+<p>브라우저는 IP주소를 찾기 위해 캐시된 DNS 기록을 확인</p>
+<h3 id="dns-조회"><a aria-hidden="true" tabindex="-1" href="#dns-조회"><span class="icon icon-link"></span></a>DNS 조회</h3>
+<ul><li>브라우저가 IP 주소를 확인하는 단계</li>
+<li>도메인 이름과 IP주소를 매핑해주는 서버</li>
+<li><code>www.naver.com</code> ← 반대로 확인</li>
+<li>root (.) → .com → naver.com → <code>www.naver.com</code></li></ul>
+<h3 id="라우팅"><a aria-hidden="true" tabindex="-1" href="#라우팅"><span class="icon icon-link"></span></a>라우팅</h3>
+<ul><li>IP주소를 찾아가는 과정</li>
+<li>홉 바이 홉 통신</li></ul>
+<h3 id="arp-ip-주소를-물리적-네트워크-주소로-대응bind시키기-위해-사용되는-프로토콜"><a aria-hidden="true" tabindex="-1" href="#arp-ip-주소를-물리적-네트워크-주소로-대응bind시키기-위해-사용되는-프로토콜"><span class="icon icon-link"></span></a>ARP (<strong>IP 주소를 물리적 네트워크 주소로 대응(bind)시키기 위해 사용되는 프로토콜)</strong></h3>
+<ul><li>ARP를 통해 MAC주소를 찾아 MAC주소를 기반으로 통신</li>
+<li>논리적 주소 → 물리적 주소</li>
+<li>장치 ↔ 장치 (IP주소를 → MAC주소)</li>
+<li>실제 서버에 도달</li></ul>
+<h3 id="초기-연결"><a aria-hidden="true" tabindex="-1" href="#초기-연결"><span class="icon icon-link"></span></a>초기 연결</h3>
+<h3 id="콘텐츠-다운로드"><a aria-hidden="true" tabindex="-1" href="#콘텐츠-다운로드"><span class="icon icon-link"></span></a>콘텐츠 다운로드</h3>
+<ul><li>브라우저는 서버로부터 응답을 수신</li></ul>
+<h3 id="브라우저-렌더링"><a aria-hidden="true" tabindex="-1" href="#브라우저-렌더링"><span class="icon icon-link"></span></a>브라우저 렌더링</h3>
+<ul><li>DOM 트리 구축</li>
+<li>HTML, CSS가 각각 파서로 해석되다가 DOM트리를 구축한다.</li>
+<li>html, body, div 등 tree형태로</li>
+<li>렌더트리와 렌더레이어 생성</li>
+<li>CSSOM 트리가 생성되고 미리 만들어 놓은 DOM트리 내에 있는 노드와 함께 스타일이 생성</li>
+<li>렌더레이어 대상으로 Layout 설정</li>
+<li>렌더레이어 대상으로 칠하기 (paint 과정)</li>
+<li>레이어 합치기</li>
+<li>각각의 레이어들이 합쳐짐</li></ul>
+<p>일반적인 모니터는 초당 60FPS, 브라우저도 초당 60FPS로 화면을 그리게 된다.</p>
+<p>여기서 브라우저가 60FPS 아래로 그리게 된다면 쟁크 현상이 발생함.</p>
+<img src="https://wonbeenna.github.io/blog/javaScript/web-optimization6.png" width="100%" alt="bundle-analyzer">
+<ol><li>DOM + CSSOM</li></ol>
+<img src="https://wonbeenna.github.io/blog/javaScript/web-optimization7.png" width="100%" alt="bundle-analyzer">
+<ol><li>Render Tree</li></ol>
+<img src="https://wonbeenna.github.io/blog/javaScript/web-optimization8.png" width="100%" alt="bundle-analyzer">
+<p>위 DOM과 CSSOM을 조합해 RenderTree를 만들어 낸다.</p>
+<ol><li>Layout</li></ol>
+<img src="https://wonbeenna.github.io/blog/javaScript/web-optimization9.png" width="100%" alt="bundle-analyzer">
+<p>위치나 크기를 계산해 화면에 레이아웃을 그린다.</p>
+<ol><li>Paint</li></ol>
+<p>이렇게 그려진 레이아웃위에 색을 채워넣음</p>
+<ol><li>Composite</li></ol>
+<img src="https://wonbeenna.github.io/blog/javaScript/web-optimization10.png" width="100%" height="350" alt="bundle-analyzer">
+<p>각 레이어들을 합성하는 과정</p>
+<p>이 전체의 과정을 Critical Rendering Path, Pixel Pipeline 이라고 부른다.</p>
+<p>이 완성된 상태에서 변화가 생긴다면 처음으로 돌아가 다시 이 전체의 과정을 거치게 된다.</p>
+<ul><li>width, height가 변경되면, <strong>1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5</strong> 모두 실행되게 된다 <strong>(Reflow)</strong></li>
+<li>크기나 위치가 아니라 color, background-color(색깔)이 변경됐을땐 <strong>1 -&gt; 2 -&gt; 4 -&gt; 5</strong> <strong>(Repaint)</strong></li>
+<li>transform, opacity 등(GPU가 관여하는 속성) 변경일 때 <strong>1 -&gt; 2 -&gt; 5</strong></li></ul>
+<p>따라서 transform, opacity 등(GPU가 관여하는 속성)을 사용하는게 가장 빠르고 끊김없이 보여줄 수 있다.</p></div>
+<style>
+    code[class*='language-'],
+    pre[class*='language-'] {
+    color: #e3eaf2 !important;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    hyphens: none;
+    border-radius: 12px;
+    }
+
+    pre[class*='language-']::-moz-selection,
+    pre[class*='language-'] ::-moz-selection,
+    code[class*='language-']::-moz-selection,
+    code[class*='language-'] ::-moz-selection {
+    background: #3c526d !important;
+    }
+
+    pre[class*='language-']::-moz-selection, pre[class*='language-'] ::-moz-selection, code[class*='language-']::-moz-selection, code[class*='language-'] ::-moz-selection {
+    background: #3c526d !important;
+    }
+
+    pre[class*='language-']::selection,
+    pre[class*='language-'] ::selection,
+    code[class*='language-']::selection,
+    code[class*='language-'] ::selection {
+    background: #3c526d !important;
+    }
+
+    /* Code blocks */
+    pre[class*='language-'] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+    }
+
+    :not(pre) > code[class*='language-'],
+    pre[class*='language-'] {
+    background: #111b27 !important;
+    }
+
+    /* Inline code */
+    :not(pre) > code[class*='language-'] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    white-space: normal;
+    }
+
+    .code-line {
+    color: #e3eaf2 !important;
+    }
+
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+    color: #8da1b9 !important;
+    }
+
+    .token.punctuation {
+    color: #e3eaf2 !important;
+    }
+
+    .token.delimiter.important,
+    .token.selector .parent,
+    .token.tag,
+    .token.tag .token.punctuation {
+    color: #66cccc !important;
+    }
+
+    .token.attr-name,
+    .token.boolean,
+    .token.boolean.important,
+    .token.number,
+    .token.constant,
+    .token.selector .token.attribute {
+    color: #e6d37a !important;
+    }
+
+    .token.class-name,
+    .token.key,
+    .token.parameter,
+    .token.property,
+    .token.property-access,
+    .token.variable {
+    color: #6cb8e6 !important;
+    }
+
+    .token.attr-value,
+    .token.inserted,
+    .token.color,
+    .token.selector .token.value,
+    .token.string,
+    .token.string .token.url-link {
+    color: #91d076 !important;
+    }
+
+    .token.builtin,
+    .token.keyword-array,
+    .token.package,
+    .token.regex {
+    color: #f4adf4 !important;
+    }
+
+    .token.function,
+    .token.selector .token.class,
+    .token.selector .token.id,
+    .token.maybe-class-name {
+    color: #c699e3 !important;
+    }
+
+    .token.atrule .token.rule,
+    .token.combinator,
+    .token.keyword,
+    .token.operator,
+    .token.pseudo-class,
+    .token.pseudo-element,
+    .token.selector,
+    .token.unit {
+    color: #e9ae7e !important;
+    }
+
+    .token.deleted,
+    .token.important {
+    color: #cd6660 !important;
+    }
+
+    .token.keyword-this,
+    .token.this {
+    color: #6cb8e6 !important;
+    }
+
+    .token.important,
+    .token.keyword-this,
+    .token.this,
+    .token.bold {
+    font-weight: bold;
+    }
+
+    .token.delimiter.important {
+    font-weight: inherit;
+    }
+
+    .token.italic {
+    font-style: italic;
+    }
+
+    .token.entity {
+    cursor: help;
+    }
+
+    .language-markdown .token.title,
+    .language-markdown .token.title .token.punctuation {
+    color: #6cb8e6 !important;
+    font-weight: bold;
+    }
+
+    .language-markdown .token.blockquote.punctuation {
+    color: #f4adf4 !important;
+    }
+
+    .language-markdown .token.code {
+    color: #66cccc !important;
+    }
+
+    .language-markdown .token.hr.punctuation {
+    color: #6cb8e6 !important;
+    }
+
+    .language-markdown .token.url .token.content {
+    color: #91d076 !important;
+    }
+
+    .language-markdown .token.url-link {
+    color: #e6d37a !important;
+    }
+
+    .language-markdown .token.list.punctuation {
+    color: #f4adf4 !important;
+    }
+
+    .language-markdown .token.table-header {
+    color: #e3eaf2 !important;
+    }
+
+    .language-json .token.operator {
+    color: #e3eaf2;
+    }
+
+    .language-scss .token.variable {
+    color: #66cccc !important;
+    }
+
+    .token.token.tab:not(:empty):before,
+    .token.token.cr:before,
+    .token.token.lf:before,
+    .token.token.space:before {
+    color: #8da1b9 !important;
+    }
+
+    /* overrides color-values for the Toolbar plugin
+       * https://prismjs.com/plugins/toolbar/
+       */
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > a,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > button {
+    color: #111b27 !important;
+    background: #6cb8e6 !important;
+    }
+
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:hover,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:focus,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:hover,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:focus {
+    color: #111b27 !important;
+    background: #6cb8e6da !important;
+    text-decoration: none;
+    }
+
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > span,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:hover,
+    div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:focus {
+    color: #111b27 !important;
+    background: #8da1b9 !important;
+    }
+
+    .line-highlight.line-highlight {
+    background: #3c526d5f !important;
+    background: linear-gradient(to right, #3c526d5f 70%, #3c526d55) !important;
+    }
+
+    .line-highlight.line-highlight:before,
+    .line-highlight.line-highlight[data-end]:after {
+    background-color: #8da1b9 !important;
+    color: #111b27 !important;
+    box-shadow: 0 1px #3c526d !important;
+    }
+
+    pre[id].linkable-line-numbers.linkable-line-numbers span.line-numbers-rows > span:hover:before {
+    background-color: #8da1b918 !important;
+    }
+
+    .line-numbers.line-numbers .line-numbers-rows {
+    border-right: 1px solid #0b121b !important;
+    background: #0b121b7a !important;
+    }
+
+    .line-numbers .line-numbers-rows > span:before {
+    color: #8da1b9da !important;
+    }
+
+    .rainbow-braces .token.token.punctuation.brace-level-1,
+    .rainbow-braces .token.token.punctuation.brace-level-5,
+    .rainbow-braces .token.token.punctuation.brace-level-9 {
+    color: #e6d37a !important;
+    }
+
+    .rainbow-braces .token.token.punctuation.brace-level-2,
+    .rainbow-braces .token.token.punctuation.brace-level-6,
+    .rainbow-braces .token.token.punctuation.brace-level-10 {
+    color: #f4adf4;
+    }
+
+    .rainbow-braces .token.token.punctuation.brace-level-3,
+    .rainbow-braces .token.token.punctuation.brace-level-7,
+    .rainbow-braces .token.token.punctuation.brace-level-11 {
+    color: #6cb8e6 !important;
+    }
+
+    .rainbow-braces .token.token.punctuation.brace-level-4,
+    .rainbow-braces .token.token.punctuation.brace-level-8,
+    .rainbow-braces .token.token.punctuation.brace-level-12 {
+    color: #c699e3 !important;
+    }
+
+    pre.diff-highlight > code .token.token.deleted:not(.prefix),
+    pre > code.diff-highlight .token.token.deleted:not(.prefix) {
+    background-color: #cd66601f !important;
+    }
+
+    pre.diff-highlight > code .token.token.inserted:not(.prefix),
+    pre > code.diff-highlight .token.token.inserted:not(.prefix) {
+    background-color: #91d0761f !important;
+    }
+
+    .command-line .command-line-prompt {
+    border-right: 1px solid #0b121b !important;
+    }
+
+    .command-line .command-line-prompt > span:before {
+    color: #8da1b9da !important;
+    }
+
+    .content-link{
+    color: var(--primary-color);
+    }</style><!-- HTML_TAG_END --></aside></article></main>
+
+<footer class="footer">Copyright © Been.</footer>
+
+
+		<script type="module" data-sveltekit-hydrate="1a3t64o">
+			import { start } from "../../_app/immutable/start-cdf85411.js";
+
+			start({
+				env: {},
+				paths: {"assets":"","base":""},
+				target: document.querySelector('[data-sveltekit-hydrate="1a3t64o"]').parentNode,
+				version: "1677336723590",
+				hydrate: {
+					node_ids: [0, 6],
+					data: [null,{type:"data",data:{PostContent:"\u003Cp\u003E대기열 → 캐싱 → DNS → 라우팅 → ARP → 초기연결 → 컨텐츠 다운로드 → 브라우저 렌더링\u003C\u002Fp\u003E\n\u003Cp\u003E이런 과정을 비캡슐화, 캡슐화 과정을 거침\u003C\u002Fp\u003E\n\u003Ch3 id=\"대기열\"\u003E\u003Ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#대기열\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E대기열\u003C\u002Fh3\u003E\n\u003Ch3 id=\"캐싱\"\u003E\u003Ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#캐싱\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E캐싱\u003C\u002Fh3\u003E\n\u003Cul\u003E\u003Cli\u003E공유프록시캐시\u003C\u002Fli\u003E\n\u003Cli\u003E브라우저 캐시\u003C\u002Fli\u003E\u003C\u002Ful\u003E\n\u003Cp\u003E요청된 값의 결과값을 저장하고 다시 요청하는 기술\u003C\u002Fp\u003E\n\u003Cp\u003E브라우저는 IP주소를 찾기 위해 캐시된 DNS 기록을 확인\u003C\u002Fp\u003E\n\u003Ch3 id=\"dns-조회\"\u003E\u003Ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#dns-조회\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003EDNS 조회\u003C\u002Fh3\u003E\n\u003Cul\u003E\u003Cli\u003E브라우저가 IP 주소를 확인하는 단계\u003C\u002Fli\u003E\n\u003Cli\u003E도메인 이름과 IP주소를 매핑해주는 서버\u003C\u002Fli\u003E\n\u003Cli\u003E\u003Ccode\u003Ewww.naver.com\u003C\u002Fcode\u003E ← 반대로 확인\u003C\u002Fli\u003E\n\u003Cli\u003Eroot (.) → .com → naver.com → \u003Ccode\u003Ewww.naver.com\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\u003C\u002Ful\u003E\n\u003Ch3 id=\"라우팅\"\u003E\u003Ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#라우팅\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E라우팅\u003C\u002Fh3\u003E\n\u003Cul\u003E\u003Cli\u003EIP주소를 찾아가는 과정\u003C\u002Fli\u003E\n\u003Cli\u003E홉 바이 홉 통신\u003C\u002Fli\u003E\u003C\u002Ful\u003E\n\u003Ch3 id=\"arp-ip-주소를-물리적-네트워크-주소로-대응bind시키기-위해-사용되는-프로토콜\"\u003E\u003Ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#arp-ip-주소를-물리적-네트워크-주소로-대응bind시키기-위해-사용되는-프로토콜\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003EARP (\u003Cstrong\u003EIP 주소를 물리적 네트워크 주소로 대응(bind)시키기 위해 사용되는 프로토콜)\u003C\u002Fstrong\u003E\u003C\u002Fh3\u003E\n\u003Cul\u003E\u003Cli\u003EARP를 통해 MAC주소를 찾아 MAC주소를 기반으로 통신\u003C\u002Fli\u003E\n\u003Cli\u003E논리적 주소 → 물리적 주소\u003C\u002Fli\u003E\n\u003Cli\u003E장치 ↔ 장치 (IP주소를 → MAC주소)\u003C\u002Fli\u003E\n\u003Cli\u003E실제 서버에 도달\u003C\u002Fli\u003E\u003C\u002Ful\u003E\n\u003Ch3 id=\"초기-연결\"\u003E\u003Ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#초기-연결\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E초기 연결\u003C\u002Fh3\u003E\n\u003Ch3 id=\"콘텐츠-다운로드\"\u003E\u003Ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#콘텐츠-다운로드\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E콘텐츠 다운로드\u003C\u002Fh3\u003E\n\u003Cul\u003E\u003Cli\u003E브라우저는 서버로부터 응답을 수신\u003C\u002Fli\u003E\u003C\u002Ful\u003E\n\u003Ch3 id=\"브라우저-렌더링\"\u003E\u003Ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#브라우저-렌더링\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E브라우저 렌더링\u003C\u002Fh3\u003E\n\u003Cul\u003E\u003Cli\u003EDOM 트리 구축\u003C\u002Fli\u003E\n\u003Cli\u003EHTML, CSS가 각각 파서로 해석되다가 DOM트리를 구축한다.\u003C\u002Fli\u003E\n\u003Cli\u003Ehtml, body, div 등 tree형태로\u003C\u002Fli\u003E\n\u003Cli\u003E렌더트리와 렌더레이어 생성\u003C\u002Fli\u003E\n\u003Cli\u003ECSSOM 트리가 생성되고 미리 만들어 놓은 DOM트리 내에 있는 노드와 함께 스타일이 생성\u003C\u002Fli\u003E\n\u003Cli\u003E렌더레이어 대상으로 Layout 설정\u003C\u002Fli\u003E\n\u003Cli\u003E렌더레이어 대상으로 칠하기 (paint 과정)\u003C\u002Fli\u003E\n\u003Cli\u003E레이어 합치기\u003C\u002Fli\u003E\n\u003Cli\u003E각각의 레이어들이 합쳐짐\u003C\u002Fli\u003E\u003C\u002Ful\u003E\n\u003Cp\u003E일반적인 모니터는 초당 60FPS, 브라우저도 초당 60FPS로 화면을 그리게 된다.\u003C\u002Fp\u003E\n\u003Cp\u003E여기서 브라우저가 60FPS 아래로 그리게 된다면 쟁크 현상이 발생함.\u003C\u002Fp\u003E\n\u003Cimg src=\"https:\u002F\u002Fwonbeenna.github.io\u002Fblog\u002FjavaScript\u002Fweb-optimization6.png\" width=\"100%\" alt=\"bundle-analyzer\"\u003E\n\u003Col\u003E\u003Cli\u003EDOM + CSSOM\u003C\u002Fli\u003E\u003C\u002Fol\u003E\n\u003Cimg src=\"https:\u002F\u002Fwonbeenna.github.io\u002Fblog\u002FjavaScript\u002Fweb-optimization7.png\" width=\"100%\" alt=\"bundle-analyzer\"\u003E\n\u003Col\u003E\u003Cli\u003ERender Tree\u003C\u002Fli\u003E\u003C\u002Fol\u003E\n\u003Cimg src=\"https:\u002F\u002Fwonbeenna.github.io\u002Fblog\u002FjavaScript\u002Fweb-optimization8.png\" width=\"100%\" alt=\"bundle-analyzer\"\u003E\n\u003Cp\u003E위 DOM과 CSSOM을 조합해 RenderTree를 만들어 낸다.\u003C\u002Fp\u003E\n\u003Col\u003E\u003Cli\u003ELayout\u003C\u002Fli\u003E\u003C\u002Fol\u003E\n\u003Cimg src=\"https:\u002F\u002Fwonbeenna.github.io\u002Fblog\u002FjavaScript\u002Fweb-optimization9.png\" width=\"100%\" alt=\"bundle-analyzer\"\u003E\n\u003Cp\u003E위치나 크기를 계산해 화면에 레이아웃을 그린다.\u003C\u002Fp\u003E\n\u003Col\u003E\u003Cli\u003EPaint\u003C\u002Fli\u003E\u003C\u002Fol\u003E\n\u003Cp\u003E이렇게 그려진 레이아웃위에 색을 채워넣음\u003C\u002Fp\u003E\n\u003Col\u003E\u003Cli\u003EComposite\u003C\u002Fli\u003E\u003C\u002Fol\u003E\n\u003Cimg src=\"https:\u002F\u002Fwonbeenna.github.io\u002Fblog\u002FjavaScript\u002Fweb-optimization10.png\" width=\"100%\" height=\"350\" alt=\"bundle-analyzer\"\u003E\n\u003Cp\u003E각 레이어들을 합성하는 과정\u003C\u002Fp\u003E\n\u003Cp\u003E이 전체의 과정을 Critical Rendering Path, Pixel Pipeline 이라고 부른다.\u003C\u002Fp\u003E\n\u003Cp\u003E이 완성된 상태에서 변화가 생긴다면 처음으로 돌아가 다시 이 전체의 과정을 거치게 된다.\u003C\u002Fp\u003E\n\u003Cul\u003E\u003Cli\u003Ewidth, height가 변경되면, \u003Cstrong\u003E1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5\u003C\u002Fstrong\u003E 모두 실행되게 된다 \u003Cstrong\u003E(Reflow)\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\n\u003Cli\u003E크기나 위치가 아니라 color, background-color(색깔)이 변경됐을땐 \u003Cstrong\u003E1 -&gt; 2 -&gt; 4 -&gt; 5\u003C\u002Fstrong\u003E \u003Cstrong\u003E(Repaint)\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\n\u003Cli\u003Etransform, opacity 등(GPU가 관여하는 속성) 변경일 때 \u003Cstrong\u003E1 -&gt; 2 -&gt; 5\u003C\u002Fstrong\u003E\u003C\u002Fli\u003E\u003C\u002Ful\u003E\n\u003Cp\u003E따라서 transform, opacity 등(GPU가 관여하는 속성)을 사용하는게 가장 빠르고 끊김없이 보여줄 수 있다.\u003C\u002Fp\u003E",meta:{title:"브라우저에 url을 검색하면?",date:"2023. 2. 25.",description:"사내 스터디",category:"study",titleImage:"\u002FpostIcon\u002Fjavascript.png",slug:"browser"}},uses:{params:["category","post"]}}],
+					form: null,
+					error: null
+				}
+			});
+		</script>
+	</div>
+	</body>
+</html>

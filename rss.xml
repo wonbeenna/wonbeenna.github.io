@@ -4,11 +4,18 @@
         <title>Been blog</title>
         <link>https://wonbeenna.github.io</link>
         <description>Been dev-note</description>
-        <lastBuildDate>Tue, 21 Feb 2023 16:11:49 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 25 Feb 2023 14:52:10 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ko</language>
         <copyright>Copyright ©Been</copyright>
+        <item>
+            <title><![CDATA[브라우저에 url을 검색하면?]]></title>
+            <link>https://wonbeenna.github.io/blog/study/browser</link>
+            <guid>https://wonbeenna.github.io/blog/study/browser</guid>
+            <pubDate>Fri, 24 Feb 2023 15:00:00 GMT</pubDate>
+            <description><![CDATA[사내 스터디]]></description>
+        </item>
         <item>
             <title><![CDATA[Next.js middleware와 getServerSideProps]]></title>
             <link>https://wonbeenna.github.io/blog/javaScript/next-middleware</link>
@@ -25,8 +32,8 @@
         </item>
         <item>
             <title><![CDATA[JavaScript this]]></title>
-            <link>https://wonbeenna.github.io/blog/javaScript/this</link>
-            <guid>https://wonbeenna.github.io/blog/javaScript/this</guid>
+            <link>https://wonbeenna.github.io/blog/study/this</link>
+            <guid>https://wonbeenna.github.io/blog/study/this</guid>
             <pubDate>Wed, 01 Feb 2023 15:00:00 GMT</pubDate>
             <description><![CDATA[사내 스터디 this]]></description>
         </item>
