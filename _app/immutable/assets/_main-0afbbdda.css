@@ -1,0 +1,1 @@
+main{padding:20px;margin:0 auto;max-width:970px}.section{display:flex;position:relative}@media (max-width: 768px){.section{flex-direction:column-reverse}}.wrapper{position:relative;display:flex;flex-direction:column;gap:40px;width:100%;margin:20px 0;padding:0}

@@ -1,1 +1,1 @@
-{"type":"data","nodes":[null,{"type":"data","data":[{"posts":1,"category":2,"page":3,"total":4},[],"[category]",1,0],"uses":{"params":["category","page"]}}]}
+{"type":"data","nodes":[null,{"type":"data","data":[{"posts":1,"category":2,"page":3,"categories":4,"total":13},[],"[category]",1,[5,8,11],{"title":6,"count":7},"study",2,{"title":9,"count":10},"javaScript",22,{"title":12,"count":3},"til",0],"uses":{"dependencies":["http://sveltekit-prerender/api/posts/category"],"params":["category","page"]}}]}
