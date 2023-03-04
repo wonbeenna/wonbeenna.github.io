@@ -5,15 +5,17 @@
 	import Category from '$lib/components/Posts/Category.svelte';
 	import { MetaTags } from 'svelte-meta-tags';
 	import { seoMeta, seoOg } from '$lib/config';
+
 	export let data;
 </script>
 
 <MetaTags {...seoMeta} openGraph={{ ...seoOg }} />
 
-<h1>Blog</h1>
+<h1>Hi! Been Blog</h1>
 
-<Category categories={data.categories} />
-
-<PostList posts={data} />
+<section class="section">
+	<PostList posts={data} />
+	<Category categories={data.categories} />
+</section>
 
 <Pagination currentPage={1} totalPosts={data.total} />

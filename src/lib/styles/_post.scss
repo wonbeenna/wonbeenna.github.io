@@ -149,12 +149,27 @@
 
 .category {
   list-style: none;
+  position: sticky;
+  top: 100px;
   display: flex;
+  flex-direction: column;
+  min-width: fit-content;
+  height: fit-content;
   gap: 20px;
-  padding: 0 0 50px;
-  border-bottom: 1px solid var(--gray--300);
+
+  @media (max-width: 768px) {
+    position: relative;
+    top: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 0;
+  }
 
   &_list {
     font-size: 18px;
+
+    &.selected {
+      text-decoration: underline;
+    }
   }
 }

@@ -16,9 +16,13 @@ export const load = async ({ params, fetch }) => {
 	const totalPostsRes = await fetch(`/api/posts/count`);
 	const total = await totalPostsRes.json();
 
+	const categoriesRes = await fetch(`/api/posts/category`);
+	const categories = await categoriesRes.json();
+
 	return {
 		posts,
 		page,
+		categories,
 		totalPosts: total
 	};
 };

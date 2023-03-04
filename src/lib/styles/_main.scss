@@ -5,7 +5,17 @@ main {
   max-width: 970px;
 }
 
+.section {
+  display: flex;
+  position: relative;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+}
+
 .wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 40px;
