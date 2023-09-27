@@ -2,11 +2,9 @@ import React from 'react';
 import { getAllPost, getPost } from '@/utils/getPost';
 import Contents from '@/components/Contents';
 import PostCardHeader from '@/components/PostCardHeader';
-import { getCategories } from '@/utils/getCategories';
 
 export const generateStaticParams = async () => {
-  const posts = await getAllPost();
-  const categories = await getCategories();
+  const posts = getAllPost();
 
   return posts.map((post) => {
     return {

@@ -6,7 +6,7 @@ import { getSerialize } from '@/utils/sirialize';
 export const POSTS_PATH = path.join(process.cwd(), '_posts');
 
 export const postFilePaths = fs.readdirSync(POSTS_PATH).filter((path) => /\.mdx?$/.test(path));
-export const getAllPost = async (category?: string) => {
+export const getAllPost = (category?: string) => {
   let postsData = postFilePaths
     .map((filePath) => {
       const source = fs.readFileSync(path.join(POSTS_PATH, filePath));

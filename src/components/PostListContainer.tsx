@@ -6,8 +6,8 @@ import { getCategories } from '@/utils/getCategories';
 import { getAllPost } from '@/utils/getPost';
 
 const PostListContainer = async ({ category }: { category?: string }) => {
-  const posts = await getAllPost(category);
   const categories = await getCategories();
+  const posts = getAllPost(category);
 
   return (
     <section className="flex flex-col-reverse md:relative md:flex-row">
