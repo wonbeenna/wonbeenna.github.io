@@ -1,11 +1,23 @@
 import React from 'react';
-import { getPost } from '@/utils/getPost';
+import { getAllPost, getPost } from '@/utils/getPost';
 import Contents from '@/components/Contents';
 import PostCardHeader from '@/components/PostCardHeader';
+import { getCategories } from '@/utils/getCategories';
 
-const Page = async ({ params }: { params: { slug: string } }) => {
-  const { slug } = params;
-  const data = await getPost(slug);
+export const generateStaticParams = async () => {
+  const posts = await getAllPost();
+  const categories = await getCategories();
+
+  return posts.map((post) => {
+    return {
+      slug: post.slug,
+      category: post.data.category
+    };
+  });
+};
+
+const Page = async ({ params }: { params: { category: string; slug: string } }) => {
+  const data = await getPost(params.slug);
 
   return (
     <div className="prose w-full max-w-none">
