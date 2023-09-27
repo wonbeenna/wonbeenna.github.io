@@ -4,8 +4,8 @@ export const defaultMetadata: Metadata = {
   title: 'Been blog',
   description: 'Been dev-note',
   other: {
-    name: 'google-site-verification',
-    content: 'BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U'
+    ['google-site-verification']: 'BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U',
+    ['naver-site-verification']: '58945b2bbe2fe86252fa8c7b204b40f6019920e9'
   }
 };
 

@@ -4,6 +4,7 @@ import '../styles/tailwind.css';
 import { Metadata } from 'next';
 import Head from 'next/head';
 import { defaultMetadata, defaultOpenGraph } from '@/utils/metadata';
+import Script from 'next/script';
 
 const inter = Roboto({
   weight: ['300', '400', '500', '700', '900'],
@@ -24,6 +25,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
         <link rel="apple-touch-icon" href="/favicon.png" type="image/png" sizes="32x32" />
       </Head>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-LFDRQZPCBN');
+        `}
+      </Script>
       <body suppressHydrationWarning className={inter.className}>
         <Layout>{children}</Layout>
       </body>
