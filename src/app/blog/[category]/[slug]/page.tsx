@@ -3,6 +3,28 @@ import { getAllPost, getPost } from '@/utils/getPost';
 import Contents from '@/components/Contents';
 import PostCardHeader from '@/components/PostCardHeader';
 
+export const generateMetadata = async ({ params }: { params: { category: string; slug: string } }) => {
+  const data = await getPost(params.slug);
+
+  return {
+    title: data.data.title,
+    description: data.data.description,
+    openGraph: {
+      title: data.data.title,
+      description: data.data.description,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${params.category}/${params.slug}`,
+      images: [
+        {
+          url: `${process.env.NEXT_PUBLIC_BASE_URL}${data.data.titleImage}`,
+          width: 800,
+          height: 600,
+          alt: data.data.title
+        }
+      ]
+    }
+  };
+};
+
 export const generateStaticParams = async () => {
   const posts = getAllPost();
 
