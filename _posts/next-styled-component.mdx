@@ -1,0 +1,113 @@
+---
+title: Next.js styled-component 적용 문제에 대해(_document.tsx)
+date: 2022-08-22
+description: next.js와 styled-component 사용시 발생한 에러
+category: javaScript
+titleImage: /assets/postIcon/Nextjs.svg
+---
+
+Nextjs에서 styled-components를 사용하면 서버상에서 html을 불러온 뒤, hydrate과정에서 js를 입혀 스타일이 적용된다.
+
+이때 초기 페이지 로딩시 사용자가 보게 되는 화면은, 스타일링이 전혀 적용되지않은 html문서를 잠깐 보게 되는 문제가 있다.
+
+<img src="/assets/blog/javaScript/next-styled-component.png" width="100%" alt="post image"/>
+
+네트워크 탭에서 받아온 문서(페이지)를 보면 style에 관한 정보는 없고, html만 내려온다.
+
+이럴때 **\_document.tsx**를 커스텀해 사용할 수 있다.
+
+\_document는 Page를 렌더링하는데 공통적으로 필요한 태그, 메타정보, 폰트 등을 커스텀 하는데 사용할 수 있다.
+
+또 document는 항상 서버상에서만 실행되므로 브라우저 및 클라이언트 단에서 포함된 코드들은 실행되지 않는다.
+
+---
+
+첫번째로 styled-components의 서버측 className과 클라이언트측 className을 동일하게 유지되도록 하기 위해서 next.config.js를 수정해야된다.
+
+nextjs 12.1버전 이상부터는 babel-plugin-styled-components를 사용하지 않아도 되고,
+
+```javascript
+compiler: {
+  styledComponents: true
+},
+```
+
+만 작성해 주면 된다.
+
+두번째로 
+
+```javascript
+import Document, {DocumentContext} from 'next/document'
+import {ServerStyleSheet} from 'styled-components'
+
+class MyDocument extends Document {
+  static async getInitialProps(ctx: DocumentContext) {
+    const sheet = new ServerStyleSheet()
+    const originalRenderPage = ctx.renderPage
+
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />)
+        })
+
+      const initialProps = await Document.getInitialProps(ctx)
+
+      return {
+        ...initialProps,
+        styles: [
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        ]
+      }
+    } catch (error) {
+      throw error
+    } finally {
+      sheet.seal()
+    }
+  }
+}
+
+export default MyDocument
+```
+
+\_document.tsx 파일을 위처럼 작성해 주면 된다.
+
+위 코드는 초기 서버측에서 페이지를 불러올 때 스타일을 입혀 불러오도록 설정하는 코드다.
+
+getInitialProps에서 받아온 ctx에서 renderPage객체를 찾아 볼 수 있는데, renderPage는 CSS-in-JS라이브러리를 커스텀할 때 만 사용하라고 공식문서에 나와있다.
+
+renderPage 함수를 콘솔에 찍어보니, 우리가 보는 html페이지와 리액트컴포넌트들이 담겨있는 것 같다.
+
+styled-components 라이브러리에서 ServerStyleSheet를 import하고 서버측에서 그려질 sheet를 새로 만든다.
+
+```javascript
+const sheet = new ServerStyleSheet()
+```
+
+새로 만든 sheet에 renderPage에 있는 컴포넌트내부에 styled-components로 작성한 스타일들을 결합하고,
+
+```javascript
+ctx.renderPage = () =>
+  originalRenderPage({
+    enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />)
+  })
+```
+
+기존에 html에 style태그를 추가한다.
+
+```javascript
+return {
+  ...initialProps,
+  styles: [
+    <>
+      {initialProps.styles}
+      {sheet.getStyleElement()}
+    </>
+  ]
+}
+```
+
+<img src="/assets/blog/javaScript/next-styled-component(1).png" width="100%" alt="post image"/>

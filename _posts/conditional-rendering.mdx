@@ -1,0 +1,105 @@
+---
+title: 리액트 조건부 렌더링에 대한 생각
+date: 2022-12-29
+description: 해외 블로그를 보며 정리한 조건부 렌더링에 대한 생각
+category: javaScript
+titleImage: /assets/postIcon/logo192.png
+---
+
+
+얼마전 해외 블로그를 구경하다가 이런 글을 보았다.
+
+-   리액트 조건부 렌더링에서 생각없이 && 연산자를 사용하지 말아라
+-   무조건 && 연산자를 사용하면 버그가 발생할 수 있다?
+
+이 글을 보면서 올바르게 사용하는 방법과,
+
+어떤식으로 사용하면 버그가 발생할 수 있는지 생각해 보는 계기가 되었다.
+
+우선 && 연산자는 논리 연산자로 예를 들면 다음과 같이 동작한다
+
+```javascript
+const a = 3;
+const b = -2;
+
+console.log(a && b);
+// expected output: -2
+```
+
+왼쪽에서 오른쪽으로 값을 평가하고 true인 경우 오른쪽으로 false인 경우 평가대상이된 피연산자를 반환한다.
+
+```javascript
+function Component({ condition }) {
+
+  return (
+    <div>
+      {condition && <OtherComponent />}
+     </div>
+  );
+}
+```
+
+Or
+
+```javascript
+function Component({ condition }) {
+
+  return (
+    <div>
+      {condition ? <OtherComponent /> : null}
+     </div>
+  );
+}
+```
+
+[리액트 공식문서](https://reactjs.org/docs/conditional-rendering.html)에는 && 연산자를 쓰는데 유용할 수 있다고 설명하고 있으며,
+
+보통 삼항 연산자는 코드의 가독성 때문에 잘 사용하지 않고, 또 세개의 항이 없는 경우에도 사용하지 않는다.
+
+위 같은 경우 문제될 수 있는 상황이 있는데, 
+
+```javascript
+function Component() {
+  const count = 0;
+
+  return (
+    <div>
+      {count && <h1>{count}</h1>}
+     </div>
+  );
+}
+```
+
+js의 falsy값을 평가 할때이다.
+
+[https://developer.mozilla.org/ko/docs/Glossary/Falsy](https://developer.mozilla.org/ko/docs/Glossary/Falsy)
+
+count = 0 은 **false**로 평가되고, && 연산자를 사용하기 때문에 0을 반환하게 되므로 내가 생각한 의도대로 동작하지 않을것이다.
+
+```javascript
+<div>0</div>
+```
+
+이런 경우 count 를 Boolean으로 평가하게 하면 의도한대로 동작하게 된다. 
+
+```javascript
+function Component() {
+  const count = 0;
+
+  return (
+    <div>
+      {!!count && <h1>{count}</h1>}
+     </div>
+  );
+}
+```
+
+따라서, 무조건 && 연산자를 피하는것 보다는 평가 대상이 되는 값을 생각해보며 사용하는게 좋을 것 같다.
+
+실제 개발하면서
+
+Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+
+이런 에러를 만난 적이 많았는데, 위와 관련된 것이 아닌가 생각 된다.
+
+조금 더 생각하면서 개발하자

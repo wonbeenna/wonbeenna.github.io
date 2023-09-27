@@ -1,0 +1,101 @@
+---
+title: 브라우저에 url을 검색하면?
+date: 2023-02-25
+description: 사내 스터디
+category: study
+titleImage: /assets/postIcon/javascript.png
+---
+
+대기열 → 캐싱 → DNS → 라우팅 → ARP → 초기연결 → 컨텐츠 다운로드 → 브라우저 렌더링
+
+이런 과정을 비캡슐화, 캡슐화 과정을 거침
+
+### 대기열
+
+### 캐싱
+
+- 공유프록시캐시
+- 브라우저 캐시
+
+요청된 값의 결과값을 저장하고 다시 요청하는 기술
+
+브라우저는 IP주소를 찾기 위해 캐시된 DNS 기록을 확인
+
+### DNS 조회
+
+- 브라우저가 IP 주소를 확인하는 단계
+- 도메인 이름과 IP주소를 매핑해주는 서버
+- `www.naver.com` ← 반대로 확인
+- root (.) → .com → naver.com → `www.naver.com`
+
+### 라우팅
+
+- IP주소를 찾아가는 과정
+- 홉 바이 홉 통신
+
+### ARP (**IP 주소를 물리적 네트워크 주소로 대응(bind)시키기 위해 사용되는 프로토콜)**
+
+- ARP를 통해 MAC주소를 찾아 MAC주소를 기반으로 통신
+- 논리적 주소 → 물리적 주소
+- 장치 ↔ 장치 (IP주소를 → MAC주소)
+- 실제 서버에 도달
+
+### 초기 연결
+
+### 콘텐츠 다운로드
+
+- 브라우저는 서버로부터 응답을 수신
+
+### 브라우저 렌더링
+
+- DOM 트리 구축
+- HTML, CSS가 각각 파서로 해석되다가 DOM트리를 구축한다.
+- html, body, div 등 tree형태로
+- 렌더트리와 렌더레이어 생성
+- CSSOM 트리가 생성되고 미리 만들어 놓은 DOM트리 내에 있는 노드와 함께 스타일이 생성
+- 렌더레이어 대상으로 Layout 설정
+- 렌더레이어 대상으로 칠하기 (paint 과정)
+- 레이어 합치기
+- 각각의 레이어들이 합쳐짐
+
+일반적인 모니터는 초당 60FPS, 브라우저도 초당 60FPS로 화면을 그리게 된다.
+
+여기서 브라우저가 60FPS 아래로 그리게 된다면 쟁크 현상이 발생함.
+
+<img src="https://wonbeenna.github.io/blog/javaScript/web-optimization6.png" width="100%" alt="bundle-analyzer"/>
+
+1. DOM + CSSOM
+
+<img src="https://wonbeenna.github.io/blog/javaScript/web-optimization7.png" width="100%" alt="bundle-analyzer"/>
+
+1. Render Tree
+
+<img src="https://wonbeenna.github.io/blog/javaScript/web-optimization8.png" width="100%" alt="bundle-analyzer"/>
+
+위 DOM과 CSSOM을 조합해 RenderTree를 만들어 낸다.
+
+1. Layout
+
+<img src="https://wonbeenna.github.io/blog/javaScript/web-optimization9.png" width="100%" alt="bundle-analyzer"/>
+
+위치나 크기를 계산해 화면에 레이아웃을 그린다.
+
+1. Paint
+
+이렇게 그려진 레이아웃위에 색을 채워넣음
+
+1. Composite
+
+<img src="https://wonbeenna.github.io/blog/javaScript/web-optimization10.png" width="100%" height="350" alt="bundle-analyzer"/>
+
+각 레이어들을 합성하는 과정
+
+이 전체의 과정을 Critical Rendering Path, Pixel Pipeline 이라고 부른다.
+
+이 완성된 상태에서 변화가 생긴다면 처음으로 돌아가 다시 이 전체의 과정을 거치게 된다.
+
+- width, height가 변경되면, **1 -> 2 -> 3 -> 4 -> 5** 모두 실행되게 된다 **(Reflow)**
+- 크기나 위치가 아니라 color, background-color(색깔)이 변경됐을땐 **1 -> 2 -> 4 -> 5** **(Repaint)**
+- transform, opacity 등(GPU가 관여하는 속성) 변경일 때 **1 -> 2 -> 5**
+
+따라서 transform, opacity 등(GPU가 관여하는 속성)을 사용하는게 가장 빠르고 끊김없이 보여줄 수 있다.

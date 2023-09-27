@@ -1,0 +1,32 @@
+---
+title: 리액트 테스팅(4)
+date: 2023-01-02
+description: jest와 react-testing-library
+category: javaScript
+titleImage: /assets/postIcon/test.png
+---
+
+### Provider 테스팅 해보기
+
+```js
+render(<Options optionType="scoops" />, {wrapper: OrderDetailsProvider});
+```
+
+테스트 wrapper에 Provider로 감싸주면 된다.
+
+여기서는 redux나 recoil 등 다른 라이브러리도 가능
+
+---
+
+전역적으로도 사용이 가능
+
+```js
+import {render} from '@testing-library/react';
+import {OrderDetailsProvider} from '../contexts/OrderDetails';
+
+const renderWithContext = (ui, options) => render(ui, {wrapper: OrderDetailsProvider, ...options});
+
+export * from '@testing-library/react';
+
+export {renderWithContext as render};
+```

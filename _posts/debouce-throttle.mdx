@@ -1,0 +1,116 @@
+---
+title: 디바운싱과 쓰로틀링
+date: 2023-05-13
+description: 디바운싱과 쓰로틀링의 차이를 구분하고 hook으로 구현
+category: javaScript
+titleImage: /assets/postIcon/javascript.png
+---
+
+### 디바운싱과 쓰로틀링
+
+
+- 디바운싱: 연속으로 호출되는 함수들 중 가장 마지막 함수(또는 제일 처음)만 호출하도록 하는 것
+- 쓰로틀링: 함수가 연속적으로 실행되는 경우 현재 실행되고 있는 함수가 없는 경우에만 함수를 실행함
+
+예를들어 검색을 요구하는 API에 "test"를 검색한다고 가정한 경우, 일반적인 경우에는 t, e, s, t 각 글자를 입력할 때 마다 API가 호출이 된다.
+
+이런 경우 불필요한 요청이 서버에 부담을 줄 수가 있다.
+
+이 때 디바운싱을 사용하게 된다면, 가장 마지막인 글자가 입력되고, 하나의 단어가 완성되었을때 API에 요청을 할 수 있다.
+
+쓰로틀링인 경우에는 t를 입력했을 때 API요청이 발생하고, 이후 일정 시간동안은 아무 응답도 받지 않는다.
+정해진 시간이 모두 지나고난 뒤에 마지막으로 입력된 글자까지 요청이 가게 된다.
+즉 실행 횟수에 제한을 거는 것이다.
+
+### 디바운싱
+```tsx
+import { useEffect, useState } from 'react'
+
+function useDebounce<T>(value: T, delay?: number): T {
+  const [debouncedValue, setDebouncedValue] = useState<T>(value)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setDebouncedValue(value), delay || 500)
+
+    return () => {
+      clearTimeout(timer)
+    }
+  }, [value, delay])
+
+  return debouncedValue
+}
+
+export default useDebounce
+```
+```js
+import { ChangeEvent, useEffect, useState } from 'react'
+import { useDebounce } from 'usehooks-ts'
+
+export default function Component() {
+  const [value, setValue] = useState<string>('')
+  const debouncedValue = useDebounce<string>(value, 500)
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setValue(event.target.value)
+  }
+
+  // Fetch API (optional)
+  useEffect(() => {
+    // Do fetch here...
+    // Triggers when "debouncedValue" changes
+  }, [debouncedValue])
+
+  return (
+    <div>
+      <p>Value real-time: {value}</p>
+      <p>Debounced value: {debouncedValue}</p>
+
+      <input type="text" value={value} onChange={handleChange} />
+    </div>
+  )
+}
+```
+출처: [react-hook](https://usehooks-ts.com/react-hook/use-debounce)
+
+input feild에 값이 들어갈 때마다 onChange 이벤트가 트리거되고, hook으로 전달받은 value가 clearTimeout으로 초기화된 useEffect내부 setTimeout의 delay만큼 시간이 지난 후 debouncedValue로 return 된다.
+
+### 쓰로틀링
+```js
+import { useEffect, useRef, useState } from 'react';
+
+const useThrottle = (value, limit) => {
+    const [throttledValue, setThrottledValue] = useState(value);
+    const lastRan = useRef(Date.now());
+
+    useEffect(() => {
+        const handler = setTimeout(() => {
+            if (Date.now() - lastRan.current >= limit) {
+                setThrottledValue(value);
+                lastRan.current = Date.now();
+            }
+        }, limit - (Date.now() - lastRan.current));
+
+        return () => {
+            clearTimeout(handler);
+        };
+    }, [value, limit]);
+
+    return throttledValue;
+};
+
+export default useThrottle;
+```
+```js
+const [value, setValue] = useState('');
+{...}
+const throttleText = useThrottle(value, 1000);
+```
+hook이 실행되면 lastRan과 현재시간을 비교한다.
+
+만약 (Date.now() - lastRan.current) 즉, value가 입력된 시간이 limit보다 크다면 value를 throttledValue로 return하고, lastRan을 현재시간으로 초기화한다.
+
+만약 value가 입력된 시간이 limit보다 작다면 limit - value가 입력된 시간이 시간이 지난 후에 throttledValue로 return한다.
+
+
+
+
