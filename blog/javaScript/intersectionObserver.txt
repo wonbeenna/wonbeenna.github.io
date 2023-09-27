@@ -4,7 +4,7 @@
 4:HL["/_next/static/media/8db47a8bf03b7d2f-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 5:HL["/_next/static/media/934c4b7cb736f2a3-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 6:HL["/_next/static/css/0da05791a264d82c.css","style"]
-0:["O_ycz02b-_o_hgK9R6Le5",[[["",{"children":["blog",{"children":[["category","javaScript","d"],{"children":[["slug","intersectionObserver","d"],{"children":["__PAGE__?{\"category\":\"javaScript\",\"slug\":\"intersectionObserver\"}",{}]}]}]}]},"$undefined","$undefined",true],"$L7",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0da05791a264d82c.css","precedence":"next"}]],"$L8"]]]]
+0:["KS6uiOAnb2wwZz1JWFUP7",[[["",{"children":["blog",{"children":[["category","javaScript","d"],{"children":[["slug","intersectionObserver","d"],{"children":["__PAGE__?{\"category\":\"javaScript\",\"slug\":\"intersectionObserver\"}",{}]}]}]}]},"$undefined","$undefined",true],"$L7",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0da05791a264d82c.css","precedence":"next"}]],"$L8"]]]]
 9:HL["/_next/static/css/d2ca7d8f29c2051c.css","style"]
 a:I{"id":4244,"chunks":["964:static/chunks/964-25e165a2fc7e6293.js","724:static/chunks/724-31617d2d81601bd9.js","185:static/chunks/app/layout-5fa6eb5e3953020f.js"],"name":"","async":false}
 b:I{"id":4724,"chunks":["964:static/chunks/964-25e165a2fc7e6293.js","724:static/chunks/724-31617d2d81601bd9.js","254:static/chunks/app/blog/[category]/page-7e34afc005822bdb.js"],"name":"","async":false}
