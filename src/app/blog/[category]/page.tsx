@@ -4,10 +4,8 @@ import { getCategories } from '@/utils/getCategories';
 import { defaultOpenGraph } from '@/utils/metadata';
 
 export const generateMetadata = async ({ params }: { params: { category: string } }) => {
-  const categories = await getCategories();
-
   return {
-    title: params.category,
+    title: `Been blog - ${params.category}`,
     openGraph: {
       ...defaultOpenGraph,
       title: `Been blog - ${params.category}`,
@@ -18,7 +16,7 @@ export const generateMetadata = async ({ params }: { params: { category: string 
 };
 
 export const generateStaticParams = async () => {
-  const categories = await getCategories();
+  const categories = getCategories();
 
   return categories.map((category) => {
     return {

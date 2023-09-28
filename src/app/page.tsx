@@ -8,12 +8,18 @@ export type PostData = {
   category: string;
   titleImage: string;
 };
-export interface Posts {
+
+export type Post = {
   content: string;
   data: PostData;
   slug: string;
+};
+
+export interface Posts {
+  posts: Post[];
+  total: number;
 }
 
-export default async function Home() {
-  return <PostListContainer />;
+export default async function Home({ params }: { params: { page: string } }) {
+  return <PostListContainer page={params.page} />;
 }

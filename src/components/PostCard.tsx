@@ -11,7 +11,7 @@ const PostCard = ({ title, titleImage, description, date, category, path }: Post
   return (
     <li className="mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]">
       <Link
-        className="flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]"
+        className="hover_card flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]"
         href={`/blog/${category}/${path}`}
       >
         <Image className="h-[200px] w-[200px] rounded-[14px]" width={200} height={200} src={titleImage} alt={title} />

@@ -7,10 +7,10 @@ export const generateMetadata = async ({ params }: { params: { category: string;
   const data = await getPost(params.slug);
 
   return {
-    title: data.data.title,
+    title: `Been blog - ${data.data.title}`,
     description: data.data.description,
     openGraph: {
-      title: data.data.title,
+      title: `Been blog - ${data.data.title}`,
       description: data.data.description,
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/${params.category}/${params.slug}`,
       images: [
@@ -26,9 +26,12 @@ export const generateMetadata = async ({ params }: { params: { category: string;
 };
 
 export const generateStaticParams = async () => {
-  const posts = getAllPost();
+  const posts = getAllPost(undefined, {
+    page: '1',
+    limit: '-1'
+  });
 
-  return posts.map((post) => {
+  return posts.posts.map((post) => {
     return {
       slug: post.slug,
       category: post.data.category

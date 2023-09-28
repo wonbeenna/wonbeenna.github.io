@@ -6,8 +6,16 @@ import { getSerialize } from '@/utils/sirialize';
 export const POSTS_PATH = path.join(process.cwd(), '_posts');
 
 export const postFilePaths = fs.readdirSync(POSTS_PATH).filter((path) => /\.mdx?$/.test(path));
-export const getAllPost = (category?: string) => {
-  let postsData = postFilePaths
+
+export const getAllPost = (
+  category?: string,
+  paging: { page: string; limit?: string } = {
+    page: '1',
+    limit: '10'
+  }
+) => {
+  let total = postFilePaths.length;
+  let posts = postFilePaths
     .map((filePath) => {
       const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
       const { content, data } = matter(source);
@@ -24,10 +32,31 @@ export const getAllPost = (category?: string) => {
     });
 
   if (category) {
-    postsData = postsData.filter((post) => post.data.category === category);
+    posts = posts.filter((post) => post.data.category === category);
+    total = posts.length;
   }
 
-  return postsData;
+  if (!paging.page) {
+    paging.page = '1';
+    paging.limit = '10';
+  }
+
+  if (paging.limit === '-1') {
+    return {
+      posts,
+      total
+    };
+  }
+
+  const { page = '1', limit = '10' } = paging;
+  const offset = (+page - 1) * +limit;
+
+  posts = posts.slice(offset, offset + +limit);
+
+  return {
+    posts,
+    total
+  };
 };
 
 export const getPost = async (slug: string) => {

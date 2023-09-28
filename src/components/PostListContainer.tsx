@@ -5,14 +5,22 @@ import Category from '@/components/Category';
 import { getCategories } from '@/utils/getCategories';
 import { getAllPost } from '@/utils/getPost';
 
-const PostListContainer = async ({ category }: { category?: string }) => {
-  const categories = await getCategories();
-  const posts = getAllPost(category);
+interface PostListContainerProps {
+  category?: string;
+  page?: string;
+}
+
+const PostListContainer = ({ category, page }: PostListContainerProps) => {
+  const categories = getCategories();
+  const posts = getAllPost(category, {
+    page: page || '1',
+    limit: category ? '-1' : '10'
+  });
 
   return (
     <section className="flex flex-col-reverse md:relative md:flex-row">
-      <PostList posts={posts as Posts[]} />
-      <Category categories={categories} />
+      <PostList posts={posts as Posts} page={page} category={category} />
+      <Category categories={categories} currentCategory={category} />
     </section>
   );
 };
