@@ -4,16 +4,16 @@
 4:HL["/_next/static/media/8db47a8bf03b7d2f-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 5:HL["/_next/static/media/934c4b7cb736f2a3-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 6:HL["/_next/static/css/48ff91835f2990e0.css","style"]
-0:["UtB_47pk00buiXJN4EVWD",[[["",{"children":["blog",{"children":[["category","study","d"],{"children":["__PAGE__?{\"category\":\"study\"}",{}]}]}]},"$undefined","$undefined",true],"$L7",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/48ff91835f2990e0.css","precedence":"next"}]],"$L8"]]]]
+0:["d3jyAvJtHiVhvSLRFmyRg",[[["",{"children":["blog",{"children":[["category","study","d"],{"children":["__PAGE__?{\"category\":\"study\"}",{}]}]}]},"$undefined","$undefined",true],"$L7",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/48ff91835f2990e0.css","precedence":"next"}]],"$L8"]]]]
 9:I{"id":4244,"chunks":["964:static/chunks/964-1c6e8b9c3261a3cb.js","724:static/chunks/724-95707ae80dbaeeaf.js","185:static/chunks/app/layout-e94d10c3aeefd22c.js"],"name":"","async":false}
-a:I{"id":4724,"chunks":["964:static/chunks/964-1c6e8b9c3261a3cb.js","724:static/chunks/724-95707ae80dbaeeaf.js","254:static/chunks/app/blog/[category]/page-54e424153490c2ab.js"],"name":"","async":false}
+a:I{"id":4724,"chunks":["964:static/chunks/964-1c6e8b9c3261a3cb.js","724:static/chunks/724-95707ae80dbaeeaf.js","254:static/chunks/app/blog/[category]/page-26335fa07fe6911a.js"],"name":"","async":false}
 b:I{"id":6964,"chunks":["964:static/chunks/964-1c6e8b9c3261a3cb.js","724:static/chunks/724-95707ae80dbaeeaf.js","185:static/chunks/app/layout-e94d10c3aeefd22c.js"],"name":"Image","async":false}
 c:I{"id":1443,"chunks":["272:static/chunks/webpack-891dab1a18c2720c.js","971:static/chunks/fd9d1056-23f6e37ad1d1612c.js","864:static/chunks/864-8d9b6481be2de97f.js"],"name":"","async":false}
 d:I{"id":8639,"chunks":["272:static/chunks/webpack-891dab1a18c2720c.js","971:static/chunks/fd9d1056-23f6e37ad1d1612c.js","864:static/chunks/864-8d9b6481be2de97f.js"],"name":"","async":false}
 7:[null,["$","html",null,{"lang":"ko","children":[null,["$","$L9",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L9",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_471caf","children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b-[1px] border-b-gray200 bg-white px-[24px] py-0","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$La",null,{"href":"/","children":["$","$Lb",null,{"src":"/assets/icons/been-logo.svg","width":60,"height":56,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$La",null,{"href":"/about","children":"About"}]}]]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$La",null,{"href":"https://github.com/wonbeenna","target":"_blank","rel":"noopener noreferrer","children":["$","$Lb",null,{"src":"/assets/icons/github.svg","width":30,"height":30,"alt":"github"}]}],["$","$La",null,{"href":"mailto:nwbnwb@naver.com","children":["$","$Lb",null,{"src":"/assets/icons/mail.svg","width":34,"height":34,"alt":"email"}]}]]}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$Lc",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$Ld",null,{}],"templateStyles":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"childProp":{"current":["$","$Lc",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$Ld",null,{}],"templateStyles":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$","$Lc",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children",["category","study","d"],"children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$Ld",null,{}],"templateStyles":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$Le","$Lf",null],"segment":"__PAGE__?{\"category\":\"study\"}"},"styles":[]}],"segment":["category","study","d"]},"styles":[]}],"segment":"blog"},"styles":[]}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]]}],null]
 8:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Been blog - study"}],["$","meta","2",{"name":"description","content":"Been dev-note"}],["$","meta","3",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","4",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","5",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","meta","6",{"property":"og:title","content":"Been blog - study"}],["$","meta","7",{"property":"og:description","content":"Been dev-note - study"}],["$","meta","8",{"property":"og:url","content":"https://wonbeenna.github.io/study"}],["$","meta","9",{"property":"og:site_name","content":"Been blog"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - study"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - study"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","meta","23",{"name":"next-size-adjust"}]]
-10:I{"id":7066,"chunks":["964:static/chunks/964-1c6e8b9c3261a3cb.js","724:static/chunks/724-95707ae80dbaeeaf.js","254:static/chunks/app/blog/[category]/page-54e424153490c2ab.js"],"name":"","async":false}
-11:Tce4,
+10:I{"id":7066,"chunks":["964:static/chunks/964-1c6e8b9c3261a3cb.js","724:static/chunks/724-95707ae80dbaeeaf.js","254:static/chunks/app/blog/[category]/page-26335fa07fe6911a.js"],"name":"","async":false}
+11:Tc85,
 대기열 → 캐싱 → DNS → 라우팅 → ARP → 초기연결 → 컨텐츠 다운로드 → 브라우저 렌더링
 
 이런 과정을 비캡슐화, 캡슐화 과정을 거침
@@ -70,21 +70,21 @@ d:I{"id":8639,"chunks":["272:static/chunks/webpack-891dab1a18c2720c.js","971:sta
 
 여기서 브라우저가 60FPS 아래로 그리게 된다면 쟁크 현상이 발생함.
 
-<img src="https://wonbeenna.github.io/blog/javaScript/web-optimization6.png" width="100%" alt="bundle-analyzer"/>
+<img src="/assets/blog/javaScript/web-optimization6.png" width="100%" alt="web-optimization"/>
 
 1. DOM + CSSOM
 
-<img src="https://wonbeenna.github.io/blog/javaScript/web-optimization7.png" width="100%" alt="bundle-analyzer"/>
+<img src="/assets/blog/javaScript/web-optimization7.png" width="100%" alt="web-optimization"/>
 
 1. Render Tree
 
-<img src="https://wonbeenna.github.io/blog/javaScript/web-optimization8.png" width="100%" alt="bundle-analyzer"/>
+<img src="/assets/blog/javaScript/web-optimization8.png" width="100%" alt="web-optimization"/>
 
 위 DOM과 CSSOM을 조합해 RenderTree를 만들어 낸다.
 
 1. Layout
 
-<img src="https://wonbeenna.github.io/blog/javaScript/web-optimization9.png" width="100%" alt="bundle-analyzer"/>
+<img src="/assets/blog/javaScript/web-optimization9.png" width="100%" alt="web-optimization"/>
 
 위치나 크기를 계산해 화면에 레이아웃을 그린다.
 
@@ -94,7 +94,7 @@ d:I{"id":8639,"chunks":["272:static/chunks/webpack-891dab1a18c2720c.js","971:sta
 
 1. Composite
 
-<img src="https://wonbeenna.github.io/blog/javaScript/web-optimization10.png" width="100%" height="350" alt="bundle-analyzer"/>
+<img src="/assets/blog/javaScript/web-optimization10.png" width="100%" height="350" alt="web-optimization"/>
 
 각 레이어들을 합성하는 과정
 
@@ -166,5 +166,5 @@ d:I{"id":8639,"chunks":["272:static/chunks/webpack-891dab1a18c2720c.js","971:sta
 - 일반 함수 → 화살표 함수
 - 생성자 함수 → class
 - 객체 메서드 → 객체 메서드 축약형
-f:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L10",null,{"posts":{"posts":[{"content":"$11","data":{"title":"브라우저에 url을 검색하면?","date":"$D2023-02-25T00:00:00.000Z","description":"사내 스터디","category":"study","titleImage":"/assets/postIcon/javascript.png"},"slug":"browser"},{"content":"$12","data":{"title":"JavaScript this","date":"$D2023-02-02T00:00:00.000Z","description":"사내 스터디 this","category":"study","titleImage":"/assets/postIcon/javascript.png"},"slug":"this"}],"total":2}}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$La",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (26)"}]}],["$","li","study",{"children":["$","$La",null,{"className":"font-[600] text-black","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$La",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}]
+f:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L10",null,{"posts":{"posts":[{"content":"$11","data":{"title":"브라우저에 url을 검색하면?","date":"$D2023-02-25T00:00:00.000Z","description":"사내 스터디","category":"study","titleImage":"/assets/postIcon/javascript.png"},"slug":"browser"},{"content":"$12","data":{"title":"JavaScript this","date":"$D2023-02-02T00:00:00.000Z","description":"사내 스터디 this","category":"study","titleImage":"/assets/postIcon/javascript.png"},"slug":"this"}],"total":2},"page":"$undefined","category":"study"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$La",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (26)"}]}],["$","li","study",{"children":["$","$La",null,{"className":"font-[600] text-black","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$La",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}]
 e:null

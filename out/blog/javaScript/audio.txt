@@ -4,10 +4,10 @@
 4:HL["/_next/static/media/8db47a8bf03b7d2f-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 5:HL["/_next/static/media/934c4b7cb736f2a3-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 6:HL["/_next/static/css/48ff91835f2990e0.css","style"]
-0:["UtB_47pk00buiXJN4EVWD",[[["",{"children":["blog",{"children":[["category","javaScript","d"],{"children":[["slug","audio","d"],{"children":["__PAGE__?{\"category\":\"javaScript\",\"slug\":\"audio\"}",{}]}]}]}]},"$undefined","$undefined",true],"$L7",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/48ff91835f2990e0.css","precedence":"next"}]],"$L8"]]]]
+0:["d3jyAvJtHiVhvSLRFmyRg",[[["",{"children":["blog",{"children":[["category","javaScript","d"],{"children":[["slug","audio","d"],{"children":["__PAGE__?{\"category\":\"javaScript\",\"slug\":\"audio\"}",{}]}]}]}]},"$undefined","$undefined",true],"$L7",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/48ff91835f2990e0.css","precedence":"next"}]],"$L8"]]]]
 9:HL["/_next/static/css/d2ca7d8f29c2051c.css","style"]
 a:I{"id":4244,"chunks":["964:static/chunks/964-1c6e8b9c3261a3cb.js","724:static/chunks/724-95707ae80dbaeeaf.js","185:static/chunks/app/layout-e94d10c3aeefd22c.js"],"name":"","async":false}
-b:I{"id":4724,"chunks":["964:static/chunks/964-1c6e8b9c3261a3cb.js","724:static/chunks/724-95707ae80dbaeeaf.js","254:static/chunks/app/blog/[category]/page-54e424153490c2ab.js"],"name":"","async":false}
+b:I{"id":4724,"chunks":["964:static/chunks/964-1c6e8b9c3261a3cb.js","724:static/chunks/724-95707ae80dbaeeaf.js","254:static/chunks/app/blog/[category]/page-26335fa07fe6911a.js"],"name":"","async":false}
 c:I{"id":6964,"chunks":["964:static/chunks/964-1c6e8b9c3261a3cb.js","724:static/chunks/724-95707ae80dbaeeaf.js","185:static/chunks/app/layout-e94d10c3aeefd22c.js"],"name":"Image","async":false}
 d:I{"id":1443,"chunks":["272:static/chunks/webpack-891dab1a18c2720c.js","971:static/chunks/fd9d1056-23f6e37ad1d1612c.js","864:static/chunks/864-8d9b6481be2de97f.js"],"name":"","async":false}
 e:I{"id":8639,"chunks":["272:static/chunks/webpack-891dab1a18c2720c.js","971:static/chunks/fd9d1056-23f6e37ad1d1612c.js","864:static/chunks/864-8d9b6481be2de97f.js"],"name":"","async":false}

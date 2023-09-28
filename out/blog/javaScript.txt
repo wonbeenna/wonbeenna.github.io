@@ -4,15 +4,15 @@
 4:HL["/_next/static/media/8db47a8bf03b7d2f-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 5:HL["/_next/static/media/934c4b7cb736f2a3-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 6:HL["/_next/static/css/48ff91835f2990e0.css","style"]
-0:["UtB_47pk00buiXJN4EVWD",[[["",{"children":["blog",{"children":[["category","javaScript","d"],{"children":["__PAGE__?{\"category\":\"javaScript\"}",{}]}]}]},"$undefined","$undefined",true],"$L7",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/48ff91835f2990e0.css","precedence":"next"}]],"$L8"]]]]
+0:["d3jyAvJtHiVhvSLRFmyRg",[[["",{"children":["blog",{"children":[["category","javaScript","d"],{"children":["__PAGE__?{\"category\":\"javaScript\"}",{}]}]}]},"$undefined","$undefined",true],"$L7",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/48ff91835f2990e0.css","precedence":"next"}]],"$L8"]]]]
 9:I{"id":4244,"chunks":["964:static/chunks/964-1c6e8b9c3261a3cb.js","724:static/chunks/724-95707ae80dbaeeaf.js","185:static/chunks/app/layout-e94d10c3aeefd22c.js"],"name":"","async":false}
-a:I{"id":4724,"chunks":["964:static/chunks/964-1c6e8b9c3261a3cb.js","724:static/chunks/724-95707ae80dbaeeaf.js","254:static/chunks/app/blog/[category]/page-54e424153490c2ab.js"],"name":"","async":false}
+a:I{"id":4724,"chunks":["964:static/chunks/964-1c6e8b9c3261a3cb.js","724:static/chunks/724-95707ae80dbaeeaf.js","254:static/chunks/app/blog/[category]/page-26335fa07fe6911a.js"],"name":"","async":false}
 b:I{"id":6964,"chunks":["964:static/chunks/964-1c6e8b9c3261a3cb.js","724:static/chunks/724-95707ae80dbaeeaf.js","185:static/chunks/app/layout-e94d10c3aeefd22c.js"],"name":"Image","async":false}
 c:I{"id":1443,"chunks":["272:static/chunks/webpack-891dab1a18c2720c.js","971:static/chunks/fd9d1056-23f6e37ad1d1612c.js","864:static/chunks/864-8d9b6481be2de97f.js"],"name":"","async":false}
 d:I{"id":8639,"chunks":["272:static/chunks/webpack-891dab1a18c2720c.js","971:static/chunks/fd9d1056-23f6e37ad1d1612c.js","864:static/chunks/864-8d9b6481be2de97f.js"],"name":"","async":false}
 7:[null,["$","html",null,{"lang":"ko","children":[null,["$","$L9",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L9",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_471caf","children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b-[1px] border-b-gray200 bg-white px-[24px] py-0","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$La",null,{"href":"/","children":["$","$Lb",null,{"src":"/assets/icons/been-logo.svg","width":60,"height":56,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$La",null,{"href":"/about","children":"About"}]}]]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$La",null,{"href":"https://github.com/wonbeenna","target":"_blank","rel":"noopener noreferrer","children":["$","$Lb",null,{"src":"/assets/icons/github.svg","width":30,"height":30,"alt":"github"}]}],["$","$La",null,{"href":"mailto:nwbnwb@naver.com","children":["$","$Lb",null,{"src":"/assets/icons/mail.svg","width":34,"height":34,"alt":"email"}]}]]}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$Lc",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$Ld",null,{}],"templateStyles":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"childProp":{"current":["$","$Lc",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$Ld",null,{}],"templateStyles":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$","$Lc",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children",["category","javaScript","d"],"children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$Ld",null,{}],"templateStyles":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$Le","$Lf",null],"segment":"__PAGE__?{\"category\":\"javaScript\"}"},"styles":[]}],"segment":["category","javaScript","d"]},"styles":[]}],"segment":"blog"},"styles":[]}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]]}],null]
 8:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Been blog - javaScript"}],["$","meta","2",{"name":"description","content":"Been dev-note"}],["$","meta","3",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","4",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","5",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","meta","6",{"property":"og:title","content":"Been blog - javaScript"}],["$","meta","7",{"property":"og:description","content":"Been dev-note - javaScript"}],["$","meta","8",{"property":"og:url","content":"https://wonbeenna.github.io/javaScript"}],["$","meta","9",{"property":"og:site_name","content":"Been blog"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - javaScript"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - javaScript"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","meta","23",{"name":"next-size-adjust"}]]
-10:I{"id":7066,"chunks":["964:static/chunks/964-1c6e8b9c3261a3cb.js","724:static/chunks/724-95707ae80dbaeeaf.js","254:static/chunks/app/blog/[category]/page-54e424153490c2ab.js"],"name":"","async":false}
+10:I{"id":7066,"chunks":["964:static/chunks/964-1c6e8b9c3261a3cb.js","724:static/chunks/724-95707ae80dbaeeaf.js","254:static/chunks/app/blog/[category]/page-26335fa07fe6911a.js"],"name":"","async":false}
 11:T6ae,
 JSON 웹 토큰(JWT)
 
@@ -1297,5 +1297,2612 @@ useMemo와 useCallback은 초기 렌더링에는 쓸모가 없다. 오히려 초
 [https://beta.reactjs.org/reference/react/useMemo#usage](https://beta.reactjs.org/reference/react/useMemo#usage)
 
 [https://www.developerway.com/posts/how-to-use-memo-use-callback](https://www.developerway.com/posts/how-to-use-memo-use-callback)
-f:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L10",null,{"posts":{"posts":[{"content":"$11","data":{"title":"jwt 토큰 decode 하기","date":"$D2023-08-31T00:00:00.000Z","description":"jwt 토큰 decode 함수","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"jwt-decode"},{"content":"$12","data":{"title":"Audio객체를 이용한 음악 재생","date":"$D2023-05-27T00:00:00.000Z","description":"Audio객체를 사용한 기업 과제 구현","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"audio"},{"content":"$13","data":{"title":"디바운싱과 쓰로틀링","date":"$D2023-05-13T00:00:00.000Z","description":"디바운싱과 쓰로틀링의 차이를 구분하고 hook으로 구현","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"debouce-throttle"},{"content":"$14","data":{"title":"GraphQl 써보기(1)","date":"$D2023-04-29T00:00:00.000Z","description":"GraphQl, Apollo Client를 사용","category":"javaScript","titleImage":"/assets/postIcon/graphql.svg"},"slug":"graphql-1"},{"content":"$15","data":{"title":"Next.js middleware와 getServerSideProps","date":"$D2023-02-22T00:00:00.000Z","description":"세션방식의 로그인 인증, middleware와 getServerSideProps를 사용해 구현한 기록","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-middleware"},{"content":"$16","data":{"title":"Nextjs에서 tailwind 써보기","date":"$D2023-02-18T00:00:00.000Z","description":"공식문서 보면서 tailwind 써보기","category":"javaScript","titleImage":"/assets/postIcon/tailwind-css-icon.png"},"slug":"tailwindcss"},{"content":"$17","data":{"title":"스벨트킷으로 블로그 만들어보기","date":"$D2023-01-30T00:00:00.000Z","description":"스벨트킷으로 블로그 만든 과정을 정리","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-blog"},{"content":"\n### Provider 테스팅 해보기\n\n```js\nrender(<Options optionType=\"scoops\" />, {wrapper: OrderDetailsProvider});\n```\n\n테스트 wrapper에 Provider로 감싸주면 된다.\n\n여기서는 redux나 recoil 등 다른 라이브러리도 가능\n\n---\n\n전역적으로도 사용이 가능\n\n```js\nimport {render} from '@testing-library/react';\nimport {OrderDetailsProvider} from '../contexts/OrderDetails';\n\nconst renderWithContext = (ui, options) => render(ui, {wrapper: OrderDetailsProvider, ...options});\n\nexport * from '@testing-library/react';\n\nexport {renderWithContext as render};\n```\n","data":{"title":"리액트 테스팅(4)","date":"$D2023-01-02T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-4"},{"content":"$18","data":{"title":"리액트 조건부 렌더링에 대한 생각","date":"$D2022-12-29T00:00:00.000Z","description":"해외 블로그를 보며 정리한 조건부 렌더링에 대한 생각","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"conditional-rendering"},{"content":"$19","data":{"title":"useCallback, useMemo 무조건 좋은가?","date":"$D2022-12-28T00:00:00.000Z","description":"useCallback과 useMemo에 대한 생각 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"usecallback-and-usememo"}],"total":26}}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$La",null,{"className":"font-[600] text-black","href":"/blog/javaScript","children":"javaScript (26)"}]}],["$","li","study",{"children":["$","$La",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$La",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}]
+1a:T84a,
+### fireEvent를 userEvent로 바꿔보기
+
+```shell
+npm i @testing-library/user-event
+```
+
+```js
+test('Checkbox enables button on first click and disableds on second click', async () => {
+  const user = userEvent.setup();
+
+  render(<SummaryForm />);
+
+  const checkbox = screen.getByRole('checkbox', {
+    name: /terms and conditions/i
+  });
+  const confirmButton = screen.getByRole('button', {
+    name: /confirm order/i
+  });
+
+  await user.click(checkbox);
+  expect(confirmButton).toBeEnabled();
+
+  await user.click(checkbox);
+  expect(confirmButton).toBeDisabled();
+});
+```
+
+async/await 으로 비동기 처리해주지 않으면, expect가 먼저 실행되기 때문에 오류가 발생한다
+
+---
+
+### Screen 메소드들 써보기
+
+```js
+test('popover responds to hover', async () => {
+  const user = userEvent.setup();
+
+  render(<SummaryForm />);
+
+  // popover starts out hidden
+  const nullPopover = screen.queryByText(/no ice cream will actually be delivered/i);
+  expect(nullPopover).not.toBeInTheDocument();
+
+  // popover appears on mouseover of checkbox label
+  const termsAndConditions = screen.getByText(/terms and conditions/i);
+  await user.hover(termsAndConditions);
+  const popover = screen.getByText(/no ice cream will actually be delivered/i);
+  expect(popover).toBeInTheDocument();
+
+  // popover disappears when we mouse out
+  await user.unhover(termsAndConditions);
+  expect(popover).not.toBeInTheDocument();
+});
+```
+
+- get : 요소 조회시 나타날 것으로 예상되는 경우 -> 일치하는 요소가 없으면 Error를 반환
+
+- query : 요소가 존재하는지 확인하는 경우 -> 일치하는 요소가 없으면 null을 반환
+
+- find : 요소가 비동기적으로 표시될 수 있는 경우인지
+
+```js
+const popover = (
+  <Popover id="popover-basic">
+    <Popover.Body>No ice cream will actually be delivered</Popover.Body>
+  </Popover>
+);
+
+const checkboxLabel = (
+  <span>
+    I agree to
+    <OverlayTrigger trigger={['hover', 'focus']} placement="right" overlay={popover}>
+      <span style={{color: 'blue'}}>Terms and Conditions</span>
+    </OverlayTrigger>
+  </span>
+);
+```
+1b:Tff3,
+### * Mock Service Worker
+
+백엔드에서 데이터를 가져오는 부분을 테스트
+
+- MSW 작동 방식
+
+브라우저에 서비스 워커를 등록해 외부로 나가는 네트워크 리퀘스트를 감지
+
+요청을 실제 서버로 갈 때 중간에 가로채 MSW 클라이언트 사이드 라이브러리로 보내고, 등록된 핸들러에서 요청을 처리한 후 모의 응답을 보낸다.
+
+---
+
+### * jest를 사용한 node와 통합하기
+
+```shell
+npm install msw --save
+```
+
+- 핸들러 생성하기
+
+```js
+import {rest} from 'msw';
+
+export const handlers = [
+  rest.get('http://localhost:5000/products', (req, res, ctx) => {
+    return res(
+      ctx.json([
+        {
+          name: 'America',
+          imagePath: '/images/america.jpeg'
+        },
+        {
+          name: 'England',
+          imagePath: '/images/england.jpeg'
+        }
+      ])
+    );
+  }),
+  rest.get('http://localhost:5000/options', (req, res, ctx) => {
+    return res(
+      ctx.json([
+        {
+          name: 'Insurance'
+        },
+        {
+          name: 'Dinner'
+        }
+      ])
+    );
+  })
+];
+```
+
+- mocking 서버 생성하기
+
+```js
+import {setupServer} from 'msw/node';
+import {handlers} from './handlers';
+
+export const server = setupServer(...handlers);
+```
+
+- setupTest.js에 서버 생성
+
+```js
+// jest-dom adds custom jest matchers for asserting on DOM nodes.
+// allows you to do things like:
+// expect(element).toHaveTextContent(/react/i)
+// learn more: https://github.com/testing-library/jest-dom
+import '@testing-library/jest-dom';
+
+import {server} from './mocks/server';
+
+beforeAll(() => server.listen()); // 테스트 시작 전에 서버 listen
+afterEach(() => server.resetHandlers()); // 테스트 중 다른 테스트에 영향이 가지 않도록
+afterAll(() => server.close()); // 테스트 후 서버를 클린업
+```
+
+- 테스트 코드 작성
+
+```js
+import {server} from '../../../mocks/server';
+import Type from '../Type';
+import {rest} from 'msw';
+import {render, screen} from '@testing-library/react';
+
+test('displays product images from server', async () => {
+  render(<Type orderType="products" />);
+
+  // 서버에서 받아온 이미지
+  const productImages = await screen.findAllByRole('img', {
+    name: /product$/i
+  });
+  expect(productImages).toHaveLength(2);
+
+  const altText = productImages.map((element) => element.alt);
+  expect(altText).toEqual(['America product', 'England product']);
+});
+
+test('fetch option information from server', async () => {
+  render(<Type orderType="options" />);
+
+  const optionCheckboxes = await screen.findAllByRole('checkbox');
+
+  expect(optionCheckboxes).toHaveLength(2);
+});
+
+test('when fetching product datas, face an error', async () => {
+  // 서버에 대한 에러 확인
+  server.resetHandlers(
+    rest.get('http://localhost:5000/products', (req, res, ctx) => {
+      return res(ctx.status(500));
+    })
+  );
+
+  render(<Type orderType="products" />);
+
+  const errorBanner = await screen.findByTestId('error-banner');
+  expect(errorBanner).toHaveTextContent('에러가 발생했습니다.');
+});
+```
+
+- 컴포넌트
+
+```js
+import React, {useEffect, useState} from 'react';
+import axios from 'axios';
+import Products from './Products';
+import ErrorBanner from '../../components/ErrorBanner';
+import Options from './Options';
+
+const Type = ({orderType}) => {
+  const [items, setItems] = useState([]);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    loadItems(orderType);
+  }, [orderType]);
+
+  const loadItems = async (orderType) => {
+    try {
+      const response = await axios.get(`http://localhost:5000/${orderType}`);
+      setItems(response.data);
+    } catch (error) {
+      setError(true);
+    }
+  };
+
+  const ItemComponents = orderType === 'products' ? Products : Options;
+
+  const optionItems = items.map((item) => {
+    return <ItemComponents key={item.name} name={item.name} imagePath={item.imagePath} />;
+  });
+
+  if (error) {
+    return <ErrorBanner message="에러가 발생했습니다." />;
+  }
+
+  return <div>{optionItems}</div>;
+};
+
+export default Type;
+```
+1c:T1633,
+### * Jest - Facebook에서 만든 테스팅 프레임 워크.
+
+주로 단위 (unit) 테스트를 위해 사용.
+
+- filename.test.js
+
+- filename.spec.js
+
+All files inside "tests" folders
+
+- describe -> 테스트를 그룹화 하는데 사용
+
+- test(it) - 개별 테스트를 수행
+
+- test(it) - 개별 테스트를 수행
+
+- test(it) - 개별 테스트를 수행
+
+- expect 함수는 값을 테스트할 때마다 사용, matcher(다른 방법으로 값을 테스트)와 함께 사용
+
+---
+
+### 시작해보기
+
+cra 폴더로 가서
+
+```shell
+npm test
+```
+
+파일명에 test가 들어간 파일을 찾는다.
+
+a로 App.test.js에 있는 모든 테스트를 실행
+
+```js
+test('renders learn react link', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+});
+```
+
+- render함수는 DOM에 컴포넌트를 랜더링 하는 함수, return은 RTL(리액트 테스트 라이브러리)에 쿼리 함수와 기타 유틸리티를 담고 있는 객체를 리턴한다.
+
+```js
+test('renders learn react link', () => {
+  const { getByText } = render(<App />);
+  const linkElement = getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+});
+```
+
+아래 처럼도 쓸수 있다. (쿼리함수를 직접 쓰는 경우는 거의 없고 screen 객체로 이용)
+
+```js
+<a
+  className="App-link"
+  href="https://reactjs.org"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Learn React
+</a>
+```
+
+linkElement가 Document안에 있는지 판단하는 matcher
+
+---
+
+### 쿼리함수
+
+쿼리는 페이지에서 요소를 찾기 위해 테스트 라이브러리가 제공하는 방법
+
+- getBy~: 쿼리에 대해 일치하는 노드를 반환, 일치하는 요소가 없거나 둘 이상의 일치가 발견되면 에러를 반환(둘 이상의 요소는 getAllBy~ 사용)
+
+- queryBy~: 쿼리에 대해 일치하는 노드 반환, 일치하는 요소가 없으면 null을 반환
+
+- findBy~: (getBy + waitFor)주어진 쿼리와 일치하는 요소가 발견되면 Promise를 반환 (둘 이상의 요소는 findAllBy~ 사용)
+
+- waitFor: 일정 기간 동안 기다리도록
+
+---
+
+### 린트
+
+```
+"eslint-plugin-jest-dom"
+"eslint-plugin-testing-library"
+```
+
+---
+
+### TDD(Test Driven Development)
+
+실제 코드를 작성하기 전에 테스트 코드를 먼저 작성
+
+### 간단한 카운팅 앱 만들어보기
+
+```js
+test('Counter starts at 0', () => {
+  render(<App />);
+  // screen object로 원하는 엘리멘트에 접근(ID)
+  const counterElement = screen.getByTestId('counter');
+  // id가 counter인 엘리멘트의 텍스트가 0인가?
+  expect(counterElement).toHaveTextContent(0);
+});
+```
+
+```js
+import './App.css';
+import {useState} from 'react';
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h3 data-testid="counter">{count}</h3>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+
+- 버튼 추가하기
+
+```js
+test('Minus Button', () => {
+  render(<App />);
+  const buttonElement = screen.getByTestId('minus-button');
+  expect(buttonElement).toHaveTextContent('-');
+});
+
+test('Plus Button', () => {
+  render(<App />);
+  const buttonElement = screen.getByTestId('plus-button');
+  expect(buttonElement).toHaveTextContent('+');
+});
+```
+
+```js
+<div>
+  <button data-testid="minus-button">-</button>
+  <button data-testid="plus-button">+</button>
+</div>
+```
+
+### FireEvent API
+
+유저가 발생시키는 액션(이벤트)에 대한 테스트
+
+- 버튼 이벤트 추가하기
+
+```js
+test('When the + button is pressed, the counter change to 1', () => {
+  render(<App />);
+  const buttonElement = screen.getByTestId('plus-button');
+  // 버튼 클릭
+  fireEvent.click(buttonElement);
+  // plus 버튼 클릭시 counter 엘리먼트는 1
+  const counterElement = screen.getByTestId('counter');
+  expect(counterElement).toHaveTextContent(1);
+});
+
+test('When the - button is pressed, the counter change to -1', () => {
+  render(<App />);
+  const buttonElement = screen.getByTestId('minus-button');
+  // 버튼 클릭
+  fireEvent.click(buttonElement);
+  // minus 버튼 클릭시 counter 엘리먼트는 -1
+  const counterElement = screen.getByTestId('counter');
+  expect(counterElement).toHaveTextContent(-1);
+});
+```
+
+```js
+const [count, setCount] = useState(0);
+
+const handlePlus = () => {
+  setCount((prevState) => prevState + 1);
+};
+
+const handleMinus = () => {
+  setCount((prevState) => prevState - 1);
+};
+
+return (
+  <div className="App">
+    <header className="App-header">
+      <h3 data-testid="counter">{count}</h3>
+      <div>
+        <button data-testid="minus-button" onClick={handleMinus}>
+          -
+        </button>
+        <button data-testid="plus-button" onClick={handlePlus}>
+          +
+        </button>
+      </div>
+    </header>
+  </div>
+);
+```
+
+- on/off 버튼 색상과 클릭시 -, +버튼 disabled
+
+```js
+
+test('on/off button has blue color', () => {
+  render(<App />);
+  const buttonElement = screen.getByTestId('on/off-button');
+  expect(buttonElement).toHaveStyle({backgroundColor: 'blue'});
+});
+
+test('Prevent -,+ button from being pressed when the on/off button is clicked', () => {
+  render(<App />);
+  const onOffButtonElement = screen.getByTestId('on/off-button');
+  fireEvent.click(onOffButtonElement);
+  const plusButtonElement = screen.getByTestId('plus-button');
+  const minusButtonElement = screen.getByTestId('minus-button');
+  expect(plusButtonElement).toBeDisabled();
+  expect(minusButtonElement).toBeDisabled();
+});
+```
+
+```js
+<button data-testid="on/off-button" style={{backgroundColor: 'blue'}} onClick={handleDisabled}>
+  on/off
+</button>
+```
+1d:Tc66,
+이번에 스터디를 하면서 처음 스토리북을 써보게 되었다.
+
+[https://storybook.js.org/](https://storybook.js.org/)
+
+
+스토리북은 디자인 시스템을 구축하고자하는 개발자들을 위해 제작되었다.
+
+**디자인 시스템은 왜 사용하는 걸까?**
+
+개발자 입장에서 가장 큰 이유는 디자이너, 프로젝트 매니저 등 팀 구성원과의 협업인것 같다.
+
+각 분야의 지식 차이를 줄이고 공통적으로 바라보는 것(UI)을 통해 생산성을 높일 수 있다.
+
+**디자인 시스템이 뭔데?**
+
+<img src="/assets/blog/javaScript/storybook.png" width="100%" alt="post image"/>
+
+내가 생각하기에 디자인 시스템이란 하나의 프로덕트를 만드는데 있어서 디자인 적인 가이드 라인 및 디자인 원칙 = 색상, 아이콘, 타이포그래피 등 을 체계적으로 관리하고 문서화하는것 이라 생각한다.
+
+이것을 문서화하는데 도와주는 도구가 바로 스토리북이다.
+
+---
+
+우리는 먼저 공통적으로 사용되는 컴포넌트와, 자주 쓰이게 될만한 컴포넌트들을 작성하기로 시작했다.
+
+```shell
+npx storybook init
+```
+
+본인이 사용하고자하는 프레임워크를 설치하고 위 명령어를 터미널에 입력하면 알아서 설치된다 
+
+```shell
+yarn storybook
+```
+
+로 시작하면 6006포트로 실행된다
+
+/src/components/Chip.tsx
+
+```js
+{...}
+
+const Chip = ({
+  adornments = "#",
+  label = "Chip",
+  color = "basic",
+  variants,
+  outlined,
+  onDelete,
+}: ChipProps) => {
+  const props = { color, variants, outlined };
+
+  return (
+    <StyledChip {...props}>
+      {adornments && <StyledChipAdornments>{adornments}</StyledChipAdornments>}
+      <StyledChipLabel {...props}>{label}</StyledChipLabel>
+      {onDelete && (
+        <CancelIconBtn value={label} onClick={onDelete}>
+          <StyledCancelIcon aria-hidden {...props} />
+        </CancelIconBtn>
+      )}
+    </StyledChip>
+  );
+};
+
+export default Chip;
+
+{...}
+```
+
+배포 후 우리가 실제로 사용할 컴포넌트다
+
+다양한 색상으로 받기위해
+
+```ts
+export type Color = "basic" | "active" | "danger" | "warning";
+```
+
+을 작성했다.
+
+<img src="/assets/blog/javaScript/storybook.gif" width="100%" alt="post image"/>
+
+/src/stories/Chip.stories.tsx
+
+```tsx
+import { Meta, Story } from "@storybook/react";
+import React from "react";
+import { Chip, ChipProps } from "../../../components/Chip";
+
+export default {
+  title: "Components/Chip",
+  component: Chip,
+} as Meta;
+
+export const Default: Story<ChipProps> = (args) => {
+  return <Chip {...args} />;
+};
+```
+
+여기서 우리가 만든 컴포넌트들을 문서화 할 수 있다
+
+args을 넣어줄 수 있는데, 스토리북에서는 자동으로 설정해준다.
+
+```js
+Default.args = {
+  color: "active",
+};
+```
+
+로 직접 정의할 수도 있다.
+
+우리는 npm으로 배포해 사용하기로 했다. 다음엔 배포과정과 빌드과정을 정리해야겠다.
+
+작성한 디자인 시스템을 기반으로 이번주부터 직접 개발에 들어가게된다.
+
+어떤점이 좋은지 차이가있는지 경험해보는 좋은 기회가 될거같다.
+1e:Td1c,
+Nextjs에서 styled-components를 사용하면 서버상에서 html을 불러온 뒤, hydrate과정에서 js를 입혀 스타일이 적용된다.
+
+이때 초기 페이지 로딩시 사용자가 보게 되는 화면은, 스타일링이 전혀 적용되지않은 html문서를 잠깐 보게 되는 문제가 있다.
+
+<img src="/assets/blog/javaScript/next-styled-component.png" width="100%" alt="post image"/>
+
+네트워크 탭에서 받아온 문서(페이지)를 보면 style에 관한 정보는 없고, html만 내려온다.
+
+이럴때 **\_document.tsx**를 커스텀해 사용할 수 있다.
+
+\_document는 Page를 렌더링하는데 공통적으로 필요한 태그, 메타정보, 폰트 등을 커스텀 하는데 사용할 수 있다.
+
+또 document는 항상 서버상에서만 실행되므로 브라우저 및 클라이언트 단에서 포함된 코드들은 실행되지 않는다.
+
+---
+
+첫번째로 styled-components의 서버측 className과 클라이언트측 className을 동일하게 유지되도록 하기 위해서 next.config.js를 수정해야된다.
+
+nextjs 12.1버전 이상부터는 babel-plugin-styled-components를 사용하지 않아도 되고,
+
+```javascript
+compiler: {
+  styledComponents: true
+},
+```
+
+만 작성해 주면 된다.
+
+두번째로 
+
+```javascript
+import Document, {DocumentContext} from 'next/document'
+import {ServerStyleSheet} from 'styled-components'
+
+class MyDocument extends Document {
+  static async getInitialProps(ctx: DocumentContext) {
+    const sheet = new ServerStyleSheet()
+    const originalRenderPage = ctx.renderPage
+
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />)
+        })
+
+      const initialProps = await Document.getInitialProps(ctx)
+
+      return {
+        ...initialProps,
+        styles: [
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        ]
+      }
+    } catch (error) {
+      throw error
+    } finally {
+      sheet.seal()
+    }
+  }
+}
+
+export default MyDocument
+```
+
+\_document.tsx 파일을 위처럼 작성해 주면 된다.
+
+위 코드는 초기 서버측에서 페이지를 불러올 때 스타일을 입혀 불러오도록 설정하는 코드다.
+
+getInitialProps에서 받아온 ctx에서 renderPage객체를 찾아 볼 수 있는데, renderPage는 CSS-in-JS라이브러리를 커스텀할 때 만 사용하라고 공식문서에 나와있다.
+
+renderPage 함수를 콘솔에 찍어보니, 우리가 보는 html페이지와 리액트컴포넌트들이 담겨있는 것 같다.
+
+styled-components 라이브러리에서 ServerStyleSheet를 import하고 서버측에서 그려질 sheet를 새로 만든다.
+
+```javascript
+const sheet = new ServerStyleSheet()
+```
+
+새로 만든 sheet에 renderPage에 있는 컴포넌트내부에 styled-components로 작성한 스타일들을 결합하고,
+
+```javascript
+ctx.renderPage = () =>
+  originalRenderPage({
+    enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />)
+  })
+```
+
+기존에 html에 style태그를 추가한다.
+
+```javascript
+return {
+  ...initialProps,
+  styles: [
+    <>
+      {initialProps.styles}
+      {sheet.getStyleElement()}
+    </>
+  ]
+}
+```
+
+<img src="/assets/blog/javaScript/next-styled-component(1).png" width="100%" alt="post image"/>
+1f:Te30,
+프로젝트를 진행하면서, 프로필 페이지에 유저정보와 포인트, 펫정보, 관심사 등 세로로 길게~~배치된 UI, 각각의 정보들을 서버에서 데이터를 하나하나 받아와 보여줘야 했다.
+
+처음엔 아무생각없이 진행했다.
+
+프로필 페이지에 진입했을 때 각각 필요한 데이터를 서버에 4번이나 요청했고, 그대로 컴포넌트에 그렸다.
+
+그러다가💡 생각났는데,, 사용자에게 보이지않는 부분에 데이터도 받아오고 있었다.
+
+굳이 스크롤을 내리지도 않고 사용자에게 보이지도 않는 부분에 데이터까지 받아올 필요는 없었다.
+
+그럼 사용자가 스크롤을 내려 보고자하는 부분에 도달했을때, 아니면 도달하기 직전에 데이터를 불러와 보여주면 어떨까 싶었다.
+
+이전에 강의에서 이미지 Lazy로딩을 배웠었는데, 이미지 대신에 데이터 요청을 해보면 어떨까 생각했다.
+
+<img src="/assets/blog/javaScript/intersectionObserver.png" width="100%" alt="post image" />
+
+컴포넌트가 마운트 되자마자 모든 데이터들이 요청된다.
+
+우선 훅을 하나 만들었다. ref객체가 감지되면 loaded가 true로 바뀌고, 더이상 감시가 중지된다.
+
+```tsx
+export const useLazyRequest = () => {
+  const ref = useRef(null) as MutableRefObject<HTMLDivElement>
+  const [loaded, setLoaded] = useState<boolean>(false)
+
+  useEffect(() => {
+    const options = {}
+    const callback = (entries, observer) => {
+      entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+          console.log('is Intersecting')
+          setLoaded(true)
+          observer.unobserve(entry.target) // 한번만 요청되도록 감시 중지
+        }
+      })
+    }
+    const observer = new IntersectionObserver(callback, options) // 객체 생성하기
+    observer.observe(ref.current)
+  }, [])
+
+  return {ref, loaded}
+}
+```
+
+사용하고자 하는 컴포넌트로 돌아와서,
+
+나는 데이터 요청에 SWR을 사용했다.
+
+[https://swr.vercel.app/ko](https://swr.vercel.app/ko)
+
+```tsx
+
+// SWR
+export const useUserKeywords = (loaded: boolean) => {
+  const {data, isValidating, error} = useFetch(loaded ? PATH + '/keywords' : null, {
+    revalidateOnFocus: false,
+    revalidateIfStale: false,
+    shouldRetryOnError: false
+  })
+
+  return {
+    userKeywords: data,
+    isValidating,
+    error
+  }
+}
+```
+
+SWR은 위처럼 설정했다, SWR자체도 hook이기 때문에 useEffect나 다른 함수안에서 사용하지 못한다.
+
+```tsx
+const {ref, loaded} = useLazyRequest()
+const {userKeywords, isValidating, error} = useUserKeywords(loaded)
+
+<Contents ref={ref}>
+        {isValidating ? (
+          <Loading />
+        ) : (
+          <>
+           {...}
+          </>
+        )}
+</Contents>
+```
+
+4개의 섹션이 있는데, 페이지 진입시 1, 2번까지만 사용자에게 보이고 3, 4번의 컴포넌트를 위처럼 적용했다.
+
+ref에 사용자의 view가 도달하면 userKeywords를 요청해 데이터를 받아온다.
+
+<img src="/assets/blog/javaScript/intersectionObserver(1).gif" width="100%" alt="post image" />
+
+과거에는 getBoundingClientRect() 를 사용해 구현했다고 하는데, 리플로우 현상이나 성능면에서 보완하고자 요즘엔 intersection Observer를 사용해 타겟을 관찰한다고 한다.
+
+또 무한스크롤도 구현해 볼 수 있다. 페이지의 맨 마지막 요소에 도달했을 때, 요청하는 페이지 쿼리를 ++ 하면 쉽게 구현할 수 있다.
+
+다른 필요한 페이지에 적용해봐야겠다!
+20:T1130,
+
+이번 새로운 프로젝트에 사용하게 된 react-hook-form과 씨름하면서 정리해본 ref와 react-hook-form의 간단한 원리에 대해 정리해보자.
+
+---
+
+### **ref**란?
+
+React에서는 props를 통해서만 부모와 자식간의 컴포넌트에 상호작용을 할 수 있다.
+
+자식 컴포넌트에 props를 전달해 props의 값이 변경되면 자식 컴포넌트는 다시 렌더링이 된다.
+
+그러나 props를 통한 방법이 아닌 직접적으로 자식 컴포넌트를 수정해야되는 일이 생길 수 있는데..
+
+### Ref를 사용해야 할 때
+
+-   포커스, 텍스트 선택영역, 혹은 미디어의 재생을 관리할 때.
+-   애니메이션을 직접적으로 실행시킬 때.
+-   서드 파티 DOM 라이브러리를 React와 같이 사용할 때.
+
+우선 DOM에 직접적으로 접근하는 방법은 건너 뛰고, react-hook-form과 관련된 **비제어 컴포넌트 제어**에 관해 알아보자.
+
+**react-hook-form**의 가장 큰 목적은 퍼포먼스이며, **비제어 컴포넌트**를 사용하고 있기 때문에 다른 라이브러리(formik, redux-form 등) 에 비해 타이핑이나 값이 변경될 때 리랜더링이 일어나는 양을 줄여준다.
+
+여기서 비제어 컴포넌트란, 
+
+React에서 제어하지 않고, 바닐라 JS를 이용해 제어하는 컴포넌트를 비제어 컴포넌트라 한다.
+
+쉽게말해 React가 관여하지 않는다. (재조정, 비교 등)
+
+이런 비제어 컴포넌트를 제어하기 위해서, DOM에 접근하는 역할을 ref가 한다.
+
+예를들어
+
+```javascript
+const [test, setTest] = useState('')
+<input value={test} onChange={(e) => setTest(e.target.value)} />
+```
+
+위와같이 state로 상태를 관리하게 되면, state가 변하면서 이를 업데이트 하기 위해 계속해서 리렌더링이 된다.
+
+<img src="/assets/blog/javaScript/ref.gif" width="100%" alt="post image"/>
+
+이는 React에서 제어하는 컴포넌트다.
+
+그러면 굳이 인풋에 값만 변하는건데 불필요한 리렌더링이 필요하지 않을 수 있다.
+
+```
+  const inputRef = useRef(null)
+  const testHandler = (e) => {
+    inputRef.current.value = e.target.value
+  }
+    <input ref={inputRef} onChange={(e) => testHandler(e)} />
+```
+
+<img src="/assets/blog/javaScript/ref(1).gif" width="100%" alt="post image"/>
+
+ref를 사용하면 인풋값이 변경되어도 리렌더링이 발생하지 않는다.
+
+---
+
+### Ref 와 함수형 컴포넌트
+
+-   함수 컴포넌트는 인스턴스가 없기 때문에 **함수 컴포넌트에 ref 어트리뷰트를 사용할 수 없습니다**.
+
+사실 위 예제는 클래스형 컴포넌트에서 작성해야 적합했지만, 함수형 컴포넌트에서도 ref는 사용할 수 있다.
+
+다만 상태값이 바뀔 때 마다 다시 실행되는 함수형 컴포넌트의 특성때문에 기존과는 다른 방식을 사용한다.
+
+위 예제에서 사용한 **useRef는 hook으로 함수의 렌더링의 상관없이** 상태 값을 유지한다.
+
+---
+
+### forwardRef
+
+react-hook-form을 사용하면서 
+
+**Warning: Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()?**
+
+이런 에러를 만나게 됐는데, ref 기반으로 구성된 react-hook-form이 ref를 **자식요소(인풋컴포넌트)에 전달**하기 때문에 발생한 에러였다.
+
+ref는 React에서 props로 사용하지 못하는 것 중에 하나였는데, 대표적인 Key값과 동일하게 **props로 사용할 수 없다**.
+
+React에서 ref를 props로 사용하려면 forwardRef를 사용해 자식요소로 ref를 전달할 수 있다.
+
+자식 컴포넌트를 forwardRef()함수로 감싸주고, props와 ref를 받아 사용할 수 있다.
+
+```
+const Input = forwardRef((props, ref) => {
+  return <input ref={ref} />;
+});
+```
+
+추가로 eslint 에러나 개발자 도구에서 forwardRef사용시 이름이 나오지 않는 에러는
+
+displayName 속성에 이름을 설정하거나, 익명함수 대신 이름있는 함수를 넘겨 주면 된다.
+
+```
+Input.displayName = "Input";
+```
+
+```
+const Input = forwardRef(function Input(props, ref) {
+  return <input ref={ref} />;
+});
+```
+
+---
+
+ref는 특정 DOM에 접근해 애니메이션을 이용할때만 주로 사용했었는데, 이번 기회에 조금 더 자세하게 들여다 본것 같다.🤔
+21:T18c7,
+이번에 유지보수하면서 진행했던 TTS (Text-to-Speech)
+
+단어의 발음을 읽어주도록 해야했다.
+
+결국 Google TTS로 구현하긴 했지만, 처음에는 Speechsynthesis를 사용해 구현했었다.
+
+Sppechsynthesis는 (음성 합성) Web Speech API이고 주어진 텍스트를 소리로 바꿔주는, 음성 서비스에 대한 컨트롤러 인터페이스이다.
+
+---
+
+### Speechsynthesis
+
+IE빼고 브라우저 거의 지원한다.
+
+```javascript
+speechSynthesis.getVoices();
+```
+
+로 지원하는 음성 목록을 확인할 수 있다.
+
+
+<img src="/assets/blog/javaScript/speechsynthesis.png" width="100%" alt="post image"/>
+
+문제는,, 브라우저마다 또는 OS마다 지원하는 음성이 달라서 모두 동일하지 못했다,
+
+그래서 모바일따로 웹따로 브라우저별로 목소리가 다르게 세팅되어 Google TTS로 바꾸게 되었다.
+
+```javascript
+const speech = new SpeechSynthesisUtterance()
+
+// 음높이와 목소리 등 설정이 가능
+speech.voice
+speech.text
+speech.lang
+speech.pitch
+speech.rate
+speech.volume
+```
+
+```
+// speechSynthesisUtterance에 설정한 음성 실행
+window.speechSynthesis.speak(speech)
+```
+
+---
+
+### Google TTS
+
+두가지 방식이 있었다.
+
+클라이언트 라이브러리와 API
+
+클라이언트 라이브러리
+
+#### Node.js
+
+```javascript
+npm install --save @google-cloud/text-to-speech	//라이브러리 설치
+
+
+// Imports the Google Cloud client library
+const textToSpeech = require('@google-cloud/text-to-speech');
+
+// Import other required libraries
+const fs = require('fs');
+const util = require('util');
+// Creates a client
+const client = new textToSpeech.TextToSpeechClient();
+async function quickStart() {
+  // The text to synthesize
+  const text = 'hello, world!';
+
+  // Construct the request
+  const request = {
+    input: {text: text},
+    // Select the language and SSML voice gender (optional)
+    voice: {languageCode: 'en-US', ssmlGender: 'NEUTRAL'},
+    // select the type of audio encoding
+    audioConfig: {audioEncoding: 'MP3'},
+  };
+
+  // Performs the text-to-speech request
+  const [response] = await client.synthesizeSpeech(request);
+  // Write the binary audio content to a local file
+  const writeFile = util.promisify(fs.writeFile);
+  await writeFile('output.mp3', response.audioContent, 'binary');
+  console.log('Audio content written to file: output.mp3');
+}
+quickStart();
+```
+
+구글의 샘플코드
+
+위 코드로 테스트해보니 output.mp3 파일이 만들어지고 이 파일을 재생하면 요청한 text가 재생됐다.
+
+하지만 파일도 필요없고, 음성만 클라이언트에서 받으면 됐기 때문에 조금 더 살펴봤는데, reponse 부분에서 arrayBuffer의 버퍼데이터가 찍혔고, 이 response 데이터를 바로 클라이언트로 보내줬다.
+
+#### React
+
+```javascript
+      const requestAudioFile = async (e) => {
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)
+
+            const response = await axios({
+                method: 'get',
+                url: `http://localhost:4000/exam1`,
+                params: {test: e.target.ariaValueText},
+                responseType: 'arraybuffer'
+            })
+
+            // 버퍼 데이터 비동기 디코딩
+            const audioBuffer = await audioContext.decodeAudioData(response.data)
+
+            // 오디오 source 만들기
+            const gainNode = audioContext.createGain()
+            const source = audioContext.createBufferSource()
+
+            // 생성된 source에 재생할 데이터 선언
+            source.buffer = audioBuffer
+            source.connect(gainNode)
+
+            // 재생할 스피커에 source 넣기
+            gainNode.connect(audioContext.destination)
+            source.start()
+
+            console.log('responce', response.data);
+            console.log('audioContext', audioContext);
+            // -------------- //
+            const audioBuffer = await audioContext.decodeAudioData(decode);
+            console.log('audioBuffer', audioBuffer);
+            //create audio source
+              const gainNode = audioContext.createGain()
+              const source = audioContext.createBufferSource()
+            console.log('source : ', source);
+
+              source.buffer = audioBuffer
+              source.connect(gainNode)
+              gainNode.connect(audioContext.destination)
+
+            source.start();
+        }
+```
+
+읽혀야할 text를 params로 보냈고, Web Audio API 의 AudioContext를 사용해서 받아온 버퍼데이터를 읽도록 했다.
+
+근데 몇가지 문제가 더 있었는데, 모바일에서는 작동하지 않는것..audio 태그를 이용해 읽혀야 하기 때문에 버튼 커스텀이 되지 않았다.
+
+그래서 변경한게 API
+
+```
+POST https://texttospeech.googleapis.com/v1/text:synthesize?key='Google API KEY'
+```
+
+```json
+{
+  "input":{
+    "text":"Android is a mobile operating system developed by Google, based on the Linux kernel and designed primarily for touchscreen mobile devices such as smartphones and tablets."
+  },
+  "voice":{
+    "languageCode":"en-gb",
+    "name":"en-GB-Standard-A",
+    "ssmlGender":"FEMALE"
+  },
+  "audioConfig":{
+    "audioEncoding":"MP3"
+  }
+}
+```
+
+위처럼 작성해 POST요청을 보내면  
+
+```
+//NExAARqoIIAAhEuWAAAGNmBGMY4EBcxvABAXBPmPIAF//yAuh9Tn5CEap3/o
+...
+VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+```
+
+음성이 base64 인코딩 형식으로 들어온다.
+
+받은 인코딩된 음성을
+
+```javascript
+const [audioSource, setAudioSource] = useState(null)
+
+const requestAudioFile = async (e) => {
+  const response = await axios.post(
+      // eslint-disable-next-line no-undef
+    `https://texttospeech.googleapis.com/v1/text:synthesize?key=${process.env.REACT_APP_GOOGLE_TTL}`,
+    {
+      input: {
+        text: e?.target?.ariaValueText
+      },
+      voice: {
+        languageCode: 'en-US',
+        name: 'en-US-Standard-H',
+        ssmlGender: 'FEMALE'
+      },
+      audioConfig: {
+        audioEncoding: 'LINEAR16',
+        speakingRate: 1
+      }
+    }
+  );
+  setAudioSource(new Audio("data:audio/wav;base64," + response.data?.audioContent));
+};
+
+    useEffect(() => {
+        audioSource?.play()
+    }, [audioSource])
+```
+
+new Audio 오디오 객체를 이용해 오디오소스가 들어올때, 오디오를 만들고 재생시켰다.
+22:Tf2b,
+**[유동균님의 강의](https://www.inflearn.com/course/%EC%9B%B9-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EB%A6%AC%EC%95%A1%ED%8A%B8-1)를 보며 정리한 글 입니다.**
+
+---
+
+### 1\. Layout Shift
+
+원인
+
+1\. 사이즈가 정해져 있지 않은 이미지
+
+2\. 사이즈가 정해져 있지 않은 광고
+
+3\. 동적으로 삽입된 콘텐츠
+
+4\. Web font (FOIT, FOUT)
+
+<img src="/assets/blog/javaScript/web-optimization-3-1.png" width="100%" alt="post image"/>
+
+여러 이미지를 로드할 때, 먼저 불러온 이미지 자리를 나중에 불러온 이미지가 밀어내게 되면서 레이아웃 변경이 계속 발생한다.
+
+```js
+<ImageWrap>
+  <Image />
+</ImageWrap>
+```
+
+이때 Wrap에 고정값을 정해주고 Image는 그 값을 따라가기만 하면 된다. 여기서는 16:9 비율로 지정하기 위해 9 / 16 = 56.25%로 높이를 잡고 Image를 그 안에 넣는 방식으로 했다.
+
+<img src="/assets/blog/javaScript/web-optimization-3-2.png" width="100%" alt="post image"/>
+
+컨텐츠가 새로 들어오면서 기존 컨텐츠를 밀어내지 않도록 컨텐츠를 그려줄 곳에 미리 자리를 만들어 놓는것이다.
+
+---
+
+### 2\. React-lazyload
+
+```shell
+npm i react-lazyload
+```
+
+강의에서는 라이브러리를 사용했지만, 다음엔 스스로 구현해 포스팅해야겠다.
+
+스크롤이벤트를 사용하는 것 같다.
+
+---
+
+### 3\. useSelect 렌더링 문제
+
+<img src="/assets/blog/javaScript/web-optimization-3-3.png" width="100%" alt="post image"/>
+
+리액트 dev-tool에서 Highlight updates ... 를 체크해 컴포넌트가 렌더링되는걸 확인할 수 있다.
+
+useSelector는 dispatch로 Redux Store가 변경되면 구독하고 있는 컴포넌트에 state가 변경되었다고 알려준다.
+
+그럼 컴포넌트에서는 기존 state와 업데이트된 state를 비교해 값이 다르면 다시 렌더링 하게 된다.
+
+여기서 비교하는 방식은 useSelector의 리턴값을 비교하는데
+
+```js
+const { modalVisible, bgColor, src, alt } = useSelector(state => ({
+  modalVisible: state.modalVisible,
+  bgColor: state.bgColor,
+  src: state.src,
+  alt: state.alt,
+}));
+```
+
+리턴값을 오브젝트 형식으로 작성하면, 값을 생성할 때 마다 새로운 오브젝트를 만들기 때문에 매번 새롭게 렌더링하게 된다.
+
+```js
+const modalVisible = useSelector(state => state.modalVisible)
+const bgColor = useSelector(state => state.bgColor)
+const src = useSelector(state => state.src)
+const alt = useSelector(state => state.alt)
+```
+
+오브젝트를 새롭게 만들지 않도록 state를 쪼개고 새로운 Equality Function을 사용해야한다.
+
+```js
+const { modalVisible, bgColor, src, alt } = useSelector(state => ({
+  modalVisible: state.modalVisible,
+  bgColor: state.bgColor,
+  src: state.src,
+  alt: state.alt,
+}), shallowEqual);
+```
+
+---
+
+### 4\. Redux Reselect
+
+state의 값들을 가지고 가공해야되는 값이 있을 때 useSelector내부에서 가공해 값을 준다.
+
+```js
+const selectFilteredPhotos = createSelector([select값], (select값) => (가공할 결과를 리턴)
+const photos = useSelector(selectFilteredPhotos)
+```
+
+또 메모이제이션 방식을 통해 값을 비교하므로 불필요한 계산도 없애준다.
+
+select값이 같은 값으로 들어오면 미리 캐싱해둔 값과 비교해 값이 변하지 않으면 그대로 리턴한다.
+
+---
+
+### 5\. Memoization 적용
+
+인풋에 따라 아웃풋에 나오는 값에 대해서 미리 저장해 놓는 기법이다.
+
+a -> A가 아웃풋이다 라고 할때, 다음번에 또 a가 들어오면 로직을 일일히 실행하지않고 저장해둔 값 A를 바로 리턴하게 된다.
+
+순수함수만 가능
+
+그렇다고 무지성으로 쓰는건 좋지 않다.
+
+메모이제이션이 불필요한 함수에 적용하는건 오히려 메모리 낭비가 될 수 있다.
+23:T2721,
+**[유동균님의 강의](https://inf.run/4zeg)를 보며 정리한 글 입니다.**
+
+---
+
+### 1\. 이미지 지연(lazy) 로딩
+
+<img src="/assets/blog/javaScript/web-optimization-2-1.png" width="100%" alt="post image"/>
+
+예제에서 네트워크를 6메가비트로 맞춰놓았다.
+
+제일 먼저 사용자에게 보여져야할 동영상이 이미지 보다 더 늦게 다운로드 되는 부분을 동영상이 먼저 다운로드 되도록 수정해야한다.
+
+-   이미지를 빠르게 다운로드
+-   **이미지를 나중에 다운로드, 동영상 먼저 다운로드**
+
+두번째 방법을 사용해 수정(image lazy)
+
+이미지를 필요할때(나중에, 보여지기 직전에) 로드되도록 해야한다.
+
+스크롤이 이미지가 있는 곳에 도달하면 이미지를 로드하고, 그렇지 않으면 보이지 않도록 해야하는데,
+
+이 방법은 사용자가 매번 스크롤을 할 때마다 이벤트함수가 호출되는 단점이 있다.
+
+이 문제를 해결하려면 **IntersectionObserver**로 해결할 수 있다. 즉 화면에 특정 이미지가 들어올 때만 함수를 호출하게 된다.
+
+[https://developer.mozilla.org/ko/docs/Web/API/Intersection\_Observer\_API](https://developer.mozilla.org/ko/docs/Web/API/Intersection_Observer_API)
+
+```js
+const observer = new IntersectionObserver(callback, options)
+observer.observe(element객체)
+```
+
+```js
+    const imgRef = useRef(null)
+
+   useEffect(() => {
+      const options = {}
+      const callback = () => {
+         console.log('callback')
+      }
+      const observer = new IntersectionObserver(callback, options)
+
+      observer.observe(imgRef.current)
+   }, [])
+
+
+   return (
+      <div className="Card text-center">
+         <img src={props.image} ref={imgRef} />
+         <div className="p-5 font-semibold text-gray-700 text-xl md:text-lg lg:text-xl keep-all">
+            {props.children}
+         </div>
+      </div>
+   )
+}
+```
+
+<img src="/assets/blog/javaScript/web-optimization-2-2.png" width="100%" alt="post image"/>
+
+스크롤을 내려 이미지가 **보이거나 사라질때** 콘솔이 찍힌다.
+
+이미지가 보이는 그 순간에만 로드하려면 callback 함수에 entries와 observer객체를 넘겨주면 된다.
+
+```js
+useEffect(() => {
+   const options = {}
+   const callback = (entries, observer) => {
+      entries.forEach(entry => {
+         if(entry.isIntersecting){
+            console.log('is Intersecting')
+         }
+      })
+   }
+   const observer = new IntersectionObserver(callback, options)
+
+   observer.observe(imgRef.current)
+}, [])
+```
+
+<img src="/assets/blog/javaScript/web-optimization-2-3.png" width="100%" alt="post image"/>
+
+위와는 다르게 화면안에 이미지가 **보일 때만** 콘솔이 찍힌다.
+
+```js
+    const imgRef = useRef(null)
+
+    useEffect(() => {
+        const options = {}
+        const callback = (entries, observer) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    console.log('is Intersecting', entry.target.dataset.src)
+                    entry.target.src = entry.target.dataset.src
+                    // 이미지가 들어오면 더이상 감시하지 않음
+                    observer.unobserve(entry.target)
+                }
+            })
+        }
+        const observer = new IntersectionObserver(callback, options)
+        // 이미지를 넣음
+        observer.observe(imgRef.current)
+    }, [])
+
+
+    return (
+        <div className="Card text-center">
+            <img data-src={props.image} ref={imgRef}/>
+            <div className="p-5 font-semibold text-gray-700 text-xl md:text-lg lg:text-xl keep-all">
+                {props.children}
+            </div>
+        </div>
+    )
+}
+```
+
+<img src="/assets/blog/javaScript/web-optimization-2-4.png" width="100%" alt="post image"/>
+
+동영상을 먼저 로드하고, 이미지를 불러옴
+
+---
+
+### 2\. 이미지 사이즈 최적화
+
+위에서 지연로딩을 사용해 이미지를 불러오는 타이밍을 조절했지만 그래도 이미지 자체의 용량이 크다면 불러오는 속도가 느려질 수 밖에 없다.
+
+이미지 포맷, 확장자 종류
+
+- JPG를 **WEBP**(구글에서 나온 이미지 포맷, JPG에 비해서 화질이높고 용량이 낮음)로 변경,
+
+* 꼭 WEBP로 할필요는 없다 (**WEBP, WEBM**은 현재 잘 쓰지 않는다) 현재 지원하지않는 브라우저도 있음
+
+**picture** 태그로 이미지 분기(나중에 자세하게 배워보자)
+
+```html
+<picture>
+   <source  data-srcset={props.webp} type='image/webp'/>
+   <img data-src={props.image} ref={imgRef}/>
+</picture>
+```
+
+이미지 포맷은 [https://squoosh.app/](https://squoosh.app/) 를 사용했다.
+
+<img src="/assets/blog/javaScript/web-optimization-2-5.png" width="100%" alt="post image"/>
+
+예제에서 브라우저에 보일 크기는 300 x 300 이므로 **x2**를해 600 x 600으로 포맷
+
+이미지가 9.74MB에서 **21.9KB**로 줄었다.
+
+---
+
+### 3\. 동영상 사이즈 최적화
+
+동영상이 메인 컨텐츠가 아닌 경우 적합
+
+동영상도 **WEBM**으로 포맷
+
+```html
+<video
+   className="absolute translateX--1/2 h-screen max-w-none min-w-screen -z-1 bg-black min-w-full min-h-screen"
+   autoPlay
+   loop
+   muted
+>
+   <source src={video_webm} type='video/webm' />
+   <source src={video} type='video/mp4' />
+</video>
+```
+
+---
+
+### 4\. 폰트 최적화
+
+폰트도 리소스라 네트워크를 통해 받아온다.
+
+- 웹 폰트의 문제점
+
+**FOUT**(Flash of Unstyled Text) = 폰트를 다운로드 하기 전에는 **기본폰트로 컨텐츠**를 보여줌
+
+**FOIT**(Flash of Invisible Text) = 폰트가 다운로드 되기 전에는 **컨텐츠를 보여주지 않음**
+
+1. 폰트 적용 시점 컨트롤
+
+-   font-display 사용
+    \- auto : 브라우저 기본 동작
+    \- block : FOIT (timeout = 3s)
+    \- swap : FOUT
+    \- fallback : FOIT (timeout = 0.1s) 0.1초 후에도 불러오지 못하면 **기본 폰트 유지**, 이후에 캐시
+    \- optional : FOIT (timeout = 0.1s) 이후 네트워크 상태에 따라 **기본폰트로 유지할지 웹폰트를 적용할지 결정**, 이후에 캐시
+
+```css
+@font-face {
+	font-family: BMYEONSUNG;
+	src: url('./assets/fonts/BMYEONSUNG.ttf');
+	font-display: swap;
+}​
+```
+
+<img src="/assets/blog/javaScript/web-optimization-2-6.gif" width="100%" alt="post image"/>
+
+-   fontfaceobserver 라이브러리를 사용해 시각적인 효과
+
+```css
+@font-face {
+   font-family: BMYEONSUNG;
+   src: url('./assets/fonts/BMYEONSUNG.ttf');
+   font-display: block;
+}
+```
+
+```js
+const [isFontLoaded, setIsFontLoaded] = useState(false)
+
+const font = new FontFaceObserver('BMYEONSUNG');
+
+useEffect(() => {
+   font.load().then(function () {
+      console.log('BMYEONSUNG has loaded');
+      setIsFontLoaded(true)
+   });
+}, [])
+
+return (
+    <div className="..." style={{opacity: isFontLoaded ? 1 : 0, transition: 'opacity 0.3s ease'}} >
+        <div className="...">
+            {...}
+        </div>
+    </div>
+)
+```
+
+2. 폰트 사이즈 줄이기
+
+폰트 포멧 사이트 [https://transfonter.org/](https://transfonter.org/)
+
+- 웹폰트 포맷 사용 (파일 크기 = EOT > TTF/OTF > WOFF > WOFF2)
+
+```css
+@font-face {
+   font-family: BMYEONSUNG;
+       /* 로컬에 폰트가 있으면 바로 적용*/
+   src: local('BMYEONSUNG'),
+       url('./assets/fonts/BMYEONSUNG.woff2') format('woff2'),
+       /* 지원하지 않는 브라우저 대응 */
+       url('./assets/fonts/BMYEONSUNG.woff') format('woff'),
+       url('./assets/fonts/BMYEONSUNG.ttf') format('truetype');
+   font-display: block;
+}
+```
+
+- local 폰트 사용
+
+- **Subset** 사용
+
+필요한 글자만 가져와서 사용 "ABCDEFGHIJKLMNOPQR"
+
+<img src="/assets/blog/javaScript/web-optimization-2-7.png" width="100%" alt="post image"/>
+
+변환하지 않은 폰트는 포함되지 않음
+
+- **Unicode Range** 적용
+
+```css
+@font-face {
+   font-family: BMYEONSUNG;
+        /* 로컬에 폰트가 있으면 바로 적용*/
+   src: url('./assets/fonts/subset-BMYEONSUNG.woff2') format('woff2'),
+        /* 지원하지 않는 브라우저 대응 */
+        url('./assets/fonts/subset-BMYEONSUNG.woff') format('woff'),
+        url('./assets/fonts/BMYEONSUNG.ttf') format('truetype');
+   font-display: block;
+   unicode-range: U+0041;
+}
+```
+
+<img src="/assets/blog/javaScript/web-optimization-2-8.png" width="100%" alt="post image"/>
+
+Subset은 렌더링 하는 텍스트에 폰트가 필요하지 않아도 폰트를 로드하지만 unicode-range를 사용하면 폰트가 필요하지 않으면 로드하지 않는다
+
+- data-uri로 변환
+
+Base64 encode 해 불러오는 방식
+
+- **Preload**
+
+해당하는 페이지에 폰트가 필요하다는 것을 HTML에 작성
+
+```html
+<link rel="preload" href="BMYEONSUNG.woff2" as="font" type="font/woff2" crossorigin>
+```
+
+<img src="/assets/blog/javaScript/web-optimization-2-9.png" width="100%" alt="post image"/>
+
+CSS가 로드되기 전에 폰트가 먼저 로드됨
+
+---
+
+### 5\. 캐시 최적화
+
+웹 브라우저는 크게 메모리 캐시, 디스크 캐시 두가지로 캐싱한다.
+
+**메모리 캐시는 RAM**에 저장, **디스크 캐시는 file로 데이터**를 저장
+
+- Cache-Control
+
+브라우저 이미지 요청 -> 서버
+
+서버 -> 브라우저에 이미지(캐시) 보냄
+
+* 서버에서 설정이 필요
+
+-   no-cache : 캐시를 사용하기 전에 서버에서 검사 후 사용 결정
+-   no-store : 캐시 사용 안함
+-   public : 모든 환경에서 사용
+-   private : 브라우저 환경에서만 캐시 사용, 외부 캐시 서버에서는 사용 불가
+-   max-age : 캐시의 유효시간
+
+- Node
+
+```js
+const header = {
+    setHeaders: (res, path) => {
+    	if(path.endsWith('.html')){
+        	res.setHeader('Cache-Control', no-cache)
+        } else if(path.endsWith('.js') || path.endsWith('css') || path.endsWith('.webp')){
+        	res.setHeader('Cache-Control', 'public, max-age=...'
+        } else {
+        	res.setHeader('Cache-Control', 'no-store')
+        }
+    },
+}
+```
+24:T1f48,
+**[유동균님의 강의](https://www.inflearn.com/course/%EC%9B%B9-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EB%A6%AC%EC%95%A1%ED%8A%B8-1)를 보며 정리한 글 입니다.**
+
+---
+
+### 1\. 구글 개발자 도구 Audits(LightHouse) 툴을 이용한 페이지 검사
+
+<img src="/assets/blog/javaScript/web-optimization1.png" width="100%" alt="post image"/>
+<img src="/assets/blog/javaScript/web-optimization2.png" width="100%" alt="post image"/>
+
+**Opportunities** = 리소스의 관점(로딩성능)
+
+**Diagnostics** = 페이지의 실행 관점(렌더링)
+
+---
+
+### 2\. 이미지 사이즈 최적화 - 로딩 성능
+
+<img src="/assets/blog/javaScript/web-optimization3.png" width="100%" alt="post image"/>
+
+실제 이미지와 렌더링된 이미지의 크기가 다르다
+
+보통 이미지는 x2의 이미지를 사용
+
+api를 통해 받아온 이미지를 조절하려면?
+
+**Image CDN**(image processing Contents Delivery Network) - 이미지 가공 → 소비자
+
+CDN 구축은 진행하지 않았다.
+
+---
+
+### 3\. performance
+
+크롬 개발자도구 -> 성능에서 새로고침을 누르면 페이지의 작업을 분석해준다.
+
+<img src="/assets/blog/javaScript/web-optimization4.png" width="100%" alt="post image"/>
+<img src="/assets/blog/javaScript/web-optimization5.png" width="100%" alt="post image"/>
+
+1.  HTML파싱
+2.  JS 로드
+3.  첫 페인팅 이후 API 호출
+
+- 리액트는 프레임차트에서 각 컴포넌트마다 실행되는 시간이 보여진다.
+
+---
+
+### 4\. Route-based code Splitting
+
+코드 스플릿팅은 webpack, rollup 등과 같은 모듈 번들러를 이용하여 만들어진 하나의 번들 파일을 여러 개의 번들 파일로 나누는 것을 의미한다.
+
+하나의 번들파일을 여러개로 나누면 그만큼 로드 속도가 빨라진다.
+
+```js
+import React, {Suspense, lazy} from 'react'
+import { Switch, Route } from 'react-router-dom'
+import './App.css'
+// import ListPage from './pages/ListPage/index'
+// import ViewPage from './pages/ViewPage/index'
+
+const ListPage = lazy(() => import('./pages/ListPage/index'))
+const ViewPage = lazy(() => import('./pages/ViewPage/index'))
+
+function App() {
+  return (
+    <div className="App">
+        <Suspense fallback={<div>로딩 중...</div>}>
+          <Switch>
+            <Route path="/" component={ListPage} exact />
+            <Route path="/view/:id" component={ViewPage} exact />
+          </Switch>
+        </Suspense>
+    </div>
+  )
+}
+
+export default App
+```
+
+import()를 **lazy**라는 함수 안에 넣고, **Suspense**라는 컴포넌트로 관리를 해줄 수 있다.
+
+데이터가 로딩중에 유저에게 비어있는 컴포넌트가 보이게 되는데, Suspense를 사용해서 이 로딩중인 상태일 때 다른 컴포넌트를 보여줄 수 있다.
+
+Suspense는 fallback을 받아 import하는 도중에 띄어준다.
+
+페이지가 로드될 때 그 페이지 안에서 보이지 않는 컴포넌트가 존재할 수 있는데, 이 부분을 스플리팅해 관리 할 수도 있다.
+
+---
+
+### 5\. 애니메이션 최적화
+
+일반적인 모니터는 초당 60FPS, 브라우저도 초당 60FPS로 화면을 그리게 된다.
+
+여기서 브라우저가 60FPS 아래로 그리게 된다면 쟁크 현상이 발생함.
+
+<img src="/assets/blog/javaScript/web-optimization6.png" width="100%" alt="post image"/>
+
+1. DOM + CSSOM
+
+<img src="/assets/blog/javaScript/web-optimization7.png" width="100%" alt="post image"/>
+
+2. Render Tree
+
+<img src="/assets/blog/javaScript/web-optimization8.png" width="100%" alt="post image"/>
+
+위 DOM과 CSSOM을 조합해 RenderTree를 만들어 낸다.
+
+3. Layout
+
+<img src="/assets/blog/javaScript/web-optimization9.png" width="100%" alt="post image"/>
+
+위치나 크기를 계산해 화면에 레이아웃을 그린다.
+
+4. Paint
+
+이렇게 그려진 레이아웃위에 색을 채워넣음
+
+5. Composite
+
+<img src="/assets/blog/javaScript/web-optimization10.png" width="100%" alt="post image"/>
+
+각 레이어들을 합성하는 과정
+
+이 전체의 과정을 Critical Rendering Path, Pixel Pipeline 이라고 부른다.
+
+이 완성된 상태에서 변화가 생긴다면 처음으로 돌아가 다시 이 전체의 과정을 거치게 된다.
+
+- width, height가 변경되면, **1 -> 2 -> 3 -> 4 -> 5** 모두 실행되게 된다 **(Reflow)**
+
+- 크기나 위치가 아니라 color, background-color(색깔)이 변경됐을땐 **1 -> 2 -> 4 -> 5** **(Repaint)**
+
+- transform, opacity 등(GPU가 관여하는 속성) 변경일 때 **1 -> 2 -> 5**
+
+따라서 transform, opacity 등(GPU가 관여하는 속성)을 사용하는게 가장 빠르고 끊김없이 보여줄 수 있다.
+
+<img src="/assets/blog/javaScript/web-optimization11.png" width="100%" alt="post image"/>
+
+---
+
+### 6\. 컴포넌트 Lazy Loading, Preload
+
+위에서 했던것 처럼 이미지를 보여주는 모달만 따로 스플릿팅 할 수있다.
+
+```js
+import React, { useState, Suspense, lazy } from 'react'
+import styled from 'styled-components'
+import Header from './components/Header'
+import InfoTable from './components/InfoTable'
+import SurveyChart from './components/SurveyChart'
+import Footer from './components/Footer'
+
+const LazyImageModal = lazy(() => import('./components/ImageModal'))
+
+function App() {
+    const [showModal, setShowModal] = useState(false)
+
+    return (
+        <div className="App">
+            <Header />
+            <InfoTable />
+            <ButtonModal onClick={() => { setShowModal(true) }}>올림픽 사진 보기</ButtonModal>
+            <SurveyChart />
+            <Footer />
+            <Suspense fallback={null}>
+                {showModal ? <LazyImageModal closeModal={() => { setShowModal(false) }} /> : null}
+            </Suspense>
+        </div>
+    )
+}
+```
+
+#### Lazy Loading의 단점
+
+<img src="/assets/blog/javaScript/web-optimization12.png" width="100%" alt="post image"/>
+
+우리가 모달을 클릭한순간 모달에 관련된 파일을 불러오고 JS를 Evaluate한다.
+
+이게 끝나고 실제로 모달을 띄우는 코드가 실행된다.
+
+최초 페이지에서는 성능이 조금 빨라졌지만 모달을 띄울 때는 오히려 성능이 더 느려졌다.
+
+#### **\- 컴포넌트 Preload**
+
+<img src="/assets/blog/javaScript/web-optimization13.png" width="100%" alt="post image"/>
+
+이를 개선하기 위해서 모달을 열기 이전에 모달과 관련된 코드를 미리 로드해 둔다.
+
+문제는 사용자가 모달을 언제 클릭할지 모르기 때문에 언제 미리 로드할지 애매하다.
+
+#### 타이밍
+
+1. 버튼 위에 마우스를 올려 놨을 때
+
+```js
+const handleMouseEnter = () => {
+    const Component = import('./components/ImageModal')
+}
+<ButtonModal onClick={() => { setShowModal(true) }} onMouseEnter={handleMouseEnter}>올림픽 사진 보기</ButtonModal>
+```
+
+<img src="/assets/blog/javaScript/web-optimization14.png" width="100%" alt="post image"/>
+
+2. 최초 페이지 로드가 되고, 모든 컴포넌트의 마운트가 끝났을 때(ComponentDidMount)
+
+<img src="/assets/blog/javaScript/web-optimization15.png" width="100%" alt="post image"/>
+
+```js
+useEffect(() => {
+    const Component = import('./components/ImageModal')
+}, [])
+```
+
+지금은 단일 컴포넌트를 미리 import 하지만 여러 컴포넌트를 Preload해줘야 할 때는
+
+```js
+function lazyWithPreload(importFunction){
+    const Component = React.lazy(importFunction)
+    Component.preload = importFunction
+    return Component
+}
+
+const LazyImageModal = lazyWithPreload(() => import('./components/ImageModal'))
+```
+
+```js
+useEffect(() => {
+    LazyImageModal.preload()
+}, [])
+```
+
+처럼 사용할 수 있다.
+
+#### **\- 이미지 Preload**
+
+**new Image()**
+
+```js
+useEffect(() => {
+    LazyImageModal.preload()
+
+    const img = new Image()
+    img.src = 'url'
+}, [])
+```
+
+주의할점은 이미지는 모듈과 다르게 필요할 때 마다 그때그때 매번 보내기 때문에
+
+사용하는 이미지에 캐시가 제대로 걸려있는지 확인할 필요가 있다.
+25:T2416,
+
+####
+**[Svelte vs React: Ending the Debate](https://massivepixel.io/blog/svelte-vs-react/ "Svelte vs React: Ending the Debate")를 읽으며 정리한 글입니다.**
+
+---
+
+## 리액트
+
+리액트는 페이스북에서 자체적으로 사용하기 위해 만든 라이브러리이며, 지금도 페이스북에서 관리하고 있다.
+
+처음 접하는 사람도 배우기가 쉽고, 개발속도도 빠르며 많은 개발자들이 사용하는 만큼 참고할 만한 사례들이 많다.
+
+또 가장 큰 특징은 재사용이 가능한 컴포넌트를 사용해 인터페이스를 구성하고, Virtual DOM을 사용해 앱의 성능을 향상시킨다는 것이다.
+
+---
+
+### 스벨트
+
+스벨트는 최근에 등장한 언어이고, 리액트, 뷰 등의 기존 프레임워크 및 라이브러리를 보완하고자 2016년에 출시되었다.
+
+Rich Harris가 개발했으며, 스벨트의 멤버들이 관리하고, 현재 스포티파이, 어베스트, 등의 회사에서 사용하고 있다.
+
+스벨트의 공식사이트에서는 프레임워크라 소개하고 있지만 사실 컴파일러와 유사하다.
+
+가볍고 빠른 앱을 만들기 위해 가능한 적은 양의 JS코드를 생성하고 적절한 최적화를 보장한다.
+
+---
+
+\- 등장 배경
+
+리치 해리스는 템플릿 기반 UI 라이브러리인 리액티브의 개발자다. 해리스는 이 언어를 그닥 좋아하지 않았고, JS는 덩치가 커 모바일 환경에서는 부담이 크고 치명적인 단점이 있으며 이를 해결하지 못했기 때문이다.
+
+### 스벨트와 리액트의 차이점
+
+<img src="/assets/blog/javaScript/svelte.png" width="100%" alt="post image"/>
+<img src="/assets/blog/javaScript/svelte(1).png" width="100%" alt="post image"/>
+
+## 스벨트의 장점
+
+#### 1\. 스벨트가 더 성능이 좋다.
+
+스벨트는 **리액트, 뷰, 앵귤러 보다 더 좋은 성능**을 보여준다.
+
+속도, 로딩, 메모리 등 모든 테스트에서 스벨트가 우위에 있다.
+
+그 이유는 스벨트가 런타임이 아닌 빌드 타임에 애플리케이션 코드를 해석하기 때문이다.
+
+또 HTML, CSS, JS가 최적화된 작은 번들로 컴파일이 되기 때문에 스벨트는 앱 비즈니스 로직 처리에만 신경쓰면 된다.
+
+다른 프레임워크는 브라우저가 무거운 작업을 수행할 수 밖에 없도록 강제하므로 모든 부분에서 느려진다.
+
+또 가장 큰 이유는 Virtual DOM이 없다는 것이다.
+
+#### 2\. 스벨트는 Virtual DOM을 비교하지 않는다.
+
+리액트에서는 Virtual DOM을 사용해 좋은 성능을 제공했고, 뷰도 이것을 보고 큰 영향을 받았다.
+
+여기서 Virtual DOM(가상 돔)이란 사용자 인터페이스에서 발생한 모든 변경 사항에 대한 문서 객체 모델(Document Object Model)을 메모리에 유지하는 **가상 임시 저장소**이다.
+
+실제 DOM을 사용하면 각각의 변경 사항이 발생할 때마다 DOM이 이를 반영하기 때문에 애플리케이션의 속도가 느려질 수 밖에 없다.
+
+반면에 가상 DOM은 실제 DOM의 변경사항을 업데이트하고 렌더링하는 가장 효율적인 방법을 찾을 때까지 해당 프로세스를 지연시킨다.
+
+이를 **조정(reconciliation) 프로세스 또는 비교(diffing)**라고 한다.
+
+스벨트는 꼭 가상 DOM을 사용해야만 뛰어난 성능을 달성할 수 있다라는 점에 동의하지 않았고, 이를 증명했다.
+
+#### 3\. 스벨트가 더 반응이 뛰어나다.
+
+리액트는 선언적(declarative) 언어로써 어떠한 결과를 얻기 위해 각 단계를 모두 정의하는 대신에 원하는 결과만 지정하고 나머지는 리액트가 알아서 처리한다.
+
+그러나 값이 변경되었을때 자동으로 DOM에 반영하지 않는다. 리액트는 정해진 일정에 따라 컴포넌트를 업데이트 한다. setState, Hook을 사용하지 않으면 제대로 반영되지 않는다.
+
+스벨트도 이와 비슷하게 동작하지만 업데이트 명령을 받았을 때 동작한다. 그전까지는 발생한 모든 변경 사항이 한번에 처리된다.
+
+그러나 고려해야할 부분은 **반응형 선언문과 변수**이다. 반응형 선언문(reactive delaration)은 업데이트가 발생하는 동안 자동으로 로직을 다시 계산하는 역할을 한다. 그리고 반응형 변수는 일단 선언하면, 변경이 발생할 때마다 다른 변수들도 자동으로 변경한다. 이는 $ 기호를 추가하는 것 만으로 쉽게 가능하다.
+
+#### 4\. 스벨트의 컴포넌트는 약간 다르게 처리된다.
+
+우선 스벨트는 컴포넌트를 내보내기 위해 **아무런 동작도 할 필요가 없다**. 스벨트가 자동으로 export해주기 때문이다. 이에 반해 리액트에서는 이를 수동으로 수행해야 된다.
+
+또 스벨트는 **스타일 태그에서 컴포넌트의 범위를 지정**하므로 유연한 스타일 지정을 할 수 있다.
+
+또 컴파일 단계에서 생성하므로 고유한 클래스를 작성하는데 애쓸 필요가 없다.
+
+#### 5\. 스벨트에는 외부 라이브러리가 필요하지 않다.
+
+리액트는 뷰 영역에 초점을 맞춘 가벼운 라이브러리이며, 상태관리나 애니메이션을 구현하려면 외부 라이브러리를 사용해야 한다.
+
+이것이 꼭 나쁜것은 아니며 기능이 거의 없는 소규모 프로젝트의 경우에는 완벽할 수 있다.
+
+그러나 스벨트에는 앱의 크기를 늘리지 않으면서도 효과, 전환, 애니메이션 등이 내장되어 있어 필요한 부분만 불러오면 된다.
+
+또 스벨트는 다음과 같이 **상태 관리**를 할 수 있다.
+
+-   **컨텍스트 API**: 컴포넌트가 서로 통신하며 데이터를 전달 할 때
+-   **스벨트 스토어(Svelte Store)**: 컴포넌트가 대량의 데이터 전달하지 않고 통신해야 할 때
+-   **쓰기 가능 저장소(Writable Store)**: 객체가 여러 컴포넌트에 접근해야 할 때
+-   **읽기 가능 저장소(Readable Store)**: 사용자가 데이터를 조작하는 것을 원하지 않을 때
+
+
+#### 6\. 스벨트가 더 가볍다.
+
+GZIPPED(압축된) 버전의 리액트는 **42.2KB**(ReactDOM포함), 스벨트는 **1.6KB** 이다.
+
+#### 7\. 스벨트는 더 빠른 웹 개발을 제공한다.
+
+리액트의 개발 속도는 너무 빠르다 못해 이를 단점 중 하나로 인용되기도 한다.
+
+하지만 스벨트의 개발 속도는 이보다 더 빠르다.
+
+컴파일을 통해 생성된 코드는 리액트보다 짧고 읽기도 쉽다. 더 적은 수의 코드로 비슷한 결과를 얻어 낼 수 있으며, 이는 유지보수와 디버깅이 더 쉬워진다는 것을 의미한다.
+
+#### 8\. 스벨트가 더 배우기 쉽다.
+
+리액트와 스벨트 둘 다 HTML, CSS, JS에 대한 지식이 필요하다.
+
+그러나 리액트에서는 JS에 대한 XML과 유사한 **JSX**를 배워야하지만, 스벨트는 더 쉬운 구문을 사용해 이해하기 쉬운 **자체 템플릿 언어**를 가지고 있다.
+
+## 스벨트의 단점
+
+#### 1\. 커뮤니티 규모가 작다.
+
+리액트는 많은 사용과 큰 인기로 커뮤니티 규모도 크고 많은 무료 강좌와 가이드 등을 쉽게 구할 수 있고, 개발자 도구(React Revdloper, Redux DevTools 등) 생산성 향상에 도움을 주는 도구들이 많이있다.
+
+그러나 스벨트는 리액트 규모만큼의 커뮤니티와 기술 지원을 기대하기 어렵다.
+
+특히 **플러그인, 통합, IDE에 대한 부족한 지원**이 가장 큰 장애물이고, 문제가 발생하면 사용자에게 도움을 주지 못할 수도 있다.
+
+#### 2\. 스벨트는 기업이 지원하지 않는다.
+
+리액트는 페이스북이 지원하고 있고, 페이스북에서 직접 사용할 목적으로 만들고 관리를 하고 있다.
+
+또 페이스북은 리액트의 지속적인 업데이트와 유지, 발전을 하기위한 자금을 가지고 있다. 이는 리액트에 미래에 대해 크게 걱정할 필요가 없다는 것을 의미한다.
+
+하지만 스벨트는 미래가 명확하지 않다. 작은 커뮤니티에서 유지 관리를 하고 있지만, 그들의 열정이 얼마나 오래갈지는 아무도 알 수 없다.
+
+또 스벨트에서 영감을 받은 또 다른 언어가 등장해 이 자리를 대체 할 수도 있다.
+
+#### 3\. 스벨트는 대규모 웹에 거의 사용되지 않는다.
+
+스벨트는 최근에서야 대기업 애플리케이션에 규모를 지원하도록 성장했다. 이는 스벨트의 사용 사례가 많지 않다는걸 의미한다.
+
+## 결론
+
+스벨트는 많은 것을 제공한다.
+
+크기, 효율적은 코드, 빠른 성능으로 리액트, 뷰 또는 앵귤러에 강한 경쟁자로 보일 수 있다.
+
+하지만 스벨트는 아직 갈 길이 멀다. 지금까지는 인터넷 연결이 낮거나, 블로그, 포트폴리오 등 단순히 개인 웹사이트를 만드는 단일 페이지 애플리케이션을 구축하는데 사용하는 것이 좋다.
+
+또 큰 회사들의 기술 스택을 스벨트로 교체하기에는 많은 시간이 필요할 것이며 스벨트의 개발자들의 수요 또한 거의 없다.
+26:T1085,
+# 렌더링 최적화
+
+### 1\. 컴포넌트를 맵핑할때는 key값으로 Index를 사용하지 말자
+
+리액트에서 컴포넌트를 맵핑할 때에는 고유 Key값을 부여해야한다.
+
+지금까지는 거의 Index를 고유한 Key값으로 사용했는데, 안좋은 습관인걸 알게됐다.
+
+배열 중간에 어떤 요소가 삽입되게 된다면, 그 이후의 요소들은 전부 Index가 변경되기 때문에 Key값도 변경될 뿐만 아니라 리마운트가 실행된다.
+
+또 이렇게 자주 Key값이 변경되게 된다면 서로 꼬이게 되는 버그도 발생할 수 있다.
+
+하지만 무조건 사용하면 안되는 것은 아니다.
+
+-   추가, 수정, 삭제 없이 단순히 렌더링만 하는 경우
+-   unique한 값이 없을 경우
+-   정렬이나 필터 요소가 없는 경우
+
+### 2\. state는 어디에 선언해야 될까
+
+리액트는 특정 state나 Props가 변경되게 되면 선언된 컴포넌트에서 그 하위 컴포넌트들 까지 모두다 리렌더링이 된다.
+
+그렇기 때문에 state를 어디에 선언할지 잘 설계만 하더라도 불필요한 리렌더링을 막을 수 있다.
+
+또 객체 타입의 state는 최대한 쪼개어서 선언해 사용하는게 좋다.
+
+객체가 크고 복잡한 경우에 그 중 일부만 사용하더라도 관련된 모든 컴포넌트가 리렌더링 될것이다.
+
+### 3\. useState의 함수형 업데이트
+
+setState를 사용할때 새로운 상태를 파라미터로 넣어주는 대신에, 상태 업데이트를 어떻게 할지 정의해 주는 업데이트 함수를 넣을 수 있다.
+
+이렇게 하면 useCallback을 사용할 때 두 번째 파라미터로 넣는 배열에 값을 넣어주지 않아도 된다.
+
+```javascript
+// 기존
+  const onIncrease = useCallback(() => {
+    setNumber(number + 1);
+  }, [number]);
+
+
+// 함수형 업데이트
+  const onIncrease = useCallback(() => {
+    setNumber((number) => number + 1);
+  }, []);
+```
+
+### 4.Input Onchange 최적화
+
+보통 Input 태그에 onChange를 사용해 글을 입력하면 타이핑을 할 때마다 컴포넌트가 랜더링이 된다.
+
+이때 useMemo를 사용해주면 렌더링을 막을 수 있다.
+
+```javascript
+import React, { useState } from "react";
+
+function InputSample() {
+  const [text, setText] = useState("");
+  const [count, setCount] = useState("");
+
+  const onChange = (e) => {
+    setText(e.target.value);
+  };
+
+  const onCount = () => {
+    console.log("카운트..");
+    return count;
+  };
+
+  const outCount = onCount();
+
+  return (
+    <div>
+      <input onChange={onChange} value={text} />
+
+      <div>
+        <b>값: {text}</b>
+        <b>{outCount}</b>
+      </div>
+    </div>
+  );
+}
+
+export default InputSample;
+```
+
+
+```javascript
+{...}
+  const onChange = (e) => {
+    setText(e.target.value);
+  };
+
+  const onCount = () => {
+    console.log("카운트..");
+    return count;
+  };
+
+  const outCount = useMemo(() => onCount(), [count]);
+
+  return (
+{...}
+)
+```
+
+
+### 5\. memo, useMemo, useCallback
+
+#### \- memo
+
+React.memo는 Hook이 아니기 때문에 클래스형에서도 사용할 수 있다.
+
+memo를 사용해 컴포넌트의 Props가 바뀌지 않았다면, 리렌더링하지 않도록 설정해 성능을 최적화 할 수 있다.
+
+```javascript
+import React, { memo } from "react";
+
+function InputSample({ user }) {
+  console.log("Text component render");
+  return (
+    <div>
+      <b>{user?.id}</b>
+      <b>{user?.name}</b>
+      <b>{user?.age}</b>
+    </div>
+  );
+}
+
+export default memo(InputSample);
+```
+
+#### \- useMemo, useCallback
+
+위에서 사용한 onCount의 함수가 간단한게 아니라 크고 복잡해 계산하는데 오래 걸리는 함수라고 가정한다면, 위 컴포넌트는 리렌더링 될 때마다 큰 계산을 계속 할 것이다.
+
+useMemo \[\] 디펜던시에 데이터가 변할 때마다 함수를 실행할 수 있도록 count를 넣어주면 위 count가 변할 때마다 위 함수를 실행하게 된다.
+
+useCallback도 비슷한 방식으로 작동 된다.
+
+useMemo는 리턴되는 값을 memoize 시키는 반면에, useCallback은 함수 선언을 memoize 한다.
+
+```javascript
+  const addUser = useCallback(() => {
+    {...}
+  }, [users]);
+```
+27:T1f82,
+[리액트 문서](https://beta.reactjs.org/)를 정독하며 정리한 글
+영어문서라 조금 힘들었다...
+
+## 목업으로 시작
+
+다음과 같은 데이터를 받아오는 JSON API가 있다고 가정해보자.
+
+```json
+[
+  { "category": "Fruits", "price": "$1", "stocked": true, "name": "Apple" },
+  { "category": "Fruits", "price": "$1", "stocked": true, "name": "Dragonfruit" },
+  { "category": "Fruits", "price": "$2", "stocked": false, "name": "Passionfruit" },
+  { "category": "Vegetables", "price": "$2", "stocked": true, "name": "Spinach" },
+  { "category": "Vegetables", "price": "$4", "stocked": false, "name": "Pumpkin" },
+  { "category": "Vegetables", "price": "$1", "stocked": true, "name": "Peas" }
+]
+```
+
+-   목업
+<img src="https://beta.reactjs.org/images/docs/s_thinking-in-react_ui.png" alt='mock' />
+
+### 1, UI를 컴포넌트로 나누기
+<img src="https://beta.reactjs.org/images/docs/s_thinking-in-react_ui_outline.png" alt="ui" />
+
+1.  FilterableProductTable (회색)은 전체 앱을 포함합니다.
+2.  SearchBar (파란색)은 사용자 입력을 받습니다.
+3.  ProductTable (라벤더)는 사용자 입력에 따라 목록을 표시하고 필터링합니다.
+4.  ProductCategoryRow (녹색)은 각 범주에 대한 제목을 표시합니다.
+5.  ProductRow (노란색)은 각 제품에 대한 행을 표시합니다.
+
+이를 계층별로 나누면
+
+-   FilterableProductTable
+-   SearchBar
+-   ProductTable
+-   ProductCategoryRow
+-   ProductRow
+
+위와같이 구성된다.
+
+
+
+### 2\. React 정적 빌드
+
+이제 위와같은 계층구조를 만들고 앱을 구현할 차례이다.
+일반적으로 정적페이지를 만들고 상호작용되는 기능들을 추가하는게 더 쉬울 수 있다.
+또 보통은 FilterableProductTable(가장 상위) 부터 컴포넌트에서 하향식으로 작업하는게 쉽지만, 큰 프로젝트에서는 반대로 ProductRow 부터 상향식으로 작업하는게 쉬울 수 있다.
+
+```javascript
+function ProductCategoryRow({ category }) {
+  return (
+    <tr>
+      <th colSpan="2">
+        {category}
+      </th>
+    </tr>
+  );
+}
+```
+
+```javascript
+function ProductRow({ product }) {
+  const name = product.stocked ? product.name :
+    <span style={{ color: 'red' }}>
+      {product.name}
+    </span>;
+
+  return (
+    <tr>
+      <td>{name}</td>
+      <td>{product.price}</td>
+    </tr>
+  );
+}
+```
+
+```javascript
+function ProductTable({ products }) {
+  const rows = [];
+  let lastCategory = null;
+
+  products.forEach((product) => {
+    if (product.category !== lastCategory) {
+      rows.push(
+        <ProductCategoryRow
+          category={product.category}
+          key={product.category} />
+      );
+    }
+    rows.push(
+      <ProductRow
+        product={product}
+        key={product.name} />
+    );
+    lastCategory = product.category;
+  });
+
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>{rows}</tbody>
+    </table>
+  );
+}
+```
+
+```javascript
+function SearchBar() {
+  return (
+    <form>
+      <input type="text" placeholder="Search..." />
+      <label>
+        <input type="checkbox" />
+        {' '}
+        Only show products in stock
+      </label>
+    </form>
+  );
+}
+```
+
+```javascript
+function FilterableProductTable({ products }) {
+  return (
+    <div>
+      <SearchBar />
+      <ProductTable products={products} />
+    </div>
+  );
+}
+```
+
+```javascript
+const PRODUCTS = [
+  {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
+  {category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit"},
+  {category: "Fruits", price: "$2", stocked: false, name: "Passionfruit"},
+  {category: "Vegetables", price: "$2", stocked: true, name: "Spinach"},
+  {category: "Vegetables", price: "$4", stocked: false, name: "Pumpkin"},
+  {category: "Vegetables", price: "$1", stocked: true, name: "Peas"}
+];
+```
+
+```javascript
+export default function App() {
+  return <FilterableProductTable products={PRODUCTS} />;
+}
+```
+
+
+
+
+### 3\. 최소화되고 완전한 state 찾기
+
+state를 구조화 하는데 가장 중요한 원칙은 DRY(Don't repeat yourself) 중복배제 이다.
+이제 위 애플리케이션의 모든 데이터를 쪼개서 생각해 보자.
+제품의 원래 목록
+사용자가 입력한 검색 input
+체크박스의 값
+필터링된 제품 목록
+Q. 다음 중 상태는 무엇인가?
+시간이 지나도 변하지 않는다면 state가 아니다.
+부모를 통해 props로 전달되면 state가 아니다.
+기존 컴포넌트의 props나 state기반으로 계산되면 state가 아니다. (이 부분은 해석이 조금 이해되지 않는다.)
+다시 살펴 보자.
+제품의 원래 목록은 props로 전달되므로 state가 아니다.
+검색 input는 시간이 지남에 따라 변경되고 아무 것도 계산할 수 없기 때문에 상태로 보인다.
+체크박스의 값은 시간이 지남에 따라 변경되고 아무 것도 계산할 수 없기 때문에 상태로 보인다.
+필터링된 제품 목록은 원래 제품 목록을 가져와서 검색 input과 체크박스의 값에 따라 필터링하여 계산할 수 있기 때문에 상태가 아니다.
+
+
+
+
+### 4\. state가 어디에 있어야 하는지 확인
+
+React는 단방향 데이터 흐름을 사용하여 상위 컴포넌트에서 하위 컴포넌트로 컴포넌트 계층 구조를 따라 데이터를 전달한다.
+위에서 아래로!
+
+-   애플리케이션의 각 state에 대해:
+
+1.  state를 기반으로 무언가를 렌더링 하는 모든 컴포넌트를 확인한다.
+2.  가장 가까운 부모 컴포넌트를 찾는다.
+
+-   state가 어디에 있어야 하는지 결정:
+
+1.  state를 바로 위 부모 컴포넌트에 놓을 수 있다.
+2.  또한 state를 공통된 부모 컴포넌트의 부모 컴포넌트에 놓을 수 있다.
+3.  state를 놓을 곳을 찾을 수 없으면 state를 유지하기 위한 새 컴포넌트를 만들고 최상위 컴포넌트 어딘가에 추가한다.
+4.  이전 단계에서 이 애플리케이션에서 검색 기능과 체크박스의 두 가지 상태를 찾았고, 이 예시 에서는 항상 함께 나타나므로 단일 상태로 생각하는 것이 더 쉽다.
+
+-   state를 사용하는 컴포넌트 찾기:
+
+1.  ProductTable의 state(검색 및 체크박스 값)를 기반으로 제품 목록을 필터링해야 한다.
+2.  SearchBar의 state(검색 및 체크박스 값)를 표시해야 한다.
+
+-   공통되는 상위 컴포넌트 찾기: 두 컴포넌트가 공유하는 첫 번째 부모 컴포넌트는 FilterableProductTable.(두 컴포넌트의 상위 부모 컴포넌트)
+-   state가 있는 위치 결정 : 검색 및 체크박스의 state 값을 FilterableProductTable(두 컴포넌트의 상위 부모 컴포넌트)에서 유지해야한다.
+-   따라서 state는 FilterableProductTable(두 컴포넌트의 상위 부모 컴포넌트)에 있어야 한다.
+
+```javascript
+function FilterableProductTable({ products }) {
+  const [filterText, setFilterText] = useState('');
+  const [inStockOnly, setInStockOnly] = useState(false);
+```
+
+그런 다음 props로 내려준다
+
+```javascript
+<div>
+  <SearchBar
+    filterText={filterText}
+    inStockOnly={inStockOnly} />
+  <ProductTable
+    products={products}
+    filterText={filterText}
+    inStockOnly={inStockOnly} />
+</div>
+```
+
+
+### 5\. 반대방향의 데이터 흐름 추가하기
+
+마지막으로는 SearchBar, ProductTable에서 입력받은 state를 FilterableProductTable로 다시 전달해 줘야한다.
+
+```javascript
+function FilterableProductTable({ products }) {
+  const [filterText, setFilterText] = useState('');
+  const [inStockOnly, setInStockOnly] = useState(false);
+
+  return (
+    <div>
+      <SearchBar
+        filterText={filterText}
+        inStockOnly={inStockOnly}
+        onFilterTextChange={setFilterText}
+        onInStockOnlyChange={setInStockOnly} />
+```
+
+```javascript
+// SearchBar
+
+<input
+  type="text"
+  value={filterText}
+  placeholder="Search..."
+  onChange={(e) => onFilterTextChange(e.target.value)} />
+```
+
+
+28:T1c8d,
+## React Hook
+
+React로 개발할 땐 클래스형 컴포넌트 보다 React 16.8 부터 도입된 Hook 기반 함수형 컴포넌트를 더 선호하여 개발하는 것 같다.
+
+기존 클래스형 컴포넌트는 여러 단계의 상속과 복잡성, 오류 등이 많았지만 Hook이 도입되면서 클래스형 컴포넌트가 가지고 있는 기능을 모두 사용할 수 있음은 물론이고 복잡성과 재사용성의 단점들까지도 해결됐다.
+
+---
+
+## 클로저(Closure)
+
+Hook의 핵심은 JS의 클로저이다.
+클로저는..봐도봐도 잘 이해가 가지 않는다ㅠㅠ
+
+`클로저 = 함수 + 함수를 둘러싼 환경`
+이라고 말할 수 있는데, 자바스크립트는 함수 안에서도 함수를 선언할 수 있다.
+먼저 선언된 함수를 외부함수, 이후에 선언된 함수를 내부함수라 한다면 기본적으로 내부함수는 외부함수의 요소에 접근이 가능하다.
+즉 외부함수의 변수에 내부함수의 변수가 접근 할 수 있는 자바스크립트의 메커니즘이다.
+
+```javascript
+function outerFn() {
+  let outerVar = 'outer'
+  console.log(outerVar)
+
+  //클로저 함수
+  function innerFn() {
+    let innerVar = 'inner'
+    console.log(innerVar)
+  }
+  //클로저 함수 안에서는
+  //지역변수(innerVar)
+  //외부함수의 변수(outerVar)
+  //전역변수(globalVar)
+  //접근이 모두 가능하다.
+  return innerFn
+}
+let globalVar = 'global'
+let innerFn = outerFn()
+innerFn()
+```
+
+---
+
+## useState
+
+```javascript
+function useState(initVal) {
+  let _val = initVal
+  const state = _val
+  const setState = newVal => {
+    _val = newVal
+  }
+  return [state, setState]
+}
+const [count, setCount] = useState(1)
+console.log(count) // 1
+setCount(2)
+console.log(count) // 1 (?)
+```
+
+위 함수에서 `count`는 한번 가져오고 끝난 값이기 때문에 즉각적으로 바뀌지 않는다.
+만약 `const state = _val` 부분을 함수로 바꾸고, 값을 쓰는게 아닌 호출해주는 식으로 바꾼다면 호출할 때마다 값을 가져오기 때문에 `setCount`가 반영된 값을 가져올 수 있다.
+
+```javascript
+// useState 안에서
+// ...
+const state = () => _val
+// ...
+const [count, setCount] = useState(1)
+console.log(count()) // 1
+setCount(2)
+console.log(count()) // 2
+```
+
+`state`는 상단에 정의된 `_val`를 반환하고, `setState`는 전달 된 매개변수 `newVal`를 지역 변수로 설정한다.
+
+---
+
+### 함수형 컴포넌트에서 사용하기
+
+```javascript
+const React = (function() {
+  function useState(initVal) {
+    let _val = initVal
+    const state = _val
+    const setState = newVal => {
+      _val = newVal
+    }
+    return [state, setState]
+  }
+  function render(Component) {
+    const C = Component()
+    C.render()
+    return C
+  }
+  return { useState, render }
+})()
+function Component() {
+  const [count, setCount] = React.useState(1)
+  return {
+    render: () => console.log(count),
+    click: () => setCount(count + 1),
+  }
+}
+// 아직까진 중간 과정이므로 제대로 동작하지 않는다.
+var App = React.render(Component)
+App.click()
+var App = React.render(Component)
+```
+
+모듈패턴을 이용해 `React`라는 네임스페이스에 `useState`를 집어넣는다.
+그리고 DOM을 사용하진 않지만 가상의 컴포넌트를 만들어 `useState` 훅을 가져다 쓰는 방식이다.
+
+여기서 `count`가 제대로 동작하게 만들기 위해 `_val`로 쓰고 있던 변수를 `React` 내부로 끌어올리면 랜더링 이후 클릭해도 작동한다.
+
+```javascript
+const React = (function() {
+  let _val
+  function useState(initVal) {
+    const state = _val || initVal
+    // ...
+  }
+  // ...
+})()
+var App = React.render(Component) // 1
+App.click()
+var App = React.render(Component) // 2
+App.click()
+var App = React.render(Component) // 3
+App.click()
+var App = React.render(Component) // 4
+```
+
+---
+
+### 여러 개의 훅
+
+하지만 실제로 하나의 컴포넌트에서 여러 상태를 관리하기 위해 여러 훅을 사용하는데. `_val` 하나에 의존한 지금 상태로 `useState`를 두번 호출하게되면
+
+```javascript
+function Component() {
+  const [count, setCount] = React.useState(1)
+  const [text, setText] = React.useState('apple')
+  return {
+    render: () => console.log({ count, text }),
+    click: () => setCount(count + 1),
+    type: word => setText(word),
+  }
+}
+var App = React.render(Component) // {count: 1, text: 'apple'}
+App.click()
+var App = React.render(Component) // {count: 2, text: 2}
+App.type('banana')
+var App = React.render(Component) // {count: 'banana', text: 'banana'}
+```
+
+중간에 값이 덮어씌워 진다. 이를 관리 하려면 각 값별로 배열에 담아 다루면 된다.
+
+```javascript
+const React = (function() {
+  let hooks = []
+  let idx = 0
+  function useState(initVal) {
+    const state = hooks[idx] || initVal
+    const _idx = idx // 이 훅이 사용해야 하는 인덱스를 가둬둔다.
+    const setState = newVal => {
+      hooks[_idx] = newVal
+    }
+    idx++ // 다음 훅은 다른 인덱스를 사용하도록 한다.
+    return [state, setState]
+  }
+  function render(Component) {
+    idx = 0 // 랜더링 시 훅의 인덱스를 초기화한다.
+    const C = Component()
+    C.render()
+    return C
+  }
+  return { useState, render }
+})()
+```
+
+여기까지보면 왜 Hook에 기본 규칙이 있는지 알 수 있다.
+
+1.  최상위(Top Level)에서만 Hook을 호출
+2.  오직 React 함수 내에서 Hook을 호출
+
+---
+
+## useEffect
+
+`useEffect`를 사용하면 컴포넌트를 화면에 그린 후 실행될 함수를 정의할 수 있다.
+또 매번 `render`했을 때 최초 한 번만 실행되며 매 업데이트마다 실행된다.
+
+```javascript
+function Component() {
+  const [count, setCount] = React.useState(1)
+  const [text, setText] = React.useState('apple')
+  // 랜더링 시 최초에 한 번만 실행된다.
+  // 배열 안에 관찰하고자 하는 상태를 전달하면 그 상태에 반응하여 콜백이 실행된다.
+  React.useEffect(() => {
+    console.log('side effect')
+  }, [])
+  // ...
+}
+```
+
+```javascript
+function useEffect(cb, depArray) {
+  const oldDeps = hooks[idx] // 이미 저장되어있던 의존 값 배열이 있는지 본다.
+  let hasChanged = true
+  if (oldDeps) {
+    // 의존 값 배열의 값 중에서 차이가 발생했는지 확인한다.
+    // 실제로 리액트 구현체도 `Object.is` 로 값을 비교한다. 정확한 동작은 MDN 참고.
+    hasChanged = depArray.some((dep, i) => !Object.is(dep, oldDeps[i]))
+  }
+  // 값이 바뀌었으니 콜백을 실행한다.
+  if (hasChanged) {
+    cb()
+  }
+  // useEffect도 훅의 일부분이다. hooks 배열에 넣어서 관리해준다.
+  hooks[idx] = depArray
+  idx++
+}
+```
+
+위에 선언된 `React` 모듈 안에 `useEffect`함수를 정의한다.
+두번째 인자로 넣어둔 의존배열(dependency array)을 관찰하며 값이 변하면 콜백을 실행하고, 그렇지 않으면 실행하지 않는다.
+
+---
+
+## 참조
+
+위 글은 아래 두 블로그를 정독하며 정리하였습니다.
+
+[Deep dive: How do React hooks really work?](https://www.netlify.com/blog/2019/03/11/deep-dive-how-do-react-hooks-really-work/)
+
+[Getting Closure on React Hooks](https://rinae.dev/posts/getting-closure-on-react-hooks-summary)
+f:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L10",null,{"posts":{"posts":[{"content":"$11","data":{"title":"jwt 토큰 decode 하기","date":"$D2023-08-31T00:00:00.000Z","description":"jwt 토큰 decode 함수","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"jwt-decode"},{"content":"$12","data":{"title":"Audio객체를 이용한 음악 재생","date":"$D2023-05-27T00:00:00.000Z","description":"Audio객체를 사용한 기업 과제 구현","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"audio"},{"content":"$13","data":{"title":"디바운싱과 쓰로틀링","date":"$D2023-05-13T00:00:00.000Z","description":"디바운싱과 쓰로틀링의 차이를 구분하고 hook으로 구현","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"debouce-throttle"},{"content":"$14","data":{"title":"GraphQl 써보기(1)","date":"$D2023-04-29T00:00:00.000Z","description":"GraphQl, Apollo Client를 사용","category":"javaScript","titleImage":"/assets/postIcon/graphql.svg"},"slug":"graphql-1"},{"content":"$15","data":{"title":"Next.js middleware와 getServerSideProps","date":"$D2023-02-22T00:00:00.000Z","description":"세션방식의 로그인 인증, middleware와 getServerSideProps를 사용해 구현한 기록","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-middleware"},{"content":"$16","data":{"title":"Nextjs에서 tailwind 써보기","date":"$D2023-02-18T00:00:00.000Z","description":"공식문서 보면서 tailwind 써보기","category":"javaScript","titleImage":"/assets/postIcon/tailwind-css-icon.png"},"slug":"tailwindcss"},{"content":"$17","data":{"title":"스벨트킷으로 블로그 만들어보기","date":"$D2023-01-30T00:00:00.000Z","description":"스벨트킷으로 블로그 만든 과정을 정리","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-blog"},{"content":"\n### Provider 테스팅 해보기\n\n```js\nrender(<Options optionType=\"scoops\" />, {wrapper: OrderDetailsProvider});\n```\n\n테스트 wrapper에 Provider로 감싸주면 된다.\n\n여기서는 redux나 recoil 등 다른 라이브러리도 가능\n\n---\n\n전역적으로도 사용이 가능\n\n```js\nimport {render} from '@testing-library/react';\nimport {OrderDetailsProvider} from '../contexts/OrderDetails';\n\nconst renderWithContext = (ui, options) => render(ui, {wrapper: OrderDetailsProvider, ...options});\n\nexport * from '@testing-library/react';\n\nexport {renderWithContext as render};\n```\n","data":{"title":"리액트 테스팅(4)","date":"$D2023-01-02T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-4"},{"content":"$18","data":{"title":"리액트 조건부 렌더링에 대한 생각","date":"$D2022-12-29T00:00:00.000Z","description":"해외 블로그를 보며 정리한 조건부 렌더링에 대한 생각","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"conditional-rendering"},{"content":"$19","data":{"title":"useCallback, useMemo 무조건 좋은가?","date":"$D2022-12-28T00:00:00.000Z","description":"useCallback과 useMemo에 대한 생각 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"usecallback-and-usememo"},{"content":"$1a","data":{"title":"리액트 테스팅(3)","date":"$D2022-12-26T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-3"},{"content":"$1b","data":{"title":"리액트 테스팅(2)","date":"$D2022-12-14T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-2"},{"content":"$1c","data":{"title":"리액트 테스팅(1)","date":"$D2022-12-10T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-1"},{"content":"$1d","data":{"title":"Storybook 써보기","date":"$D2022-10-11T00:00:00.000Z","description":"스터디 하면서 처음 써본 Storybook","category":"javaScript","titleImage":"/assets/postIcon/storybook.png"},"slug":"storybook"},{"content":"$1e","data":{"title":"Next.js styled-component 적용 문제에 대해(_document.tsx)","date":"$D2022-08-22T00:00:00.000Z","description":"next.js와 styled-component 사용시 발생한 에러","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-styled-component"},{"content":"$1f","data":{"title":"IntersectionObserver로 데이터 요청해보기","date":"$D2022-05-04T00:00:00.000Z","description":"IntersectionObserver를 활용해 스크롤 위치에서 데이터 불러오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"intersectionObserver"},{"content":"\n\n####\n**bundle-analyzer**는 빌드된 파일을 트리맵 형식으로 종류와 크기를 보여준다.\n\nnext에서 제공하는 bundle-analyzer\n\nnext.config.js\n\n```javascript\nconst withBundleAnalyzer = require('@next/bundle-analyzer')({\n  enabled: process.env.ANALYZE === 'true'\n})\n\nmodule.exports = withBundleAnalyzer({\n  compress: true,\n  webpack(config, {webpack}) {\n    const prod = process.env.NODE_ENV === 'production'\n    const plugins = [...config.plugins]\n    return {\n      ...config,\n      mode: prod ? 'production' : 'development',\n      devtool: prod ? 'hidden-source-map' : 'eval',\n      plugins\n    }\n  }\n})\n```\n\npackage.json / script\n\n```\n\"build\": \"ANALYZE=true next build\",\n```\n\n<img src=\"/assets/blog/javaScript/bundle-analyzer.png\" width=\"100%\" alt=\"bundle-analyzer\"/>\n\n\n이런식으로 html이 실행된다.\n\n서버와 클라이언트 두개의 창이 실행되는데 클라이언트 부분인 사용자에게 직접 보여질 부분이라, 서버 부분보다는 클라이언트 부분을 줄이는게 더 효과적이라고 한다.\n\n아이콘으로 쓰일 이미지를 두개쓰기싫어 svg를 컴포넌트화시켜 props로 색상을 변경시키게 했는데, 용량이 꽤 크다고 나왔다 거슬린다 🤔\n\n줄일수있는 방법을 찾아봐야겠다.\n\n또 나중에 최종 배포때는 번들된 JS 파일을 gz로 압축시켜 브라우저 쪽으로 보내주는 방법도 있다고 하는데, 나중에 시도해봐야겠다.\n","data":{"title":"next/bundle-analyzer","date":"$D2022-02-22T00:00:00.000Z","description":"next/bundle-analyzer로 번들 크기 확인하기","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"next-bundle-analyzer"},{"content":"$20","data":{"title":"리액트 ref 와 forwardRef (with. react-hook-form)","date":"$D2022-02-09T00:00:00.000Z","description":"react-hook-form 라이브러리와 ref의 동작","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"ref-forwardRef"},{"content":"$21","data":{"title":"Speechsynthesis & Google TTS","date":"$D2022-01-22T00:00:00.000Z","description":"프로젝트 진행하며 경험해본 Speechsynthesis & Google TTS","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"Speechsynthesis"},{"content":"$22","data":{"title":"웹성능 최적화(3)","date":"$D2022-01-04T00:00:00.000Z","description":"웹성능 최적화3","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"web-optimization-3"},{"content":"$23","data":{"title":"웹성능 최적화(2)","date":"$D2022-01-03T00:00:00.000Z","description":"웹성능 최적화2","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"web-optimization-2"},{"content":"$24","data":{"title":"웹성능 최적화(1)","date":"$D2022-01-01T00:00:00.000Z","description":"웹성능 최적화1","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"web-optimization"},{"content":"$25","data":{"title":"스벨트와 리액트","date":"$D2021-12-12T00:00:00.000Z","description":"스벨트와 리액트에 대해 정리한 글","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-react"},{"content":"$26","data":{"title":"React 처럼 생각하기(2)","date":"$D2021-12-12T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"thinking-in-react-2"},{"content":"$27","data":{"title":"React 처럼 생각하기","date":"$D2021-11-20T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"thinking-in-react"},{"content":"$28","data":{"title":"React Hook의 동작","date":"$D2021-11-07T00:00:00.000Z","description":"React Hook의 동작에 대해","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"react-hook"}],"total":26},"page":"$undefined","category":"javaScript"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$La",null,{"className":"font-[600] text-black","href":"/blog/javaScript","children":"javaScript (26)"}]}],["$","li","study",{"children":["$","$La",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$La",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}]
 e:null
