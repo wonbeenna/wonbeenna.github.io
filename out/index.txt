@@ -3,15 +3,1232 @@
 3:HL["/_next/static/media/7d8c9b0ca4a64a5a-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 4:HL["/_next/static/media/8db47a8bf03b7d2f-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 5:HL["/_next/static/media/934c4b7cb736f2a3-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-6:HL["/_next/static/css/0da05791a264d82c.css","style"]
-0:["KS6uiOAnb2wwZz1JWFUP7",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L7",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0da05791a264d82c.css","precedence":"next"}]],"$L8"]]]]
-9:I{"id":4244,"chunks":["964:static/chunks/964-25e165a2fc7e6293.js","724:static/chunks/724-31617d2d81601bd9.js","185:static/chunks/app/layout-5fa6eb5e3953020f.js"],"name":"","async":false}
-a:I{"id":4724,"chunks":["964:static/chunks/964-25e165a2fc7e6293.js","724:static/chunks/724-31617d2d81601bd9.js","931:static/chunks/app/page-a5dfae21cae94322.js"],"name":"","async":false}
-b:I{"id":6964,"chunks":["964:static/chunks/964-25e165a2fc7e6293.js","724:static/chunks/724-31617d2d81601bd9.js","931:static/chunks/app/page-a5dfae21cae94322.js"],"name":"Image","async":false}
-c:I{"id":1443,"chunks":["272:static/chunks/webpack-7f8e37c778ddb15e.js","971:static/chunks/fd9d1056-aa1b7ad4013ab4d6.js","864:static/chunks/864-63b4fa4ac0454e1a.js"],"name":"","async":false}
-d:I{"id":8639,"chunks":["272:static/chunks/webpack-7f8e37c778ddb15e.js","971:static/chunks/fd9d1056-aa1b7ad4013ab4d6.js","864:static/chunks/864-63b4fa4ac0454e1a.js"],"name":"","async":false}
+6:HL["/_next/static/css/48ff91835f2990e0.css","style"]
+0:["UtB_47pk00buiXJN4EVWD",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L7",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/48ff91835f2990e0.css","precedence":"next"}]],"$L8"]]]]
+9:I{"id":4244,"chunks":["964:static/chunks/964-1c6e8b9c3261a3cb.js","724:static/chunks/724-95707ae80dbaeeaf.js","185:static/chunks/app/layout-e94d10c3aeefd22c.js"],"name":"","async":false}
+a:I{"id":4724,"chunks":["964:static/chunks/964-1c6e8b9c3261a3cb.js","724:static/chunks/724-95707ae80dbaeeaf.js","931:static/chunks/app/page-c75392689edfc123.js"],"name":"","async":false}
+b:I{"id":6964,"chunks":["964:static/chunks/964-1c6e8b9c3261a3cb.js","724:static/chunks/724-95707ae80dbaeeaf.js","185:static/chunks/app/layout-e94d10c3aeefd22c.js"],"name":"Image","async":false}
+c:I{"id":1443,"chunks":["272:static/chunks/webpack-891dab1a18c2720c.js","971:static/chunks/fd9d1056-23f6e37ad1d1612c.js","864:static/chunks/864-8d9b6481be2de97f.js"],"name":"","async":false}
+d:I{"id":8639,"chunks":["272:static/chunks/webpack-891dab1a18c2720c.js","971:static/chunks/fd9d1056-23f6e37ad1d1612c.js","864:static/chunks/864-8d9b6481be2de97f.js"],"name":"","async":false}
 7:[null,["$","html",null,{"lang":"ko","children":[null,["$","$L9",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L9",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_471caf","children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b-[1px] border-b-gray200 bg-white px-[24px] py-0","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$La",null,{"href":"/","children":["$","$Lb",null,{"src":"/assets/icons/been-logo.svg","width":60,"height":56,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$La",null,{"href":"/about","children":"About"}]}]]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$La",null,{"href":"https://github.com/wonbeenna","target":"_blank","rel":"noopener noreferrer","children":["$","$Lb",null,{"src":"/assets/icons/github.svg","width":30,"height":30,"alt":"github"}]}],["$","$La",null,{"href":"mailto:nwbnwb@naver.com","children":["$","$Lb",null,{"src":"/assets/icons/mail.svg","width":34,"height":34,"alt":"email"}]}]]}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$Lc",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$Ld",null,{}],"templateStyles":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"childProp":{"current":["$Le","$Lf",null],"segment":"__PAGE__"},"styles":[]}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]]}],null]
 8:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Been blog"}],["$","meta","2",{"name":"description","content":"Been dev-note"}],["$","meta","3",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","4",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","5",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","meta","6",{"property":"og:title","content":"Been blog"}],["$","meta","7",{"property":"og:description","content":"Been dev-note"}],["$","meta","8",{"property":"og:url","content":"https://wonbeenna.github.io"}],["$","meta","9",{"property":"og:site_name","content":"Been blog"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","meta","23",{"name":"next-size-adjust"}]]
-f:"$L10"
+10:I{"id":7066,"chunks":["964:static/chunks/964-1c6e8b9c3261a3cb.js","724:static/chunks/724-95707ae80dbaeeaf.js","931:static/chunks/app/page-c75392689edfc123.js"],"name":"","async":false}
+11:T6ae,
+JSON 웹 토큰(JWT)
+
+일반적으로 **헤더.페이로드.서명** 으로 구성되어 있다.
+
+1.헤더 - 어떤 알고리즘으로 암호화 할것인지
+
+2.데이터 - 전달하려는 정보, 사용자의 id, name 등
+
+3\. 서명 - 서버가 지정한 secret key로 암호화 시켜 토큰을 변조하기 어렵게 만듬
+
+이 세 부분을 Base64url로 인코딩해 
+
+```
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dnZWRJbkFzIjoiYWRtaW4iLCJpYXQiOjE0MjI3Nzk2Mzh9.gzSraSYS8EXBxLN_oWnFSRgCzcmJmMjLiuyu5CSpyHI
+```
+
+위와 같은 형태로 파싱해 사용한다.
+
+jwt 데이터 부분에서 정보를 가져와 사용할 수 있는데, decoding 해주어야 한다.
+
+```javascript
+export const decodeJwtResponse = (token: string) => {
+  let base64Url = token.split('.')[1]
+  let base64 = base64Url?.replace(/-/g, '+')?.replace(/_/g, '/')
+  let jsonPayload = decodeURIComponent(
+    atob(base64)
+      .split('')
+      .map(function (c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
+      })
+      .join('')
+  )
+
+  return JSON.parse(jsonPayload)
+  let base64Payload = token.split('.')[1]
+
+  let payload = Buffer.from(base64Payload, 'base64')
+  return JSON.parse(payload.toString())
+}
+```
+
+atob 함수는 node에서 더이상 지원하지 않아 아래로 수정
+
+```javascript
+export const decodeJwtResponse = (token: string) => {
+  let base64Payload = token.split('.')[1]
+
+  let payload = Buffer.from(base64Payload, 'base64')
+
+  return JSON.parse(payload.toString())
+}
+```
+
+token을 split해 1번째 데이터에 해당하는 부분을 가져온 다음
+
+node에서 지원하는 Buffer 객체를 사용해 바이너리로 변환
+
+base64로 인코딩한 후 JSON으로 파싱한다
+12:Tfb3,
+얼마전 기업과제를 진행했다. Audio 객체를 이용한 음악 재생이었다.
+
+https://developer.mozilla.org/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API
+
+## Audio 객체
+웹에서 음악을 재생하기 위해서는 new Audio 객체를 생성하거나, `<audio>` 태그를 사용해 Audio 객체를 가져올 수도 있다.
+
+Audio 객체는 음악을 재생하고, 일시정지하고, 음악의 길이를 구하는 등의 기능을 제공한다.
+
+Audio 객체는 다음과 같이 생성한다.
+
+```jsx
+let audio = new Audio(url);
+```
+
+```jsx
+<audio src={url} />;
+```
+
+과제를 제출하고 알게 되었는데, new Audio 객체를 사용하면 화면 밖에서도 audio를 다룰 수 있기때문에 `audio`태그를 사용할 필요가 없었다.
+
+둘중 하나만 사용해 Audio를 다룰 수 있는 객체를 가져오면 된다.
+
+```javascript
+let audio = document.querySelector('audio');
+audio.play();
+audio.pause();
+```
+
+과제에서는 new Audio를 사용해 구현 하였다.
+```jsx
+  useEffect(() => {
+    setAudio(new Audio(url));
+}, [url, setAudio]);
+```
+먼저 server에서 받아온 Url을 state에 담아 주었고
+
+```jsx
+  useEffect(() => {
+    if (audio && isPlaying) {
+        audio?.play();
+    }
+}, [audio, isPlaying]);
+```
+
+리스트에서 음악을 선택하면 `isPlaying`이 true가 되고, `audio`가 생성되면 `audio.play()`를 실행한다.
+
+재생과 일시정지도 추가가 되어야 했다.
+
+```jsx
+const handlePlayButton = () => {
+    if (audio?.paused) {
+        return audio.play();
+    }
+    return audio?.pause();
+}
+```
+음악이 정지중일땐 play, 음악이 재생중일땐 pause를 실행한다.
+
+---
+
+음악이 재샐중일때 progress bar도 구현이 필요했다.
+
+```jsx
+const [rangeValue, setRange] = useState<number>(0);
+const [currentTime, setCurrentTime] = useState<string>('00:00');
+const [duration, setDuration] = useState<string>('00:00');
+
+<progress
+    className="progress"
+    value={Math.floor(rangeValue)}
+    max="100"
+    aria-valuemin={0}
+    aria-valuemax={100}
+    aria-valuenow={Math.floor(rangeValue)}
+    onClick={handleChangeProgressRange}
+/>
+```
+
+`rangeValue`는 progress bar의 value값을 나타내고, `currentTime`는 현재 재생중인 시간을 나타낸다.
+
+`duration`는 음악의 전체 길이를 나타낸다.
+
+재생시간과 음악의 전체 길이가 `00:00`으로 표시되었어야했기 때문에 format함수를 만들었고, eventListener를 통해 재생시간과 음악의 전체 길이를 구했다.
+
+```js
+export const getMusicTimeFormat = (time = 0) => {
+  let minutes = Math.floor((time % 3600) / 60)
+    .toString()
+    .padStart(2, '0');
+  let seconds = Math.floor(time % 60)
+    .toString()
+    .padStart(2, '0');
+
+  return minutes + ':' + seconds;
+};
+```
+```jsx
+  useEffect(() => {
+    audio?.addEventListener('timeupdate', () => {
+        setDuration(getMusicTimeFormat(audio.duration || 0));
+        setCurrentTime(getMusicTimeFormat(audio.currentTime));
+        setRange((audio?.currentTime / audio?.duration || 0) * 100);
+    });
+}, [audio]);
+````
+
+`timeupdate`이벤트는 음악이 재생중일때마다 발생한다.
+
+```js
+  const handleChangeProgressRange = (e: React.MouseEvent<HTMLProgressElement>) => {
+    if (audio) {
+        let clickPosition = e.pageX - e.currentTarget.offsetLeft;
+        let clickedValue = (clickPosition * e.currentTarget.max) / e.currentTarget.offsetWidth;
+        audio.currentTime = (parseInt(String(clickedValue), 10) / 100) * audio.duration;
+        setRange(parseInt(String(clickedValue), 10));
+    }
+};
+```
+progressbar를 클릭했을 때는 해당 위치부터 audio를 재생해야했다.
+`clickPosition`은 progressbar를 클릭한 위치를 나타내고, `clickedValue`는 progressbar의 value값을 나타낸다.
+
+- e.pageX = 브라우저 상의 마우스 클릭 위치
+- e.currentTarget.offsetLeft = progressbar의 x축(왼쪽) 위치
+- e.currentTarget.max = progressbar의 최대값
+- e.currentTarget.offsetWidth = progressbar의 전체 너비
+
+
+13:Te25,
+### 디바운싱과 쓰로틀링
+
+
+- 디바운싱: 연속으로 호출되는 함수들 중 가장 마지막 함수(또는 제일 처음)만 호출하도록 하는 것
+- 쓰로틀링: 함수가 연속적으로 실행되는 경우 현재 실행되고 있는 함수가 없는 경우에만 함수를 실행함
+
+예를들어 검색을 요구하는 API에 "test"를 검색한다고 가정한 경우, 일반적인 경우에는 t, e, s, t 각 글자를 입력할 때 마다 API가 호출이 된다.
+
+이런 경우 불필요한 요청이 서버에 부담을 줄 수가 있다.
+
+이 때 디바운싱을 사용하게 된다면, 가장 마지막인 글자가 입력되고, 하나의 단어가 완성되었을때 API에 요청을 할 수 있다.
+
+쓰로틀링인 경우에는 t를 입력했을 때 API요청이 발생하고, 이후 일정 시간동안은 아무 응답도 받지 않는다.
+정해진 시간이 모두 지나고난 뒤에 마지막으로 입력된 글자까지 요청이 가게 된다.
+즉 실행 횟수에 제한을 거는 것이다.
+
+### 디바운싱
+```tsx
+import { useEffect, useState } from 'react'
+
+function useDebounce<T>(value: T, delay?: number): T {
+  const [debouncedValue, setDebouncedValue] = useState<T>(value)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setDebouncedValue(value), delay || 500)
+
+    return () => {
+      clearTimeout(timer)
+    }
+  }, [value, delay])
+
+  return debouncedValue
+}
+
+export default useDebounce
+```
+```js
+import { ChangeEvent, useEffect, useState } from 'react'
+import { useDebounce } from 'usehooks-ts'
+
+export default function Component() {
+  const [value, setValue] = useState<string>('')
+  const debouncedValue = useDebounce<string>(value, 500)
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setValue(event.target.value)
+  }
+
+  // Fetch API (optional)
+  useEffect(() => {
+    // Do fetch here...
+    // Triggers when "debouncedValue" changes
+  }, [debouncedValue])
+
+  return (
+    <div>
+      <p>Value real-time: {value}</p>
+      <p>Debounced value: {debouncedValue}</p>
+
+      <input type="text" value={value} onChange={handleChange} />
+    </div>
+  )
+}
+```
+출처: [react-hook](https://usehooks-ts.com/react-hook/use-debounce)
+
+input feild에 값이 들어갈 때마다 onChange 이벤트가 트리거되고, hook으로 전달받은 value가 clearTimeout으로 초기화된 useEffect내부 setTimeout의 delay만큼 시간이 지난 후 debouncedValue로 return 된다.
+
+### 쓰로틀링
+```js
+import { useEffect, useRef, useState } from 'react';
+
+const useThrottle = (value, limit) => {
+    const [throttledValue, setThrottledValue] = useState(value);
+    const lastRan = useRef(Date.now());
+
+    useEffect(() => {
+        const handler = setTimeout(() => {
+            if (Date.now() - lastRan.current >= limit) {
+                setThrottledValue(value);
+                lastRan.current = Date.now();
+            }
+        }, limit - (Date.now() - lastRan.current));
+
+        return () => {
+            clearTimeout(handler);
+        };
+    }, [value, limit]);
+
+    return throttledValue;
+};
+
+export default useThrottle;
+```
+```js
+const [value, setValue] = useState('');
+{...}
+const throttleText = useThrottle(value, 1000);
+```
+hook이 실행되면 lastRan과 현재시간을 비교한다.
+
+만약 (Date.now() - lastRan.current) 즉, value가 입력된 시간이 limit보다 크다면 value를 throttledValue로 return하고, lastRan을 현재시간으로 초기화한다.
+
+만약 value가 입력된 시간이 limit보다 작다면 limit - value가 입력된 시간이 시간이 지난 후에 throttledValue로 return한다.
+
+
+
+
+14:Tc4f,
+## GraphQL 사용
+
+Apollo client를 사용합니다.
+
+Apollo Client는 GraphQL을 사용해 로컬 및 원격 데이터를 모두 관리할 수 있습니다. (상태 관리 라이브러리)
+
+---
+
+### React에 Apollo Client 연결
+```shell
+npm install @apollo/client graphql
+```
+
+index.ts 또는 App.ts 에서 작업을 진행합니다.
+```ts
+const client = new ApolloClient({
+  uri: "https://~/graphql",
+  cache: new InMemoryCache(),
+});
+```
+
+다음과 같이 ApolloClient를 초기화 하고 `uri`와 `cache` 인스턴스를 전달합니다.
+
+uri에 서버주소를 작성합니다. endpoint를 따로 지정하지 않았다면 `/graphql`이 됩니다.
+
+사내에서는 `proxy`를 사용하기 때문에 `endpoint`를
+```ts
+const client = new ApolloClient({
+  uri: '/api/graphql',
+  cache: new InMemoryCache()
+})
+```
+로 작성해주시면 됩니다.
+
+```ts
+function App() {
+  return (
+{...}
+        <ApolloProvider client={client}>
+            <DefaultRoutes />
+        </ApolloProvider>
+{...}
+  )
+}
+```
+react app에 전역으로 사용하기 위해서는 `ContextApi`를 사용하는 것 처럼 `ApolloProvider`로 앱을 감싸면 됩니다.
+
+---
+
+### 백엔드 데이터 읽기
+이제 `client`는 데이터를 가져올 준비가 되었습니다.
+
+<img src="/assets/blog/javaScript/graphql-2.png" width="49%" alt="post image"/>
+<img src="/assets/blog/javaScript/graphql-1.png" width="49%" alt="post image"/>
+
+`playground`에서 정의된 `schema`를 다운로드 받아 프로젝트 `root`에 위치시킵니다.
+
+```ts
+// const client = ...
+
+client
+  .query({
+    query: gql`
+      query {
+        getAdminOrderProducts {
+          data {
+            id
+            status
+          }
+        }
+      }
+    `
+  })
+  .then((response) => console.log(response))
+  .catch((error) => console.log(error))
+```
+
+간단하게 불러올 수 있는 방법입니다. playground에 정의된 query를 요청하면
+타입과 함께 요청한 쿼리들이 response에 담깁니다.
+
+<img src="/assets/blog/javaScript/graphql-3.png" width="49%" alt="post image"/>
+<img src="/assets/blog/javaScript/graphql-4.png" width="49%" alt="post image"/>
+
+필드별로 분리하여 요청할 수 있습니다.
+```ts
+import {gql, useQuery} from '@apollo/client'
+
+const ORDER_QUERY = gql`
+  query {
+    getAdminOrderProducts {
+      data {
+        id
+        status
+      }
+    }
+  }
+`
+
+  const {loading, error, data} = useQuery(ORDER_QUERY)
+```
+
+`variables`로 `arguments`를 지정할 수 있습니다.
+
+`useQuery`에 옵션 `variables`은 GraphQL 쿼리에 전달하려는 모든 매개변수를 포함하는 객체입니다.
+
+아래와 같이 매개변수를 지정할 수 있습니다.
+```ts
+const ORDER_QUERY = gql`
+  query getAdminOrderProducts($start: Int!, $perPage: Int!) {
+    getAdminOrderProducts(start: $start, perPage: $perPage) {
+      data {
+        id
+        status
+        product {
+          id
+        }
+        createdAt
+      }
+      total
+    }
+  }
+`
+
+  const {data, loading} = useQuery(ORDER_QUERY, {
+    variables: {
+      start: 0,
+      perPage: 20
+    }
+  })
+```
+
+지금까지는 백엔드의 데이터를 읽는 방법이었습니다.
+
+
+
+
+
+
+
+15:Tce4,
+대기열 → 캐싱 → DNS → 라우팅 → ARP → 초기연결 → 컨텐츠 다운로드 → 브라우저 렌더링
+
+이런 과정을 비캡슐화, 캡슐화 과정을 거침
+
+### 대기열
+
+### 캐싱
+
+- 공유프록시캐시
+- 브라우저 캐시
+
+요청된 값의 결과값을 저장하고 다시 요청하는 기술
+
+브라우저는 IP주소를 찾기 위해 캐시된 DNS 기록을 확인
+
+### DNS 조회
+
+- 브라우저가 IP 주소를 확인하는 단계
+- 도메인 이름과 IP주소를 매핑해주는 서버
+- `www.naver.com` ← 반대로 확인
+- root (.) → .com → naver.com → `www.naver.com`
+
+### 라우팅
+
+- IP주소를 찾아가는 과정
+- 홉 바이 홉 통신
+
+### ARP (**IP 주소를 물리적 네트워크 주소로 대응(bind)시키기 위해 사용되는 프로토콜)**
+
+- ARP를 통해 MAC주소를 찾아 MAC주소를 기반으로 통신
+- 논리적 주소 → 물리적 주소
+- 장치 ↔ 장치 (IP주소를 → MAC주소)
+- 실제 서버에 도달
+
+### 초기 연결
+
+### 콘텐츠 다운로드
+
+- 브라우저는 서버로부터 응답을 수신
+
+### 브라우저 렌더링
+
+- DOM 트리 구축
+- HTML, CSS가 각각 파서로 해석되다가 DOM트리를 구축한다.
+- html, body, div 등 tree형태로
+- 렌더트리와 렌더레이어 생성
+- CSSOM 트리가 생성되고 미리 만들어 놓은 DOM트리 내에 있는 노드와 함께 스타일이 생성
+- 렌더레이어 대상으로 Layout 설정
+- 렌더레이어 대상으로 칠하기 (paint 과정)
+- 레이어 합치기
+- 각각의 레이어들이 합쳐짐
+
+일반적인 모니터는 초당 60FPS, 브라우저도 초당 60FPS로 화면을 그리게 된다.
+
+여기서 브라우저가 60FPS 아래로 그리게 된다면 쟁크 현상이 발생함.
+
+<img src="https://wonbeenna.github.io/blog/javaScript/web-optimization6.png" width="100%" alt="bundle-analyzer"/>
+
+1. DOM + CSSOM
+
+<img src="https://wonbeenna.github.io/blog/javaScript/web-optimization7.png" width="100%" alt="bundle-analyzer"/>
+
+1. Render Tree
+
+<img src="https://wonbeenna.github.io/blog/javaScript/web-optimization8.png" width="100%" alt="bundle-analyzer"/>
+
+위 DOM과 CSSOM을 조합해 RenderTree를 만들어 낸다.
+
+1. Layout
+
+<img src="https://wonbeenna.github.io/blog/javaScript/web-optimization9.png" width="100%" alt="bundle-analyzer"/>
+
+위치나 크기를 계산해 화면에 레이아웃을 그린다.
+
+1. Paint
+
+이렇게 그려진 레이아웃위에 색을 채워넣음
+
+1. Composite
+
+<img src="https://wonbeenna.github.io/blog/javaScript/web-optimization10.png" width="100%" height="350" alt="bundle-analyzer"/>
+
+각 레이어들을 합성하는 과정
+
+이 전체의 과정을 Critical Rendering Path, Pixel Pipeline 이라고 부른다.
+
+이 완성된 상태에서 변화가 생긴다면 처음으로 돌아가 다시 이 전체의 과정을 거치게 된다.
+
+- width, height가 변경되면, **1 -> 2 -> 3 -> 4 -> 5** 모두 실행되게 된다 **(Reflow)**
+- 크기나 위치가 아니라 color, background-color(색깔)이 변경됐을땐 **1 -> 2 -> 4 -> 5** **(Repaint)**
+- transform, opacity 등(GPU가 관여하는 속성) 변경일 때 **1 -> 2 -> 5**
+
+따라서 transform, opacity 등(GPU가 관여하는 속성)을 사용하는게 가장 빠르고 끊김없이 보여줄 수 있다.
+16:T1a75,
+인증방식에는 대표적으로 두가지가 있다.
+
+제일 많이 사용하는 세션 방식과 토큰 방식
+
+- 인증 -> 유저가 누구인지 확인
+- 인가 -> 유저의 요청에 대한 권한을 확인하고 허가
+
+---
+
+### 세션방식
+- 로그인 요청 -> 서버에서 세션 key-value로 구분해 정보를 저장
+- 서버 -> 클라이언트 측으로 http header cookie에 세션 id를 담아 전달
+- 클라이언트 쪽에서 response값으로 cookie에 저장된 세션을 확인할 수 있는데, 브라우저에 저장
+
+세션 방식은 HTTP요청이 노출되어도 세션 자체에는 의미있는 값이 없기 때문에 보안상 유리할 수 있다.
+
+각 사용자마다 고유한 id를 갖고 있기 때문에 매번 회원정보를 확인할 필요가 없다.
+
+서버에 따로 세션 저장소를 두기 때문에 사용자가 많아지면 서버에 부담이 간다.
+
+각 브라우저들은 보안상의 이슈로 서버와 프론트간의 도메인이 같아야 쿠키가 전달된다.
+
+- 프론트 측에서는 Axios 사용시 ```withCredentials: true```설정을 통해 서로 다른 도메인간의 요청에도 credential 정보를 받을 것인지 설정해야 한다.
+
+- 서버 측에서는 응답 헤더의 Access-Control-Allow-Credentials 항목을 true로 설정해야 하고,
+응답 헤더의 Access-Control-Allow-Origin의 값을 와일드 카드('*') 제외하고 설정 되어야 한다.
+
+---
+
+우선 localhost와 서버상의 도메인이 달라 proxy 설정을 해줬다.
+
+```ts
+// pages/api/[...path].ts
+import type { NextApiRequest, NextApiResponse } from "next";
+import httpProxyMiddleware from "next-http-proxy-middleware";
+
+export const config = {
+  api: {
+    externalResolver: true
+  },
+}
+
+export default (req: NextApiRequest, res: NextApiResponse) => {
+    httpProxyMiddleware(req, res, {
+        target: process.env.NEXT_PUBLIC_API_URL,
+        changeOrigin: true,
+        pathRewrite: [
+          {
+            patternStr: "^/api/",
+            replaceStr: "/",
+          },
+        ],
+        cookieDomainRewrite: {
+          "*": "localhost",
+        },
+      })
+    };
+```
+
+```ts
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  swcMinify: true,
+  reactStrictMode: true,
+  compiler: {
+    styledComponents: true,
+    removeConsole: process.env.NODE_ENV === "production",
+  },
+  async rewrites() {
+    return process.env.NODE_ENV === "production"
+      ? [
+          {
+            source: "/api/:path*",
+            destination: `${process.env.NEXT_PUBLIC_API_URL}/:path*`,
+          },
+        ]
+      : [];
+  },
+{...}
+};
+```
+---
+위 처럼 설정해 주니 서버에서 보낸 cookie가 localhost 브라우저에 잘 들어왔다.
+
+여기서 고민했던 부분이 csr환경이 아닌 next의 ssr환경인 프론트측 서버단에서는 유저인증을 어떻게 확인할 것인가 였다.
+
+우선 로그인 상태와 비로그인 상태에서 접근불가능한 페이지 접근시 리다이렉트를 시키는 방법으로 진행했다.
+
+Nextjs middleware는 root폴더에 middleware.ts 파일을 만들어 주면 페이지 라우팅 되기 전에 middleware가 자동으로 실행된다.
+
+Nextjs에서 지원하는 middleware는 들어오는 요청에 따라서 req, res, header를 다시 작성하거나 리디렉션 등을 수정하거나 재작성할 수 있다.
+```ts
+import type { NextRequest } from "next/server";
+import { fetchAuth, inValidateAuth, validateAuth } from "@/lib/validateUser";
+
+const validatedUrl = [
+  "/users/sign-in",
+  "/users/sign-up/normal",
+  "/users/sign-up/social",
+  "/users/sign-up/vendor",
+  "/users/password/reset",
+];
+
+const inValidateUrl = ["/users/my-page"];
+
+export async function middleware(req: NextRequest) {
+  const url = req.nextUrl;
+
+  if (validatedUrl.includes(url.pathname)) {
+    return await validateAuth(req);
+  }
+
+  if (inValidateUrl.includes(url.pathname)) {
+    return await inValidateAuth(req);
+  }
+
+  return await fetchAuth(req);
+}
+
+export const config = {
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico|assets).*)"],
+};
+```
+```ts
+import { NextRequest, NextResponse } from "next/server";
+
+export const validateUser = (req: NextRequest) => {
+  return fetch("url", {
+    method: "get",
+    mode: "cors",
+    credentials: "same-origin",
+    headers: {
+      "Content-Type": "application/json",
+      cookie: `${req.headers.get("cookie")}`,
+    },
+  });
+};
+
+{...}
+
+export const fetchAuth = async (req: NextRequest) => {
+    try {
+        const res = NextResponse.next();
+
+        const response = await validateUser(req);
+        const data = await response.json();
+
+        if (response.ok) {
+            res.cookies.set("user", JSON.stringify(data));
+            return res;
+        }
+
+        if (!response.ok) {
+            res.cookies.delete("user");
+            res.cookies.delete("user.sid");
+            return res;
+        }
+    } catch (e) {
+        throw new Error("Validate Error");
+    }
+};
+```
+
+처음에 이런식으로 미들웨어를 구현했다. matcher로 페이지단만 확인했고, 페이지 라우팅시 유저 인증에 성공하면 cookie를 통해 유저정보와 세션을 전달했다.
+
+또 인증성공시 접근 x, 비인증시 접근 x 한 url을 확인해 리다이렉트 시키도록 했다.
+
+처음 해봤던 작업이었고, 제대로 구현한지 확신이 들지 않아 코드리뷰를 요청했다.
+
+middleware를 사용하지 않고 hocs를 사용해 auth를 호출하고, axios config에 headers를 전달하는 방법으로 알려주셨다.
+
+```ts
+import React from "react";
+import { GetServerSideProps, GetServerSidePropsContext } from "next";
+import { getAuth } from "@/models/auth";
+import merge from "lodash/merge";
+
+const validatedUrl = [
+  "/users/sign-in",
+  "/users/sign-up/normal",
+  "/users/sign-up/social",
+  "/users/sign-up/vendor",
+  "/users/password/reset",
+];
+
+const inValidateUrl = [
+  "/users/my-page",
+  "/users/my-page/profile",
+  "/users/my-page/review",
+];
+
+export default function withAuth(getServerSideProps?: GetServerSideProps) {
+  return async function (context: GetServerSidePropsContext) {
+    const url = context.req.url as string;
+    let user = null;
+    try {
+      const res = await getAuth({ headers: context.req.headers });
+      user = res.data;
+    } catch (e) {}
+    if (inValidateUrl.includes(url) && !user) {
+      return {
+        redirect: {
+          permanent: false,
+          destination: "/users/sign-in",
+        },
+      };
+    }
+    {...}
+    const ret = await getServerSideProps?.(context);
+    return merge(ret, { props: { user } });
+  };
+}
+```
+
+middleware는 nextjs에서 서버도 같이 구성해 사용하면 좋을거라고 조언을 주셨다.
+
+```ts
+// page/*
+{...}
+
+export const getServerSideProps = withAuth();
+
+{...}
+```
+17:Tdf0,
+예전에 하다가 중단된 프로젝트를 다시 시작해 보려고 새 레포로 마이그레이션 하는 과정에서
+
+패키지 버전도 올리고, 다른 기술을 찾아보다가 예전부터 써보고싶었던 tailwindcss를 써보기로 했다.
+
+```shell
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+테일윈드 설치 init을 하게 되면 `postcss.config.js` 파일과 `tailwind.config.js` 파일이 생성된다
+
+
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+나는 src 폴더를 사용하기 때문에 `"./src/**/*.{js,ts,jsx,tsx}"` 경로로 사용
+
+
+```css
+// globals.css
+@tailwind base; // 테일윈드의 기본 스타일
+@tailwind components; // 모든 클래스 요소
+@tailwind utilities; // 유틸리티
+```
+
+전역으로 설정
+
+---
+
+구글에서 지원하는 폰트를 사용해 tailwind에 적용
+
+```js
+// Layout
+const roboto = Roboto({
+    subsets: ["latin"],
+    weight: ["400", "500", "700"],
+    variable: "--font-roboto"
+});
+
+const Layout = ({ children }: { children: React.ReactNode }) => {
+    return (
+        <main className={`max-w-3xl m-auto p-3 text-black-500 ${roboto.className} font-sans`}>
+            <Header />
+            {children}
+        </main>
+    );
+};
+
+export default Layout;
+```
+
+```js
+// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+    content: ["./src/**/*.{js,ts,jsx,tsx}"],
+    theme: {
+        extend: {
+            colors: {
+                primary: {
+                    50: "#f4f6fa",
+                    100: "#e8edf5",
+                    200: "#c6d1e5",
+                    300: "#a4b6d5",
+                    400: "#5f7fb6",
+                    500: "#1b4897",
+                    600: "#184188",
+                    700: "#143671",
+                    800: "#102b5b",
+                    900: "#0d234a"
+                },
+                secondary: {
+                    50: "#fefaf5",
+                    100: "#fcf5eb",
+                    200: "#f9e6cd",
+                    300: "#f5d7af",
+                    400: "#edb872",
+                    500: "#e59a36",
+                    600: "#ce8b31",
+                    700: "#ac7429",
+                    800: "#895c20",
+                    900: "#704b1a"
+                },
+                black: {
+                    50: "#f5f5f5",
+                    100: "#eaebeb",
+                    200: "#cbcccd",
+                    300: "#acaeaf",
+                    400: "#6d7174",
+                    500: "#2f3438",
+                    600: "#2a2f32",
+                    700: "#23272a",
+                    800: "#1c1f22",
+                    900: "#17191b"
+                },
+                white: "#ffffff"
+            },
+            fontFamily: {
+                sans: ["var(--font-roboto)"]
+            }
+        }
+    }
+};
+
+```
+
+테일윈드 자체에 기본 색상이 지정된 것도 있었고,
+
+이런식으로 색상도 지정하면 자동으로 적용되는것 같다.
+
+기본색상을 완전히 바꾸려면 `theme.colors`서 설정이 가능하다고 한다.
+
+---
+
+- 조건부는 템플릿 리터럴을 사용
+
+- 반응형
+```js
+<img class="w-16 md:w-32 lg:w-48" src="...">
+```
+
+- hover나 focus 등
+```js
+<button class="dark:md:hover:bg-fuchsia-600 ...">
+  Save changes
+</button>
+```
+18:T7a1,
+자바스크립트의 함수는 호출될 때, 매개변수 이외에 `arguments` 객체와 `this`를 암묵적으로 전달 받는다.
+
+- Java의 `this` 는 인스턴스 자신을 가르키는 참조변수
+- this가 객체 자신에 대한 참조 값을 가지고 있다.
+
+하지만 자바스크립트의 `this` 는 함수 호출 방식에 따라 `this` 에 바인딩 되는 객체가 달라진다
+
+---
+
+### 일반 함수 호출
+
+<img src="/assets/blog/javaScript/this-1.png" width="100%" alt="post image"/>
+
+- this → 전역 (window) 객체에 바인딩 됨
+- 기본적으로 `this` 는 전역객체에 바인딩 되고, 내부 함수의 경우에도 전역객체에 바인딩 됨
+
+<img src="/assets/blog/javaScript/this-2.png" width="100%" alt="post image"/>
+
+- **내부함수는 일반 함수, 메소드, 콜백함수 어디에서 선언되었든 관게없이 this는 전역객체를 바인딩한다.**
+
+---
+
+### 객체 메소드 호출
+
+<img src="/assets/blog/javaScript/this-3.png" width="100%" alt="post image"/>
+
+- 해당 메소드의 객체에 바인딩 됨
+
+<img src="/assets/blog/javaScript/this-4.png" width="100%" alt="post image"/>
+
+- 프로토타입 객체도 메소드를 가질 수 있다.
+
+프로토 타입 방식이란 자바스크립트에서 객체를 상속하기 위해 사용된다 (템플릿 같은 것)
+
+---
+
+### 생성자 함수 호출
+
+- 생성자 함수란 객체를 생성하는 역할을 함
+- **기존 함수에 new 연산자를 붙여서 호출하면 해당 함수는 생성자 함수로 동작**
+
+<img src="/assets/blog/javaScript/this-5.png" width="100%" alt="post image"/>
+
+1. 빈 객체 생성 및 this 바인딩 → 2. this를 통한 프로퍼티 생성 → 3. 생성된 객체 반환
+
+---
+
+### apply/call/bind 호출
+
+- this 객체에 명시적으로 바인딩 하는 방법
+
+---
+
+일반 함수
+
+- 일반 함수 → 화살표 함수
+- 생성자 함수 → class
+- 객체 메서드 → 객체 메서드 축약형
+19:T1aed,
+```shell
+npm create svelte@latest my-app
+cd my-app
+npm install
+npm run dev
+```
+
+SSG 정적 페이지를 구성하는 어댑터
+```shell
+npm i -D @sveltejs/adapter-static
+```
+---
+svelte.config.js
+```js
+import adapter from '@sveltejs/adapter-static';
+
+export default {
+  kit: {
+    adapter: adapter()
+  }
+};
+```
+---
+src/routes/+layout.js
+```js
+// This can be false if you're using a fallback (i.e. SPA mode)
+export const prerender = true;
+```
+---
+
+### 레이아웃 구성
+
+```js
+<script>
+	import Header from '$lib/components/Layout/Header.svelte';
+	import Footer from '$lib/components/Layout/Footer.svelte';
+
+	export let data;
+</script>
+
+<Header />
+    <main>
+		<slot />
+    </main>
+<Footer />
+```
+slot에 스벨트 페이지들이 렌더되게 된다.
+
+스벨트킷은 넥스트와 비슷하게 routes에서 라우팅이 된다.
+
+---
+
+### 데이터 가져오기
+
+src/routes/+page.svelte
+```js
+<script>
+	import Pagination from '$lib/components/Posts/Pagination.svelte';
+	import '$lib/styles/_main.scss';
+	import PostList from '$lib/components/Posts/PostList.svelte';
+	import Category from '$lib/components/Posts/Category.svelte';
+	import { MetaTags } from 'svelte-meta-tags';
+	import { seoMeta, seoOg } from '$lib/config';
+	export let data;
+</script>
+
+<MetaTags {...seoMeta} openGraph={{ ...seoOg }} />
+
+<h1>Blog</h1>
+
+<Category categories={data.categories} />
+
+<PostList posts={data} />
+
+<Pagination currentPage={1} totalPosts={data.total} />
+
+```
++page.js는 페이지와 연결된 로드 함수이며, 데이터를 로드한 다음 페이지가 로드된 데이터를 넘겨 받아 렌더링한다.
+SSR, CSR 모두 렌더링 할 수 있다.
+
++page.server.js 는 항상 서버측에서 로드가 실행된다.
+
+또 src/routes/api 는 독립적인 API 경로이며 페이지와 연결되지 않는다.
+
+src/routes/+page.server.js
+```js
+import { postsPerPage } from '$lib/config';
+import fetchPosts from '$lib/utils/fetchPosts';
+
+export const load = async ({ fetch }) => {
+	const options = {
+		limit: postsPerPage
+	};
+	const { posts } = await fetchPosts(options);
+
+	return { posts, total, categories };
+};
+
+```
+
+src/routes/api 에서 만든 fetchPosts 함수를 사용해
+
+페이지 진입시 5개의 포스트를 먼저 가져왔다.
+
+---
+
+src/lib/_posts에 각 게시글인 마크다운 파일들을 만들었다.
+```js
+import { postsPerPage } from '$lib/config';
+
+const fetchPosts = async () => {
+	const posts = await Promise.all(
+		Object.entries(import.meta.glob('/src/lib/_posts/**/*.md')).map(async ([path, resolver]) => {
+			const { metadata } = await resolver();
+			const slug = path.split('/').pop()?.slice(0, -3);
+			return { ...metadata, slug };
+		})
+	);
+
+	sortedPosts = sortedPosts.map((post) => ({
+		slug: post.slug,
+		title: post.title,
+		description: post.description,
+		category: post.category,
+		titleImage: post.titleImage,
+		date: new Intl.DateTimeFormat('ko-KR').format(new Date(post.date))
+	}));
+
+	return {
+		posts: sortedPosts
+	};
+};
+
+export default fetchPosts;
+```
+
+마크다운 파일들을 가져오는 함수
+
+```markdown
+---
+title: 스벨트킷으로 블로그 만들기
+date: 2023-01-30
+description: 스벨트킷으로 블로그 만든 과정을 정리
+category: javaScript
+titleImage: /postIcon/svelte-icon.webp
+---
+```
+
+
+위에 작성된 title, date, description... 들이 metadata가 된다.
+
+---
+
+```js
+import { error } from '@sveltejs/kit';
+
+export const load = async ({ params }) => {
+	try {
+		const post = await import(`../../../../lib/_posts/${params.category}/${params.post}.md`);
+
+		return {
+			PostContent: post.default.render().html,
+			meta: {
+				...post.metadata,
+				date: new Intl.DateTimeFormat('ko-KR').format(new Date(post.metadata.date)),
+				slug: params.post
+			}
+		};
+	} catch (err) {
+		throw error(404, err);
+	}
+};
+
+```
+src/routes/blog/[category]/[post] 진입시 load 함수의 context.params를 통해 해당 게시글을 가져온다.
+
+---
+
+### sitemap, rss 만들기
+
+src/sitemap.xml/+server.ts
+
+```js
+import fetchPosts from '$lib/utils/fetchPosts';
+
+export const prerender = true;
+
+export const GET = async () => {
+	const { posts } = await fetchPosts({ limit: -1 });
+	const links = posts.map(
+		(p) => `
+    <url>
+      <loc>https://wonbeenna.github.io/blog/${p.category}/${p.slug}</loc>
+      <lastmod>${new Date(p.date).toISOString()}</lastmod>
+      <priority>1.0</priority>
+    </url>
+  `
+	);
+	const xml = `
+    <?xml version="1.0" encoding="UTF-8"?>
+    <urlset
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+      xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+      xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+      xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
+      xmlns:pagemap="http://www.google.com/schemas/sitemap-pagemap/1.0"
+      xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    >
+        <url>
+            <loc>https://wonbeenna.github.io/</loc>
+            <priority>1.0</priority>
+        </url>
+
+        <url>
+            <loc>https://wonbeenna.github.io/about</loc>
+            <priority>1.0</priority>
+        </url>
+
+    ${links.join('')}
+    </urlset>
+  `.trim();
+	return new Response(xml, { headers: { 'Content-Type': 'text/xml; charset=utf-8' } });
+};
+```
+
+GET 메소드를 사용해 서버에서 빌드시 sitemap.xml을 생성
+
+rss도 위와 동일하다.
+
+---
+
+### 마치며
+
+최근에 스벨트를 공부해보는 기회가있어, 스벨트킷을 사용해 간단한 블로그를 만들어 봤다.
+
+아직 깊게 사용해보진 못했지만, 먼저 리액트와 비교했을 때 코드량이 많이 줄어든 느낌이다.
+
+- 프레임워크는 코드량이 적을 수록 속도가 빠르다고 들었다.
+
+- 순수한 native가 가장 좋다.
+
+- 아무리 좋은 프레임워크라도 vanilla js를 따라갈 수는 없다.
+
+그런 면에서 virtual DOM을 사용하지 않는 스벨트가 가장 빠를 것이다. 하지만 최적화는 개발자의 몫..
+
+- 스벨트는 런타임이 아닌 컴파일러에 가깝기 때문에 실제 실행 가능한 vanilla js를 만들어 준다.
+
+리액트였으면 useState니 뭐니~ 상태 관리니~ 했을 것 같은데 스벨트는 변수 하나만 선언하면 가능했다.
+
+- 리액트에 hook, jsx, context, use함수 등 규칙들이 필요없었고, 오로지 html, css, js로 개발할 수 있다.
+
+요즘 많이 핫하고 뜨는 프레임워크라고 해서 정보들이 많을줄 알았는데 생각보다 더 정보가 없었다.
+
+구글링을 해도 스벨트 관련된 정보들이 많진 않았다. 거의 공식블로그를 많이 참고했다.
+
+그래도 앞으론 리액트를 더 공부 할 것이다. 먹고 살려면 ㅎㅎ
+
+f:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L10",null,{"posts":{"posts":[{"content":"$11","data":{"title":"jwt 토큰 decode 하기","date":"$D2023-08-31T00:00:00.000Z","description":"jwt 토큰 decode 함수","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"jwt-decode"},{"content":"$12","data":{"title":"Audio객체를 이용한 음악 재생","date":"$D2023-05-27T00:00:00.000Z","description":"Audio객체를 사용한 기업 과제 구현","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"audio"},{"content":"$13","data":{"title":"디바운싱과 쓰로틀링","date":"$D2023-05-13T00:00:00.000Z","description":"디바운싱과 쓰로틀링의 차이를 구분하고 hook으로 구현","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"debouce-throttle"},{"content":"$14","data":{"title":"GraphQl 써보기(1)","date":"$D2023-04-29T00:00:00.000Z","description":"GraphQl, Apollo Client를 사용","category":"javaScript","titleImage":"/assets/postIcon/graphql.svg"},"slug":"graphql-1"},{"content":"$15","data":{"title":"브라우저에 url을 검색하면?","date":"$D2023-02-25T00:00:00.000Z","description":"사내 스터디","category":"study","titleImage":"/assets/postIcon/javascript.png"},"slug":"browser"},{"content":"$16","data":{"title":"Next.js middleware와 getServerSideProps","date":"$D2023-02-22T00:00:00.000Z","description":"세션방식의 로그인 인증, middleware와 getServerSideProps를 사용해 구현한 기록","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-middleware"},{"content":"$17","data":{"title":"Nextjs에서 tailwind 써보기","date":"$D2023-02-18T00:00:00.000Z","description":"공식문서 보면서 tailwind 써보기","category":"javaScript","titleImage":"/assets/postIcon/tailwind-css-icon.png"},"slug":"tailwindcss"},{"content":"$18","data":{"title":"JavaScript this","date":"$D2023-02-02T00:00:00.000Z","description":"사내 스터디 this","category":"study","titleImage":"/assets/postIcon/javascript.png"},"slug":"this"},{"content":"$19","data":{"title":"스벨트킷으로 블로그 만들어보기","date":"$D2023-01-30T00:00:00.000Z","description":"스벨트킷으로 블로그 만든 과정을 정리","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-blog"},{"content":"\n### Provider 테스팅 해보기\n\n```js\nrender(<Options optionType=\"scoops\" />, {wrapper: OrderDetailsProvider});\n```\n\n테스트 wrapper에 Provider로 감싸주면 된다.\n\n여기서는 redux나 recoil 등 다른 라이브러리도 가능\n\n---\n\n전역적으로도 사용이 가능\n\n```js\nimport {render} from '@testing-library/react';\nimport {OrderDetailsProvider} from '../contexts/OrderDetails';\n\nconst renderWithContext = (ui, options) => render(ui, {wrapper: OrderDetailsProvider, ...options});\n\nexport * from '@testing-library/react';\n\nexport {renderWithContext as render};\n```\n","data":{"title":"리액트 테스팅(4)","date":"$D2023-01-02T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-4"}],"total":29}}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$La",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (26)"}]}],["$","li","study",{"children":["$","$La",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$La",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}]
 e:null
-10:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","ol",null,{"className":"relative mx-0 my-[20px] flex w-full flex-col gap-[40px] p-0","children":[["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/jwt-decode","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/javascript.png","alt":"jwt 토큰 decode 하기"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"jwt 토큰 decode 하기"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"jwt 토큰 decode 함수"}],["$","span",null,{"className":"text-gray700","children":"2023-08-31"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/audio","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/logo192.png","alt":"Audio객체를 이용한 음악 재생"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"Audio객체를 이용한 음악 재생"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"Audio객체를 사용한 기업 과제 구현"}],["$","span",null,{"className":"text-gray700","children":"2023-05-27"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/debouce-throttle","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/javascript.png","alt":"디바운싱과 쓰로틀링"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"디바운싱과 쓰로틀링"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"디바운싱과 쓰로틀링의 차이를 구분하고 hook으로 구현"}],["$","span",null,{"className":"text-gray700","children":"2023-05-13"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/graphql-1","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/graphql.svg","alt":"GraphQl 써보기(1)"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"GraphQl 써보기(1)"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"GraphQl, Apollo Client를 사용"}],["$","span",null,{"className":"text-gray700","children":"2023-04-29"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/study/browser","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/javascript.png","alt":"브라우저에 url을 검색하면?"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"브라우저에 url을 검색하면?"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"사내 스터디"}],["$","span",null,{"className":"text-gray700","children":"2023-02-25"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/next-middleware","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/Nextjs.svg","alt":"Next.js middleware와 getServerSideProps"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"Next.js middleware와 getServerSideProps"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"세션방식의 로그인 인증, middleware와 getServerSideProps를 사용해 구현한 기록"}],["$","span",null,{"className":"text-gray700","children":"2023-02-22"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/tailwindcss","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/tailwind-css-icon.png","alt":"Nextjs에서 tailwind 써보기"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"Nextjs에서 tailwind 써보기"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"공식문서 보면서 tailwind 써보기"}],["$","span",null,{"className":"text-gray700","children":"2023-02-18"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/study/this","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/javascript.png","alt":"JavaScript this"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"JavaScript this"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"사내 스터디 this"}],["$","span",null,{"className":"text-gray700","children":"2023-02-02"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/svelte-blog","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/svelte-icon.webp","alt":"스벨트킷으로 블로그 만들어보기"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"스벨트킷으로 블로그 만들어보기"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"스벨트킷으로 블로그 만든 과정을 정리"}],["$","span",null,{"className":"text-gray700","children":"2023-01-30"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/react-testing-4","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/test.png","alt":"리액트 테스팅(4)"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"리액트 테스팅(4)"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"jest와 react-testing-library"}],["$","span",null,{"className":"text-gray700","children":"2023-01-02"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/conditional-rendering","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/logo192.png","alt":"리액트 조건부 렌더링에 대한 생각"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"리액트 조건부 렌더링에 대한 생각"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"해외 블로그를 보며 정리한 조건부 렌더링에 대한 생각"}],["$","span",null,{"className":"text-gray700","children":"2022-12-29"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/usecallback-and-usememo","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/logo192.png","alt":"useCallback, useMemo 무조건 좋은가?"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"useCallback, useMemo 무조건 좋은가?"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"useCallback과 useMemo에 대한 생각 정리"}],["$","span",null,{"className":"text-gray700","children":"2022-12-28"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/react-testing-3","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/test.png","alt":"리액트 테스팅(3)"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"리액트 테스팅(3)"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"jest와 react-testing-library"}],["$","span",null,{"className":"text-gray700","children":"2022-12-26"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/react-testing-2","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/test.png","alt":"리액트 테스팅(2)"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"리액트 테스팅(2)"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"jest와 react-testing-library"}],["$","span",null,{"className":"text-gray700","children":"2022-12-14"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/react-testing-1","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/test.png","alt":"리액트 테스팅(1)"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"리액트 테스팅(1)"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"jest와 react-testing-library"}],["$","span",null,{"className":"text-gray700","children":"2022-12-10"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/til/study","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/til.webp","alt":"6주간 스터디하며 배운것들"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"6주간 스터디하며 배운것들"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"6주간 진행한 스터디에서 얻은 것들"}],["$","span",null,{"className":"text-gray700","children":"2022-10-21"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/storybook","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/storybook.png","alt":"Storybook 써보기"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"Storybook 써보기"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"스터디 하면서 처음 써본 Storybook"}],["$","span",null,{"className":"text-gray700","children":"2022-10-11"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/next-styled-component","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/Nextjs.svg","alt":"Next.js styled-component 적용 문제에 대해(_document.tsx)"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"Next.js styled-component 적용 문제에 대해(_document.tsx)"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"next.js와 styled-component 사용시 발생한 에러"}],["$","span",null,{"className":"text-gray700","children":"2022-08-22"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/intersectionObserver","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/logo192.png","alt":"IntersectionObserver로 데이터 요청해보기"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"IntersectionObserver로 데이터 요청해보기"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"IntersectionObserver를 활용해 스크롤 위치에서 데이터 불러오기"}],["$","span",null,{"className":"text-gray700","children":"2022-05-04"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/next-bundle-analyzer","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/logo192.png","alt":"next/bundle-analyzer"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"next/bundle-analyzer"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"next/bundle-analyzer로 번들 크기 확인하기"}],["$","span",null,{"className":"text-gray700","children":"2022-02-22"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/ref-forwardRef","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/logo192.png","alt":"리액트 ref 와 forwardRef (with. react-hook-form)"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"리액트 ref 와 forwardRef (with. react-hook-form)"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"react-hook-form 라이브러리와 ref의 동작"}],["$","span",null,{"className":"text-gray700","children":"2022-02-09"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/Speechsynthesis","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/logo192.png","alt":"Speechsynthesis & Google TTS"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"Speechsynthesis & Google TTS"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"프로젝트 진행하며 경험해본 Speechsynthesis & Google TTS"}],["$","span",null,{"className":"text-gray700","children":"2022-01-22"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/web-optimization-3","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/logo192.png","alt":"웹성능 최적화(3)"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"웹성능 최적화(3)"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"웹성능 최적화3"}],["$","span",null,{"className":"text-gray700","children":"2022-01-04"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/web-optimization-2","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/logo192.png","alt":"웹성능 최적화(2)"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"웹성능 최적화(2)"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"웹성능 최적화2"}],["$","span",null,{"className":"text-gray700","children":"2022-01-03"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/web-optimization","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/logo192.png","alt":"웹성능 최적화(1)"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"웹성능 최적화(1)"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"웹성능 최적화1"}],["$","span",null,{"className":"text-gray700","children":"2022-01-01"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/svelte-react","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/svelte-icon.webp","alt":"스벨트와 리액트"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"스벨트와 리액트"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"스벨트와 리액트에 대해 정리한 글"}],["$","span",null,{"className":"text-gray700","children":"2021-12-12"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/thinking-in-react-2","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/logo192.png","alt":"React 처럼 생각하기(2)"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"React 처럼 생각하기(2)"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"리액트 문서 보며 정리"}],["$","span",null,{"className":"text-gray700","children":"2021-12-12"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/thinking-in-react","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/logo192.png","alt":"React 처럼 생각하기"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"React 처럼 생각하기"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"리액트 문서 보며 정리"}],["$","span",null,{"className":"text-gray700","children":"2021-11-20"}]]}]]}]}],["$","li",null,{"className":"mt-[30px] border-b-[1px] border-b-gray300 pb-[50px] md:mt-[50px] md:pb-[70px]","children":["$","$La",null,{"className":"flex w-full flex-col items-center justify-between gap-0 md:flex-row md:gap-[40px]","href":"/blog/javaScript/react-hook","children":[["$","$Lb",null,{"className":"h-[200px] w-[200px] rounded-[14px]","width":200,"height":200,"src":"/assets/postIcon/logo192.png","alt":"React Hook의 동작"}],["$","div",null,{"className":"flex min-h-[160px] w-full flex-col items-center justify-center md:min-h-[200px]","children":[["$","h1",null,{"className":"my-[12px] overflow-hidden text-ellipsis break-words text-[24px] font-bold text-black md:mt-0 md:text-[34px]","children":"React Hook의 동작"}],["$","p",null,{"className":"mx-[14px] my-[12px] text-ellipsis break-keep text-[14px] text-gray900 md:text-[18px]","children":"React Hook의 동작에 대해"}],["$","span",null,{"className":"text-gray700","children":"2021-11-07"}]]}]]}]}]]}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","li","javaScript",{"children":["$","$La",null,{"href":"/blog/javaScript","children":"javaScript (26)"}]}],["$","li","study",{"children":["$","$La",null,{"href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$La",null,{"href":"/blog/til","children":"til (1)"}]}]]}]]}]
