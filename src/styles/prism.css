@@ -212,3 +212,8 @@ code.language-css .token.selector > .token.pseudo-element {
   color: var(--prism-foreground);
   background-color: var(--prism-background);
 }
+
+.prose :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  overflow: hidden;
+  word-break: break-all;
+}
