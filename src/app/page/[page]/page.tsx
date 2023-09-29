@@ -9,7 +9,7 @@ export const generateMetadata = async ({ params }: { params: { page: string } })
       ...defaultOpenGraph,
       title: `Been blog - ${params.page}`,
       description: `Been dev-note - ${params.page}`,
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${params.page}`
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/page/${params.page}`
     }
   };
 };

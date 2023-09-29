@@ -2,6 +2,7 @@ import React from 'react';
 import { getAllPost, getPost } from '@/utils/getPost';
 import Contents from '@/components/Contents';
 import PostCardHeader from '@/components/PostCardHeader';
+import dynamic from 'next/dynamic';
 
 export const generateMetadata = async ({ params }: { params: { category: string; slug: string } }) => {
   const data = await getPost(params.slug);
@@ -12,7 +13,7 @@ export const generateMetadata = async ({ params }: { params: { category: string;
     openGraph: {
       title: `Been blog - ${data.data.title}`,
       description: data.data.description,
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${params.category}/${params.slug}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/blog/${params.category}/${params.slug}`,
       images: [
         {
           url: `${process.env.NEXT_PUBLIC_BASE_URL}${data.data.titleImage}`,
@@ -39,6 +40,8 @@ export const generateStaticParams = async () => {
   });
 };
 
+const Comment = dynamic(() => import('../../../../components/Comment'), { ssr: false });
+
 const Page = async ({ params }: { params: { category: string; slug: string } }) => {
   const data = await getPost(params.slug);
 
@@ -46,6 +49,7 @@ const Page = async ({ params }: { params: { category: string; slug: string } }) 
     <div className="prose w-full max-w-none">
       <PostCardHeader title={data.data.title} description={data.data.description} date={data.data.date} />
       <Contents {...data.mdx} />
+      <Comment />
     </div>
   );
 };

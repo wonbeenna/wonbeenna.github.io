@@ -10,7 +10,7 @@ export const generateMetadata = async ({ params }: { params: { category: string 
       ...defaultOpenGraph,
       title: `Been blog - ${params.category}`,
       description: `Been dev-note - ${params.category}`,
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${params.category}`
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/blog/${params.category}`
     }
   };
 };
