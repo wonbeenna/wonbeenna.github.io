@@ -60,6 +60,15 @@ export const getAllPost = (
 };
 
 export const getPost = async (slug: string) => {
+  const allPost = getAllPost(undefined, {
+    page: '1',
+    limit: '-1'
+  });
+
+  const index = allPost.posts.findIndex((post) => post.slug === slug);
+  const prevPost = allPost.posts[index + 1];
+  const nextPost = allPost.posts[index - 1];
+
   const source = fs.readFileSync(path.join(POSTS_PATH, `${slug}.mdx`));
 
   const { content, data } = matter(source);
@@ -69,6 +78,16 @@ export const getPost = async (slug: string) => {
     mdx,
     content,
     data,
-    slug
+    slug,
+    prevPost: {
+      slug: prevPost?.slug,
+      title: prevPost?.data.title,
+      category: prevPost?.data.category
+    },
+    nextPost: {
+      slug: nextPost?.slug,
+      title: nextPost?.data.title,
+      category: nextPost?.data.category
+    }
   };
 };
