@@ -1,0 +1,105 @@
+---
+title: React Native Deep Linking
+date: 2023-10-17
+description: React Native Deep Linking 연결
+category: javaScript
+titleImage: /assets/postIcon/logo192.png
+---
+
+### 딥링크
+- 딥링크는 모바일에서 특정 페이지에 도달 할 수 있는 링크를 의미한다.
+- 웹이나 sns등 링크를 클릭했을때 해당 어플리케이션 앱으로 바로 이동하는데, 이런 방식을 모바일 딥링크라 하고 특정한 앱 스크린으로 이동하는 것
+
+- 딥링크는 URL 스킴, https://, 두가지 형태를 지원한다.
+- ex) `app://example.my.app`, `https://www.example.com`
+
+```shell
+yarn add @react-native-firebase/dynamic-links
+```
+
+```jsx
+import { Linking } from 'react-native';
+import dynamicLinks from '@react-native-firebase/dynamic-links';
+```
+
+
+### ios
+
+ios > [프로젝트] > AppDelegate.mm
+
+```swift
+#import <React/RCTLinkingManager.h>
+
+{...}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+  return [RCTLinkingManager application:application openURL:url options:options];
+}
+```
+
+xcode로 가 Identifier 프로젝트에 Bundle ID를 넣고,
+URL Schemes에 프로토콜을 정의한다.
+
+### android
+
+android > app > src > main > AndroidManifest.xml
+
+```xml
+  <intent-filter>
+    <action android:name="android.intent.action.MAIN" />
+    <category android:name="android.intent.category.LAUNCHER" />
+  </intent-filter>
+
+  <intent-filter>
+    <action android:name="android.intent.action.VIEW" />
+    <category android:name="android.intent.category.DEFAULT" />
+    <category android:name="android.intent.category.BROWSABLE" />
+    <data
+      android:host="example.com"
+      android:pathPrefix="/"
+      android:scheme="https" />
+  </intent-filter>
+```
+
+
+### URL 처리
+
+```jsx
+const handleDynamicLink = async () => {
+  const initialLink = await dynamicLinks().getInitialLink();
+  if (initialLink) {
+    console.log('initialLink', initialLink);
+  }
+};
+
+useEffect(() => {
+  handleDynamicLink();
+}, []);
+```
+
+### WebView 이슈
+
+앱이 죽어있는 상태로 외부에서 딥링크를 클릭했을 때 앱이 켜지고 해당 페이지로 이동하는데, 이때 WebView가 렌더링 되지 않는 이슈가 있다.
+
+```jsx
+// 앱이 처음 시작시 초기화
+useEffect(() => {
+  const getInitURL = async () => {
+    const initURL = await Linking.getInitialURL();
+    if (initURL) {
+      ...process
+    }
+  };
+  getInitURL();
+}, []);
+
+// 앱이 열려있는 상태
+useEffect(() => {
+  Linking.addEventListener('url', e => {
+      if(e.url){
+          ...process
+      }
+  });
+  return () => Linking.removeAllListeners('url');
+}, [])
+```
