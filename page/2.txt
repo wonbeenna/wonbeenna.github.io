@@ -4,14 +4,275 @@
 4:HL["/_next/static/media/8db47a8bf03b7d2f-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 5:HL["/_next/static/media/934c4b7cb736f2a3-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 6:HL["/_next/static/css/bee2c35e5d2aa945.css","style"]
-0:["5QJfm44OkxnE3RJkHX5J8",[[["",{"children":["page",{"children":[["page","2","d"],{"children":["__PAGE__?{\"page\":\"2\"}",{}]}]}]},"$undefined","$undefined",true],"$L7",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/bee2c35e5d2aa945.css","precedence":"next"}]],"$L8"]]]]
+0:["eZCLQv3146QX6rt12rays",[[["",{"children":["page",{"children":[["page","2","d"],{"children":["__PAGE__?{\"page\":\"2\"}",{}]}]}]},"$undefined","$undefined",true],"$L7",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/bee2c35e5d2aa945.css","precedence":"next"}]],"$L8"]]]]
 9:I{"id":4244,"chunks":["929:static/chunks/929-b3b28e896e4a9fe7.js","185:static/chunks/app/layout-082a41cb7a9cbffe.js"],"name":"","async":false}
 a:I{"id":4724,"chunks":["929:static/chunks/929-b3b28e896e4a9fe7.js","411:static/chunks/app/page/[page]/page-084fd1726e5b064b.js"],"name":"","async":false}
 b:I{"id":6964,"chunks":["929:static/chunks/929-b3b28e896e4a9fe7.js","185:static/chunks/app/layout-082a41cb7a9cbffe.js"],"name":"Image","async":false}
 c:I{"id":1443,"chunks":["272:static/chunks/webpack-5497ae65bf9d345f.js","971:static/chunks/fd9d1056-23f6e37ad1d1612c.js","864:static/chunks/864-8d9b6481be2de97f.js"],"name":"","async":false}
 d:I{"id":8639,"chunks":["272:static/chunks/webpack-5497ae65bf9d345f.js","971:static/chunks/fd9d1056-23f6e37ad1d1612c.js","864:static/chunks/864-8d9b6481be2de97f.js"],"name":"","async":false}
 f:I{"id":7259,"chunks":["929:static/chunks/929-b3b28e896e4a9fe7.js","411:static/chunks/app/page/[page]/page-084fd1726e5b064b.js"],"name":"","async":false}
-10:T9de,
+10:T1aed,
+```shell
+npm create svelte@latest my-app
+cd my-app
+npm install
+npm run dev
+```
+
+SSG 정적 페이지를 구성하는 어댑터
+```shell
+npm i -D @sveltejs/adapter-static
+```
+---
+svelte.config.js
+```js
+import adapter from '@sveltejs/adapter-static';
+
+export default {
+  kit: {
+    adapter: adapter()
+  }
+};
+```
+---
+src/routes/+layout.js
+```js
+// This can be false if you're using a fallback (i.e. SPA mode)
+export const prerender = true;
+```
+---
+
+### 레이아웃 구성
+
+```js
+<script>
+	import Header from '$lib/components/Layout/Header.svelte';
+	import Footer from '$lib/components/Layout/Footer.svelte';
+
+	export let data;
+</script>
+
+<Header />
+    <main>
+		<slot />
+    </main>
+<Footer />
+```
+slot에 스벨트 페이지들이 렌더되게 된다.
+
+스벨트킷은 넥스트와 비슷하게 routes에서 라우팅이 된다.
+
+---
+
+### 데이터 가져오기
+
+src/routes/+page.svelte
+```js
+<script>
+	import Pagination from '$lib/components/Posts/Pagination.svelte';
+	import '$lib/styles/_main.scss';
+	import PostList from '$lib/components/Posts/PostList.svelte';
+	import Category from '$lib/components/Posts/Category.svelte';
+	import { MetaTags } from 'svelte-meta-tags';
+	import { seoMeta, seoOg } from '$lib/config';
+	export let data;
+</script>
+
+<MetaTags {...seoMeta} openGraph={{ ...seoOg }} />
+
+<h1>Blog</h1>
+
+<Category categories={data.categories} />
+
+<PostList posts={data} />
+
+<Pagination currentPage={1} totalPosts={data.total} />
+
+```
++page.js는 페이지와 연결된 로드 함수이며, 데이터를 로드한 다음 페이지가 로드된 데이터를 넘겨 받아 렌더링한다.
+SSR, CSR 모두 렌더링 할 수 있다.
+
++page.server.js 는 항상 서버측에서 로드가 실행된다.
+
+또 src/routes/api 는 독립적인 API 경로이며 페이지와 연결되지 않는다.
+
+src/routes/+page.server.js
+```js
+import { postsPerPage } from '$lib/config';
+import fetchPosts from '$lib/utils/fetchPosts';
+
+export const load = async ({ fetch }) => {
+	const options = {
+		limit: postsPerPage
+	};
+	const { posts } = await fetchPosts(options);
+
+	return { posts, total, categories };
+};
+
+```
+
+src/routes/api 에서 만든 fetchPosts 함수를 사용해
+
+페이지 진입시 5개의 포스트를 먼저 가져왔다.
+
+---
+
+src/lib/_posts에 각 게시글인 마크다운 파일들을 만들었다.
+```js
+import { postsPerPage } from '$lib/config';
+
+const fetchPosts = async () => {
+	const posts = await Promise.all(
+		Object.entries(import.meta.glob('/src/lib/_posts/**/*.md')).map(async ([path, resolver]) => {
+			const { metadata } = await resolver();
+			const slug = path.split('/').pop()?.slice(0, -3);
+			return { ...metadata, slug };
+		})
+	);
+
+	sortedPosts = sortedPosts.map((post) => ({
+		slug: post.slug,
+		title: post.title,
+		description: post.description,
+		category: post.category,
+		titleImage: post.titleImage,
+		date: new Intl.DateTimeFormat('ko-KR').format(new Date(post.date))
+	}));
+
+	return {
+		posts: sortedPosts
+	};
+};
+
+export default fetchPosts;
+```
+
+마크다운 파일들을 가져오는 함수
+
+```markdown
+---
+title: 스벨트킷으로 블로그 만들기
+date: 2023-01-30
+description: 스벨트킷으로 블로그 만든 과정을 정리
+category: javaScript
+titleImage: /postIcon/svelte-icon.webp
+---
+```
+
+
+위에 작성된 title, date, description... 들이 metadata가 된다.
+
+---
+
+```js
+import { error } from '@sveltejs/kit';
+
+export const load = async ({ params }) => {
+	try {
+		const post = await import(`../../../../lib/_posts/${params.category}/${params.post}.md`);
+
+		return {
+			PostContent: post.default.render().html,
+			meta: {
+				...post.metadata,
+				date: new Intl.DateTimeFormat('ko-KR').format(new Date(post.metadata.date)),
+				slug: params.post
+			}
+		};
+	} catch (err) {
+		throw error(404, err);
+	}
+};
+
+```
+src/routes/blog/[category]/[post] 진입시 load 함수의 context.params를 통해 해당 게시글을 가져온다.
+
+---
+
+### sitemap, rss 만들기
+
+src/sitemap.xml/+server.ts
+
+```js
+import fetchPosts from '$lib/utils/fetchPosts';
+
+export const prerender = true;
+
+export const GET = async () => {
+	const { posts } = await fetchPosts({ limit: -1 });
+	const links = posts.map(
+		(p) => `
+    <url>
+      <loc>https://wonbeenna.github.io/blog/${p.category}/${p.slug}</loc>
+      <lastmod>${new Date(p.date).toISOString()}</lastmod>
+      <priority>1.0</priority>
+    </url>
+  `
+	);
+	const xml = `
+    <?xml version="1.0" encoding="UTF-8"?>
+    <urlset
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+      xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+      xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+      xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
+      xmlns:pagemap="http://www.google.com/schemas/sitemap-pagemap/1.0"
+      xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    >
+        <url>
+            <loc>https://wonbeenna.github.io/</loc>
+            <priority>1.0</priority>
+        </url>
+
+        <url>
+            <loc>https://wonbeenna.github.io/about</loc>
+            <priority>1.0</priority>
+        </url>
+
+    ${links.join('')}
+    </urlset>
+  `.trim();
+	return new Response(xml, { headers: { 'Content-Type': 'text/xml; charset=utf-8' } });
+};
+```
+
+GET 메소드를 사용해 서버에서 빌드시 sitemap.xml을 생성
+
+rss도 위와 동일하다.
+
+---
+
+### 마치며
+
+최근에 스벨트를 공부해보는 기회가있어, 스벨트킷을 사용해 간단한 블로그를 만들어 봤다.
+
+아직 깊게 사용해보진 못했지만, 먼저 리액트와 비교했을 때 코드량이 많이 줄어든 느낌이다.
+
+- 프레임워크는 코드량이 적을 수록 속도가 빠르다고 들었다.
+
+- 순수한 native가 가장 좋다.
+
+- 아무리 좋은 프레임워크라도 vanilla js를 따라갈 수는 없다.
+
+그런 면에서 virtual DOM을 사용하지 않는 스벨트가 가장 빠를 것이다. 하지만 최적화는 개발자의 몫..
+
+- 스벨트는 런타임이 아닌 컴파일러에 가깝기 때문에 실제 실행 가능한 vanilla js를 만들어 준다.
+
+리액트였으면 useState니 뭐니~ 상태 관리니~ 했을 것 같은데 스벨트는 변수 하나만 선언하면 가능했다.
+
+- 리액트에 hook, jsx, context, use함수 등 규칙들이 필요없었고, 오로지 html, css, js로 개발할 수 있다.
+
+요즘 많이 핫하고 뜨는 프레임워크라고 해서 정보들이 많을줄 알았는데 생각보다 더 정보가 없었다.
+
+구글링을 해도 스벨트 관련된 정보들이 많진 않았다. 거의 공식블로그를 많이 참고했다.
+
+그래도 앞으론 리액트를 더 공부 할 것이다. 먹고 살려면 ㅎㅎ
+
+11:T9de,
 
 얼마전 해외 블로그를 구경하다가 이런 글을 보았다.
 
@@ -109,7 +370,7 @@ Nothing was returned from render. This usually means a return statement is missi
 이런 에러를 만난 적이 많았는데, 위와 관련된 것이 아닌가 생각 된다.
 
 조금 더 생각하면서 개발하자
-11:Tff5,
+12:Tff5,
 예전부터 궁금했었던 부분이었다.
 
 **useCallback**과 **useMemo** hook은 함수와 값을 메모이제이션 해주는 역할을 한다.
@@ -231,7 +492,7 @@ useMemo와 useCallback은 초기 렌더링에는 쓸모가 없다. 오히려 초
 [https://beta.reactjs.org/reference/react/useMemo#usage](https://beta.reactjs.org/reference/react/useMemo#usage)
 
 [https://www.developerway.com/posts/how-to-use-memo-use-callback](https://www.developerway.com/posts/how-to-use-memo-use-callback)
-12:T84a,
+13:T84a,
 ### fireEvent를 userEvent로 바꿔보기
 
 ```shell
@@ -309,7 +570,7 @@ const checkboxLabel = (
   </span>
 );
 ```
-13:Tff3,
+14:Tff3,
 ### * Mock Service Worker
 
 백엔드에서 데이터를 가져오는 부분을 테스트
@@ -473,7 +734,7 @@ const Type = ({orderType}) => {
 
 export default Type;
 ```
-14:T1633,
+15:T1633,
 ### * Jest - Facebook에서 만든 테스팅 프레임 워크.
 
 주로 단위 (unit) 테스트를 위해 사용.
@@ -706,7 +967,7 @@ test('Prevent -,+ button from being pressed when the on/off button is clicked', 
   on/off
 </button>
 ```
-15:Tfe7,
+16:Tfe7,
 ### 1\. Utility Type
 
 ```typescript
@@ -901,7 +1162,7 @@ aria-hidden="true"
 
 [https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-16:Tc66,
+17:Tc66,
 이번에 스터디를 하면서 처음 스토리북을 써보게 되었다.
 
 [https://storybook.js.org/](https://storybook.js.org/)
@@ -1018,7 +1279,7 @@ Default.args = {
 작성한 디자인 시스템을 기반으로 이번주부터 직접 개발에 들어가게된다.
 
 어떤점이 좋은지 차이가있는지 경험해보는 좋은 기회가 될거같다.
-17:Td1c,
+18:Td1c,
 Nextjs에서 styled-components를 사용하면 서버상에서 html을 불러온 뒤, hydrate과정에서 js를 입혀 스타일이 적용된다.
 
 이때 초기 페이지 로딩시 사용자가 보게 되는 화면은, 스타일링이 전혀 적용되지않은 html문서를 잠깐 보게 되는 문제가 있다.
@@ -1124,104 +1385,6 @@ return {
 ```
 
 <img src="/assets/blog/javaScript/next-styled-component(1).png" width="100%" alt="post image"/>
-18:Te30,
-프로젝트를 진행하면서, 프로필 페이지에 유저정보와 포인트, 펫정보, 관심사 등 세로로 길게~~배치된 UI, 각각의 정보들을 서버에서 데이터를 하나하나 받아와 보여줘야 했다.
-
-처음엔 아무생각없이 진행했다.
-
-프로필 페이지에 진입했을 때 각각 필요한 데이터를 서버에 4번이나 요청했고, 그대로 컴포넌트에 그렸다.
-
-그러다가💡 생각났는데,, 사용자에게 보이지않는 부분에 데이터도 받아오고 있었다.
-
-굳이 스크롤을 내리지도 않고 사용자에게 보이지도 않는 부분에 데이터까지 받아올 필요는 없었다.
-
-그럼 사용자가 스크롤을 내려 보고자하는 부분에 도달했을때, 아니면 도달하기 직전에 데이터를 불러와 보여주면 어떨까 싶었다.
-
-이전에 강의에서 이미지 Lazy로딩을 배웠었는데, 이미지 대신에 데이터 요청을 해보면 어떨까 생각했다.
-
-<img src="/assets/blog/javaScript/intersectionObserver.png" width="100%" alt="post image" />
-
-컴포넌트가 마운트 되자마자 모든 데이터들이 요청된다.
-
-우선 훅을 하나 만들었다. ref객체가 감지되면 loaded가 true로 바뀌고, 더이상 감시가 중지된다.
-
-```tsx
-export const useLazyRequest = () => {
-  const ref = useRef(null) as MutableRefObject<HTMLDivElement>
-  const [loaded, setLoaded] = useState<boolean>(false)
-
-  useEffect(() => {
-    const options = {}
-    const callback = (entries, observer) => {
-      entries.forEach((entry) => {
-        console.log(entry)
-        if (entry.isIntersecting) {
-          console.log('is Intersecting')
-          setLoaded(true)
-          observer.unobserve(entry.target) // 한번만 요청되도록 감시 중지
-        }
-      })
-    }
-    const observer = new IntersectionObserver(callback, options) // 객체 생성하기
-    observer.observe(ref.current)
-  }, [])
-
-  return {ref, loaded}
-}
-```
-
-사용하고자 하는 컴포넌트로 돌아와서,
-
-나는 데이터 요청에 SWR을 사용했다.
-
-[https://swr.vercel.app/ko](https://swr.vercel.app/ko)
-
-```tsx
-
-// SWR
-export const useUserKeywords = (loaded: boolean) => {
-  const {data, isValidating, error} = useFetch(loaded ? PATH + '/keywords' : null, {
-    revalidateOnFocus: false,
-    revalidateIfStale: false,
-    shouldRetryOnError: false
-  })
-
-  return {
-    userKeywords: data,
-    isValidating,
-    error
-  }
-}
-```
-
-SWR은 위처럼 설정했다, SWR자체도 hook이기 때문에 useEffect나 다른 함수안에서 사용하지 못한다.
-
-```tsx
-const {ref, loaded} = useLazyRequest()
-const {userKeywords, isValidating, error} = useUserKeywords(loaded)
-
-<Contents ref={ref}>
-        {isValidating ? (
-          <Loading />
-        ) : (
-          <>
-           {...}
-          </>
-        )}
-</Contents>
-```
-
-4개의 섹션이 있는데, 페이지 진입시 1, 2번까지만 사용자에게 보이고 3, 4번의 컴포넌트를 위처럼 적용했다.
-
-ref에 사용자의 view가 도달하면 userKeywords를 요청해 데이터를 받아온다.
-
-<img src="/assets/blog/javaScript/intersectionObserver(1).gif" width="100%" alt="post image" />
-
-과거에는 getBoundingClientRect() 를 사용해 구현했다고 하는데, 리플로우 현상이나 성능면에서 보완하고자 요즘엔 intersection Observer를 사용해 타겟을 관찰한다고 한다.
-
-또 무한스크롤도 구현해 볼 수 있다. 페이지의 맨 마지막 요소에 도달했을 때, 요청하는 페이지 쿼리를 ++ 하면 쉽게 구현할 수 있다.
-
-다른 필요한 페이지에 적용해봐야겠다!
-7:[null,["$","html",null,{"lang":"ko","children":[null,["$","$L9",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L9",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_471caf","children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b-[1px] border-b-gray200 bg-white px-[24px] py-0","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$La",null,{"href":"/","children":["$","$Lb",null,{"src":"/assets/icons/been-logo.svg","width":60,"height":56,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$La",null,{"href":"/about","children":"About"}]}]]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$La",null,{"href":"https://github.com/wonbeenna","target":"_blank","rel":"noopener noreferrer","children":["$","$Lb",null,{"src":"/assets/icons/github.svg","width":30,"height":30,"alt":"github"}]}],["$","$La",null,{"href":"mailto:nwbnwb@naver.com","children":["$","$Lb",null,{"src":"/assets/icons/mail.svg","width":34,"height":34,"alt":"email"}]}]]}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$Lc",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$Ld",null,{}],"templateStyles":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"childProp":{"current":["$","$Lc",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$Ld",null,{}],"templateStyles":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$","$Lc",null,{"parallelRouterKey":"children","segmentPath":["children","page","children",["page","2","d"],"children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$Ld",null,{}],"templateStyles":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$Le",["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$Lf",null,{"posts":{"posts":[{"content":"\n### Provider 테스팅 해보기\n\n```js\nrender(<Options optionType=\"scoops\" />, {wrapper: OrderDetailsProvider});\n```\n\n테스트 wrapper에 Provider로 감싸주면 된다.\n\n여기서는 redux나 recoil 등 다른 라이브러리도 가능\n\n---\n\n전역적으로도 사용이 가능\n\n```js\nimport {render} from '@testing-library/react';\nimport {OrderDetailsProvider} from '../contexts/OrderDetails';\n\nconst renderWithContext = (ui, options) => render(ui, {wrapper: OrderDetailsProvider, ...options});\n\nexport * from '@testing-library/react';\n\nexport {renderWithContext as render};\n```\n","data":{"title":"리액트 테스팅(4)","date":"$D2023-01-02T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-4"},{"content":"$10","data":{"title":"리액트 조건부 렌더링에 대한 생각","date":"$D2022-12-29T00:00:00.000Z","description":"해외 블로그를 보며 정리한 조건부 렌더링에 대한 생각","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"conditional-rendering"},{"content":"$11","data":{"title":"useCallback, useMemo 무조건 좋은가?","date":"$D2022-12-28T00:00:00.000Z","description":"useCallback과 useMemo에 대한 생각 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"usecallback-and-usememo"},{"content":"$12","data":{"title":"리액트 테스팅(3)","date":"$D2022-12-26T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-3"},{"content":"$13","data":{"title":"리액트 테스팅(2)","date":"$D2022-12-14T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-2"},{"content":"$14","data":{"title":"리액트 테스팅(1)","date":"$D2022-12-10T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-1"},{"content":"$15","data":{"title":"6주간 스터디하며 배운것들","date":"$D2022-10-21T00:00:00.000Z","description":"6주간 진행한 스터디에서 얻은 것들","category":"til","titleImage":"/assets/postIcon/til.webp"},"slug":"study"},{"content":"$16","data":{"title":"Storybook 써보기","date":"$D2022-10-11T00:00:00.000Z","description":"스터디 하면서 처음 써본 Storybook","category":"javaScript","titleImage":"/assets/postIcon/storybook.png"},"slug":"storybook"},{"content":"$17","data":{"title":"Next.js styled-component 적용 문제에 대해(_document.tsx)","date":"$D2022-08-22T00:00:00.000Z","description":"next.js와 styled-component 사용시 발생한 에러","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-styled-component"},{"content":"$18","data":{"title":"IntersectionObserver로 데이터 요청해보기","date":"$D2022-05-04T00:00:00.000Z","description":"IntersectionObserver를 활용해 스크롤 위치에서 데이터 불러오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"intersectionObserver"}],"total":30},"page":"2","category":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$La",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (27)"}]}],["$","li","study",{"children":["$","$La",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$La",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}],null],"segment":"__PAGE__?{\"page\":\"2\"}"},"styles":[]}],"segment":["page","2","d"]},"styles":[]}],"segment":"page"},"styles":[]}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]]}],null]
+7:[null,["$","html",null,{"lang":"ko","children":[null,["$","$L9",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L9",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_471caf","children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b-[1px] border-b-gray200 bg-white px-[24px] py-0","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$La",null,{"href":"/","children":["$","$Lb",null,{"src":"/assets/icons/been-logo.svg","width":60,"height":56,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$La",null,{"href":"/about","children":"About"}]}]]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$La",null,{"href":"https://github.com/wonbeenna","target":"_blank","rel":"noopener noreferrer","children":["$","$Lb",null,{"src":"/assets/icons/github.svg","width":30,"height":30,"alt":"github"}]}],["$","$La",null,{"href":"mailto:nwbnwb@naver.com","children":["$","$Lb",null,{"src":"/assets/icons/mail.svg","width":34,"height":34,"alt":"email"}]}]]}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$Lc",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$Ld",null,{}],"templateStyles":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"childProp":{"current":["$","$Lc",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$Ld",null,{}],"templateStyles":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$","$Lc",null,{"parallelRouterKey":"children","segmentPath":["children","page","children",["page","2","d"],"children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$Ld",null,{}],"templateStyles":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$Le",["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$Lf",null,{"posts":{"posts":[{"content":"$10","data":{"title":"스벨트킷으로 블로그 만들어보기","date":"$D2023-01-30T00:00:00.000Z","description":"스벨트킷으로 블로그 만든 과정을 정리","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-blog"},{"content":"\n### Provider 테스팅 해보기\n\n```js\nrender(<Options optionType=\"scoops\" />, {wrapper: OrderDetailsProvider});\n```\n\n테스트 wrapper에 Provider로 감싸주면 된다.\n\n여기서는 redux나 recoil 등 다른 라이브러리도 가능\n\n---\n\n전역적으로도 사용이 가능\n\n```js\nimport {render} from '@testing-library/react';\nimport {OrderDetailsProvider} from '../contexts/OrderDetails';\n\nconst renderWithContext = (ui, options) => render(ui, {wrapper: OrderDetailsProvider, ...options});\n\nexport * from '@testing-library/react';\n\nexport {renderWithContext as render};\n```\n","data":{"title":"리액트 테스팅(4)","date":"$D2023-01-02T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-4"},{"content":"$11","data":{"title":"리액트 조건부 렌더링에 대한 생각","date":"$D2022-12-29T00:00:00.000Z","description":"해외 블로그를 보며 정리한 조건부 렌더링에 대한 생각","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"conditional-rendering"},{"content":"$12","data":{"title":"useCallback, useMemo 무조건 좋은가?","date":"$D2022-12-28T00:00:00.000Z","description":"useCallback과 useMemo에 대한 생각 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"usecallback-and-usememo"},{"content":"$13","data":{"title":"리액트 테스팅(3)","date":"$D2022-12-26T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-3"},{"content":"$14","data":{"title":"리액트 테스팅(2)","date":"$D2022-12-14T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-2"},{"content":"$15","data":{"title":"리액트 테스팅(1)","date":"$D2022-12-10T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-1"},{"content":"$16","data":{"title":"6주간 스터디하며 배운것들","date":"$D2022-10-21T00:00:00.000Z","description":"6주간 진행한 스터디에서 얻은 것들","category":"til","titleImage":"/assets/postIcon/til.webp"},"slug":"study"},{"content":"$17","data":{"title":"Storybook 써보기","date":"$D2022-10-11T00:00:00.000Z","description":"스터디 하면서 처음 써본 Storybook","category":"javaScript","titleImage":"/assets/postIcon/storybook.png"},"slug":"storybook"},{"content":"$18","data":{"title":"Next.js styled-component 적용 문제에 대해(_document.tsx)","date":"$D2022-08-22T00:00:00.000Z","description":"next.js와 styled-component 사용시 발생한 에러","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-styled-component"}],"total":31},"page":"2","category":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$La",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (28)"}]}],["$","li","study",{"children":["$","$La",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$La",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}],null],"segment":"__PAGE__?{\"page\":\"2\"}"},"styles":[]}],"segment":["page","2","d"]},"styles":[]}],"segment":"page"},"styles":[]}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]]}],null]
 8:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Been blog - 2"}],["$","meta","2",{"name":"description","content":"Been dev-note"}],["$","meta","3",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","4",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","5",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","meta","6",{"property":"og:title","content":"Been blog - 2"}],["$","meta","7",{"property":"og:description","content":"Been dev-note - 2"}],["$","meta","8",{"property":"og:url","content":"https://wonbeenna.github.io/page/2"}],["$","meta","9",{"property":"og:site_name","content":"Been blog"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 2"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 2"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","meta","23",{"name":"next-size-adjust"}]]
 e:null
