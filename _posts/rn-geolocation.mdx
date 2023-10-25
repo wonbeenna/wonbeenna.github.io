@@ -1,0 +1,134 @@
+---
+title: React Native geolocation
+date: 2023-10-25
+description: React Native 위치정보 받아오기
+category: javaScript
+titleImage: /assets/postIcon/logo192.png
+---
+
+### React Native geolocation
+
+사이드 프로젝트에 위치정보를 받아와야 하는 기능이 필요해 지오로케이션을 받아 오도록 했다.
+
+### 설치
+
+https://www.npmjs.com/package/react-native-geolocation-service
+
+```bash
+yarn add react-native-geolocation-service
+```
+
+---
+
+### IOS
+- 먼저 xcode를 열고 swift 파일을 생성해준다.
+
+<div style={{ display: "flex", gap: '10px' }}>
+    <img src="/assets/blog/javaScript/rn-geolocation.png" width="49%" style={{ maxWidth: '40%'}} alt="post image"/>
+    <img src="/assets/blog/javaScript/rn-geolocation-2.png" width="49%" style={{ maxWidth: '59%'}} alt="post image"/>
+</div>
+
+프로젝트 폴더에 swift 파일을 생성해주고 Create Bridging Header 를 선택해준다.
+
+---
+
+- 디바이스에서 위치정보를 받아오려면 권한 설정이 필요하다.
+
+```
+// ios/[projectName]/info.plist
+
+<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+<string>서비스를 제공하는 업체 위치를 확인을 위한 위치기반 정보 서비스를 이용할 수 있습니다.</string>
+<key>NSLocationAlwaysUsageDescription</key>
+<string>서비스를 제공하는 업체 위치를 확인을 위한 위치기반 정보 서비스를 이용할 수 있습니다.</string>
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>서비스를 제공하는 업체 위치를 확인을 위한 위치기반 정보 서비스를 이용할 수 있습니다.</string>
+```
+
+---
+
+<div style={{ display: "flex", gap: '10px' }}>
+    <img src="/assets/blog/javaScript/rn-geolocation-3.png" width="49%" style={{ maxWidth: '40%'}} alt="post image"/>
+    <img src="/assets/blog/javaScript/rn-geolocation-4.png" width="49%" style={{ maxWidth: '59%'}} alt="post image"/>
+</div>
+
+- 백그라운드에서도 위치정보를 가져오려면 워크스페이스에서 위와 같이 Location updates에 체크해 설정한다.
+
+---
+
+### Android
+
+- 안드로이드도 마찬가지로 권한 설정이 필요하다.
+
+```xml
+// android/app/src/main/AndroidManifest.xml
+
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+```
+
+---
+
+### 사용법
+
+```tsx
+  useEffect(() => {
+    if (Platform.OS === 'ios') {
+      Geolocation.requestAuthorization('always');
+    } else {
+      PermissionsAndroid.requestMultiple([
+        PermissionsAndroid.PERMISSIONS.ACCESS_COARSE_LOCATION,
+        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+      ]);
+    }
+  }, []);
+```
+
+- requestAuthorization로 위치정보 권한을 요청합니다.
+
+---
+
+### 가장 많이 쓰이는 세가지 API
+
+- getCurrentPosition(successCallback, ?errorCallback, ?options) - 최신 위치정보 호출 (한번)
+- watchPosition(successCallback, ?errorCallback, ?options) - 지속적으로 호출
+- clearWatch(watchId)
+
+```tsx
+import Geolocation from 'react-native-geolocation-service';
+
+const MyApp = () => {
+    const [location, setLocation] = useState<ILocation | undefined>(undefined);
+
+    useEffect(() => {
+        const _watchId = Geolocation.watchPosition(
+          position => {
+            const {latitude, longitude} = position.coords;
+            setLocation({latitude, longitude});
+          },
+          error => {
+            console.log(error);
+          },
+          {
+            enableHighAccuracy: true,
+            distanceFilter: 0,
+            interval: 5000,
+            fastestInterval: 2000,
+          },
+        );
+
+        return () => {
+          if (_watchId) {
+            Geolocation.clearWatch(_watchId);
+          }
+        };
+      }, []);
+
+    return <></>;
+}
+
+```
+
+다음 포스팅에서는 받아온 위치정보를 webview로 넘겨주는 방법에 대해 알아보자!
+
+
