@@ -4,7 +4,7 @@
 4:HL["/_next/static/media/8db47a8bf03b7d2f-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 5:HL["/_next/static/media/934c4b7cb736f2a3-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 6:HL["/_next/static/css/bee2c35e5d2aa945.css","style"]
-0:["J2otNfPTTp_ZUnyVbY6fW",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L7",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/bee2c35e5d2aa945.css","precedence":"next"}]],"$L8"]]]]
+0:["Nc7yPCvx4Q09YMfwxNoS9",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L7",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/bee2c35e5d2aa945.css","precedence":"next"}]],"$L8"]]]]
 9:I{"id":4244,"chunks":["929:static/chunks/929-b3b28e896e4a9fe7.js","185:static/chunks/app/layout-082a41cb7a9cbffe.js"],"name":"","async":false}
 a:I{"id":4724,"chunks":["929:static/chunks/929-b3b28e896e4a9fe7.js","931:static/chunks/app/page-3574bef9182e3233.js"],"name":"","async":false}
 b:I{"id":6964,"chunks":["929:static/chunks/929-b3b28e896e4a9fe7.js","185:static/chunks/app/layout-082a41cb7a9cbffe.js"],"name":"Image","async":false}
@@ -13,7 +13,440 @@ d:I{"id":8639,"chunks":["272:static/chunks/webpack-5497ae65bf9d345f.js","971:sta
 7:[null,["$","html",null,{"lang":"ko","children":[null,["$","$L9",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L9",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_471caf","children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b-[1px] border-b-gray200 bg-white px-[24px] py-0","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$La",null,{"href":"/","children":["$","$Lb",null,{"src":"/assets/icons/been-logo.svg","width":60,"height":56,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$La",null,{"href":"/about","children":"About"}]}]]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$La",null,{"href":"https://github.com/wonbeenna","target":"_blank","rel":"noopener noreferrer","children":["$","$Lb",null,{"src":"/assets/icons/github.svg","width":30,"height":30,"alt":"github"}]}],["$","$La",null,{"href":"mailto:nwbnwb@naver.com","children":["$","$Lb",null,{"src":"/assets/icons/mail.svg","width":34,"height":34,"alt":"email"}]}]]}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$Lc",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$Ld",null,{}],"templateStyles":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"childProp":{"current":["$Le","$Lf",null],"segment":"__PAGE__"},"styles":[]}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]]}],null]
 8:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Been blog"}],["$","meta","2",{"name":"description","content":"Been dev-note"}],["$","meta","3",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","4",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","5",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","meta","6",{"property":"og:title","content":"Been blog"}],["$","meta","7",{"property":"og:description","content":"Been dev-note"}],["$","meta","8",{"property":"og:url","content":"https://wonbeenna.github.io"}],["$","meta","9",{"property":"og:site_name","content":"Been blog"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","meta","23",{"name":"next-size-adjust"}]]
 10:I{"id":7259,"chunks":["929:static/chunks/929-b3b28e896e4a9fe7.js","931:static/chunks/app/page-3574bef9182e3233.js"],"name":"","async":false}
-11:Te9a,
+11:T2f94,
+## 웹팩(기본)배경
+- 웹팩은 모던 javascript 어플리케이션을 위한 정적 모듈 번들러이다. 번들러는 웹팩 이외에도 다양한게 있는데 (rollup , esbuild , vite , parcel 등) 웹팩이 가장 오래되었기도하고 많이 사용하고 있기 때문에 이번 기회에 배워보기로 했다.
+
+- Javascript에서 문법 수준에서 모듈을 지원하기 시작한것은 ES2015부터 이다. import/export 구문이 없었던 이전 상황에서는 하나의 함수를 만들었을 때 전역 공간에 노출되어 버그나 오류를 발생시킬 수 있었다.
+
+예를들어 아래와 같은 덧셈 함수는
+
+```javascript
+// math.js
+function add(a,b){
+    return a+b;
+}
+```
+
+```javascript
+// app.js
+add(10,20);
+```
+
+모두 하나의 HTML 파일안에서 로딩해야만 실행된다. math.js가 로딩되면 app.js는 add 함수를 찾고 실행시키는데, add 함수가 전역으로 사용되기 때문에 다른 파일에서 같은 이름의 함수를 사용하면 충돌이 발생할 수 있다.
+
+---
+
+이런 문제를 예방하기위해 IIFE(즉시실행함수) 방식의 스코프를 사용했다.
+
+```javascript
+var math = math || {}
+
+;(function () {
+  function add(a, b) {
+    return a + b
+  }
+  math.add = add
+})();
+```
+
+함수 스코프를 만들어 외부에서 접근할 수 없도록해 충돌을 막을 수 있었고, 전역에 선언한 math라는 이름만 사용하면 된다.
+
+---
+
+자바스크립트 모듈을 구현하는 대표적인 명세는 AMD와 CommonJS가 있다.
+
+- AMD(Asynchronous Module Definition)는 비동기 방식으로 모듈을 로딩한다. 브라우저 환경에서 주로 사용된다.
+- UMD(Universal Module Definition)는 AMD와 CommonJS를 지원하는 모듈을 만들기 위해 사용된다.
+- CommonJS는 export로 모듈을 만들고 require()함수로 import하는 방식이다. 주로 서버 사이드 플랫폼인 Node.js 환경에서 주로 사용된다.
+
+### CommonJS
+```javascript
+//math.js
+export function add(a,b){
+    return a+b;
+}
+```
+
+```javascript
+//app.js
+const math = require('./math.js');
+math.add(10,20);
+```
+
+### ES2015 표준 모듈 시스템
+```javascript
+//math.js
+export function add(a,b){
+    return a+b;
+}
+```
+
+```javascript
+//app.js
+import {add} from './math.js';
+add(10,20);
+```
+`export` 구문으로 모듈을 만들고 `import` 구문으로 가져올 수 있다.
+
+이러한 방식은 모든 브라우저에서 지원하지 않는다. 따라서 웹팩과 같은 모듈 번들러를 사용해야한다.
+
+---
+
+## 웹팩사용방법
+웹팩은 여러개의 파일을 하나로 합쳐주는 번들러(bundler)이다. 웹팩을 사용하면 자바스크립트뿐만 아니라 css, html, 이미지 등 모든 파일을 모듈로 관리할 수 있다.
+
+웹팩으로 간단하게 작업을 해보자.
+
+먼저 웹팩과 웹팩 터미널 도구인 cli를 설치한다.
+
+```shell
+npm install -D webpack webpack-cli
+```
+
+root 디렉토리에 `webpack.config.js` 파일을 생성한다.
+
+```javascript
+//webpack.config.js
+const path = require('path');
+
+module.exports = {
+    mode: 'development',
+    entry: './src/index.js',
+    output: {
+        filename: '[name].js',
+        path: path.resolve(__dirname, './dist'),
+    },
+};
+```
+
+- `mode`는 웹팩의 모드를 설정한다. `development`로 설정하면 개발용으로, `production`으로 설정하면 배포용으로 빌드된다.
+- `entry`는 웹팩이 빌드할 파일인 진입점을 지정한다.
+- `output`은 웹팩이 빌드한 결과물을 저장할 경로와 파일명을 지정한다.
+    - [name]은 entry에 지정한 파일명을 그대로 사용한다.
+    - [hash]는 웹팩이 빌드할 때마다 고유한 해시값을 붙여준다.
+
+package.json에 빌드 스크립트를 추가한다.
+
+```json
+//package.json
+{
+    "scripts": {
+        "build": "webpack"
+    }
+}
+```
+
+이제 `npm run build` 명령어를 실행하면 웹팩이 빌드를 시작한다.
+
+---
+
+## 웹팩 로더
+웹팩은 자바스크립트 파일 뿐만 아니라 css, html, 이미지 등 모든 파일을 모듈로 관리할 수 있다.
+하지만 웹팩은 자바스크립트 파일만 이해할 수 있기 때문에 css나 html, 이미지 파일을 자바스크립트 파일로 변경해야한다. 이때 사용하는 것이 로더이다.
+
+자주 사용하는 로더
+- css-loader : css 파일을 자바스크립트 파일로 변경한다.
+- style-loader : 자바스크립트로 변경된 스타일을 동적으로 돔에 추가해준다. 주로 css-loader와 함께 사용한다.
+- file-loader : 파일을 모듈로 사용할 수 있게 url 경로를 변경한다.
+- url-loader : 파일을 모듈로 사용할 수 있게 url 경로를 변경하고 파일을 base64로 인코딩한다.
+
+### css-loader
+```shell
+npm install -D css-loader
+```
+
+웹팩은 모두 모듈로 바라보기 때문에 자바스크립트 뿐만 아니라 스타일시트도 import 구문으로 불러올 수 있다.
+
+```javascript
+import './style.css';
+```
+
+```css
+// style.css
+body {
+    background-color: red;
+}
+```
+
+```javascript
+//webpack.config.js
+module.exports = {
+    {...}
+  module: {
+    rules: [
+      {
+        test: /\.css$/, // .css 확장자로 끝나는 모든 파일
+        use: ["css-loader"], // css-loader를 적용한다
+      },
+    ],
+  },
+};
+```
+웹팩은 entry에서 모듈을 검색하다가 css 파일을 찾으면 css-loader를 적용한다.
+
+---
+
+### style-loader
+모듈로 변경된 스타일 시트는 돔에 추가되어야 브라우저가 해석한다.
+css-loader는 css 파일을 자바스크립트 파일로 변경할 뿐 돔에 추가하지는 않는다. 따라서 style-loader를 추가해야한다.
+```shell
+npm install -D style-loader
+```
+
+```javascript
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
+};
+```
+style-loader를 css-loader보다 앞에 적용한다. 로더는 배열로 설정하면 뒤 -> 앞 순서대로 로더가 작동한다.
+
+---
+
+### file-loader
+css 뿐만 아니라 소스코드에서 사용하는 모든 파일들을 모듈로 사용할 수 있게 할 수 있다.
+
+```shell
+npm install -D file-loader
+```
+
+```javascript
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpe?g|gif)$/i, // i는 대소문자 구분없이, 확장자들
+        loader: "file-loader",
+        options: {
+          publicPath: "./dist/", // prefix를 아웃풋 경로로 지정
+          name: "[name].[ext]?[hash]", // 파일명 형식
+        },
+      },
+    ],
+  },
+};
+```
+옵션으로 경로를 지정할 수 있다. `publicPath`는 파일을 참조하는 경로를 지정한다. `name`은 파일명 형식을 지정한다.
+
+---
+
+### url-loader
+파일을 base64로 인코딩하여 문자열 형태로 변환한다. 파일 크기가 작은 파일들은 문자열로 변환하여 파일을 요청하는 횟수를 줄일 수 있다.
+
+```shell
+npm install -D url-loader
+```
+
+```javascript
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: "url-loader",
+        options: {
+          publicPath: "./dist/",
+          name: "[name].[ext]?[hash]",
+          limit: 5000, // 5kb 미만 파일만 data url로 처리
+        },
+      },
+    ],
+  },
+};
+```
+
+---
+
+file-loader와 url-loader는 v5부터 기본적으로 제공하며, `asset`이라는 키워드로 사용할 수 있다.
+
+```javascript
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        type: "asset/resource", // file-loader
+        generator: {
+          filename: "[name][ext]?[hash]", // [name]은 파일명, [ext]는 확장자
+        },
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        type: "asset/inline", // url-loader
+        generator: {
+          filename: "[name][ext]?[hash]",
+        },
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        type: "asset", // 기본값은 8kb 미만은 inline, 8kb 이상은 resource
+        generator: {
+          filename: "[name][ext]?[hash]",
+        },
+      },
+    ],
+  },
+};
+```
+
+---
+
+## 웹팩 플러그인
+로더는 파일을 해석하고 변환하는 과정에 관여하지만 플러그인은 해당 결과물의 형태를 바꾸는 역할을 한다. 로더는 파일 단위로 처리하는 반면 플러그인은 번들된 결과물을 처리한다.
+번들된 자바스크립트를 난독화 한다거나, 특정 텍스트를 추출할 수 있는 용도로 사용한다.
+
+자주 사용하는 플러그인
+- BannerPlugin : 결과물에 빌드 정보나 버전같은 정보를 추가할 수 있다.
+- DefinePlugin : 환경변수를 설정한다.
+- HtmlWebpackPlugin : HTML 파일을 후처리한다.
+- CleanWebpackPlugin : 이전 빌드 결과물을 제거한다.
+- MiniCssExtractPlugin : CSS 파일을 별도로 추출한다.
+
+---
+
+### BannerPlugin
+```javascript
+const webpack = require("webpack");
+
+module.exports = {
+  plugins: [
+    new webpack.BannerPlugin({
+      banner: () => `빌드 날짜: ${new Date().toLocaleString()}`,
+    }),
+  ],
+};
+```
+
+---
+
+### DefinePlugin
+개발환경과 운영환경으로 나누어서 작업할 때 환경변수를 설정할 수 있다.
+환경에 의존적인 정보를 소스가 아닌 환경 변수로 관리하면 소스코드를 더욱 안전하고 편리하게 관리할 수 있다.
+
+```javascript
+const webpack = require("webpack");
+
+module.exports = {
+  plugins: [
+    new webpack.DefinePlugin({
+      VERSION: JSON.stringify("v.1.2.3"),
+      PRODUCTION: JSON.stringify(false),
+      MAX_COUNT: JSON.stringify(999),
+      "api.domain": JSON.stringify("http://dev.api.domain.com"),
+    }),
+  ],
+};
+```
+
+---
+
+### HtmlWebpackPlugin
+```shell
+npm install -D html-webpack-plugin
+```
+
+```javascript
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = {
+  entry: 'index.js',
+  output: {
+    path: path.resolve(__dirname, './dist'),
+    filename: 'index_bundle.js',
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html", // 템플릿 경로를 지정
+      minify:
+        process.env.NODE_ENV === "production"
+          ? {
+              // 빌드 모드가 production일 때만 사용
+              collapseWhitespace: true, // 빈칸 제거
+              removeComments: true, // 주석 제거
+            }
+          : false,
+    }),
+  ],
+};
+```
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>webpack App</title>
+  </head>
+  <body>
+    <script src="index_bundle.js"></script>
+  </body>
+</html>
+```
+script 태그에 번들링된 결과물을 자동으로 추가해준다. 웹팩 엔트리가 여러개일 경우 여러개의 script 태그를 추가해준다.
+
+---
+
+### CleanWebpackPlugin
+```shell
+npm install -D clean-webpack-plugin
+```
+
+```javascript
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+
+module.exports = {
+  plugins: [new CleanWebpackPlugin()],
+};
+```
+
+---
+
+### MiniCssExtractPlugin
+스타일 시트가 점점 많아짐에 따라 하나의 자바스크립트로 만들면 부담이 될 수 있다.
+번들 결과물에서 스타일시트 코드만 따로 분리하여 별도의 css파일로 만들어주는 플러그인이다.
+
+```shell
+npm install -D mini-css-extract-plugin
+```
+
+```javascript
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
+    ],
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+    }),
+  ],
+};
+```
+
+운영 환경에서는 `MiniCssExtractPlugin.loader`를 사용해 스타일시트를 별도의 파일로 분리한다. 개발 환경에서는 `style-loader`를 사용해 동적으로 돔에 추가한다.
+
+---
+
+웹팩의 로더와 플러그인의 원리, 사용방법에 대해서 알아보았다.
+
+우리가 편리하고 쉽게 사용하는 Create-React-App는 웹팩으로 빌드된 결과물을 제공해준다.
+하지만 기본적인 웹팩으로 설정되어있고, 직접 커스텀하려면 eject를 해야한다.
+
+이번 기회에 웹팩의 원리와 기본적인 사용방법을 알아보았다.
+12:Te9a,
 ### React Native geolocation
 
 사이드 프로젝트에 위치정보를 받아와야 하는 기능이 필요해 지오로케이션을 받아 오도록 했다.
@@ -140,7 +573,7 @@ const MyApp = () => {
 다음 포스팅에서는 받아온 위치정보를 webview로 넘겨주는 방법에 대해 알아보자!
 
 
-12:T9c4,
+13:T9c4,
 ### 딥링크
 - 딥링크는 모바일에서 특정 페이지에 도달 할 수 있는 링크를 의미한다.
 - 웹이나 sns등 링크를 클릭했을때 해당 어플리케이션 앱으로 바로 이동하는데, 이런 방식을 모바일 딥링크라 하고 특정한 앱 스크린으로 이동하는 것
@@ -238,7 +671,7 @@ useEffect(() => {
   return () => Linking.removeAllListeners('url');
 }, [])
 ```
-13:T2147,
+14:T2147,
 이전에 [스벨트킷으로 블로그 만들어보기](https://wonbeenna.github.io/blog/javaScript/svelte-blog) 에서 svelte kit으로 블로그를 만들었었다.
 
 그때는 svelte 공부겸 블로그를 만들었지만, 업무에서 주로 사용하는 스택인 react와 next.js를 사용하여 블로그를 만들어보려고 한다.
@@ -587,7 +1020,7 @@ npm i @giscus/react
 
 
 
-14:T6ae,
+15:T6ae,
 JSON 웹 토큰(JWT)
 
 일반적으로 **헤더.페이로드.서명** 으로 구성되어 있다.
@@ -646,7 +1079,7 @@ token을 split해 1번째 데이터에 해당하는 부분을 가져온 다음
 node에서 지원하는 Buffer 객체를 사용해 바이너리로 변환
 
 base64로 인코딩한 후 JSON으로 파싱한다
-15:Tfb3,
+16:Tfb3,
 얼마전 기업과제를 진행했다. Audio 객체를 이용한 음악 재생이었다.
 
 https://developer.mozilla.org/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API
@@ -775,7 +1208,7 @@ progressbar를 클릭했을 때는 해당 위치부터 audio를 재생해야했�
 - e.currentTarget.offsetWidth = progressbar의 전체 너비
 
 
-16:Te25,
+17:Te25,
 ### 디바운싱과 쓰로틀링
 
 
@@ -884,7 +1317,7 @@ hook이 실행되면 lastRan과 현재시간을 비교한다.
 
 
 
-17:Tc4f,
+18:Tc4f,
 ## GraphQL 사용
 
 Apollo client를 사용합니다.
@@ -1024,7 +1457,7 @@ const ORDER_QUERY = gql`
 
 
 
-18:Tc85,
+19:Tc85,
 대기열 → 캐싱 → DNS → 라우팅 → ARP → 초기연결 → 컨텐츠 다운로드 → 브라우저 렌더링
 
 이런 과정을 비캡슐화, 캡슐화 과정을 거침
@@ -1118,7 +1551,7 @@ const ORDER_QUERY = gql`
 - transform, opacity 등(GPU가 관여하는 속성) 변경일 때 **1 -> 2 -> 5**
 
 따라서 transform, opacity 등(GPU가 관여하는 속성)을 사용하는게 가장 빠르고 끊김없이 보여줄 수 있다.
-19:T1a75,
+1a:T1a75,
 인증방식에는 대표적으로 두가지가 있다.
 
 제일 많이 사용하는 세션 방식과 토큰 방식
@@ -1343,146 +1776,5 @@ export const getServerSideProps = withAuth();
 
 {...}
 ```
-1a:Tdf0,
-예전에 하다가 중단된 프로젝트를 다시 시작해 보려고 새 레포로 마이그레이션 하는 과정에서
-
-패키지 버전도 올리고, 다른 기술을 찾아보다가 예전부터 써보고싶었던 tailwindcss를 써보기로 했다.
-
-```shell
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-```
-테일윈드 설치 init을 하게 되면 `postcss.config.js` 파일과 `tailwind.config.js` 파일이 생성된다
-
-
-```js
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
-```
-나는 src 폴더를 사용하기 때문에 `"./src/**/*.{js,ts,jsx,tsx}"` 경로로 사용
-
-
-```css
-// globals.css
-@tailwind base; // 테일윈드의 기본 스타일
-@tailwind components; // 모든 클래스 요소
-@tailwind utilities; // 유틸리티
-```
-
-전역으로 설정
-
----
-
-구글에서 지원하는 폰트를 사용해 tailwind에 적용
-
-```js
-// Layout
-const roboto = Roboto({
-    subsets: ["latin"],
-    weight: ["400", "500", "700"],
-    variable: "--font-roboto"
-});
-
-const Layout = ({ children }: { children: React.ReactNode }) => {
-    return (
-        <main className={`max-w-3xl m-auto p-3 text-black-500 ${roboto.className} font-sans`}>
-            <Header />
-            {children}
-        </main>
-    );
-};
-
-export default Layout;
-```
-
-```js
-// tailwind.config.js
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-    content: ["./src/**/*.{js,ts,jsx,tsx}"],
-    theme: {
-        extend: {
-            colors: {
-                primary: {
-                    50: "#f4f6fa",
-                    100: "#e8edf5",
-                    200: "#c6d1e5",
-                    300: "#a4b6d5",
-                    400: "#5f7fb6",
-                    500: "#1b4897",
-                    600: "#184188",
-                    700: "#143671",
-                    800: "#102b5b",
-                    900: "#0d234a"
-                },
-                secondary: {
-                    50: "#fefaf5",
-                    100: "#fcf5eb",
-                    200: "#f9e6cd",
-                    300: "#f5d7af",
-                    400: "#edb872",
-                    500: "#e59a36",
-                    600: "#ce8b31",
-                    700: "#ac7429",
-                    800: "#895c20",
-                    900: "#704b1a"
-                },
-                black: {
-                    50: "#f5f5f5",
-                    100: "#eaebeb",
-                    200: "#cbcccd",
-                    300: "#acaeaf",
-                    400: "#6d7174",
-                    500: "#2f3438",
-                    600: "#2a2f32",
-                    700: "#23272a",
-                    800: "#1c1f22",
-                    900: "#17191b"
-                },
-                white: "#ffffff"
-            },
-            fontFamily: {
-                sans: ["var(--font-roboto)"]
-            }
-        }
-    }
-};
-
-```
-
-테일윈드 자체에 기본 색상이 지정된 것도 있었고,
-
-이런식으로 색상도 지정하면 자동으로 적용되는것 같다.
-
-기본색상을 완전히 바꾸려면 `theme.colors`서 설정이 가능하다고 한다.
-
----
-
-- 조건부는 템플릿 리터럴을 사용
-
-- 반응형
-```js
-<img class="w-16 md:w-32 lg:w-48" src="...">
-```
-
-- hover나 focus 등
-```js
-<button class="dark:md:hover:bg-fuchsia-600 ...">
-  Save changes
-</button>
-```
-f:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L10",null,{"posts":{"posts":[{"content":"$11","data":{"title":"React Native geolocation","date":"$D2023-10-25T00:00:00.000Z","description":"React Native 위치정보 받아오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"rn-geolocation"},{"content":"$12","data":{"title":"React Native Deep Linking","date":"$D2023-10-17T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"rn-deep-link"},{"content":"$13","data":{"title":"Next.js 블로그 만들기","date":"$D2023-10-09T00:00:00.000Z","description":"Next.js로 블로그 만들기","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-blog"},{"content":"$14","data":{"title":"jwt 토큰 decode 하기","date":"$D2023-08-31T00:00:00.000Z","description":"jwt 토큰 decode 함수","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"jwt-decode"},{"content":"$15","data":{"title":"Audio객체를 이용한 음악 재생","date":"$D2023-05-27T00:00:00.000Z","description":"Audio객체를 사용한 기업 과제 구현","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"audio"},{"content":"$16","data":{"title":"디바운싱과 쓰로틀링","date":"$D2023-05-13T00:00:00.000Z","description":"디바운싱과 쓰로틀링의 차이를 구분하고 hook으로 구현","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"debouce-throttle"},{"content":"$17","data":{"title":"GraphQl 써보기(1)","date":"$D2023-04-29T00:00:00.000Z","description":"GraphQl, Apollo Client를 사용","category":"javaScript","titleImage":"/assets/postIcon/graphql.svg"},"slug":"graphql-1"},{"content":"$18","data":{"title":"브라우저에 url을 검색하면?","date":"$D2023-02-25T00:00:00.000Z","description":"사내 스터디","category":"study","titleImage":"/assets/postIcon/javascript.png"},"slug":"browser"},{"content":"$19","data":{"title":"Next.js middleware와 getServerSideProps","date":"$D2023-02-22T00:00:00.000Z","description":"세션방식의 로그인 인증, middleware와 getServerSideProps를 사용해 구현한 기록","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-middleware"},{"content":"$1a","data":{"title":"Nextjs에서 tailwind 써보기","date":"$D2023-02-18T00:00:00.000Z","description":"공식문서 보면서 tailwind 써보기","category":"javaScript","titleImage":"/assets/postIcon/tailwind-css-icon.png"},"slug":"tailwindcss"}],"total":32},"page":"$undefined","category":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$La",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (29)"}]}],["$","li","study",{"children":["$","$La",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$La",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}]
+f:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L10",null,{"posts":{"posts":[{"content":"$11","data":{"title":"웹팩 기본 사용법 (1)","date":"$D2023-11-30T00:00:00.000Z","description":"처음 접해보는 웹팩의 원리와 기본 사용 방법","category":"javaScript","titleImage":"/assets/postIcon/webpack-icon.svg"},"slug":"webpack-babel"},{"content":"$12","data":{"title":"React Native geolocation","date":"$D2023-10-25T00:00:00.000Z","description":"React Native 위치정보 받아오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"rn-geolocation"},{"content":"$13","data":{"title":"React Native Deep Linking","date":"$D2023-10-17T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"rn-deep-link"},{"content":"$14","data":{"title":"Next.js 블로그 만들기","date":"$D2023-10-09T00:00:00.000Z","description":"Next.js로 블로그 만들기","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-blog"},{"content":"$15","data":{"title":"jwt 토큰 decode 하기","date":"$D2023-08-31T00:00:00.000Z","description":"jwt 토큰 decode 함수","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"jwt-decode"},{"content":"$16","data":{"title":"Audio객체를 이용한 음악 재생","date":"$D2023-05-27T00:00:00.000Z","description":"Audio객체를 사용한 기업 과제 구현","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"audio"},{"content":"$17","data":{"title":"디바운싱과 쓰로틀링","date":"$D2023-05-13T00:00:00.000Z","description":"디바운싱과 쓰로틀링의 차이를 구분하고 hook으로 구현","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"debouce-throttle"},{"content":"$18","data":{"title":"GraphQl 써보기(1)","date":"$D2023-04-29T00:00:00.000Z","description":"GraphQl, Apollo Client를 사용","category":"javaScript","titleImage":"/assets/postIcon/graphql.svg"},"slug":"graphql-1"},{"content":"$19","data":{"title":"브라우저에 url을 검색하면?","date":"$D2023-02-25T00:00:00.000Z","description":"사내 스터디","category":"study","titleImage":"/assets/postIcon/javascript.png"},"slug":"browser"},{"content":"$1a","data":{"title":"Next.js middleware와 getServerSideProps","date":"$D2023-02-22T00:00:00.000Z","description":"세션방식의 로그인 인증, middleware와 getServerSideProps를 사용해 구현한 기록","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-middleware"}],"total":33},"page":"$undefined","category":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$La",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (30)"}]}],["$","li","study",{"children":["$","$La",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$La",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}]
 e:null
