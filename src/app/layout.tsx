@@ -5,6 +5,7 @@ import { Metadata } from 'next';
 import Head from 'next/head';
 import { defaultMetadata, defaultOpenGraph } from '@/utils/metadata';
 import Script from 'next/script';
+import { Providers } from '@/app/providers';
 
 const inter = Roboto({
   weight: ['300', '400', '500', '700', '900'],
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ko">
+    <html lang="ko" suppressHydrationWarning>
       <Head>
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -36,7 +37,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         `}
       </Script>
       <body suppressHydrationWarning className={inter.className}>
-        <Layout>{children}</Layout>
+        <Providers>
+          <Layout>{children}</Layout>
+        </Providers>
       </body>
     </html>
   );

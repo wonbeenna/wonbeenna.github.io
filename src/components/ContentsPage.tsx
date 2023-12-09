@@ -22,7 +22,11 @@ interface ContentsPageProps {
 
 const PageLink = ({ href, title, align = 'left' }: PageLinkProps) => {
   return (
-    <div className={`w-[50%] min-w-0 flex-1 rounded-[4px] bg-gray100 ${align === 'left' ? 'text-left' : 'text-right'}`}>
+    <div
+      className={`w-[50%] min-w-0 flex-1 rounded-[4px] bg-gray100 dark:bg-darkBg02 ${
+        align === 'left' ? 'text-left' : 'text-right'
+      }`}
+    >
       {title && (
         <Link href={href} className="flex w-full flex-col px-[14px] py-[10px] no-underline">
           <div className="text-[14px] text-gray700">{align === 'left' ? '이전글' : '다음글'}</div>

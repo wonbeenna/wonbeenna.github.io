@@ -1,8 +1,12 @@
 'use client';
 import React from 'react';
 import Giscus from '@giscus/react';
+import { useTheme } from 'next-themes';
 
 const Comment = () => {
+  const { systemTheme, theme } = useTheme();
+  const currentTheme = theme === 'system' ? systemTheme : theme;
+
   return (
     <div className="py-[50px]">
       <Giscus
@@ -17,7 +21,7 @@ const Comment = () => {
         strict="0"
         emitMetadata="0"
         inputPosition="top"
-        theme="light_tritanopia"
+        theme={currentTheme === 'light' ? 'light_tritanopia' : 'dark_tritanopia'}
         lang="ko"
         loading="lazy"
       />

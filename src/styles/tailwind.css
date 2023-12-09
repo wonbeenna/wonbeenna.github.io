@@ -12,3 +12,14 @@
     }
   }
 }
+
+@layer base{
+    body {
+        @apply dark:bg-darkBg01 bg-white dark:text-darkText01
+    }
+
+    h1, h2, h3, p, li, a, span {
+        @apply dark:text-darkText01
+    }
+
+}

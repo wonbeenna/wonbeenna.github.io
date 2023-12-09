@@ -2,6 +2,7 @@ import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'class',
   theme: {
     colors: {
       primaryColor: '#0074d0',
@@ -22,7 +23,14 @@ const config: Config = {
       gray600: '#a6a6a6',
       gray700: '#858585',
       gray800: '#777777',
-      gray900: '#626262'
+      gray900: '#626262',
+
+      darkBg01: '#1a1a1a',
+      darkBg02: '#353946',
+
+      darkGray01: '#2a2a2a',
+
+      darkText01: '#F6F7F9'
     },
     extend: {}
   },
