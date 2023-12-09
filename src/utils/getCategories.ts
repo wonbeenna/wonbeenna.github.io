@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { getAllPost } from '@/utils/getPost';
 
 export const getCategories = (): {
@@ -19,6 +20,5 @@ export const getCategories = (): {
     }
   });
 
-  // @ts-ignore
   return Object.values(uniqueCategories).sort((a, b) => a.title > b.title);
 };

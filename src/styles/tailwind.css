@@ -18,7 +18,7 @@
         @apply dark:bg-darkBg01 bg-white dark:text-darkText01
     }
 
-    h1, h2, h3, p, li, a, span {
+    h1, h2, h3, p, li, a, span, code {
         @apply dark:text-darkText01
     }
 
