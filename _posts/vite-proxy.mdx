@@ -1,0 +1,106 @@
+---
+title: Vite proxy 설정
+date: 2024-01-18
+description: Vite 로컬환경에서 CORS 문제 해결하기
+category: javaScript
+titleImage: /assets/postIcon/logo192.png
+---
+
+로컬 개발환경에서 API 요청시 CORS 에러로 API 사용이 어려울 수 있습니다.
+
+이 글은 Vite로 구성된 로컬 개발환경에서 CORS 문제를 해결하는 방식을 작성합니다.
+
+---
+
+### env
+
+먼저 [환경변수 설정](https://ko.vitejs.dev/guide/env-and-mode.html#modes)이 필요합니다.
+
+```shell
+.env                # 모든 상황에서 사용될 환경 변수
+.env.local          # 모든 상황에서 사용되나, 로컬 개발 환경에서만 사용될(Git에 의해 무시될) 환경 변수
+.env.[mode]         # 특정 모드에서만 사용될 환경 변수
+.env.[mode].local   # 특정 모드에서만 사용되나, 로컬 개발 환경에서만 사용될(Git에 의해 무시될) 환경 변수
+```
+
+위 환경 변수는 따로 커스텀이 가능하지만, 기본적으로 Vite script 명령은 dev → development 모드로 동작하고, build → production 모드로 동작합니다.
+
+따라서 npm run dev로 스크립트를 실행하면 Vite는 .env.development에 정의된 환경변수를 사용합니다.
+
+```shell
+// .env.development
+
+VITE_BASE_URL=/api
+VITE_SERVER_URL=https://dev.example.com/
+```
+
+```shell
+// .env.production
+
+VITE_BASE_URL=/api
+VITE_SERVER_URL=https://example.com/
+```
+
+---
+
+### fetch
+
+[axios](https://axios-http.com/kr/docs/intro) 라이브러리를 사용해 비동기 HTTP 요청을 합니다.
+
+```tsx
+import axios from 'axios';
+
+const baseURL = import.meta.env.VITE_BASE_URL;
+
+export const axiosInstance = axios.create({
+  baseURL,
+});
+```
+
+위에서 설정한 환경변수에서 BASE_URL을 불러와 axios 기본 설정을 진행합니다.
+
+---
+
+### proxy
+
+Vite는 vite.config.ts에서 server.proxy를 사용해 [Server Options](https://ko.vitejs.dev/config/server-options.html#server-proxy)을 설정할 수 있습니다.
+
+server.proxy를 사용하면 브라우저의 요청 → 프록시 서버 → 서버로 전달 되며, 프록시 서버에서 설정한 도메인으로 변환하여 서버에 API 요청을 하게 됩니다.
+
+```tsx
+// vite.config.ts
+
+import { defineConfig, loadEnv } from 'vite';
+import react from '@vitejs/plugin-react-swc';
+import tsconfigPaths from 'vite-tsconfig-paths';
+
+// https://vitejs.dev/config/
+export default ({ mode }) => {
+  const isDevelop = mode === 'development';
+  process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
+
+  return defineConfig({
+    plugins: [react(), tsconfigPaths()],
+    server: isDevelop
+      ? {
+          proxy: {
+            '/api': {
+              target: process.env.VITE_SERVER_URL,
+              changeOrigin: true,
+              secure: false,
+            },
+          },
+        }
+      : undefined,
+  });
+};
+```
+
+일반적으로 production 환경에서는 도메인이 같기 때문에 proxy를 사용하지 않습니다.
+
+따라서, 위의 설정을 예시로 들어 `http://localhost:5173/api/hello` 라는 URL로 요청을 보낼 때 다음과 같은 과정이 진행됩니다.
+
+1. 클라이언트의 요청 URL이 `/api`로 시작되므로 해당 프록시 설정이 적용
+2. 프록시는 `changeOption` 에 의하여 HTTP 요청 헤더의 Host 값을 `https://example.com` 으로 변경
+3. 프록시는 최종적으로 이 요청을 `https://example.com` 라는 URL로 `target` 서버에 전달
+
