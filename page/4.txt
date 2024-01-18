@@ -1,15 +1,263 @@
 2:I[8451,["438","static/chunks/438-20a73b8af0ca1535.js","411","static/chunks/app/page/%5Bpage%5D/page-10f5b8e52537b5e8.js"],""]
-7:I[5250,["438","static/chunks/438-20a73b8af0ca1535.js","411","static/chunks/app/page/%5Bpage%5D/page-10f5b8e52537b5e8.js"],""]
-8:I[5613,[],""]
-a:I[1778,[],""]
-b:I[5935,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],""]
-c:I[4840,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],"Providers"]
-d:"$Sreact.suspense"
-e:I[6005,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],"NoSSR"]
-f:I[286,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],""]
-10:I[1749,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],"Image"]
-11:I[9137,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],""]
-3:T2416,
+8:I[5250,["438","static/chunks/438-20a73b8af0ca1535.js","411","static/chunks/app/page/%5Bpage%5D/page-10f5b8e52537b5e8.js"],""]
+9:I[5613,[],""]
+b:I[1778,[],""]
+c:I[5935,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],""]
+d:I[4840,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],"Providers"]
+e:"$Sreact.suspense"
+f:I[6005,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],"NoSSR"]
+10:I[286,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],""]
+11:I[1749,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],"Image"]
+12:I[9137,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],""]
+3:T1f48,
+**[유동균님의 강의](https://www.inflearn.com/course/%EC%9B%B9-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EB%A6%AC%EC%95%A1%ED%8A%B8-1)를 보며 정리한 글 입니다.**
+
+---
+
+### 1\. 구글 개발자 도구 Audits(LightHouse) 툴을 이용한 페이지 검사
+
+<img src="/assets/blog/javaScript/web-optimization1.png" width="100%" alt="post image"/>
+<img src="/assets/blog/javaScript/web-optimization2.png" width="100%" alt="post image"/>
+
+**Opportunities** = 리소스의 관점(로딩성능)
+
+**Diagnostics** = 페이지의 실행 관점(렌더링)
+
+---
+
+### 2\. 이미지 사이즈 최적화 - 로딩 성능
+
+<img src="/assets/blog/javaScript/web-optimization3.png" width="100%" alt="post image"/>
+
+실제 이미지와 렌더링된 이미지의 크기가 다르다
+
+보통 이미지는 x2의 이미지를 사용
+
+api를 통해 받아온 이미지를 조절하려면?
+
+**Image CDN**(image processing Contents Delivery Network) - 이미지 가공 → 소비자
+
+CDN 구축은 진행하지 않았다.
+
+---
+
+### 3\. performance
+
+크롬 개발자도구 -> 성능에서 새로고침을 누르면 페이지의 작업을 분석해준다.
+
+<img src="/assets/blog/javaScript/web-optimization4.png" width="100%" alt="post image"/>
+<img src="/assets/blog/javaScript/web-optimization5.png" width="100%" alt="post image"/>
+
+1.  HTML파싱
+2.  JS 로드
+3.  첫 페인팅 이후 API 호출
+
+- 리액트는 프레임차트에서 각 컴포넌트마다 실행되는 시간이 보여진다.
+
+---
+
+### 4\. Route-based code Splitting
+
+코드 스플릿팅은 webpack, rollup 등과 같은 모듈 번들러를 이용하여 만들어진 하나의 번들 파일을 여러 개의 번들 파일로 나누는 것을 의미한다.
+
+하나의 번들파일을 여러개로 나누면 그만큼 로드 속도가 빨라진다.
+
+```js
+import React, {Suspense, lazy} from 'react'
+import { Switch, Route } from 'react-router-dom'
+import './App.css'
+// import ListPage from './pages/ListPage/index'
+// import ViewPage from './pages/ViewPage/index'
+
+const ListPage = lazy(() => import('./pages/ListPage/index'))
+const ViewPage = lazy(() => import('./pages/ViewPage/index'))
+
+function App() {
+  return (
+    <div className="App">
+        <Suspense fallback={<div>로딩 중...</div>}>
+          <Switch>
+            <Route path="/" component={ListPage} exact />
+            <Route path="/view/:id" component={ViewPage} exact />
+          </Switch>
+        </Suspense>
+    </div>
+  )
+}
+
+export default App
+```
+
+import()를 **lazy**라는 함수 안에 넣고, **Suspense**라는 컴포넌트로 관리를 해줄 수 있다.
+
+데이터가 로딩중에 유저에게 비어있는 컴포넌트가 보이게 되는데, Suspense를 사용해서 이 로딩중인 상태일 때 다른 컴포넌트를 보여줄 수 있다.
+
+Suspense는 fallback을 받아 import하는 도중에 띄어준다.
+
+페이지가 로드될 때 그 페이지 안에서 보이지 않는 컴포넌트가 존재할 수 있는데, 이 부분을 스플리팅해 관리 할 수도 있다.
+
+---
+
+### 5\. 애니메이션 최적화
+
+일반적인 모니터는 초당 60FPS, 브라우저도 초당 60FPS로 화면을 그리게 된다.
+
+여기서 브라우저가 60FPS 아래로 그리게 된다면 쟁크 현상이 발생함.
+
+<img src="/assets/blog/javaScript/web-optimization6.png" width="100%" alt="post image"/>
+
+1. DOM + CSSOM
+
+<img src="/assets/blog/javaScript/web-optimization7.png" width="100%" alt="post image"/>
+
+2. Render Tree
+
+<img src="/assets/blog/javaScript/web-optimization8.png" width="100%" alt="post image"/>
+
+위 DOM과 CSSOM을 조합해 RenderTree를 만들어 낸다.
+
+3. Layout
+
+<img src="/assets/blog/javaScript/web-optimization9.png" width="100%" alt="post image"/>
+
+위치나 크기를 계산해 화면에 레이아웃을 그린다.
+
+4. Paint
+
+이렇게 그려진 레이아웃위에 색을 채워넣음
+
+5. Composite
+
+<img src="/assets/blog/javaScript/web-optimization10.png" width="100%" alt="post image"/>
+
+각 레이어들을 합성하는 과정
+
+이 전체의 과정을 Critical Rendering Path, Pixel Pipeline 이라고 부른다.
+
+이 완성된 상태에서 변화가 생긴다면 처음으로 돌아가 다시 이 전체의 과정을 거치게 된다.
+
+- width, height가 변경되면, **1 -> 2 -> 3 -> 4 -> 5** 모두 실행되게 된다 **(Reflow)**
+
+- 크기나 위치가 아니라 color, background-color(색깔)이 변경됐을땐 **1 -> 2 -> 4 -> 5** **(Repaint)**
+
+- transform, opacity 등(GPU가 관여하는 속성) 변경일 때 **1 -> 2 -> 5**
+
+따라서 transform, opacity 등(GPU가 관여하는 속성)을 사용하는게 가장 빠르고 끊김없이 보여줄 수 있다.
+
+<img src="/assets/blog/javaScript/web-optimization11.png" width="100%" alt="post image"/>
+
+---
+
+### 6\. 컴포넌트 Lazy Loading, Preload
+
+위에서 했던것 처럼 이미지를 보여주는 모달만 따로 스플릿팅 할 수있다.
+
+```js
+import React, { useState, Suspense, lazy } from 'react'
+import styled from 'styled-components'
+import Header from './components/Header'
+import InfoTable from './components/InfoTable'
+import SurveyChart from './components/SurveyChart'
+import Footer from './components/Footer'
+
+const LazyImageModal = lazy(() => import('./components/ImageModal'))
+
+function App() {
+    const [showModal, setShowModal] = useState(false)
+
+    return (
+        <div className="App">
+            <Header />
+            <InfoTable />
+            <ButtonModal onClick={() => { setShowModal(true) }}>올림픽 사진 보기</ButtonModal>
+            <SurveyChart />
+            <Footer />
+            <Suspense fallback={null}>
+                {showModal ? <LazyImageModal closeModal={() => { setShowModal(false) }} /> : null}
+            </Suspense>
+        </div>
+    )
+}
+```
+
+#### Lazy Loading의 단점
+
+<img src="/assets/blog/javaScript/web-optimization12.png" width="100%" alt="post image"/>
+
+우리가 모달을 클릭한순간 모달에 관련된 파일을 불러오고 JS를 Evaluate한다.
+
+이게 끝나고 실제로 모달을 띄우는 코드가 실행된다.
+
+최초 페이지에서는 성능이 조금 빨라졌지만 모달을 띄울 때는 오히려 성능이 더 느려졌다.
+
+#### **\- 컴포넌트 Preload**
+
+<img src="/assets/blog/javaScript/web-optimization13.png" width="100%" alt="post image"/>
+
+이를 개선하기 위해서 모달을 열기 이전에 모달과 관련된 코드를 미리 로드해 둔다.
+
+문제는 사용자가 모달을 언제 클릭할지 모르기 때문에 언제 미리 로드할지 애매하다.
+
+#### 타이밍
+
+1. 버튼 위에 마우스를 올려 놨을 때
+
+```js
+const handleMouseEnter = () => {
+    const Component = import('./components/ImageModal')
+}
+<ButtonModal onClick={() => { setShowModal(true) }} onMouseEnter={handleMouseEnter}>올림픽 사진 보기</ButtonModal>
+```
+
+<img src="/assets/blog/javaScript/web-optimization14.png" width="100%" alt="post image"/>
+
+2. 최초 페이지 로드가 되고, 모든 컴포넌트의 마운트가 끝났을 때(ComponentDidMount)
+
+<img src="/assets/blog/javaScript/web-optimization15.png" width="100%" alt="post image"/>
+
+```js
+useEffect(() => {
+    const Component = import('./components/ImageModal')
+}, [])
+```
+
+지금은 단일 컴포넌트를 미리 import 하지만 여러 컴포넌트를 Preload해줘야 할 때는
+
+```js
+function lazyWithPreload(importFunction){
+    const Component = React.lazy(importFunction)
+    Component.preload = importFunction
+    return Component
+}
+
+const LazyImageModal = lazyWithPreload(() => import('./components/ImageModal'))
+```
+
+```js
+useEffect(() => {
+    LazyImageModal.preload()
+}, [])
+```
+
+처럼 사용할 수 있다.
+
+#### **\- 이미지 Preload**
+
+**new Image()**
+
+```js
+useEffect(() => {
+    LazyImageModal.preload()
+
+    const img = new Image()
+    img.src = 'url'
+}, [])
+```
+
+주의할점은 이미지는 모듈과 다르게 필요할 때 마다 그때그때 매번 보내기 때문에
+
+사용하는 이미지에 캐시가 제대로 걸려있는지 확인할 필요가 있다.
+4:T2416,
 
 ####
 **[Svelte vs React: Ending the Debate](https://massivepixel.io/blog/svelte-vs-react/ "Svelte vs React: Ending the Debate")를 읽으며 정리한 글입니다.**
@@ -162,7 +410,7 @@ GZIPPED(압축된) 버전의 리액트는 **42.2KB**(ReactDOM포함), 스벨트�
 하지만 스벨트는 아직 갈 길이 멀다. 지금까지는 인터넷 연결이 낮거나, 블로그, 포트폴리오 등 단순히 개인 웹사이트를 만드는 단일 페이지 애플리케이션을 구축하는데 사용하는 것이 좋다.
 
 또 큰 회사들의 기술 스택을 스벨트로 교체하기에는 많은 시간이 필요할 것이며 스벨트의 개발자들의 수요 또한 거의 없다.
-4:T1085,
+5:T1085,
 # 렌더링 최적화
 
 ### 1\. 컴포넌트를 맵핑할때는 key값으로 Index를 사용하지 말자
@@ -309,7 +557,7 @@ useMemo는 리턴되는 값을 memoize 시키는 반면에, useCallback은 함�
     {...}
   }, [users]);
 ```
-5:T1f82,
+6:T1f82,
 [리액트 문서](https://beta.reactjs.org/)를 정독하며 정리한 글
 영어문서라 조금 힘들었다...
 
@@ -564,7 +812,7 @@ function FilterableProductTable({ products }) {
 ```
 
 
-6:T1c8d,
+7:T1c8d,
 ## React Hook
 
 React로 개발할 땐 클래스형 컴포넌트 보다 React 16.8 부터 도입된 Hook 기반 함수형 컴포넌트를 더 선호하여 개발하는 것 같다.
@@ -801,7 +1049,7 @@ function useEffect(cb, depArray) {
 [Deep dive: How do React hooks really work?](https://www.netlify.com/blog/2019/03/11/deep-dive-how-do-react-hooks-really-work/)
 
 [Getting Closure on React Hooks](https://rinae.dev/posts/getting-closure-on-react-hooks-summary)
-9:["page","4","d"]
-0:["-HMzgbA-QKbEMks_QDBBI",[[["",{"children":["page",{"children":[["page","4","d"],{"children":["__PAGE__?{\"page\":\"4\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["page",{"children":[["page","4","d"],{"children":["__PAGE__",{},["$L1",["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L2",null,{"posts":{"posts":[{"content":"$3","data":{"title":"스벨트와 리액트","date":"$D2021-12-12T00:00:00.000Z","description":"스벨트와 리액트에 대해 정리한 글","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-react"},{"content":"$4","data":{"title":"React 처럼 생각하기(2)","date":"$D2021-12-12T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"thinking-in-react-2"},{"content":"$5","data":{"title":"React 처럼 생각하기","date":"$D2021-11-20T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"thinking-in-react"},{"content":"$6","data":{"title":"React Hook의 동작","date":"$D2021-11-07T00:00:00.000Z","description":"React Hook의 동작에 대해","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"react-hook"}],"total":34},"page":"4","category":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L7",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (31)"}]}],["$","li","study",{"children":["$","$L7",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$L7",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}],null]]},["$","$L8",null,{"parallelRouterKey":"children","segmentPath":["children","page","children","$9","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$La",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},["$","$L8",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$La",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[null,["$","$Lb",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$Lb",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_471caf","children":["$","$Lc",null,{"children":[["$","$d",null,{"fallback":null,"children":["$","$Le",null,{"children":["$","$Lf",null,{}]}]}],[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b-[1px] border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L7",null,{"href":"/","children":["$","$L10",null,{"src":"/assets/icons/been-logo.svg","width":60,"height":56,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L7",null,{"href":"/about","children":"About"}]}]]}],["$","$d",null,{"fallback":null,"children":["$","$Le",null,{"children":["$","$L11",null,{}]}]}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L8",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$La",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]]}]}]]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/f02a732008014100.css","precedence":"next","crossOrigin":""}]],"$L12"]]]]
-12:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Been blog - 4"}],["$","meta","3",{"name":"description","content":"Been dev-note"}],["$","meta","4",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","5",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","meta","6",{"property":"og:title","content":"Been blog - 4"}],["$","meta","7",{"property":"og:description","content":"Been dev-note - 4"}],["$","meta","8",{"property":"og:url","content":"https://wonbeenna.github.io/page/4"}],["$","meta","9",{"property":"og:site_name","content":"Been blog"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 4"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 4"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","meta","23",{"name":"next-size-adjust"}]]
+a:["page","4","d"]
+0:["Lw08DNgYJb1rmMfBjZDd6",[[["",{"children":["page",{"children":[["page","4","d"],{"children":["__PAGE__?{\"page\":\"4\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["page",{"children":[["page","4","d"],{"children":["__PAGE__",{},["$L1",["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L2",null,{"posts":{"posts":[{"content":"$3","data":{"title":"웹성능 최적화(1)","date":"$D2022-01-01T00:00:00.000Z","description":"웹성능 최적화1","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"web-optimization"},{"content":"$4","data":{"title":"스벨트와 리액트","date":"$D2021-12-12T00:00:00.000Z","description":"스벨트와 리액트에 대해 정리한 글","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-react"},{"content":"$5","data":{"title":"React 처럼 생각하기(2)","date":"$D2021-12-12T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"thinking-in-react-2"},{"content":"$6","data":{"title":"React 처럼 생각하기","date":"$D2021-11-20T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"thinking-in-react"},{"content":"$7","data":{"title":"React Hook의 동작","date":"$D2021-11-07T00:00:00.000Z","description":"React Hook의 동작에 대해","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"react-hook"}],"total":35},"page":"4","category":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L8",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (32)"}]}],["$","li","study",{"children":["$","$L8",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$L8",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}],null]]},["$","$L9",null,{"parallelRouterKey":"children","segmentPath":["children","page","children","$a","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lb",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},["$","$L9",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lb",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[null,["$","$Lc",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$Lc",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_471caf","children":["$","$Ld",null,{"children":[["$","$e",null,{"fallback":null,"children":["$","$Lf",null,{"children":["$","$L10",null,{}]}]}],[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b-[1px] border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L8",null,{"href":"/","children":["$","$L11",null,{"src":"/assets/icons/been-logo.svg","width":60,"height":56,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L8",null,{"href":"/about","children":"About"}]}]]}],["$","$e",null,{"fallback":null,"children":["$","$Lf",null,{"children":["$","$L12",null,{}]}]}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L9",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lb",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]]}]}]]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/f02a732008014100.css","precedence":"next","crossOrigin":""}]],"$L13"]]]]
+13:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Been blog - 4"}],["$","meta","3",{"name":"description","content":"Been dev-note"}],["$","meta","4",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","5",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","meta","6",{"property":"og:title","content":"Been blog - 4"}],["$","meta","7",{"property":"og:description","content":"Been dev-note - 4"}],["$","meta","8",{"property":"og:url","content":"https://wonbeenna.github.io/page/4"}],["$","meta","9",{"property":"og:site_name","content":"Been blog"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 4"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 4"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","meta","23",{"name":"next-size-adjust"}]]
 1:null
