@@ -6,8 +6,109 @@ e:I[5613,[],""]
 12:I[4840,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],"Providers"]
 13:"$Sreact.suspense"
 14:I[6005,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],"NoSSR"]
+15:I[286,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],""]
 16:I[1749,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],"Image"]
-3:T12dc,
+17:I[9137,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],""]
+3:Tcc7,
+로컬 개발환경에서 API 요청시 CORS 에러로 API 사용이 어려울 수 있습니다.
+
+이 글은 Vite로 구성된 로컬 개발환경에서 CORS 문제를 해결하는 방식을 작성합니다.
+
+---
+
+### env
+
+먼저 [환경변수 설정](https://ko.vitejs.dev/guide/env-and-mode.html#modes)이 필요합니다.
+
+```shell
+.env                # 모든 상황에서 사용될 환경 변수
+.env.local          # 모든 상황에서 사용되나, 로컬 개발 환경에서만 사용될(Git에 의해 무시될) 환경 변수
+.env.[mode]         # 특정 모드에서만 사용될 환경 변수
+.env.[mode].local   # 특정 모드에서만 사용되나, 로컬 개발 환경에서만 사용될(Git에 의해 무시될) 환경 변수
+```
+
+위 환경 변수는 따로 커스텀이 가능하지만, 기본적으로 Vite script 명령은 dev → development 모드로 동작하고, build → production 모드로 동작합니다.
+
+따라서 npm run dev로 스크립트를 실행하면 Vite는 .env.development에 정의된 환경변수를 사용합니다.
+
+```shell
+// .env.development
+
+VITE_BASE_URL=/api
+VITE_SERVER_URL=https://dev.example.com/
+```
+
+```shell
+// .env.production
+
+VITE_BASE_URL=/api
+VITE_SERVER_URL=https://example.com/
+```
+
+---
+
+### fetch
+
+[axios](https://axios-http.com/kr/docs/intro) 라이브러리를 사용해 비동기 HTTP 요청을 합니다.
+
+```tsx
+import axios from 'axios';
+
+const baseURL = import.meta.env.VITE_BASE_URL;
+
+export const axiosInstance = axios.create({
+  baseURL,
+});
+```
+
+위에서 설정한 환경변수에서 BASE_URL을 불러와 axios 기본 설정을 진행합니다.
+
+---
+
+### proxy
+
+Vite는 vite.config.ts에서 server.proxy를 사용해 [Server Options](https://ko.vitejs.dev/config/server-options.html#server-proxy)을 설정할 수 있습니다.
+
+server.proxy를 사용하면 브라우저의 요청 → 프록시 서버 → 서버로 전달 되며, 프록시 서버에서 설정한 도메인으로 변환하여 서버에 API 요청을 하게 됩니다.
+
+```tsx
+// vite.config.ts
+
+import { defineConfig, loadEnv } from 'vite';
+import react from '@vitejs/plugin-react-swc';
+import tsconfigPaths from 'vite-tsconfig-paths';
+
+// https://vitejs.dev/config/
+export default ({ mode }) => {
+  const isDevelop = mode === 'development';
+  process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
+
+  return defineConfig({
+    plugins: [react(), tsconfigPaths()],
+    server: isDevelop
+      ? {
+          proxy: {
+            '/api': {
+              target: process.env.VITE_SERVER_URL,
+              changeOrigin: true,
+              secure: false,
+            },
+          },
+        }
+      : undefined,
+  });
+};
+```
+
+일반적으로 production 환경에서는 도메인이 같기 때문에 proxy를 사용하지 않습니다.
+
+따라서, 위의 설정을 예시로 들어 `http://localhost:5173/api/hello` 라는 URL로 요청을 보낼 때 다음과 같은 과정이 진행됩니다.
+
+1. 클라이언트의 요청 URL이 `/api`로 시작되므로 해당 프록시 설정이 적용
+2. 프록시는 `changeOption` 에 의하여 HTTP 요청 헤더의 Host 값을 `https://example.com` 으로 변경
+3. 프록시는 최종적으로 이 요청을 `https://example.com` 라는 URL로 `target` 서버에 전달
+
+4:T12dc,
 ## 바벨이란?
 바벨은 자바스크립트 컴파일러이다.
 사실 자세히 보면 컴파일러보다는 트랜스파일러에 가깝다.
@@ -191,7 +292,7 @@ module.exports = {
 js 확장자로 끝나는 모든 파일에 babel-loader를 적용한다.
 또 node_modules 디렉토리는 제외한다.
 
-4:T2f94,
+5:T2f94,
 ## 웹팩(기본)배경
 - 웹팩은 모던 javascript 어플리케이션을 위한 정적 모듈 번들러이다. 번들러는 웹팩 이외에도 다양한게 있는데 (rollup , esbuild , vite , parcel 등) 웹팩이 가장 오래되었기도하고 많이 사용하고 있기 때문에 이번 기회에 배워보기로 했다.
 
@@ -624,7 +725,7 @@ module.exports = {
 하지만 기본적인 웹팩으로 설정되어있고, 직접 커스텀하려면 eject를 해야한다.
 
 이번 기회에 웹팩의 원리와 기본적인 사용방법을 알아보았다.
-5:Te9a,
+6:Te9a,
 ### React Native geolocation
 
 사이드 프로젝트에 위치정보를 받아와야 하는 기능이 필요해 지오로케이션을 받아 오도록 했다.
@@ -751,7 +852,7 @@ const MyApp = () => {
 다음 포스팅에서는 받아온 위치정보를 webview로 넘겨주는 방법에 대해 알아보자!
 
 
-6:T9c4,
+7:T9c4,
 ### 딥링크
 - 딥링크는 모바일에서 특정 페이지에 도달 할 수 있는 링크를 의미한다.
 - 웹이나 sns등 링크를 클릭했을때 해당 어플리케이션 앱으로 바로 이동하는데, 이런 방식을 모바일 딥링크라 하고 특정한 앱 스크린으로 이동하는 것
@@ -849,7 +950,7 @@ useEffect(() => {
   return () => Linking.removeAllListeners('url');
 }, [])
 ```
-7:T2147,
+8:T2147,
 이전에 [스벨트킷으로 블로그 만들어보기](https://wonbeenna.github.io/blog/javaScript/svelte-blog) 에서 svelte kit으로 블로그를 만들었었다.
 
 그때는 svelte 공부겸 블로그를 만들었지만, 업무에서 주로 사용하는 스택인 react와 next.js를 사용하여 블로그를 만들어보려고 한다.
@@ -1198,7 +1299,7 @@ npm i @giscus/react
 
 
 
-8:T6ae,
+9:T6ae,
 JSON 웹 토큰(JWT)
 
 일반적으로 **헤더.페이로드.서명** 으로 구성되어 있다.
@@ -1257,7 +1358,7 @@ token을 split해 1번째 데이터에 해당하는 부분을 가져온 다음
 node에서 지원하는 Buffer 객체를 사용해 바이너리로 변환
 
 base64로 인코딩한 후 JSON으로 파싱한다
-9:Tfb3,
+a:Tfb3,
 얼마전 기업과제를 진행했다. Audio 객체를 이용한 음악 재생이었다.
 
 https://developer.mozilla.org/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API
@@ -1386,7 +1487,7 @@ progressbar를 클릭했을 때는 해당 위치부터 audio를 재생해야했�
 - e.currentTarget.offsetWidth = progressbar의 전체 너비
 
 
-a:Te25,
+b:Te25,
 ### 디바운싱과 쓰로틀링
 
 
@@ -1495,7 +1596,7 @@ hook이 실행되면 lastRan과 현재시간을 비교한다.
 
 
 
-b:Tc4f,
+c:Tc4f,
 ## GraphQL 사용
 
 Apollo client를 사용합니다.
@@ -1635,105 +1736,7 @@ const ORDER_QUERY = gql`
 
 
 
-c:Tc85,
-대기열 → 캐싱 → DNS → 라우팅 → ARP → 초기연결 → 컨텐츠 다운로드 → 브라우저 렌더링
-
-이런 과정을 비캡슐화, 캡슐화 과정을 거침
-
-### 대기열
-
-### 캐싱
-
-- 공유프록시캐시
-- 브라우저 캐시
-
-요청된 값의 결과값을 저장하고 다시 요청하는 기술
-
-브라우저는 IP주소를 찾기 위해 캐시된 DNS 기록을 확인
-
-### DNS 조회
-
-- 브라우저가 IP 주소를 확인하는 단계
-- 도메인 이름과 IP주소를 매핑해주는 서버
-- `www.naver.com` ← 반대로 확인
-- root (.) → .com → naver.com → `www.naver.com`
-
-### 라우팅
-
-- IP주소를 찾아가는 과정
-- 홉 바이 홉 통신
-
-### ARP (**IP 주소를 물리적 네트워크 주소로 대응(bind)시키기 위해 사용되는 프로토콜)**
-
-- ARP를 통해 MAC주소를 찾아 MAC주소를 기반으로 통신
-- 논리적 주소 → 물리적 주소
-- 장치 ↔ 장치 (IP주소를 → MAC주소)
-- 실제 서버에 도달
-
-### 초기 연결
-
-### 콘텐츠 다운로드
-
-- 브라우저는 서버로부터 응답을 수신
-
-### 브라우저 렌더링
-
-- DOM 트리 구축
-- HTML, CSS가 각각 파서로 해석되다가 DOM트리를 구축한다.
-- html, body, div 등 tree형태로
-- 렌더트리와 렌더레이어 생성
-- CSSOM 트리가 생성되고 미리 만들어 놓은 DOM트리 내에 있는 노드와 함께 스타일이 생성
-- 렌더레이어 대상으로 Layout 설정
-- 렌더레이어 대상으로 칠하기 (paint 과정)
-- 레이어 합치기
-- 각각의 레이어들이 합쳐짐
-
-일반적인 모니터는 초당 60FPS, 브라우저도 초당 60FPS로 화면을 그리게 된다.
-
-여기서 브라우저가 60FPS 아래로 그리게 된다면 쟁크 현상이 발생함.
-
-<img src="/assets/blog/javaScript/web-optimization6.png" width="100%" alt="web-optimization"/>
-
-1. DOM + CSSOM
-
-<img src="/assets/blog/javaScript/web-optimization7.png" width="100%" alt="web-optimization"/>
-
-1. Render Tree
-
-<img src="/assets/blog/javaScript/web-optimization8.png" width="100%" alt="web-optimization"/>
-
-위 DOM과 CSSOM을 조합해 RenderTree를 만들어 낸다.
-
-1. Layout
-
-<img src="/assets/blog/javaScript/web-optimization9.png" width="100%" alt="web-optimization"/>
-
-위치나 크기를 계산해 화면에 레이아웃을 그린다.
-
-1. Paint
-
-이렇게 그려진 레이아웃위에 색을 채워넣음
-
-1. Composite
-
-<img src="/assets/blog/javaScript/web-optimization10.png" width="100%" height="350" alt="web-optimization"/>
-
-각 레이어들을 합성하는 과정
-
-이 전체의 과정을 Critical Rendering Path, Pixel Pipeline 이라고 부른다.
-
-이 완성된 상태에서 변화가 생긴다면 처음으로 돌아가 다시 이 전체의 과정을 거치게 된다.
-
-- width, height가 변경되면, **1 -> 2 -> 3 -> 4 -> 5** 모두 실행되게 된다 **(Reflow)**
-- 크기나 위치가 아니라 color, background-color(색깔)이 변경됐을땐 **1 -> 2 -> 4 -> 5** **(Repaint)**
-- transform, opacity 등(GPU가 관여하는 속성) 변경일 때 **1 -> 2 -> 5**
-
-따라서 transform, opacity 등(GPU가 관여하는 속성)을 사용하는게 가장 빠르고 끊김없이 보여줄 수 있다.
 f:["page","1","d"]
-0:["-HMzgbA-QKbEMks_QDBBI",[[["",{"children":["page",{"children":[["page","1","d"],{"children":["__PAGE__?{\"page\":\"1\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["page",{"children":[["page","1","d"],{"children":["__PAGE__",{},["$L1",["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L2",null,{"posts":{"posts":[{"content":"$3","data":{"title":"바벨 사용해보기","date":"$D2023-12-01T00:00:00.000Z","description":"바벨 기본 동작과 사용방법","category":"javaScript","titleImage":"/assets/postIcon/babel-icon.svg"},"slug":"babel"},{"content":"$4","data":{"title":"웹팩 기본 사용법 (1)","date":"$D2023-11-30T00:00:00.000Z","description":"처음 접해보는 웹팩의 원리와 기본 사용 방법","category":"javaScript","titleImage":"/assets/postIcon/webpack-icon.svg"},"slug":"webpack-1"},{"content":"$5","data":{"title":"React Native geolocation","date":"$D2023-10-25T00:00:00.000Z","description":"React Native 위치정보 받아오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"rn-geolocation"},{"content":"$6","data":{"title":"React Native Deep Linking","date":"$D2023-10-17T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"rn-deep-link"},{"content":"$7","data":{"title":"Next.js 블로그 만들기","date":"$D2023-10-09T00:00:00.000Z","description":"Next.js로 블로그 만들기","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-blog"},{"content":"$8","data":{"title":"jwt 토큰 decode 하기","date":"$D2023-08-31T00:00:00.000Z","description":"jwt 토큰 decode 함수","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"jwt-decode"},{"content":"$9","data":{"title":"Audio객체를 이용한 음악 재생","date":"$D2023-05-27T00:00:00.000Z","description":"Audio객체를 사용한 기업 과제 구현","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"audio"},{"content":"$a","data":{"title":"디바운싱과 쓰로틀링","date":"$D2023-05-13T00:00:00.000Z","description":"디바운싱과 쓰로틀링의 차이를 구분하고 hook으로 구현","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"debouce-throttle"},{"content":"$b","data":{"title":"GraphQl 써보기(1)","date":"$D2023-04-29T00:00:00.000Z","description":"GraphQl, Apollo Client를 사용","category":"javaScript","titleImage":"/assets/postIcon/graphql.svg"},"slug":"graphql-1"},{"content":"$c","data":{"title":"브라우저에 url을 검색하면?","date":"$D2023-02-25T00:00:00.000Z","description":"사내 스터디","category":"study","titleImage":"/assets/postIcon/javascript.png"},"slug":"browser"}],"total":34},"page":"1","category":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$Ld",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (31)"}]}],["$","li","study",{"children":["$","$Ld",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$Ld",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}],null]]},["$","$Le",null,{"parallelRouterKey":"children","segmentPath":["children","page","children","$f","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L10",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},["$","$Le",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L10",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[null,["$","$L11",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L11",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_471caf","children":["$","$L12",null,{"children":[["$","$13",null,{"fallback":null,"children":["$","$L14",null,{"children":"$L15"}]}],[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b-[1px] border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$Ld",null,{"href":"/","children":["$","$L16",null,{"src":"/assets/icons/been-logo.svg","width":60,"height":56,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$Ld",null,{"href":"/about","children":"About"}]}]]}],["$","$13",null,{"fallback":null,"children":["$","$L14",null,{"children":"$L17"}]}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$Le",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L10",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]]}]}]]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/f02a732008014100.css","precedence":"next","crossOrigin":""}]],"$L18"]]]]
-19:I[286,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],""]
-1a:I[9137,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],""]
-15:["$","$L19",null,{}]
-17:["$","$L1a",null,{}]
+0:["Lw08DNgYJb1rmMfBjZDd6",[[["",{"children":["page",{"children":[["page","1","d"],{"children":["__PAGE__?{\"page\":\"1\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["page",{"children":[["page","1","d"],{"children":["__PAGE__",{},["$L1",["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L2",null,{"posts":{"posts":[{"content":"$3","data":{"title":"Vite proxy 설정","date":"$D2024-01-18T00:00:00.000Z","description":"Vite 로컬환경에서 CORS 문제 해결하기","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"vite-proxy"},{"content":"$4","data":{"title":"바벨 사용해보기","date":"$D2023-12-01T00:00:00.000Z","description":"바벨 기본 동작과 사용방법","category":"javaScript","titleImage":"/assets/postIcon/babel-icon.svg"},"slug":"babel"},{"content":"$5","data":{"title":"웹팩 기본 사용법 (1)","date":"$D2023-11-30T00:00:00.000Z","description":"처음 접해보는 웹팩의 원리와 기본 사용 방법","category":"javaScript","titleImage":"/assets/postIcon/webpack-icon.svg"},"slug":"webpack-1"},{"content":"$6","data":{"title":"React Native geolocation","date":"$D2023-10-25T00:00:00.000Z","description":"React Native 위치정보 받아오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"rn-geolocation"},{"content":"$7","data":{"title":"React Native Deep Linking","date":"$D2023-10-17T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"rn-deep-link"},{"content":"$8","data":{"title":"Next.js 블로그 만들기","date":"$D2023-10-09T00:00:00.000Z","description":"Next.js로 블로그 만들기","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-blog"},{"content":"$9","data":{"title":"jwt 토큰 decode 하기","date":"$D2023-08-31T00:00:00.000Z","description":"jwt 토큰 decode 함수","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"jwt-decode"},{"content":"$a","data":{"title":"Audio객체를 이용한 음악 재생","date":"$D2023-05-27T00:00:00.000Z","description":"Audio객체를 사용한 기업 과제 구현","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"audio"},{"content":"$b","data":{"title":"디바운싱과 쓰로틀링","date":"$D2023-05-13T00:00:00.000Z","description":"디바운싱과 쓰로틀링의 차이를 구분하고 hook으로 구현","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"debouce-throttle"},{"content":"$c","data":{"title":"GraphQl 써보기(1)","date":"$D2023-04-29T00:00:00.000Z","description":"GraphQl, Apollo Client를 사용","category":"javaScript","titleImage":"/assets/postIcon/graphql.svg"},"slug":"graphql-1"}],"total":35},"page":"1","category":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$Ld",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (32)"}]}],["$","li","study",{"children":["$","$Ld",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$Ld",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}],null]]},["$","$Le",null,{"parallelRouterKey":"children","segmentPath":["children","page","children","$f","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L10",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},["$","$Le",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L10",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[null,["$","$L11",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L11",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_471caf","children":["$","$L12",null,{"children":[["$","$13",null,{"fallback":null,"children":["$","$L14",null,{"children":["$","$L15",null,{}]}]}],[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b-[1px] border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$Ld",null,{"href":"/","children":["$","$L16",null,{"src":"/assets/icons/been-logo.svg","width":60,"height":56,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$Ld",null,{"href":"/about","children":"About"}]}]]}],["$","$13",null,{"fallback":null,"children":["$","$L14",null,{"children":["$","$L17",null,{}]}]}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$Le",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L10",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]]}]}]]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/f02a732008014100.css","precedence":"next","crossOrigin":""}]],"$L18"]]]]
 18:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Been blog - 1"}],["$","meta","3",{"name":"description","content":"Been dev-note"}],["$","meta","4",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","5",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","meta","6",{"property":"og:title","content":"Been blog - 1"}],["$","meta","7",{"property":"og:description","content":"Been dev-note - 1"}],["$","meta","8",{"property":"og:url","content":"https://wonbeenna.github.io/page/1"}],["$","meta","9",{"property":"og:site_name","content":"Been blog"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 1"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 1"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","meta","23",{"name":"next-size-adjust"}]]
 1:null
