@@ -7,7 +7,7 @@ export const getCategories = (): {
 }[] => {
   const posts = getAllPost(undefined, { page: '1', limit: '-1' });
 
-  let uniqueCategories: any = {};
+  let uniqueCategories = {};
 
   posts.posts.forEach((post) => {
     if (uniqueCategories.hasOwnProperty(post.data.category)) {
