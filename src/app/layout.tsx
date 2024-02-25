@@ -6,7 +6,6 @@ import { defaultMetadata, defaultOpenGraph } from '@/utils/metadata';
 import Script from 'next/script';
 import { Providers } from '@/app/providers';
 import React from 'react';
-import dynamic from 'next/dynamic';
 
 const inter = Roboto({
   weight: ['300', '400', '500', '700', '900'],
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: defaultOpenGraph
 };
 
-const SnowFall = dynamic(() => import('@/components/SnowFall'), { ssr: false });
+// const SnowFall = dynamic(() => import('@/components/SnowFall'), { ssr: false });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -35,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </Script>
       <body suppressHydrationWarning className={inter.className}>
         <Providers>
-          <SnowFall />
+          {/*<SnowFall />*/}
           <Layout>{children}</Layout>
         </Providers>
       </body>
