@@ -1,13 +1,391 @@
-2:I[8451,["438","static/chunks/438-20a73b8af0ca1535.js","411","static/chunks/app/page/%5Bpage%5D/page-10f5b8e52537b5e8.js"],""]
-c:I[5250,["438","static/chunks/438-20a73b8af0ca1535.js","411","static/chunks/app/page/%5Bpage%5D/page-10f5b8e52537b5e8.js"],""]
+2:I[8451,["438","static/chunks/438-55d6a3410449957f.js","411","static/chunks/app/page/%5Bpage%5D/page-4aa0014340b67571.js"],""]
+c:I[5250,["438","static/chunks/438-55d6a3410449957f.js","411","static/chunks/app/page/%5Bpage%5D/page-4aa0014340b67571.js"],""]
 d:I[5613,[],""]
 f:I[1778,[],""]
-10:I[5935,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],""]
-11:I[4840,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],"Providers"]
-12:"$Sreact.suspense"
-13:I[6005,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],"NoSSR"]
-15:I[1749,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],"Image"]
-3:Tc85,
+10:I[5935,["438","static/chunks/438-55d6a3410449957f.js","185","static/chunks/app/layout-56af28789787dacc.js"],""]
+11:I[4840,["438","static/chunks/438-55d6a3410449957f.js","185","static/chunks/app/layout-56af28789787dacc.js"],"Providers"]
+12:I[1749,["438","static/chunks/438-55d6a3410449957f.js","185","static/chunks/app/layout-56af28789787dacc.js"],"Image"]
+13:"$Sreact.suspense"
+14:I[6005,["438","static/chunks/438-55d6a3410449957f.js","185","static/chunks/app/layout-56af28789787dacc.js"],"NoSSR"]
+3:Tfb3,
+얼마전 기업과제를 진행했다. Audio 객체를 이용한 음악 재생이었다.
+
+https://developer.mozilla.org/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API
+
+## Audio 객체
+웹에서 음악을 재생하기 위해서는 new Audio 객체를 생성하거나, `<audio>` 태그를 사용해 Audio 객체를 가져올 수도 있다.
+
+Audio 객체는 음악을 재생하고, 일시정지하고, 음악의 길이를 구하는 등의 기능을 제공한다.
+
+Audio 객체는 다음과 같이 생성한다.
+
+```jsx
+let audio = new Audio(url);
+```
+
+```jsx
+<audio src={url} />;
+```
+
+과제를 제출하고 알게 되었는데, new Audio 객체를 사용하면 화면 밖에서도 audio를 다룰 수 있기때문에 `audio`태그를 사용할 필요가 없었다.
+
+둘중 하나만 사용해 Audio를 다룰 수 있는 객체를 가져오면 된다.
+
+```javascript
+let audio = document.querySelector('audio');
+audio.play();
+audio.pause();
+```
+
+과제에서는 new Audio를 사용해 구현 하였다.
+```jsx
+  useEffect(() => {
+    setAudio(new Audio(url));
+}, [url, setAudio]);
+```
+먼저 server에서 받아온 Url을 state에 담아 주었고
+
+```jsx
+  useEffect(() => {
+    if (audio && isPlaying) {
+        audio?.play();
+    }
+}, [audio, isPlaying]);
+```
+
+리스트에서 음악을 선택하면 `isPlaying`이 true가 되고, `audio`가 생성되면 `audio.play()`를 실행한다.
+
+재생과 일시정지도 추가가 되어야 했다.
+
+```jsx
+const handlePlayButton = () => {
+    if (audio?.paused) {
+        return audio.play();
+    }
+    return audio?.pause();
+}
+```
+음악이 정지중일땐 play, 음악이 재생중일땐 pause를 실행한다.
+
+---
+
+음악이 재샐중일때 progress bar도 구현이 필요했다.
+
+```jsx
+const [rangeValue, setRange] = useState<number>(0);
+const [currentTime, setCurrentTime] = useState<string>('00:00');
+const [duration, setDuration] = useState<string>('00:00');
+
+<progress
+    className="progress"
+    value={Math.floor(rangeValue)}
+    max="100"
+    aria-valuemin={0}
+    aria-valuemax={100}
+    aria-valuenow={Math.floor(rangeValue)}
+    onClick={handleChangeProgressRange}
+/>
+```
+
+`rangeValue`는 progress bar의 value값을 나타내고, `currentTime`는 현재 재생중인 시간을 나타낸다.
+
+`duration`는 음악의 전체 길이를 나타낸다.
+
+재생시간과 음악의 전체 길이가 `00:00`으로 표시되었어야했기 때문에 format함수를 만들었고, eventListener를 통해 재생시간과 음악의 전체 길이를 구했다.
+
+```js
+export const getMusicTimeFormat = (time = 0) => {
+  let minutes = Math.floor((time % 3600) / 60)
+    .toString()
+    .padStart(2, '0');
+  let seconds = Math.floor(time % 60)
+    .toString()
+    .padStart(2, '0');
+
+  return minutes + ':' + seconds;
+};
+```
+```jsx
+  useEffect(() => {
+    audio?.addEventListener('timeupdate', () => {
+        setDuration(getMusicTimeFormat(audio.duration || 0));
+        setCurrentTime(getMusicTimeFormat(audio.currentTime));
+        setRange((audio?.currentTime / audio?.duration || 0) * 100);
+    });
+}, [audio]);
+````
+
+`timeupdate`이벤트는 음악이 재생중일때마다 발생한다.
+
+```js
+  const handleChangeProgressRange = (e: React.MouseEvent<HTMLProgressElement>) => {
+    if (audio) {
+        let clickPosition = e.pageX - e.currentTarget.offsetLeft;
+        let clickedValue = (clickPosition * e.currentTarget.max) / e.currentTarget.offsetWidth;
+        audio.currentTime = (parseInt(String(clickedValue), 10) / 100) * audio.duration;
+        setRange(parseInt(String(clickedValue), 10));
+    }
+};
+```
+progressbar를 클릭했을 때는 해당 위치부터 audio를 재생해야했다.
+`clickPosition`은 progressbar를 클릭한 위치를 나타내고, `clickedValue`는 progressbar의 value값을 나타낸다.
+
+- e.pageX = 브라우저 상의 마우스 클릭 위치
+- e.currentTarget.offsetLeft = progressbar의 x축(왼쪽) 위치
+- e.currentTarget.max = progressbar의 최대값
+- e.currentTarget.offsetWidth = progressbar의 전체 너비
+
+
+4:Te25,
+### 디바운싱과 쓰로틀링
+
+
+- 디바운싱: 연속으로 호출되는 함수들 중 가장 마지막 함수(또는 제일 처음)만 호출하도록 하는 것
+- 쓰로틀링: 함수가 연속적으로 실행되는 경우 현재 실행되고 있는 함수가 없는 경우에만 함수를 실행함
+
+예를들어 검색을 요구하는 API에 "test"를 검색한다고 가정한 경우, 일반적인 경우에는 t, e, s, t 각 글자를 입력할 때 마다 API가 호출이 된다.
+
+이런 경우 불필요한 요청이 서버에 부담을 줄 수가 있다.
+
+이 때 디바운싱을 사용하게 된다면, 가장 마지막인 글자가 입력되고, 하나의 단어가 완성되었을때 API에 요청을 할 수 있다.
+
+쓰로틀링인 경우에는 t를 입력했을 때 API요청이 발생하고, 이후 일정 시간동안은 아무 응답도 받지 않는다.
+정해진 시간이 모두 지나고난 뒤에 마지막으로 입력된 글자까지 요청이 가게 된다.
+즉 실행 횟수에 제한을 거는 것이다.
+
+### 디바운싱
+```tsx
+import { useEffect, useState } from 'react'
+
+function useDebounce<T>(value: T, delay?: number): T {
+  const [debouncedValue, setDebouncedValue] = useState<T>(value)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setDebouncedValue(value), delay || 500)
+
+    return () => {
+      clearTimeout(timer)
+    }
+  }, [value, delay])
+
+  return debouncedValue
+}
+
+export default useDebounce
+```
+```js
+import { ChangeEvent, useEffect, useState } from 'react'
+import { useDebounce } from 'usehooks-ts'
+
+export default function Component() {
+  const [value, setValue] = useState<string>('')
+  const debouncedValue = useDebounce<string>(value, 500)
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setValue(event.target.value)
+  }
+
+  // Fetch API (optional)
+  useEffect(() => {
+    // Do fetch here...
+    // Triggers when "debouncedValue" changes
+  }, [debouncedValue])
+
+  return (
+    <div>
+      <p>Value real-time: {value}</p>
+      <p>Debounced value: {debouncedValue}</p>
+
+      <input type="text" value={value} onChange={handleChange} />
+    </div>
+  )
+}
+```
+출처: [react-hook](https://usehooks-ts.com/react-hook/use-debounce)
+
+input feild에 값이 들어갈 때마다 onChange 이벤트가 트리거되고, hook으로 전달받은 value가 clearTimeout으로 초기화된 useEffect내부 setTimeout의 delay만큼 시간이 지난 후 debouncedValue로 return 된다.
+
+### 쓰로틀링
+```js
+import { useEffect, useRef, useState } from 'react';
+
+const useThrottle = (value, limit) => {
+    const [throttledValue, setThrottledValue] = useState(value);
+    const lastRan = useRef(Date.now());
+
+    useEffect(() => {
+        const handler = setTimeout(() => {
+            if (Date.now() - lastRan.current >= limit) {
+                setThrottledValue(value);
+                lastRan.current = Date.now();
+            }
+        }, limit - (Date.now() - lastRan.current));
+
+        return () => {
+            clearTimeout(handler);
+        };
+    }, [value, limit]);
+
+    return throttledValue;
+};
+
+export default useThrottle;
+```
+```js
+const [value, setValue] = useState('');
+{...}
+const throttleText = useThrottle(value, 1000);
+```
+hook이 실행되면 lastRan과 현재시간을 비교한다.
+
+만약 (Date.now() - lastRan.current) 즉, value가 입력된 시간이 limit보다 크다면 value를 throttledValue로 return하고, lastRan을 현재시간으로 초기화한다.
+
+만약 value가 입력된 시간이 limit보다 작다면 limit - value가 입력된 시간이 시간이 지난 후에 throttledValue로 return한다.
+
+
+
+
+5:Tc4f,
+## GraphQL 사용
+
+Apollo client를 사용합니다.
+
+Apollo Client는 GraphQL을 사용해 로컬 및 원격 데이터를 모두 관리할 수 있습니다. (상태 관리 라이브러리)
+
+---
+
+### React에 Apollo Client 연결
+```shell
+npm install @apollo/client graphql
+```
+
+index.ts 또는 App.ts 에서 작업을 진행합니다.
+```ts
+const client = new ApolloClient({
+  uri: "https://~/graphql",
+  cache: new InMemoryCache(),
+});
+```
+
+다음과 같이 ApolloClient를 초기화 하고 `uri`와 `cache` 인스턴스를 전달합니다.
+
+uri에 서버주소를 작성합니다. endpoint를 따로 지정하지 않았다면 `/graphql`이 됩니다.
+
+사내에서는 `proxy`를 사용하기 때문에 `endpoint`를
+```ts
+const client = new ApolloClient({
+  uri: '/api/graphql',
+  cache: new InMemoryCache()
+})
+```
+로 작성해주시면 됩니다.
+
+```ts
+function App() {
+  return (
+{...}
+        <ApolloProvider client={client}>
+            <DefaultRoutes />
+        </ApolloProvider>
+{...}
+  )
+}
+```
+react app에 전역으로 사용하기 위해서는 `ContextApi`를 사용하는 것 처럼 `ApolloProvider`로 앱을 감싸면 됩니다.
+
+---
+
+### 백엔드 데이터 읽기
+이제 `client`는 데이터를 가져올 준비가 되었습니다.
+
+<img src="/assets/blog/javaScript/graphql-2.png" width="49%" alt="post image"/>
+<img src="/assets/blog/javaScript/graphql-1.png" width="49%" alt="post image"/>
+
+`playground`에서 정의된 `schema`를 다운로드 받아 프로젝트 `root`에 위치시킵니다.
+
+```ts
+// const client = ...
+
+client
+  .query({
+    query: gql`
+      query {
+        getAdminOrderProducts {
+          data {
+            id
+            status
+          }
+        }
+      }
+    `
+  })
+  .then((response) => console.log(response))
+  .catch((error) => console.log(error))
+```
+
+간단하게 불러올 수 있는 방법입니다. playground에 정의된 query를 요청하면
+타입과 함께 요청한 쿼리들이 response에 담깁니다.
+
+<img src="/assets/blog/javaScript/graphql-3.png" width="49%" alt="post image"/>
+<img src="/assets/blog/javaScript/graphql-4.png" width="49%" alt="post image"/>
+
+필드별로 분리하여 요청할 수 있습니다.
+```ts
+import {gql, useQuery} from '@apollo/client'
+
+const ORDER_QUERY = gql`
+  query {
+    getAdminOrderProducts {
+      data {
+        id
+        status
+      }
+    }
+  }
+`
+
+  const {loading, error, data} = useQuery(ORDER_QUERY)
+```
+
+`variables`로 `arguments`를 지정할 수 있습니다.
+
+`useQuery`에 옵션 `variables`은 GraphQL 쿼리에 전달하려는 모든 매개변수를 포함하는 객체입니다.
+
+아래와 같이 매개변수를 지정할 수 있습니다.
+```ts
+const ORDER_QUERY = gql`
+  query getAdminOrderProducts($start: Int!, $perPage: Int!) {
+    getAdminOrderProducts(start: $start, perPage: $perPage) {
+      data {
+        id
+        status
+        product {
+          id
+        }
+        createdAt
+      }
+      total
+    }
+  }
+`
+
+  const {data, loading} = useQuery(ORDER_QUERY, {
+    variables: {
+      start: 0,
+      perPage: 20
+    }
+  })
+```
+
+지금까지는 백엔드의 데이터를 읽는 방법이었습니다.
+
+
+
+
+
+
+
+6:Tc85,
 대기열 → 캐싱 → DNS → 라우팅 → ARP → 초기연결 → 컨텐츠 다운로드 → 브라우저 렌더링
 
 이런 과정을 비캡슐화, 캡슐화 과정을 거침
@@ -101,7 +479,7 @@ f:I[1778,[],""]
 - transform, opacity 등(GPU가 관여하는 속성) 변경일 때 **1 -> 2 -> 5**
 
 따라서 transform, opacity 등(GPU가 관여하는 속성)을 사용하는게 가장 빠르고 끊김없이 보여줄 수 있다.
-4:T1a75,
+7:T1a75,
 인증방식에는 대표적으로 두가지가 있다.
 
 제일 많이 사용하는 세션 방식과 토큰 방식
@@ -326,7 +704,7 @@ export const getServerSideProps = withAuth();
 
 {...}
 ```
-5:Tdf0,
+8:Tdf0,
 예전에 하다가 중단된 프로젝트를 다시 시작해 보려고 새 레포로 마이그레이션 하는 과정에서
 
 패키지 버전도 올리고, 다른 기술을 찾아보다가 예전부터 써보고싶었던 tailwindcss를 써보기로 했다.
@@ -467,7 +845,7 @@ module.exports = {
   Save changes
 </button>
 ```
-6:T7a1,
+9:T7a1,
 자바스크립트의 함수는 호출될 때, 매개변수 이외에 `arguments` 객체와 `this`를 암묵적으로 전달 받는다.
 
 - Java의 `this` 는 인스턴스 자신을 가르키는 참조변수
@@ -526,7 +904,7 @@ module.exports = {
 - 일반 함수 → 화살표 함수
 - 생성자 함수 → class
 - 객체 메서드 → 객체 메서드 축약형
-7:T1aed,
+a:T1aed,
 ```shell
 npm create svelte@latest my-app
 cd my-app
@@ -787,7 +1165,7 @@ rss도 위와 동일하다.
 
 그래도 앞으론 리액트를 더 공부 할 것이다. 먹고 살려면 ㅎㅎ
 
-8:T9de,
+b:T9de,
 
 얼마전 해외 블로그를 구경하다가 이런 글을 보았다.
 
@@ -885,375 +1263,9 @@ Nothing was returned from render. This usually means a return statement is missi
 이런 에러를 만난 적이 많았는데, 위와 관련된 것이 아닌가 생각 된다.
 
 조금 더 생각하면서 개발하자
-9:Tff5,
-예전부터 궁금했었던 부분이었다.
-
-**useCallback**과 **useMemo** hook은 함수와 값을 메모이제이션 해주는 역할을 한다.
-
-그렇다면 **무조건 쓰기만하면** 성능상 이점을 가져갈 수 있을까?
-
-리액트는 아래 세가지인 경우 렌더링을 발생시킨다.
-
-**\- state 변경이 있을 때**
-
-**\- props 변경이 있을 때**
-
-**\- 부모 컴포넌트가 업데이트 될 때 모든 자식 컴포넌트**
-
-이때 불필요한 렌더링을 막기위해 useCallback과 useMemo를 사용하지만, 최적화에는 항상 비용이 따른다.
-
----
-
-```javascript
-import {useState} from "react";
-import Count from "./Count";
-
-function App() {
-    const [count, setCount] = useState(1);
-
-    const handleClick = () => {
-        setCount(prevCount => prevCount + 1)
-    }
-
-    return (
-        <div>
-            <h1>{count}</h1>
-            <div>
-                <Count onClick={handleClick} />
-            </div>
-        </div>
-    );
-}
-
-export default App;
-```
-
-위와 같은 코드에서 App에 state가 변경되기 때문에 Count도 렌더링 될것이다.
-
-<img src="/assets/blog/javaScript/use.gif" width="100%" alt="post image"/>
-
-부모컴포넌트의 state가 변경되었고,
-
-handleClick() 함수의 참조 동일성이 일치하지 않아 리렌더링 되고있다.
-
-```javascript
-import React from 'react';
-
-function Count(props) {
-    console.log('CountRender')
-    return (
-        <div>
-            <button onClick={props.onClick}>Click</button>
-        </div>
-    );
-}
-
-export default React.memo(Count);
-```
-
-자식 컴포넌트에 React.memo로 감싸주면 props를 비교할 것이다.
-
-이때 props onClick은 App에서 메모이제이션이 되지않아 여전히 리렌더링이 발생한다.
-
-```javascript
-const handleClick = useCallback(() => {
-    setCount(prevCount => prevCount + 1)
-}, [])
-```
-
-useCallback으로 감싸주면 handleClick은 메모이제이션되어 새로 생성되지않고, props로 전달되기 때문에 리렌더링이 발생하지 않는다.
-
-<img src="/assets/blog/javaScript/use(1).gif" width="100%" alt="post image"/>
-
----
-
-리액트에서 이야기하는 useMemo는 매렌더링마다 고비용 연산을 피하기 위해 사용한다고 하지만, 고비용에 대한 이야기에 대해서는 자세하게 나와있지 않다.
-
-리액트에서 이야기하는 고비용 연산은 하위 렌더트리들을 렌더링하는 연산을 이야기 하는 것이고, 이러한 경우가 아니라면 거의 대부분 useMemo를 사용하지 않아도 된다.
-
----
-
-```javascript
-const Component = () => {
-
-  const fetch = useCallback(() => {
-    console.log('fetch');
-  }, []);
-
-  useEffect(() => {
-    fetch();
-  }, [fetch]);
-
-  {...}
-};
-```
-
-useMemo와 useCallback은 초기 렌더링에는 쓸모가 없다. 오히려 초기 렌더링에 useMemo와 useCallback이 값을 저장하는 행위는 오히려 성능을 저하시킬 수 있다는 것을 생각하자.
-
-위와같은 코드에서 fetch가 변경되어야 useCallback을 사용하는 것이 의미가 있다.
-
----
-
-앱이 점점 커지고 모든 값이나 함수에 useMemo와 useCallback을 사용한다면 오히려 앱이 느려지는 원인이 될 수 있다.
-
-[https://ko.reactjs.org/docs/optimizing-performance.html#avoid-reconciliation](https://ko.reactjs.org/docs/optimizing-performance.html#avoid-reconciliation)
-
-단순한 값이나 함수를 메모이제이션 하는것 보다는 앱 설계 단계부터 리렌더링이 발생할 수 있는 부분을 생각하고, 리렌더링이 발생하는 특정 부분에서만 메모이제이션을 사용하는게 앱을 최적화 하는데 더 좋을 것이다.
-
-단순한 값이나 함수를 메모이제이션 하는건 오히려 더 느려질 뿐만 아니라, 성능에 미미하게 영향을 끼칠것이다.
-
-참고:
-
-[https://beta.reactjs.org/reference/react/useMemo#usage](https://beta.reactjs.org/reference/react/useMemo#usage)
-
-[https://www.developerway.com/posts/how-to-use-memo-use-callback](https://www.developerway.com/posts/how-to-use-memo-use-callback)
-a:T84a,
-### fireEvent를 userEvent로 바꿔보기
-
-```shell
-npm i @testing-library/user-event
-```
-
-```js
-test('Checkbox enables button on first click and disableds on second click', async () => {
-  const user = userEvent.setup();
-
-  render(<SummaryForm />);
-
-  const checkbox = screen.getByRole('checkbox', {
-    name: /terms and conditions/i
-  });
-  const confirmButton = screen.getByRole('button', {
-    name: /confirm order/i
-  });
-
-  await user.click(checkbox);
-  expect(confirmButton).toBeEnabled();
-
-  await user.click(checkbox);
-  expect(confirmButton).toBeDisabled();
-});
-```
-
-async/await 으로 비동기 처리해주지 않으면, expect가 먼저 실행되기 때문에 오류가 발생한다
-
----
-
-### Screen 메소드들 써보기
-
-```js
-test('popover responds to hover', async () => {
-  const user = userEvent.setup();
-
-  render(<SummaryForm />);
-
-  // popover starts out hidden
-  const nullPopover = screen.queryByText(/no ice cream will actually be delivered/i);
-  expect(nullPopover).not.toBeInTheDocument();
-
-  // popover appears on mouseover of checkbox label
-  const termsAndConditions = screen.getByText(/terms and conditions/i);
-  await user.hover(termsAndConditions);
-  const popover = screen.getByText(/no ice cream will actually be delivered/i);
-  expect(popover).toBeInTheDocument();
-
-  // popover disappears when we mouse out
-  await user.unhover(termsAndConditions);
-  expect(popover).not.toBeInTheDocument();
-});
-```
-
-- get : 요소 조회시 나타날 것으로 예상되는 경우 -> 일치하는 요소가 없으면 Error를 반환
-
-- query : 요소가 존재하는지 확인하는 경우 -> 일치하는 요소가 없으면 null을 반환
-
-- find : 요소가 비동기적으로 표시될 수 있는 경우인지
-
-```js
-const popover = (
-  <Popover id="popover-basic">
-    <Popover.Body>No ice cream will actually be delivered</Popover.Body>
-  </Popover>
-);
-
-const checkboxLabel = (
-  <span>
-    I agree to
-    <OverlayTrigger trigger={['hover', 'focus']} placement="right" overlay={popover}>
-      <span style={{color: 'blue'}}>Terms and Conditions</span>
-    </OverlayTrigger>
-  </span>
-);
-```
-b:Tff3,
-### * Mock Service Worker
-
-백엔드에서 데이터를 가져오는 부분을 테스트
-
-- MSW 작동 방식
-
-브라우저에 서비스 워커를 등록해 외부로 나가는 네트워크 리퀘스트를 감지
-
-요청을 실제 서버로 갈 때 중간에 가로채 MSW 클라이언트 사이드 라이브러리로 보내고, 등록된 핸들러에서 요청을 처리한 후 모의 응답을 보낸다.
-
----
-
-### * jest를 사용한 node와 통합하기
-
-```shell
-npm install msw --save
-```
-
-- 핸들러 생성하기
-
-```js
-import {rest} from 'msw';
-
-export const handlers = [
-  rest.get('http://localhost:5000/products', (req, res, ctx) => {
-    return res(
-      ctx.json([
-        {
-          name: 'America',
-          imagePath: '/images/america.jpeg'
-        },
-        {
-          name: 'England',
-          imagePath: '/images/england.jpeg'
-        }
-      ])
-    );
-  }),
-  rest.get('http://localhost:5000/options', (req, res, ctx) => {
-    return res(
-      ctx.json([
-        {
-          name: 'Insurance'
-        },
-        {
-          name: 'Dinner'
-        }
-      ])
-    );
-  })
-];
-```
-
-- mocking 서버 생성하기
-
-```js
-import {setupServer} from 'msw/node';
-import {handlers} from './handlers';
-
-export const server = setupServer(...handlers);
-```
-
-- setupTest.js에 서버 생성
-
-```js
-// jest-dom adds custom jest matchers for asserting on DOM nodes.
-// allows you to do things like:
-// expect(element).toHaveTextContent(/react/i)
-// learn more: https://github.com/testing-library/jest-dom
-import '@testing-library/jest-dom';
-
-import {server} from './mocks/server';
-
-beforeAll(() => server.listen()); // 테스트 시작 전에 서버 listen
-afterEach(() => server.resetHandlers()); // 테스트 중 다른 테스트에 영향이 가지 않도록
-afterAll(() => server.close()); // 테스트 후 서버를 클린업
-```
-
-- 테스트 코드 작성
-
-```js
-import {server} from '../../../mocks/server';
-import Type from '../Type';
-import {rest} from 'msw';
-import {render, screen} from '@testing-library/react';
-
-test('displays product images from server', async () => {
-  render(<Type orderType="products" />);
-
-  // 서버에서 받아온 이미지
-  const productImages = await screen.findAllByRole('img', {
-    name: /product$/i
-  });
-  expect(productImages).toHaveLength(2);
-
-  const altText = productImages.map((element) => element.alt);
-  expect(altText).toEqual(['America product', 'England product']);
-});
-
-test('fetch option information from server', async () => {
-  render(<Type orderType="options" />);
-
-  const optionCheckboxes = await screen.findAllByRole('checkbox');
-
-  expect(optionCheckboxes).toHaveLength(2);
-});
-
-test('when fetching product datas, face an error', async () => {
-  // 서버에 대한 에러 확인
-  server.resetHandlers(
-    rest.get('http://localhost:5000/products', (req, res, ctx) => {
-      return res(ctx.status(500));
-    })
-  );
-
-  render(<Type orderType="products" />);
-
-  const errorBanner = await screen.findByTestId('error-banner');
-  expect(errorBanner).toHaveTextContent('에러가 발생했습니다.');
-});
-```
-
-- 컴포넌트
-
-```js
-import React, {useEffect, useState} from 'react';
-import axios from 'axios';
-import Products from './Products';
-import ErrorBanner from '../../components/ErrorBanner';
-import Options from './Options';
-
-const Type = ({orderType}) => {
-  const [items, setItems] = useState([]);
-  const [error, setError] = useState(false);
-
-  useEffect(() => {
-    loadItems(orderType);
-  }, [orderType]);
-
-  const loadItems = async (orderType) => {
-    try {
-      const response = await axios.get(`http://localhost:5000/${orderType}`);
-      setItems(response.data);
-    } catch (error) {
-      setError(true);
-    }
-  };
-
-  const ItemComponents = orderType === 'products' ? Products : Options;
-
-  const optionItems = items.map((item) => {
-    return <ItemComponents key={item.name} name={item.name} imagePath={item.imagePath} />;
-  });
-
-  if (error) {
-    return <ErrorBanner message="에러가 발생했습니다." />;
-  }
-
-  return <div>{optionItems}</div>;
-};
-
-export default Type;
-```
 e:["page","2","d"]
-0:["mD-g7Y4SeIgJjYa4deqpz",[[["",{"children":["page",{"children":[["page","2","d"],{"children":["__PAGE__?{\"page\":\"2\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["page",{"children":[["page","2","d"],{"children":["__PAGE__",{},["$L1",["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L2",null,{"posts":{"posts":[{"content":"$3","data":{"title":"브라우저에 url을 검색하면?","date":"$D2023-02-25T00:00:00.000Z","description":"사내 스터디","category":"study","titleImage":"/assets/postIcon/javascript.png"},"slug":"browser"},{"content":"$4","data":{"title":"Next.js middleware와 getServerSideProps","date":"$D2023-02-22T00:00:00.000Z","description":"세션방식의 로그인 인증, middleware와 getServerSideProps를 사용해 구현한 기록","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-middleware"},{"content":"$5","data":{"title":"Nextjs에서 tailwind 써보기","date":"$D2023-02-18T00:00:00.000Z","description":"공식문서 보면서 tailwind 써보기","category":"javaScript","titleImage":"/assets/postIcon/tailwind-css-icon.png"},"slug":"tailwindcss"},{"content":"$6","data":{"title":"JavaScript this","date":"$D2023-02-02T00:00:00.000Z","description":"사내 스터디 this","category":"study","titleImage":"/assets/postIcon/javascript.png"},"slug":"this"},{"content":"$7","data":{"title":"스벨트킷으로 블로그 만들어보기","date":"$D2023-01-30T00:00:00.000Z","description":"스벨트킷으로 블로그 만든 과정을 정리","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-blog"},{"content":"\n### Provider 테스팅 해보기\n\n```js\nrender(<Options optionType=\"scoops\" />, {wrapper: OrderDetailsProvider});\n```\n\n테스트 wrapper에 Provider로 감싸주면 된다.\n\n여기서는 redux나 recoil 등 다른 라이브러리도 가능\n\n---\n\n전역적으로도 사용이 가능\n\n```js\nimport {render} from '@testing-library/react';\nimport {OrderDetailsProvider} from '../contexts/OrderDetails';\n\nconst renderWithContext = (ui, options) => render(ui, {wrapper: OrderDetailsProvider, ...options});\n\nexport * from '@testing-library/react';\n\nexport {renderWithContext as render};\n```\n","data":{"title":"리액트 테스팅(4)","date":"$D2023-01-02T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-4"},{"content":"$8","data":{"title":"리액트 조건부 렌더링에 대한 생각","date":"$D2022-12-29T00:00:00.000Z","description":"해외 블로그를 보며 정리한 조건부 렌더링에 대한 생각","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"conditional-rendering"},{"content":"$9","data":{"title":"useCallback, useMemo 무조건 좋은가?","date":"$D2022-12-28T00:00:00.000Z","description":"useCallback과 useMemo에 대한 생각 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"usecallback-and-usememo"},{"content":"$a","data":{"title":"리액트 테스팅(3)","date":"$D2022-12-26T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-3"},{"content":"$b","data":{"title":"리액트 테스팅(2)","date":"$D2022-12-14T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-2"}],"total":35},"page":"2","category":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$Lc",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (32)"}]}],["$","li","study",{"children":["$","$Lc",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$Lc",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}],null]]},["$","$Ld",null,{"parallelRouterKey":"children","segmentPath":["children","page","children","$e","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lf",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},["$","$Ld",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lf",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L10",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L10",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_471caf","children":["$","$L11",null,{"children":[["$","$12",null,{"fallback":null,"children":["$","$L13",null,{"children":"$L14"}]}],[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b-[1px] border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$Lc",null,{"href":"/","children":["$","$L15",null,{"src":"/assets/icons/been-logo.svg","width":60,"height":56,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$Lc",null,{"href":"/about","children":"About"}]}]]}],["$","$12",null,{"fallback":null,"children":["$","$L13",null,{"children":"$L16"}]}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$Ld",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lf",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]]}]}]]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/f02a732008014100.css","precedence":"next","crossOrigin":""}]],"$L17"]]]]
-18:I[286,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],""]
-19:I[9137,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],""]
-14:["$","$L18",null,{}]
-16:["$","$L19",null,{}]
-17:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Been blog - 2"}],["$","meta","3",{"name":"description","content":"Been dev-note"}],["$","meta","4",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","5",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","meta","6",{"property":"og:title","content":"Been blog - 2"}],["$","meta","7",{"property":"og:description","content":"Been dev-note - 2"}],["$","meta","8",{"property":"og:url","content":"https://wonbeenna.github.io/page/2"}],["$","meta","9",{"property":"og:site_name","content":"Been blog"}],["$","meta","10",{"property":"og:locale","content":"ko_KR"}],["$","meta","11",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","12",{"property":"og:image:width","content":"800"}],["$","meta","13",{"property":"og:image:height","content":"600"}],["$","meta","14",{"property":"og:image:alt","content":"Been blog"}],["$","meta","15",{"property":"og:type","content":"website"}],["$","meta","16",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","17",{"name":"twitter:title","content":"Been blog - 2"}],["$","meta","18",{"name":"twitter:description","content":"Been dev-note - 2"}],["$","meta","19",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","20",{"name":"twitter:image:width","content":"800"}],["$","meta","21",{"name":"twitter:image:height","content":"600"}],["$","meta","22",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","meta","24",{"name":"next-size-adjust"}]]
+0:["gRWOS8EtFsTPhUs00OQkE",[[["",{"children":["page",{"children":[["page","2","d"],{"children":["__PAGE__?{\"page\":\"2\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["page",{"children":[["page","2","d"],{"children":["__PAGE__",{},["$L1",["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L2",null,{"posts":{"posts":[{"content":"$3","data":{"title":"Audio객체를 이용한 음악 재생","date":"$D2023-05-27T00:00:00.000Z","description":"Audio객체를 사용한 기업 과제 구현","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"audio"},{"content":"$4","data":{"title":"디바운싱과 쓰로틀링","date":"$D2023-05-13T00:00:00.000Z","description":"디바운싱과 쓰로틀링의 차이를 구분하고 hook으로 구현","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"debouce-throttle"},{"content":"$5","data":{"title":"GraphQl 써보기(1)","date":"$D2023-04-29T00:00:00.000Z","description":"GraphQl, Apollo Client를 사용","category":"javaScript","titleImage":"/assets/postIcon/graphql.svg"},"slug":"graphql-1"},{"content":"$6","data":{"title":"브라우저에 url을 검색하면?","date":"$D2023-02-25T00:00:00.000Z","description":"사내 스터디","category":"study","titleImage":"/assets/postIcon/javascript.png"},"slug":"browser"},{"content":"$7","data":{"title":"Next.js middleware와 getServerSideProps","date":"$D2023-02-22T00:00:00.000Z","description":"세션방식의 로그인 인증, middleware와 getServerSideProps를 사용해 구현한 기록","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-middleware"},{"content":"$8","data":{"title":"Nextjs에서 tailwind 써보기","date":"$D2023-02-18T00:00:00.000Z","description":"공식문서 보면서 tailwind 써보기","category":"javaScript","titleImage":"/assets/postIcon/tailwind-css-icon.png"},"slug":"tailwindcss"},{"content":"$9","data":{"title":"JavaScript this","date":"$D2023-02-02T00:00:00.000Z","description":"사내 스터디 this","category":"study","titleImage":"/assets/postIcon/javascript.png"},"slug":"this"},{"content":"$a","data":{"title":"스벨트킷으로 블로그 만들어보기","date":"$D2023-01-30T00:00:00.000Z","description":"스벨트킷으로 블로그 만든 과정을 정리","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-blog"},{"content":"\n### Provider 테스팅 해보기\n\n```js\nrender(<Options optionType=\"scoops\" />, {wrapper: OrderDetailsProvider});\n```\n\n테스트 wrapper에 Provider로 감싸주면 된다.\n\n여기서는 redux나 recoil 등 다른 라이브러리도 가능\n\n---\n\n전역적으로도 사용이 가능\n\n```js\nimport {render} from '@testing-library/react';\nimport {OrderDetailsProvider} from '../contexts/OrderDetails';\n\nconst renderWithContext = (ui, options) => render(ui, {wrapper: OrderDetailsProvider, ...options});\n\nexport * from '@testing-library/react';\n\nexport {renderWithContext as render};\n```\n","data":{"title":"리액트 테스팅(4)","date":"$D2023-01-02T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-4"},{"content":"$b","data":{"title":"리액트 조건부 렌더링에 대한 생각","date":"$D2022-12-29T00:00:00.000Z","description":"해외 블로그를 보며 정리한 조건부 렌더링에 대한 생각","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"conditional-rendering"}],"total":38},"page":"2","category":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$Lc",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (35)"}]}],["$","li","study",{"children":["$","$Lc",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$Lc",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}],null]]},["$","$Ld",null,{"parallelRouterKey":"children","segmentPath":["children","page","children","$e","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lf",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},["$","$Ld",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lf",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L10",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L10",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_bd870a","children":["$","$L11",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b-[1px] border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$Lc",null,{"href":"/","children":["$","$L12",null,{"src":"/assets/icons/been-logo.svg","width":60,"height":56,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$Lc",null,{"href":"/about","children":"About"}]}]]}],["$","$13",null,{"fallback":null,"children":["$","$L14",null,{"children":"$L15"}]}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$Ld",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lf",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/59c48ca6c4481319.css","precedence":"next","crossOrigin":""}]],"$L16"]]]]
+17:I[9137,["438","static/chunks/438-55d6a3410449957f.js","185","static/chunks/app/layout-56af28789787dacc.js"],""]
+15:["$","$L17",null,{}]
+16:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Been blog - 2"}],["$","meta","3",{"name":"description","content":"Been dev-note"}],["$","meta","4",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","5",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","meta","6",{"property":"og:title","content":"Been blog - 2"}],["$","meta","7",{"property":"og:description","content":"Been dev-note - 2"}],["$","meta","8",{"property":"og:url","content":"https://wonbeenna.github.io/page/2"}],["$","meta","9",{"property":"og:site_name","content":"Been blog"}],["$","meta","10",{"property":"og:locale","content":"ko_KR"}],["$","meta","11",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","12",{"property":"og:image:width","content":"800"}],["$","meta","13",{"property":"og:image:height","content":"600"}],["$","meta","14",{"property":"og:image:alt","content":"Been blog"}],["$","meta","15",{"property":"og:type","content":"website"}],["$","meta","16",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","17",{"name":"twitter:title","content":"Been blog - 2"}],["$","meta","18",{"name":"twitter:description","content":"Been dev-note - 2"}],["$","meta","19",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","20",{"name":"twitter:image:width","content":"800"}],["$","meta","21",{"name":"twitter:image:height","content":"600"}],["$","meta","22",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","meta","24",{"name":"next-size-adjust"}]]
 1:null

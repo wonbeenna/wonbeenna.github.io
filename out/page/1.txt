@@ -1,13 +1,396 @@
-2:I[8451,["438","static/chunks/438-20a73b8af0ca1535.js","411","static/chunks/app/page/%5Bpage%5D/page-10f5b8e52537b5e8.js"],""]
-d:I[5250,["438","static/chunks/438-20a73b8af0ca1535.js","411","static/chunks/app/page/%5Bpage%5D/page-10f5b8e52537b5e8.js"],""]
+2:I[8451,["438","static/chunks/438-55d6a3410449957f.js","411","static/chunks/app/page/%5Bpage%5D/page-4aa0014340b67571.js"],""]
+d:I[5250,["438","static/chunks/438-55d6a3410449957f.js","411","static/chunks/app/page/%5Bpage%5D/page-4aa0014340b67571.js"],""]
 e:I[5613,[],""]
 10:I[1778,[],""]
-11:I[5935,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],""]
-12:I[4840,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],"Providers"]
-13:"$Sreact.suspense"
-14:I[6005,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],"NoSSR"]
-16:I[1749,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],"Image"]
-3:Tcc7,
+11:I[5935,["438","static/chunks/438-55d6a3410449957f.js","185","static/chunks/app/layout-56af28789787dacc.js"],""]
+12:I[4840,["438","static/chunks/438-55d6a3410449957f.js","185","static/chunks/app/layout-56af28789787dacc.js"],"Providers"]
+13:I[1749,["438","static/chunks/438-55d6a3410449957f.js","185","static/chunks/app/layout-56af28789787dacc.js"],"Image"]
+14:"$Sreact.suspense"
+15:I[6005,["438","static/chunks/438-55d6a3410449957f.js","185","static/chunks/app/layout-56af28789787dacc.js"],"NoSSR"]
+3:T1359,
+monorepo를 사용해 패키지들을 분리하는 과정에서 이슈를 확인했다.
+
+번들링 하지않고, 패키지들을 `index.ts`에서 직접 내보내 사용했을 때, 사용하지 않는 코드들도 함께 포함되는 문제가 있었다.
+이 문제점을 확인하고 tree-shaking을 적용하기 위해 rollup을 사용하게 되었다.
+
+---
+
+### tree-shaking
+
+tree-shaking은 최종 번들링한 결과에서 사용하지 않는 코드를 제거하는 기능이다.
+불필요한 코드가 없어지기 때문에 번들 파일의 크기를 줄일 수 있다.
+
+tree-shaking은 ES6 부터(esm) 지원되는 기능이다.
+
+---
+
+### rollup
+
+먼저 약 10개정도 되는 패키지들을 각각 설정하는건 비효율 적이라 생각했다.
+그래서 공통적으로 사용할 rollup.config.mjs 파일을 만들어 사용하기로 했다.
+
+```javascript
+import path from 'path';
+import { readFileSync } from 'fs';
+import { DEFAULT_EXTENSIONS } from '@babel/core';
+import babel from '@rollup/plugin-babel';
+import commonjs from '@rollup/plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
+import typescript from '@rollup/plugin-typescript';
+import builtins from 'builtin-modules';
+import json from '@rollup/plugin-json';
+import { defineConfig } from 'rollup';
+import terser from '@rollup/plugin-terser';
+
+const extensions = [...DEFAULT_EXTENSIONS, '.ts', '.tsx'];
+
+export function generateRollupConfig({ packageDir }) {
+
+  {...}
+
+  const plugins = [
+    resolve({
+      extensions,
+    }),
+    commonjs(),
+    babel({
+      exclude: 'node_modules/**',
+      extensions,
+      babelHelpers: 'bundled',
+    }),
+    json(),
+    typescript({
+      compilerOptions: {
+        outDir: 'dist',
+        module: 'esnext',
+        moduleResolution: 'bundler',
+      },
+      tsconfig: path.join(packageDir, 'tsconfig.json'),
+    }),
+    terser(),
+  ];
+
+  const generateConfig = (output) => {
+    return {
+      input,
+      output,
+      external,
+      plugins,
+    };
+  };
+
+  return defineConfig([
+    generateConfig([
+      {
+        dir: output,
+        format: 'cjs',
+        entryFileNames: '[name].js',
+      },
+      {
+        dir: output,
+        format: 'esm',
+        entryFileNames: '[name].mjs',
+        preserveModules: true,
+        preserveModulesRoot: path.dirname(input),
+      },
+    ]),
+  ]);
+}
+```
+
+- `@rollup/plugin-babel` : rollup + babel 연동
+
+**Note. @rollup/plugin-commonjs 보다 뒤에*
+
+- `@rollup/plugin-commonjs` : CommonJS 모듈을 ES6으로 변환하여 롤업 번들에 포함
+
+**Note. @rollup/plugin-node-resolve와 함께 사용*
+
+- `@rollup/plugin-node-resolve` : node_modules에 외부 모듈 확인
+
+**Note. @rollup/plugin-commonjs와 함께 사용*
+
+- `@rollup/plugin-terser` : 간결하고 축소된 번들 생성 (띄어쓰기나 주석 제거)
+- `@rollup/plugin-url` : data-URIs, ESM으로 가져옴
+- `@rollup/plugin-virtual` : 메모리에서 가상 모듈을 로드
+
+**Note. Use this plugin before any others such as node-resolve or commonjs, so they do not alter the output.*
+
+- `@svgr/rollup` : svgr 플러그인
+- `builtin-modules` : node.js 빌트인 모듈
+
+- `external` : 특정 모듈을 번들에 포함하지 않고, 외부 모듈로 설정
+
+---
+
+### 각 패키지별 번들링
+
+```javascript
+import path from 'path';
+import { generateRollupConfig } from '@repo/rollup-config';
+
+const __dirname = path.resolve();
+
+export default generateRollupConfig({ packageDir: __dirname });
+```
+
+utils에서 내보내는 함수 중 프로젝트별로 사용하는곳과 사용하지 않는 곳이 있었는데,
+초기에 번들링과정을 거치지 않았을 때 프로젝트 빌드시 해당 함수를 각 프로젝트에 모두 포함되었다.
+
+번들링 과정을 확인하기 위해 vite.config.js에
+
+```javascript
+{...}
+
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            utils: ['@repo/utils']
+          },
+        },
+      },
+    },
+
+{...}
+```
+
+옵션을 추가해 비교해보았다.
+
+<img src="/assets/blog/javaScript/rollup-1.png" width="100%" alt="bundle-test"/>
+<img src="/assets/blog/javaScript/rollup-2.png" width="100%" alt="bundle-test"/>
+
+전, 후 용량에 차이가 있다는걸 확인했고, js파일을 확인해 사용하는 함수만 포함되는었는지 확인해보았다.
+
+---
+
+처음 rollup을 사용해 패키지들을 번들링하면서 tree-shaking이라는 개념도 알게되었고, cjs와 esm의 차이점도 알게되었다.
+
+다른 기업들의 오픈소스들을 뒤져가며 작업을 진행하면서 많은 것을 배울 수 있었던 시간이었다.
+
+rollup 설정에 대해서 아직 완벽하게 이해하지는 못했으며, 내가 의도한대로 작동하는지도 조금 확신이 들지 않지만 이번 기회에 조금 더 깊게 공부해보고 계속해서 확인해보며 수정해나가야겠다.
+개인적으로는 최적화해 나가는 과정이 매우 재밌었던 작업이었다!
+4:Ta2c,
+최근 rollup으로 패키지를 만드는 과정에서 cjs와 esm에 대해 알게되었다.
+
+### Module
+자바스크립트의 모듈은 크게 CommonJS와 ES Module로 나뉜다.
+애플리케이션의 규모가 커지면 커질수록 모듈화가 필요해지는데, 이때 모듈화를 위해 사용되는 것이 바로 CommonJS와 ES Module이다.
+
+CommonJS는 Node.js에서 사용되는 모듈 시스템이며 (12버전 이후 부터는 두가지 모두 사용) 정확하게는 표준 시스템은 아니다,
+ES6 이후에 ES Module이 등장하면서 표준 시스템이 되었고, 우리가 흔히 사용하는 `import`와 `export`의 키워드를 사용해 모듈을 효율적으로 불러와 사용할 수 있는게 바로 ES Module이다.
+
+그러나 아직까지도 node.js의 CJS가 많이 사용되고 있으므로, 우리가 흔히 사용하는 라이브러리들은 보통 두가지의 모듈 시스템을 모두 지원할 수 있도록 만든다.
+
+---
+
+### cjs와 esm의 차이점
+
+#### cjs
+```javascript
+// lib.js
+module.exports = {
+  name: 'lib'
+}
+```
+
+```javascript
+// index.js
+const lib = require('./lib')
+console.log(lib.name) // lib
+```
+
+#### esm
+```javascript
+// lib.js
+export default {
+  name: 'lib'
+}
+```
+
+```javascript
+// index.js
+import lib from './lib'
+console.log(lib.name) // lib
+```
+
+위의 예시에서 보듯이, cjs는 `module.exports`를 사용하여 모듈을 내보내고, `require`를 사용하여 모듈을 불러온다.
+반면에 esm은 `export`를 사용하여 모듈을 내보내고, `import`를 사용하여 모듈을 불러온다.
+
+- CJS는 동기적으로 동작하고, ESM은 비동기적으로 동작한다.
+- CJS는 빌드 타임에 정적 분석을 적용하기 어렵고, 런타임에서만 모둘 관계를 파악할 수 있다.
+- ESM은 빌드 단계에서 정적 분석을 통해 의존 관계를 파악할 수 있다.
+- CJS는 Tree-shaking이 어렵지만 ESM은 Tree-shaking이 가능하다.
+
+---
+
+### 파일 구분
+
+`.js` 파일이 CJS인지 ESM인지 구분하는 방법은 다음과 같다.
+
+- package.json의 type 필드를 사용한다.
+```json
+{
+  "type": "module"
+}
+```
+`.js`의 파일은 package.json의 type 필드에 따라 결정되는데
+- type이 module이면 ESM, commonjs이면 CJS로 인식한다. (default는 commonjs)
+- `.cjs`는 commonjs로 인식하고, `.mjs`는 ESM으로 인식한다.
+
+
+---
+참고
+- [toss blog](https://toss.tech/article/commonjs-esm-exports-field)
+- [kakao blog](https://tech.kakao.com/2023/10/19/commonjs-esm-migration/)
+- [CJS](https://nodejs.org/api/modules.html)
+- [ESM](https://nodejs.org/api/esm.html)
+5:T1101,
+자바스크립트에서 원시타입(primitive data type)은 변경 불가능한(immutable)한 값이다.
+
+- Boolean
+- String
+- Number
+- undefined
+- null
+- Symbol
+
+변경이 불가능하다라는 뜻은 메모리 영역에서의 변경이 불가능하다는 뜻이며, 재할당은 가능하다.
+
+---
+
+원시타입 이외의 모든 값은 Object(객체)이다. 객체는 변경 가능한(mutable)한 값이다.
+객체는 변경 가능한(mutable)값이기 때문에 새로운 값을 다시 만들 필요없이 직접 변경이 가능하다.
+
+```javascript
+let string = "hello";
+string = "world";
+```
+string 변수에 "hello"라는 문자열을 할당하고, 다시 "world"라는 문자열을 할당했다. 이때, 첫번째 문자열은 메모리에서 사라지고, 새로운 문자열이 메모리에 할당된다.
+
+```javascript
+let string = "hello";
+let string2 = string.slice(0, 3);
+
+// string = "hello"
+// string2 = "hel"
+```
+string 변수에 "hello"라는 문자열을 할당하고, string2 변수에 string 변수의 문자열을 복사하여 할당했다. 이때, string 변수의 문자열은 변경되지 않는다.
+
+---
+
+```javascript
+let arr = [];
+
+let arr2 = arr.push(1);
+
+// arr = [1]
+```
+
+배열은 객체이기 때문에 변경이 가능하다. 위의 코드에서 arr.push(1)을 통해 arr 배열에 1이라는 원소가 추가되었다. 이때, arr 배열은 변경된다.
+복사본을 리턴하는 메소드가 아닌 push, pop, shift, unshift, splice 등의 메소드는 원본 배열을 변경한다.
+
+```javascript
+let object = {
+  name: "been",
+};
+
+let object2 = object;
+
+object2.name = "been2";
+
+console.log(object.name); // been2
+```
+
+객체는 변경이 가능하기 때문에 object2 변수에 object 변수를 할당하고, object2.name을 변경하면 object.name도 변경된다.
+object도 동시에 변경되는 이유는 object2에 object를 할당할 때, object2는 object의 메모리 주소를 참조하기 때문이다.
+
+object에서 불변성을 유지하는 방법은 새로운 객체를 생성하여 값을 할당하는 방법이다.
+
+---
+
+### 불변성을 유지하는 방법
+- Spread Operator(es6)
+- Object.assign()
+- Array.concat()
+- Array.slice()
+- Array.map()
+- Array.filter()
+- Array.reduce()
+...등
+
+```javascript
+let object = {
+  name: "been",
+};
+
+let object2 = {
+  ...object,
+  name: "been2",
+};
+
+console.log(object.name); // been
+```
+
+object2에 object를 복사하여 새로운 객체를 생성하고, name을 변경하였다. 이때, object는 변경되지 않는다.
+
+---
+
+### 리액트에서 불변성을 지키는 이유
+
+리액트를 사용해 개발을 할 때 useState 등을 사용해 상태를 관리 할 때 push, pop, shift, unshift 등의 메소드를 사용하지 않고,
+새로운 배열을 만들어서 상태를 변경하며 자연스럽게 불변성을 지키며 개발을 했다.
+
+리액트에서는 상태값을 업데이트 할 때 얕은비교를 수행해 이전 상태(참조값)와 새로운 상태(참조값)를 비교 한다.
+새로운 참조값을 가진 Object를 생성하므로 이전 참조값에 영향을 주지 않는다.
+
+1. 불변성을 지키면 상태값을 업데이트 할 때 이전 상태와 새로운 상태를 비교하여 변경된 부분만 업데이트 하기 때문에 성능적으로 이점이 있다.
+2. 상태가 의도치않게 변경되는 것을 막을 수 있고, 사이드 이펙트를 사전에 방지하고 예측 가능한 코드를 작성할 수 있다.
+
+- 상태 업데이트
+```javascript
+const [state, setState] = useState(1);
+
+// 불변성을 지키지 않은 상태 업데이트
+  state = 2;
+  setState(state);
+
+// 불변성을 지킨 상태 업데이트
+  setState(2);
+```
+
+- 배열
+```javascript
+const [state, setState] = useState([1, 2, 3]);
+
+// 불변성을 지키지 않은 상태 업데이트
+  state.push(4);
+  setState(state);
+
+// 불변성을 지킨 상태 업데이트
+  setState([...state, 4]);
+```
+
+- 객체
+```javascript
+const [state, setState] = useState({
+  name: "been",
+  age: 32,
+});
+
+// 불변성을 지키지 않은 상태 업데이트
+  state.name = "been2";
+  setState(state);
+
+// 불변성을 지킨 상태 업데이트
+  setState({
+    ...state,
+    name: "been2",
+  });
+```
+
+이처럼 리액트로 개발을 할 때 불변성을 유지함으로써 안정성을 유지하고 성능을 향상시킬 수 있다.
+6:Tcc7,
 로컬 개발환경에서 API 요청시 CORS 에러로 API 사용이 어려울 수 있습니다.
 
 이 글은 Vite로 구성된 로컬 개발환경에서 CORS 문제를 해결하는 방식을 작성합니다.
@@ -106,7 +489,7 @@ export default ({ mode }) => {
 2. 프록시는 `changeOption` 에 의하여 HTTP 요청 헤더의 Host 값을 `https://example.com` 으로 변경
 3. 프록시는 최종적으로 이 요청을 `https://example.com` 라는 URL로 `target` 서버에 전달
 
-4:T12dc,
+7:T12dc,
 ## 바벨이란?
 바벨은 자바스크립트 컴파일러이다.
 사실 자세히 보면 컴파일러보다는 트랜스파일러에 가깝다.
@@ -290,7 +673,7 @@ module.exports = {
 js 확장자로 끝나는 모든 파일에 babel-loader를 적용한다.
 또 node_modules 디렉토리는 제외한다.
 
-5:T2f94,
+8:T2f94,
 ## 웹팩(기본)배경
 - 웹팩은 모던 javascript 어플리케이션을 위한 정적 모듈 번들러이다. 번들러는 웹팩 이외에도 다양한게 있는데 (rollup , esbuild , vite , parcel 등) 웹팩이 가장 오래되었기도하고 많이 사용하고 있기 때문에 이번 기회에 배워보기로 했다.
 
@@ -723,7 +1106,7 @@ module.exports = {
 하지만 기본적인 웹팩으로 설정되어있고, 직접 커스텀하려면 eject를 해야한다.
 
 이번 기회에 웹팩의 원리와 기본적인 사용방법을 알아보았다.
-6:Te9a,
+9:Te9a,
 ### React Native geolocation
 
 사이드 프로젝트에 위치정보를 받아와야 하는 기능이 필요해 지오로케이션을 받아 오도록 했다.
@@ -850,7 +1233,7 @@ const MyApp = () => {
 다음 포스팅에서는 받아온 위치정보를 webview로 넘겨주는 방법에 대해 알아보자!
 
 
-7:T9c4,
+a:T9c4,
 ### 딥링크
 - 딥링크는 모바일에서 특정 페이지에 도달 할 수 있는 링크를 의미한다.
 - 웹이나 sns등 링크를 클릭했을때 해당 어플리케이션 앱으로 바로 이동하는데, 이런 방식을 모바일 딥링크라 하고 특정한 앱 스크린으로 이동하는 것
@@ -948,7 +1331,7 @@ useEffect(() => {
   return () => Linking.removeAllListeners('url');
 }, [])
 ```
-8:T2147,
+b:T2147,
 이전에 [스벨트킷으로 블로그 만들어보기](https://wonbeenna.github.io/blog/javaScript/svelte-blog) 에서 svelte kit으로 블로그를 만들었었다.
 
 그때는 svelte 공부겸 블로그를 만들었지만, 업무에서 주로 사용하는 스택인 react와 next.js를 사용하여 블로그를 만들어보려고 한다.
@@ -1297,7 +1680,7 @@ npm i @giscus/react
 
 
 
-9:T6ae,
+c:T6ae,
 JSON 웹 토큰(JWT)
 
 일반적으로 **헤더.페이로드.서명** 으로 구성되어 있다.
@@ -1356,389 +1739,9 @@ token을 split해 1번째 데이터에 해당하는 부분을 가져온 다음
 node에서 지원하는 Buffer 객체를 사용해 바이너리로 변환
 
 base64로 인코딩한 후 JSON으로 파싱한다
-a:Tfb3,
-얼마전 기업과제를 진행했다. Audio 객체를 이용한 음악 재생이었다.
-
-https://developer.mozilla.org/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API
-
-## Audio 객체
-웹에서 음악을 재생하기 위해서는 new Audio 객체를 생성하거나, `<audio>` 태그를 사용해 Audio 객체를 가져올 수도 있다.
-
-Audio 객체는 음악을 재생하고, 일시정지하고, 음악의 길이를 구하는 등의 기능을 제공한다.
-
-Audio 객체는 다음과 같이 생성한다.
-
-```jsx
-let audio = new Audio(url);
-```
-
-```jsx
-<audio src={url} />;
-```
-
-과제를 제출하고 알게 되었는데, new Audio 객체를 사용하면 화면 밖에서도 audio를 다룰 수 있기때문에 `audio`태그를 사용할 필요가 없었다.
-
-둘중 하나만 사용해 Audio를 다룰 수 있는 객체를 가져오면 된다.
-
-```javascript
-let audio = document.querySelector('audio');
-audio.play();
-audio.pause();
-```
-
-과제에서는 new Audio를 사용해 구현 하였다.
-```jsx
-  useEffect(() => {
-    setAudio(new Audio(url));
-}, [url, setAudio]);
-```
-먼저 server에서 받아온 Url을 state에 담아 주었고
-
-```jsx
-  useEffect(() => {
-    if (audio && isPlaying) {
-        audio?.play();
-    }
-}, [audio, isPlaying]);
-```
-
-리스트에서 음악을 선택하면 `isPlaying`이 true가 되고, `audio`가 생성되면 `audio.play()`를 실행한다.
-
-재생과 일시정지도 추가가 되어야 했다.
-
-```jsx
-const handlePlayButton = () => {
-    if (audio?.paused) {
-        return audio.play();
-    }
-    return audio?.pause();
-}
-```
-음악이 정지중일땐 play, 음악이 재생중일땐 pause를 실행한다.
-
----
-
-음악이 재샐중일때 progress bar도 구현이 필요했다.
-
-```jsx
-const [rangeValue, setRange] = useState<number>(0);
-const [currentTime, setCurrentTime] = useState<string>('00:00');
-const [duration, setDuration] = useState<string>('00:00');
-
-<progress
-    className="progress"
-    value={Math.floor(rangeValue)}
-    max="100"
-    aria-valuemin={0}
-    aria-valuemax={100}
-    aria-valuenow={Math.floor(rangeValue)}
-    onClick={handleChangeProgressRange}
-/>
-```
-
-`rangeValue`는 progress bar의 value값을 나타내고, `currentTime`는 현재 재생중인 시간을 나타낸다.
-
-`duration`는 음악의 전체 길이를 나타낸다.
-
-재생시간과 음악의 전체 길이가 `00:00`으로 표시되었어야했기 때문에 format함수를 만들었고, eventListener를 통해 재생시간과 음악의 전체 길이를 구했다.
-
-```js
-export const getMusicTimeFormat = (time = 0) => {
-  let minutes = Math.floor((time % 3600) / 60)
-    .toString()
-    .padStart(2, '0');
-  let seconds = Math.floor(time % 60)
-    .toString()
-    .padStart(2, '0');
-
-  return minutes + ':' + seconds;
-};
-```
-```jsx
-  useEffect(() => {
-    audio?.addEventListener('timeupdate', () => {
-        setDuration(getMusicTimeFormat(audio.duration || 0));
-        setCurrentTime(getMusicTimeFormat(audio.currentTime));
-        setRange((audio?.currentTime / audio?.duration || 0) * 100);
-    });
-}, [audio]);
-````
-
-`timeupdate`이벤트는 음악이 재생중일때마다 발생한다.
-
-```js
-  const handleChangeProgressRange = (e: React.MouseEvent<HTMLProgressElement>) => {
-    if (audio) {
-        let clickPosition = e.pageX - e.currentTarget.offsetLeft;
-        let clickedValue = (clickPosition * e.currentTarget.max) / e.currentTarget.offsetWidth;
-        audio.currentTime = (parseInt(String(clickedValue), 10) / 100) * audio.duration;
-        setRange(parseInt(String(clickedValue), 10));
-    }
-};
-```
-progressbar를 클릭했을 때는 해당 위치부터 audio를 재생해야했다.
-`clickPosition`은 progressbar를 클릭한 위치를 나타내고, `clickedValue`는 progressbar의 value값을 나타낸다.
-
-- e.pageX = 브라우저 상의 마우스 클릭 위치
-- e.currentTarget.offsetLeft = progressbar의 x축(왼쪽) 위치
-- e.currentTarget.max = progressbar의 최대값
-- e.currentTarget.offsetWidth = progressbar의 전체 너비
-
-
-b:Te25,
-### 디바운싱과 쓰로틀링
-
-
-- 디바운싱: 연속으로 호출되는 함수들 중 가장 마지막 함수(또는 제일 처음)만 호출하도록 하는 것
-- 쓰로틀링: 함수가 연속적으로 실행되는 경우 현재 실행되고 있는 함수가 없는 경우에만 함수를 실행함
-
-예를들어 검색을 요구하는 API에 "test"를 검색한다고 가정한 경우, 일반적인 경우에는 t, e, s, t 각 글자를 입력할 때 마다 API가 호출이 된다.
-
-이런 경우 불필요한 요청이 서버에 부담을 줄 수가 있다.
-
-이 때 디바운싱을 사용하게 된다면, 가장 마지막인 글자가 입력되고, 하나의 단어가 완성되었을때 API에 요청을 할 수 있다.
-
-쓰로틀링인 경우에는 t를 입력했을 때 API요청이 발생하고, 이후 일정 시간동안은 아무 응답도 받지 않는다.
-정해진 시간이 모두 지나고난 뒤에 마지막으로 입력된 글자까지 요청이 가게 된다.
-즉 실행 횟수에 제한을 거는 것이다.
-
-### 디바운싱
-```tsx
-import { useEffect, useState } from 'react'
-
-function useDebounce<T>(value: T, delay?: number): T {
-  const [debouncedValue, setDebouncedValue] = useState<T>(value)
-
-  useEffect(() => {
-    const timer = setTimeout(() => setDebouncedValue(value), delay || 500)
-
-    return () => {
-      clearTimeout(timer)
-    }
-  }, [value, delay])
-
-  return debouncedValue
-}
-
-export default useDebounce
-```
-```js
-import { ChangeEvent, useEffect, useState } from 'react'
-import { useDebounce } from 'usehooks-ts'
-
-export default function Component() {
-  const [value, setValue] = useState<string>('')
-  const debouncedValue = useDebounce<string>(value, 500)
-
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value)
-  }
-
-  // Fetch API (optional)
-  useEffect(() => {
-    // Do fetch here...
-    // Triggers when "debouncedValue" changes
-  }, [debouncedValue])
-
-  return (
-    <div>
-      <p>Value real-time: {value}</p>
-      <p>Debounced value: {debouncedValue}</p>
-
-      <input type="text" value={value} onChange={handleChange} />
-    </div>
-  )
-}
-```
-출처: [react-hook](https://usehooks-ts.com/react-hook/use-debounce)
-
-input feild에 값이 들어갈 때마다 onChange 이벤트가 트리거되고, hook으로 전달받은 value가 clearTimeout으로 초기화된 useEffect내부 setTimeout의 delay만큼 시간이 지난 후 debouncedValue로 return 된다.
-
-### 쓰로틀링
-```js
-import { useEffect, useRef, useState } from 'react';
-
-const useThrottle = (value, limit) => {
-    const [throttledValue, setThrottledValue] = useState(value);
-    const lastRan = useRef(Date.now());
-
-    useEffect(() => {
-        const handler = setTimeout(() => {
-            if (Date.now() - lastRan.current >= limit) {
-                setThrottledValue(value);
-                lastRan.current = Date.now();
-            }
-        }, limit - (Date.now() - lastRan.current));
-
-        return () => {
-            clearTimeout(handler);
-        };
-    }, [value, limit]);
-
-    return throttledValue;
-};
-
-export default useThrottle;
-```
-```js
-const [value, setValue] = useState('');
-{...}
-const throttleText = useThrottle(value, 1000);
-```
-hook이 실행되면 lastRan과 현재시간을 비교한다.
-
-만약 (Date.now() - lastRan.current) 즉, value가 입력된 시간이 limit보다 크다면 value를 throttledValue로 return하고, lastRan을 현재시간으로 초기화한다.
-
-만약 value가 입력된 시간이 limit보다 작다면 limit - value가 입력된 시간이 시간이 지난 후에 throttledValue로 return한다.
-
-
-
-
-c:Tc4f,
-## GraphQL 사용
-
-Apollo client를 사용합니다.
-
-Apollo Client는 GraphQL을 사용해 로컬 및 원격 데이터를 모두 관리할 수 있습니다. (상태 관리 라이브러리)
-
----
-
-### React에 Apollo Client 연결
-```shell
-npm install @apollo/client graphql
-```
-
-index.ts 또는 App.ts 에서 작업을 진행합니다.
-```ts
-const client = new ApolloClient({
-  uri: "https://~/graphql",
-  cache: new InMemoryCache(),
-});
-```
-
-다음과 같이 ApolloClient를 초기화 하고 `uri`와 `cache` 인스턴스를 전달합니다.
-
-uri에 서버주소를 작성합니다. endpoint를 따로 지정하지 않았다면 `/graphql`이 됩니다.
-
-사내에서는 `proxy`를 사용하기 때문에 `endpoint`를
-```ts
-const client = new ApolloClient({
-  uri: '/api/graphql',
-  cache: new InMemoryCache()
-})
-```
-로 작성해주시면 됩니다.
-
-```ts
-function App() {
-  return (
-{...}
-        <ApolloProvider client={client}>
-            <DefaultRoutes />
-        </ApolloProvider>
-{...}
-  )
-}
-```
-react app에 전역으로 사용하기 위해서는 `ContextApi`를 사용하는 것 처럼 `ApolloProvider`로 앱을 감싸면 됩니다.
-
----
-
-### 백엔드 데이터 읽기
-이제 `client`는 데이터를 가져올 준비가 되었습니다.
-
-<img src="/assets/blog/javaScript/graphql-2.png" width="49%" alt="post image"/>
-<img src="/assets/blog/javaScript/graphql-1.png" width="49%" alt="post image"/>
-
-`playground`에서 정의된 `schema`를 다운로드 받아 프로젝트 `root`에 위치시킵니다.
-
-```ts
-// const client = ...
-
-client
-  .query({
-    query: gql`
-      query {
-        getAdminOrderProducts {
-          data {
-            id
-            status
-          }
-        }
-      }
-    `
-  })
-  .then((response) => console.log(response))
-  .catch((error) => console.log(error))
-```
-
-간단하게 불러올 수 있는 방법입니다. playground에 정의된 query를 요청하면
-타입과 함께 요청한 쿼리들이 response에 담깁니다.
-
-<img src="/assets/blog/javaScript/graphql-3.png" width="49%" alt="post image"/>
-<img src="/assets/blog/javaScript/graphql-4.png" width="49%" alt="post image"/>
-
-필드별로 분리하여 요청할 수 있습니다.
-```ts
-import {gql, useQuery} from '@apollo/client'
-
-const ORDER_QUERY = gql`
-  query {
-    getAdminOrderProducts {
-      data {
-        id
-        status
-      }
-    }
-  }
-`
-
-  const {loading, error, data} = useQuery(ORDER_QUERY)
-```
-
-`variables`로 `arguments`를 지정할 수 있습니다.
-
-`useQuery`에 옵션 `variables`은 GraphQL 쿼리에 전달하려는 모든 매개변수를 포함하는 객체입니다.
-
-아래와 같이 매개변수를 지정할 수 있습니다.
-```ts
-const ORDER_QUERY = gql`
-  query getAdminOrderProducts($start: Int!, $perPage: Int!) {
-    getAdminOrderProducts(start: $start, perPage: $perPage) {
-      data {
-        id
-        status
-        product {
-          id
-        }
-        createdAt
-      }
-      total
-    }
-  }
-`
-
-  const {data, loading} = useQuery(ORDER_QUERY, {
-    variables: {
-      start: 0,
-      perPage: 20
-    }
-  })
-```
-
-지금까지는 백엔드의 데이터를 읽는 방법이었습니다.
-
-
-
-
-
-
-
 f:["page","1","d"]
-0:["mD-g7Y4SeIgJjYa4deqpz",[[["",{"children":["page",{"children":[["page","1","d"],{"children":["__PAGE__?{\"page\":\"1\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["page",{"children":[["page","1","d"],{"children":["__PAGE__",{},["$L1",["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L2",null,{"posts":{"posts":[{"content":"$3","data":{"title":"Vite proxy 설정","date":"$D2024-01-18T00:00:00.000Z","description":"Vite 로컬환경에서 CORS 문제 해결하기","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"vite-proxy"},{"content":"$4","data":{"title":"바벨 사용해보기","date":"$D2023-12-01T00:00:00.000Z","description":"바벨 기본 동작과 사용방법","category":"javaScript","titleImage":"/assets/postIcon/babel-icon.svg"},"slug":"babel"},{"content":"$5","data":{"title":"웹팩 기본 사용법 (1)","date":"$D2023-11-30T00:00:00.000Z","description":"처음 접해보는 웹팩의 원리와 기본 사용 방법","category":"javaScript","titleImage":"/assets/postIcon/webpack-icon.svg"},"slug":"webpack-1"},{"content":"$6","data":{"title":"React Native geolocation","date":"$D2023-10-25T00:00:00.000Z","description":"React Native 위치정보 받아오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"rn-geolocation"},{"content":"$7","data":{"title":"React Native Deep Linking","date":"$D2023-10-17T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"rn-deep-link"},{"content":"$8","data":{"title":"Next.js 블로그 만들기","date":"$D2023-10-09T00:00:00.000Z","description":"Next.js로 블로그 만들기","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-blog"},{"content":"$9","data":{"title":"jwt 토큰 decode 하기","date":"$D2023-08-31T00:00:00.000Z","description":"jwt 토큰 decode 함수","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"jwt-decode"},{"content":"$a","data":{"title":"Audio객체를 이용한 음악 재생","date":"$D2023-05-27T00:00:00.000Z","description":"Audio객체를 사용한 기업 과제 구현","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"audio"},{"content":"$b","data":{"title":"디바운싱과 쓰로틀링","date":"$D2023-05-13T00:00:00.000Z","description":"디바운싱과 쓰로틀링의 차이를 구분하고 hook으로 구현","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"debouce-throttle"},{"content":"$c","data":{"title":"GraphQl 써보기(1)","date":"$D2023-04-29T00:00:00.000Z","description":"GraphQl, Apollo Client를 사용","category":"javaScript","titleImage":"/assets/postIcon/graphql.svg"},"slug":"graphql-1"}],"total":35},"page":"1","category":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$Ld",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (32)"}]}],["$","li","study",{"children":["$","$Ld",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$Ld",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}],null]]},["$","$Le",null,{"parallelRouterKey":"children","segmentPath":["children","page","children","$f","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L10",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},["$","$Le",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L10",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L11",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L11",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_471caf","children":["$","$L12",null,{"children":[["$","$13",null,{"fallback":null,"children":["$","$L14",null,{"children":"$L15"}]}],[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b-[1px] border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$Ld",null,{"href":"/","children":["$","$L16",null,{"src":"/assets/icons/been-logo.svg","width":60,"height":56,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$Ld",null,{"href":"/about","children":"About"}]}]]}],["$","$13",null,{"fallback":null,"children":["$","$L14",null,{"children":"$L17"}]}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$Le",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L10",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]]}]}]]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/f02a732008014100.css","precedence":"next","crossOrigin":""}]],"$L18"]]]]
-19:I[286,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],""]
-1a:I[9137,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],""]
-15:["$","$L19",null,{}]
-17:["$","$L1a",null,{}]
-18:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Been blog - 1"}],["$","meta","3",{"name":"description","content":"Been dev-note"}],["$","meta","4",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","5",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","meta","6",{"property":"og:title","content":"Been blog - 1"}],["$","meta","7",{"property":"og:description","content":"Been dev-note - 1"}],["$","meta","8",{"property":"og:url","content":"https://wonbeenna.github.io/page/1"}],["$","meta","9",{"property":"og:site_name","content":"Been blog"}],["$","meta","10",{"property":"og:locale","content":"ko_KR"}],["$","meta","11",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","12",{"property":"og:image:width","content":"800"}],["$","meta","13",{"property":"og:image:height","content":"600"}],["$","meta","14",{"property":"og:image:alt","content":"Been blog"}],["$","meta","15",{"property":"og:type","content":"website"}],["$","meta","16",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","17",{"name":"twitter:title","content":"Been blog - 1"}],["$","meta","18",{"name":"twitter:description","content":"Been dev-note - 1"}],["$","meta","19",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","20",{"name":"twitter:image:width","content":"800"}],["$","meta","21",{"name":"twitter:image:height","content":"600"}],["$","meta","22",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","meta","24",{"name":"next-size-adjust"}]]
+0:["gRWOS8EtFsTPhUs00OQkE",[[["",{"children":["page",{"children":[["page","1","d"],{"children":["__PAGE__?{\"page\":\"1\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["page",{"children":[["page","1","d"],{"children":["__PAGE__",{},["$L1",["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L2",null,{"posts":{"posts":[{"content":"$3","data":{"title":"rollup으로 번들링하는 과정","date":"$D2024-03-09T00:00:00.000Z","description":"처음 rollup으로 번들링하는 과정에서 겪은 문제들과 해결방법","category":"javaScript","titleImage":"/assets/postIcon/rollup-logo.svg"},"slug":"rollup"},{"content":"$4","data":{"title":"cjs와 esm","date":"$D2024-03-07T00:00:00.000Z","description":"rollup으로 번들링하는 과정에서 알게된 cjs와 esm의 차이점에 대해","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"module-system"},{"content":"$5","data":{"title":"리액트에서 불변성을 지키는 이유","date":"$D2024-02-25T00:00:00.000Z","description":"리액트에서 불변성을 지키는 이유","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"react-immutable"},{"content":"$6","data":{"title":"Vite proxy 설정","date":"$D2024-01-18T00:00:00.000Z","description":"Vite 로컬환경에서 CORS 문제 해결하기","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"vite-proxy"},{"content":"$7","data":{"title":"바벨 사용해보기","date":"$D2023-12-01T00:00:00.000Z","description":"바벨 기본 동작과 사용방법","category":"javaScript","titleImage":"/assets/postIcon/babel-icon.svg"},"slug":"babel"},{"content":"$8","data":{"title":"웹팩 기본 사용법 (1)","date":"$D2023-11-30T00:00:00.000Z","description":"처음 접해보는 웹팩의 원리와 기본 사용 방법","category":"javaScript","titleImage":"/assets/postIcon/webpack-icon.svg"},"slug":"webpack-1"},{"content":"$9","data":{"title":"React Native geolocation","date":"$D2023-10-25T00:00:00.000Z","description":"React Native 위치정보 받아오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"rn-geolocation"},{"content":"$a","data":{"title":"React Native Deep Linking","date":"$D2023-10-17T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"rn-deep-link"},{"content":"$b","data":{"title":"Next.js 블로그 만들기","date":"$D2023-10-09T00:00:00.000Z","description":"Next.js로 블로그 만들기","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-blog"},{"content":"$c","data":{"title":"jwt 토큰 decode 하기","date":"$D2023-08-31T00:00:00.000Z","description":"jwt 토큰 decode 함수","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"jwt-decode"}],"total":38},"page":"1","category":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$Ld",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (35)"}]}],["$","li","study",{"children":["$","$Ld",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$Ld",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}],null]]},["$","$Le",null,{"parallelRouterKey":"children","segmentPath":["children","page","children","$f","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L10",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},["$","$Le",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L10",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L11",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L11",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_bd870a","children":["$","$L12",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b-[1px] border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$Ld",null,{"href":"/","children":["$","$L13",null,{"src":"/assets/icons/been-logo.svg","width":60,"height":56,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$Ld",null,{"href":"/about","children":"About"}]}]]}],["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"children":"$L16"}]}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$Le",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L10",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/59c48ca6c4481319.css","precedence":"next","crossOrigin":""}]],"$L17"]]]]
+18:I[9137,["438","static/chunks/438-55d6a3410449957f.js","185","static/chunks/app/layout-56af28789787dacc.js"],""]
+16:["$","$L18",null,{}]
+17:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Been blog - 1"}],["$","meta","3",{"name":"description","content":"Been dev-note"}],["$","meta","4",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","5",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","meta","6",{"property":"og:title","content":"Been blog - 1"}],["$","meta","7",{"property":"og:description","content":"Been dev-note - 1"}],["$","meta","8",{"property":"og:url","content":"https://wonbeenna.github.io/page/1"}],["$","meta","9",{"property":"og:site_name","content":"Been blog"}],["$","meta","10",{"property":"og:locale","content":"ko_KR"}],["$","meta","11",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","12",{"property":"og:image:width","content":"800"}],["$","meta","13",{"property":"og:image:height","content":"600"}],["$","meta","14",{"property":"og:image:alt","content":"Been blog"}],["$","meta","15",{"property":"og:type","content":"website"}],["$","meta","16",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","17",{"name":"twitter:title","content":"Been blog - 1"}],["$","meta","18",{"name":"twitter:description","content":"Been dev-note - 1"}],["$","meta","19",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","20",{"name":"twitter:image:width","content":"800"}],["$","meta","21",{"name":"twitter:image:height","content":"600"}],["$","meta","22",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","meta","24",{"name":"next-size-adjust"}]]
 1:null

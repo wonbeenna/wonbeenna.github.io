@@ -1,15 +1,675 @@
-2:I[8451,["438","static/chunks/438-20a73b8af0ca1535.js","411","static/chunks/app/page/%5Bpage%5D/page-10f5b8e52537b5e8.js"],""]
-8:I[5250,["438","static/chunks/438-20a73b8af0ca1535.js","411","static/chunks/app/page/%5Bpage%5D/page-10f5b8e52537b5e8.js"],""]
-9:I[5613,[],""]
-b:I[1778,[],""]
-c:I[5935,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],""]
-d:I[4840,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],"Providers"]
-e:"$Sreact.suspense"
-f:I[6005,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],"NoSSR"]
-10:I[286,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],""]
-11:I[1749,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],"Image"]
-12:I[9137,["438","static/chunks/438-20a73b8af0ca1535.js","185","static/chunks/app/layout-46965708893096b1.js"],""]
-3:T1f48,
+2:I[8451,["438","static/chunks/438-55d6a3410449957f.js","411","static/chunks/app/page/%5Bpage%5D/page-4aa0014340b67571.js"],""]
+b:I[5250,["438","static/chunks/438-55d6a3410449957f.js","411","static/chunks/app/page/%5Bpage%5D/page-4aa0014340b67571.js"],""]
+c:I[5613,[],""]
+e:I[1778,[],""]
+f:I[5935,["438","static/chunks/438-55d6a3410449957f.js","185","static/chunks/app/layout-56af28789787dacc.js"],""]
+10:I[4840,["438","static/chunks/438-55d6a3410449957f.js","185","static/chunks/app/layout-56af28789787dacc.js"],"Providers"]
+11:I[1749,["438","static/chunks/438-55d6a3410449957f.js","185","static/chunks/app/layout-56af28789787dacc.js"],"Image"]
+12:"$Sreact.suspense"
+13:I[6005,["438","static/chunks/438-55d6a3410449957f.js","185","static/chunks/app/layout-56af28789787dacc.js"],"NoSSR"]
+14:I[9137,["438","static/chunks/438-55d6a3410449957f.js","185","static/chunks/app/layout-56af28789787dacc.js"],""]
+3:T18c7,
+이번에 유지보수하면서 진행했던 TTS (Text-to-Speech)
+
+단어의 발음을 읽어주도록 해야했다.
+
+결국 Google TTS로 구현하긴 했지만, 처음에는 Speechsynthesis를 사용해 구현했었다.
+
+Sppechsynthesis는 (음성 합성) Web Speech API이고 주어진 텍스트를 소리로 바꿔주는, 음성 서비스에 대한 컨트롤러 인터페이스이다.
+
+---
+
+### Speechsynthesis
+
+IE빼고 브라우저 거의 지원한다.
+
+```javascript
+speechSynthesis.getVoices();
+```
+
+로 지원하는 음성 목록을 확인할 수 있다.
+
+
+<img src="/assets/blog/javaScript/speechsynthesis.png" width="100%" alt="post image"/>
+
+문제는,, 브라우저마다 또는 OS마다 지원하는 음성이 달라서 모두 동일하지 못했다,
+
+그래서 모바일따로 웹따로 브라우저별로 목소리가 다르게 세팅되어 Google TTS로 바꾸게 되었다.
+
+```javascript
+const speech = new SpeechSynthesisUtterance()
+
+// 음높이와 목소리 등 설정이 가능
+speech.voice
+speech.text
+speech.lang
+speech.pitch
+speech.rate
+speech.volume
+```
+
+```
+// speechSynthesisUtterance에 설정한 음성 실행
+window.speechSynthesis.speak(speech)
+```
+
+---
+
+### Google TTS
+
+두가지 방식이 있었다.
+
+클라이언트 라이브러리와 API
+
+클라이언트 라이브러리
+
+#### Node.js
+
+```javascript
+npm install --save @google-cloud/text-to-speech	//라이브러리 설치
+
+
+// Imports the Google Cloud client library
+const textToSpeech = require('@google-cloud/text-to-speech');
+
+// Import other required libraries
+const fs = require('fs');
+const util = require('util');
+// Creates a client
+const client = new textToSpeech.TextToSpeechClient();
+async function quickStart() {
+  // The text to synthesize
+  const text = 'hello, world!';
+
+  // Construct the request
+  const request = {
+    input: {text: text},
+    // Select the language and SSML voice gender (optional)
+    voice: {languageCode: 'en-US', ssmlGender: 'NEUTRAL'},
+    // select the type of audio encoding
+    audioConfig: {audioEncoding: 'MP3'},
+  };
+
+  // Performs the text-to-speech request
+  const [response] = await client.synthesizeSpeech(request);
+  // Write the binary audio content to a local file
+  const writeFile = util.promisify(fs.writeFile);
+  await writeFile('output.mp3', response.audioContent, 'binary');
+  console.log('Audio content written to file: output.mp3');
+}
+quickStart();
+```
+
+구글의 샘플코드
+
+위 코드로 테스트해보니 output.mp3 파일이 만들어지고 이 파일을 재생하면 요청한 text가 재생됐다.
+
+하지만 파일도 필요없고, 음성만 클라이언트에서 받으면 됐기 때문에 조금 더 살펴봤는데, reponse 부분에서 arrayBuffer의 버퍼데이터가 찍혔고, 이 response 데이터를 바로 클라이언트로 보내줬다.
+
+#### React
+
+```javascript
+      const requestAudioFile = async (e) => {
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)
+
+            const response = await axios({
+                method: 'get',
+                url: `http://localhost:4000/exam1`,
+                params: {test: e.target.ariaValueText},
+                responseType: 'arraybuffer'
+            })
+
+            // 버퍼 데이터 비동기 디코딩
+            const audioBuffer = await audioContext.decodeAudioData(response.data)
+
+            // 오디오 source 만들기
+            const gainNode = audioContext.createGain()
+            const source = audioContext.createBufferSource()
+
+            // 생성된 source에 재생할 데이터 선언
+            source.buffer = audioBuffer
+            source.connect(gainNode)
+
+            // 재생할 스피커에 source 넣기
+            gainNode.connect(audioContext.destination)
+            source.start()
+
+            console.log('responce', response.data);
+            console.log('audioContext', audioContext);
+            // -------------- //
+            const audioBuffer = await audioContext.decodeAudioData(decode);
+            console.log('audioBuffer', audioBuffer);
+            //create audio source
+              const gainNode = audioContext.createGain()
+              const source = audioContext.createBufferSource()
+            console.log('source : ', source);
+
+              source.buffer = audioBuffer
+              source.connect(gainNode)
+              gainNode.connect(audioContext.destination)
+
+            source.start();
+        }
+```
+
+읽혀야할 text를 params로 보냈고, Web Audio API 의 AudioContext를 사용해서 받아온 버퍼데이터를 읽도록 했다.
+
+근데 몇가지 문제가 더 있었는데, 모바일에서는 작동하지 않는것..audio 태그를 이용해 읽혀야 하기 때문에 버튼 커스텀이 되지 않았다.
+
+그래서 변경한게 API
+
+```
+POST https://texttospeech.googleapis.com/v1/text:synthesize?key='Google API KEY'
+```
+
+```json
+{
+  "input":{
+    "text":"Android is a mobile operating system developed by Google, based on the Linux kernel and designed primarily for touchscreen mobile devices such as smartphones and tablets."
+  },
+  "voice":{
+    "languageCode":"en-gb",
+    "name":"en-GB-Standard-A",
+    "ssmlGender":"FEMALE"
+  },
+  "audioConfig":{
+    "audioEncoding":"MP3"
+  }
+}
+```
+
+위처럼 작성해 POST요청을 보내면  
+
+```
+//NExAARqoIIAAhEuWAAAGNmBGMY4EBcxvABAXBPmPIAF//yAuh9Tn5CEap3/o
+...
+VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+```
+
+음성이 base64 인코딩 형식으로 들어온다.
+
+받은 인코딩된 음성을
+
+```javascript
+const [audioSource, setAudioSource] = useState(null)
+
+const requestAudioFile = async (e) => {
+  const response = await axios.post(
+      // eslint-disable-next-line no-undef
+    `https://texttospeech.googleapis.com/v1/text:synthesize?key=${process.env.REACT_APP_GOOGLE_TTL}`,
+    {
+      input: {
+        text: e?.target?.ariaValueText
+      },
+      voice: {
+        languageCode: 'en-US',
+        name: 'en-US-Standard-H',
+        ssmlGender: 'FEMALE'
+      },
+      audioConfig: {
+        audioEncoding: 'LINEAR16',
+        speakingRate: 1
+      }
+    }
+  );
+  setAudioSource(new Audio("data:audio/wav;base64," + response.data?.audioContent));
+};
+
+    useEffect(() => {
+        audioSource?.play()
+    }, [audioSource])
+```
+
+new Audio 오디오 객체를 이용해 오디오소스가 들어올때, 오디오를 만들고 재생시켰다.
+4:Tf2b,
+**[유동균님의 강의](https://www.inflearn.com/course/%EC%9B%B9-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EB%A6%AC%EC%95%A1%ED%8A%B8-1)를 보며 정리한 글 입니다.**
+
+---
+
+### 1\. Layout Shift
+
+원인
+
+1\. 사이즈가 정해져 있지 않은 이미지
+
+2\. 사이즈가 정해져 있지 않은 광고
+
+3\. 동적으로 삽입된 콘텐츠
+
+4\. Web font (FOIT, FOUT)
+
+<img src="/assets/blog/javaScript/web-optimization-3-1.png" width="100%" alt="post image"/>
+
+여러 이미지를 로드할 때, 먼저 불러온 이미지 자리를 나중에 불러온 이미지가 밀어내게 되면서 레이아웃 변경이 계속 발생한다.
+
+```js
+<ImageWrap>
+  <Image />
+</ImageWrap>
+```
+
+이때 Wrap에 고정값을 정해주고 Image는 그 값을 따라가기만 하면 된다. 여기서는 16:9 비율로 지정하기 위해 9 / 16 = 56.25%로 높이를 잡고 Image를 그 안에 넣는 방식으로 했다.
+
+<img src="/assets/blog/javaScript/web-optimization-3-2.png" width="100%" alt="post image"/>
+
+컨텐츠가 새로 들어오면서 기존 컨텐츠를 밀어내지 않도록 컨텐츠를 그려줄 곳에 미리 자리를 만들어 놓는것이다.
+
+---
+
+### 2\. React-lazyload
+
+```shell
+npm i react-lazyload
+```
+
+강의에서는 라이브러리를 사용했지만, 다음엔 스스로 구현해 포스팅해야겠다.
+
+스크롤이벤트를 사용하는 것 같다.
+
+---
+
+### 3\. useSelect 렌더링 문제
+
+<img src="/assets/blog/javaScript/web-optimization-3-3.png" width="100%" alt="post image"/>
+
+리액트 dev-tool에서 Highlight updates ... 를 체크해 컴포넌트가 렌더링되는걸 확인할 수 있다.
+
+useSelector는 dispatch로 Redux Store가 변경되면 구독하고 있는 컴포넌트에 state가 변경되었다고 알려준다.
+
+그럼 컴포넌트에서는 기존 state와 업데이트된 state를 비교해 값이 다르면 다시 렌더링 하게 된다.
+
+여기서 비교하는 방식은 useSelector의 리턴값을 비교하는데
+
+```js
+const { modalVisible, bgColor, src, alt } = useSelector(state => ({
+  modalVisible: state.modalVisible,
+  bgColor: state.bgColor,
+  src: state.src,
+  alt: state.alt,
+}));
+```
+
+리턴값을 오브젝트 형식으로 작성하면, 값을 생성할 때 마다 새로운 오브젝트를 만들기 때문에 매번 새롭게 렌더링하게 된다.
+
+```js
+const modalVisible = useSelector(state => state.modalVisible)
+const bgColor = useSelector(state => state.bgColor)
+const src = useSelector(state => state.src)
+const alt = useSelector(state => state.alt)
+```
+
+오브젝트를 새롭게 만들지 않도록 state를 쪼개고 새로운 Equality Function을 사용해야한다.
+
+```js
+const { modalVisible, bgColor, src, alt } = useSelector(state => ({
+  modalVisible: state.modalVisible,
+  bgColor: state.bgColor,
+  src: state.src,
+  alt: state.alt,
+}), shallowEqual);
+```
+
+---
+
+### 4\. Redux Reselect
+
+state의 값들을 가지고 가공해야되는 값이 있을 때 useSelector내부에서 가공해 값을 준다.
+
+```js
+const selectFilteredPhotos = createSelector([select값], (select값) => (가공할 결과를 리턴)
+const photos = useSelector(selectFilteredPhotos)
+```
+
+또 메모이제이션 방식을 통해 값을 비교하므로 불필요한 계산도 없애준다.
+
+select값이 같은 값으로 들어오면 미리 캐싱해둔 값과 비교해 값이 변하지 않으면 그대로 리턴한다.
+
+---
+
+### 5\. Memoization 적용
+
+인풋에 따라 아웃풋에 나오는 값에 대해서 미리 저장해 놓는 기법이다.
+
+a -> A가 아웃풋이다 라고 할때, 다음번에 또 a가 들어오면 로직을 일일히 실행하지않고 저장해둔 값 A를 바로 리턴하게 된다.
+
+순수함수만 가능
+
+그렇다고 무지성으로 쓰는건 좋지 않다.
+
+메모이제이션이 불필요한 함수에 적용하는건 오히려 메모리 낭비가 될 수 있다.
+5:T2721,
+**[유동균님의 강의](https://inf.run/4zeg)를 보며 정리한 글 입니다.**
+
+---
+
+### 1\. 이미지 지연(lazy) 로딩
+
+<img src="/assets/blog/javaScript/web-optimization-2-1.png" width="100%" alt="post image"/>
+
+예제에서 네트워크를 6메가비트로 맞춰놓았다.
+
+제일 먼저 사용자에게 보여져야할 동영상이 이미지 보다 더 늦게 다운로드 되는 부분을 동영상이 먼저 다운로드 되도록 수정해야한다.
+
+-   이미지를 빠르게 다운로드
+-   **이미지를 나중에 다운로드, 동영상 먼저 다운로드**
+
+두번째 방법을 사용해 수정(image lazy)
+
+이미지를 필요할때(나중에, 보여지기 직전에) 로드되도록 해야한다.
+
+스크롤이 이미지가 있는 곳에 도달하면 이미지를 로드하고, 그렇지 않으면 보이지 않도록 해야하는데,
+
+이 방법은 사용자가 매번 스크롤을 할 때마다 이벤트함수가 호출되는 단점이 있다.
+
+이 문제를 해결하려면 **IntersectionObserver**로 해결할 수 있다. 즉 화면에 특정 이미지가 들어올 때만 함수를 호출하게 된다.
+
+[https://developer.mozilla.org/ko/docs/Web/API/Intersection\_Observer\_API](https://developer.mozilla.org/ko/docs/Web/API/Intersection_Observer_API)
+
+```js
+const observer = new IntersectionObserver(callback, options)
+observer.observe(element객체)
+```
+
+```js
+    const imgRef = useRef(null)
+
+   useEffect(() => {
+      const options = {}
+      const callback = () => {
+         console.log('callback')
+      }
+      const observer = new IntersectionObserver(callback, options)
+
+      observer.observe(imgRef.current)
+   }, [])
+
+
+   return (
+      <div className="Card text-center">
+         <img src={props.image} ref={imgRef} />
+         <div className="p-5 font-semibold text-gray-700 text-xl md:text-lg lg:text-xl keep-all">
+            {props.children}
+         </div>
+      </div>
+   )
+}
+```
+
+<img src="/assets/blog/javaScript/web-optimization-2-2.png" width="100%" alt="post image"/>
+
+스크롤을 내려 이미지가 **보이거나 사라질때** 콘솔이 찍힌다.
+
+이미지가 보이는 그 순간에만 로드하려면 callback 함수에 entries와 observer객체를 넘겨주면 된다.
+
+```js
+useEffect(() => {
+   const options = {}
+   const callback = (entries, observer) => {
+      entries.forEach(entry => {
+         if(entry.isIntersecting){
+            console.log('is Intersecting')
+         }
+      })
+   }
+   const observer = new IntersectionObserver(callback, options)
+
+   observer.observe(imgRef.current)
+}, [])
+```
+
+<img src="/assets/blog/javaScript/web-optimization-2-3.png" width="100%" alt="post image"/>
+
+위와는 다르게 화면안에 이미지가 **보일 때만** 콘솔이 찍힌다.
+
+```js
+    const imgRef = useRef(null)
+
+    useEffect(() => {
+        const options = {}
+        const callback = (entries, observer) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    console.log('is Intersecting', entry.target.dataset.src)
+                    entry.target.src = entry.target.dataset.src
+                    // 이미지가 들어오면 더이상 감시하지 않음
+                    observer.unobserve(entry.target)
+                }
+            })
+        }
+        const observer = new IntersectionObserver(callback, options)
+        // 이미지를 넣음
+        observer.observe(imgRef.current)
+    }, [])
+
+
+    return (
+        <div className="Card text-center">
+            <img data-src={props.image} ref={imgRef}/>
+            <div className="p-5 font-semibold text-gray-700 text-xl md:text-lg lg:text-xl keep-all">
+                {props.children}
+            </div>
+        </div>
+    )
+}
+```
+
+<img src="/assets/blog/javaScript/web-optimization-2-4.png" width="100%" alt="post image"/>
+
+동영상을 먼저 로드하고, 이미지를 불러옴
+
+---
+
+### 2\. 이미지 사이즈 최적화
+
+위에서 지연로딩을 사용해 이미지를 불러오는 타이밍을 조절했지만 그래도 이미지 자체의 용량이 크다면 불러오는 속도가 느려질 수 밖에 없다.
+
+이미지 포맷, 확장자 종류
+
+- JPG를 **WEBP**(구글에서 나온 이미지 포맷, JPG에 비해서 화질이높고 용량이 낮음)로 변경,
+
+* 꼭 WEBP로 할필요는 없다 (**WEBP, WEBM**은 현재 잘 쓰지 않는다) 현재 지원하지않는 브라우저도 있음
+
+**picture** 태그로 이미지 분기(나중에 자세하게 배워보자)
+
+```html
+<picture>
+   <source  data-srcset={props.webp} type='image/webp'/>
+   <img data-src={props.image} ref={imgRef}/>
+</picture>
+```
+
+이미지 포맷은 [https://squoosh.app/](https://squoosh.app/) 를 사용했다.
+
+<img src="/assets/blog/javaScript/web-optimization-2-5.png" width="100%" alt="post image"/>
+
+예제에서 브라우저에 보일 크기는 300 x 300 이므로 **x2**를해 600 x 600으로 포맷
+
+이미지가 9.74MB에서 **21.9KB**로 줄었다.
+
+---
+
+### 3\. 동영상 사이즈 최적화
+
+동영상이 메인 컨텐츠가 아닌 경우 적합
+
+동영상도 **WEBM**으로 포맷
+
+```html
+<video
+   className="absolute translateX--1/2 h-screen max-w-none min-w-screen -z-1 bg-black min-w-full min-h-screen"
+   autoPlay
+   loop
+   muted
+>
+   <source src={video_webm} type='video/webm' />
+   <source src={video} type='video/mp4' />
+</video>
+```
+
+---
+
+### 4\. 폰트 최적화
+
+폰트도 리소스라 네트워크를 통해 받아온다.
+
+- 웹 폰트의 문제점
+
+**FOUT**(Flash of Unstyled Text) = 폰트를 다운로드 하기 전에는 **기본폰트로 컨텐츠**를 보여줌
+
+**FOIT**(Flash of Invisible Text) = 폰트가 다운로드 되기 전에는 **컨텐츠를 보여주지 않음**
+
+1. 폰트 적용 시점 컨트롤
+
+-   font-display 사용
+    \- auto : 브라우저 기본 동작
+    \- block : FOIT (timeout = 3s)
+    \- swap : FOUT
+    \- fallback : FOIT (timeout = 0.1s) 0.1초 후에도 불러오지 못하면 **기본 폰트 유지**, 이후에 캐시
+    \- optional : FOIT (timeout = 0.1s) 이후 네트워크 상태에 따라 **기본폰트로 유지할지 웹폰트를 적용할지 결정**, 이후에 캐시
+
+```css
+@font-face {
+	font-family: BMYEONSUNG;
+	src: url('./assets/fonts/BMYEONSUNG.ttf');
+	font-display: swap;
+}​
+```
+
+<img src="/assets/blog/javaScript/web-optimization-2-6.gif" width="100%" alt="post image"/>
+
+-   fontfaceobserver 라이브러리를 사용해 시각적인 효과
+
+```css
+@font-face {
+   font-family: BMYEONSUNG;
+   src: url('./assets/fonts/BMYEONSUNG.ttf');
+   font-display: block;
+}
+```
+
+```js
+const [isFontLoaded, setIsFontLoaded] = useState(false)
+
+const font = new FontFaceObserver('BMYEONSUNG');
+
+useEffect(() => {
+   font.load().then(function () {
+      console.log('BMYEONSUNG has loaded');
+      setIsFontLoaded(true)
+   });
+}, [])
+
+return (
+    <div className="..." style={{opacity: isFontLoaded ? 1 : 0, transition: 'opacity 0.3s ease'}} >
+        <div className="...">
+            {...}
+        </div>
+    </div>
+)
+```
+
+2. 폰트 사이즈 줄이기
+
+폰트 포멧 사이트 [https://transfonter.org/](https://transfonter.org/)
+
+- 웹폰트 포맷 사용 (파일 크기 = EOT > TTF/OTF > WOFF > WOFF2)
+
+```css
+@font-face {
+   font-family: BMYEONSUNG;
+       /* 로컬에 폰트가 있으면 바로 적용*/
+   src: local('BMYEONSUNG'),
+       url('./assets/fonts/BMYEONSUNG.woff2') format('woff2'),
+       /* 지원하지 않는 브라우저 대응 */
+       url('./assets/fonts/BMYEONSUNG.woff') format('woff'),
+       url('./assets/fonts/BMYEONSUNG.ttf') format('truetype');
+   font-display: block;
+}
+```
+
+- local 폰트 사용
+
+- **Subset** 사용
+
+필요한 글자만 가져와서 사용 "ABCDEFGHIJKLMNOPQR"
+
+<img src="/assets/blog/javaScript/web-optimization-2-7.png" width="100%" alt="post image"/>
+
+변환하지 않은 폰트는 포함되지 않음
+
+- **Unicode Range** 적용
+
+```css
+@font-face {
+   font-family: BMYEONSUNG;
+        /* 로컬에 폰트가 있으면 바로 적용*/
+   src: url('./assets/fonts/subset-BMYEONSUNG.woff2') format('woff2'),
+        /* 지원하지 않는 브라우저 대응 */
+        url('./assets/fonts/subset-BMYEONSUNG.woff') format('woff'),
+        url('./assets/fonts/BMYEONSUNG.ttf') format('truetype');
+   font-display: block;
+   unicode-range: U+0041;
+}
+```
+
+<img src="/assets/blog/javaScript/web-optimization-2-8.png" width="100%" alt="post image"/>
+
+Subset은 렌더링 하는 텍스트에 폰트가 필요하지 않아도 폰트를 로드하지만 unicode-range를 사용하면 폰트가 필요하지 않으면 로드하지 않는다
+
+- data-uri로 변환
+
+Base64 encode 해 불러오는 방식
+
+- **Preload**
+
+해당하는 페이지에 폰트가 필요하다는 것을 HTML에 작성
+
+```html
+<link rel="preload" href="BMYEONSUNG.woff2" as="font" type="font/woff2" crossorigin>
+```
+
+<img src="/assets/blog/javaScript/web-optimization-2-9.png" width="100%" alt="post image"/>
+
+CSS가 로드되기 전에 폰트가 먼저 로드됨
+
+---
+
+### 5\. 캐시 최적화
+
+웹 브라우저는 크게 메모리 캐시, 디스크 캐시 두가지로 캐싱한다.
+
+**메모리 캐시는 RAM**에 저장, **디스크 캐시는 file로 데이터**를 저장
+
+- Cache-Control
+
+브라우저 이미지 요청 -> 서버
+
+서버 -> 브라우저에 이미지(캐시) 보냄
+
+* 서버에서 설정이 필요
+
+-   no-cache : 캐시를 사용하기 전에 서버에서 검사 후 사용 결정
+-   no-store : 캐시 사용 안함
+-   public : 모든 환경에서 사용
+-   private : 브라우저 환경에서만 캐시 사용, 외부 캐시 서버에서는 사용 불가
+-   max-age : 캐시의 유효시간
+
+- Node
+
+```js
+const header = {
+    setHeaders: (res, path) => {
+    	if(path.endsWith('.html')){
+        	res.setHeader('Cache-Control', no-cache)
+        } else if(path.endsWith('.js') || path.endsWith('css') || path.endsWith('.webp')){
+        	res.setHeader('Cache-Control', 'public, max-age=...'
+        } else {
+        	res.setHeader('Cache-Control', 'no-store')
+        }
+    },
+}
+```
+6:T1f48,
 **[유동균님의 강의](https://www.inflearn.com/course/%EC%9B%B9-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EB%A6%AC%EC%95%A1%ED%8A%B8-1)를 보며 정리한 글 입니다.**
 
 ---
@@ -257,7 +917,7 @@ useEffect(() => {
 주의할점은 이미지는 모듈과 다르게 필요할 때 마다 그때그때 매번 보내기 때문에
 
 사용하는 이미지에 캐시가 제대로 걸려있는지 확인할 필요가 있다.
-4:T2416,
+7:T2416,
 
 ####
 **[Svelte vs React: Ending the Debate](https://massivepixel.io/blog/svelte-vs-react/ "Svelte vs React: Ending the Debate")를 읽으며 정리한 글입니다.**
@@ -410,7 +1070,7 @@ GZIPPED(압축된) 버전의 리액트는 **42.2KB**(ReactDOM포함), 스벨트�
 하지만 스벨트는 아직 갈 길이 멀다. 지금까지는 인터넷 연결이 낮거나, 블로그, 포트폴리오 등 단순히 개인 웹사이트를 만드는 단일 페이지 애플리케이션을 구축하는데 사용하는 것이 좋다.
 
 또 큰 회사들의 기술 스택을 스벨트로 교체하기에는 많은 시간이 필요할 것이며 스벨트의 개발자들의 수요 또한 거의 없다.
-5:T1085,
+8:T1085,
 # 렌더링 최적화
 
 ### 1\. 컴포넌트를 맵핑할때는 key값으로 Index를 사용하지 말자
@@ -557,7 +1217,7 @@ useMemo는 리턴되는 값을 memoize 시키는 반면에, useCallback은 함�
     {...}
   }, [users]);
 ```
-6:T1f82,
+9:T1f82,
 [리액트 문서](https://beta.reactjs.org/)를 정독하며 정리한 글
 영어문서라 조금 힘들었다...
 
@@ -812,7 +1472,7 @@ function FilterableProductTable({ products }) {
 ```
 
 
-7:T1c8d,
+a:T1c8d,
 ## React Hook
 
 React로 개발할 땐 클래스형 컴포넌트 보다 React 16.8 부터 도입된 Hook 기반 함수형 컴포넌트를 더 선호하여 개발하는 것 같다.
@@ -1049,7 +1709,7 @@ function useEffect(cb, depArray) {
 [Deep dive: How do React hooks really work?](https://www.netlify.com/blog/2019/03/11/deep-dive-how-do-react-hooks-really-work/)
 
 [Getting Closure on React Hooks](https://rinae.dev/posts/getting-closure-on-react-hooks-summary)
-a:["page","4","d"]
-0:["mD-g7Y4SeIgJjYa4deqpz",[[["",{"children":["page",{"children":[["page","4","d"],{"children":["__PAGE__?{\"page\":\"4\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["page",{"children":[["page","4","d"],{"children":["__PAGE__",{},["$L1",["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L2",null,{"posts":{"posts":[{"content":"$3","data":{"title":"웹성능 최적화(1)","date":"$D2022-01-01T00:00:00.000Z","description":"웹성능 최적화1","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"web-optimization"},{"content":"$4","data":{"title":"스벨트와 리액트","date":"$D2021-12-12T00:00:00.000Z","description":"스벨트와 리액트에 대해 정리한 글","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-react"},{"content":"$5","data":{"title":"React 처럼 생각하기(2)","date":"$D2021-12-12T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"thinking-in-react-2"},{"content":"$6","data":{"title":"React 처럼 생각하기","date":"$D2021-11-20T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"thinking-in-react"},{"content":"$7","data":{"title":"React Hook의 동작","date":"$D2021-11-07T00:00:00.000Z","description":"React Hook의 동작에 대해","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"react-hook"}],"total":35},"page":"4","category":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L8",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (32)"}]}],["$","li","study",{"children":["$","$L8",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$L8",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}],null]]},["$","$L9",null,{"parallelRouterKey":"children","segmentPath":["children","page","children","$a","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lb",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},["$","$L9",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lb",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$Lc",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$Lc",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_471caf","children":["$","$Ld",null,{"children":[["$","$e",null,{"fallback":null,"children":["$","$Lf",null,{"children":["$","$L10",null,{}]}]}],[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b-[1px] border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L8",null,{"href":"/","children":["$","$L11",null,{"src":"/assets/icons/been-logo.svg","width":60,"height":56,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L8",null,{"href":"/about","children":"About"}]}]]}],["$","$e",null,{"fallback":null,"children":["$","$Lf",null,{"children":["$","$L12",null,{}]}]}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L9",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lb",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]]}]}]]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/f02a732008014100.css","precedence":"next","crossOrigin":""}]],"$L13"]]]]
-13:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Been blog - 4"}],["$","meta","3",{"name":"description","content":"Been dev-note"}],["$","meta","4",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","5",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","meta","6",{"property":"og:title","content":"Been blog - 4"}],["$","meta","7",{"property":"og:description","content":"Been dev-note - 4"}],["$","meta","8",{"property":"og:url","content":"https://wonbeenna.github.io/page/4"}],["$","meta","9",{"property":"og:site_name","content":"Been blog"}],["$","meta","10",{"property":"og:locale","content":"ko_KR"}],["$","meta","11",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","12",{"property":"og:image:width","content":"800"}],["$","meta","13",{"property":"og:image:height","content":"600"}],["$","meta","14",{"property":"og:image:alt","content":"Been blog"}],["$","meta","15",{"property":"og:type","content":"website"}],["$","meta","16",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","17",{"name":"twitter:title","content":"Been blog - 4"}],["$","meta","18",{"name":"twitter:description","content":"Been dev-note - 4"}],["$","meta","19",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","20",{"name":"twitter:image:width","content":"800"}],["$","meta","21",{"name":"twitter:image:height","content":"600"}],["$","meta","22",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","meta","24",{"name":"next-size-adjust"}]]
+d:["page","4","d"]
+0:["gRWOS8EtFsTPhUs00OQkE",[[["",{"children":["page",{"children":[["page","4","d"],{"children":["__PAGE__?{\"page\":\"4\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["page",{"children":[["page","4","d"],{"children":["__PAGE__",{},["$L1",["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L2",null,{"posts":{"posts":[{"content":"$3","data":{"title":"Speechsynthesis & Google TTS","date":"$D2022-01-22T00:00:00.000Z","description":"프로젝트 진행하며 경험해본 Speechsynthesis & Google TTS","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"Speechsynthesis"},{"content":"$4","data":{"title":"웹성능 최적화(3)","date":"$D2022-01-04T00:00:00.000Z","description":"웹성능 최적화3","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"web-optimization-3"},{"content":"$5","data":{"title":"웹성능 최적화(2)","date":"$D2022-01-03T00:00:00.000Z","description":"웹성능 최적화2","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"web-optimization-2"},{"content":"$6","data":{"title":"웹성능 최적화(1)","date":"$D2022-01-01T00:00:00.000Z","description":"웹성능 최적화1","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"web-optimization"},{"content":"$7","data":{"title":"스벨트와 리액트","date":"$D2021-12-12T00:00:00.000Z","description":"스벨트와 리액트에 대해 정리한 글","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-react"},{"content":"$8","data":{"title":"React 처럼 생각하기(2)","date":"$D2021-12-12T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"thinking-in-react-2"},{"content":"$9","data":{"title":"React 처럼 생각하기","date":"$D2021-11-20T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"thinking-in-react"},{"content":"$a","data":{"title":"React Hook의 동작","date":"$D2021-11-07T00:00:00.000Z","description":"React Hook의 동작에 대해","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"react-hook"}],"total":38},"page":"4","category":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$Lb",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (35)"}]}],["$","li","study",{"children":["$","$Lb",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$Lb",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}],null]]},["$","$Lc",null,{"parallelRouterKey":"children","segmentPath":["children","page","children","$d","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Le",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},["$","$Lc",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Le",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$Lf",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$Lf",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_bd870a","children":["$","$L10",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b-[1px] border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$Lb",null,{"href":"/","children":["$","$L11",null,{"src":"/assets/icons/been-logo.svg","width":60,"height":56,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$Lb",null,{"href":"/about","children":"About"}]}]]}],["$","$12",null,{"fallback":null,"children":["$","$L13",null,{"children":["$","$L14",null,{}]}]}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$Lc",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Le",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/59c48ca6c4481319.css","precedence":"next","crossOrigin":""}]],"$L15"]]]]
+15:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Been blog - 4"}],["$","meta","3",{"name":"description","content":"Been dev-note"}],["$","meta","4",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","5",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","meta","6",{"property":"og:title","content":"Been blog - 4"}],["$","meta","7",{"property":"og:description","content":"Been dev-note - 4"}],["$","meta","8",{"property":"og:url","content":"https://wonbeenna.github.io/page/4"}],["$","meta","9",{"property":"og:site_name","content":"Been blog"}],["$","meta","10",{"property":"og:locale","content":"ko_KR"}],["$","meta","11",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","12",{"property":"og:image:width","content":"800"}],["$","meta","13",{"property":"og:image:height","content":"600"}],["$","meta","14",{"property":"og:image:alt","content":"Been blog"}],["$","meta","15",{"property":"og:type","content":"website"}],["$","meta","16",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","17",{"name":"twitter:title","content":"Been blog - 4"}],["$","meta","18",{"name":"twitter:description","content":"Been dev-note - 4"}],["$","meta","19",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","20",{"name":"twitter:image:width","content":"800"}],["$","meta","21",{"name":"twitter:image:height","content":"600"}],["$","meta","22",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","meta","24",{"name":"next-size-adjust"}]]
 1:null
