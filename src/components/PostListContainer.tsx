@@ -12,10 +12,13 @@ interface PostListContainerProps {
 
 const PostListContainer = ({ category, page }: PostListContainerProps) => {
   const categories = getCategories();
-  const posts = getAllPost(category, {
-    page: page || '1',
-    limit: category ? '-1' : '10'
-  });
+  const posts = getAllPost(
+    {
+      page: page || '1',
+      limit: category ? '-1' : '10'
+    },
+    category
+  );
 
   return (
     <section className="flex flex-col-reverse md:relative md:flex-row">

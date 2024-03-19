@@ -28,7 +28,7 @@ export const generateMetadata = async ({ params }: { params: { category: string;
 };
 
 export const generateStaticParams = async () => {
-  const posts = getAllPost(undefined, {
+  const posts = getAllPost({
     page: '1',
     limit: '-1'
   });

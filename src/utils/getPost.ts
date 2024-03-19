@@ -8,11 +8,11 @@ export const POSTS_PATH = path.join(process.cwd(), '_posts');
 export const postFilePaths = fs.readdirSync(POSTS_PATH).filter((path) => /\.mdx?$/.test(path));
 
 export const getAllPost = (
-  category?: string,
   paging: { page: string; limit?: string } = {
     page: '1',
     limit: '10'
-  }
+  },
+  category?: string
 ) => {
   let total = postFilePaths.length;
   let posts = postFilePaths
@@ -27,9 +27,7 @@ export const getAllPost = (
         slug
       };
     })
-    .sort((a, b) => {
-      return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
-    });
+    .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
   if (category) {
     posts = posts.filter((post) => post.data.category === category);
@@ -60,7 +58,7 @@ export const getAllPost = (
 };
 
 export const getPost = async (slug: string) => {
-  const allPost = getAllPost(undefined, {
+  const allPost = getAllPost({
     page: '1',
     limit: '-1'
   });

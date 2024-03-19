@@ -1,13 +1,14 @@
-// @ts-nocheck
 import { getAllPost } from '@/utils/getPost';
 
 export const getCategories = (): {
   title: string;
   count: number;
 }[] => {
-  const posts = getAllPost(undefined, { page: '1', limit: '-1' });
+  const posts = getAllPost({ page: '1', limit: '-1' });
 
-  let uniqueCategories = {};
+  let uniqueCategories: {
+    [key: string]: { title: string; count: number };
+  } = {};
 
   posts.posts.forEach((post) => {
     if (uniqueCategories.hasOwnProperty(post.data.category)) {
@@ -20,5 +21,5 @@ export const getCategories = (): {
     }
   });
 
-  return Object.values(uniqueCategories).sort((a, b) => a.title > b.title);
+  return Object.values(uniqueCategories);
 };
