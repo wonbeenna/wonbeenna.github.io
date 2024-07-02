@@ -5,7 +5,7 @@ const defaultUrl = process.env.NEXT_PUBLIC_BASE_URL;
 const pageRoutes = [`${defaultUrl}`, `${defaultUrl}/blog`, `${defaultUrl}/about`];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const posts = getAllPost(undefined, {
+  const posts = getAllPost({
     page: '1',
     limit: '-1'
   });

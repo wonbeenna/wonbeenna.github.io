@@ -41,30 +41,28 @@ const Pagination = ({ onPageChange, totalCount, siblingCount = 2, currentPage, p
       >
         &#5176;
       </li>
-      {paginationRange?.map((pageNumber) => {
-        if (pageNumber === DOTS) {
-          return (
+      {paginationRange?.map((pageNumber) => (
+        <>
+          {pageNumber === DOTS ? (
             <li
               className="box-border flex h-[24px] w-[24px] cursor-pointer items-center justify-center text-[16px]"
               key={pageNumber}
             >
               &#8230;
             </li>
-          );
-        }
-
-        return (
-          <li
-            key={pageNumber}
-            className={`box-border flex h-[24px] w-[24px] cursor-pointer items-center justify-center text-[16px] ${
-              pageNumber === currentPage ? 'rounded-full bg-primaryGradient03 px-[4px] py-[2px] text-white' : ''
-            }`}
-            onClick={() => onPageChange(pageNumber as number)}
-          >
-            {pageNumber}
-          </li>
-        );
-      })}
+          ) : (
+            <li
+              key={pageNumber}
+              className={`box-border flex h-[24px] w-[24px] cursor-pointer items-center justify-center text-[16px] ${
+                pageNumber === currentPage ? 'rounded-full bg-primaryGradient03 px-[4px] py-[2px] text-white' : ''
+              }`}
+              onClick={() => onPageChange(pageNumber as number)}
+            >
+              {pageNumber}
+            </li>
+          )}
+        </>
+      ))}
       <li
         onClick={onNext}
         className={`box-border flex h-[24px] w-[24px] cursor-pointer items-center justify-center text-[16px] ${

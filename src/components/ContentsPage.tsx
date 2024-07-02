@@ -36,6 +36,7 @@ const PageLink = ({ href, title, align = 'left' }: PageLinkProps) => {
     </div>
   );
 };
+
 const ContentsPage = ({ prevPost, nextPost }: ContentsPageProps) => {
   return (
     <article className="flex items-center justify-between gap-[20px] border-y-2 border-y-gray500 py-[30px]">
