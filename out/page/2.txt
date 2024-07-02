@@ -1,14 +1,72 @@
-2:I[8451,["438","static/chunks/438-55d6a3410449957f.js","411","static/chunks/app/page/%5Bpage%5D/page-2c62ed4da7df6b06.js"],""]
-c:I[5250,["438","static/chunks/438-55d6a3410449957f.js","411","static/chunks/app/page/%5Bpage%5D/page-2c62ed4da7df6b06.js"],""]
+2:I[8451,["438","static/chunks/438-d093edea1998085d.js","411","static/chunks/app/page/%5Bpage%5D/page-a2406ace8b302810.js"],""]
+c:I[5250,["438","static/chunks/438-d093edea1998085d.js","411","static/chunks/app/page/%5Bpage%5D/page-a2406ace8b302810.js"],""]
 d:I[5613,[],""]
 f:I[1778,[],""]
-10:I[5935,["438","static/chunks/438-55d6a3410449957f.js","185","static/chunks/app/layout-56af28789787dacc.js"],""]
-11:I[4840,["438","static/chunks/438-55d6a3410449957f.js","185","static/chunks/app/layout-56af28789787dacc.js"],"Providers"]
-12:I[1749,["438","static/chunks/438-55d6a3410449957f.js","185","static/chunks/app/layout-56af28789787dacc.js"],"Image"]
+10:I[5935,["438","static/chunks/438-d093edea1998085d.js","185","static/chunks/app/layout-d399a67a63e785b6.js"],""]
+11:I[4840,["438","static/chunks/438-d093edea1998085d.js","185","static/chunks/app/layout-d399a67a63e785b6.js"],"Providers"]
+12:I[1749,["438","static/chunks/438-d093edea1998085d.js","185","static/chunks/app/layout-d399a67a63e785b6.js"],"Image"]
 13:"$Sreact.suspense"
-14:I[6005,["438","static/chunks/438-55d6a3410449957f.js","185","static/chunks/app/layout-56af28789787dacc.js"],"NoSSR"]
-15:I[9137,["438","static/chunks/438-55d6a3410449957f.js","185","static/chunks/app/layout-56af28789787dacc.js"],""]
-3:Tfb3,
+14:I[6005,["438","static/chunks/438-d093edea1998085d.js","185","static/chunks/app/layout-d399a67a63e785b6.js"],"NoSSR"]
+3:T6ae,
+JSON 웹 토큰(JWT)
+
+일반적으로 **헤더.페이로드.서명** 으로 구성되어 있다.
+
+1.헤더 - 어떤 알고리즘으로 암호화 할것인지
+
+2.데이터 - 전달하려는 정보, 사용자의 id, name 등
+
+3\. 서명 - 서버가 지정한 secret key로 암호화 시켜 토큰을 변조하기 어렵게 만듬
+
+이 세 부분을 Base64url로 인코딩해 
+
+```
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dnZWRJbkFzIjoiYWRtaW4iLCJpYXQiOjE0MjI3Nzk2Mzh9.gzSraSYS8EXBxLN_oWnFSRgCzcmJmMjLiuyu5CSpyHI
+```
+
+위와 같은 형태로 파싱해 사용한다.
+
+jwt 데이터 부분에서 정보를 가져와 사용할 수 있는데, decoding 해주어야 한다.
+
+```javascript
+export const decodeJwtResponse = (token: string) => {
+  let base64Url = token.split('.')[1]
+  let base64 = base64Url?.replace(/-/g, '+')?.replace(/_/g, '/')
+  let jsonPayload = decodeURIComponent(
+    atob(base64)
+      .split('')
+      .map(function (c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
+      })
+      .join('')
+  )
+
+  return JSON.parse(jsonPayload)
+  let base64Payload = token.split('.')[1]
+
+  let payload = Buffer.from(base64Payload, 'base64')
+  return JSON.parse(payload.toString())
+}
+```
+
+atob 함수는 node에서 더이상 지원하지 않아 아래로 수정
+
+```javascript
+export const decodeJwtResponse = (token: string) => {
+  let base64Payload = token.split('.')[1]
+
+  let payload = Buffer.from(base64Payload, 'base64')
+
+  return JSON.parse(payload.toString())
+}
+```
+
+token을 split해 1번째 데이터에 해당하는 부분을 가져온 다음
+
+node에서 지원하는 Buffer 객체를 사용해 바이너리로 변환
+
+base64로 인코딩한 후 JSON으로 파싱한다
+4:Tfb3,
 얼마전 기업과제를 진행했다. Audio 객체를 이용한 음악 재생이었다.
 
 https://developer.mozilla.org/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API
@@ -137,7 +195,7 @@ progressbar를 클릭했을 때는 해당 위치부터 audio를 재생해야했�
 - e.currentTarget.offsetWidth = progressbar의 전체 너비
 
 
-4:Te25,
+5:Te25,
 ### 디바운싱과 쓰로틀링
 
 
@@ -246,7 +304,7 @@ hook이 실행되면 lastRan과 현재시간을 비교한다.
 
 
 
-5:Tc4f,
+6:Tc4f,
 ## GraphQL 사용
 
 Apollo client를 사용합니다.
@@ -386,7 +444,7 @@ const ORDER_QUERY = gql`
 
 
 
-6:Tc85,
+7:Tc85,
 대기열 → 캐싱 → DNS → 라우팅 → ARP → 초기연결 → 컨텐츠 다운로드 → 브라우저 렌더링
 
 이런 과정을 비캡슐화, 캡슐화 과정을 거침
@@ -480,7 +538,7 @@ const ORDER_QUERY = gql`
 - transform, opacity 등(GPU가 관여하는 속성) 변경일 때 **1 -> 2 -> 5**
 
 따라서 transform, opacity 등(GPU가 관여하는 속성)을 사용하는게 가장 빠르고 끊김없이 보여줄 수 있다.
-7:T1a75,
+8:T1a75,
 인증방식에는 대표적으로 두가지가 있다.
 
 제일 많이 사용하는 세션 방식과 토큰 방식
@@ -705,7 +763,7 @@ export const getServerSideProps = withAuth();
 
 {...}
 ```
-8:Tdf0,
+9:Tdf0,
 예전에 하다가 중단된 프로젝트를 다시 시작해 보려고 새 레포로 마이그레이션 하는 과정에서
 
 패키지 버전도 올리고, 다른 기술을 찾아보다가 예전부터 써보고싶었던 tailwindcss를 써보기로 했다.
@@ -846,7 +904,7 @@ module.exports = {
   Save changes
 </button>
 ```
-9:T7a1,
+a:T7a1,
 자바스크립트의 함수는 호출될 때, 매개변수 이외에 `arguments` 객체와 `this`를 암묵적으로 전달 받는다.
 
 - Java의 `this` 는 인스턴스 자신을 가르키는 참조변수
@@ -905,7 +963,7 @@ module.exports = {
 - 일반 함수 → 화살표 함수
 - 생성자 함수 → class
 - 객체 메서드 → 객체 메서드 축약형
-a:T1aed,
+b:T1aed,
 ```shell
 npm create svelte@latest my-app
 cd my-app
@@ -1166,105 +1224,9 @@ rss도 위와 동일하다.
 
 그래도 앞으론 리액트를 더 공부 할 것이다. 먹고 살려면 ㅎㅎ
 
-b:T9de,
-
-얼마전 해외 블로그를 구경하다가 이런 글을 보았다.
-
--   리액트 조건부 렌더링에서 생각없이 && 연산자를 사용하지 말아라
--   무조건 && 연산자를 사용하면 버그가 발생할 수 있다?
-
-이 글을 보면서 올바르게 사용하는 방법과,
-
-어떤식으로 사용하면 버그가 발생할 수 있는지 생각해 보는 계기가 되었다.
-
-우선 && 연산자는 논리 연산자로 예를 들면 다음과 같이 동작한다
-
-```javascript
-const a = 3;
-const b = -2;
-
-console.log(a && b);
-// expected output: -2
-```
-
-왼쪽에서 오른쪽으로 값을 평가하고 true인 경우 오른쪽으로 false인 경우 평가대상이된 피연산자를 반환한다.
-
-```javascript
-function Component({ condition }) {
-
-  return (
-    <div>
-      {condition && <OtherComponent />}
-     </div>
-  );
-}
-```
-
-Or
-
-```javascript
-function Component({ condition }) {
-
-  return (
-    <div>
-      {condition ? <OtherComponent /> : null}
-     </div>
-  );
-}
-```
-
-[리액트 공식문서](https://reactjs.org/docs/conditional-rendering.html)에는 && 연산자를 쓰는데 유용할 수 있다고 설명하고 있으며,
-
-보통 삼항 연산자는 코드의 가독성 때문에 잘 사용하지 않고, 또 세개의 항이 없는 경우에도 사용하지 않는다.
-
-위 같은 경우 문제될 수 있는 상황이 있는데, 
-
-```javascript
-function Component() {
-  const count = 0;
-
-  return (
-    <div>
-      {count && <h1>{count}</h1>}
-     </div>
-  );
-}
-```
-
-js의 falsy값을 평가 할때이다.
-
-[https://developer.mozilla.org/ko/docs/Glossary/Falsy](https://developer.mozilla.org/ko/docs/Glossary/Falsy)
-
-count = 0 은 **false**로 평가되고, && 연산자를 사용하기 때문에 0을 반환하게 되므로 내가 생각한 의도대로 동작하지 않을것이다.
-
-```javascript
-<div>0</div>
-```
-
-이런 경우 count 를 Boolean으로 평가하게 하면 의도한대로 동작하게 된다. 
-
-```javascript
-function Component() {
-  const count = 0;
-
-  return (
-    <div>
-      {!!count && <h1>{count}</h1>}
-     </div>
-  );
-}
-```
-
-따라서, 무조건 && 연산자를 피하는것 보다는 평가 대상이 되는 값을 생각해보며 사용하는게 좋을 것 같다.
-
-실제 개발하면서
-
-Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
-
-이런 에러를 만난 적이 많았는데, 위와 관련된 것이 아닌가 생각 된다.
-
-조금 더 생각하면서 개발하자
 e:["page","2","d"]
-0:["xM9v0c6fjyJZ4cB7X3BOv",[[["",{"children":["page",{"children":[["page","2","d"],{"children":["__PAGE__?{\"page\":\"2\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["page",{"children":[["page","2","d"],{"children":["__PAGE__",{},["$L1",["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L2",null,{"posts":{"posts":[{"content":"$3","data":{"title":"Audio객체를 이용한 음악 재생","date":"$D2023-05-27T00:00:00.000Z","description":"Audio객체를 사용한 기업 과제 구현","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"audio"},{"content":"$4","data":{"title":"디바운싱과 쓰로틀링","date":"$D2023-05-13T00:00:00.000Z","description":"디바운싱과 쓰로틀링의 차이를 구분하고 hook으로 구현","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"debouce-throttle"},{"content":"$5","data":{"title":"GraphQl 써보기(1)","date":"$D2023-04-29T00:00:00.000Z","description":"GraphQl, Apollo Client를 사용","category":"javaScript","titleImage":"/assets/postIcon/graphql.svg"},"slug":"graphql-1"},{"content":"$6","data":{"title":"브라우저에 url을 검색하면?","date":"$D2023-02-25T00:00:00.000Z","description":"사내 스터디","category":"study","titleImage":"/assets/postIcon/javascript.png"},"slug":"browser"},{"content":"$7","data":{"title":"Next.js middleware와 getServerSideProps","date":"$D2023-02-22T00:00:00.000Z","description":"세션방식의 로그인 인증, middleware와 getServerSideProps를 사용해 구현한 기록","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-middleware"},{"content":"$8","data":{"title":"Nextjs에서 tailwind 써보기","date":"$D2023-02-18T00:00:00.000Z","description":"공식문서 보면서 tailwind 써보기","category":"javaScript","titleImage":"/assets/postIcon/tailwind-css-icon.png"},"slug":"tailwindcss"},{"content":"$9","data":{"title":"JavaScript this","date":"$D2023-02-02T00:00:00.000Z","description":"사내 스터디 this","category":"study","titleImage":"/assets/postIcon/javascript.png"},"slug":"this"},{"content":"$a","data":{"title":"스벨트킷으로 블로그 만들어보기","date":"$D2023-01-30T00:00:00.000Z","description":"스벨트킷으로 블로그 만든 과정을 정리","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-blog"},{"content":"\n### Provider 테스팅 해보기\n\n```js\nrender(<Options optionType=\"scoops\" />, {wrapper: OrderDetailsProvider});\n```\n\n테스트 wrapper에 Provider로 감싸주면 된다.\n\n여기서는 redux나 recoil 등 다른 라이브러리도 가능\n\n---\n\n전역적으로도 사용이 가능\n\n```js\nimport {render} from '@testing-library/react';\nimport {OrderDetailsProvider} from '../contexts/OrderDetails';\n\nconst renderWithContext = (ui, options) => render(ui, {wrapper: OrderDetailsProvider, ...options});\n\nexport * from '@testing-library/react';\n\nexport {renderWithContext as render};\n```\n","data":{"title":"리액트 테스팅(4)","date":"$D2023-01-02T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-4"},{"content":"$b","data":{"title":"리액트 조건부 렌더링에 대한 생각","date":"$D2022-12-29T00:00:00.000Z","description":"해외 블로그를 보며 정리한 조건부 렌더링에 대한 생각","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"conditional-rendering"}],"total":38},"page":"2","category":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$Lc",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (35)"}]}],["$","li","study",{"children":["$","$Lc",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$Lc",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}],null]]},["$","$Ld",null,{"parallelRouterKey":"children","segmentPath":["children","page","children","$e","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lf",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},["$","$Ld",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lf",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L10",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L10",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_bd870a","children":["$","$L11",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b-[1px] border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$Lc",null,{"href":"/","children":["$","$L12",null,{"src":"/assets/icons/been-logo.svg","width":60,"height":56,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$Lc",null,{"href":"/about","children":"About"}]}]]}],["$","$13",null,{"fallback":null,"children":["$","$L14",null,{"children":["$","$L15",null,{}]}]}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$Ld",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lf",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/59c48ca6c4481319.css","precedence":"next","crossOrigin":""}]],"$L16"]]]]
+0:["OsVrY6pyoqgvPfKhiobHf",[[["",{"children":["page",{"children":[["page","2","d"],{"children":["__PAGE__?{\"page\":\"2\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["page",{"children":[["page","2","d"],{"children":["__PAGE__",{},["$L1",["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L2",null,{"posts":{"posts":[{"content":"$3","data":{"title":"jwt 토큰 decode 하기","date":"$D2023-08-31T00:00:00.000Z","description":"jwt 토큰 decode 함수","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"jwt-decode"},{"content":"$4","data":{"title":"Audio객체를 이용한 음악 재생","date":"$D2023-05-27T00:00:00.000Z","description":"Audio객체를 사용한 기업 과제 구현","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"audio"},{"content":"$5","data":{"title":"디바운싱과 쓰로틀링","date":"$D2023-05-13T00:00:00.000Z","description":"디바운싱과 쓰로틀링의 차이를 구분하고 hook으로 구현","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"debouce-throttle"},{"content":"$6","data":{"title":"GraphQl 써보기(1)","date":"$D2023-04-29T00:00:00.000Z","description":"GraphQl, Apollo Client를 사용","category":"javaScript","titleImage":"/assets/postIcon/graphql.svg"},"slug":"graphql-1"},{"content":"$7","data":{"title":"브라우저에 url을 검색하면?","date":"$D2023-02-25T00:00:00.000Z","description":"사내 스터디","category":"study","titleImage":"/assets/postIcon/javascript.png"},"slug":"browser"},{"content":"$8","data":{"title":"Next.js middleware와 getServerSideProps","date":"$D2023-02-22T00:00:00.000Z","description":"세션방식의 로그인 인증, middleware와 getServerSideProps를 사용해 구현한 기록","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-middleware"},{"content":"$9","data":{"title":"Nextjs에서 tailwind 써보기","date":"$D2023-02-18T00:00:00.000Z","description":"공식문서 보면서 tailwind 써보기","category":"javaScript","titleImage":"/assets/postIcon/tailwind-css-icon.png"},"slug":"tailwindcss"},{"content":"$a","data":{"title":"JavaScript this","date":"$D2023-02-02T00:00:00.000Z","description":"사내 스터디 this","category":"study","titleImage":"/assets/postIcon/javascript.png"},"slug":"this"},{"content":"$b","data":{"title":"스벨트킷으로 블로그 만들어보기","date":"$D2023-01-30T00:00:00.000Z","description":"스벨트킷으로 블로그 만든 과정을 정리","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-blog"},{"content":"\n### Provider 테스팅 해보기\n\n```js\nrender(<Options optionType=\"scoops\" />, {wrapper: OrderDetailsProvider});\n```\n\n테스트 wrapper에 Provider로 감싸주면 된다.\n\n여기서는 redux나 recoil 등 다른 라이브러리도 가능\n\n---\n\n전역적으로도 사용이 가능\n\n```js\nimport {render} from '@testing-library/react';\nimport {OrderDetailsProvider} from '../contexts/OrderDetails';\n\nconst renderWithContext = (ui, options) => render(ui, {wrapper: OrderDetailsProvider, ...options});\n\nexport * from '@testing-library/react';\n\nexport {renderWithContext as render};\n```\n","data":{"title":"리액트 테스팅(4)","date":"$D2023-01-02T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-4"}],"total":39},"page":"2","category":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$Lc",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (36)"}]}],["$","li","study",{"children":["$","$Lc",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$Lc",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}],null]]},["$","$Ld",null,{"parallelRouterKey":"children","segmentPath":["children","page","children","$e","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lf",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},["$","$Ld",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lf",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L10",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L10",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_bd870a","children":["$","$L11",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b-[1px] border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$Lc",null,{"href":"/","children":["$","$L12",null,{"src":"/assets/icons/been-logo.svg","width":60,"height":56,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$Lc",null,{"href":"/about","children":"About"}]}]]}],["$","$13",null,{"fallback":null,"children":["$","$L14",null,{"children":"$L15"}]}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$Ld",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lf",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/59c48ca6c4481319.css","precedence":"next","crossOrigin":""}]],"$L16"]]]]
+17:I[9137,["438","static/chunks/438-d093edea1998085d.js","185","static/chunks/app/layout-d399a67a63e785b6.js"],""]
+15:["$","$L17",null,{}]
 16:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Been blog - 2"}],["$","meta","3",{"name":"description","content":"Been dev-note"}],["$","meta","4",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","5",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","meta","6",{"property":"og:title","content":"Been blog - 2"}],["$","meta","7",{"property":"og:description","content":"Been dev-note - 2"}],["$","meta","8",{"property":"og:url","content":"https://wonbeenna.github.io/page/2"}],["$","meta","9",{"property":"og:site_name","content":"Been blog"}],["$","meta","10",{"property":"og:locale","content":"ko_KR"}],["$","meta","11",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","12",{"property":"og:image:width","content":"800"}],["$","meta","13",{"property":"og:image:height","content":"600"}],["$","meta","14",{"property":"og:image:alt","content":"Been blog"}],["$","meta","15",{"property":"og:type","content":"website"}],["$","meta","16",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","17",{"name":"twitter:title","content":"Been blog - 2"}],["$","meta","18",{"name":"twitter:description","content":"Been dev-note - 2"}],["$","meta","19",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","20",{"name":"twitter:image:width","content":"800"}],["$","meta","21",{"name":"twitter:image:height","content":"600"}],["$","meta","22",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","meta","24",{"name":"next-size-adjust"}]]
 1:null
