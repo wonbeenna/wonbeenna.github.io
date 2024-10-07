@@ -23,7 +23,7 @@ interface ContentsPageProps {
 const PageLink = ({ href, title, align = 'left' }: PageLinkProps) => {
   return (
     <div
-      className={`w-[50%] min-w-0 flex-1 rounded-[4px] bg-gray100 dark:bg-darkBg02 ${
+      className={`w-1/2 min-w-0 flex-1 rounded-[4px] bg-gray100 dark:bg-darkBg02 ${
         align === 'left' ? 'text-left' : 'text-right'
       }`}
     >

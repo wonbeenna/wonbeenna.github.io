@@ -70,7 +70,7 @@ const SnowFall = () => {
   return (
     <>
       {currentTheme === 'dark' && (
-        <canvas ref={canvasRef} className="pointer-events-none fixed left-0 top-0 z-50 h-full w-full" />
+        <canvas ref={canvasRef} className="pointer-events-none fixed left-0 top-0 z-50 size-full" />
       )}
     </>
   );

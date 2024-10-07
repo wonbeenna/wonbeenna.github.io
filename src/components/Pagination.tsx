@@ -29,23 +29,24 @@ const Pagination = ({ onPageChange, totalCount, siblingCount = 2, currentPage, p
     onPageChange(currentPage - 1);
   };
 
-  let lastPage = paginationRange?.[paginationRange?.length - 1];
+  const lastPage = paginationRange?.[paginationRange?.length - 1];
 
   return (
     <ul className="flex items-center justify-center gap-[10px]">
       <li
         onClick={onPrevious}
-        className={`box-border flex h-[24px] w-[24px] cursor-pointer items-center justify-center text-[16px] ${
+        className={`box-border flex size-[24px] cursor-pointer items-center justify-center text-[16px] ${
           currentPage === 1 ? 'pointer-events-none cursor-not-allowed opacity-50' : ''
         }`}
       >
         &#5176;
       </li>
-      {paginationRange?.map((pageNumber) => (
-        <>
+
+      {paginationRange?.map((pageNumber, index) => (
+        <React.Fragment key={index}>
           {pageNumber === DOTS ? (
             <li
-              className="box-border flex h-[24px] w-[24px] cursor-pointer items-center justify-center text-[16px]"
+              className="box-border flex size-[24px] cursor-pointer items-center justify-center text-[16px]"
               key={pageNumber}
             >
               &#8230;
@@ -53,7 +54,7 @@ const Pagination = ({ onPageChange, totalCount, siblingCount = 2, currentPage, p
           ) : (
             <li
               key={pageNumber}
-              className={`box-border flex h-[24px] w-[24px] cursor-pointer items-center justify-center text-[16px] ${
+              className={`box-border flex size-[24px] cursor-pointer items-center justify-center text-[16px] ${
                 pageNumber === currentPage ? 'rounded-full bg-primaryGradient03 px-[4px] py-[2px] text-white' : ''
               }`}
               onClick={() => onPageChange(pageNumber as number)}
@@ -61,11 +62,12 @@ const Pagination = ({ onPageChange, totalCount, siblingCount = 2, currentPage, p
               {pageNumber}
             </li>
           )}
-        </>
+        </React.Fragment>
       ))}
+
       <li
         onClick={onNext}
-        className={`box-border flex h-[24px] w-[24px] cursor-pointer items-center justify-center text-[16px] ${
+        className={`box-border flex size-[24px] cursor-pointer items-center justify-center text-[16px] ${
           currentPage === lastPage ? 'pointer-events-none cursor-not-allowed opacity-50' : ''
         }`}
       >
