@@ -1,14 +1,372 @@
-2:I[8451,["438","static/chunks/438-d093edea1998085d.js","411","static/chunks/app/page/%5Bpage%5D/page-a2406ace8b302810.js"],""]
-c:I[5250,["438","static/chunks/438-d093edea1998085d.js","411","static/chunks/app/page/%5Bpage%5D/page-a2406ace8b302810.js"],""]
-d:I[5613,[],""]
-f:I[1778,[],""]
-10:I[5935,["438","static/chunks/438-d093edea1998085d.js","185","static/chunks/app/layout-d399a67a63e785b6.js"],""]
-11:I[4840,["438","static/chunks/438-d093edea1998085d.js","185","static/chunks/app/layout-d399a67a63e785b6.js"],"Providers"]
-12:I[1749,["438","static/chunks/438-d093edea1998085d.js","185","static/chunks/app/layout-d399a67a63e785b6.js"],"Image"]
-13:"$Sreact.suspense"
-14:I[6005,["438","static/chunks/438-d093edea1998085d.js","185","static/chunks/app/layout-d399a67a63e785b6.js"],"NoSSR"]
-15:I[9137,["438","static/chunks/438-d093edea1998085d.js","185","static/chunks/app/layout-d399a67a63e785b6.js"],""]
-3:T6ae,
+7:"$Sreact.fragment"
+8:I[3704,["839","static/chunks/839-69c2111cfab13ba3.js","264","static/chunks/264-252ca7916fa91819.js","177","static/chunks/app/layout-7f5ac2ccdb15d80e.js"],""]
+9:I[8534,["839","static/chunks/839-69c2111cfab13ba3.js","264","static/chunks/264-252ca7916fa91819.js","177","static/chunks/app/layout-7f5ac2ccdb15d80e.js"],"Providers"]
+a:I[6934,["839","static/chunks/839-69c2111cfab13ba3.js","264","static/chunks/264-252ca7916fa91819.js","177","static/chunks/app/layout-7f5ac2ccdb15d80e.js"],"default"]
+b:I[5244,[],""]
+c:I[3866,[],""]
+e:I[6213,[],"OutletBoundary"]
+10:I[6213,[],"MetadataBoundary"]
+12:I[6213,[],"ViewportBoundary"]
+14:I[4835,[],""]
+1:HL["/_next/static/media/045832894acda0e9-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+2:HL["/_next/static/media/120a5a1920781bd0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+3:HL["/_next/static/media/6ebb97b5c9fa4e03-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+4:HL["/_next/static/media/c714540e49ad5111-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+5:HL["/_next/static/media/da897b99eb1fe4a1-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+6:HL["/_next/static/css/b05f4fc671799f14.css","style"]
+0:{"P":null,"b":"vOkk7qYOXm4Y-oFLJrcSU","p":"","c":["","page","2"],"i":false,"f":[[["",{"children":["page",{"children":[["page","2","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$7","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/b05f4fc671799f14.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L8",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L8",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_363063","children":["$","$L9",null,{"children":[["$","$La",null,{}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$Lb",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lc",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$7","c",{"children":[null,["$","$Lb",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lc",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]]}],{"children":[["page","2","d"],["$","$7","c",{"children":[null,["$","$Lb",null,{"parallelRouterKey":"children","segmentPath":["children","page","children","$0:f:0:1:2:children:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lc",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]]}],{"children":["__PAGE__",["$","$7","c",{"children":["$Ld",null,["$","$Le",null,{"children":"$Lf"}]]}],{},null]},null]},null]},null],["$","$7","h",{"children":[null,["$","$7","7TPKeJHbxRPGEt8E35TgT",{"children":[["$","$L10",null,{"children":"$L11"}],["$","$L12",null,{"children":"$L13"}],["$","meta",null,{"name":"next-size-adjust"}]]}]]}]]],"m":"$undefined","G":["$14","$undefined"],"s":false,"S":true}
+15:I[8882,["839","static/chunks/839-69c2111cfab13ba3.js","264","static/chunks/264-252ca7916fa91819.js","848","static/chunks/app/page/%5Bpage%5D/page-6d9893d73947e310.js"],"default"]
+20:I[4839,["839","static/chunks/839-69c2111cfab13ba3.js","264","static/chunks/264-252ca7916fa91819.js","848","static/chunks/app/page/%5Bpage%5D/page-6d9893d73947e310.js"],""]
+16:T2147,
+이전에 [스벨트킷으로 블로그 만들어보기](https://wonbeenna.github.io/blog/javaScript/svelte-blog) 에서 svelte kit으로 블로그를 만들었었다.
+
+그때는 svelte 공부겸 블로그를 만들었지만, 업무에서 주로 사용하는 스택인 react와 next.js를 사용하여 블로그를 만들어보려고 한다.
+
+### 시작
+---
+```shell
+npx create-next-app <project-name>
+```
+
+next.js 프로젝트를 생성한다.
+
+### 라우팅
+---
+<img src="/assets/blog/javaScript/route.png" style={{
+    maxWidth: "300px",
+    height: "auto"
+}} alt="next-blog-route" />
+
+app 폴더 구조는 위와 같다.
+
+- root layout을 만들어 Header, Footer를 구성한다.
+- page/[page]는 블로그의 메인이며 페이지네이션을 위해 동적으로 구성하였다.
+- blog/[category]/[slug]는 카테고리별로 블로그를 구분하고, slug를 통해 각 post를 구분한다.
+
+### 블로그 포스트
+
+root layout을 만들었으니, 이제 블로그 포스트를 만들어보자.
+
+root 디렉토리에 _posts폴더를 만들고 그 안에 markdown 파일을 만든다.
+
+
+```shell
+npm install gray-matter
+```
+
+gray-matter는 markdown 파일의 front matter를 파싱하는 라이브러리이다.
+
+```ts
+import path from 'path';
+import * as fs from 'fs';
+import matter from 'gray-matter';
+import { getSerialize } from '@/utils/sirialize';
+
+export const POSTS_PATH = path.join(process.cwd(), '_posts');
+
+export const postFilePaths = fs.readdirSync(POSTS_PATH).filter((path) => /\.mdx?$/.test(path));
+
+export const getAllPost = (
+  category?: string,
+  paging: { page: string; limit?: string } = {
+    page: '1',
+    limit: '10'
+  }
+) => {
+  let total = postFilePaths.length;
+  let posts = postFilePaths
+    .map((filePath) => {
+      const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
+      const { content, data } = matter(source);
+      const slug = filePath.replace(/\.mdx?$/, '');
+
+      return {
+        content,
+        data,
+        slug
+      };
+    })
+    .sort((a, b) => {
+      return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+    });
+
+  if (category) {
+    posts = posts.filter((post) => post.data.category === category);
+    total = posts.length;
+  }
+
+  if (!paging.page) {
+    paging.page = '1';
+    paging.limit = '10';
+  }
+
+  if (paging.limit === '-1') {
+    return {
+      posts,
+      total
+    };
+  }
+
+  const { page = '1', limit = '10' } = paging;
+  const offset = (+page - 1) * +limit;
+
+  posts = posts.slice(offset, offset + +limit);
+
+  return {
+    posts,
+    total
+  };
+};
+```
+
+file path를 통해 _posts폴더 내 markdown 파일을 읽어오고, gray-matter를 통해 front matter를 파싱한다.
+
+메인과 blog 페이지를 구성하기위해 getAllPost 함수를 만들었고, 각각의 블로그들은 getPost 함수를 통해 가져온다.
+
+```ts
+export const getPost = async (slug: string) => {
+  const allPost = getAllPost(undefined, {
+    page: '1',
+    limit: '-1'
+  });
+
+  const index = allPost.posts.findIndex((post) => post.slug === slug);
+  const prevPost = allPost.posts[index + 1];
+  const nextPost = allPost.posts[index - 1];
+
+  const source = fs.readFileSync(path.join(POSTS_PATH, `${slug}.mdx`));
+
+  const { content, data } = matter(source);
+  const mdx = await getSerialize(content, data);
+
+  return {
+    mdx,
+    content,
+    data,
+    slug,
+    prevPost: {
+      slug: prevPost?.slug,
+      title: prevPost?.data.title,
+      category: prevPost?.data.category
+    },
+    nextPost: {
+      slug: nextPost?.slug,
+      title: nextPost?.data.title,
+      category: nextPost?.data.category
+    }
+  };
+};
+```
+
+```shell
+npm i next-mdx-remote
+```
+
+next-mdx-remote는 mdx 파일을 html로 변환해주는 라이브러리이다.
+
+위 코드에서 getSerialize 함수는 mdx 파일을 html로 변환해주는 함수이다.
+
+html로 변환하는데 있어 remark와 rehype를 사용할 수 있다.
+
+```ts
+import { serialize } from 'next-mdx-remote/serialize';
+import remarkGfm from 'remark-gfm';
+import rehypePrism from 'rehype-prism-plus';
+
+export const getSerialize = async (content: string, data: any) => {
+  return await serialize(content, {
+    mdxOptions: {
+      remarkPlugins: [remarkGfm],
+      rehypePlugins: [rehypePrism]
+    },
+    scope: data
+  });
+};
+```
+
+```tsx
+<MDXRemote {...source} components={components} />
+```
+
+위에서 변환된 html을 MDXRemote 컴포넌트를 통해 렌더링한다.
+
+### 카테고리
+---
+
+카테고리 별로 필터하기위해 카테고리도 따로 받아와야 했다.
+각각의 post들을 읽고 중복되지 않은 카테고리들만 가져오는 함수를 만들었다.
+
+```ts
+import { getAllPost } from '@/utils/getPost';
+
+export const getCategories = (): {
+  title: string;
+  count: number;
+}[] => {
+  const posts = getAllPost(undefined, { page: '1', limit: '-1' });
+
+  let uniqueCategories: any = {};
+
+  posts.posts.forEach((post) => {
+    if (uniqueCategories.hasOwnProperty(post.data.category)) {
+      uniqueCategories[post.data.category].count += 1;
+    } else {
+      uniqueCategories[post.data.category] = {
+        title: post.data.category,
+        count: 1
+      };
+    }
+  });
+
+  return Object.values(uniqueCategories).sort((a, b) => a.title > b.title);
+};
+
+```
+
+### 페이지
+---
+위에서 구성한 함수들을 페이지에서 사용해보자.
+
+```tsx
+export const generateStaticParams = async () => {
+  const posts = getAllPost(undefined, {
+    page: '1',
+    limit: '-1'
+  });
+
+  return Array.from({ length: Math.ceil(posts.total / 10) }, (_, i) => {
+    return {
+      page: (i + 1).toString()
+    };
+  });
+};
+
+const Page = ({ params }: { params: { page: string } }) => {
+  return <PostListContainer page={params.page} />;
+};
+
+export default Page;
+```
+
+```tsx
+// blog/[category]/[slug].tsx
+export const generateStaticParams = async () => {
+  const posts = getAllPost(undefined, {
+    page: '1',
+    limit: '-1'
+  });
+
+  return posts.posts.map((post) => {
+    return {
+      slug: post.slug,
+      category: post.data.category
+    };
+  });
+};
+```
+
+app 라우트에서 SSG를 사용하기 위해 generateStaticParams 함수가 필요했다.
+PostListContainer 컴포넌트를 통해 각 page들을 렌더링 하였고, generateStaticParams 함수를 통해 페이지네이션을 위한 params들을 생성하였다.
+
+### SEO
+---
+
+seo를 위해 meta 태그와 sitemap, robots를 생성했다.
+
+next 13 에서는 간단하게 위 세가지를 구성할 수 있었다.
+
+먼저 sitemap.ts를 app 폴더에 만들고
+
+```ts
+import { getAllPost } from '@/utils/getPost';
+import { MetadataRoute } from 'next';
+
+const defaultUrl = process.env.NEXT_PUBLIC_BASE_URL;
+const pageRoutes = [`${defaultUrl}`, `${defaultUrl}/blog`, `${defaultUrl}/about`];
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const posts = getAllPost(undefined, {
+    page: '1',
+    limit: '-1'
+  });
+
+  const defaultRoutes: MetadataRoute.Sitemap = pageRoutes.map((route) => {
+    return {
+      url: route,
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'weekly',
+      priority: 1
+    };
+  });
+
+  const postRoutes: MetadataRoute.Sitemap = posts.posts.map((post) => {
+    return {
+      url: `${defaultUrl}/blog/${post.data.category}/${post.slug}`,
+      lastModified: new Date(post.data.date).toISOString(),
+      changeFrequency: 'weekly',
+      priority: 1
+    };
+  });
+
+  return [...defaultRoutes, ...postRoutes];
+}
+```
+처럼 함수를 만들면 sitemap이 생성된다.
+
+robots도 마찬가지로 app 폴더에 robots.ts를 만들고
+
+```ts
+import { MetadataRoute } from 'next';
+
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: {
+      userAgent: '*',
+      allow: '/'
+    },
+    sitemap: 'https://wonbeenna.github.io/sitemap.xml'
+  };
+}
+```
+
+위와 같이 작성하면 된다.
+
+metadata는 각 페이지에서 generateMetadata 함수를 통해 생성하면 된다.
+
+```ts
+export const generateMetadata = async ({ params }: { params: { page: string } }) => {
+  return {
+    title: `Been blog - ${params.page}`,
+    openGraph: {
+      ...defaultOpenGraph,
+      title: `Been blog - ${params.page}`,
+      description: `Been dev-note - ${params.page}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/page/${params.page}`
+    }
+  };
+};
+```
+
+### 댓글
+---
+
+댓글은 giscus를 사용했다.
+
+giscus는 github Discussions으로 댓글로 사용할 수 있게 해주는 라이브러리이다.
+
+```shell
+npm i @giscus/react
+```
+
+[giscus](https://giscus.app/ko)
+
+위 문서에 쉽게 설명되어 있으니 생략!
+
+
+
+
+
+17:T6ae,
 JSON 웹 토큰(JWT)
 
 일반적으로 **헤더.페이로드.서명** 으로 구성되어 있다.
@@ -67,7 +425,7 @@ token을 split해 1번째 데이터에 해당하는 부분을 가져온 다음
 node에서 지원하는 Buffer 객체를 사용해 바이너리로 변환
 
 base64로 인코딩한 후 JSON으로 파싱한다
-4:Tfb3,
+18:Tfb3,
 얼마전 기업과제를 진행했다. Audio 객체를 이용한 음악 재생이었다.
 
 https://developer.mozilla.org/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API
@@ -196,7 +554,7 @@ progressbar를 클릭했을 때는 해당 위치부터 audio를 재생해야했�
 - e.currentTarget.offsetWidth = progressbar의 전체 너비
 
 
-5:Te25,
+19:Te25,
 ### 디바운싱과 쓰로틀링
 
 
@@ -305,7 +663,7 @@ hook이 실행되면 lastRan과 현재시간을 비교한다.
 
 
 
-6:Tc4f,
+1a:Tc4f,
 ## GraphQL 사용
 
 Apollo client를 사용합니다.
@@ -445,7 +803,7 @@ const ORDER_QUERY = gql`
 
 
 
-7:Tc85,
+1b:Tc85,
 대기열 → 캐싱 → DNS → 라우팅 → ARP → 초기연결 → 컨텐츠 다운로드 → 브라우저 렌더링
 
 이런 과정을 비캡슐화, 캡슐화 과정을 거침
@@ -539,7 +897,7 @@ const ORDER_QUERY = gql`
 - transform, opacity 등(GPU가 관여하는 속성) 변경일 때 **1 -> 2 -> 5**
 
 따라서 transform, opacity 등(GPU가 관여하는 속성)을 사용하는게 가장 빠르고 끊김없이 보여줄 수 있다.
-8:T1a75,
+1c:T1a75,
 인증방식에는 대표적으로 두가지가 있다.
 
 제일 많이 사용하는 세션 방식과 토큰 방식
@@ -764,7 +1122,7 @@ export const getServerSideProps = withAuth();
 
 {...}
 ```
-9:Tdf0,
+1d:Tdf0,
 예전에 하다가 중단된 프로젝트를 다시 시작해 보려고 새 레포로 마이그레이션 하는 과정에서
 
 패키지 버전도 올리고, 다른 기술을 찾아보다가 예전부터 써보고싶었던 tailwindcss를 써보기로 했다.
@@ -905,7 +1263,7 @@ module.exports = {
   Save changes
 </button>
 ```
-a:T7a1,
+1e:T7a1,
 자바스크립트의 함수는 호출될 때, 매개변수 이외에 `arguments` 객체와 `this`를 암묵적으로 전달 받는다.
 
 - Java의 `this` 는 인스턴스 자신을 가르키는 참조변수
@@ -964,7 +1322,7 @@ a:T7a1,
 - 일반 함수 → 화살표 함수
 - 생성자 함수 → class
 - 객체 메서드 → 객체 메서드 축약형
-b:T1aed,
+1f:T1aed,
 ```shell
 npm create svelte@latest my-app
 cd my-app
@@ -1225,7 +1583,7 @@ rss도 위와 동일하다.
 
 그래도 앞으론 리액트를 더 공부 할 것이다. 먹고 살려면 ㅎㅎ
 
-e:["page","2","d"]
-0:["f9k9UGL5bISEvw7S8q1KK",[[["",{"children":["page",{"children":[["page","2","d"],{"children":["__PAGE__?{\"page\":\"2\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["page",{"children":[["page","2","d"],{"children":["__PAGE__",{},["$L1",["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L2",null,{"posts":{"posts":[{"content":"$3","data":{"title":"jwt 토큰 decode 하기","date":"$D2023-08-31T00:00:00.000Z","description":"jwt 토큰 decode 함수","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"jwt-decode"},{"content":"$4","data":{"title":"Audio객체를 이용한 음악 재생","date":"$D2023-05-27T00:00:00.000Z","description":"Audio객체를 사용한 기업 과제 구현","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"audio"},{"content":"$5","data":{"title":"디바운싱과 쓰로틀링","date":"$D2023-05-13T00:00:00.000Z","description":"디바운싱과 쓰로틀링의 차이를 구분하고 hook으로 구현","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"debouce-throttle"},{"content":"$6","data":{"title":"GraphQl 써보기(1)","date":"$D2023-04-29T00:00:00.000Z","description":"GraphQl, Apollo Client를 사용","category":"javaScript","titleImage":"/assets/postIcon/graphql.svg"},"slug":"graphql-1"},{"content":"$7","data":{"title":"브라우저에 url을 검색하면?","date":"$D2023-02-25T00:00:00.000Z","description":"사내 스터디","category":"study","titleImage":"/assets/postIcon/javascript.png"},"slug":"browser"},{"content":"$8","data":{"title":"Next.js middleware와 getServerSideProps","date":"$D2023-02-22T00:00:00.000Z","description":"세션방식의 로그인 인증, middleware와 getServerSideProps를 사용해 구현한 기록","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-middleware"},{"content":"$9","data":{"title":"Nextjs에서 tailwind 써보기","date":"$D2023-02-18T00:00:00.000Z","description":"공식문서 보면서 tailwind 써보기","category":"javaScript","titleImage":"/assets/postIcon/tailwind-css-icon.png"},"slug":"tailwindcss"},{"content":"$a","data":{"title":"JavaScript this","date":"$D2023-02-02T00:00:00.000Z","description":"사내 스터디 this","category":"study","titleImage":"/assets/postIcon/javascript.png"},"slug":"this"},{"content":"$b","data":{"title":"스벨트킷으로 블로그 만들어보기","date":"$D2023-01-30T00:00:00.000Z","description":"스벨트킷으로 블로그 만든 과정을 정리","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-blog"},{"content":"\n### Provider 테스팅 해보기\n\n```js\nrender(<Options optionType=\"scoops\" />, {wrapper: OrderDetailsProvider});\n```\n\n테스트 wrapper에 Provider로 감싸주면 된다.\n\n여기서는 redux나 recoil 등 다른 라이브러리도 가능\n\n---\n\n전역적으로도 사용이 가능\n\n```js\nimport {render} from '@testing-library/react';\nimport {OrderDetailsProvider} from '../contexts/OrderDetails';\n\nconst renderWithContext = (ui, options) => render(ui, {wrapper: OrderDetailsProvider, ...options});\n\nexport * from '@testing-library/react';\n\nexport {renderWithContext as render};\n```\n","data":{"title":"리액트 테스팅(4)","date":"$D2023-01-02T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-4"}],"total":39},"page":"2","category":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$Lc",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (36)"}]}],["$","li","study",{"children":["$","$Lc",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$Lc",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}],null]]},["$","$Ld",null,{"parallelRouterKey":"children","segmentPath":["children","page","children","$e","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lf",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},["$","$Ld",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lf",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L10",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L10",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_bd870a","children":["$","$L11",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b-[1px] border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$Lc",null,{"href":"/","children":["$","$L12",null,{"src":"/assets/icons/been-logo.svg","width":60,"height":56,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$Lc",null,{"href":"/about","children":"About"}]}]]}],["$","$13",null,{"fallback":null,"children":["$","$L14",null,{"children":["$","$L15",null,{}]}]}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$Ld",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lf",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/59c48ca6c4481319.css","precedence":"next","crossOrigin":""}]],"$L16"]]]]
-16:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Been blog - 2"}],["$","meta","3",{"name":"description","content":"Been dev-note"}],["$","meta","4",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","5",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","meta","6",{"property":"og:title","content":"Been blog - 2"}],["$","meta","7",{"property":"og:description","content":"Been dev-note - 2"}],["$","meta","8",{"property":"og:url","content":"https://wonbeenna.github.io/page/2"}],["$","meta","9",{"property":"og:site_name","content":"Been blog"}],["$","meta","10",{"property":"og:locale","content":"ko_KR"}],["$","meta","11",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","12",{"property":"og:image:width","content":"800"}],["$","meta","13",{"property":"og:image:height","content":"600"}],["$","meta","14",{"property":"og:image:alt","content":"Been blog"}],["$","meta","15",{"property":"og:type","content":"website"}],["$","meta","16",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","17",{"name":"twitter:title","content":"Been blog - 2"}],["$","meta","18",{"name":"twitter:description","content":"Been dev-note - 2"}],["$","meta","19",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","20",{"name":"twitter:image:width","content":"800"}],["$","meta","21",{"name":"twitter:image:height","content":"600"}],["$","meta","22",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","meta","24",{"name":"next-size-adjust"}]]
-1:null
+d:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L15",null,{"posts":{"posts":[{"content":"$16","data":{"title":"Next.js 블로그 만들기","date":"$D2023-10-09T00:00:00.000Z","description":"Next.js로 블로그 만들기","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-blog"},{"content":"$17","data":{"title":"jwt 토큰 decode 하기","date":"$D2023-08-31T00:00:00.000Z","description":"jwt 토큰 decode 함수","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"jwt-decode"},{"content":"$18","data":{"title":"Audio객체를 이용한 음악 재생","date":"$D2023-05-27T00:00:00.000Z","description":"Audio객체를 사용한 기업 과제 구현","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"audio"},{"content":"$19","data":{"title":"디바운싱과 쓰로틀링","date":"$D2023-05-13T00:00:00.000Z","description":"디바운싱과 쓰로틀링의 차이를 구분하고 hook으로 구현","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"debouce-throttle"},{"content":"$1a","data":{"title":"GraphQl 써보기(1)","date":"$D2023-04-29T00:00:00.000Z","description":"GraphQl, Apollo Client를 사용","category":"javaScript","titleImage":"/assets/postIcon/graphql.svg"},"slug":"graphql-1"},{"content":"$1b","data":{"title":"브라우저에 url을 검색하면?","date":"$D2023-02-25T00:00:00.000Z","description":"사내 스터디","category":"study","titleImage":"/assets/postIcon/javascript.png"},"slug":"browser"},{"content":"$1c","data":{"title":"Next.js middleware와 getServerSideProps","date":"$D2023-02-22T00:00:00.000Z","description":"세션방식의 로그인 인증, middleware와 getServerSideProps를 사용해 구현한 기록","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-middleware"},{"content":"$1d","data":{"title":"Nextjs에서 tailwind 써보기","date":"$D2023-02-18T00:00:00.000Z","description":"공식문서 보면서 tailwind 써보기","category":"javaScript","titleImage":"/assets/postIcon/tailwind-css-icon.png"},"slug":"tailwindcss"},{"content":"$1e","data":{"title":"JavaScript this","date":"$D2023-02-02T00:00:00.000Z","description":"사내 스터디 this","category":"study","titleImage":"/assets/postIcon/javascript.png"},"slug":"this"},{"content":"$1f","data":{"title":"스벨트킷으로 블로그 만들어보기","date":"$D2023-01-30T00:00:00.000Z","description":"스벨트킷으로 블로그 만든 과정을 정리","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-blog"}],"total":40},"page":"2","category":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L20",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (37)"}]}],["$","li","study",{"children":["$","$L20",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$L20",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}]
+13:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+11:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Been blog - 2"}],["$","meta","2",{"name":"description","content":"Been dev-note"}],["$","meta","3",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","4",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","meta","5",{"property":"og:title","content":"Been blog - 2"}],["$","meta","6",{"property":"og:description","content":"Been dev-note - 2"}],["$","meta","7",{"property":"og:url","content":"https://wonbeenna.github.io/page/2"}],["$","meta","8",{"property":"og:site_name","content":"Been blog"}],["$","meta","9",{"property":"og:locale","content":"ko_KR"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 2"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 2"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","24",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}]]
+f:null

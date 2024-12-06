@@ -1,13 +1,72 @@
-2:I[8451,["438","static/chunks/438-d093edea1998085d.js","411","static/chunks/app/page/%5Bpage%5D/page-a2406ace8b302810.js"],""]
-d:I[5250,["438","static/chunks/438-d093edea1998085d.js","411","static/chunks/app/page/%5Bpage%5D/page-a2406ace8b302810.js"],""]
-e:I[5613,[],""]
-10:I[1778,[],""]
-11:I[5935,["438","static/chunks/438-d093edea1998085d.js","185","static/chunks/app/layout-d399a67a63e785b6.js"],""]
-12:I[4840,["438","static/chunks/438-d093edea1998085d.js","185","static/chunks/app/layout-d399a67a63e785b6.js"],"Providers"]
-13:I[1749,["438","static/chunks/438-d093edea1998085d.js","185","static/chunks/app/layout-d399a67a63e785b6.js"],"Image"]
-14:"$Sreact.suspense"
-15:I[6005,["438","static/chunks/438-d093edea1998085d.js","185","static/chunks/app/layout-d399a67a63e785b6.js"],"NoSSR"]
-3:Taca,
+7:"$Sreact.fragment"
+8:I[3704,["839","static/chunks/839-69c2111cfab13ba3.js","264","static/chunks/264-252ca7916fa91819.js","177","static/chunks/app/layout-7f5ac2ccdb15d80e.js"],""]
+9:I[8534,["839","static/chunks/839-69c2111cfab13ba3.js","264","static/chunks/264-252ca7916fa91819.js","177","static/chunks/app/layout-7f5ac2ccdb15d80e.js"],"Providers"]
+a:I[6934,["839","static/chunks/839-69c2111cfab13ba3.js","264","static/chunks/264-252ca7916fa91819.js","177","static/chunks/app/layout-7f5ac2ccdb15d80e.js"],"default"]
+b:I[5244,[],""]
+c:I[3866,[],""]
+e:I[6213,[],"OutletBoundary"]
+10:I[6213,[],"MetadataBoundary"]
+12:I[6213,[],"ViewportBoundary"]
+14:I[4835,[],""]
+1:HL["/_next/static/media/045832894acda0e9-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+2:HL["/_next/static/media/120a5a1920781bd0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+3:HL["/_next/static/media/6ebb97b5c9fa4e03-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+4:HL["/_next/static/media/c714540e49ad5111-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+5:HL["/_next/static/media/da897b99eb1fe4a1-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+6:HL["/_next/static/css/b05f4fc671799f14.css","style"]
+0:{"P":null,"b":"vOkk7qYOXm4Y-oFLJrcSU","p":"","c":["","page","1"],"i":false,"f":[[["",{"children":["page",{"children":[["page","1","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$7","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/b05f4fc671799f14.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L8",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L8",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_363063","children":["$","$L9",null,{"children":[["$","$La",null,{}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$Lb",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lc",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$7","c",{"children":[null,["$","$Lb",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lc",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]]}],{"children":[["page","1","d"],["$","$7","c",{"children":[null,["$","$Lb",null,{"parallelRouterKey":"children","segmentPath":["children","page","children","$0:f:0:1:2:children:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lc",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]]}],{"children":["__PAGE__",["$","$7","c",{"children":["$Ld",null,["$","$Le",null,{"children":"$Lf"}]]}],{},null]},null]},null]},null],["$","$7","h",{"children":[null,["$","$7","C1LdjBXdgGTUbSJcX6VJD",{"children":[["$","$L10",null,{"children":"$L11"}],["$","$L12",null,{"children":"$L13"}],["$","meta",null,{"name":"next-size-adjust"}]]}]]}]]],"m":"$undefined","G":["$14","$undefined"],"s":false,"S":true}
+15:I[8882,["839","static/chunks/839-69c2111cfab13ba3.js","264","static/chunks/264-252ca7916fa91819.js","848","static/chunks/app/page/%5Bpage%5D/page-6d9893d73947e310.js"],"default"]
+20:I[4839,["839","static/chunks/839-69c2111cfab13ba3.js","264","static/chunks/264-252ca7916fa91819.js","848","static/chunks/app/page/%5Bpage%5D/page-6d9893d73947e310.js"],""]
+16:T6a2,
+웹 페이지가 현재 사용자에게 보이는지 아닌지를 확인하는 방법이 있다.
+
+`document.visibilityState`를 사용하면 페이지가 현재 사용자에게 보이는지 아닌지를 확인할 수 있다.
+
+`document.visibilityState`는 다음과 같은 상태를 가진다.
+
+- 'visible' : 페이지 내용은 적어도 부분적으로 보일 수 있다. 실제로 이는 페이지가 최소화 되지 않은 창(브라우저)에서의 선택된 탭 을 의미
+
+- 'hidden' : 페이지 내용은 사용자에게 표시되지 않는다. 실제로 이는 document가 background-tap(다른 탭)이거나, 최소화 된 창의 일부이거나, OS 화면 잠금이 활성 상태임을 의미
+
+```jsx
+if (document.visibilityState === 'visible') {
+    // 페이지가 사용자에게 보이는 상태
+} else {
+    // 페이지가 사용자에게 보이지 않는 상태
+}
+```
+
+```jsx
+import { useEffect } from 'react';
+
+interface UseVisibilityChangeProps {
+  onVisible: () => void;
+  onHidden: () => void;
+  dependencies?: unknown[];
+}
+
+const useVisibilityChange = ({
+  onVisible,
+  onHidden,
+  dependencies = [],
+}: UseVisibilityChangeProps) => {
+  useEffect(() => {
+    const onVisibilityChange = () => {
+      document.visibilityState === 'visible' ? onVisible() : onHidden();
+    };
+
+    document.addEventListener('visibilitychange', onVisibilityChange);
+    return () => {
+      document.removeEventListener('visibilitychange', onVisibilityChange);
+    };
+  }, [onHidden, onVisible, ...dependencies]);
+};
+
+export default useVisibilityChange;
+```
+
+웹 페이지 이탈을 감지할 수 있고, 모바일 웹뷰에서 앱의 백그라운드 상태나 전환을 감지할 수 있다.
+17:Taca,
 사내 프로젝트를 진행하면서 IOS 웹뷰에서 안전 영역을 설정하는 방법에 대해 알게되었다.
 
 아이폰 X 부터는 디스플레이에 노치 디자인이 적용되고, 하단에는 물리 버튼이 사라지고 제스처로 대체되었다.
@@ -104,7 +163,7 @@ export default function RootLayout({
 ```
 
 위와 같이 overflow 만 hidden 처리하여 해결하였다.
-4:T1359,
+18:T1359,
 monorepo를 사용해 패키지들을 분리하는 과정에서 이슈를 확인했다.
 
 번들링 하지않고, 패키지들을 `index.ts`에서 직접 내보내 사용했을 때, 사용하지 않는 코드들도 함께 포함되는 문제가 있었다.
@@ -267,7 +326,7 @@ utils에서 내보내는 함수 중 프로젝트별로 사용하는곳과 사용
 
 rollup 설정에 대해서 아직 완벽하게 이해하지는 못했으며, 내가 의도한대로 작동하는지도 조금 확신이 들지 않지만 이번 기회에 조금 더 깊게 공부해보고 계속해서 확인해보며 수정해나가야겠다.
 개인적으로는 최적화해 나가는 과정이 매우 재밌었던 작업이었다!
-5:Ta2c,
+19:Ta2c,
 최근 rollup으로 패키지를 만드는 과정에서 cjs와 esm에 대해 알게되었다.
 
 ### Module
@@ -342,7 +401,7 @@ console.log(lib.name) // lib
 - [kakao blog](https://tech.kakao.com/2023/10/19/commonjs-esm-migration/)
 - [CJS](https://nodejs.org/api/modules.html)
 - [ESM](https://nodejs.org/api/esm.html)
-6:T1101,
+1a:T1101,
 자바스크립트에서 원시타입(primitive data type)은 변경 불가능한(immutable)한 값이다.
 
 - Boolean
@@ -487,7 +546,7 @@ const [state, setState] = useState({
 ```
 
 이처럼 리액트로 개발을 할 때 불변성을 유지함으로써 안정성을 유지하고 성능을 향상시킬 수 있다.
-7:Tcc7,
+1b:Tcc7,
 로컬 개발환경에서 API 요청시 CORS 에러로 API 사용이 어려울 수 있습니다.
 
 이 글은 Vite로 구성된 로컬 개발환경에서 CORS 문제를 해결하는 방식을 작성합니다.
@@ -586,7 +645,7 @@ export default ({ mode }) => {
 2. 프록시는 `changeOption` 에 의하여 HTTP 요청 헤더의 Host 값을 `https://example.com` 으로 변경
 3. 프록시는 최종적으로 이 요청을 `https://example.com` 라는 URL로 `target` 서버에 전달
 
-8:T12dc,
+1c:T12dc,
 ## 바벨이란?
 바벨은 자바스크립트 컴파일러이다.
 사실 자세히 보면 컴파일러보다는 트랜스파일러에 가깝다.
@@ -770,7 +829,7 @@ module.exports = {
 js 확장자로 끝나는 모든 파일에 babel-loader를 적용한다.
 또 node_modules 디렉토리는 제외한다.
 
-9:T2f94,
+1d:T2f94,
 ## 웹팩(기본)배경
 - 웹팩은 모던 javascript 어플리케이션을 위한 정적 모듈 번들러이다. 번들러는 웹팩 이외에도 다양한게 있는데 (rollup , esbuild , vite , parcel 등) 웹팩이 가장 오래되었기도하고 많이 사용하고 있기 때문에 이번 기회에 배워보기로 했다.
 
@@ -1203,7 +1262,7 @@ module.exports = {
 하지만 기본적인 웹팩으로 설정되어있고, 직접 커스텀하려면 eject를 해야한다.
 
 이번 기회에 웹팩의 원리와 기본적인 사용방법을 알아보았다.
-a:Te9a,
+1e:Te9a,
 ### React Native geolocation
 
 사이드 프로젝트에 위치정보를 받아와야 하는 기능이 필요해 지오로케이션을 받아 오도록 했다.
@@ -1330,7 +1389,7 @@ const MyApp = () => {
 다음 포스팅에서는 받아온 위치정보를 webview로 넘겨주는 방법에 대해 알아보자!
 
 
-b:T9c4,
+1f:T9c4,
 ### 딥링크
 - 딥링크는 모바일에서 특정 페이지에 도달 할 수 있는 링크를 의미한다.
 - 웹이나 sns등 링크를 클릭했을때 해당 어플리케이션 앱으로 바로 이동하는데, 이런 방식을 모바일 딥링크라 하고 특정한 앱 스크린으로 이동하는 것
@@ -1428,358 +1487,7 @@ useEffect(() => {
   return () => Linking.removeAllListeners('url');
 }, [])
 ```
-c:T2147,
-이전에 [스벨트킷으로 블로그 만들어보기](https://wonbeenna.github.io/blog/javaScript/svelte-blog) 에서 svelte kit으로 블로그를 만들었었다.
-
-그때는 svelte 공부겸 블로그를 만들었지만, 업무에서 주로 사용하는 스택인 react와 next.js를 사용하여 블로그를 만들어보려고 한다.
-
-### 시작
----
-```shell
-npx create-next-app <project-name>
-```
-
-next.js 프로젝트를 생성한다.
-
-### 라우팅
----
-<img src="/assets/blog/javaScript/route.png" style={{
-    maxWidth: "300px",
-    height: "auto"
-}} alt="next-blog-route" />
-
-app 폴더 구조는 위와 같다.
-
-- root layout을 만들어 Header, Footer를 구성한다.
-- page/[page]는 블로그의 메인이며 페이지네이션을 위해 동적으로 구성하였다.
-- blog/[category]/[slug]는 카테고리별로 블로그를 구분하고, slug를 통해 각 post를 구분한다.
-
-### 블로그 포스트
-
-root layout을 만들었으니, 이제 블로그 포스트를 만들어보자.
-
-root 디렉토리에 _posts폴더를 만들고 그 안에 markdown 파일을 만든다.
-
-
-```shell
-npm install gray-matter
-```
-
-gray-matter는 markdown 파일의 front matter를 파싱하는 라이브러리이다.
-
-```ts
-import path from 'path';
-import * as fs from 'fs';
-import matter from 'gray-matter';
-import { getSerialize } from '@/utils/sirialize';
-
-export const POSTS_PATH = path.join(process.cwd(), '_posts');
-
-export const postFilePaths = fs.readdirSync(POSTS_PATH).filter((path) => /\.mdx?$/.test(path));
-
-export const getAllPost = (
-  category?: string,
-  paging: { page: string; limit?: string } = {
-    page: '1',
-    limit: '10'
-  }
-) => {
-  let total = postFilePaths.length;
-  let posts = postFilePaths
-    .map((filePath) => {
-      const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
-      const { content, data } = matter(source);
-      const slug = filePath.replace(/\.mdx?$/, '');
-
-      return {
-        content,
-        data,
-        slug
-      };
-    })
-    .sort((a, b) => {
-      return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
-    });
-
-  if (category) {
-    posts = posts.filter((post) => post.data.category === category);
-    total = posts.length;
-  }
-
-  if (!paging.page) {
-    paging.page = '1';
-    paging.limit = '10';
-  }
-
-  if (paging.limit === '-1') {
-    return {
-      posts,
-      total
-    };
-  }
-
-  const { page = '1', limit = '10' } = paging;
-  const offset = (+page - 1) * +limit;
-
-  posts = posts.slice(offset, offset + +limit);
-
-  return {
-    posts,
-    total
-  };
-};
-```
-
-file path를 통해 _posts폴더 내 markdown 파일을 읽어오고, gray-matter를 통해 front matter를 파싱한다.
-
-메인과 blog 페이지를 구성하기위해 getAllPost 함수를 만들었고, 각각의 블로그들은 getPost 함수를 통해 가져온다.
-
-```ts
-export const getPost = async (slug: string) => {
-  const allPost = getAllPost(undefined, {
-    page: '1',
-    limit: '-1'
-  });
-
-  const index = allPost.posts.findIndex((post) => post.slug === slug);
-  const prevPost = allPost.posts[index + 1];
-  const nextPost = allPost.posts[index - 1];
-
-  const source = fs.readFileSync(path.join(POSTS_PATH, `${slug}.mdx`));
-
-  const { content, data } = matter(source);
-  const mdx = await getSerialize(content, data);
-
-  return {
-    mdx,
-    content,
-    data,
-    slug,
-    prevPost: {
-      slug: prevPost?.slug,
-      title: prevPost?.data.title,
-      category: prevPost?.data.category
-    },
-    nextPost: {
-      slug: nextPost?.slug,
-      title: nextPost?.data.title,
-      category: nextPost?.data.category
-    }
-  };
-};
-```
-
-```shell
-npm i next-mdx-remote
-```
-
-next-mdx-remote는 mdx 파일을 html로 변환해주는 라이브러리이다.
-
-위 코드에서 getSerialize 함수는 mdx 파일을 html로 변환해주는 함수이다.
-
-html로 변환하는데 있어 remark와 rehype를 사용할 수 있다.
-
-```ts
-import { serialize } from 'next-mdx-remote/serialize';
-import remarkGfm from 'remark-gfm';
-import rehypePrism from 'rehype-prism-plus';
-
-export const getSerialize = async (content: string, data: any) => {
-  return await serialize(content, {
-    mdxOptions: {
-      remarkPlugins: [remarkGfm],
-      rehypePlugins: [rehypePrism]
-    },
-    scope: data
-  });
-};
-```
-
-```tsx
-<MDXRemote {...source} components={components} />
-```
-
-위에서 변환된 html을 MDXRemote 컴포넌트를 통해 렌더링한다.
-
-### 카테고리
----
-
-카테고리 별로 필터하기위해 카테고리도 따로 받아와야 했다.
-각각의 post들을 읽고 중복되지 않은 카테고리들만 가져오는 함수를 만들었다.
-
-```ts
-import { getAllPost } from '@/utils/getPost';
-
-export const getCategories = (): {
-  title: string;
-  count: number;
-}[] => {
-  const posts = getAllPost(undefined, { page: '1', limit: '-1' });
-
-  let uniqueCategories: any = {};
-
-  posts.posts.forEach((post) => {
-    if (uniqueCategories.hasOwnProperty(post.data.category)) {
-      uniqueCategories[post.data.category].count += 1;
-    } else {
-      uniqueCategories[post.data.category] = {
-        title: post.data.category,
-        count: 1
-      };
-    }
-  });
-
-  return Object.values(uniqueCategories).sort((a, b) => a.title > b.title);
-};
-
-```
-
-### 페이지
----
-위에서 구성한 함수들을 페이지에서 사용해보자.
-
-```tsx
-export const generateStaticParams = async () => {
-  const posts = getAllPost(undefined, {
-    page: '1',
-    limit: '-1'
-  });
-
-  return Array.from({ length: Math.ceil(posts.total / 10) }, (_, i) => {
-    return {
-      page: (i + 1).toString()
-    };
-  });
-};
-
-const Page = ({ params }: { params: { page: string } }) => {
-  return <PostListContainer page={params.page} />;
-};
-
-export default Page;
-```
-
-```tsx
-// blog/[category]/[slug].tsx
-export const generateStaticParams = async () => {
-  const posts = getAllPost(undefined, {
-    page: '1',
-    limit: '-1'
-  });
-
-  return posts.posts.map((post) => {
-    return {
-      slug: post.slug,
-      category: post.data.category
-    };
-  });
-};
-```
-
-app 라우트에서 SSG를 사용하기 위해 generateStaticParams 함수가 필요했다.
-PostListContainer 컴포넌트를 통해 각 page들을 렌더링 하였고, generateStaticParams 함수를 통해 페이지네이션을 위한 params들을 생성하였다.
-
-### SEO
----
-
-seo를 위해 meta 태그와 sitemap, robots를 생성했다.
-
-next 13 에서는 간단하게 위 세가지를 구성할 수 있었다.
-
-먼저 sitemap.ts를 app 폴더에 만들고
-
-```ts
-import { getAllPost } from '@/utils/getPost';
-import { MetadataRoute } from 'next';
-
-const defaultUrl = process.env.NEXT_PUBLIC_BASE_URL;
-const pageRoutes = [`${defaultUrl}`, `${defaultUrl}/blog`, `${defaultUrl}/about`];
-
-export default function sitemap(): MetadataRoute.Sitemap {
-  const posts = getAllPost(undefined, {
-    page: '1',
-    limit: '-1'
-  });
-
-  const defaultRoutes: MetadataRoute.Sitemap = pageRoutes.map((route) => {
-    return {
-      url: route,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'weekly',
-      priority: 1
-    };
-  });
-
-  const postRoutes: MetadataRoute.Sitemap = posts.posts.map((post) => {
-    return {
-      url: `${defaultUrl}/blog/${post.data.category}/${post.slug}`,
-      lastModified: new Date(post.data.date).toISOString(),
-      changeFrequency: 'weekly',
-      priority: 1
-    };
-  });
-
-  return [...defaultRoutes, ...postRoutes];
-}
-```
-처럼 함수를 만들면 sitemap이 생성된다.
-
-robots도 마찬가지로 app 폴더에 robots.ts를 만들고
-
-```ts
-import { MetadataRoute } from 'next';
-
-export default function robots(): MetadataRoute.Robots {
-  return {
-    rules: {
-      userAgent: '*',
-      allow: '/'
-    },
-    sitemap: 'https://wonbeenna.github.io/sitemap.xml'
-  };
-}
-```
-
-위와 같이 작성하면 된다.
-
-metadata는 각 페이지에서 generateMetadata 함수를 통해 생성하면 된다.
-
-```ts
-export const generateMetadata = async ({ params }: { params: { page: string } }) => {
-  return {
-    title: `Been blog - ${params.page}`,
-    openGraph: {
-      ...defaultOpenGraph,
-      title: `Been blog - ${params.page}`,
-      description: `Been dev-note - ${params.page}`,
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/page/${params.page}`
-    }
-  };
-};
-```
-
-### 댓글
----
-
-댓글은 giscus를 사용했다.
-
-giscus는 github Discussions으로 댓글로 사용할 수 있게 해주는 라이브러리이다.
-
-```shell
-npm i @giscus/react
-```
-
-[giscus](https://giscus.app/ko)
-
-위 문서에 쉽게 설명되어 있으니 생략!
-
-
-
-
-
-f:["page","1","d"]
-0:["f9k9UGL5bISEvw7S8q1KK",[[["",{"children":["page",{"children":[["page","1","d"],{"children":["__PAGE__?{\"page\":\"1\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["page",{"children":[["page","1","d"],{"children":["__PAGE__",{},["$L1",["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L2",null,{"posts":{"posts":[{"content":"$3","data":{"title":"IOS 웹뷰에서 safe area 설정하기","date":"$D2024-07-02T00:00:00.000Z","description":"IOS 웹뷰에서 safe area 를 설정하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"webview-safe-area"},{"content":"$4","data":{"title":"rollup으로 번들링하는 과정","date":"$D2024-03-09T00:00:00.000Z","description":"처음 rollup으로 번들링하는 과정에서 겪은 문제들과 해결방법","category":"javaScript","titleImage":"/assets/postIcon/rollup-logo.svg"},"slug":"rollup"},{"content":"$5","data":{"title":"cjs와 esm","date":"$D2024-03-07T00:00:00.000Z","description":"rollup으로 번들링하는 과정에서 알게된 cjs와 esm의 차이점에 대해","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"module-system"},{"content":"$6","data":{"title":"리액트에서 불변성을 지키는 이유","date":"$D2024-02-25T00:00:00.000Z","description":"리액트에서 불변성을 지키는 이유","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"react-immutable"},{"content":"$7","data":{"title":"Vite proxy 설정","date":"$D2024-01-18T00:00:00.000Z","description":"Vite 로컬환경에서 CORS 문제 해결하기","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"vite-proxy"},{"content":"$8","data":{"title":"바벨 사용해보기","date":"$D2023-12-01T00:00:00.000Z","description":"바벨 기본 동작과 사용방법","category":"javaScript","titleImage":"/assets/postIcon/babel-icon.svg"},"slug":"babel"},{"content":"$9","data":{"title":"웹팩 기본 사용법 (1)","date":"$D2023-11-30T00:00:00.000Z","description":"처음 접해보는 웹팩의 원리와 기본 사용 방법","category":"javaScript","titleImage":"/assets/postIcon/webpack-icon.svg"},"slug":"webpack-1"},{"content":"$a","data":{"title":"React Native geolocation","date":"$D2023-10-25T00:00:00.000Z","description":"React Native 위치정보 받아오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"rn-geolocation"},{"content":"$b","data":{"title":"React Native Deep Linking","date":"$D2023-10-17T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"rn-deep-link"},{"content":"$c","data":{"title":"Next.js 블로그 만들기","date":"$D2023-10-09T00:00:00.000Z","description":"Next.js로 블로그 만들기","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-blog"}],"total":39},"page":"1","category":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$Ld",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (36)"}]}],["$","li","study",{"children":["$","$Ld",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$Ld",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}],null]]},["$","$Le",null,{"parallelRouterKey":"children","segmentPath":["children","page","children","$f","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L10",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},["$","$Le",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L10",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L11",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L11",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_bd870a","children":["$","$L12",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b-[1px] border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$Ld",null,{"href":"/","children":["$","$L13",null,{"src":"/assets/icons/been-logo.svg","width":60,"height":56,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$Ld",null,{"href":"/about","children":"About"}]}]]}],["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"children":"$L16"}]}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$Le",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L10",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/59c48ca6c4481319.css","precedence":"next","crossOrigin":""}]],"$L17"]]]]
-18:I[9137,["438","static/chunks/438-d093edea1998085d.js","185","static/chunks/app/layout-d399a67a63e785b6.js"],""]
-16:["$","$L18",null,{}]
-17:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Been blog - 1"}],["$","meta","3",{"name":"description","content":"Been dev-note"}],["$","meta","4",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","5",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","meta","6",{"property":"og:title","content":"Been blog - 1"}],["$","meta","7",{"property":"og:description","content":"Been dev-note - 1"}],["$","meta","8",{"property":"og:url","content":"https://wonbeenna.github.io/page/1"}],["$","meta","9",{"property":"og:site_name","content":"Been blog"}],["$","meta","10",{"property":"og:locale","content":"ko_KR"}],["$","meta","11",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","12",{"property":"og:image:width","content":"800"}],["$","meta","13",{"property":"og:image:height","content":"600"}],["$","meta","14",{"property":"og:image:alt","content":"Been blog"}],["$","meta","15",{"property":"og:type","content":"website"}],["$","meta","16",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","17",{"name":"twitter:title","content":"Been blog - 1"}],["$","meta","18",{"name":"twitter:description","content":"Been dev-note - 1"}],["$","meta","19",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","20",{"name":"twitter:image:width","content":"800"}],["$","meta","21",{"name":"twitter:image:height","content":"600"}],["$","meta","22",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","meta","24",{"name":"next-size-adjust"}]]
-1:null
+d:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L15",null,{"posts":{"posts":[{"content":"$16","data":{"title":"document.visibilityState","date":"$D2024-12-06T00:00:00.000Z","description":"document.visibilityState를 이용한 페이지의 상태를 확인하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"visibilityState"},{"content":"$17","data":{"title":"IOS 웹뷰에서 safe area 설정하기","date":"$D2024-07-02T00:00:00.000Z","description":"IOS 웹뷰에서 safe area 를 설정하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"webview-safe-area"},{"content":"$18","data":{"title":"rollup으로 번들링하는 과정","date":"$D2024-03-09T00:00:00.000Z","description":"처음 rollup으로 번들링하는 과정에서 겪은 문제들과 해결방법","category":"javaScript","titleImage":"/assets/postIcon/rollup-logo.svg"},"slug":"rollup"},{"content":"$19","data":{"title":"cjs와 esm","date":"$D2024-03-07T00:00:00.000Z","description":"rollup으로 번들링하는 과정에서 알게된 cjs와 esm의 차이점에 대해","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"module-system"},{"content":"$1a","data":{"title":"리액트에서 불변성을 지키는 이유","date":"$D2024-02-25T00:00:00.000Z","description":"리액트에서 불변성을 지키는 이유","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"react-immutable"},{"content":"$1b","data":{"title":"Vite proxy 설정","date":"$D2024-01-18T00:00:00.000Z","description":"Vite 로컬환경에서 CORS 문제 해결하기","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"vite-proxy"},{"content":"$1c","data":{"title":"바벨 사용해보기","date":"$D2023-12-01T00:00:00.000Z","description":"바벨 기본 동작과 사용방법","category":"javaScript","titleImage":"/assets/postIcon/babel-icon.svg"},"slug":"babel"},{"content":"$1d","data":{"title":"웹팩 기본 사용법 (1)","date":"$D2023-11-30T00:00:00.000Z","description":"처음 접해보는 웹팩의 원리와 기본 사용 방법","category":"javaScript","titleImage":"/assets/postIcon/webpack-icon.svg"},"slug":"webpack-1"},{"content":"$1e","data":{"title":"React Native geolocation","date":"$D2023-10-25T00:00:00.000Z","description":"React Native 위치정보 받아오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"rn-geolocation"},{"content":"$1f","data":{"title":"React Native Deep Linking","date":"$D2023-10-17T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"rn-deep-link"}],"total":40},"page":"1","category":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L20",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (37)"}]}],["$","li","study",{"children":["$","$L20",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$L20",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}]
+13:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+11:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Been blog - 1"}],["$","meta","2",{"name":"description","content":"Been dev-note"}],["$","meta","3",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","4",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","meta","5",{"property":"og:title","content":"Been blog - 1"}],["$","meta","6",{"property":"og:description","content":"Been dev-note - 1"}],["$","meta","7",{"property":"og:url","content":"https://wonbeenna.github.io/page/1"}],["$","meta","8",{"property":"og:site_name","content":"Been blog"}],["$","meta","9",{"property":"og:locale","content":"ko_KR"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 1"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 1"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","24",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}]]
+f:null
