@@ -1,16 +1,17 @@
-import React from 'react';
 import PostListContainer from '@/components/PostListContainer';
 import { getCategories } from '@/utils/getCategories';
 import { defaultOpenGraph } from '@/utils/metadata';
 
-export const generateMetadata = async ({ params }: { params: { category: string } }) => {
+export const generateMetadata = async ({ params }: { params: Promise<{ category: string }> }) => {
+  const { category } = await params;
+
   return {
-    title: `Been blog - ${params.category}`,
+    title: `Been blog - ${category}`,
     openGraph: {
       ...defaultOpenGraph,
-      title: `Been blog - ${params.category}`,
-      description: `Been dev-note - ${params.category}`,
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/blog/${params.category}`
+      title: `Been blog - ${category}`,
+      description: `Been dev-note - ${category}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/blog/${category}`
     }
   };
 };
@@ -25,8 +26,10 @@ export const generateStaticParams = async () => {
   });
 };
 
-const Page = async ({ params }: { params: { category: string } }) => {
-  return <PostListContainer category={params.category} />;
+const Page = async ({ params }: { params: Promise<{ category: string }> }) => {
+  const { category } = await params;
+
+  return <PostListContainer category={category} />;
 };
 
 export default Page;

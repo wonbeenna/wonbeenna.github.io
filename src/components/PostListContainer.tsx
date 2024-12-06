@@ -10,7 +10,7 @@ interface PostListContainerProps {
   page?: string;
 }
 
-const PostListContainer = ({ category, page }: PostListContainerProps) => {
+const PostListContainer = async ({ category, page }: PostListContainerProps) => {
   const categories = getCategories();
   const posts = getAllPost(
     {

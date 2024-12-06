@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useEffect, useState } from 'react';
 import { Posts } from '@/app/page';
 import PostCard from '@/components/PostCard';

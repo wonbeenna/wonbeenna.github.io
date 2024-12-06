@@ -1,6 +1,8 @@
 import { getAllPost } from '@/utils/getPost';
 import { MetadataRoute } from 'next';
 
+export const dynamic = 'force-static';
+
 const defaultUrl = process.env.NEXT_PUBLIC_BASE_URL;
 const pageRoutes = [`${defaultUrl}`, `${defaultUrl}/blog`, `${defaultUrl}/about`];
 

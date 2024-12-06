@@ -69,13 +69,11 @@ export const getPost = async (slug: string) => {
 
   const source = fs.readFileSync(path.join(POSTS_PATH, `${slug}.mdx`));
 
-  const { content, data } = matter(source);
-  const mdx = await getSerialize(content, data);
+  const { content, frontmatter } = await getSerialize(source);
 
   return {
-    mdx,
     content,
-    data,
+    data: frontmatter,
     slug,
     prevPost: {
       slug: prevPost?.slug,

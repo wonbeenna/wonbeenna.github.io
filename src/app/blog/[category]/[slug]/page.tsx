@@ -1,12 +1,14 @@
-import React from 'react';
 import { getAllPost, getPost } from '@/utils/getPost';
 import Contents from '@/components/Contents';
 import PostCardHeader from '@/components/PostCardHeader';
-import dynamic from 'next/dynamic';
 import ContentsPage from '@/components/ContentsPage';
+import Comment from '@/components/Comment';
 
-export const generateMetadata = async ({ params }: { params: { category: string; slug: string } }) => {
-  const data = await getPost(params.slug);
+export const dynamic = 'force-static';
+
+export const generateMetadata = async ({ params }: { params: Promise<{ slug: string; category: string }> }) => {
+  const { slug, category } = await params;
+  const data = await getPost(slug);
 
   return {
     title: `Been blog - ${data.data.title}`,
@@ -14,7 +16,7 @@ export const generateMetadata = async ({ params }: { params: { category: string;
     openGraph: {
       title: `Been blog - ${data.data.title}`,
       description: data.data.description,
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/blog/${params.category}/${params.slug}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/blog/${category}/${slug}`,
       images: [
         {
           url: `${process.env.NEXT_PUBLIC_BASE_URL}${data.data.titleImage}`,
@@ -41,15 +43,18 @@ export const generateStaticParams = async () => {
   });
 };
 
-const Comment = dynamic(() => import('../../../../components/Comment'), { ssr: false });
-
-const Page = async ({ params }: { params: { category: string; slug: string } }) => {
-  const data = await getPost(params.slug);
+const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const { slug } = await params;
+  const data = await getPost(slug);
 
   return (
     <div className="prose w-full max-w-none">
-      <PostCardHeader title={data.data.title} description={data.data.description} date={data.data.date} />
-      <Contents {...data.mdx} />
+      <PostCardHeader
+        title={data.data.title as string}
+        description={data.data.description as string}
+        date={data.data.date as string}
+      />
+      <Contents component={data.content} />
       <ContentsPage prevPost={data.prevPost} nextPost={data.nextPost} />
       <Comment />
     </div>

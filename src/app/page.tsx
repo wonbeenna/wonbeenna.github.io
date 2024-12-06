@@ -20,6 +20,8 @@ export interface Posts {
   total: number;
 }
 
-export default async function Home({ params }: { params: { page: string } }) {
-  return <PostListContainer page={params.page} />;
+export default async function Home({ params }: { params: Promise<{ page: string }> }) {
+  const { page } = await params;
+
+  return <PostListContainer page={page} />;
 }

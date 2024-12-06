@@ -2,14 +2,16 @@ import { defaultOpenGraph } from '@/utils/metadata';
 import { getAllPost } from '@/utils/getPost';
 import PostListContainer from '@/components/PostListContainer';
 
-export const generateMetadata = async ({ params }: { params: { page: string } }) => {
+export const generateMetadata = async ({ params }: { params: Promise<{ page: string }> }) => {
+  const { page } = await params;
+
   return {
-    title: `Been blog - ${params.page}`,
+    title: `Been blog - ${page}`,
     openGraph: {
       ...defaultOpenGraph,
-      title: `Been blog - ${params.page}`,
-      description: `Been dev-note - ${params.page}`,
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/page/${params.page}`
+      title: `Been blog - ${page}`,
+      description: `Been dev-note - ${page}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/page/${page}`
     }
   };
 };
@@ -27,8 +29,10 @@ export const generateStaticParams = async () => {
   });
 };
 
-const Page = ({ params }: { params: { page: string } }) => {
-  return <PostListContainer page={params.page} />;
+const Page = async ({ params }: { params: Promise<{ page: string }> }) => {
+  const { page } = await params;
+
+  return <PostListContainer page={page} />;
 };
 
 export default Page;
