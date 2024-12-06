@@ -29,7 +29,7 @@ const SnowFall = () => {
           x: Math.random() * width,
           y: Math.random() * height,
           size: Math.random() * size,
-          speed: Math.random() * 3
+          speed: Math.random() * 2
         });
       }
 
