@@ -12,7 +12,8 @@ export const getAllPost = (
     page: '1',
     limit: '10'
   },
-  category?: string
+  category?: string,
+  search?: string
 ) => {
   let total = postFilePaths.length;
   let posts = postFilePaths
@@ -28,6 +29,11 @@ export const getAllPost = (
       };
     })
     .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+  if (search) {
+    posts = posts.filter((post) => post.data.title.includes(search));
+    total = posts.length;
+  }
 
   if (category) {
     posts = posts.filter((post) => post.data.category === category);

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 
 export const defaultMetadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://wonbeenna.github.io'),
   title: 'Been blog',
   description: 'Been dev-note',
   other: {
@@ -25,7 +26,7 @@ export const defaultOpenGraph = {
   locale: 'ko_KR',
   images: [
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/favicon.png`,
+      url: '/favicon.png',
       width: 800,
       height: 600,
       alt: 'Been blog'

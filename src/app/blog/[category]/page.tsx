@@ -29,7 +29,7 @@ export const generateStaticParams = async () => {
 const Page = async ({ params }: { params: Promise<{ category: string }> }) => {
   const { category } = await params;
 
-  return <PostListContainer category={category} />;
+  return <PostListContainer limit="-1" category={category} />;
 };
 
 export default Page;

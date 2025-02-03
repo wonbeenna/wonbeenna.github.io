@@ -8,21 +8,24 @@ import { getAllPost } from '@/utils/getPost';
 interface PostListContainerProps {
   category?: string;
   page?: string;
+  limit?: string;
+  search?: string;
 }
 
-const PostListContainer = async ({ category, page }: PostListContainerProps) => {
+const PostListContainer = async ({ category, limit, page, search }: PostListContainerProps) => {
   const categories = getCategories();
   const posts = getAllPost(
     {
       page: page || '1',
-      limit: category ? '-1' : '10'
+      limit: limit || '10'
     },
-    category
+    category,
+    search
   );
 
   return (
     <section className="flex flex-col-reverse md:relative md:flex-row">
-      <PostList posts={posts as Posts} page={page} category={category} />
+      <PostList isPagination posts={posts as Posts} page={page} />
       <Category categories={categories} currentCategory={category} />
     </section>
   );

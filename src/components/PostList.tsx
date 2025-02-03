@@ -9,10 +9,10 @@ import { useRouter } from 'next/navigation';
 interface PostListProps {
   posts: Posts;
   page?: string;
-  category?: string;
+  isPagination?: boolean;
 }
 
-const PostList = ({ posts, page, category }: PostListProps) => {
+const PostList = ({ posts, page, isPagination }: PostListProps) => {
   const navigate = useRouter();
   const [currentPage, setCurrentPage] = useState(Number(page) || 1);
 
@@ -45,7 +45,7 @@ const PostList = ({ posts, page, category }: PostListProps) => {
         ))}
       </ol>
 
-      {!category && (
+      {isPagination && (
         <Pagination
           totalCount={posts.total}
           pageSize={10}
