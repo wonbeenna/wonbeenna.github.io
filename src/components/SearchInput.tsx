@@ -38,6 +38,7 @@ const SearchInput = () => {
 
   return (
     <input
+      autoFocus
       defaultValue={searchParams.get('search') || ''}
       onChange={onChange}
       className="w-full rounded-[8px] border border-gray400 px-3 py-1.5"
