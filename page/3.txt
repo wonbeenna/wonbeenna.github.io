@@ -1,23 +1,20 @@
-7:"$Sreact.fragment"
-8:I[3704,["839","static/chunks/839-69c2111cfab13ba3.js","264","static/chunks/264-252ca7916fa91819.js","177","static/chunks/app/layout-7f5ac2ccdb15d80e.js"],""]
-9:I[8534,["839","static/chunks/839-69c2111cfab13ba3.js","264","static/chunks/264-252ca7916fa91819.js","177","static/chunks/app/layout-7f5ac2ccdb15d80e.js"],"Providers"]
-a:I[6934,["839","static/chunks/839-69c2111cfab13ba3.js","264","static/chunks/264-252ca7916fa91819.js","177","static/chunks/app/layout-7f5ac2ccdb15d80e.js"],"default"]
-b:I[5244,[],""]
-c:I[3866,[],""]
-e:I[6213,[],"OutletBoundary"]
-10:I[6213,[],"MetadataBoundary"]
-12:I[6213,[],"ViewportBoundary"]
-14:I[4835,[],""]
-1:HL["/_next/static/media/045832894acda0e9-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-2:HL["/_next/static/media/120a5a1920781bd0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-3:HL["/_next/static/media/6ebb97b5c9fa4e03-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-4:HL["/_next/static/media/c714540e49ad5111-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-5:HL["/_next/static/media/da897b99eb1fe4a1-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-6:HL["/_next/static/css/b05f4fc671799f14.css","style"]
-0:{"P":null,"b":"LZ0wiYybNOrIVu9BEgzgL","p":"","c":["","page","3"],"i":false,"f":[[["",{"children":["page",{"children":[["page","3","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$7","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/b05f4fc671799f14.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L8",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L8",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_363063","children":["$","$L9",null,{"children":[["$","$La",null,{}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$Lb",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lc",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$7","c",{"children":[null,["$","$Lb",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lc",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]]}],{"children":[["page","3","d"],["$","$7","c",{"children":[null,["$","$Lb",null,{"parallelRouterKey":"children","segmentPath":["children","page","children","$0:f:0:1:2:children:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lc",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]]}],{"children":["__PAGE__",["$","$7","c",{"children":["$Ld",null,["$","$Le",null,{"children":"$Lf"}]]}],{},null]},null]},null]},null],["$","$7","h",{"children":[null,["$","$7","9dp-WfzhE2QXLG_C3Nf5B",{"children":[["$","$L10",null,{"children":"$L11"}],["$","$L12",null,{"children":"$L13"}],["$","meta",null,{"name":"next-size-adjust"}]]}]]}]]],"m":"$undefined","G":["$14","$undefined"],"s":false,"S":true}
-15:I[8882,["839","static/chunks/839-69c2111cfab13ba3.js","264","static/chunks/264-252ca7916fa91819.js","848","static/chunks/app/page/%5Bpage%5D/page-6d9893d73947e310.js"],"default"]
-1f:I[4839,["839","static/chunks/839-69c2111cfab13ba3.js","264","static/chunks/264-252ca7916fa91819.js","848","static/chunks/app/page/%5Bpage%5D/page-6d9893d73947e310.js"],""]
-16:T9de,
+1:"$Sreact.fragment"
+2:I[3704,["173","static/chunks/173-de83b62c918b3961.js","565","static/chunks/565-6e90e1eae56db7ec.js","177","static/chunks/app/layout-60ab078bc3e5f529.js"],""]
+3:I[8534,["173","static/chunks/173-de83b62c918b3961.js","565","static/chunks/565-6e90e1eae56db7ec.js","177","static/chunks/app/layout-60ab078bc3e5f529.js"],"Providers"]
+4:I[6934,["173","static/chunks/173-de83b62c918b3961.js","565","static/chunks/565-6e90e1eae56db7ec.js","177","static/chunks/app/layout-60ab078bc3e5f529.js"],"default"]
+5:I[5244,[],""]
+6:I[3866,[],""]
+8:I[6213,[],"OutletBoundary"]
+a:I[6213,[],"MetadataBoundary"]
+c:I[6213,[],"ViewportBoundary"]
+e:I[4835,[],""]
+:HL["/_next/static/media/47cbc4e2adbc5db9-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/e539936c7dc6b882.css","style"]
+:HL["/_next/static/css/991c46f1624c4720.css","style"]
+0:{"P":null,"b":"F1vFg3Jc2JDXSNXOTjicz","p":"","c":["","page","3"],"i":false,"f":[[["",{"children":["page",{"children":[["page","3","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/991c46f1624c4720.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","$L4",null,{}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L5",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","3","d"],["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","segmentPath":["children","page","children","$0:f:0:1:2:children:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L7",null,["$","$L8",null,{"children":"$L9"}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","1av7t9jDFbvRc86JWaMo7",{"children":[["$","$La",null,{"children":"$Lb"}],["$","$Lc",null,{"children":"$Ld"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]]}],false]],"m":"$undefined","G":["$e","$undefined"],"s":false,"S":true}
+f:I[4340,["173","static/chunks/173-de83b62c918b3961.js","565","static/chunks/565-6e90e1eae56db7ec.js","848","static/chunks/app/page/%5Bpage%5D/page-e40c84daa7dc90d7.js"],"default"]
+19:I[8173,["173","static/chunks/173-de83b62c918b3961.js","565","static/chunks/565-6e90e1eae56db7ec.js","848","static/chunks/app/page/%5Bpage%5D/page-e40c84daa7dc90d7.js"],""]
+10:T9de,
 
 얼마전 해외 블로그를 구경하다가 이런 글을 보았다.
 
@@ -115,7 +112,7 @@ Nothing was returned from render. This usually means a return statement is missi
 이런 에러를 만난 적이 많았는데, 위와 관련된 것이 아닌가 생각 된다.
 
 조금 더 생각하면서 개발하자
-17:Tff5,
+11:Tff5,
 예전부터 궁금했었던 부분이었다.
 
 **useCallback**과 **useMemo** hook은 함수와 값을 메모이제이션 해주는 역할을 한다.
@@ -237,7 +234,7 @@ useMemo와 useCallback은 초기 렌더링에는 쓸모가 없다. 오히려 초
 [https://beta.reactjs.org/reference/react/useMemo#usage](https://beta.reactjs.org/reference/react/useMemo#usage)
 
 [https://www.developerway.com/posts/how-to-use-memo-use-callback](https://www.developerway.com/posts/how-to-use-memo-use-callback)
-18:T84a,
+12:T84a,
 ### fireEvent를 userEvent로 바꿔보기
 
 ```shell
@@ -315,7 +312,7 @@ const checkboxLabel = (
   </span>
 );
 ```
-19:Tff3,
+13:Tff3,
 ### * Mock Service Worker
 
 백엔드에서 데이터를 가져오는 부분을 테스트
@@ -479,7 +476,7 @@ const Type = ({orderType}) => {
 
 export default Type;
 ```
-1a:T1633,
+14:T1633,
 ### * Jest - Facebook에서 만든 테스팅 프레임 워크.
 
 주로 단위 (unit) 테스트를 위해 사용.
@@ -712,7 +709,7 @@ test('Prevent -,+ button from being pressed when the on/off button is clicked', 
   on/off
 </button>
 ```
-1b:Tfe7,
+15:Tfe7,
 ### 1\. Utility Type
 
 ```typescript
@@ -907,7 +904,7 @@ aria-hidden="true"
 
 [https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-1c:Tc66,
+16:Tc66,
 이번에 스터디를 하면서 처음 스토리북을 써보게 되었다.
 
 [https://storybook.js.org/](https://storybook.js.org/)
@@ -1024,7 +1021,7 @@ Default.args = {
 작성한 디자인 시스템을 기반으로 이번주부터 직접 개발에 들어가게된다.
 
 어떤점이 좋은지 차이가있는지 경험해보는 좋은 기회가 될거같다.
-1d:Td1c,
+17:Td1c,
 Nextjs에서 styled-components를 사용하면 서버상에서 html을 불러온 뒤, hydrate과정에서 js를 입혀 스타일이 적용된다.
 
 이때 초기 페이지 로딩시 사용자가 보게 되는 화면은, 스타일링이 전혀 적용되지않은 html문서를 잠깐 보게 되는 문제가 있다.
@@ -1130,7 +1127,7 @@ return {
 ```
 
 <img src="/assets/blog/javaScript/next-styled-component(1).png" width="100%" alt="post image"/>
-1e:Te30,
+18:Te30,
 프로젝트를 진행하면서, 프로필 페이지에 유저정보와 포인트, 펫정보, 관심사 등 세로로 길게~~배치된 UI, 각각의 정보들을 서버에서 데이터를 하나하나 받아와 보여줘야 했다.
 
 처음엔 아무생각없이 진행했다.
@@ -1228,7 +1225,7 @@ ref에 사용자의 view가 도달하면 userKeywords를 요청해 데이터를 
 또 무한스크롤도 구현해 볼 수 있다. 페이지의 맨 마지막 요소에 도달했을 때, 요청하는 페이지 쿼리를 ++ 하면 쉽게 구현할 수 있다.
 
 다른 필요한 페이지에 적용해봐야겠다!
-d:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L15",null,{"posts":{"posts":[{"content":"\n### Provider 테스팅 해보기\n\n```js\nrender(<Options optionType=\"scoops\" />, {wrapper: OrderDetailsProvider});\n```\n\n테스트 wrapper에 Provider로 감싸주면 된다.\n\n여기서는 redux나 recoil 등 다른 라이브러리도 가능\n\n---\n\n전역적으로도 사용이 가능\n\n```js\nimport {render} from '@testing-library/react';\nimport {OrderDetailsProvider} from '../contexts/OrderDetails';\n\nconst renderWithContext = (ui, options) => render(ui, {wrapper: OrderDetailsProvider, ...options});\n\nexport * from '@testing-library/react';\n\nexport {renderWithContext as render};\n```\n","data":{"title":"리액트 테스팅(4)","date":"$D2023-01-02T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-4"},{"content":"$16","data":{"title":"리액트 조건부 렌더링에 대한 생각","date":"$D2022-12-29T00:00:00.000Z","description":"해외 블로그를 보며 정리한 조건부 렌더링에 대한 생각","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"conditional-rendering"},{"content":"$17","data":{"title":"useCallback, useMemo 무조건 좋은가?","date":"$D2022-12-28T00:00:00.000Z","description":"useCallback과 useMemo에 대한 생각 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"usecallback-and-usememo"},{"content":"$18","data":{"title":"리액트 테스팅(3)","date":"$D2022-12-26T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-3"},{"content":"$19","data":{"title":"리액트 테스팅(2)","date":"$D2022-12-14T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-2"},{"content":"$1a","data":{"title":"리액트 테스팅(1)","date":"$D2022-12-10T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-1"},{"content":"$1b","data":{"title":"6주간 스터디하며 배운것들","date":"$D2022-10-21T00:00:00.000Z","description":"6주간 진행한 스터디에서 얻은 것들","category":"til","titleImage":"/assets/postIcon/til.webp"},"slug":"study"},{"content":"$1c","data":{"title":"Storybook 써보기","date":"$D2022-10-11T00:00:00.000Z","description":"스터디 하면서 처음 써본 Storybook","category":"javaScript","titleImage":"/assets/postIcon/storybook.png"},"slug":"storybook"},{"content":"$1d","data":{"title":"Next.js styled-component 적용 문제에 대해(_document.tsx)","date":"$D2022-08-22T00:00:00.000Z","description":"next.js와 styled-component 사용시 발생한 에러","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-styled-component"},{"content":"$1e","data":{"title":"IntersectionObserver로 데이터 요청해보기","date":"$D2022-05-04T00:00:00.000Z","description":"IntersectionObserver를 활용해 스크롤 위치에서 데이터 불러오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"intersectionObserver"}],"total":40},"page":"3","category":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L1f",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (37)"}]}],["$","li","study",{"children":["$","$L1f",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$L1f",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}]
-13:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-11:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Been blog - 3"}],["$","meta","2",{"name":"description","content":"Been dev-note"}],["$","meta","3",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","4",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","meta","5",{"property":"og:title","content":"Been blog - 3"}],["$","meta","6",{"property":"og:description","content":"Been dev-note - 3"}],["$","meta","7",{"property":"og:url","content":"https://wonbeenna.github.io/page/3"}],["$","meta","8",{"property":"og:site_name","content":"Been blog"}],["$","meta","9",{"property":"og:locale","content":"ko_KR"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 3"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 3"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","24",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}]]
-f:null
+7:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$Lf",null,{"isPagination":true,"posts":{"posts":[{"content":"\n### Provider 테스팅 해보기\n\n```js\nrender(<Options optionType=\"scoops\" />, {wrapper: OrderDetailsProvider});\n```\n\n테스트 wrapper에 Provider로 감싸주면 된다.\n\n여기서는 redux나 recoil 등 다른 라이브러리도 가능\n\n---\n\n전역적으로도 사용이 가능\n\n```js\nimport {render} from '@testing-library/react';\nimport {OrderDetailsProvider} from '../contexts/OrderDetails';\n\nconst renderWithContext = (ui, options) => render(ui, {wrapper: OrderDetailsProvider, ...options});\n\nexport * from '@testing-library/react';\n\nexport {renderWithContext as render};\n```\n","data":{"title":"리액트 테스팅(4)","date":"$D2023-01-02T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-4"},{"content":"$10","data":{"title":"리액트 조건부 렌더링에 대한 생각","date":"$D2022-12-29T00:00:00.000Z","description":"해외 블로그를 보며 정리한 조건부 렌더링에 대한 생각","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"conditional-rendering"},{"content":"$11","data":{"title":"useCallback, useMemo 무조건 좋은가?","date":"$D2022-12-28T00:00:00.000Z","description":"useCallback과 useMemo에 대한 생각 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"usecallback-and-usememo"},{"content":"$12","data":{"title":"리액트 테스팅(3)","date":"$D2022-12-26T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-3"},{"content":"$13","data":{"title":"리액트 테스팅(2)","date":"$D2022-12-14T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-2"},{"content":"$14","data":{"title":"리액트 테스팅(1)","date":"$D2022-12-10T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.png"},"slug":"react-testing-1"},{"content":"$15","data":{"title":"6주간 스터디하며 배운것들","date":"$D2022-10-21T00:00:00.000Z","description":"6주간 진행한 스터디에서 얻은 것들","category":"til","titleImage":"/assets/postIcon/til.webp"},"slug":"study"},{"content":"$16","data":{"title":"Storybook 써보기","date":"$D2022-10-11T00:00:00.000Z","description":"스터디 하면서 처음 써본 Storybook","category":"javaScript","titleImage":"/assets/postIcon/storybook.png"},"slug":"storybook"},{"content":"$17","data":{"title":"Next.js styled-component 적용 문제에 대해(_document.tsx)","date":"$D2022-08-22T00:00:00.000Z","description":"next.js와 styled-component 사용시 발생한 에러","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-styled-component"},{"content":"$18","data":{"title":"IntersectionObserver로 데이터 요청해보기","date":"$D2022-05-04T00:00:00.000Z","description":"IntersectionObserver를 활용해 스크롤 위치에서 데이터 불러오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"intersectionObserver"}],"total":40},"page":"3"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L19",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (37)"}]}],["$","li","study",{"children":["$","$L19",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$L19",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}]
+d:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Been blog - 3"}],["$","meta","2",{"name":"description","content":"Been dev-note"}],["$","meta","3",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","4",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","meta","5",{"property":"og:title","content":"Been blog - 3"}],["$","meta","6",{"property":"og:description","content":"Been dev-note - 3"}],["$","meta","7",{"property":"og:url","content":"https://wonbeenna.github.io/page/3"}],["$","meta","8",{"property":"og:site_name","content":"Been blog"}],["$","meta","9",{"property":"og:locale","content":"ko_KR"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 3"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 3"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","24",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}]]
+9:null

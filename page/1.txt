@@ -1,23 +1,20 @@
-7:"$Sreact.fragment"
-8:I[3704,["839","static/chunks/839-69c2111cfab13ba3.js","264","static/chunks/264-252ca7916fa91819.js","177","static/chunks/app/layout-7f5ac2ccdb15d80e.js"],""]
-9:I[8534,["839","static/chunks/839-69c2111cfab13ba3.js","264","static/chunks/264-252ca7916fa91819.js","177","static/chunks/app/layout-7f5ac2ccdb15d80e.js"],"Providers"]
-a:I[6934,["839","static/chunks/839-69c2111cfab13ba3.js","264","static/chunks/264-252ca7916fa91819.js","177","static/chunks/app/layout-7f5ac2ccdb15d80e.js"],"default"]
-b:I[5244,[],""]
-c:I[3866,[],""]
-e:I[6213,[],"OutletBoundary"]
-10:I[6213,[],"MetadataBoundary"]
-12:I[6213,[],"ViewportBoundary"]
-14:I[4835,[],""]
-1:HL["/_next/static/media/045832894acda0e9-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-2:HL["/_next/static/media/120a5a1920781bd0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-3:HL["/_next/static/media/6ebb97b5c9fa4e03-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-4:HL["/_next/static/media/c714540e49ad5111-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-5:HL["/_next/static/media/da897b99eb1fe4a1-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-6:HL["/_next/static/css/b05f4fc671799f14.css","style"]
-0:{"P":null,"b":"LZ0wiYybNOrIVu9BEgzgL","p":"","c":["","page","1"],"i":false,"f":[[["",{"children":["page",{"children":[["page","1","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$7","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/b05f4fc671799f14.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L8",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L8",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_363063","children":["$","$L9",null,{"children":[["$","$La",null,{}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$Lb",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lc",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$7","c",{"children":[null,["$","$Lb",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lc",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]]}],{"children":[["page","1","d"],["$","$7","c",{"children":[null,["$","$Lb",null,{"parallelRouterKey":"children","segmentPath":["children","page","children","$0:f:0:1:2:children:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lc",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]]}],{"children":["__PAGE__",["$","$7","c",{"children":["$Ld",null,["$","$Le",null,{"children":"$Lf"}]]}],{},null]},null]},null]},null],["$","$7","h",{"children":[null,["$","$7","e6O9CREcnPcisXM36uuke",{"children":[["$","$L10",null,{"children":"$L11"}],["$","$L12",null,{"children":"$L13"}],["$","meta",null,{"name":"next-size-adjust"}]]}]]}]]],"m":"$undefined","G":["$14","$undefined"],"s":false,"S":true}
-15:I[8882,["839","static/chunks/839-69c2111cfab13ba3.js","264","static/chunks/264-252ca7916fa91819.js","848","static/chunks/app/page/%5Bpage%5D/page-6d9893d73947e310.js"],"default"]
-20:I[4839,["839","static/chunks/839-69c2111cfab13ba3.js","264","static/chunks/264-252ca7916fa91819.js","848","static/chunks/app/page/%5Bpage%5D/page-6d9893d73947e310.js"],""]
-16:T6a2,
+1:"$Sreact.fragment"
+2:I[3704,["173","static/chunks/173-de83b62c918b3961.js","565","static/chunks/565-6e90e1eae56db7ec.js","177","static/chunks/app/layout-60ab078bc3e5f529.js"],""]
+3:I[8534,["173","static/chunks/173-de83b62c918b3961.js","565","static/chunks/565-6e90e1eae56db7ec.js","177","static/chunks/app/layout-60ab078bc3e5f529.js"],"Providers"]
+4:I[6934,["173","static/chunks/173-de83b62c918b3961.js","565","static/chunks/565-6e90e1eae56db7ec.js","177","static/chunks/app/layout-60ab078bc3e5f529.js"],"default"]
+5:I[5244,[],""]
+6:I[3866,[],""]
+8:I[6213,[],"OutletBoundary"]
+a:I[6213,[],"MetadataBoundary"]
+c:I[6213,[],"ViewportBoundary"]
+e:I[4835,[],""]
+:HL["/_next/static/media/47cbc4e2adbc5db9-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/e539936c7dc6b882.css","style"]
+:HL["/_next/static/css/991c46f1624c4720.css","style"]
+0:{"P":null,"b":"F1vFg3Jc2JDXSNXOTjicz","p":"","c":["","page","1"],"i":false,"f":[[["",{"children":["page",{"children":[["page","1","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/991c46f1624c4720.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","$L4",null,{}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L5",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","1","d"],["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","segmentPath":["children","page","children","$0:f:0:1:2:children:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L7",null,["$","$L8",null,{"children":"$L9"}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","p494KYS_nkB1cb4fEKdwY",{"children":[["$","$La",null,{"children":"$Lb"}],["$","$Lc",null,{"children":"$Ld"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]]}],false]],"m":"$undefined","G":["$e","$undefined"],"s":false,"S":true}
+f:I[4340,["173","static/chunks/173-de83b62c918b3961.js","565","static/chunks/565-6e90e1eae56db7ec.js","848","static/chunks/app/page/%5Bpage%5D/page-e40c84daa7dc90d7.js"],"default"]
+1a:I[8173,["173","static/chunks/173-de83b62c918b3961.js","565","static/chunks/565-6e90e1eae56db7ec.js","848","static/chunks/app/page/%5Bpage%5D/page-e40c84daa7dc90d7.js"],""]
+10:T6a2,
 웹 페이지가 현재 사용자에게 보이는지 아닌지를 확인하는 방법이 있다.
 
 `document.visibilityState`를 사용하면 페이지가 현재 사용자에게 보이는지 아닌지를 확인할 수 있다.
@@ -66,7 +63,7 @@ export default useVisibilityChange;
 ```
 
 웹 페이지 이탈을 감지할 수 있고, 모바일 웹뷰에서 앱의 백그라운드 상태나 전환을 감지할 수 있다.
-17:Taca,
+11:Taca,
 사내 프로젝트를 진행하면서 IOS 웹뷰에서 안전 영역을 설정하는 방법에 대해 알게되었다.
 
 아이폰 X 부터는 디스플레이에 노치 디자인이 적용되고, 하단에는 물리 버튼이 사라지고 제스처로 대체되었다.
@@ -163,7 +160,7 @@ export default function RootLayout({
 ```
 
 위와 같이 overflow 만 hidden 처리하여 해결하였다.
-18:T1359,
+12:T1359,
 monorepo를 사용해 패키지들을 분리하는 과정에서 이슈를 확인했다.
 
 번들링 하지않고, 패키지들을 `index.ts`에서 직접 내보내 사용했을 때, 사용하지 않는 코드들도 함께 포함되는 문제가 있었다.
@@ -326,7 +323,7 @@ utils에서 내보내는 함수 중 프로젝트별로 사용하는곳과 사용
 
 rollup 설정에 대해서 아직 완벽하게 이해하지는 못했으며, 내가 의도한대로 작동하는지도 조금 확신이 들지 않지만 이번 기회에 조금 더 깊게 공부해보고 계속해서 확인해보며 수정해나가야겠다.
 개인적으로는 최적화해 나가는 과정이 매우 재밌었던 작업이었다!
-19:Ta2c,
+13:Ta2c,
 최근 rollup으로 패키지를 만드는 과정에서 cjs와 esm에 대해 알게되었다.
 
 ### Module
@@ -401,7 +398,7 @@ console.log(lib.name) // lib
 - [kakao blog](https://tech.kakao.com/2023/10/19/commonjs-esm-migration/)
 - [CJS](https://nodejs.org/api/modules.html)
 - [ESM](https://nodejs.org/api/esm.html)
-1a:T1101,
+14:T1101,
 자바스크립트에서 원시타입(primitive data type)은 변경 불가능한(immutable)한 값이다.
 
 - Boolean
@@ -546,7 +543,7 @@ const [state, setState] = useState({
 ```
 
 이처럼 리액트로 개발을 할 때 불변성을 유지함으로써 안정성을 유지하고 성능을 향상시킬 수 있다.
-1b:Tcc7,
+15:Tcc7,
 로컬 개발환경에서 API 요청시 CORS 에러로 API 사용이 어려울 수 있습니다.
 
 이 글은 Vite로 구성된 로컬 개발환경에서 CORS 문제를 해결하는 방식을 작성합니다.
@@ -645,7 +642,7 @@ export default ({ mode }) => {
 2. 프록시는 `changeOption` 에 의하여 HTTP 요청 헤더의 Host 값을 `https://example.com` 으로 변경
 3. 프록시는 최종적으로 이 요청을 `https://example.com` 라는 URL로 `target` 서버에 전달
 
-1c:T12dc,
+16:T12dc,
 ## 바벨이란?
 바벨은 자바스크립트 컴파일러이다.
 사실 자세히 보면 컴파일러보다는 트랜스파일러에 가깝다.
@@ -829,7 +826,7 @@ module.exports = {
 js 확장자로 끝나는 모든 파일에 babel-loader를 적용한다.
 또 node_modules 디렉토리는 제외한다.
 
-1d:T2f94,
+17:T2f94,
 ## 웹팩(기본)배경
 - 웹팩은 모던 javascript 어플리케이션을 위한 정적 모듈 번들러이다. 번들러는 웹팩 이외에도 다양한게 있는데 (rollup , esbuild , vite , parcel 등) 웹팩이 가장 오래되었기도하고 많이 사용하고 있기 때문에 이번 기회에 배워보기로 했다.
 
@@ -1262,7 +1259,7 @@ module.exports = {
 하지만 기본적인 웹팩으로 설정되어있고, 직접 커스텀하려면 eject를 해야한다.
 
 이번 기회에 웹팩의 원리와 기본적인 사용방법을 알아보았다.
-1e:Te9a,
+18:Te9a,
 ### React Native geolocation
 
 사이드 프로젝트에 위치정보를 받아와야 하는 기능이 필요해 지오로케이션을 받아 오도록 했다.
@@ -1389,7 +1386,7 @@ const MyApp = () => {
 다음 포스팅에서는 받아온 위치정보를 webview로 넘겨주는 방법에 대해 알아보자!
 
 
-1f:T9c4,
+19:T9c4,
 ### 딥링크
 - 딥링크는 모바일에서 특정 페이지에 도달 할 수 있는 링크를 의미한다.
 - 웹이나 sns등 링크를 클릭했을때 해당 어플리케이션 앱으로 바로 이동하는데, 이런 방식을 모바일 딥링크라 하고 특정한 앱 스크린으로 이동하는 것
@@ -1487,7 +1484,7 @@ useEffect(() => {
   return () => Linking.removeAllListeners('url');
 }, [])
 ```
-d:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L15",null,{"posts":{"posts":[{"content":"$16","data":{"title":"document.visibilityState","date":"$D2024-12-06T00:00:00.000Z","description":"document.visibilityState를 이용한 페이지의 상태를 확인하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"visibilityState"},{"content":"$17","data":{"title":"IOS 웹뷰에서 safe area 설정하기","date":"$D2024-07-02T00:00:00.000Z","description":"IOS 웹뷰에서 safe area 를 설정하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"webview-safe-area"},{"content":"$18","data":{"title":"rollup으로 번들링하는 과정","date":"$D2024-03-09T00:00:00.000Z","description":"처음 rollup으로 번들링하는 과정에서 겪은 문제들과 해결방법","category":"javaScript","titleImage":"/assets/postIcon/rollup-logo.svg"},"slug":"rollup"},{"content":"$19","data":{"title":"cjs와 esm","date":"$D2024-03-07T00:00:00.000Z","description":"rollup으로 번들링하는 과정에서 알게된 cjs와 esm의 차이점에 대해","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"module-system"},{"content":"$1a","data":{"title":"리액트에서 불변성을 지키는 이유","date":"$D2024-02-25T00:00:00.000Z","description":"리액트에서 불변성을 지키는 이유","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"react-immutable"},{"content":"$1b","data":{"title":"Vite proxy 설정","date":"$D2024-01-18T00:00:00.000Z","description":"Vite 로컬환경에서 CORS 문제 해결하기","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"vite-proxy"},{"content":"$1c","data":{"title":"바벨 사용해보기","date":"$D2023-12-01T00:00:00.000Z","description":"바벨 기본 동작과 사용방법","category":"javaScript","titleImage":"/assets/postIcon/babel-icon.svg"},"slug":"babel"},{"content":"$1d","data":{"title":"웹팩 기본 사용법 (1)","date":"$D2023-11-30T00:00:00.000Z","description":"처음 접해보는 웹팩의 원리와 기본 사용 방법","category":"javaScript","titleImage":"/assets/postIcon/webpack-icon.svg"},"slug":"webpack-1"},{"content":"$1e","data":{"title":"React Native geolocation","date":"$D2023-10-25T00:00:00.000Z","description":"React Native 위치정보 받아오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"rn-geolocation"},{"content":"$1f","data":{"title":"React Native Deep Linking","date":"$D2023-10-17T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"rn-deep-link"}],"total":40},"page":"1","category":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L20",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (37)"}]}],["$","li","study",{"children":["$","$L20",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$L20",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}]
-13:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-11:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Been blog - 1"}],["$","meta","2",{"name":"description","content":"Been dev-note"}],["$","meta","3",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","4",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","meta","5",{"property":"og:title","content":"Been blog - 1"}],["$","meta","6",{"property":"og:description","content":"Been dev-note - 1"}],["$","meta","7",{"property":"og:url","content":"https://wonbeenna.github.io/page/1"}],["$","meta","8",{"property":"og:site_name","content":"Been blog"}],["$","meta","9",{"property":"og:locale","content":"ko_KR"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 1"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 1"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","24",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}]]
-f:null
+7:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$Lf",null,{"isPagination":true,"posts":{"posts":[{"content":"$10","data":{"title":"document.visibilityState","date":"$D2024-12-06T00:00:00.000Z","description":"document.visibilityState를 이용한 페이지의 상태를 확인하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"visibilityState"},{"content":"$11","data":{"title":"IOS 웹뷰에서 safe area 설정하기","date":"$D2024-07-02T00:00:00.000Z","description":"IOS 웹뷰에서 safe area 를 설정하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"webview-safe-area"},{"content":"$12","data":{"title":"rollup으로 번들링하는 과정","date":"$D2024-03-09T00:00:00.000Z","description":"처음 rollup으로 번들링하는 과정에서 겪은 문제들과 해결방법","category":"javaScript","titleImage":"/assets/postIcon/rollup-logo.svg"},"slug":"rollup"},{"content":"$13","data":{"title":"cjs와 esm","date":"$D2024-03-07T00:00:00.000Z","description":"rollup으로 번들링하는 과정에서 알게된 cjs와 esm의 차이점에 대해","category":"javaScript","titleImage":"/assets/postIcon/javascript.png"},"slug":"module-system"},{"content":"$14","data":{"title":"리액트에서 불변성을 지키는 이유","date":"$D2024-02-25T00:00:00.000Z","description":"리액트에서 불변성을 지키는 이유","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"react-immutable"},{"content":"$15","data":{"title":"Vite proxy 설정","date":"$D2024-01-18T00:00:00.000Z","description":"Vite 로컬환경에서 CORS 문제 해결하기","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"vite-proxy"},{"content":"$16","data":{"title":"바벨 사용해보기","date":"$D2023-12-01T00:00:00.000Z","description":"바벨 기본 동작과 사용방법","category":"javaScript","titleImage":"/assets/postIcon/babel-icon.svg"},"slug":"babel"},{"content":"$17","data":{"title":"웹팩 기본 사용법 (1)","date":"$D2023-11-30T00:00:00.000Z","description":"처음 접해보는 웹팩의 원리와 기본 사용 방법","category":"javaScript","titleImage":"/assets/postIcon/webpack-icon.svg"},"slug":"webpack-1"},{"content":"$18","data":{"title":"React Native geolocation","date":"$D2023-10-25T00:00:00.000Z","description":"React Native 위치정보 받아오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"rn-geolocation"},{"content":"$19","data":{"title":"React Native Deep Linking","date":"$D2023-10-17T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.png"},"slug":"rn-deep-link"}],"total":40},"page":"1"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L1a",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (37)"}]}],["$","li","study",{"children":["$","$L1a",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}],["$","li","til",{"children":["$","$L1a",null,{"className":"text-gray700","href":"/blog/til","children":"til (1)"}]}]]]}]]}]
+d:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Been blog - 1"}],["$","meta","2",{"name":"description","content":"Been dev-note"}],["$","meta","3",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","4",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","meta","5",{"property":"og:title","content":"Been blog - 1"}],["$","meta","6",{"property":"og:description","content":"Been dev-note - 1"}],["$","meta","7",{"property":"og:url","content":"https://wonbeenna.github.io/page/1"}],["$","meta","8",{"property":"og:site_name","content":"Been blog"}],["$","meta","9",{"property":"og:locale","content":"ko_KR"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 1"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 1"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","24",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}]]
+9:null
