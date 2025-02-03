@@ -31,7 +31,8 @@ export const getAllPost = (
     .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
   if (search) {
-    posts = posts.filter((post) => post.data.title.includes(search));
+    const searchReg = new RegExp(search, 'i');
+    posts = posts.filter((post) => searchReg.test(post.data.title));
     total = posts.length;
   }
 
