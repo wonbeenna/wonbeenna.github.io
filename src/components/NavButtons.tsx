@@ -1,13 +1,19 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 
-const ThemeButton = () => {
+const NavButtons = () => {
   const { systemTheme, theme, setTheme } = useTheme();
-  const currentTheme = theme === 'system' ? systemTheme : theme;
+  const [currentTheme, setCurrentTheme] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    const currentTheme = theme === 'system' ? systemTheme : theme;
+
+    setCurrentTheme(currentTheme);
+  }, [theme]);
 
   return (
     <div className="flex items-center gap-[12px]">
@@ -16,6 +22,7 @@ const ThemeButton = () => {
           src={currentTheme === 'dark' ? `/assets/icons/search-light.svg` : `/assets/icons/search.svg`}
           width={22}
           height={22}
+          priority
           alt="search"
         />
       </Link>
@@ -24,6 +31,7 @@ const ThemeButton = () => {
           src={currentTheme === 'dark' ? `/assets/icons/github-light.svg` : `/assets/icons/github.svg`}
           width={22}
           height={22}
+          priority
           alt="github"
         />
       </Link>
@@ -32,6 +40,7 @@ const ThemeButton = () => {
           src={currentTheme === 'dark' ? `/assets/icons/mail-light.svg` : `/assets/icons/mail.svg`}
           width={26}
           height={26}
+          priority
           alt="email"
         />
       </Link>
@@ -40,6 +49,7 @@ const ThemeButton = () => {
           src={currentTheme === 'dark' ? `/assets/icons/sun.svg` : `/assets/icons/moon.svg`}
           width={22}
           height={22}
+          priority
           alt="theme"
         />
       </button>
@@ -47,4 +57,4 @@ const ThemeButton = () => {
   );
 };
 
-export default ThemeButton;
+export default NavButtons;

@@ -6,7 +6,14 @@ const Nav = () => {
   return (
     <div className="flex items-center gap-[20px]">
       <Link href="/">
-        <Image src={`/assets/icons/been-logo.svg`} width={60} height={56} alt="logo" />
+        <Image
+          className="h-[56px] w-[60px]"
+          src={`/assets/icons/been-logo.svg`}
+          width={60}
+          height={56}
+          priority
+          alt="logo"
+        />
       </Link>
       <div className="flex items-center gap-[20px]">
         <Link href="/about">About</Link>
