@@ -1,4 +1,4 @@
-import { defaultOpenGraph } from '@/utils/metadata';
+import { defaultMetadata, defaultOpenGraph } from '@/utils/metadata';
 import { getAllPost } from '@/utils/getPost';
 import PostListContainer from '@/components/PostListContainer';
 
@@ -6,7 +6,12 @@ export const generateMetadata = async ({ params }: { params: Promise<{ page: str
   const { page } = await params;
 
   return {
+    ...defaultMetadata,
     title: `Been blog - ${page}`,
+    description: `Been dev-note - ${page}`,
+    alternates: {
+      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/page/${page}`
+    },
     openGraph: {
       ...defaultOpenGraph,
       title: `Been blog - ${page}`,

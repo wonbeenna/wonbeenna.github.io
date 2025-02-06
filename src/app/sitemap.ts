@@ -1,12 +1,14 @@
 import { getAllPost } from '@/utils/getPost';
 import { MetadataRoute } from 'next';
+import { getCategories } from '@/utils/getCategories';
 
 export const dynamic = 'force-static';
 
 const defaultUrl = process.env.NEXT_PUBLIC_BASE_URL;
-const pageRoutes = [`${defaultUrl}`, `${defaultUrl}/blog`, `${defaultUrl}/about`];
+const pageRoutes = [`${defaultUrl}`, `${defaultUrl}/about`];
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const categories = getCategories();
   const posts = getAllPost({
     page: '1',
     limit: '-1'
@@ -16,7 +18,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return {
       url: route,
       lastModified: new Date().toISOString(),
-      changeFrequency: 'weekly',
+      changeFrequency: 'daily',
+      priority: 1
+    };
+  });
+
+  const postCategoryRoutes: MetadataRoute.Sitemap = categories.map((category) => {
+    return {
+      url: `${defaultUrl}/blog/${category.title}`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'daily',
       priority: 1
     };
   });
@@ -26,9 +37,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${defaultUrl}/blog/${post.data.category}/${post.slug}`,
       lastModified: new Date(post.data.date).toISOString(),
       changeFrequency: 'weekly',
-      priority: 1
+      priority: 0.8
     };
   });
 
-  return [...defaultRoutes, ...postRoutes];
+  return [...defaultRoutes, ...postCategoryRoutes, ...postRoutes];
 }

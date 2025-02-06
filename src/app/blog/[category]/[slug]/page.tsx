@@ -3,6 +3,7 @@ import Contents from '@/components/Contents';
 import PostCardHeader from '@/components/PostCardHeader';
 import ContentsPage from '@/components/ContentsPage';
 import Comment from '@/components/Comment';
+import { defaultMetadata } from '@/utils/metadata';
 
 export const dynamic = 'force-static';
 
@@ -11,8 +12,12 @@ export const generateMetadata = async ({ params }: { params: Promise<{ slug: str
   const data = await getPost(slug);
 
   return {
+    ...defaultMetadata,
     title: `Been blog - ${data.data.title}`,
     description: data.data.description,
+    alternates: {
+      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/blog/${category}/${slug}`
+    },
     openGraph: {
       title: `Been blog - ${data.data.title}`,
       description: data.data.description,

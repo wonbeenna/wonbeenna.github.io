@@ -1,12 +1,17 @@
 import PostListContainer from '@/components/PostListContainer';
 import { getCategories } from '@/utils/getCategories';
-import { defaultOpenGraph } from '@/utils/metadata';
+import { defaultMetadata, defaultOpenGraph } from '@/utils/metadata';
 
 export const generateMetadata = async ({ params }: { params: Promise<{ category: string }> }) => {
   const { category } = await params;
 
   return {
+    ...defaultMetadata,
     title: `Been blog - ${category}`,
+    description: `Been dev-note - ${category}`,
+    alternates: {
+      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/blog/${category}`
+    },
     openGraph: {
       ...defaultOpenGraph,
       title: `Been blog - ${category}`,
