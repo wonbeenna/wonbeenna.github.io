@@ -1,21 +1,180 @@
 1:"$Sreact.fragment"
-2:I[3704,["173","static/chunks/173-54dedaeca13df317.js","565","static/chunks/565-296786f7e0246c7b.js","177","static/chunks/app/layout-373db84bd3bc4d59.js"],""]
-3:I[8534,["173","static/chunks/173-54dedaeca13df317.js","565","static/chunks/565-296786f7e0246c7b.js","177","static/chunks/app/layout-373db84bd3bc4d59.js"],"Providers"]
-4:I[8173,["173","static/chunks/173-54dedaeca13df317.js","565","static/chunks/565-296786f7e0246c7b.js","848","static/chunks/app/page/%5Bpage%5D/page-31063f203192b216.js"],""]
-5:I[7970,["173","static/chunks/173-54dedaeca13df317.js","565","static/chunks/565-296786f7e0246c7b.js","177","static/chunks/app/layout-373db84bd3bc4d59.js"],"Image"]
-6:I[4337,["173","static/chunks/173-54dedaeca13df317.js","565","static/chunks/565-296786f7e0246c7b.js","177","static/chunks/app/layout-373db84bd3bc4d59.js"],"default"]
-7:I[5244,[],""]
-8:I[3866,[],""]
-a:I[6213,[],"OutletBoundary"]
-c:I[6213,[],"MetadataBoundary"]
-e:I[6213,[],"ViewportBoundary"]
-10:I[4835,[],""]
+2:I[9243,["874","static/chunks/874-e19ba39e696c2f56.js","766","static/chunks/766-1b379246b68420ec.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],""]
+3:I[881,["874","static/chunks/874-e19ba39e696c2f56.js","766","static/chunks/766-1b379246b68420ec.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],"Providers"]
+4:I[6874,["874","static/chunks/874-e19ba39e696c2f56.js","766","static/chunks/766-1b379246b68420ec.js","848","static/chunks/app/page/%5Bpage%5D/page-728e09c32f66e03f.js"],""]
+5:I[3063,["874","static/chunks/874-e19ba39e696c2f56.js","766","static/chunks/766-1b379246b68420ec.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],"Image"]
+6:I[1186,["874","static/chunks/874-e19ba39e696c2f56.js","766","static/chunks/766-1b379246b68420ec.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],"default"]
+7:I[7555,[],""]
+8:I[1295,[],""]
+a:I[9665,[],"OutletBoundary"]
+d:I[9665,[],"ViewportBoundary"]
+f:I[9665,[],"MetadataBoundary"]
+11:I[6614,[],""]
 :HL["/_next/static/media/47cbc4e2adbc5db9-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/css/e539936c7dc6b882.css","style"]
-:HL["/_next/static/css/c0bb506ce114ae44.css","style"]
-0:{"P":null,"b":"GrltnY0LeRNMg9C2Ixr0_","p":"","c":["","page","1"],"i":false,"f":[[["",{"children":["page",{"children":[["page","1","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/c0bb506ce114ae44.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","1","d"],["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","page","children","$0:f:0:1:2:children:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",null,["$","$La",null,{"children":"$Lb"}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","v-5VMa7pqVG9VbW01wTAe",{"children":[["$","$Lc",null,{"children":"$Ld"}],["$","$Le",null,{"children":"$Lf"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]]}],false]],"m":"$undefined","G":["$10","$undefined"],"s":false,"S":true}
-11:I[4340,["173","static/chunks/173-54dedaeca13df317.js","565","static/chunks/565-296786f7e0246c7b.js","848","static/chunks/app/page/%5Bpage%5D/page-31063f203192b216.js"],"default"]
-12:T3de5,
+:HL["/_next/static/css/76a9eda9b9d58271.css","style"]
+0:{"P":null,"b":"Dzi2CkmyJVq1ENTRmDPpL","p":"","c":["","page","1"],"i":false,"f":[[["",{"children":["page",{"children":[["page","1","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/76a9eda9b9d58271.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","1","d"],["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9","$undefined",null,["$","$La",null,{"children":["$Lb","$Lc",null]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","F8ezGg4onkWr2Ssy-w-jW",{"children":[["$","$Ld",null,{"children":"$Le"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],["$","$Lf",null,{"children":"$L10"}]]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
+12:I[1114,["874","static/chunks/874-e19ba39e696c2f56.js","766","static/chunks/766-1b379246b68420ec.js","848","static/chunks/app/page/%5Bpage%5D/page-728e09c32f66e03f.js"],"default"]
+13:T1494,
+### React Parallel Routes와 View Transitions API
+
+웹뷰 개발시 AOS에서 뒤로가기 버튼을 누르면 모달이 닫히지 않고, 앱이 종료되거나 웹뷰가 닫히는 이슈가 생길 수 있다.
+보통 모달을 만들 때 열고 닫히는 상태 기반으로 모달을 만든다. 이런 경우 애니메이션 처리나 URL 동기화, 뒤로가기 동작을 처리하기가 불편할 수 있다.
+
+이러한 단점을 해결하기위해 `react-router-dom`으로 병렬 라우팅을 구현할 수 있다.
+이 글에서는 `react-router-dom`을 사용하여 병렬 라우팅을 구현하는 방법과 `View Transitions API`를 활용하여 모달 애니메이션을 처리하는 방법에 대해 작성하고자 한다.
+
+Nextjs 에서는 appRouter에서는 기본적으로 병렬 라우팅을 지원한다.
+
+```
+app/
+├── layout.tsx
+├── page.tsx              # 홈
+├── inbox/
+│   ├── page.tsx          # 리스트
+│   ├── @modal/           # 병렬 슬롯
+│   │   ├── default.tsx   # 모달 없는 기본 화면
+│   │   └── [id]/page.tsx # 특정 모달 열릴 때
+```
+
+```typescript jsx
+export default function InboxLayout({
+  children,
+  modal,
+}: {
+  children: React.ReactNode;
+  modal: React.ReactNode;
+}) {
+  return (
+    <div>
+      {children}
+      {modal}
+    </div>
+  );
+}
+```
+대충 이런식으로 구현이 가능하다. 그럼 React에서는 어떻게 구현할 수 있을까?
+
+먼저 간단하게 라우팅을 구성해보자
+
+```typescript jsx
+// App.tsx
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import ListPage from "./routes/ListPage.tsx";
+import DetailModal from "./components/DetailModal.tsx";
+
+const router = createBrowserRouter([
+    {
+        path: '/list',
+        element: <ListPage />,
+        children: [
+            {
+                path: ':id',
+                element: <DetailModal />,
+            },
+        ],
+    },
+]);
+
+function App() {
+    return <RouterProvider router={router} />;
+}
+
+
+export default App
+```
+/list/1 로 접근했을 때, createPortal로 구성한 모달이 열리게하고, 뒤로가기 버튼을 누르면 모달이 닫히게 구현할 수 있다.
+
+```typescript jsx
+// ListPage.tsx
+import {Outlet} from 'react-router-dom';
+import useViewTransitionNavigate from "../hooks/useViewTransitionnavigate.ts";
+
+export default function ListPage() {
+    const navigate = useViewTransitionNavigate();
+
+    return (
+        <div>
+            <h2>리스트 페이지</h2>
+            <ul>
+                {[1, 2, 3].map(id => (
+                    <li key={id}>
+                        <button onClick={() => navigate(`/list/${id}`)}>Item {id} 보기</button>
+                    </li>
+                ))}
+            </ul>
+
+            <Outlet />
+        </div>
+    );
+}
+```
+
+ListPage에서는 Outlet을 사용하여 병렬 라우팅을 구현했다.
+여기서 Outlet은 중첩 라우트를 렌더링하는 컴포넌트인데, 자식 컴포넌트를 렌더링하는 위치를 나타낼 수 있다.
+`<Outlet />`을 사용하여 ListPage의 자식인 모달을 렌더링할 수 있다.
+
+```typescript jsx
+    children: [
+        {
+            path: ':id',
+            element: <DetailModal />,
+        },
+    ]
+````
+
+```typescript jsx
+// DetailModal.tsx
+import {useParams} from 'react-router-dom';
+import Modal from './Modal';
+import useViewTransitionNavigate from "../hooks/useViewTransitionnavigate.ts";
+
+export default function DetailModal() {
+    const { id } = useParams();
+    const navigate = useViewTransitionNavigate();
+
+    return (
+        <Modal onClose={() => navigate('/list')}>
+            <h3>Item {id} 상세</h3>
+            <p>이건 모달입니다</p>
+        </Modal>
+    );
+}
+```
+
+```typescript jsx
+// useViewTransitionNavigate.tsx
+import {useNavigate} from 'react-router-dom';
+
+export default function useViewTransitionNavigate() {
+    const navigate = useNavigate();
+
+    return (to: string | number) => {
+        if (typeof to === 'number') {
+            return navigate(to);
+        }
+
+        if ('startViewTransition' in document) {
+            (document).startViewTransition(() => navigate(to));
+        } else {
+            navigate(to);
+        }
+    };
+}
+```
+
+간단한 hook을 만들어서 `startViewTransition`이 지원되는 경우에만 애니메이션을 적용하도록 했다.
+View Transitions API는 DOM 변경을 애니메이션으로 처리할 수 있는 API로, 브라우저에서 지원하는 경우에만 사용할 수 있다.
+대부분 크롬계열의 브라우저만 지원하고, 아직 지원하지 않는 브라우저가 많아서 모바일 환경의 웹뷰에서는 사용하기 힘들것 같다.
+
+View Transitions API 대해서는 다음에 작성하는걸로하고,, 위처럼 구현해서 모달을 띄우면 URL이 /list/1로 변경되고, /list 페이지에서 모달이 열리게 된다.
+
+<img src="/assets/blog/javaScript/parallel-routes.gif" width={300} height={300} alt="post image"/>
+
+이런 식으로 모달을 구현하면 좀 더 앱스러운 UX를 제공할 수 있다.
+뒤로가기시에도 모달이 닫히고, URL도 변경되기 때문에 사용자가 뒤로가기 버튼을 눌렀을 때 모달이 닫히는 동작을 자연스럽게 처리할 수 있다.
+
+14:T3de5,
 ### 들어가며
 단순한 스터디에서 시작했지만, 예비창업패키지에도 선정되며 아주 작은 스타트업처럼 운영하게 된 스터디를 회고하며 느낀 점과 배운 점을 정리해보려 한다.
 
@@ -383,7 +542,7 @@ lighthouse 점수를 최대한 높이기 위해 노력했고, 실제로도 검�
 25년도 지원사업은 아쉽게도 떨어졌다. 낮은 진입장벽, 데이터 수집 한계, 구조가 비슷한 플랫폼에 손익분기 달성 실패, 낮은 재방문 주기 등이 이유였다.
 
 현재 내부에서는 다양한 의견들이 오가고있다. 아무래도 프로젝트를 유지하는데는 비용적인 문제가 가장 크기때문에, 수익모델 개선, 다른 신사업 아이템들을 고민하고 있다.
-13:T1750,
+15:T1750,
 ### 딥링크
 - 웹링크 URL이 사용자를 특정 웹사이트로 이동시키는 것처럼, 딥링크는 사용자를 특정 앱이나 앱의 원하는 화면으로 이동하도록 유도하는 링크이다.
 
@@ -584,7 +743,7 @@ export const linkingConfig: LinkingOptions<NavigationProps> = {
 - 앱이 처음 실행될 때 : `getInitialURL`을 이용해 딥링크 처리
 - 앱이 백그라운드 -> 포그라운드 전환될 때 : `subscribe`에 `Appstate`를 이용해 딥링크 처리
 - 앱이 실행중일 때 : `subscribe`에 `Linking`을 이용해 딥링크 처리
-14:T6a2,
+16:T6a2,
 웹 페이지가 현재 사용자에게 보이는지 아닌지를 확인하는 방법이 있다.
 
 `document.visibilityState`를 사용하면 페이지가 현재 사용자에게 보이는지 아닌지를 확인할 수 있다.
@@ -633,7 +792,7 @@ export default useVisibilityChange;
 ```
 
 웹 페이지 이탈을 감지할 수 있고, 모바일 웹뷰에서 앱의 백그라운드 상태나 전환을 감지할 수 있다.
-15:Taca,
+17:Taca,
 사내 프로젝트를 진행하면서 IOS 웹뷰에서 안전 영역을 설정하는 방법에 대해 알게되었다.
 
 아이폰 X 부터는 디스플레이에 노치 디자인이 적용되고, 하단에는 물리 버튼이 사라지고 제스처로 대체되었다.
@@ -730,7 +889,7 @@ export default function RootLayout({
 ```
 
 위와 같이 overflow 만 hidden 처리하여 해결하였다.
-16:T1359,
+18:T1359,
 monorepo를 사용해 패키지들을 분리하는 과정에서 이슈를 확인했다.
 
 번들링 하지않고, 패키지들을 `index.ts`에서 직접 내보내 사용했을 때, 사용하지 않는 코드들도 함께 포함되는 문제가 있었다.
@@ -893,7 +1052,7 @@ utils에서 내보내는 함수 중 프로젝트별로 사용하는곳과 사용
 
 rollup 설정에 대해서 아직 완벽하게 이해하지는 못했으며, 내가 의도한대로 작동하는지도 조금 확신이 들지 않지만 이번 기회에 조금 더 깊게 공부해보고 계속해서 확인해보며 수정해나가야겠다.
 개인적으로는 최적화해 나가는 과정이 매우 재밌었던 작업이었다!
-17:Ta2c,
+19:Ta2c,
 최근 rollup으로 패키지를 만드는 과정에서 cjs와 esm에 대해 알게되었다.
 
 ### Module
@@ -968,7 +1127,7 @@ console.log(lib.name) // lib
 - [kakao blog](https://tech.kakao.com/2023/10/19/commonjs-esm-migration/)
 - [CJS](https://nodejs.org/api/modules.html)
 - [ESM](https://nodejs.org/api/esm.html)
-18:T1101,
+1a:T1101,
 자바스크립트에서 원시타입(primitive data type)은 변경 불가능한(immutable)한 값이다.
 
 - Boolean
@@ -1113,7 +1272,7 @@ const [state, setState] = useState({
 ```
 
 이처럼 리액트로 개발을 할 때 불변성을 유지함으로써 안정성을 유지하고 성능을 향상시킬 수 있다.
-19:Tcc7,
+1b:Tcc7,
 로컬 개발환경에서 API 요청시 CORS 에러로 API 사용이 어려울 수 있습니다.
 
 이 글은 Vite로 구성된 로컬 개발환경에서 CORS 문제를 해결하는 방식을 작성합니다.
@@ -1212,7 +1371,7 @@ export default ({ mode }) => {
 2. 프록시는 `changeOption` 에 의하여 HTTP 요청 헤더의 Host 값을 `https://example.com` 으로 변경
 3. 프록시는 최종적으로 이 요청을 `https://example.com` 라는 URL로 `target` 서버에 전달
 
-1a:T12dc,
+1c:T12dc,
 ## 바벨이란?
 바벨은 자바스크립트 컴파일러이다.
 사실 자세히 보면 컴파일러보다는 트랜스파일러에 가깝다.
@@ -1396,440 +1555,8 @@ module.exports = {
 js 확장자로 끝나는 모든 파일에 babel-loader를 적용한다.
 또 node_modules 디렉토리는 제외한다.
 
-1b:T2f94,
-## 웹팩(기본)배경
-- 웹팩은 모던 javascript 어플리케이션을 위한 정적 모듈 번들러이다. 번들러는 웹팩 이외에도 다양한게 있는데 (rollup , esbuild , vite , parcel 등) 웹팩이 가장 오래되었기도하고 많이 사용하고 있기 때문에 이번 기회에 배워보기로 했다.
-
-- Javascript에서 문법 수준에서 모듈을 지원하기 시작한것은 ES2015부터 이다. import/export 구문이 없었던 이전 상황에서는 하나의 함수를 만들었을 때 전역 공간에 노출되어 버그나 오류를 발생시킬 수 있었다.
-
-예를들어 아래와 같은 덧셈 함수는
-
-```javascript
-// math.js
-function add(a,b){
-    return a+b;
-}
-```
-
-```javascript
-// app.js
-add(10,20);
-```
-
-모두 하나의 HTML 파일안에서 로딩해야만 실행된다. math.js가 로딩되면 app.js는 add 함수를 찾고 실행시키는데, add 함수가 전역으로 사용되기 때문에 다른 파일에서 같은 이름의 함수를 사용하면 충돌이 발생할 수 있다.
-
----
-
-이런 문제를 예방하기위해 IIFE(즉시실행함수) 방식의 스코프를 사용했다.
-
-```javascript
-var math = math || {}
-
-;(function () {
-  function add(a, b) {
-    return a + b
-  }
-  math.add = add
-})();
-```
-
-함수 스코프를 만들어 외부에서 접근할 수 없도록해 충돌을 막을 수 있었고, 전역에 선언한 math라는 이름만 사용하면 된다.
-
----
-
-자바스크립트 모듈을 구현하는 대표적인 명세는 AMD와 CommonJS가 있다.
-
-- AMD(Asynchronous Module Definition)는 비동기 방식으로 모듈을 로딩한다. 브라우저 환경에서 주로 사용된다.
-- UMD(Universal Module Definition)는 AMD와 CommonJS를 지원하는 모듈을 만들기 위해 사용된다.
-- CommonJS는 export로 모듈을 만들고 require()함수로 import하는 방식이다. 주로 서버 사이드 플랫폼인 Node.js 환경에서 주로 사용된다.
-
-### CommonJS
-```javascript
-//math.js
-export function add(a,b){
-    return a+b;
-}
-```
-
-```javascript
-//app.js
-const math = require('./math.js');
-math.add(10,20);
-```
-
-### ES2015 표준 모듈 시스템
-```javascript
-//math.js
-export function add(a,b){
-    return a+b;
-}
-```
-
-```javascript
-//app.js
-import {add} from './math.js';
-add(10,20);
-```
-`export` 구문으로 모듈을 만들고 `import` 구문으로 가져올 수 있다.
-
-이러한 방식은 모든 브라우저에서 지원하지 않는다. 따라서 웹팩과 같은 모듈 번들러를 사용해야한다.
-
----
-
-## 웹팩사용방법
-웹팩은 여러개의 파일을 하나로 합쳐주는 번들러(bundler)이다. 웹팩을 사용하면 자바스크립트뿐만 아니라 css, html, 이미지 등 모든 파일을 모듈로 관리할 수 있다.
-
-웹팩으로 간단하게 작업을 해보자.
-
-먼저 웹팩과 웹팩 터미널 도구인 cli를 설치한다.
-
-```shell
-npm install -D webpack webpack-cli
-```
-
-root 디렉토리에 `webpack.config.js` 파일을 생성한다.
-
-```javascript
-//webpack.config.js
-const path = require('path');
-
-module.exports = {
-    mode: 'development',
-    entry: './src/index.js',
-    output: {
-        filename: '[name].js',
-        path: path.resolve(__dirname, './dist'),
-    },
-};
-```
-
-- `mode`는 웹팩의 모드를 설정한다. `development`로 설정하면 개발용으로, `production`으로 설정하면 배포용으로 빌드된다.
-- `entry`는 웹팩이 빌드할 파일인 진입점을 지정한다.
-- `output`은 웹팩이 빌드한 결과물을 저장할 경로와 파일명을 지정한다.
-    - [name]은 entry에 지정한 파일명을 그대로 사용한다.
-    - [hash]는 웹팩이 빌드할 때마다 고유한 해시값을 붙여준다.
-
-package.json에 빌드 스크립트를 추가한다.
-
-```json
-//package.json
-{
-    "scripts": {
-        "build": "webpack"
-    }
-}
-```
-
-이제 `npm run build` 명령어를 실행하면 웹팩이 빌드를 시작한다.
-
----
-
-## 웹팩 로더
-웹팩은 자바스크립트 파일 뿐만 아니라 css, html, 이미지 등 모든 파일을 모듈로 관리할 수 있다.
-하지만 웹팩은 자바스크립트 파일만 이해할 수 있기 때문에 css나 html, 이미지 파일을 자바스크립트 파일로 변경해야한다. 이때 사용하는 것이 로더이다.
-
-자주 사용하는 로더
-- css-loader : css 파일을 자바스크립트 파일로 변경한다.
-- style-loader : 자바스크립트로 변경된 스타일을 동적으로 돔에 추가해준다. 주로 css-loader와 함께 사용한다.
-- file-loader : 파일을 모듈로 사용할 수 있게 url 경로를 변경한다.
-- url-loader : 파일을 모듈로 사용할 수 있게 url 경로를 변경하고 파일을 base64로 인코딩한다.
-
-### css-loader
-```shell
-npm install -D css-loader
-```
-
-웹팩은 모두 모듈로 바라보기 때문에 자바스크립트 뿐만 아니라 스타일시트도 import 구문으로 불러올 수 있다.
-
-```javascript
-import './style.css';
-```
-
-```css
-// style.css
-body {
-    background-color: red;
-}
-```
-
-```javascript
-//webpack.config.js
-module.exports = {
-    {...}
-  module: {
-    rules: [
-      {
-        test: /\.css$/, // .css 확장자로 끝나는 모든 파일
-        use: ["css-loader"], // css-loader를 적용한다
-      },
-    ],
-  },
-};
-```
-웹팩은 entry에서 모듈을 검색하다가 css 파일을 찾으면 css-loader를 적용한다.
-
----
-
-### style-loader
-모듈로 변경된 스타일 시트는 돔에 추가되어야 브라우저가 해석한다.
-css-loader는 css 파일을 자바스크립트 파일로 변경할 뿐 돔에 추가하지는 않는다. 따라서 style-loader를 추가해야한다.
-```shell
-npm install -D style-loader
-```
-
-```javascript
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
-      },
-    ],
-  },
-};
-```
-style-loader를 css-loader보다 앞에 적용한다. 로더는 배열로 설정하면 뒤 -> 앞 순서대로 로더가 작동한다.
-
----
-
-### file-loader
-css 뿐만 아니라 소스코드에서 사용하는 모든 파일들을 모듈로 사용할 수 있게 할 수 있다.
-
-```shell
-npm install -D file-loader
-```
-
-```javascript
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.(png|jpe?g|gif)$/i, // i는 대소문자 구분없이, 확장자들
-        loader: "file-loader",
-        options: {
-          publicPath: "./dist/", // prefix를 아웃풋 경로로 지정
-          name: "[name].[ext]?[hash]", // 파일명 형식
-        },
-      },
-    ],
-  },
-};
-```
-옵션으로 경로를 지정할 수 있다. `publicPath`는 파일을 참조하는 경로를 지정한다. `name`은 파일명 형식을 지정한다.
-
----
-
-### url-loader
-파일을 base64로 인코딩하여 문자열 형태로 변환한다. 파일 크기가 작은 파일들은 문자열로 변환하여 파일을 요청하는 횟수를 줄일 수 있다.
-
-```shell
-npm install -D url-loader
-```
-
-```javascript
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.(png|jpe?g|gif)$/i,
-        loader: "url-loader",
-        options: {
-          publicPath: "./dist/",
-          name: "[name].[ext]?[hash]",
-          limit: 5000, // 5kb 미만 파일만 data url로 처리
-        },
-      },
-    ],
-  },
-};
-```
-
----
-
-file-loader와 url-loader는 v5부터 기본적으로 제공하며, `asset`이라는 키워드로 사용할 수 있다.
-
-```javascript
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.(png|jpe?g|gif)$/i,
-        type: "asset/resource", // file-loader
-        generator: {
-          filename: "[name][ext]?[hash]", // [name]은 파일명, [ext]는 확장자
-        },
-      },
-      {
-        test: /\.(png|jpe?g|gif)$/i,
-        type: "asset/inline", // url-loader
-        generator: {
-          filename: "[name][ext]?[hash]",
-        },
-      },
-      {
-        test: /\.(png|jpe?g|gif)$/i,
-        type: "asset", // 기본값은 8kb 미만은 inline, 8kb 이상은 resource
-        generator: {
-          filename: "[name][ext]?[hash]",
-        },
-      },
-    ],
-  },
-};
-```
-
----
-
-## 웹팩 플러그인
-로더는 파일을 해석하고 변환하는 과정에 관여하지만 플러그인은 해당 결과물의 형태를 바꾸는 역할을 한다. 로더는 파일 단위로 처리하는 반면 플러그인은 번들된 결과물을 처리한다.
-번들된 자바스크립트를 난독화 한다거나, 특정 텍스트를 추출할 수 있는 용도로 사용한다.
-
-자주 사용하는 플러그인
-- BannerPlugin : 결과물에 빌드 정보나 버전같은 정보를 추가할 수 있다.
-- DefinePlugin : 환경변수를 설정한다.
-- HtmlWebpackPlugin : HTML 파일을 후처리한다.
-- CleanWebpackPlugin : 이전 빌드 결과물을 제거한다.
-- MiniCssExtractPlugin : CSS 파일을 별도로 추출한다.
-
----
-
-### BannerPlugin
-```javascript
-const webpack = require("webpack");
-
-module.exports = {
-  plugins: [
-    new webpack.BannerPlugin({
-      banner: () => `빌드 날짜: ${new Date().toLocaleString()}`,
-    }),
-  ],
-};
-```
-
----
-
-### DefinePlugin
-개발환경과 운영환경으로 나누어서 작업할 때 환경변수를 설정할 수 있다.
-환경에 의존적인 정보를 소스가 아닌 환경 변수로 관리하면 소스코드를 더욱 안전하고 편리하게 관리할 수 있다.
-
-```javascript
-const webpack = require("webpack");
-
-module.exports = {
-  plugins: [
-    new webpack.DefinePlugin({
-      VERSION: JSON.stringify("v.1.2.3"),
-      PRODUCTION: JSON.stringify(false),
-      MAX_COUNT: JSON.stringify(999),
-      "api.domain": JSON.stringify("http://dev.api.domain.com"),
-    }),
-  ],
-};
-```
-
----
-
-### HtmlWebpackPlugin
-```shell
-npm install -D html-webpack-plugin
-```
-
-```javascript
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-
-module.exports = {
-  entry: 'index.js',
-  output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'index_bundle.js',
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "./src/index.html", // 템플릿 경로를 지정
-      minify:
-        process.env.NODE_ENV === "production"
-          ? {
-              // 빌드 모드가 production일 때만 사용
-              collapseWhitespace: true, // 빈칸 제거
-              removeComments: true, // 주석 제거
-            }
-          : false,
-    }),
-  ],
-};
-```
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>webpack App</title>
-  </head>
-  <body>
-    <script src="index_bundle.js"></script>
-  </body>
-</html>
-```
-script 태그에 번들링된 결과물을 자동으로 추가해준다. 웹팩 엔트리가 여러개일 경우 여러개의 script 태그를 추가해준다.
-
----
-
-### CleanWebpackPlugin
-```shell
-npm install -D clean-webpack-plugin
-```
-
-```javascript
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-
-module.exports = {
-  plugins: [new CleanWebpackPlugin()],
-};
-```
-
----
-
-### MiniCssExtractPlugin
-스타일 시트가 점점 많아짐에 따라 하나의 자바스크립트로 만들면 부담이 될 수 있다.
-번들 결과물에서 스타일시트 코드만 따로 분리하여 별도의 css파일로 만들어주는 플러그인이다.
-
-```shell
-npm install -D mini-css-extract-plugin
-```
-
-```javascript
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
-      },
-    ],
-  },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: "[name].css",
-    }),
-  ],
-};
-```
-
-운영 환경에서는 `MiniCssExtractPlugin.loader`를 사용해 스타일시트를 별도의 파일로 분리한다. 개발 환경에서는 `style-loader`를 사용해 동적으로 돔에 추가한다.
-
----
-
-웹팩의 로더와 플러그인의 원리, 사용방법에 대해서 알아보았다.
-
-우리가 편리하고 쉽게 사용하는 Create-React-App는 웹팩으로 빌드된 결과물을 제공해준다.
-하지만 기본적인 웹팩으로 설정되어있고, 직접 커스텀하려면 eject를 해야한다.
-
-이번 기회에 웹팩의 원리와 기본적인 사용방법을 알아보았다.
-9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L11",null,{"isPagination":true,"posts":{"posts":[{"content":"$12","data":{"title":"2년간 스터디하며 배운것들","date":"$D2025-03-18T00:00:00.000Z","description":"2년간의 스터디를 회고하며 느낀 점과 배운 점","category":"til","titleImage":"/assets/postIcon/til.webp"},"slug":"study-remind"},{"content":"$13","data":{"title":"React Native Deep Linking (2)","date":"$D2025-02-03T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"rn-deep-link-2"},{"content":"$14","data":{"title":"document.visibilityState","date":"$D2024-12-06T00:00:00.000Z","description":"document.visibilityState를 이용한 페이지의 상태를 확인하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"visibilityState"},{"content":"$15","data":{"title":"IOS 웹뷰에서 safe area 설정하기","date":"$D2024-07-02T00:00:00.000Z","description":"IOS 웹뷰에서 safe area 를 설정하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"webview-safe-area"},{"content":"$16","data":{"title":"rollup으로 번들링하는 과정","date":"$D2024-03-09T00:00:00.000Z","description":"처음 rollup으로 번들링하는 과정에서 겪은 문제들과 해결방법","category":"javaScript","titleImage":"/assets/postIcon/rollup-logo.svg"},"slug":"rollup"},{"content":"$17","data":{"title":"cjs와 esm","date":"$D2024-03-07T00:00:00.000Z","description":"rollup으로 번들링하는 과정에서 알게된 cjs와 esm의 차이점에 대해","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"module-system"},{"content":"$18","data":{"title":"리액트에서 불변성을 지키는 이유","date":"$D2024-02-25T00:00:00.000Z","description":"리액트에서 불변성을 지키는 이유","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-immutable"},{"content":"$19","data":{"title":"Vite proxy 설정","date":"$D2024-01-18T00:00:00.000Z","description":"Vite 로컬환경에서 CORS 문제 해결하기","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"vite-proxy"},{"content":"$1a","data":{"title":"바벨 사용해보기","date":"$D2023-12-01T00:00:00.000Z","description":"바벨 기본 동작과 사용방법","category":"javaScript","titleImage":"/assets/postIcon/babel-icon.svg"},"slug":"babel"},{"content":"$1b","data":{"title":"웹팩 기본 사용법 (1)","date":"$D2023-11-30T00:00:00.000Z","description":"처음 접해보는 웹팩의 원리와 기본 사용 방법","category":"javaScript","titleImage":"/assets/postIcon/webpack-icon.svg"},"slug":"webpack-1"}],"total":42},"page":"1"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (38)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}]]]}]]}]
-f:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-d:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Been blog - 1"}],["$","meta","2",{"name":"description","content":"Been dev-note - 1"}],["$","meta","3",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","4",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","link","5",{"rel":"canonical","href":"https://wonbeenna.github.io/page/1"}],["$","meta","6",{"property":"og:title","content":"Been blog - 1"}],["$","meta","7",{"property":"og:description","content":"Been dev-note - 1"}],["$","meta","8",{"property":"og:url","content":"https://wonbeenna.github.io/page/1"}],["$","meta","9",{"property":"og:site_name","content":"Been blog"}],["$","meta","10",{"property":"og:locale","content":"ko_KR"}],["$","meta","11",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","12",{"property":"og:image:width","content":"800"}],["$","meta","13",{"property":"og:image:height","content":"600"}],["$","meta","14",{"property":"og:image:alt","content":"Been blog"}],["$","meta","15",{"property":"og:type","content":"website"}],["$","meta","16",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","17",{"name":"twitter:title","content":"Been blog - 1"}],["$","meta","18",{"name":"twitter:description","content":"Been dev-note - 1"}],["$","meta","19",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","20",{"name":"twitter:image:width","content":"800"}],["$","meta","21",{"name":"twitter:image:height","content":"600"}],["$","meta","22",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","24",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","25",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","26",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}]]
+9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L12",null,{"isPagination":true,"posts":{"posts":[{"content":"$13","data":{"title":"React Parallel Routes","date":"$D2025-04-14T00:00:00.000Z","description":"AOS 웹뷰에서 뒤로가기시 모달을 닫으려면?","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-parallel-routes"},{"content":"$14","data":{"title":"2년간 스터디하며 배운것들","date":"$D2025-03-18T00:00:00.000Z","description":"2년간의 스터디를 회고하며 느낀 점과 배운 점","category":"til","titleImage":"/assets/postIcon/til.webp"},"slug":"study-remind"},{"content":"$15","data":{"title":"React Native Deep Linking (2)","date":"$D2025-02-03T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"rn-deep-link-2"},{"content":"$16","data":{"title":"document.visibilityState","date":"$D2024-12-06T00:00:00.000Z","description":"document.visibilityState를 이용한 페이지의 상태를 확인하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"visibilityState"},{"content":"$17","data":{"title":"IOS 웹뷰에서 safe area 설정하기","date":"$D2024-07-02T00:00:00.000Z","description":"IOS 웹뷰에서 safe area 를 설정하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"webview-safe-area"},{"content":"$18","data":{"title":"rollup으로 번들링하는 과정","date":"$D2024-03-09T00:00:00.000Z","description":"처음 rollup으로 번들링하는 과정에서 겪은 문제들과 해결방법","category":"javaScript","titleImage":"/assets/postIcon/rollup-logo.svg"},"slug":"rollup"},{"content":"$19","data":{"title":"cjs와 esm","date":"$D2024-03-07T00:00:00.000Z","description":"rollup으로 번들링하는 과정에서 알게된 cjs와 esm의 차이점에 대해","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"module-system"},{"content":"$1a","data":{"title":"리액트에서 불변성을 지키는 이유","date":"$D2024-02-25T00:00:00.000Z","description":"리액트에서 불변성을 지키는 이유","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-immutable"},{"content":"$1b","data":{"title":"Vite proxy 설정","date":"$D2024-01-18T00:00:00.000Z","description":"Vite 로컬환경에서 CORS 문제 해결하기","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"vite-proxy"},{"content":"$1c","data":{"title":"바벨 사용해보기","date":"$D2023-12-01T00:00:00.000Z","description":"바벨 기본 동작과 사용방법","category":"javaScript","titleImage":"/assets/postIcon/babel-icon.svg"},"slug":"babel"}],"total":43},"page":"1"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (39)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}]]]}]]}]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 b:null
+c:null
+10:[["$","title","0",{"children":"Been blog - 1"}],["$","meta","1",{"name":"description","content":"Been dev-note - 1"}],["$","meta","2",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","3",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","link","4",{"rel":"canonical","href":"https://wonbeenna.github.io/page/1"}],["$","meta","5",{"property":"og:title","content":"Been blog - 1"}],["$","meta","6",{"property":"og:description","content":"Been dev-note - 1"}],["$","meta","7",{"property":"og:url","content":"https://wonbeenna.github.io/page/1"}],["$","meta","8",{"property":"og:site_name","content":"Been blog"}],["$","meta","9",{"property":"og:locale","content":"ko_KR"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 1"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 1"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","24",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}]]

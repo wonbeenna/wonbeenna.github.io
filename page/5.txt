@@ -1,21 +1,168 @@
 1:"$Sreact.fragment"
-2:I[3704,["173","static/chunks/173-54dedaeca13df317.js","565","static/chunks/565-296786f7e0246c7b.js","177","static/chunks/app/layout-373db84bd3bc4d59.js"],""]
-3:I[8534,["173","static/chunks/173-54dedaeca13df317.js","565","static/chunks/565-296786f7e0246c7b.js","177","static/chunks/app/layout-373db84bd3bc4d59.js"],"Providers"]
-4:I[8173,["173","static/chunks/173-54dedaeca13df317.js","565","static/chunks/565-296786f7e0246c7b.js","848","static/chunks/app/page/%5Bpage%5D/page-31063f203192b216.js"],""]
-5:I[7970,["173","static/chunks/173-54dedaeca13df317.js","565","static/chunks/565-296786f7e0246c7b.js","177","static/chunks/app/layout-373db84bd3bc4d59.js"],"Image"]
-6:I[4337,["173","static/chunks/173-54dedaeca13df317.js","565","static/chunks/565-296786f7e0246c7b.js","177","static/chunks/app/layout-373db84bd3bc4d59.js"],"default"]
-7:I[5244,[],""]
-8:I[3866,[],""]
-a:I[6213,[],"OutletBoundary"]
-c:I[6213,[],"MetadataBoundary"]
-e:I[6213,[],"ViewportBoundary"]
-10:I[4835,[],""]
+2:I[9243,["874","static/chunks/874-e19ba39e696c2f56.js","766","static/chunks/766-1b379246b68420ec.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],""]
+3:I[881,["874","static/chunks/874-e19ba39e696c2f56.js","766","static/chunks/766-1b379246b68420ec.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],"Providers"]
+4:I[6874,["874","static/chunks/874-e19ba39e696c2f56.js","766","static/chunks/766-1b379246b68420ec.js","848","static/chunks/app/page/%5Bpage%5D/page-728e09c32f66e03f.js"],""]
+5:I[3063,["874","static/chunks/874-e19ba39e696c2f56.js","766","static/chunks/766-1b379246b68420ec.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],"Image"]
+6:I[1186,["874","static/chunks/874-e19ba39e696c2f56.js","766","static/chunks/766-1b379246b68420ec.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],"default"]
+7:I[7555,[],""]
+8:I[1295,[],""]
+a:I[9665,[],"OutletBoundary"]
+d:I[9665,[],"ViewportBoundary"]
+f:I[9665,[],"MetadataBoundary"]
+11:I[6614,[],""]
 :HL["/_next/static/media/47cbc4e2adbc5db9-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/css/e539936c7dc6b882.css","style"]
-:HL["/_next/static/css/c0bb506ce114ae44.css","style"]
-0:{"P":null,"b":"GrltnY0LeRNMg9C2Ixr0_","p":"","c":["","page","5"],"i":false,"f":[[["",{"children":["page",{"children":[["page","5","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/c0bb506ce114ae44.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","5","d"],["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","page","children","$0:f:0:1:2:children:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",null,["$","$La",null,{"children":"$Lb"}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","-lmC2iDtPDs1NTfHt2uBY",{"children":[["$","$Lc",null,{"children":"$Ld"}],["$","$Le",null,{"children":"$Lf"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]]}],false]],"m":"$undefined","G":["$10","$undefined"],"s":false,"S":true}
-11:I[4340,["173","static/chunks/173-54dedaeca13df317.js","565","static/chunks/565-296786f7e0246c7b.js","848","static/chunks/app/page/%5Bpage%5D/page-31063f203192b216.js"],"default"]
-12:T1f82,
+:HL["/_next/static/css/76a9eda9b9d58271.css","style"]
+0:{"P":null,"b":"Dzi2CkmyJVq1ENTRmDPpL","p":"","c":["","page","5"],"i":false,"f":[[["",{"children":["page",{"children":[["page","5","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/76a9eda9b9d58271.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","5","d"],["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9","$undefined",null,["$","$La",null,{"children":["$Lb","$Lc",null]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","WNEIJXMmePLuKnHVWXTjz",{"children":[["$","$Ld",null,{"children":"$Le"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],["$","$Lf",null,{"children":"$L10"}]]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
+12:I[1114,["874","static/chunks/874-e19ba39e696c2f56.js","766","static/chunks/766-1b379246b68420ec.js","848","static/chunks/app/page/%5Bpage%5D/page-728e09c32f66e03f.js"],"default"]
+13:T1085,
+# 렌더링 최적화
+
+### 1\. 컴포넌트를 맵핑할때는 key값으로 Index를 사용하지 말자
+
+리액트에서 컴포넌트를 맵핑할 때에는 고유 Key값을 부여해야한다.
+
+지금까지는 거의 Index를 고유한 Key값으로 사용했는데, 안좋은 습관인걸 알게됐다.
+
+배열 중간에 어떤 요소가 삽입되게 된다면, 그 이후의 요소들은 전부 Index가 변경되기 때문에 Key값도 변경될 뿐만 아니라 리마운트가 실행된다.
+
+또 이렇게 자주 Key값이 변경되게 된다면 서로 꼬이게 되는 버그도 발생할 수 있다.
+
+하지만 무조건 사용하면 안되는 것은 아니다.
+
+-   추가, 수정, 삭제 없이 단순히 렌더링만 하는 경우
+-   unique한 값이 없을 경우
+-   정렬이나 필터 요소가 없는 경우
+
+### 2\. state는 어디에 선언해야 될까
+
+리액트는 특정 state나 Props가 변경되게 되면 선언된 컴포넌트에서 그 하위 컴포넌트들 까지 모두다 리렌더링이 된다.
+
+그렇기 때문에 state를 어디에 선언할지 잘 설계만 하더라도 불필요한 리렌더링을 막을 수 있다.
+
+또 객체 타입의 state는 최대한 쪼개어서 선언해 사용하는게 좋다.
+
+객체가 크고 복잡한 경우에 그 중 일부만 사용하더라도 관련된 모든 컴포넌트가 리렌더링 될것이다.
+
+### 3\. useState의 함수형 업데이트
+
+setState를 사용할때 새로운 상태를 파라미터로 넣어주는 대신에, 상태 업데이트를 어떻게 할지 정의해 주는 업데이트 함수를 넣을 수 있다.
+
+이렇게 하면 useCallback을 사용할 때 두 번째 파라미터로 넣는 배열에 값을 넣어주지 않아도 된다.
+
+```javascript
+// 기존
+  const onIncrease = useCallback(() => {
+    setNumber(number + 1);
+  }, [number]);
+
+
+// 함수형 업데이트
+  const onIncrease = useCallback(() => {
+    setNumber((number) => number + 1);
+  }, []);
+```
+
+### 4.Input Onchange 최적화
+
+보통 Input 태그에 onChange를 사용해 글을 입력하면 타이핑을 할 때마다 컴포넌트가 랜더링이 된다.
+
+이때 useMemo를 사용해주면 렌더링을 막을 수 있다.
+
+```javascript
+import React, { useState } from "react";
+
+function InputSample() {
+  const [text, setText] = useState("");
+  const [count, setCount] = useState("");
+
+  const onChange = (e) => {
+    setText(e.target.value);
+  };
+
+  const onCount = () => {
+    console.log("카운트..");
+    return count;
+  };
+
+  const outCount = onCount();
+
+  return (
+    <div>
+      <input onChange={onChange} value={text} />
+
+      <div>
+        <b>값: {text}</b>
+        <b>{outCount}</b>
+      </div>
+    </div>
+  );
+}
+
+export default InputSample;
+```
+
+
+```javascript
+{...}
+  const onChange = (e) => {
+    setText(e.target.value);
+  };
+
+  const onCount = () => {
+    console.log("카운트..");
+    return count;
+  };
+
+  const outCount = useMemo(() => onCount(), [count]);
+
+  return (
+{...}
+)
+```
+
+
+### 5\. memo, useMemo, useCallback
+
+#### \- memo
+
+React.memo는 Hook이 아니기 때문에 클래스형에서도 사용할 수 있다.
+
+memo를 사용해 컴포넌트의 Props가 바뀌지 않았다면, 리렌더링하지 않도록 설정해 성능을 최적화 할 수 있다.
+
+```javascript
+import React, { memo } from "react";
+
+function InputSample({ user }) {
+  console.log("Text component render");
+  return (
+    <div>
+      <b>{user?.id}</b>
+      <b>{user?.name}</b>
+      <b>{user?.age}</b>
+    </div>
+  );
+}
+
+export default memo(InputSample);
+```
+
+#### \- useMemo, useCallback
+
+위에서 사용한 onCount의 함수가 간단한게 아니라 크고 복잡해 계산하는데 오래 걸리는 함수라고 가정한다면, 위 컴포넌트는 리렌더링 될 때마다 큰 계산을 계속 할 것이다.
+
+useMemo \[\] 디펜던시에 데이터가 변할 때마다 함수를 실행할 수 있도록 count를 넣어주면 위 count가 변할 때마다 위 함수를 실행하게 된다.
+
+useCallback도 비슷한 방식으로 작동 된다.
+
+useMemo는 리턴되는 값을 memoize 시키는 반면에, useCallback은 함수 선언을 memoize 한다.
+
+```javascript
+  const addUser = useCallback(() => {
+    {...}
+  }, [users]);
+```
+14:T1f82,
 [리액트 문서](https://beta.reactjs.org/)를 정독하며 정리한 글
 영어문서라 조금 힘들었다...
 
@@ -270,7 +417,7 @@ function FilterableProductTable({ products }) {
 ```
 
 
-13:T1c8d,
+15:T1c8d,
 ## React Hook
 
 React로 개발할 땐 클래스형 컴포넌트 보다 React 16.8 부터 도입된 Hook 기반 함수형 컴포넌트를 더 선호하여 개발하는 것 같다.
@@ -507,7 +654,8 @@ function useEffect(cb, depArray) {
 [Deep dive: How do React hooks really work?](https://www.netlify.com/blog/2019/03/11/deep-dive-how-do-react-hooks-really-work/)
 
 [Getting Closure on React Hooks](https://rinae.dev/posts/getting-closure-on-react-hooks-summary)
-9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L11",null,{"isPagination":true,"posts":{"posts":[{"content":"$12","data":{"title":"React 처럼 생각하기","date":"$D2021-11-20T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"thinking-in-react"},{"content":"$13","data":{"title":"React Hook의 동작","date":"$D2021-11-07T00:00:00.000Z","description":"React Hook의 동작에 대해","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-hook"}],"total":42},"page":"5"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (38)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}]]]}]]}]
-f:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-d:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Been blog - 5"}],["$","meta","2",{"name":"description","content":"Been dev-note - 5"}],["$","meta","3",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","4",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","link","5",{"rel":"canonical","href":"https://wonbeenna.github.io/page/5"}],["$","meta","6",{"property":"og:title","content":"Been blog - 5"}],["$","meta","7",{"property":"og:description","content":"Been dev-note - 5"}],["$","meta","8",{"property":"og:url","content":"https://wonbeenna.github.io/page/5"}],["$","meta","9",{"property":"og:site_name","content":"Been blog"}],["$","meta","10",{"property":"og:locale","content":"ko_KR"}],["$","meta","11",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","12",{"property":"og:image:width","content":"800"}],["$","meta","13",{"property":"og:image:height","content":"600"}],["$","meta","14",{"property":"og:image:alt","content":"Been blog"}],["$","meta","15",{"property":"og:type","content":"website"}],["$","meta","16",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","17",{"name":"twitter:title","content":"Been blog - 5"}],["$","meta","18",{"name":"twitter:description","content":"Been dev-note - 5"}],["$","meta","19",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","20",{"name":"twitter:image:width","content":"800"}],["$","meta","21",{"name":"twitter:image:height","content":"600"}],["$","meta","22",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","24",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","25",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","26",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}]]
+9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L12",null,{"isPagination":true,"posts":{"posts":[{"content":"$13","data":{"title":"React 처럼 생각하기(2)","date":"$D2021-12-12T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"thinking-in-react-2"},{"content":"$14","data":{"title":"React 처럼 생각하기","date":"$D2021-11-20T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"thinking-in-react"},{"content":"$15","data":{"title":"React Hook의 동작","date":"$D2021-11-07T00:00:00.000Z","description":"React Hook의 동작에 대해","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-hook"}],"total":43},"page":"5"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (39)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}]]]}]]}]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 b:null
+c:null
+10:[["$","title","0",{"children":"Been blog - 5"}],["$","meta","1",{"name":"description","content":"Been dev-note - 5"}],["$","meta","2",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","3",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","link","4",{"rel":"canonical","href":"https://wonbeenna.github.io/page/5"}],["$","meta","5",{"property":"og:title","content":"Been blog - 5"}],["$","meta","6",{"property":"og:description","content":"Been dev-note - 5"}],["$","meta","7",{"property":"og:url","content":"https://wonbeenna.github.io/page/5"}],["$","meta","8",{"property":"og:site_name","content":"Been blog"}],["$","meta","9",{"property":"og:locale","content":"ko_KR"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 5"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 5"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","24",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}]]
