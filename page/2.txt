@@ -1,21 +1,26 @@
 1:"$Sreact.fragment"
-2:I[9243,["874","static/chunks/874-e19ba39e696c2f56.js","766","static/chunks/766-1b379246b68420ec.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],""]
-3:I[881,["874","static/chunks/874-e19ba39e696c2f56.js","766","static/chunks/766-1b379246b68420ec.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],"Providers"]
-4:I[6874,["874","static/chunks/874-e19ba39e696c2f56.js","766","static/chunks/766-1b379246b68420ec.js","848","static/chunks/app/page/%5Bpage%5D/page-728e09c32f66e03f.js"],""]
-5:I[3063,["874","static/chunks/874-e19ba39e696c2f56.js","766","static/chunks/766-1b379246b68420ec.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],"Image"]
-6:I[1186,["874","static/chunks/874-e19ba39e696c2f56.js","766","static/chunks/766-1b379246b68420ec.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],"default"]
+2:I[9243,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],""]
+3:I[881,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],"Providers"]
+4:I[6874,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","848","static/chunks/app/page/%5Bpage%5D/page-728e09c32f66e03f.js"],""]
+5:I[3063,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],"Image"]
+6:I[1186,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],"default"]
 7:I[7555,[],""]
 8:I[1295,[],""]
-a:I[9665,[],"OutletBoundary"]
-d:I[9665,[],"ViewportBoundary"]
-f:I[9665,[],"MetadataBoundary"]
-11:I[6614,[],""]
+a:I[9665,[],"MetadataBoundary"]
+c:I[9665,[],"OutletBoundary"]
+f:I[4911,[],"AsyncMetadataOutlet"]
+11:I[9665,[],"ViewportBoundary"]
+13:I[6614,[],""]
 :HL["/_next/static/media/47cbc4e2adbc5db9-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/css/e539936c7dc6b882.css","style"]
-:HL["/_next/static/css/76a9eda9b9d58271.css","style"]
-0:{"P":null,"b":"Dzi2CkmyJVq1ENTRmDPpL","p":"","c":["","page","2"],"i":false,"f":[[["",{"children":["page",{"children":[["page","2","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/76a9eda9b9d58271.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","2","d"],["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9","$undefined",null,["$","$La",null,{"children":["$Lb","$Lc",null]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","PQKpSgqV6IWrIj31HyLC1",{"children":[["$","$Ld",null,{"children":"$Le"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],["$","$Lf",null,{"children":"$L10"}]]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
-12:I[1114,["874","static/chunks/874-e19ba39e696c2f56.js","766","static/chunks/766-1b379246b68420ec.js","848","static/chunks/app/page/%5Bpage%5D/page-728e09c32f66e03f.js"],"default"]
-13:T2f94,
+:HL["/_next/static/css/2e1c4c7c40082d2a.css","style"]
+0:{"P":null,"b":"z3NOd-RwbnNygtPSsa4a5","p":"","c":["","page","2"],"i":false,"f":[[["",{"children":["page",{"children":[["page","2","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/2e1c4c7c40082d2a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","2","d"],["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",["$","$La",null,{"children":"$Lb"}],null,["$","$Lc",null,{"children":["$Ld","$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","xBSLE8JdmU-hytkjlN_Th",{"children":[["$","$L11",null,{"children":"$L12"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$13","$undefined"],"s":false,"S":true}
+14:"$Sreact.suspense"
+15:I[4911,[],"AsyncMetadata"]
+b:["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"promise":"$@16"}]}]
+17:I[1114,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","848","static/chunks/app/page/%5Bpage%5D/page-728e09c32f66e03f.js"],"default"]
+e:null
+18:T2f94,
 ## 웹팩(기본)배경
 - 웹팩은 모던 javascript 어플리케이션을 위한 정적 모듈 번들러이다. 번들러는 웹팩 이외에도 다양한게 있는데 (rollup , esbuild , vite , parcel 등) 웹팩이 가장 오래되었기도하고 많이 사용하고 있기 때문에 이번 기회에 배워보기로 했다.
 
@@ -448,7 +453,7 @@ module.exports = {
 하지만 기본적인 웹팩으로 설정되어있고, 직접 커스텀하려면 eject를 해야한다.
 
 이번 기회에 웹팩의 원리와 기본적인 사용방법을 알아보았다.
-14:Te9a,
+19:Te9a,
 ### React Native geolocation
 
 사이드 프로젝트에 위치정보를 받아와야 하는 기능이 필요해 지오로케이션을 받아 오도록 했다.
@@ -575,7 +580,7 @@ const MyApp = () => {
 다음 포스팅에서는 받아온 위치정보를 webview로 넘겨주는 방법에 대해 알아보자!
 
 
-15:T9c4,
+1a:T9c4,
 ### 딥링크
 - 딥링크는 모바일에서 특정 페이지에 도달 할 수 있는 링크를 의미한다.
 - 웹이나 sns등 링크를 클릭했을때 해당 어플리케이션 앱으로 바로 이동하는데, 이런 방식을 모바일 딥링크라 하고 특정한 앱 스크린으로 이동하는 것
@@ -673,7 +678,7 @@ useEffect(() => {
   return () => Linking.removeAllListeners('url');
 }, [])
 ```
-16:T2147,
+1b:T2147,
 이전에 [스벨트킷으로 블로그 만들어보기](https://wonbeenna.github.io/blog/javaScript/svelte-blog) 에서 svelte kit으로 블로그를 만들었었다.
 
 그때는 svelte 공부겸 블로그를 만들었지만, 업무에서 주로 사용하는 스택인 react와 next.js를 사용하여 블로그를 만들어보려고 한다.
@@ -1022,7 +1027,7 @@ npm i @giscus/react
 
 
 
-17:T6ae,
+1c:T6ae,
 JSON 웹 토큰(JWT)
 
 일반적으로 **헤더.페이로드.서명** 으로 구성되어 있다.
@@ -1081,7 +1086,7 @@ token을 split해 1번째 데이터에 해당하는 부분을 가져온 다음
 node에서 지원하는 Buffer 객체를 사용해 바이너리로 변환
 
 base64로 인코딩한 후 JSON으로 파싱한다
-18:Tfb3,
+1d:Tfb3,
 얼마전 기업과제를 진행했다. Audio 객체를 이용한 음악 재생이었다.
 
 https://developer.mozilla.org/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API
@@ -1210,7 +1215,7 @@ progressbar를 클릭했을 때는 해당 위치부터 audio를 재생해야했�
 - e.currentTarget.offsetWidth = progressbar의 전체 너비
 
 
-19:Te25,
+1e:Te25,
 ### 디바운싱과 쓰로틀링
 
 
@@ -1319,7 +1324,7 @@ hook이 실행되면 lastRan과 현재시간을 비교한다.
 
 
 
-1a:Tc4f,
+1f:Tc4f,
 ## GraphQL 사용
 
 Apollo client를 사용합니다.
@@ -1459,7 +1464,7 @@ const ORDER_QUERY = gql`
 
 
 
-1b:Tc85,
+20:Tc85,
 대기열 → 캐싱 → DNS → 라우팅 → ARP → 초기연결 → 컨텐츠 다운로드 → 브라우저 렌더링
 
 이런 과정을 비캡슐화, 캡슐화 과정을 거침
@@ -1553,7 +1558,7 @@ const ORDER_QUERY = gql`
 - transform, opacity 등(GPU가 관여하는 속성) 변경일 때 **1 -> 2 -> 5**
 
 따라서 transform, opacity 등(GPU가 관여하는 속성)을 사용하는게 가장 빠르고 끊김없이 보여줄 수 있다.
-1c:T1a75,
+21:T1a75,
 인증방식에는 대표적으로 두가지가 있다.
 
 제일 많이 사용하는 세션 방식과 토큰 방식
@@ -1778,8 +1783,8 @@ export const getServerSideProps = withAuth();
 
 {...}
 ```
-9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L12",null,{"isPagination":true,"posts":{"posts":[{"content":"$13","data":{"title":"웹팩 기본 사용법 (1)","date":"$D2023-11-30T00:00:00.000Z","description":"처음 접해보는 웹팩의 원리와 기본 사용 방법","category":"javaScript","titleImage":"/assets/postIcon/webpack-icon.svg"},"slug":"webpack-1"},{"content":"$14","data":{"title":"React Native geolocation","date":"$D2023-10-25T00:00:00.000Z","description":"React Native 위치정보 받아오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"rn-geolocation"},{"content":"$15","data":{"title":"React Native Deep Linking","date":"$D2023-10-17T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"rn-deep-link"},{"content":"$16","data":{"title":"Next.js 블로그 만들기","date":"$D2023-10-09T00:00:00.000Z","description":"Next.js로 블로그 만들기","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-blog"},{"content":"$17","data":{"title":"jwt 토큰 decode 하기","date":"$D2023-08-31T00:00:00.000Z","description":"jwt 토큰 decode 함수","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"jwt-decode"},{"content":"$18","data":{"title":"Audio객체를 이용한 음악 재생","date":"$D2023-05-27T00:00:00.000Z","description":"Audio객체를 사용한 기업 과제 구현","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"audio"},{"content":"$19","data":{"title":"디바운싱과 쓰로틀링","date":"$D2023-05-13T00:00:00.000Z","description":"디바운싱과 쓰로틀링의 차이를 구분하고 hook으로 구현","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"debouce-throttle"},{"content":"$1a","data":{"title":"GraphQl 써보기(1)","date":"$D2023-04-29T00:00:00.000Z","description":"GraphQl, Apollo Client를 사용","category":"javaScript","titleImage":"/assets/postIcon/graphql.svg"},"slug":"graphql-1"},{"content":"$1b","data":{"title":"브라우저에 url을 검색하면?","date":"$D2023-02-25T00:00:00.000Z","description":"사내 스터디","category":"study","titleImage":"/assets/postIcon/javascript.webp"},"slug":"browser"},{"content":"$1c","data":{"title":"Next.js middleware와 getServerSideProps","date":"$D2023-02-22T00:00:00.000Z","description":"세션방식의 로그인 인증, middleware와 getServerSideProps를 사용해 구현한 기록","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-middleware"}],"total":43},"page":"2"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (39)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}]]]}]]}]
-e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-b:null
-c:null
-10:[["$","title","0",{"children":"Been blog - 2"}],["$","meta","1",{"name":"description","content":"Been dev-note - 2"}],["$","meta","2",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","3",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","link","4",{"rel":"canonical","href":"https://wonbeenna.github.io/page/2"}],["$","meta","5",{"property":"og:title","content":"Been blog - 2"}],["$","meta","6",{"property":"og:description","content":"Been dev-note - 2"}],["$","meta","7",{"property":"og:url","content":"https://wonbeenna.github.io/page/2"}],["$","meta","8",{"property":"og:site_name","content":"Been blog"}],["$","meta","9",{"property":"og:locale","content":"ko_KR"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 2"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 2"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","24",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}]]
+9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L17",null,{"isPagination":true,"posts":{"posts":[{"content":"$18","data":{"title":"웹팩 기본 사용법 (1)","date":"$D2023-11-30T00:00:00.000Z","description":"처음 접해보는 웹팩의 원리와 기본 사용 방법","category":"javaScript","titleImage":"/assets/postIcon/webpack-icon.svg"},"slug":"webpack-1"},{"content":"$19","data":{"title":"React Native geolocation","date":"$D2023-10-25T00:00:00.000Z","description":"React Native 위치정보 받아오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"rn-geolocation"},{"content":"$1a","data":{"title":"React Native Deep Linking","date":"$D2023-10-17T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"rn-deep-link"},{"content":"$1b","data":{"title":"Next.js 블로그 만들기","date":"$D2023-10-09T00:00:00.000Z","description":"Next.js로 블로그 만들기","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-blog"},{"content":"$1c","data":{"title":"jwt 토큰 decode 하기","date":"$D2023-08-31T00:00:00.000Z","description":"jwt 토큰 decode 함수","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"jwt-decode"},{"content":"$1d","data":{"title":"Audio객체를 이용한 음악 재생","date":"$D2023-05-27T00:00:00.000Z","description":"Audio객체를 사용한 기업 과제 구현","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"audio"},{"content":"$1e","data":{"title":"디바운싱과 쓰로틀링","date":"$D2023-05-13T00:00:00.000Z","description":"디바운싱과 쓰로틀링의 차이를 구분하고 hook으로 구현","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"debouce-throttle"},{"content":"$1f","data":{"title":"GraphQl 써보기(1)","date":"$D2023-04-29T00:00:00.000Z","description":"GraphQl, Apollo Client를 사용","category":"javaScript","titleImage":"/assets/postIcon/graphql.svg"},"slug":"graphql-1"},{"content":"$20","data":{"title":"브라우저에 url을 검색하면?","date":"$D2023-02-25T00:00:00.000Z","description":"사내 스터디","category":"study","titleImage":"/assets/postIcon/javascript.webp"},"slug":"browser"},{"content":"$21","data":{"title":"Next.js middleware와 getServerSideProps","date":"$D2023-02-22T00:00:00.000Z","description":"세션방식의 로그인 인증, middleware와 getServerSideProps를 사용해 구현한 기록","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-middleware"}],"total":43},"page":"2"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (39)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}]]]}]]}]
+12:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+d:null
+16:{"metadata":[["$","title","0",{"children":"Been blog - 2"}],["$","meta","1",{"name":"description","content":"Been dev-note - 2"}],["$","meta","2",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","3",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","link","4",{"rel":"canonical","href":"https://wonbeenna.github.io/page/2"}],["$","meta","5",{"property":"og:title","content":"Been blog - 2"}],["$","meta","6",{"property":"og:description","content":"Been dev-note - 2"}],["$","meta","7",{"property":"og:url","content":"https://wonbeenna.github.io/page/2"}],["$","meta","8",{"property":"og:site_name","content":"Been blog"}],["$","meta","9",{"property":"og:locale","content":"ko_KR"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 2"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 2"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","24",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}]],"error":null,"digest":"$undefined"}
+10:{"metadata":"$16:metadata","error":null,"digest":"$undefined"}
