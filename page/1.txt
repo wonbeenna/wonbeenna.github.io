@@ -14,13 +14,160 @@ f:I[4911,[],"AsyncMetadataOutlet"]
 :HL["/_next/static/media/47cbc4e2adbc5db9-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/css/e539936c7dc6b882.css","style"]
 :HL["/_next/static/css/e7c7294f242bce08.css","style"]
-0:{"P":null,"b":"TvWQMWimxXTdcDA28j6Yi","p":"","c":["","page","1"],"i":false,"f":[[["",{"children":["page",{"children":[["page","1","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e7c7294f242bce08.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","1","d"],["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",["$","$La",null,{"children":"$Lb"}],null,["$","$Lc",null,{"children":["$Ld","$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","eRwsm7W5OnSOkLdsVI9lx",{"children":[["$","$L11",null,{"children":"$L12"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$13","$undefined"],"s":false,"S":true}
+0:{"P":null,"b":"nb0nDyCPZMTUE2B8F7fpv","p":"","c":["","page","1"],"i":false,"f":[[["",{"children":["page",{"children":[["page","1","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e7c7294f242bce08.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","1","d"],["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",["$","$La",null,{"children":"$Lb"}],null,["$","$Lc",null,{"children":["$Ld","$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","rsFVbGU-NY1s4l8wlik1r",{"children":[["$","$L11",null,{"children":"$L12"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$13","$undefined"],"s":false,"S":true}
 14:"$Sreact.suspense"
 15:I[4911,[],"AsyncMetadata"]
 b:["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"promise":"$@16"}]}]
 17:I[1114,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","848","static/chunks/app/page/%5Bpage%5D/page-3d16974de746edb8.js"],"default"]
 e:null
-18:T16ad,
+18:T1760,
+## 이벤트 버블링(Event Bubbling)과 이벤트 캡처링(Event Capturing)
+
+### 이벤트 전파(Event Propagation)이란?
+
+이벤트 전파는 DOM 에서 발생한 이벤트가 전달되는 과정이다. 브라우저에서는 이벤트가 발생한 요소(target element)를 기준으로 부모 요소까지 올라가거나 자식요소로 내려가면서 이벤트를 처리하는 구조를 가지고 있다.
+이벤트 전파는 크게 두 가지 단계로 나눌 수 있다.
+
+- 이벤트 버블링(Event Bubbling)
+- 이벤트 캡처링(Event Capturing)
+
+---
+
+### 이벤트 버블링(Event Bubbling)
+
+이벤트가 특정 DOM 요소에서 발생하면, 그 이벤트가 발생한 요소(target)에서부터 DOM 트리를 따라 상위 요소로 점점 올라가며 전파되는 과정이다.
+이때 각 상위 요소에서도 이벤트가 발생한 것 처럼 처리할 수 있다.
+
+특정 요소에서의 이벤트 발생 -> 이벤트 타겟에서부터 부모 요소로 이동 -> (부모 요소 -> 부모의 부모 -> 루트) -> 이벤트 리스너가 등록된 부모 요소들에서도 이벤트 처리 가능
+
+```html
+<div id="parent">
+    <button id="child">버튼</button>
+</div>
+```
+
+만약 위에 버튼을 클릭한다면,
+
+1. 버튼에서 클릭 이벤트 발생
+2. 버튼에서 부모 요소인 div로 이벤트 전파
+3. div에서 클릭 이벤트 발생
+4. div에서 부모 요소인 body로 이벤트 전파
+5. body에서 클릭 이벤트 발생
+6. body에서 부모 요소인 html로 이벤트 전파
+7. html에서 클릭 이벤트 발생
+8. html에서 부모 요소인 document로 이벤트 전파
+9. document에서 클릭 이벤트 발생
+10. document에서 부모 요소인 window로 이벤트 전파
+
+의 흐름으로 이벤트 버블링이 발생한다.
+
+```javascript
+document.getElementById('parent').addEventListener('click', () => {
+    console.log('parent 클릭됨');
+});
+
+document.getElementById('child').addEventListener('click', () => {
+    console.log('child 클릭됨');
+});
+```
+
+위와 같이 이벤트 리스너를 등록하면, 버튼을 클릭했을 때 다음과 같은 결과가 출력된다.
+
+```
+child 클릭됨
+parent 클릭됨
+```
+
+버튼을 클릭했을 때, 버튼에서 발생한 클릭 이벤트가 부모 요소인 div로 전파되면서 div에서도 클릭 이벤트가 발생하게 된다. 이때, 이벤트 리스너가 등록된 순서대로 실행된다.
+
+---
+
+### 이벤트 캡처링(Event Capturing)
+
+이벤트 캡처링은 이벤트 버블링과 반대 방향으로, DOM 트리의 최상위 요소에서부터 이벤트가 발생한 요소(target)까지 내려가는 과정이다.
+
+DOM의 최상위(window 또는 document)에서 시작 -> (최상위 -> 하위 -> target 요소) -> 이벤트 타겟에 도착 후, 다시 이벤트 버블링으로 전환
+
+1. window에서 클릭 이벤트 발생
+2. window에서 자식 요소인 document로 이벤트 전파
+3. document에서 자식 요소인 body로 이벤트 전파
+4. body에서 자식 요소인 div로 이벤트 전파
+5. div에서 자식 요소인 button으로 이벤트 전파
+6. button에서 클릭 이벤트 발생
+7. button에서 부모 요소인 div로 이벤트 전파
+8. div에서 클릭 이벤트 발생
+9. div에서 부모 요소인 body로 이벤트 전파
+10. body에서 클릭 이벤트 발생
+11. body에서 부모 요소인 document로 이벤트 전파
+12. document에서 클릭 이벤트 발생
+13. document에서 부모 요소인 window로 이벤트 전파
+14. window에서 클릭 이벤트 발생
+
+```javascript
+document.getElementById('parent').addEventListener('click', () => {
+    console.log('parent 클릭됨');
+}, true); // true를 추가하여 캡처링 단계에서 이벤트 리스너 등록
+
+document.getElementById('child').addEventListener('click', () => {
+    console.log('child 클릭됨');
+});
+```
+위와 같이 이벤트 리스너를 등록하면, 버튼을 클릭했을 때 다음과 같은 결과가 출력된다.
+
+```
+parent 클릭됨
+child 클릭됨
+```
+
+즉, 하나의 클릭이 발생하면 부모 요소에서부터 자식 요소로 내려가면서 이벤트가 발생하고, 다시 자식 요소에서 부모 요소로 올라가면서 이벤트가 발생하는 것이다. 이때, 이벤트 리스너가 등록된 순서대로 실행된다.
+
+---
+
+## 이벤트 버블링, 캡처링 제어
+
+### 이벤트 전파 방지 (event.stopPropagation())
+
+이벤트가 부모로 전달되는 것을 막을 수 있다.
+
+```javascript
+document.getElementById('child').addEventListener('click', (event) => {
+    event.stopPropagation(); // 부모 요소로 이벤트 전파 방지
+    console.log('child 클릭됨');
+});
+```
+
+### 기본 이벤트 방지 (event.preventDefault())
+
+stopPropagation()와는 달리, 기본 동작(ex: 링크 클릭, 폼 제출 등)을 방지할 수 있다.
+
+```javascript
+document.getElementById('link').addEventListener('click', (event) => {
+    event.preventDefault(); // 기본 동작 방지
+    console.log('링크 클릭됨');
+});
+```
+
+---
+
+## 이벤트 버블링과 캡처링 사용?
+
+### 이벤트 버블링 활용
+
+- 이벤트 위임(event delegation) : 자식 요소에 직접 리스너를 등록하지 않고, 부모 요소에서 자식 요소의 이벤트를 처리 한다.stopPropagation
+- 성능 최적화 : 많은 자식 요소에 이벤트 리스너를 등록하는 것보다 부모 요소에 하나의 리스너를 등록하는 것이 성능상 유리하다.
+```javaScript
+document.querySelector('ul').addEventListener('click', (e) => {
+    if(e.target.tagName === 'li'){
+        console.log('클릭한 항목:', e.target.innerText);
+    }
+});
+```
+
+### 이벤트 캡처링 활용
+
+- 일반적으로 많이 사용되지는 않지만, 특정 요소가 이벤트를 가로채야 할 때 유용하다.
+- 예를 들어, 특정 요소에서 이벤트가 발생했을 때, 부모 요소에서 이벤트를 처리하기 전에 먼저 특정 요소에서 이벤트를 처리해야 할 경우에 사용된다.
+19:T16ad,
 ## 세션과 쿠키의 개념
 
 ### 세션(session)
@@ -111,7 +258,7 @@ res.cookie('username', 'john', { maxAge: 900000, httpOnly: true });
 
 - 세션(Session): 민감한 데이터나 일시적으로 관리해야 하는 데이터, 서버에서 관리가 필요한 데이터를 저장.
 - 쿠키(Cookie): 사용자의 브라우저에서 저장하는 간단하고 가벼운 데이터를 저장, 사용자의 설정 값, 지속적인 추적, 개인화 데이터에 적합.
-19:T1494,
+1a:T1494,
 ### React Parallel Routes와 View Transitions API
 
 웹뷰 개발시 AOS에서 뒤로가기 버튼을 누르면 모달이 닫히지 않고, 앱이 종료되거나 웹뷰가 닫히는 이슈가 생길 수 있다.
@@ -270,7 +417,7 @@ View Transitions API 대해서는 다음에 작성하는걸로하고,, 위처럼
 이런 식으로 모달을 구현하면 좀 더 앱스러운 UX를 제공할 수 있다.
 뒤로가기시에도 모달이 닫히고, URL도 변경되기 때문에 사용자가 뒤로가기 버튼을 눌렀을 때 모달이 닫히는 동작을 자연스럽게 처리할 수 있다.
 
-1a:T3de5,
+1b:T3de5,
 ### 들어가며
 단순한 스터디에서 시작했지만, 예비창업패키지에도 선정되며 아주 작은 스타트업처럼 운영하게 된 스터디를 회고하며 느낀 점과 배운 점을 정리해보려 한다.
 
@@ -638,7 +785,7 @@ lighthouse 점수를 최대한 높이기 위해 노력했고, 실제로도 검�
 25년도 지원사업은 아쉽게도 떨어졌다. 낮은 진입장벽, 데이터 수집 한계, 구조가 비슷한 플랫폼에 손익분기 달성 실패, 낮은 재방문 주기 등이 이유였다.
 
 현재 내부에서는 다양한 의견들이 오가고있다. 아무래도 프로젝트를 유지하는데는 비용적인 문제가 가장 크기때문에, 수익모델 개선, 다른 신사업 아이템들을 고민하고 있다.
-1b:T1750,
+1c:T1750,
 ### 딥링크
 - 웹링크 URL이 사용자를 특정 웹사이트로 이동시키는 것처럼, 딥링크는 사용자를 특정 앱이나 앱의 원하는 화면으로 이동하도록 유도하는 링크이다.
 
@@ -839,7 +986,7 @@ export const linkingConfig: LinkingOptions<NavigationProps> = {
 - 앱이 처음 실행될 때 : `getInitialURL`을 이용해 딥링크 처리
 - 앱이 백그라운드 -> 포그라운드 전환될 때 : `subscribe`에 `Appstate`를 이용해 딥링크 처리
 - 앱이 실행중일 때 : `subscribe`에 `Linking`을 이용해 딥링크 처리
-1c:T6a2,
+1d:T6a2,
 웹 페이지가 현재 사용자에게 보이는지 아닌지를 확인하는 방법이 있다.
 
 `document.visibilityState`를 사용하면 페이지가 현재 사용자에게 보이는지 아닌지를 확인할 수 있다.
@@ -888,7 +1035,7 @@ export default useVisibilityChange;
 ```
 
 웹 페이지 이탈을 감지할 수 있고, 모바일 웹뷰에서 앱의 백그라운드 상태나 전환을 감지할 수 있다.
-1d:Taca,
+1e:Taca,
 사내 프로젝트를 진행하면서 IOS 웹뷰에서 안전 영역을 설정하는 방법에 대해 알게되었다.
 
 아이폰 X 부터는 디스플레이에 노치 디자인이 적용되고, 하단에는 물리 버튼이 사라지고 제스처로 대체되었다.
@@ -985,7 +1132,7 @@ export default function RootLayout({
 ```
 
 위와 같이 overflow 만 hidden 처리하여 해결하였다.
-1e:T1359,
+1f:T1359,
 monorepo를 사용해 패키지들을 분리하는 과정에서 이슈를 확인했다.
 
 번들링 하지않고, 패키지들을 `index.ts`에서 직접 내보내 사용했을 때, 사용하지 않는 코드들도 함께 포함되는 문제가 있었다.
@@ -1148,7 +1295,7 @@ utils에서 내보내는 함수 중 프로젝트별로 사용하는곳과 사용
 
 rollup 설정에 대해서 아직 완벽하게 이해하지는 못했으며, 내가 의도한대로 작동하는지도 조금 확신이 들지 않지만 이번 기회에 조금 더 깊게 공부해보고 계속해서 확인해보며 수정해나가야겠다.
 개인적으로는 최적화해 나가는 과정이 매우 재밌었던 작업이었다!
-1f:Ta2c,
+20:Ta2c,
 최근 rollup으로 패키지를 만드는 과정에서 cjs와 esm에 대해 알게되었다.
 
 ### Module
@@ -1223,7 +1370,7 @@ console.log(lib.name) // lib
 - [kakao blog](https://tech.kakao.com/2023/10/19/commonjs-esm-migration/)
 - [CJS](https://nodejs.org/api/modules.html)
 - [ESM](https://nodejs.org/api/esm.html)
-20:T1101,
+21:T1101,
 자바스크립트에서 원시타입(primitive data type)은 변경 불가능한(immutable)한 값이다.
 
 - Boolean
@@ -1368,106 +1515,7 @@ const [state, setState] = useState({
 ```
 
 이처럼 리액트로 개발을 할 때 불변성을 유지함으로써 안정성을 유지하고 성능을 향상시킬 수 있다.
-21:Tcc7,
-로컬 개발환경에서 API 요청시 CORS 에러로 API 사용이 어려울 수 있습니다.
-
-이 글은 Vite로 구성된 로컬 개발환경에서 CORS 문제를 해결하는 방식을 작성합니다.
-
----
-
-### env
-
-먼저 [환경변수 설정](https://ko.vitejs.dev/guide/env-and-mode.html#modes)이 필요합니다.
-
-```shell
-.env                # 모든 상황에서 사용될 환경 변수
-.env.local          # 모든 상황에서 사용되나, 로컬 개발 환경에서만 사용될(Git에 의해 무시될) 환경 변수
-.env.[mode]         # 특정 모드에서만 사용될 환경 변수
-.env.[mode].local   # 특정 모드에서만 사용되나, 로컬 개발 환경에서만 사용될(Git에 의해 무시될) 환경 변수
-```
-
-위 환경 변수는 따로 커스텀이 가능하지만, 기본적으로 Vite script 명령은 dev → development 모드로 동작하고, build → production 모드로 동작합니다.
-
-따라서 npm run dev로 스크립트를 실행하면 Vite는 .env.development에 정의된 환경변수를 사용합니다.
-
-```shell
-// .env.development
-
-VITE_BASE_URL=/api
-VITE_SERVER_URL=https://dev.example.com/
-```
-
-```shell
-// .env.production
-
-VITE_BASE_URL=/api
-VITE_SERVER_URL=https://example.com/
-```
-
----
-
-### fetch
-
-[axios](https://axios-http.com/kr/docs/intro) 라이브러리를 사용해 비동기 HTTP 요청을 합니다.
-
-```tsx
-import axios from 'axios';
-
-const baseURL = import.meta.env.VITE_BASE_URL;
-
-export const axiosInstance = axios.create({
-  baseURL,
-});
-```
-
-위에서 설정한 환경변수에서 BASE_URL을 불러와 axios 기본 설정을 진행합니다.
-
----
-
-### proxy
-
-Vite는 vite.config.ts에서 server.proxy를 사용해 [Server Options](https://ko.vitejs.dev/config/server-options.html#server-proxy)을 설정할 수 있습니다.
-
-server.proxy를 사용하면 브라우저의 요청 → 프록시 서버 → 서버로 전달 되며, 프록시 서버에서 설정한 도메인으로 변환하여 서버에 API 요청을 하게 됩니다.
-
-```tsx
-// vite.config.ts
-
-import { defineConfig, loadEnv } from 'vite';
-import react from '@vitejs/plugin-react-swc';
-import tsconfigPaths from 'vite-tsconfig-paths';
-
-// https://vitejs.dev/config/
-export default ({ mode }) => {
-  const isDevelop = mode === 'development';
-  process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
-
-  return defineConfig({
-    plugins: [react(), tsconfigPaths()],
-    server: isDevelop
-      ? {
-          proxy: {
-            '/api': {
-              target: process.env.VITE_SERVER_URL,
-              changeOrigin: true,
-              secure: false,
-            },
-          },
-        }
-      : undefined,
-  });
-};
-```
-
-일반적으로 production 환경에서는 도메인이 같기 때문에 proxy를 사용하지 않습니다.
-
-따라서, 위의 설정을 예시로 들어 `http://localhost:5173/api/hello` 라는 URL로 요청을 보낼 때 다음과 같은 과정이 진행됩니다.
-
-1. 클라이언트의 요청 URL이 `/api`로 시작되므로 해당 프록시 설정이 적용
-2. 프록시는 `changeOption` 에 의하여 HTTP 요청 헤더의 Host 값을 `https://example.com` 으로 변경
-3. 프록시는 최종적으로 이 요청을 `https://example.com` 라는 URL로 `target` 서버에 전달
-
-9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L17",null,{"isPagination":true,"posts":{"posts":[{"content":"$18","data":{"title":"세션과 쿠키","date":"$D2025-05-23T00:00:00.000Z","description":"세션과 쿠키의 개념과 차이점","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"session-cookie"},{"content":"$19","data":{"title":"React Parallel Routes","date":"$D2025-04-14T00:00:00.000Z","description":"AOS 웹뷰에서 뒤로가기시 모달을 닫으려면?","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-parallel-routes"},{"content":"$1a","data":{"title":"2년간 스터디하며 배운것들","date":"$D2025-03-18T00:00:00.000Z","description":"2년간의 스터디를 회고하며 느낀 점과 배운 점","category":"til","titleImage":"/assets/postIcon/til.webp"},"slug":"study-remind"},{"content":"$1b","data":{"title":"React Native Deep Linking (2)","date":"$D2025-02-03T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"rn-deep-link-2"},{"content":"$1c","data":{"title":"document.visibilityState","date":"$D2024-12-06T00:00:00.000Z","description":"document.visibilityState를 이용한 페이지의 상태를 확인하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"visibilityState"},{"content":"$1d","data":{"title":"IOS 웹뷰에서 safe area 설정하기","date":"$D2024-07-02T00:00:00.000Z","description":"IOS 웹뷰에서 safe area 를 설정하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"webview-safe-area"},{"content":"$1e","data":{"title":"rollup으로 번들링하는 과정","date":"$D2024-03-09T00:00:00.000Z","description":"처음 rollup으로 번들링하는 과정에서 겪은 문제들과 해결방법","category":"javaScript","titleImage":"/assets/postIcon/rollup-logo.svg"},"slug":"rollup"},{"content":"$1f","data":{"title":"cjs와 esm","date":"$D2024-03-07T00:00:00.000Z","description":"rollup으로 번들링하는 과정에서 알게된 cjs와 esm의 차이점에 대해","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"module-system"},{"content":"$20","data":{"title":"리액트에서 불변성을 지키는 이유","date":"$D2024-02-25T00:00:00.000Z","description":"리액트에서 불변성을 지키는 이유","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-immutable"},{"content":"$21","data":{"title":"Vite proxy 설정","date":"$D2024-01-18T00:00:00.000Z","description":"Vite 로컬환경에서 CORS 문제 해결하기","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"vite-proxy"}],"total":44},"page":"1"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (40)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}]]]}]]}]
+9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L17",null,{"isPagination":true,"posts":{"posts":[{"content":"$18","data":{"title":"이벤트 버블링과 이벤트 캡처링","date":"$D2025-05-23T00:00:00.000Z","description":"이벤트 버블링과 이벤트 캡처링에 대한 이해","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"event-bubble-capture"},{"content":"$19","data":{"title":"세션과 쿠키","date":"$D2025-05-13T00:00:00.000Z","description":"세션과 쿠키의 개념과 차이점","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"session-cookie"},{"content":"$1a","data":{"title":"React Parallel Routes","date":"$D2025-04-14T00:00:00.000Z","description":"AOS 웹뷰에서 뒤로가기시 모달을 닫으려면?","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-parallel-routes"},{"content":"$1b","data":{"title":"2년간 스터디하며 배운것들","date":"$D2025-03-18T00:00:00.000Z","description":"2년간의 스터디를 회고하며 느낀 점과 배운 점","category":"til","titleImage":"/assets/postIcon/til.webp"},"slug":"study-remind"},{"content":"$1c","data":{"title":"React Native Deep Linking (2)","date":"$D2025-02-03T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"rn-deep-link-2"},{"content":"$1d","data":{"title":"document.visibilityState","date":"$D2024-12-06T00:00:00.000Z","description":"document.visibilityState를 이용한 페이지의 상태를 확인하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"visibilityState"},{"content":"$1e","data":{"title":"IOS 웹뷰에서 safe area 설정하기","date":"$D2024-07-02T00:00:00.000Z","description":"IOS 웹뷰에서 safe area 를 설정하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"webview-safe-area"},{"content":"$1f","data":{"title":"rollup으로 번들링하는 과정","date":"$D2024-03-09T00:00:00.000Z","description":"처음 rollup으로 번들링하는 과정에서 겪은 문제들과 해결방법","category":"javaScript","titleImage":"/assets/postIcon/rollup-logo.svg"},"slug":"rollup"},{"content":"$20","data":{"title":"cjs와 esm","date":"$D2024-03-07T00:00:00.000Z","description":"rollup으로 번들링하는 과정에서 알게된 cjs와 esm의 차이점에 대해","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"module-system"},{"content":"$21","data":{"title":"리액트에서 불변성을 지키는 이유","date":"$D2024-02-25T00:00:00.000Z","description":"리액트에서 불변성을 지키는 이유","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-immutable"}],"total":45},"page":"1"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (41)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}]]]}]]}]
 12:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 d:null
 16:{"metadata":[["$","title","0",{"children":"Been blog - 1"}],["$","meta","1",{"name":"description","content":"Been dev-note - 1"}],["$","meta","2",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","3",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","link","4",{"rel":"canonical","href":"https://wonbeenna.github.io/page/1"}],["$","meta","5",{"property":"og:title","content":"Been blog - 1"}],["$","meta","6",{"property":"og:description","content":"Been dev-note - 1"}],["$","meta","7",{"property":"og:url","content":"https://wonbeenna.github.io/page/1"}],["$","meta","8",{"property":"og:site_name","content":"Been blog"}],["$","meta","9",{"property":"og:locale","content":"ko_KR"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 1"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 1"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","24",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}]],"error":null,"digest":"$undefined"}
