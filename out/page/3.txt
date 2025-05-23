@@ -1,9 +1,9 @@
 1:"$Sreact.fragment"
-2:I[9243,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],""]
-3:I[881,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],"Providers"]
-4:I[6874,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","848","static/chunks/app/page/%5Bpage%5D/page-728e09c32f66e03f.js"],""]
-5:I[3063,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],"Image"]
-6:I[1186,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],"default"]
+2:I[9243,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-2026af6fce535623.js"],""]
+3:I[881,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-2026af6fce535623.js"],"Providers"]
+4:I[6874,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","848","static/chunks/app/page/%5Bpage%5D/page-3d16974de746edb8.js"],""]
+5:I[3063,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-2026af6fce535623.js"],"Image"]
+6:I[1186,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-2026af6fce535623.js"],"default"]
 7:I[7555,[],""]
 8:I[1295,[],""]
 a:I[9665,[],"MetadataBoundary"]
@@ -14,13 +14,238 @@ f:I[4911,[],"AsyncMetadataOutlet"]
 :HL["/_next/static/media/47cbc4e2adbc5db9-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/css/e539936c7dc6b882.css","style"]
 :HL["/_next/static/css/2e1c4c7c40082d2a.css","style"]
-0:{"P":null,"b":"z3NOd-RwbnNygtPSsa4a5","p":"","c":["","page","3"],"i":false,"f":[[["",{"children":["page",{"children":[["page","3","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/2e1c4c7c40082d2a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","3","d"],["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",["$","$La",null,{"children":"$Lb"}],null,["$","$Lc",null,{"children":["$Ld","$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","EYoFdgAPR6c4BuJUUBIsu",{"children":[["$","$L11",null,{"children":"$L12"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$13","$undefined"],"s":false,"S":true}
+0:{"P":null,"b":"Zx_IB7Z-QhvPTJ6OPVOmt","p":"","c":["","page","3"],"i":false,"f":[[["",{"children":["page",{"children":[["page","3","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/2e1c4c7c40082d2a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","3","d"],["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",["$","$La",null,{"children":"$Lb"}],null,["$","$Lc",null,{"children":["$Ld","$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","v3EhDvcgkqV__O41HbAyA",{"children":[["$","$L11",null,{"children":"$L12"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$13","$undefined"],"s":false,"S":true}
 14:"$Sreact.suspense"
 15:I[4911,[],"AsyncMetadata"]
 b:["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"promise":"$@16"}]}]
-17:I[1114,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","848","static/chunks/app/page/%5Bpage%5D/page-728e09c32f66e03f.js"],"default"]
+17:I[1114,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","848","static/chunks/app/page/%5Bpage%5D/page-3d16974de746edb8.js"],"default"]
 e:null
-18:Tdf0,
+18:T1a75,
+인증방식에는 대표적으로 두가지가 있다.
+
+제일 많이 사용하는 세션 방식과 토큰 방식
+
+- 인증 -> 유저가 누구인지 확인
+- 인가 -> 유저의 요청에 대한 권한을 확인하고 허가
+
+---
+
+### 세션방식
+- 로그인 요청 -> 서버에서 세션 key-value로 구분해 정보를 저장
+- 서버 -> 클라이언트 측으로 http header cookie에 세션 id를 담아 전달
+- 클라이언트 쪽에서 response값으로 cookie에 저장된 세션을 확인할 수 있는데, 브라우저에 저장
+
+세션 방식은 HTTP요청이 노출되어도 세션 자체에는 의미있는 값이 없기 때문에 보안상 유리할 수 있다.
+
+각 사용자마다 고유한 id를 갖고 있기 때문에 매번 회원정보를 확인할 필요가 없다.
+
+서버에 따로 세션 저장소를 두기 때문에 사용자가 많아지면 서버에 부담이 간다.
+
+각 브라우저들은 보안상의 이슈로 서버와 프론트간의 도메인이 같아야 쿠키가 전달된다.
+
+- 프론트 측에서는 Axios 사용시 ```withCredentials: true```설정을 통해 서로 다른 도메인간의 요청에도 credential 정보를 받을 것인지 설정해야 한다.
+
+- 서버 측에서는 응답 헤더의 Access-Control-Allow-Credentials 항목을 true로 설정해야 하고,
+응답 헤더의 Access-Control-Allow-Origin의 값을 와일드 카드('*') 제외하고 설정 되어야 한다.
+
+---
+
+우선 localhost와 서버상의 도메인이 달라 proxy 설정을 해줬다.
+
+```ts
+// pages/api/[...path].ts
+import type { NextApiRequest, NextApiResponse } from "next";
+import httpProxyMiddleware from "next-http-proxy-middleware";
+
+export const config = {
+  api: {
+    externalResolver: true
+  },
+}
+
+export default (req: NextApiRequest, res: NextApiResponse) => {
+    httpProxyMiddleware(req, res, {
+        target: process.env.NEXT_PUBLIC_API_URL,
+        changeOrigin: true,
+        pathRewrite: [
+          {
+            patternStr: "^/api/",
+            replaceStr: "/",
+          },
+        ],
+        cookieDomainRewrite: {
+          "*": "localhost",
+        },
+      })
+    };
+```
+
+```ts
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  swcMinify: true,
+  reactStrictMode: true,
+  compiler: {
+    styledComponents: true,
+    removeConsole: process.env.NODE_ENV === "production",
+  },
+  async rewrites() {
+    return process.env.NODE_ENV === "production"
+      ? [
+          {
+            source: "/api/:path*",
+            destination: `${process.env.NEXT_PUBLIC_API_URL}/:path*`,
+          },
+        ]
+      : [];
+  },
+{...}
+};
+```
+---
+위 처럼 설정해 주니 서버에서 보낸 cookie가 localhost 브라우저에 잘 들어왔다.
+
+여기서 고민했던 부분이 csr환경이 아닌 next의 ssr환경인 프론트측 서버단에서는 유저인증을 어떻게 확인할 것인가 였다.
+
+우선 로그인 상태와 비로그인 상태에서 접근불가능한 페이지 접근시 리다이렉트를 시키는 방법으로 진행했다.
+
+Nextjs middleware는 root폴더에 middleware.ts 파일을 만들어 주면 페이지 라우팅 되기 전에 middleware가 자동으로 실행된다.
+
+Nextjs에서 지원하는 middleware는 들어오는 요청에 따라서 req, res, header를 다시 작성하거나 리디렉션 등을 수정하거나 재작성할 수 있다.
+```ts
+import type { NextRequest } from "next/server";
+import { fetchAuth, inValidateAuth, validateAuth } from "@/lib/validateUser";
+
+const validatedUrl = [
+  "/users/sign-in",
+  "/users/sign-up/normal",
+  "/users/sign-up/social",
+  "/users/sign-up/vendor",
+  "/users/password/reset",
+];
+
+const inValidateUrl = ["/users/my-page"];
+
+export async function middleware(req: NextRequest) {
+  const url = req.nextUrl;
+
+  if (validatedUrl.includes(url.pathname)) {
+    return await validateAuth(req);
+  }
+
+  if (inValidateUrl.includes(url.pathname)) {
+    return await inValidateAuth(req);
+  }
+
+  return await fetchAuth(req);
+}
+
+export const config = {
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico|assets).*)"],
+};
+```
+```ts
+import { NextRequest, NextResponse } from "next/server";
+
+export const validateUser = (req: NextRequest) => {
+  return fetch("url", {
+    method: "get",
+    mode: "cors",
+    credentials: "same-origin",
+    headers: {
+      "Content-Type": "application/json",
+      cookie: `${req.headers.get("cookie")}`,
+    },
+  });
+};
+
+{...}
+
+export const fetchAuth = async (req: NextRequest) => {
+    try {
+        const res = NextResponse.next();
+
+        const response = await validateUser(req);
+        const data = await response.json();
+
+        if (response.ok) {
+            res.cookies.set("user", JSON.stringify(data));
+            return res;
+        }
+
+        if (!response.ok) {
+            res.cookies.delete("user");
+            res.cookies.delete("user.sid");
+            return res;
+        }
+    } catch (e) {
+        throw new Error("Validate Error");
+    }
+};
+```
+
+처음에 이런식으로 미들웨어를 구현했다. matcher로 페이지단만 확인했고, 페이지 라우팅시 유저 인증에 성공하면 cookie를 통해 유저정보와 세션을 전달했다.
+
+또 인증성공시 접근 x, 비인증시 접근 x 한 url을 확인해 리다이렉트 시키도록 했다.
+
+처음 해봤던 작업이었고, 제대로 구현한지 확신이 들지 않아 코드리뷰를 요청했다.
+
+middleware를 사용하지 않고 hocs를 사용해 auth를 호출하고, axios config에 headers를 전달하는 방법으로 알려주셨다.
+
+```ts
+import React from "react";
+import { GetServerSideProps, GetServerSidePropsContext } from "next";
+import { getAuth } from "@/models/auth";
+import merge from "lodash/merge";
+
+const validatedUrl = [
+  "/users/sign-in",
+  "/users/sign-up/normal",
+  "/users/sign-up/social",
+  "/users/sign-up/vendor",
+  "/users/password/reset",
+];
+
+const inValidateUrl = [
+  "/users/my-page",
+  "/users/my-page/profile",
+  "/users/my-page/review",
+];
+
+export default function withAuth(getServerSideProps?: GetServerSideProps) {
+  return async function (context: GetServerSidePropsContext) {
+    const url = context.req.url as string;
+    let user = null;
+    try {
+      const res = await getAuth({ headers: context.req.headers });
+      user = res.data;
+    } catch (e) {}
+    if (inValidateUrl.includes(url) && !user) {
+      return {
+        redirect: {
+          permanent: false,
+          destination: "/users/sign-in",
+        },
+      };
+    }
+    {...}
+    const ret = await getServerSideProps?.(context);
+    return merge(ret, { props: { user } });
+  };
+}
+```
+
+middleware는 nextjs에서 서버도 같이 구성해 사용하면 좋을거라고 조언을 주셨다.
+
+```ts
+// page/*
+{...}
+
+export const getServerSideProps = withAuth();
+
+{...}
+```
+19:Tdf0,
 예전에 하다가 중단된 프로젝트를 다시 시작해 보려고 새 레포로 마이그레이션 하는 과정에서
 
 패키지 버전도 올리고, 다른 기술을 찾아보다가 예전부터 써보고싶었던 tailwindcss를 써보기로 했다.
@@ -161,7 +386,7 @@ module.exports = {
   Save changes
 </button>
 ```
-19:T7a1,
+1a:T7a1,
 자바스크립트의 함수는 호출될 때, 매개변수 이외에 `arguments` 객체와 `this`를 암묵적으로 전달 받는다.
 
 - Java의 `this` 는 인스턴스 자신을 가르키는 참조변수
@@ -220,7 +445,7 @@ module.exports = {
 - 일반 함수 → 화살표 함수
 - 생성자 함수 → class
 - 객체 메서드 → 객체 메서드 축약형
-1a:T1aed,
+1b:T1aed,
 ```shell
 npm create svelte@latest my-app
 cd my-app
@@ -481,7 +706,7 @@ rss도 위와 동일하다.
 
 그래도 앞으론 리액트를 더 공부 할 것이다. 먹고 살려면 ㅎㅎ
 
-1b:T9de,
+1c:T9de,
 
 얼마전 해외 블로그를 구경하다가 이런 글을 보았다.
 
@@ -579,7 +804,7 @@ Nothing was returned from render. This usually means a return statement is missi
 이런 에러를 만난 적이 많았는데, 위와 관련된 것이 아닌가 생각 된다.
 
 조금 더 생각하면서 개발하자
-1c:Tff5,
+1d:Tff5,
 예전부터 궁금했었던 부분이었다.
 
 **useCallback**과 **useMemo** hook은 함수와 값을 메모이제이션 해주는 역할을 한다.
@@ -701,7 +926,7 @@ useMemo와 useCallback은 초기 렌더링에는 쓸모가 없다. 오히려 초
 [https://beta.reactjs.org/reference/react/useMemo#usage](https://beta.reactjs.org/reference/react/useMemo#usage)
 
 [https://www.developerway.com/posts/how-to-use-memo-use-callback](https://www.developerway.com/posts/how-to-use-memo-use-callback)
-1d:T84a,
+1e:T84a,
 ### fireEvent를 userEvent로 바꿔보기
 
 ```shell
@@ -779,7 +1004,7 @@ const checkboxLabel = (
   </span>
 );
 ```
-1e:Tff3,
+1f:Tff3,
 ### * Mock Service Worker
 
 백엔드에서 데이터를 가져오는 부분을 테스트
@@ -943,7 +1168,7 @@ const Type = ({orderType}) => {
 
 export default Type;
 ```
-1f:T1633,
+20:T1633,
 ### * Jest - Facebook에서 만든 테스팅 프레임 워크.
 
 주로 단위 (unit) 테스트를 위해 사용.
@@ -1176,202 +1401,7 @@ test('Prevent -,+ button from being pressed when the on/off button is clicked', 
   on/off
 </button>
 ```
-20:Tfe7,
-### 1\. Utility Type
-
-```typescript
-  Partial<T>
-```
-
-\- T의 모든 프로퍼티를 선택적으로 만드는 타입
-
-```typescript
-interface User {
-  name: string;
-  age: number;
-}
-
-function updateUser(user: User, fieldsToUpdate: Partial<User>) {
-  return { ...user, ...fieldsToUpdate };
-}
-
-const user1 = {
-  name: "been",
-  age: 30,
-};
-
-const user2 = updateUser(user1, {
-  age: 32,
-});
-```
-
----
-
-```typescript
-  Readonly<T>
-```
-
-T의 모든 프로퍼티를 읽기 전용으로 구성, 생성된 타입의 프로퍼티는 재할당 할 수 없다.
-
----
-
-```typescript
-  Record<K,T>
-```
-
-타입 T의 프로퍼티의 집합 K로 타입을 구성한다.
-
-주로 다른 타입에 매핑시키는데 사용
-
-```typescript
-interface PageInfo {
-  title: string;
-}
-
-type Page = "home" | "about" | "contact";
-
-const x: Record<Page, PageInfo> = {
-  about: { title: "about" },
-  contact: { title: "contact" },
-  home: { title: "home" },
-};
-```
-
----
-
-```typescript
-  Pick<T,K>
-```
-
-T에서 K의 집합을 선택해 타입을 구성
-
-```typescript
-  Omit<T,K>
-```
-
-T에서 모든 프로퍼티를 가져온 다음 K를 제거한 타입을 구성
-
----
-
-```typescript
-  NonNullable<T>
-```
-
-T에서 null과 undefined를 제외한 타입을 구성
-
----
-
-출처 : [https://typescript-kr.github.io/pages/utility-types.html](https://typescript-kr.github.io/pages/utility-types.html)
-
----
-
-### 2\. Storybook 작성
-
-[https://been.tistory.com/58](https://been.tistory.com/58)
-
----
-
-### 3\. npm 패키지 배포
-
-[https://www.npmjs.com/package/jci-moyeo-design-system](https://www.npmjs.com/package/jci-moyeo-design-system)
-
-
----
-
-### 4\. aria, role
-
-> 웹 접근성(web accessibility)은 장애를 가진 사람과 장애를 가지지 않은 사람 모두가 웹사이트를 이용할 수 있게 하는 방식을 가리킨다. 사이트가 올바르게 설계되어 개발되고 편집되어 있을 때 모든 사용자들은 정보와 기능에 동등하게 접근할 수 있다.
-
-> 웹 표준은 월드 와이드 웹의 측면을 서술하고 정의하는 공식 표준이나 다른 기술 규격을 가리키는 일반적인 용어이다. 최근에 이 용어는 웹 사이트를 작성하는 데 중요도가 높아지고 있으며 웹 디자인, 개발과 관계가 있다.
-
-```typescript
-role="form"
-<form>과 동일하게 사용
-```
-
-
-```typescript
-role="search"
-검색 역할을 담당
-```
-
-```typescript
-role="button"
-스크린리더에 버튼임을 알려주지만 버튼기능을 제공하지는 않기 때문에 <button>이나 <input type='button'>을 사용하는게 좋다.
-```
-
-
-```typescript
-role ="tablist"
-**탭메뉴 등의 리스트임을 사용자에게 전달한다.
-```
-
-
-```typescript
-role="tab"
-보조기기가 탭으로 인식
-aria-required를 true로 지정해 해당요소가 필수적으로 입력되어야 함을 나타냄
-```
-
-```html
-<input {...} aria-required="true">
-```
-
--   추가설명 속성 : div #reference의 내용을 input의 추가설명으로 사용
-
-```html
-<input type="text" aria-describedby="reference">
-<div id="reference">추가설명</div>
-```
-
-ex) "이메일을 입력하세요." 라는 추가적인 설명
-
--   aria-label로 어떤 요소인지 라벨링할 수 있다.
-
-```html
-<div role="group" aria-label="레이블">
-```
-
--   유효한지 아닌지 구분
-
-```html
-<input type="text" aria-invalid="true">
-```
-
--   버튼 클릭상태와 비클릭상태
-
-```html
-<button aria-pressed="true">
-```
-
-**1) 태그와 중복되지 않게 사용한다.**
-
-```html
-<button role="button"> </button>
-```
-
-**2) native요소의 의미, 기능 변경을 하지 않는다.**
-
-```html
-<h1 role="button">버튼</h1>
-```
-
-**3) 키보드로 포커싱이 가능하게 설정한다.**
-
-```html
-<span role="button" tabindex="0">버튼</span>
-```
-
-특히 button으로 사용하는경우
-
-```typescript
-aria-hidden="true"
-스크린리더가 접근하지는 않지만, 이미지를 보여주고 싶은 경우
-```
-
-[https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L17",null,{"isPagination":true,"posts":{"posts":[{"content":"$18","data":{"title":"Nextjs에서 tailwind 써보기","date":"$D2023-02-18T00:00:00.000Z","description":"공식문서 보면서 tailwind 써보기","category":"javaScript","titleImage":"/assets/postIcon/tailwind-css-icon.webp"},"slug":"tailwindcss"},{"content":"$19","data":{"title":"JavaScript this","date":"$D2023-02-02T00:00:00.000Z","description":"사내 스터디 this","category":"study","titleImage":"/assets/postIcon/javascript.webp"},"slug":"this"},{"content":"$1a","data":{"title":"스벨트킷으로 블로그 만들어보기","date":"$D2023-01-30T00:00:00.000Z","description":"스벨트킷으로 블로그 만든 과정을 정리","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-blog"},{"content":"\n### Provider 테스팅 해보기\n\n```js\nrender(<Options optionType=\"scoops\" />, {wrapper: OrderDetailsProvider});\n```\n\n테스트 wrapper에 Provider로 감싸주면 된다.\n\n여기서는 redux나 recoil 등 다른 라이브러리도 가능\n\n---\n\n전역적으로도 사용이 가능\n\n```js\nimport {render} from '@testing-library/react';\nimport {OrderDetailsProvider} from '../contexts/OrderDetails';\n\nconst renderWithContext = (ui, options) => render(ui, {wrapper: OrderDetailsProvider, ...options});\n\nexport * from '@testing-library/react';\n\nexport {renderWithContext as render};\n```\n","data":{"title":"리액트 테스팅(4)","date":"$D2023-01-02T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-4"},{"content":"$1b","data":{"title":"리액트 조건부 렌더링에 대한 생각","date":"$D2022-12-29T00:00:00.000Z","description":"해외 블로그를 보며 정리한 조건부 렌더링에 대한 생각","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"conditional-rendering"},{"content":"$1c","data":{"title":"useCallback, useMemo 무조건 좋은가?","date":"$D2022-12-28T00:00:00.000Z","description":"useCallback과 useMemo에 대한 생각 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"usecallback-and-usememo"},{"content":"$1d","data":{"title":"리액트 테스팅(3)","date":"$D2022-12-26T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-3"},{"content":"$1e","data":{"title":"리액트 테스팅(2)","date":"$D2022-12-14T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-2"},{"content":"$1f","data":{"title":"리액트 테스팅(1)","date":"$D2022-12-10T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-1"},{"content":"$20","data":{"title":"6주간 스터디하며 배운것들","date":"$D2022-10-21T00:00:00.000Z","description":"6주간 진행한 스터디에서 얻은 것들","category":"til","titleImage":"/assets/postIcon/til.webp"},"slug":"study"}],"total":43},"page":"3"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (39)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}]]]}]]}]
+9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L17",null,{"isPagination":true,"posts":{"posts":[{"content":"$18","data":{"title":"Next.js middleware와 getServerSideProps","date":"$D2023-02-22T00:00:00.000Z","description":"세션방식의 로그인 인증, middleware와 getServerSideProps를 사용해 구현한 기록","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-middleware"},{"content":"$19","data":{"title":"Nextjs에서 tailwind 써보기","date":"$D2023-02-18T00:00:00.000Z","description":"공식문서 보면서 tailwind 써보기","category":"javaScript","titleImage":"/assets/postIcon/tailwind-css-icon.webp"},"slug":"tailwindcss"},{"content":"$1a","data":{"title":"JavaScript this","date":"$D2023-02-02T00:00:00.000Z","description":"사내 스터디 this","category":"study","titleImage":"/assets/postIcon/javascript.webp"},"slug":"this"},{"content":"$1b","data":{"title":"스벨트킷으로 블로그 만들어보기","date":"$D2023-01-30T00:00:00.000Z","description":"스벨트킷으로 블로그 만든 과정을 정리","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-blog"},{"content":"\n### Provider 테스팅 해보기\n\n```js\nrender(<Options optionType=\"scoops\" />, {wrapper: OrderDetailsProvider});\n```\n\n테스트 wrapper에 Provider로 감싸주면 된다.\n\n여기서는 redux나 recoil 등 다른 라이브러리도 가능\n\n---\n\n전역적으로도 사용이 가능\n\n```js\nimport {render} from '@testing-library/react';\nimport {OrderDetailsProvider} from '../contexts/OrderDetails';\n\nconst renderWithContext = (ui, options) => render(ui, {wrapper: OrderDetailsProvider, ...options});\n\nexport * from '@testing-library/react';\n\nexport {renderWithContext as render};\n```\n","data":{"title":"리액트 테스팅(4)","date":"$D2023-01-02T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-4"},{"content":"$1c","data":{"title":"리액트 조건부 렌더링에 대한 생각","date":"$D2022-12-29T00:00:00.000Z","description":"해외 블로그를 보며 정리한 조건부 렌더링에 대한 생각","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"conditional-rendering"},{"content":"$1d","data":{"title":"useCallback, useMemo 무조건 좋은가?","date":"$D2022-12-28T00:00:00.000Z","description":"useCallback과 useMemo에 대한 생각 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"usecallback-and-usememo"},{"content":"$1e","data":{"title":"리액트 테스팅(3)","date":"$D2022-12-26T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-3"},{"content":"$1f","data":{"title":"리액트 테스팅(2)","date":"$D2022-12-14T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-2"},{"content":"$20","data":{"title":"리액트 테스팅(1)","date":"$D2022-12-10T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-1"}],"total":44},"page":"3"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (40)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}]]]}]]}]
 12:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 d:null
 16:{"metadata":[["$","title","0",{"children":"Been blog - 3"}],["$","meta","1",{"name":"description","content":"Been dev-note - 3"}],["$","meta","2",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","3",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","link","4",{"rel":"canonical","href":"https://wonbeenna.github.io/page/3"}],["$","meta","5",{"property":"og:title","content":"Been blog - 3"}],["$","meta","6",{"property":"og:description","content":"Been dev-note - 3"}],["$","meta","7",{"property":"og:url","content":"https://wonbeenna.github.io/page/3"}],["$","meta","8",{"property":"og:site_name","content":"Been blog"}],["$","meta","9",{"property":"og:locale","content":"ko_KR"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 3"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 3"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","24",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}]],"error":null,"digest":"$undefined"}

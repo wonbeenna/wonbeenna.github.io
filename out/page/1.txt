@@ -1,9 +1,9 @@
 1:"$Sreact.fragment"
-2:I[9243,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],""]
-3:I[881,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],"Providers"]
-4:I[6874,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","848","static/chunks/app/page/%5Bpage%5D/page-728e09c32f66e03f.js"],""]
-5:I[3063,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],"Image"]
-6:I[1186,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-6125c08b6d2f6731.js"],"default"]
+2:I[9243,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-2026af6fce535623.js"],""]
+3:I[881,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-2026af6fce535623.js"],"Providers"]
+4:I[6874,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","848","static/chunks/app/page/%5Bpage%5D/page-3d16974de746edb8.js"],""]
+5:I[3063,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-2026af6fce535623.js"],"Image"]
+6:I[1186,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-2026af6fce535623.js"],"default"]
 7:I[7555,[],""]
 8:I[1295,[],""]
 a:I[9665,[],"MetadataBoundary"]
@@ -14,13 +14,104 @@ f:I[4911,[],"AsyncMetadataOutlet"]
 :HL["/_next/static/media/47cbc4e2adbc5db9-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/css/e539936c7dc6b882.css","style"]
 :HL["/_next/static/css/2e1c4c7c40082d2a.css","style"]
-0:{"P":null,"b":"z3NOd-RwbnNygtPSsa4a5","p":"","c":["","page","1"],"i":false,"f":[[["",{"children":["page",{"children":[["page","1","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/2e1c4c7c40082d2a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","1","d"],["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",["$","$La",null,{"children":"$Lb"}],null,["$","$Lc",null,{"children":["$Ld","$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","l8PNeDmIYVGxi_x9N2Y6G",{"children":[["$","$L11",null,{"children":"$L12"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$13","$undefined"],"s":false,"S":true}
+0:{"P":null,"b":"Zx_IB7Z-QhvPTJ6OPVOmt","p":"","c":["","page","1"],"i":false,"f":[[["",{"children":["page",{"children":[["page","1","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/2e1c4c7c40082d2a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","1","d"],["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",["$","$La",null,{"children":"$Lb"}],null,["$","$Lc",null,{"children":["$Ld","$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","QIjsnTljq3kALExSYMrW6",{"children":[["$","$L11",null,{"children":"$L12"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$13","$undefined"],"s":false,"S":true}
 14:"$Sreact.suspense"
 15:I[4911,[],"AsyncMetadata"]
 b:["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"promise":"$@16"}]}]
-17:I[1114,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","848","static/chunks/app/page/%5Bpage%5D/page-728e09c32f66e03f.js"],"default"]
+17:I[1114,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","848","static/chunks/app/page/%5Bpage%5D/page-3d16974de746edb8.js"],"default"]
 e:null
-18:T1494,
+18:T16ad,
+## 세션과 쿠키의 개념
+
+### 세션(session)
+
+세션은 서버가 사용자(클라이언트)마다 정보를 유지하기 위해 서버측에서 관리하는 데이터 저장소다.
+세션 데이터 자체는 서버 메모리나 별도 저장소(DB, Redis 등)에 저장하고, 클라이언트에게는 세션을 구분할 수 있는 고유 ID(session ID)를 발급한다.
+세션 ID는 클라이언트가 서버에 요청할 때마다 함께 전송되며, 서버는 이 ID를 통해 해당 클라이언트의 세션 데이터를 조회한다.
+
+- 서버 측에서 관리, 저장 : 데이터는 서버에 있으므로 보안성이 높다.
+- 임시 : 브라우저를 종료하거나 세션 타임아웃이 발생하면 세션 데이터는 삭제된다.
+- 서버 리소스 : 사용자가 많아지면 서버 메모리나 저장소에 부담이 될 수 있다.
+
+---
+
+### 쿠키(cookie)
+
+쿠키는 사용자(클라이언트)의 브라우저에 저장되는 작은 데이터 조각이다. 서버가 클라이언트에게 쿠키를 보내면 클라이언트는 이를 저장하고, 이후 서버에 요청할 때마다 해당 쿠키를 서버에 전달한다.
+이를 통해 서버는 사용자 정보를 지속적으로 식별하거나 상태를 유지할 수 있다.
+
+- 클라이언트 측에서 관리, 저장 : 쿠키는 클라이언트의 브라우저에 저장되므로 서버에 부담이 적다.
+- 지속성 : 만료 기간을 설정할 수 있어, 사용자가 브라우저를 종료해도 쿠키는 남아있을 수 있다.
+- 크기 제한 : 쿠키는 일반적으로 4KB 이하로 제한된다.
+- 보안성 : 쿠키는 클라이언트에 저장되므로 보안성이 낮다. 민감한 정보는 쿠키에 저장하지 않는 것이 좋다.
+
+---
+
+## 세션과 쿠키의 차이점
+
+| 구분       | 세션(session)                          | 쿠키(cookie)                           |
+|------------|----------------------------------------|----------------------------------------|
+| 저장 위치  | 서버 측                                | 클라이언트 측                          |
+| 데이터 크기 | 서버 메모리나 저장소에 저장            | 클라이언트의 브라우저에 저장           |
+| 만료 기간  | 세션 타임아웃 또는 브라우저 종료 시 삭제 | 만료 기간 설정 가능                     |
+| 보안성     | 상대적으로 높음                        | 상대적으로 낮음                        |
+| 사용 용도   | 사용자 인증, 장바구니 등 상태 유지      | 사용자 설정, 로그인 정보 등 지속적 저장 |
+| 서버 리소스 | 사용자가 많아지면 부담이 될 수 있음     | 서버에 부담이 적음                      |
+| 크기 제한  | 없음                                   | 일반적으로 4KB 이하                    |
+| HTTP 전송  | 세션 ID를 통해 서버와 클라이언트 간에 전송 | 쿠키를 통해 서버와 클라이언트 간에 전송  |
+| 보안 설정   | HTTPS 전송 시 보안 설정 가능            | HttpOnly, Secure 속성으로 보안 설정 가능 |
+| 만료 설정   | 서버에서 관리                          | 클라이언트에서 관리                     |
+| 사용 예시   | 로그인 상태 유지, 장바구니 정보 저장    | 사용자 설정, 로그인 정보 저장           |
+| 삭제 방법   | 서버에서 세션 삭제                     | 클라이언트에서 쿠키 삭제                |
+
+---
+
+## 세션과 쿠키의 사용 예시
+
+### 세션 사용 예시
+
+- 로그인 상태 유지 : 사용자가 로그인하면 서버는 세션을 생성하고, 세션 ID를 클라이언트에게 전달한다. 이후 클라이언트는 이 세션 ID를 사용하여 서버에 요청할 때마다 로그인 상태를 유지할 수 있다.
+- 장바구니 정보 : 사용자가 쇼핑몰에서 장바구니에 상품을 담으면, 서버는 세션에 장바구니 정보를 저장한다. 사용자가 페이지를 이동하더라도 장바구니 정보는 유지된다.
+- 사용자 맞춤형 정보 : 사용자가 웹사이트에서 설정한 개인화된 정보를 세션에 저장하여, 사용자가 페이지를 이동하더라도 해당 정보를 유지할 수 있다.
+```javaScript
+const session = require('express-session');
+
+app.use(session({
+  secret: 'secret-key', // 암호화용 키
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: true }
+}));
+
+app.post('/login', (req, res) => {
+  req.session.user = { id: 'user123', name: 'john' };
+});
+```
+
+---
+
+### 쿠키 사용 예시
+- 로그인 정보 : 사용자가 로그인하면 서버는 쿠키에 로그인 정보를 저장하고, 이후 클라이언트는 이 쿠키를 사용하여 자동으로 로그인할 수 있다.
+- 사용자 설정 : 사용자가 웹사이트에서 설정한 언어, 테마 등을 쿠키에 저장하여, 사용자가 페이지를 이동하더라도 해당 설정을 유지할 수 있다.
+- 광고 추적 : 광고 네트워크는 쿠키를 사용하여 사용자의 행동을 추적하고, 맞춤형 광고를 제공할 수 있다.
+
+```javaScript
+// Cookie 생성 예시
+document.cookie = "username=john; expires=Fri, 31 Dec 2024 23:59:59 GMT; path=/";
+
+// 서버에서 쿠키 설정 (Express 예시)
+res.cookie('username', 'john', { maxAge: 900000, httpOnly: true });
+```
+
+---
+
+### 정리
+
+결국, 둘의 핵심적인 차이는 저장 위치(서버 vs 클라이언트)와 지속성, 보안성에 있다.
+
+- 세션(Session): 민감한 데이터나 일시적으로 관리해야 하는 데이터, 서버에서 관리가 필요한 데이터를 저장.
+- 쿠키(Cookie): 사용자의 브라우저에서 저장하는 간단하고 가벼운 데이터를 저장, 사용자의 설정 값, 지속적인 추적, 개인화 데이터에 적합.
+19:T1494,
 ### React Parallel Routes와 View Transitions API
 
 웹뷰 개발시 AOS에서 뒤로가기 버튼을 누르면 모달이 닫히지 않고, 앱이 종료되거나 웹뷰가 닫히는 이슈가 생길 수 있다.
@@ -179,7 +270,7 @@ View Transitions API 대해서는 다음에 작성하는걸로하고,, 위처럼
 이런 식으로 모달을 구현하면 좀 더 앱스러운 UX를 제공할 수 있다.
 뒤로가기시에도 모달이 닫히고, URL도 변경되기 때문에 사용자가 뒤로가기 버튼을 눌렀을 때 모달이 닫히는 동작을 자연스럽게 처리할 수 있다.
 
-19:T3de5,
+1a:T3de5,
 ### 들어가며
 단순한 스터디에서 시작했지만, 예비창업패키지에도 선정되며 아주 작은 스타트업처럼 운영하게 된 스터디를 회고하며 느낀 점과 배운 점을 정리해보려 한다.
 
@@ -547,7 +638,7 @@ lighthouse 점수를 최대한 높이기 위해 노력했고, 실제로도 검�
 25년도 지원사업은 아쉽게도 떨어졌다. 낮은 진입장벽, 데이터 수집 한계, 구조가 비슷한 플랫폼에 손익분기 달성 실패, 낮은 재방문 주기 등이 이유였다.
 
 현재 내부에서는 다양한 의견들이 오가고있다. 아무래도 프로젝트를 유지하는데는 비용적인 문제가 가장 크기때문에, 수익모델 개선, 다른 신사업 아이템들을 고민하고 있다.
-1a:T1750,
+1b:T1750,
 ### 딥링크
 - 웹링크 URL이 사용자를 특정 웹사이트로 이동시키는 것처럼, 딥링크는 사용자를 특정 앱이나 앱의 원하는 화면으로 이동하도록 유도하는 링크이다.
 
@@ -748,7 +839,7 @@ export const linkingConfig: LinkingOptions<NavigationProps> = {
 - 앱이 처음 실행될 때 : `getInitialURL`을 이용해 딥링크 처리
 - 앱이 백그라운드 -> 포그라운드 전환될 때 : `subscribe`에 `Appstate`를 이용해 딥링크 처리
 - 앱이 실행중일 때 : `subscribe`에 `Linking`을 이용해 딥링크 처리
-1b:T6a2,
+1c:T6a2,
 웹 페이지가 현재 사용자에게 보이는지 아닌지를 확인하는 방법이 있다.
 
 `document.visibilityState`를 사용하면 페이지가 현재 사용자에게 보이는지 아닌지를 확인할 수 있다.
@@ -797,7 +888,7 @@ export default useVisibilityChange;
 ```
 
 웹 페이지 이탈을 감지할 수 있고, 모바일 웹뷰에서 앱의 백그라운드 상태나 전환을 감지할 수 있다.
-1c:Taca,
+1d:Taca,
 사내 프로젝트를 진행하면서 IOS 웹뷰에서 안전 영역을 설정하는 방법에 대해 알게되었다.
 
 아이폰 X 부터는 디스플레이에 노치 디자인이 적용되고, 하단에는 물리 버튼이 사라지고 제스처로 대체되었다.
@@ -894,7 +985,7 @@ export default function RootLayout({
 ```
 
 위와 같이 overflow 만 hidden 처리하여 해결하였다.
-1d:T1359,
+1e:T1359,
 monorepo를 사용해 패키지들을 분리하는 과정에서 이슈를 확인했다.
 
 번들링 하지않고, 패키지들을 `index.ts`에서 직접 내보내 사용했을 때, 사용하지 않는 코드들도 함께 포함되는 문제가 있었다.
@@ -1057,7 +1148,7 @@ utils에서 내보내는 함수 중 프로젝트별로 사용하는곳과 사용
 
 rollup 설정에 대해서 아직 완벽하게 이해하지는 못했으며, 내가 의도한대로 작동하는지도 조금 확신이 들지 않지만 이번 기회에 조금 더 깊게 공부해보고 계속해서 확인해보며 수정해나가야겠다.
 개인적으로는 최적화해 나가는 과정이 매우 재밌었던 작업이었다!
-1e:Ta2c,
+1f:Ta2c,
 최근 rollup으로 패키지를 만드는 과정에서 cjs와 esm에 대해 알게되었다.
 
 ### Module
@@ -1132,7 +1223,7 @@ console.log(lib.name) // lib
 - [kakao blog](https://tech.kakao.com/2023/10/19/commonjs-esm-migration/)
 - [CJS](https://nodejs.org/api/modules.html)
 - [ESM](https://nodejs.org/api/esm.html)
-1f:T1101,
+20:T1101,
 자바스크립트에서 원시타입(primitive data type)은 변경 불가능한(immutable)한 값이다.
 
 - Boolean
@@ -1277,7 +1368,7 @@ const [state, setState] = useState({
 ```
 
 이처럼 리액트로 개발을 할 때 불변성을 유지함으로써 안정성을 유지하고 성능을 향상시킬 수 있다.
-20:Tcc7,
+21:Tcc7,
 로컬 개발환경에서 API 요청시 CORS 에러로 API 사용이 어려울 수 있습니다.
 
 이 글은 Vite로 구성된 로컬 개발환경에서 CORS 문제를 해결하는 방식을 작성합니다.
@@ -1376,191 +1467,7 @@ export default ({ mode }) => {
 2. 프록시는 `changeOption` 에 의하여 HTTP 요청 헤더의 Host 값을 `https://example.com` 으로 변경
 3. 프록시는 최종적으로 이 요청을 `https://example.com` 라는 URL로 `target` 서버에 전달
 
-21:T12dc,
-## 바벨이란?
-바벨은 자바스크립트 컴파일러이다.
-사실 자세히 보면 컴파일러보다는 트랜스파일러에 가깝다.
-
-자바스크립트를 자바스크립트로 변환해야하는 이유가 뭘까?
-
-자바스크립트는 크롬, 파이어폭스, 사파리, 익스플로러 등 다양한 브라우저에서 사용되는데, 각 브라우저마다 자바스크립트 엔진이 다르다.
-이러한 자바스크립트 엔진은 자바스크립트 코드를 실행하기 위해 자바스크립트 코드를 기계어로 변환하는데, 이 변환 과정에서 각 브라우저마다 다른 방식으로 변환한다.
-이러한 이유로 자바스크립트 코드를 작성할 때는 크로스 브라우징 이슈를 고려해야 한다. 바벨은 이러한 크로스 브라우징 이슈를 해결하기 위해 사용한다.
-
----
-
-### 컴파일러
-컴파일러란 소스코드를 입력받아 그것을 다른 프로그래밍 언어로 옮기는 것을 말한다.
-예를들어 자바스크립트로 작성한 고급 프로그래밍 언어를 컴퓨터가 이해할 수 있는 어셈블리어로 변환하는 것이다.
-
-### 트랜스파일러
-트랜스파일러란 소스코드를 입력받아 그것을 같은 프로그래밍 언어(유사한 언어)의 다른 버전으로 옮기는 것을 말한다.
-
----
-
-## 바벨의 동작
-바벨은 ECMAScript2015+ 버전의 코드를 하위 버전의 코드로 변환한다.
-이렇게 변환된 코드는 IE11을 포함한 구형 브라우저에서도 동작한다.
-
-바벨은 세 단계로 빌드를 진행한다.
-1. 파싱(Parsing) : 코드를 읽어서 추상 구문 트리 AST(Abstract Syntax Tree)로 변환한다.
-2. 변환(Transformation) : AST를 원하는 형태로 변환한다.
-3. 출력(Printing) : 변환된 AST를 코드로 출력한다.
-
-먼저 바벨을 설치한다
-```shell
-npm install -D @babel/core @babel/cli
-```
-
-```javascript
-const alert = msg => window.alert(msg);
-```
-
-위 코드를 바벨로 변환하면 아무런 변화가 없다.
-
-```shell
-npx babel app.js
-```
-
-```javascript
-const alert = msg => window.alert(msg);
-```
-
----
-
-### 바벨 플러그인
-@babel/plugin-transform-block-scoping 플러그인을 사용해보자.
-
-```shell
-npm install -D @babel/plugin-transform-block-scoping
-```
-
-먼저 root 디렉토리에 babel.config.js 파일을 생성하고
-
-```javascript
-// babel.config.js
-    module.exports = {
-        plugins: [
-            '@babel/plugin-transform-block-scoping'
-        ]
-    }
-```
-
-```javascript
-const alert = msg => window.alert(msg);
-```
-
-위 코드를 바벨로 변환하면 아래와 같이 변환된다.
-
-```javascript
-var alert = msg => window.alert(msg);
-```
-
-위 플러그인은 const, let 키워드를 var 키워드로 변환한다.
-
----
-
-arrow function과 strict mode를 사용해보자.
-
-```shell
-npm install -D @babel/plugin-transform-arrow-functions @babel/plugin-transform-strict-mode
-```
-
-위 코드를 바벨로 변환하면 아래와 같이 변환된다.
-
-```javascript
-"use strict";
-
-var alert = function alert(msg) {
-  return window.alert(msg);
-};
-```
-
----
-
-### 바벨 프리셋
-바벨 프리셋은 바벨 플러그인을 모아놓은 것이다.
-
-위 세가지 플러그인은 아래 프리셋에 모두 포함되어 있다.
-
-```shell
-npm install -D @babel/preset-env
-```
-
-```javascript
-// babel.config.js
-    module.exports = {
-        presets: [
-            '@babel/preset-env'
-        ]
-    }
-```
-
-```javascript
-const alert = msg => window.alert(msg);
-```
-
-위 코드를 바벨로 변환하면 아래와 같이 변환된다.
-
-```javascript
-"use strict";
-
-var alert = function alert(msg) {
-  return window.alert(msg);
-};
-```
-
-추가로 각 프리셋들은 옵션들을 제공하는데
-
-```javascript
-// babel.config.js
-    module.exports = {
-        presets: [
-            [
-                '@babel/preset-env',
-                {
-                    targets: {
-                        chrome: '79',
-                        ie: '11'
-                    },
-                    useBuiltIns: 'usage',
-                    corejs: {
-                        version: 2
-                    }
-                }
-            ]
-        ]
-    }
-```
-위처럼 지원하는 브라우저의 버전을 설정하거나, 폴리필을 사용할지 설정할 수 있다.
-
----
-
-### 웹팩과 통합
-바벨은 직접 사용하진 않고 웹팩과 같은 모듈 번들러와 통합해서 사용한다.
-
-```shell
-npm install -D babel-loader
-```
-
-```javascript
-// webpack.config.js
-module.exports = {
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader'
-            }
-        ]
-    }
-}
-```
-js 확장자로 끝나는 모든 파일에 babel-loader를 적용한다.
-또 node_modules 디렉토리는 제외한다.
-
-9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L17",null,{"isPagination":true,"posts":{"posts":[{"content":"$18","data":{"title":"React Parallel Routes","date":"$D2025-04-14T00:00:00.000Z","description":"AOS 웹뷰에서 뒤로가기시 모달을 닫으려면?","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-parallel-routes"},{"content":"$19","data":{"title":"2년간 스터디하며 배운것들","date":"$D2025-03-18T00:00:00.000Z","description":"2년간의 스터디를 회고하며 느낀 점과 배운 점","category":"til","titleImage":"/assets/postIcon/til.webp"},"slug":"study-remind"},{"content":"$1a","data":{"title":"React Native Deep Linking (2)","date":"$D2025-02-03T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"rn-deep-link-2"},{"content":"$1b","data":{"title":"document.visibilityState","date":"$D2024-12-06T00:00:00.000Z","description":"document.visibilityState를 이용한 페이지의 상태를 확인하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"visibilityState"},{"content":"$1c","data":{"title":"IOS 웹뷰에서 safe area 설정하기","date":"$D2024-07-02T00:00:00.000Z","description":"IOS 웹뷰에서 safe area 를 설정하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"webview-safe-area"},{"content":"$1d","data":{"title":"rollup으로 번들링하는 과정","date":"$D2024-03-09T00:00:00.000Z","description":"처음 rollup으로 번들링하는 과정에서 겪은 문제들과 해결방법","category":"javaScript","titleImage":"/assets/postIcon/rollup-logo.svg"},"slug":"rollup"},{"content":"$1e","data":{"title":"cjs와 esm","date":"$D2024-03-07T00:00:00.000Z","description":"rollup으로 번들링하는 과정에서 알게된 cjs와 esm의 차이점에 대해","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"module-system"},{"content":"$1f","data":{"title":"리액트에서 불변성을 지키는 이유","date":"$D2024-02-25T00:00:00.000Z","description":"리액트에서 불변성을 지키는 이유","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-immutable"},{"content":"$20","data":{"title":"Vite proxy 설정","date":"$D2024-01-18T00:00:00.000Z","description":"Vite 로컬환경에서 CORS 문제 해결하기","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"vite-proxy"},{"content":"$21","data":{"title":"바벨 사용해보기","date":"$D2023-12-01T00:00:00.000Z","description":"바벨 기본 동작과 사용방법","category":"javaScript","titleImage":"/assets/postIcon/babel-icon.svg"},"slug":"babel"}],"total":43},"page":"1"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (39)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}]]]}]]}]
+9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L17",null,{"isPagination":true,"posts":{"posts":[{"content":"$18","data":{"title":"세션과 쿠키","date":"$D2025-05-23T00:00:00.000Z","description":"세션과 쿠키의 개념과 차이점","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"session-cookie"},{"content":"$19","data":{"title":"React Parallel Routes","date":"$D2025-04-14T00:00:00.000Z","description":"AOS 웹뷰에서 뒤로가기시 모달을 닫으려면?","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-parallel-routes"},{"content":"$1a","data":{"title":"2년간 스터디하며 배운것들","date":"$D2025-03-18T00:00:00.000Z","description":"2년간의 스터디를 회고하며 느낀 점과 배운 점","category":"til","titleImage":"/assets/postIcon/til.webp"},"slug":"study-remind"},{"content":"$1b","data":{"title":"React Native Deep Linking (2)","date":"$D2025-02-03T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"rn-deep-link-2"},{"content":"$1c","data":{"title":"document.visibilityState","date":"$D2024-12-06T00:00:00.000Z","description":"document.visibilityState를 이용한 페이지의 상태를 확인하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"visibilityState"},{"content":"$1d","data":{"title":"IOS 웹뷰에서 safe area 설정하기","date":"$D2024-07-02T00:00:00.000Z","description":"IOS 웹뷰에서 safe area 를 설정하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"webview-safe-area"},{"content":"$1e","data":{"title":"rollup으로 번들링하는 과정","date":"$D2024-03-09T00:00:00.000Z","description":"처음 rollup으로 번들링하는 과정에서 겪은 문제들과 해결방법","category":"javaScript","titleImage":"/assets/postIcon/rollup-logo.svg"},"slug":"rollup"},{"content":"$1f","data":{"title":"cjs와 esm","date":"$D2024-03-07T00:00:00.000Z","description":"rollup으로 번들링하는 과정에서 알게된 cjs와 esm의 차이점에 대해","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"module-system"},{"content":"$20","data":{"title":"리액트에서 불변성을 지키는 이유","date":"$D2024-02-25T00:00:00.000Z","description":"리액트에서 불변성을 지키는 이유","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-immutable"},{"content":"$21","data":{"title":"Vite proxy 설정","date":"$D2024-01-18T00:00:00.000Z","description":"Vite 로컬환경에서 CORS 문제 해결하기","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"vite-proxy"}],"total":44},"page":"1"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (40)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}]]]}]]}]
 12:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 d:null
 16:{"metadata":[["$","title","0",{"children":"Been blog - 1"}],["$","meta","1",{"name":"description","content":"Been dev-note - 1"}],["$","meta","2",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","3",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","link","4",{"rel":"canonical","href":"https://wonbeenna.github.io/page/1"}],["$","meta","5",{"property":"og:title","content":"Been blog - 1"}],["$","meta","6",{"property":"og:description","content":"Been dev-note - 1"}],["$","meta","7",{"property":"og:url","content":"https://wonbeenna.github.io/page/1"}],["$","meta","8",{"property":"og:site_name","content":"Been blog"}],["$","meta","9",{"property":"og:locale","content":"ko_KR"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 1"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 1"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","24",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}]],"error":null,"digest":"$undefined"}
