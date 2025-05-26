@@ -14,13 +14,158 @@ f:I[4911,[],"AsyncMetadataOutlet"]
 :HL["/_next/static/media/47cbc4e2adbc5db9-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/css/e539936c7dc6b882.css","style"]
 :HL["/_next/static/css/e7c7294f242bce08.css","style"]
-0:{"P":null,"b":"nb0nDyCPZMTUE2B8F7fpv","p":"","c":["","page","2"],"i":false,"f":[[["",{"children":["page",{"children":[["page","2","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e7c7294f242bce08.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","2","d"],["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",["$","$La",null,{"children":"$Lb"}],null,["$","$Lc",null,{"children":["$Ld","$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","qSg633fHkGrtS_t-WPDIX",{"children":[["$","$L11",null,{"children":"$L12"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$13","$undefined"],"s":false,"S":true}
+0:{"P":null,"b":"T39Mvz6c8SIi7W1th-g-L","p":"","c":["","page","2"],"i":false,"f":[[["",{"children":["page",{"children":[["page","2","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e7c7294f242bce08.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","2","d"],["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",["$","$La",null,{"children":"$Lb"}],null,["$","$Lc",null,{"children":["$Ld","$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","ca87MnyVD9W2ldAgjqb0b",{"children":[["$","$L11",null,{"children":"$L12"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$13","$undefined"],"s":false,"S":true}
 14:"$Sreact.suspense"
 15:I[4911,[],"AsyncMetadata"]
 b:["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"promise":"$@16"}]}]
 17:I[1114,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","848","static/chunks/app/page/%5Bpage%5D/page-3d16974de746edb8.js"],"default"]
 e:null
-18:Tcc7,
+18:T1101,
+자바스크립트에서 원시타입(primitive data type)은 변경 불가능한(immutable)한 값이다.
+
+- Boolean
+- String
+- Number
+- undefined
+- null
+- Symbol
+
+변경이 불가능하다라는 뜻은 메모리 영역에서의 변경이 불가능하다는 뜻이며, 재할당은 가능하다.
+
+---
+
+원시타입 이외의 모든 값은 Object(객체)이다. 객체는 변경 가능한(mutable)한 값이다.
+객체는 변경 가능한(mutable)값이기 때문에 새로운 값을 다시 만들 필요없이 직접 변경이 가능하다.
+
+```javascript
+let string = "hello";
+string = "world";
+```
+string 변수에 "hello"라는 문자열을 할당하고, 다시 "world"라는 문자열을 할당했다. 이때, 첫번째 문자열은 메모리에서 사라지고, 새로운 문자열이 메모리에 할당된다.
+
+```javascript
+let string = "hello";
+let string2 = string.slice(0, 3);
+
+// string = "hello"
+// string2 = "hel"
+```
+string 변수에 "hello"라는 문자열을 할당하고, string2 변수에 string 변수의 문자열을 복사하여 할당했다. 이때, string 변수의 문자열은 변경되지 않는다.
+
+---
+
+```javascript
+let arr = [];
+
+let arr2 = arr.push(1);
+
+// arr = [1]
+```
+
+배열은 객체이기 때문에 변경이 가능하다. 위의 코드에서 arr.push(1)을 통해 arr 배열에 1이라는 원소가 추가되었다. 이때, arr 배열은 변경된다.
+복사본을 리턴하는 메소드가 아닌 push, pop, shift, unshift, splice 등의 메소드는 원본 배열을 변경한다.
+
+```javascript
+let object = {
+  name: "been",
+};
+
+let object2 = object;
+
+object2.name = "been2";
+
+console.log(object.name); // been2
+```
+
+객체는 변경이 가능하기 때문에 object2 변수에 object 변수를 할당하고, object2.name을 변경하면 object.name도 변경된다.
+object도 동시에 변경되는 이유는 object2에 object를 할당할 때, object2는 object의 메모리 주소를 참조하기 때문이다.
+
+object에서 불변성을 유지하는 방법은 새로운 객체를 생성하여 값을 할당하는 방법이다.
+
+---
+
+### 불변성을 유지하는 방법
+- Spread Operator(es6)
+- Object.assign()
+- Array.concat()
+- Array.slice()
+- Array.map()
+- Array.filter()
+- Array.reduce()
+...등
+
+```javascript
+let object = {
+  name: "been",
+};
+
+let object2 = {
+  ...object,
+  name: "been2",
+};
+
+console.log(object.name); // been
+```
+
+object2에 object를 복사하여 새로운 객체를 생성하고, name을 변경하였다. 이때, object는 변경되지 않는다.
+
+---
+
+### 리액트에서 불변성을 지키는 이유
+
+리액트를 사용해 개발을 할 때 useState 등을 사용해 상태를 관리 할 때 push, pop, shift, unshift 등의 메소드를 사용하지 않고,
+새로운 배열을 만들어서 상태를 변경하며 자연스럽게 불변성을 지키며 개발을 했다.
+
+리액트에서는 상태값을 업데이트 할 때 얕은비교를 수행해 이전 상태(참조값)와 새로운 상태(참조값)를 비교 한다.
+새로운 참조값을 가진 Object를 생성하므로 이전 참조값에 영향을 주지 않는다.
+
+1. 불변성을 지키면 상태값을 업데이트 할 때 이전 상태와 새로운 상태를 비교하여 변경된 부분만 업데이트 하기 때문에 성능적으로 이점이 있다.
+2. 상태가 의도치않게 변경되는 것을 막을 수 있고, 사이드 이펙트를 사전에 방지하고 예측 가능한 코드를 작성할 수 있다.
+
+- 상태 업데이트
+```javascript
+const [state, setState] = useState(1);
+
+// 불변성을 지키지 않은 상태 업데이트
+  state = 2;
+  setState(state);
+
+// 불변성을 지킨 상태 업데이트
+  setState(2);
+```
+
+- 배열
+```javascript
+const [state, setState] = useState([1, 2, 3]);
+
+// 불변성을 지키지 않은 상태 업데이트
+  state.push(4);
+  setState(state);
+
+// 불변성을 지킨 상태 업데이트
+  setState([...state, 4]);
+```
+
+- 객체
+```javascript
+const [state, setState] = useState({
+  name: "been",
+  age: 32,
+});
+
+// 불변성을 지키지 않은 상태 업데이트
+  state.name = "been2";
+  setState(state);
+
+// 불변성을 지킨 상태 업데이트
+  setState({
+    ...state,
+    name: "been2",
+  });
+```
+
+이처럼 리액트로 개발을 할 때 불변성을 유지함으로써 안정성을 유지하고 성능을 향상시킬 수 있다.
+19:Tcc7,
 로컬 개발환경에서 API 요청시 CORS 에러로 API 사용이 어려울 수 있습니다.
 
 이 글은 Vite로 구성된 로컬 개발환경에서 CORS 문제를 해결하는 방식을 작성합니다.
@@ -119,7 +264,7 @@ export default ({ mode }) => {
 2. 프록시는 `changeOption` 에 의하여 HTTP 요청 헤더의 Host 값을 `https://example.com` 으로 변경
 3. 프록시는 최종적으로 이 요청을 `https://example.com` 라는 URL로 `target` 서버에 전달
 
-19:T12dc,
+1a:T12dc,
 ## 바벨이란?
 바벨은 자바스크립트 컴파일러이다.
 사실 자세히 보면 컴파일러보다는 트랜스파일러에 가깝다.
@@ -303,7 +448,7 @@ module.exports = {
 js 확장자로 끝나는 모든 파일에 babel-loader를 적용한다.
 또 node_modules 디렉토리는 제외한다.
 
-1a:T2f94,
+1b:T2f94,
 ## 웹팩(기본)배경
 - 웹팩은 모던 javascript 어플리케이션을 위한 정적 모듈 번들러이다. 번들러는 웹팩 이외에도 다양한게 있는데 (rollup , esbuild , vite , parcel 등) 웹팩이 가장 오래되었기도하고 많이 사용하고 있기 때문에 이번 기회에 배워보기로 했다.
 
@@ -736,7 +881,7 @@ module.exports = {
 하지만 기본적인 웹팩으로 설정되어있고, 직접 커스텀하려면 eject를 해야한다.
 
 이번 기회에 웹팩의 원리와 기본적인 사용방법을 알아보았다.
-1b:Te9a,
+1c:Te9a,
 ### React Native geolocation
 
 사이드 프로젝트에 위치정보를 받아와야 하는 기능이 필요해 지오로케이션을 받아 오도록 했다.
@@ -863,7 +1008,7 @@ const MyApp = () => {
 다음 포스팅에서는 받아온 위치정보를 webview로 넘겨주는 방법에 대해 알아보자!
 
 
-1c:T9c4,
+1d:T9c4,
 ### 딥링크
 - 딥링크는 모바일에서 특정 페이지에 도달 할 수 있는 링크를 의미한다.
 - 웹이나 sns등 링크를 클릭했을때 해당 어플리케이션 앱으로 바로 이동하는데, 이런 방식을 모바일 딥링크라 하고 특정한 앱 스크린으로 이동하는 것
@@ -961,7 +1106,7 @@ useEffect(() => {
   return () => Linking.removeAllListeners('url');
 }, [])
 ```
-1d:T2147,
+1e:T2147,
 이전에 [스벨트킷으로 블로그 만들어보기](https://wonbeenna.github.io/blog/javaScript/svelte-blog) 에서 svelte kit으로 블로그를 만들었었다.
 
 그때는 svelte 공부겸 블로그를 만들었지만, 업무에서 주로 사용하는 스택인 react와 next.js를 사용하여 블로그를 만들어보려고 한다.
@@ -1310,7 +1455,7 @@ npm i @giscus/react
 
 
 
-1e:T6ae,
+1f:T6ae,
 JSON 웹 토큰(JWT)
 
 일반적으로 **헤더.페이로드.서명** 으로 구성되어 있다.
@@ -1369,7 +1514,7 @@ token을 split해 1번째 데이터에 해당하는 부분을 가져온 다음
 node에서 지원하는 Buffer 객체를 사용해 바이너리로 변환
 
 base64로 인코딩한 후 JSON으로 파싱한다
-1f:Tfb3,
+20:Tfb3,
 얼마전 기업과제를 진행했다. Audio 객체를 이용한 음악 재생이었다.
 
 https://developer.mozilla.org/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API
@@ -1498,7 +1643,7 @@ progressbar를 클릭했을 때는 해당 위치부터 audio를 재생해야했�
 - e.currentTarget.offsetWidth = progressbar의 전체 너비
 
 
-20:Te25,
+21:Te25,
 ### 디바운싱과 쓰로틀링
 
 
@@ -1607,147 +1752,7 @@ hook이 실행되면 lastRan과 현재시간을 비교한다.
 
 
 
-21:Tc4f,
-## GraphQL 사용
-
-Apollo client를 사용합니다.
-
-Apollo Client는 GraphQL을 사용해 로컬 및 원격 데이터를 모두 관리할 수 있습니다. (상태 관리 라이브러리)
-
----
-
-### React에 Apollo Client 연결
-```shell
-npm install @apollo/client graphql
-```
-
-index.ts 또는 App.ts 에서 작업을 진행합니다.
-```ts
-const client = new ApolloClient({
-  uri: "https://~/graphql",
-  cache: new InMemoryCache(),
-});
-```
-
-다음과 같이 ApolloClient를 초기화 하고 `uri`와 `cache` 인스턴스를 전달합니다.
-
-uri에 서버주소를 작성합니다. endpoint를 따로 지정하지 않았다면 `/graphql`이 됩니다.
-
-사내에서는 `proxy`를 사용하기 때문에 `endpoint`를
-```ts
-const client = new ApolloClient({
-  uri: '/api/graphql',
-  cache: new InMemoryCache()
-})
-```
-로 작성해주시면 됩니다.
-
-```ts
-function App() {
-  return (
-{...}
-        <ApolloProvider client={client}>
-            <DefaultRoutes />
-        </ApolloProvider>
-{...}
-  )
-}
-```
-react app에 전역으로 사용하기 위해서는 `ContextApi`를 사용하는 것 처럼 `ApolloProvider`로 앱을 감싸면 됩니다.
-
----
-
-### 백엔드 데이터 읽기
-이제 `client`는 데이터를 가져올 준비가 되었습니다.
-
-<img src="/assets/blog/javaScript/graphql-2.png" width="49%" alt="post image"/>
-<img src="/assets/blog/javaScript/graphql-1.png" width="49%" alt="post image"/>
-
-`playground`에서 정의된 `schema`를 다운로드 받아 프로젝트 `root`에 위치시킵니다.
-
-```ts
-// const client = ...
-
-client
-  .query({
-    query: gql`
-      query {
-        getAdminOrderProducts {
-          data {
-            id
-            status
-          }
-        }
-      }
-    `
-  })
-  .then((response) => console.log(response))
-  .catch((error) => console.log(error))
-```
-
-간단하게 불러올 수 있는 방법입니다. playground에 정의된 query를 요청하면
-타입과 함께 요청한 쿼리들이 response에 담깁니다.
-
-<img src="/assets/blog/javaScript/graphql-3.png" width="49%" alt="post image"/>
-<img src="/assets/blog/javaScript/graphql-4.png" width="49%" alt="post image"/>
-
-필드별로 분리하여 요청할 수 있습니다.
-```ts
-import {gql, useQuery} from '@apollo/client'
-
-const ORDER_QUERY = gql`
-  query {
-    getAdminOrderProducts {
-      data {
-        id
-        status
-      }
-    }
-  }
-`
-
-  const {loading, error, data} = useQuery(ORDER_QUERY)
-```
-
-`variables`로 `arguments`를 지정할 수 있습니다.
-
-`useQuery`에 옵션 `variables`은 GraphQL 쿼리에 전달하려는 모든 매개변수를 포함하는 객체입니다.
-
-아래와 같이 매개변수를 지정할 수 있습니다.
-```ts
-const ORDER_QUERY = gql`
-  query getAdminOrderProducts($start: Int!, $perPage: Int!) {
-    getAdminOrderProducts(start: $start, perPage: $perPage) {
-      data {
-        id
-        status
-        product {
-          id
-        }
-        createdAt
-      }
-      total
-    }
-  }
-`
-
-  const {data, loading} = useQuery(ORDER_QUERY, {
-    variables: {
-      start: 0,
-      perPage: 20
-    }
-  })
-```
-
-지금까지는 백엔드의 데이터를 읽는 방법이었습니다.
-
-
-
-
-
-
-
-9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L17",null,{"isPagination":true,"posts":{"posts":[{"content":"$18","data":{"title":"Vite proxy 설정","date":"$D2024-01-18T00:00:00.000Z","description":"Vite 로컬환경에서 CORS 문제 해결하기","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"vite-proxy"},{"content":"$19","data":{"title":"바벨 사용해보기","date":"$D2023-12-01T00:00:00.000Z","description":"바벨 기본 동작과 사용방법","category":"javaScript","titleImage":"/assets/postIcon/babel-icon.svg"},"slug":"babel"},{"content":"$1a","data":{"title":"웹팩 기본 사용법 (1)","date":"$D2023-11-30T00:00:00.000Z","description":"처음 접해보는 웹팩의 원리와 기본 사용 방법","category":"javaScript","titleImage":"/assets/postIcon/webpack-icon.svg"},"slug":"webpack-1"},{"content":"$1b","data":{"title":"React Native geolocation","date":"$D2023-10-25T00:00:00.000Z","description":"React Native 위치정보 받아오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"rn-geolocation"},{"content":"$1c","data":{"title":"React Native Deep Linking","date":"$D2023-10-17T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"rn-deep-link"},{"content":"$1d","data":{"title":"Next.js 블로그 만들기","date":"$D2023-10-09T00:00:00.000Z","description":"Next.js로 블로그 만들기","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-blog"},{"content":"$1e","data":{"title":"jwt 토큰 decode 하기","date":"$D2023-08-31T00:00:00.000Z","description":"jwt 토큰 decode 함수","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"jwt-decode"},{"content":"$1f","data":{"title":"Audio객체를 이용한 음악 재생","date":"$D2023-05-27T00:00:00.000Z","description":"Audio객체를 사용한 기업 과제 구현","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"audio"},{"content":"$20","data":{"title":"디바운싱과 쓰로틀링","date":"$D2023-05-13T00:00:00.000Z","description":"디바운싱과 쓰로틀링의 차이를 구분하고 hook으로 구현","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"debouce-throttle"},{"content":"$21","data":{"title":"GraphQl 써보기(1)","date":"$D2023-04-29T00:00:00.000Z","description":"GraphQl, Apollo Client를 사용","category":"javaScript","titleImage":"/assets/postIcon/graphql.svg"},"slug":"graphql-1"}],"total":45},"page":"2"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (41)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}]]]}]]}]
+9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L17",null,{"isPagination":true,"posts":{"posts":[{"content":"$18","data":{"title":"리액트에서 불변성을 지키는 이유","date":"$D2024-02-25T00:00:00.000Z","description":"리액트에서 불변성을 지키는 이유","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-immutable"},{"content":"$19","data":{"title":"Vite proxy 설정","date":"$D2024-01-18T00:00:00.000Z","description":"Vite 로컬환경에서 CORS 문제 해결하기","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"vite-proxy"},{"content":"$1a","data":{"title":"바벨 사용해보기","date":"$D2023-12-01T00:00:00.000Z","description":"바벨 기본 동작과 사용방법","category":"javaScript","titleImage":"/assets/postIcon/babel-icon.svg"},"slug":"babel"},{"content":"$1b","data":{"title":"웹팩 기본 사용법 (1)","date":"$D2023-11-30T00:00:00.000Z","description":"처음 접해보는 웹팩의 원리와 기본 사용 방법","category":"javaScript","titleImage":"/assets/postIcon/webpack-icon.svg"},"slug":"webpack-1"},{"content":"$1c","data":{"title":"React Native geolocation","date":"$D2023-10-25T00:00:00.000Z","description":"React Native 위치정보 받아오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"rn-geolocation"},{"content":"$1d","data":{"title":"React Native Deep Linking","date":"$D2023-10-17T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"rn-deep-link"},{"content":"$1e","data":{"title":"Next.js 블로그 만들기","date":"$D2023-10-09T00:00:00.000Z","description":"Next.js로 블로그 만들기","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-blog"},{"content":"$1f","data":{"title":"jwt 토큰 decode 하기","date":"$D2023-08-31T00:00:00.000Z","description":"jwt 토큰 decode 함수","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"jwt-decode"},{"content":"$20","data":{"title":"Audio객체를 이용한 음악 재생","date":"$D2023-05-27T00:00:00.000Z","description":"Audio객체를 사용한 기업 과제 구현","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"audio"},{"content":"$21","data":{"title":"디바운싱과 쓰로틀링","date":"$D2023-05-13T00:00:00.000Z","description":"디바운싱과 쓰로틀링의 차이를 구분하고 hook으로 구현","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"debouce-throttle"}],"total":46},"page":"2"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (42)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}]]]}]]}]
 12:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 d:null
 16:{"metadata":[["$","title","0",{"children":"Been blog - 2"}],["$","meta","1",{"name":"description","content":"Been dev-note - 2"}],["$","meta","2",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","3",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","link","4",{"rel":"canonical","href":"https://wonbeenna.github.io/page/2"}],["$","meta","5",{"property":"og:title","content":"Been blog - 2"}],["$","meta","6",{"property":"og:description","content":"Been dev-note - 2"}],["$","meta","7",{"property":"og:url","content":"https://wonbeenna.github.io/page/2"}],["$","meta","8",{"property":"og:site_name","content":"Been blog"}],["$","meta","9",{"property":"og:locale","content":"ko_KR"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 2"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 2"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","24",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}]],"error":null,"digest":"$undefined"}
