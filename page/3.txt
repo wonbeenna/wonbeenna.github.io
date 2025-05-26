@@ -14,13 +14,153 @@ f:I[4911,[],"AsyncMetadataOutlet"]
 :HL["/_next/static/media/47cbc4e2adbc5db9-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/css/e539936c7dc6b882.css","style"]
 :HL["/_next/static/css/e7c7294f242bce08.css","style"]
-0:{"P":null,"b":"nb0nDyCPZMTUE2B8F7fpv","p":"","c":["","page","3"],"i":false,"f":[[["",{"children":["page",{"children":[["page","3","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e7c7294f242bce08.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","3","d"],["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",["$","$La",null,{"children":"$Lb"}],null,["$","$Lc",null,{"children":["$Ld","$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","QFJVKnjhDo3nhPvc5z_US",{"children":[["$","$L11",null,{"children":"$L12"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$13","$undefined"],"s":false,"S":true}
+0:{"P":null,"b":"T39Mvz6c8SIi7W1th-g-L","p":"","c":["","page","3"],"i":false,"f":[[["",{"children":["page",{"children":[["page","3","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e7c7294f242bce08.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","3","d"],["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",["$","$La",null,{"children":"$Lb"}],null,["$","$Lc",null,{"children":["$Ld","$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","ffBgSao9fAhtQ1-ImFyE1",{"children":[["$","$L11",null,{"children":"$L12"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$13","$undefined"],"s":false,"S":true}
 14:"$Sreact.suspense"
 15:I[4911,[],"AsyncMetadata"]
 b:["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"promise":"$@16"}]}]
 17:I[1114,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","848","static/chunks/app/page/%5Bpage%5D/page-3d16974de746edb8.js"],"default"]
 e:null
-18:Tc85,
+18:Tc4f,
+## GraphQL 사용
+
+Apollo client를 사용합니다.
+
+Apollo Client는 GraphQL을 사용해 로컬 및 원격 데이터를 모두 관리할 수 있습니다. (상태 관리 라이브러리)
+
+---
+
+### React에 Apollo Client 연결
+```shell
+npm install @apollo/client graphql
+```
+
+index.ts 또는 App.ts 에서 작업을 진행합니다.
+```ts
+const client = new ApolloClient({
+  uri: "https://~/graphql",
+  cache: new InMemoryCache(),
+});
+```
+
+다음과 같이 ApolloClient를 초기화 하고 `uri`와 `cache` 인스턴스를 전달합니다.
+
+uri에 서버주소를 작성합니다. endpoint를 따로 지정하지 않았다면 `/graphql`이 됩니다.
+
+사내에서는 `proxy`를 사용하기 때문에 `endpoint`를
+```ts
+const client = new ApolloClient({
+  uri: '/api/graphql',
+  cache: new InMemoryCache()
+})
+```
+로 작성해주시면 됩니다.
+
+```ts
+function App() {
+  return (
+{...}
+        <ApolloProvider client={client}>
+            <DefaultRoutes />
+        </ApolloProvider>
+{...}
+  )
+}
+```
+react app에 전역으로 사용하기 위해서는 `ContextApi`를 사용하는 것 처럼 `ApolloProvider`로 앱을 감싸면 됩니다.
+
+---
+
+### 백엔드 데이터 읽기
+이제 `client`는 데이터를 가져올 준비가 되었습니다.
+
+<img src="/assets/blog/javaScript/graphql-2.png" width="49%" alt="post image"/>
+<img src="/assets/blog/javaScript/graphql-1.png" width="49%" alt="post image"/>
+
+`playground`에서 정의된 `schema`를 다운로드 받아 프로젝트 `root`에 위치시킵니다.
+
+```ts
+// const client = ...
+
+client
+  .query({
+    query: gql`
+      query {
+        getAdminOrderProducts {
+          data {
+            id
+            status
+          }
+        }
+      }
+    `
+  })
+  .then((response) => console.log(response))
+  .catch((error) => console.log(error))
+```
+
+간단하게 불러올 수 있는 방법입니다. playground에 정의된 query를 요청하면
+타입과 함께 요청한 쿼리들이 response에 담깁니다.
+
+<img src="/assets/blog/javaScript/graphql-3.png" width="49%" alt="post image"/>
+<img src="/assets/blog/javaScript/graphql-4.png" width="49%" alt="post image"/>
+
+필드별로 분리하여 요청할 수 있습니다.
+```ts
+import {gql, useQuery} from '@apollo/client'
+
+const ORDER_QUERY = gql`
+  query {
+    getAdminOrderProducts {
+      data {
+        id
+        status
+      }
+    }
+  }
+`
+
+  const {loading, error, data} = useQuery(ORDER_QUERY)
+```
+
+`variables`로 `arguments`를 지정할 수 있습니다.
+
+`useQuery`에 옵션 `variables`은 GraphQL 쿼리에 전달하려는 모든 매개변수를 포함하는 객체입니다.
+
+아래와 같이 매개변수를 지정할 수 있습니다.
+```ts
+const ORDER_QUERY = gql`
+  query getAdminOrderProducts($start: Int!, $perPage: Int!) {
+    getAdminOrderProducts(start: $start, perPage: $perPage) {
+      data {
+        id
+        status
+        product {
+          id
+        }
+        createdAt
+      }
+      total
+    }
+  }
+`
+
+  const {data, loading} = useQuery(ORDER_QUERY, {
+    variables: {
+      start: 0,
+      perPage: 20
+    }
+  })
+```
+
+지금까지는 백엔드의 데이터를 읽는 방법이었습니다.
+
+
+
+
+
+
+
+19:Tc85,
 대기열 → 캐싱 → DNS → 라우팅 → ARP → 초기연결 → 컨텐츠 다운로드 → 브라우저 렌더링
 
 이런 과정을 비캡슐화, 캡슐화 과정을 거침
@@ -114,7 +254,7 @@ e:null
 - transform, opacity 등(GPU가 관여하는 속성) 변경일 때 **1 -> 2 -> 5**
 
 따라서 transform, opacity 등(GPU가 관여하는 속성)을 사용하는게 가장 빠르고 끊김없이 보여줄 수 있다.
-19:T1a75,
+1a:T1a75,
 인증방식에는 대표적으로 두가지가 있다.
 
 제일 많이 사용하는 세션 방식과 토큰 방식
@@ -339,7 +479,7 @@ export const getServerSideProps = withAuth();
 
 {...}
 ```
-1a:Tdf0,
+1b:Tdf0,
 예전에 하다가 중단된 프로젝트를 다시 시작해 보려고 새 레포로 마이그레이션 하는 과정에서
 
 패키지 버전도 올리고, 다른 기술을 찾아보다가 예전부터 써보고싶었던 tailwindcss를 써보기로 했다.
@@ -480,7 +620,7 @@ module.exports = {
   Save changes
 </button>
 ```
-1b:T7a1,
+1c:T7a1,
 자바스크립트의 함수는 호출될 때, 매개변수 이외에 `arguments` 객체와 `this`를 암묵적으로 전달 받는다.
 
 - Java의 `this` 는 인스턴스 자신을 가르키는 참조변수
@@ -539,7 +679,7 @@ module.exports = {
 - 일반 함수 → 화살표 함수
 - 생성자 함수 → class
 - 객체 메서드 → 객체 메서드 축약형
-1c:T1aed,
+1d:T1aed,
 ```shell
 npm create svelte@latest my-app
 cd my-app
@@ -800,7 +940,7 @@ rss도 위와 동일하다.
 
 그래도 앞으론 리액트를 더 공부 할 것이다. 먹고 살려면 ㅎㅎ
 
-1d:T9de,
+1e:T9de,
 
 얼마전 해외 블로그를 구경하다가 이런 글을 보았다.
 
@@ -898,7 +1038,7 @@ Nothing was returned from render. This usually means a return statement is missi
 이런 에러를 만난 적이 많았는데, 위와 관련된 것이 아닌가 생각 된다.
 
 조금 더 생각하면서 개발하자
-1e:Tff5,
+1f:Tff5,
 예전부터 궁금했었던 부분이었다.
 
 **useCallback**과 **useMemo** hook은 함수와 값을 메모이제이션 해주는 역할을 한다.
@@ -1020,7 +1160,7 @@ useMemo와 useCallback은 초기 렌더링에는 쓸모가 없다. 오히려 초
 [https://beta.reactjs.org/reference/react/useMemo#usage](https://beta.reactjs.org/reference/react/useMemo#usage)
 
 [https://www.developerway.com/posts/how-to-use-memo-use-callback](https://www.developerway.com/posts/how-to-use-memo-use-callback)
-1f:T84a,
+20:T84a,
 ### fireEvent를 userEvent로 바꿔보기
 
 ```shell
@@ -1098,171 +1238,7 @@ const checkboxLabel = (
   </span>
 );
 ```
-20:Tff3,
-### * Mock Service Worker
-
-백엔드에서 데이터를 가져오는 부분을 테스트
-
-- MSW 작동 방식
-
-브라우저에 서비스 워커를 등록해 외부로 나가는 네트워크 리퀘스트를 감지
-
-요청을 실제 서버로 갈 때 중간에 가로채 MSW 클라이언트 사이드 라이브러리로 보내고, 등록된 핸들러에서 요청을 처리한 후 모의 응답을 보낸다.
-
----
-
-### * jest를 사용한 node와 통합하기
-
-```shell
-npm install msw --save
-```
-
-- 핸들러 생성하기
-
-```js
-import {rest} from 'msw';
-
-export const handlers = [
-  rest.get('http://localhost:5000/products', (req, res, ctx) => {
-    return res(
-      ctx.json([
-        {
-          name: 'America',
-          imagePath: '/images/america.jpeg'
-        },
-        {
-          name: 'England',
-          imagePath: '/images/england.jpeg'
-        }
-      ])
-    );
-  }),
-  rest.get('http://localhost:5000/options', (req, res, ctx) => {
-    return res(
-      ctx.json([
-        {
-          name: 'Insurance'
-        },
-        {
-          name: 'Dinner'
-        }
-      ])
-    );
-  })
-];
-```
-
-- mocking 서버 생성하기
-
-```js
-import {setupServer} from 'msw/node';
-import {handlers} from './handlers';
-
-export const server = setupServer(...handlers);
-```
-
-- setupTest.js에 서버 생성
-
-```js
-// jest-dom adds custom jest matchers for asserting on DOM nodes.
-// allows you to do things like:
-// expect(element).toHaveTextContent(/react/i)
-// learn more: https://github.com/testing-library/jest-dom
-import '@testing-library/jest-dom';
-
-import {server} from './mocks/server';
-
-beforeAll(() => server.listen()); // 테스트 시작 전에 서버 listen
-afterEach(() => server.resetHandlers()); // 테스트 중 다른 테스트에 영향이 가지 않도록
-afterAll(() => server.close()); // 테스트 후 서버를 클린업
-```
-
-- 테스트 코드 작성
-
-```js
-import {server} from '../../../mocks/server';
-import Type from '../Type';
-import {rest} from 'msw';
-import {render, screen} from '@testing-library/react';
-
-test('displays product images from server', async () => {
-  render(<Type orderType="products" />);
-
-  // 서버에서 받아온 이미지
-  const productImages = await screen.findAllByRole('img', {
-    name: /product$/i
-  });
-  expect(productImages).toHaveLength(2);
-
-  const altText = productImages.map((element) => element.alt);
-  expect(altText).toEqual(['America product', 'England product']);
-});
-
-test('fetch option information from server', async () => {
-  render(<Type orderType="options" />);
-
-  const optionCheckboxes = await screen.findAllByRole('checkbox');
-
-  expect(optionCheckboxes).toHaveLength(2);
-});
-
-test('when fetching product datas, face an error', async () => {
-  // 서버에 대한 에러 확인
-  server.resetHandlers(
-    rest.get('http://localhost:5000/products', (req, res, ctx) => {
-      return res(ctx.status(500));
-    })
-  );
-
-  render(<Type orderType="products" />);
-
-  const errorBanner = await screen.findByTestId('error-banner');
-  expect(errorBanner).toHaveTextContent('에러가 발생했습니다.');
-});
-```
-
-- 컴포넌트
-
-```js
-import React, {useEffect, useState} from 'react';
-import axios from 'axios';
-import Products from './Products';
-import ErrorBanner from '../../components/ErrorBanner';
-import Options from './Options';
-
-const Type = ({orderType}) => {
-  const [items, setItems] = useState([]);
-  const [error, setError] = useState(false);
-
-  useEffect(() => {
-    loadItems(orderType);
-  }, [orderType]);
-
-  const loadItems = async (orderType) => {
-    try {
-      const response = await axios.get(`http://localhost:5000/${orderType}`);
-      setItems(response.data);
-    } catch (error) {
-      setError(true);
-    }
-  };
-
-  const ItemComponents = orderType === 'products' ? Products : Options;
-
-  const optionItems = items.map((item) => {
-    return <ItemComponents key={item.name} name={item.name} imagePath={item.imagePath} />;
-  });
-
-  if (error) {
-    return <ErrorBanner message="에러가 발생했습니다." />;
-  }
-
-  return <div>{optionItems}</div>;
-};
-
-export default Type;
-```
-9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L17",null,{"isPagination":true,"posts":{"posts":[{"content":"$18","data":{"title":"브라우저에 url을 검색하면?","date":"$D2023-02-25T00:00:00.000Z","description":"사내 스터디","category":"study","titleImage":"/assets/postIcon/javascript.webp"},"slug":"browser"},{"content":"$19","data":{"title":"Next.js middleware와 getServerSideProps","date":"$D2023-02-22T00:00:00.000Z","description":"세션방식의 로그인 인증, middleware와 getServerSideProps를 사용해 구현한 기록","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-middleware"},{"content":"$1a","data":{"title":"Nextjs에서 tailwind 써보기","date":"$D2023-02-18T00:00:00.000Z","description":"공식문서 보면서 tailwind 써보기","category":"javaScript","titleImage":"/assets/postIcon/tailwind-css-icon.webp"},"slug":"tailwindcss"},{"content":"$1b","data":{"title":"JavaScript this","date":"$D2023-02-02T00:00:00.000Z","description":"사내 스터디 this","category":"study","titleImage":"/assets/postIcon/javascript.webp"},"slug":"this"},{"content":"$1c","data":{"title":"스벨트킷으로 블로그 만들어보기","date":"$D2023-01-30T00:00:00.000Z","description":"스벨트킷으로 블로그 만든 과정을 정리","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-blog"},{"content":"\n### Provider 테스팅 해보기\n\n```js\nrender(<Options optionType=\"scoops\" />, {wrapper: OrderDetailsProvider});\n```\n\n테스트 wrapper에 Provider로 감싸주면 된다.\n\n여기서는 redux나 recoil 등 다른 라이브러리도 가능\n\n---\n\n전역적으로도 사용이 가능\n\n```js\nimport {render} from '@testing-library/react';\nimport {OrderDetailsProvider} from '../contexts/OrderDetails';\n\nconst renderWithContext = (ui, options) => render(ui, {wrapper: OrderDetailsProvider, ...options});\n\nexport * from '@testing-library/react';\n\nexport {renderWithContext as render};\n```\n","data":{"title":"리액트 테스팅(4)","date":"$D2023-01-02T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-4"},{"content":"$1d","data":{"title":"리액트 조건부 렌더링에 대한 생각","date":"$D2022-12-29T00:00:00.000Z","description":"해외 블로그를 보며 정리한 조건부 렌더링에 대한 생각","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"conditional-rendering"},{"content":"$1e","data":{"title":"useCallback, useMemo 무조건 좋은가?","date":"$D2022-12-28T00:00:00.000Z","description":"useCallback과 useMemo에 대한 생각 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"usecallback-and-usememo"},{"content":"$1f","data":{"title":"리액트 테스팅(3)","date":"$D2022-12-26T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-3"},{"content":"$20","data":{"title":"리액트 테스팅(2)","date":"$D2022-12-14T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-2"}],"total":45},"page":"3"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (41)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}]]]}]]}]
+9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L17",null,{"isPagination":true,"posts":{"posts":[{"content":"$18","data":{"title":"GraphQl 써보기(1)","date":"$D2023-04-29T00:00:00.000Z","description":"GraphQl, Apollo Client를 사용","category":"javaScript","titleImage":"/assets/postIcon/graphql.svg"},"slug":"graphql-1"},{"content":"$19","data":{"title":"브라우저에 url을 검색하면?","date":"$D2023-02-25T00:00:00.000Z","description":"사내 스터디","category":"study","titleImage":"/assets/postIcon/javascript.webp"},"slug":"browser"},{"content":"$1a","data":{"title":"Next.js middleware와 getServerSideProps","date":"$D2023-02-22T00:00:00.000Z","description":"세션방식의 로그인 인증, middleware와 getServerSideProps를 사용해 구현한 기록","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-middleware"},{"content":"$1b","data":{"title":"Nextjs에서 tailwind 써보기","date":"$D2023-02-18T00:00:00.000Z","description":"공식문서 보면서 tailwind 써보기","category":"javaScript","titleImage":"/assets/postIcon/tailwind-css-icon.webp"},"slug":"tailwindcss"},{"content":"$1c","data":{"title":"JavaScript this","date":"$D2023-02-02T00:00:00.000Z","description":"사내 스터디 this","category":"study","titleImage":"/assets/postIcon/javascript.webp"},"slug":"this"},{"content":"$1d","data":{"title":"스벨트킷으로 블로그 만들어보기","date":"$D2023-01-30T00:00:00.000Z","description":"스벨트킷으로 블로그 만든 과정을 정리","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-blog"},{"content":"\n### Provider 테스팅 해보기\n\n```js\nrender(<Options optionType=\"scoops\" />, {wrapper: OrderDetailsProvider});\n```\n\n테스트 wrapper에 Provider로 감싸주면 된다.\n\n여기서는 redux나 recoil 등 다른 라이브러리도 가능\n\n---\n\n전역적으로도 사용이 가능\n\n```js\nimport {render} from '@testing-library/react';\nimport {OrderDetailsProvider} from '../contexts/OrderDetails';\n\nconst renderWithContext = (ui, options) => render(ui, {wrapper: OrderDetailsProvider, ...options});\n\nexport * from '@testing-library/react';\n\nexport {renderWithContext as render};\n```\n","data":{"title":"리액트 테스팅(4)","date":"$D2023-01-02T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-4"},{"content":"$1e","data":{"title":"리액트 조건부 렌더링에 대한 생각","date":"$D2022-12-29T00:00:00.000Z","description":"해외 블로그를 보며 정리한 조건부 렌더링에 대한 생각","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"conditional-rendering"},{"content":"$1f","data":{"title":"useCallback, useMemo 무조건 좋은가?","date":"$D2022-12-28T00:00:00.000Z","description":"useCallback과 useMemo에 대한 생각 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"usecallback-and-usememo"},{"content":"$20","data":{"title":"리액트 테스팅(3)","date":"$D2022-12-26T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-3"}],"total":46},"page":"3"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (42)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}]]]}]]}]
 12:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 d:null
 16:{"metadata":[["$","title","0",{"children":"Been blog - 3"}],["$","meta","1",{"name":"description","content":"Been dev-note - 3"}],["$","meta","2",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","3",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","link","4",{"rel":"canonical","href":"https://wonbeenna.github.io/page/3"}],["$","meta","5",{"property":"og:title","content":"Been blog - 3"}],["$","meta","6",{"property":"og:description","content":"Been dev-note - 3"}],["$","meta","7",{"property":"og:url","content":"https://wonbeenna.github.io/page/3"}],["$","meta","8",{"property":"og:site_name","content":"Been blog"}],["$","meta","9",{"property":"og:locale","content":"ko_KR"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 3"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 3"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","24",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}]],"error":null,"digest":"$undefined"}

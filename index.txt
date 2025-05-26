@@ -14,13 +14,244 @@ f:I[4911,[],"AsyncMetadataOutlet"]
 :HL["/_next/static/media/47cbc4e2adbc5db9-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/css/e539936c7dc6b882.css","style"]
 :HL["/_next/static/css/e7c7294f242bce08.css","style"]
-0:{"P":null,"b":"nb0nDyCPZMTUE2B8F7fpv","p":"","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e7c7294f242bce08.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",["$","$La",null,{"children":"$Lb"}],null,["$","$Lc",null,{"children":["$Ld","$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","8S6aaPCD7_MHA45lH5k-x",{"children":[["$","$L11",null,{"children":"$L12"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$13","$undefined"],"s":false,"S":true}
+0:{"P":null,"b":"T39Mvz6c8SIi7W1th-g-L","p":"","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e7c7294f242bce08.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",["$","$La",null,{"children":"$Lb"}],null,["$","$Lc",null,{"children":["$Ld","$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","-OVGh9Wpz72KC7qH4hHa7",{"children":[["$","$L11",null,{"children":"$L12"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$13","$undefined"],"s":false,"S":true}
 14:"$Sreact.suspense"
 15:I[4911,[],"AsyncMetadata"]
 b:["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"promise":"$@16"}]}]
 17:I[1114,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","974","static/chunks/app/page-db833fa3fc4df86a.js"],"default"]
 e:null
-18:T1760,
+18:T1840,
+개발 진행중 다양한 svg 파일을 컴포넌트로 변환하여 사용해야할 필요가 있다.
+매번 svg 파일을 컴포넌트로 변환하는 작업도 번거롭고, 변환 과정에서 실수로 svg 파일을 잘못 수정하는 경우도 있다.
+또, 아이콘은 상황에따라 색상, 크기, 회전 등을 변경해야하는 경우가 많다.
+
+---
+
+이런 문제를 해결하기 위해 rollup 을 사용하여 svg 파일을 React 컴포넌트로 사용할 수 있게끔 패키지하여 사용하였다.
+
+## rollup-config.mjs
+
+아이콘들은 /icons/*.svg 경로에 위치했고, svg 파일을 컴포넌트로 변환해 export + 타입을 자동으로 정의되도록 했다.
+
+먼저 아이콘들의 각 경로들을 수집했다.
+```javascript
+const iconBasePath = new URL('./icons', import.meta.url).pathname;
+const iconFileNames = fs.readdirSync(iconBasePath, 'utf-8');
+```
+
+아이콘의 이름을 search-icon.svg 형태로 저장했고,
+이름을 PascalCase 형태로 변환하는 함수를 작성했다.
+
+iconFileNames 는
+
+```javascript
+[
+'date-picker.svg',
+'info.svg',
+'link.svg',
+'logout.svg',
+'upload-trash.svg',
+'upload.svg',
+...
+]
+```
+
+이런형태로 잘 불러와졌다.
+
+```javascript
+function toPascalCase(str) {
+    return str
+        .replace(/[-_](.)/g, (_, c) => c.toUpperCase())
+        .replace(/^(.)/, (_, c) => c.toUpperCase());
+}
+```
+
+iconFileNames 를 순회하며, 각 아이콘의 이름을 PascalCase 형태로 변환하고, import/export 문을 별도 배열에 저장했다.
+
+```javascript
+    iconImportLines.push(`import ${iconModuleName} from '../icons/${iconFileName}'`);
+    iconComponentTypes.push(`export declare const ${iconModuleName}: SVGIconType`);
+```
+
+---
+
+### svg -> 컴포넌트 변환
+
+```javascript
+const jsCode = await transform(
+  rawSvg,
+  {
+    plugins: ['@svgr/plugin-jsx'],
+    icon: true,
+    jsxRuntime: 'classic',
+    template: reactIconTemplate,
+  }
+);
+```
+
+여기서 reactIconTemplate 은 아래와 같이 작성했다.
+
+```javascript
+    function reactIconTemplate({ imports, componentName, props, jsx }, { tpl }) {
+        return tpl`
+      ${imports}
+      function ${componentName}(${props}) {
+        return (
+          ${jsx}
+        );
+      }
+      export default ${componentName};
+    `;
+    }
+```
+
+tpl 함수는 템플릿 문자열을 반환하는 함수로, 위의 코드를 통해 svg 파일을 React 컴포넌트로 변환할 수 있다.
+
+---
+
+### 타입 선언 자동 생성
+
+빌드시 index.d.ts 파일을 생성해, 각 아이콘 별로 타입을 자동으로 생성되도록 했다.
+
+```javascript
+    const entryTypesContent = `
+    declare module '*.svg' {
+      const content: string
+      export default content
+    }
+
+    export declare type IconSource = React.FunctionComponent<React.SVGProps<SVGSVGElement>>
+    export declare type SVGIconType = IconSource
+
+    export declare type IconName = ${iconNames.join(' | ')}
+
+    export declare const icons: Record<IconName, SVGIconType>
+
+    ${iconComponentTypes.join('\n')}
+    `.trim();
+
+
+    emitFile({
+        fileName: 'index.d.ts',
+        source: entryTypesContent,
+    }),
+```
+
+emitFile 함수를 만들어 index.d.ts 파일을 생성하고, 위에서 저장해둔 iconComponentTypes를 사용하여 각 아이콘의 타입을 자동으로 정의했다.
+
+---
+
+### defineConfig
+
+```javascript
+export default defineConfig({
+    input: 'src/index.ts',
+    output: [
+        {
+            dir: 'dist',
+            format: 'cjs',
+            entryFileNames: '[name].js',
+            chunkFileNames: '[name].js',
+            interop: 'auto',
+        },
+        {
+            dir: 'dist',
+            format: 'esm',
+            entryFileNames: '[name].mjs',
+            chunkFileNames: '[name].mjs',
+        },
+    ],
+    external: ['react'],
+    plugins: [
+        virtual({ 'src/index.ts': entryModuleContent }),
+        nodeResolve({ extensions }),
+        svgBuild({ include: `${iconBasePath}/*.svg` }),
+        babel({
+            exclude: 'node_modules/**',
+            extensions,
+            babelHelpers: 'bundled',
+        }),
+        emitFile({
+            fileName: 'index.d.ts',
+            source: entryTypesContent,
+        }),
+        terser(),
+    ],
+});
+```
+
+`@rollup/plugin-virtual` 를 사용해 index.ts 파일을 가상으로 생성했다.
+
+```javascript
+output: [
+  {
+    dir: 'dist',
+    format: 'cjs',
+    entryFileNames: '[name].js',
+    chunkFileNames: '[name].js',
+    interop: 'auto',
+  },
+  {
+    dir: 'dist',
+    format: 'esm',
+    entryFileNames: '[name].mjs',
+    chunkFileNames: '[name].mjs',
+  },
+],
+```
+
+결과물들을 dist 폴더에 저장되도록 하고, commonjs 와 esm 형식으로 각각 저장되도록 설정했다.
+
+```javascript
+svgBuild({ include: `${iconBasePath}/*.svg` }),
+```
+
+svg 를 컴포넌트로 변환해주는 플러그인이다.
+- @svgr/core를 내부적으로 사용해서 .svg → React Component로 변환
+- UploadIcon, SearchIcon 이런 컴포넌트를 자동으로 생성
+- 결과는 virtual entry에서 import UploadIcon from '../icons/upload.svg'처럼 쓰이게 돼
+
+```javascript
+    babel({
+        exclude: 'node_modules/**',
+        extensions,
+        babelHelpers: 'bundled',
+    }),
+```
+
+바벨 플러그인을 사용해 js 코드로 변환해준다.
+
+```javascript
+    emitFile({
+        fileName: 'index.d.ts',
+        source: entryTypesContent,
+    }),
+```
+
+커스텀 emitFile 플러그인을 사용해 빌드가 끝난 시점에 index.d.ts 타입 선언 파일을 생성하여 타입을 자동으로 정의한다.
+
+```javascript
+    terser(),
+```
+결과물의 크기를 줄이기 위해 terser 플러그인을 사용해 코드를 압축한다.
+
+---
+
+icons/*.svg에 svg 파일들을 위치시키고 빌드를 실행하면 자동으로 React 컴포넌트가 생성되고 dist/index.js, dist/index.mjs로 각각 리액트 컴포넌트가 생성되고
+index.d.ts로 타입 선언까지 자동으로 생성되어 사용할 수 있게 된다.
+
+```javascript
+import { UploadIcon, SearchIcon } from 'your-icon-package';
+
+function App() {
+  return (
+    <div>
+      <UploadIcon width={24} height={24} fill="blue" />
+      <SearchIcon width={24} height={24} fill="red" />
+    </div>
+  );
+}
+```19:T1760,
 ## 이벤트 버블링(Event Bubbling)과 이벤트 캡처링(Event Capturing)
 
 ### 이벤트 전파(Event Propagation)이란?
@@ -167,7 +398,7 @@ document.querySelector('ul').addEventListener('click', (e) => {
 
 - 일반적으로 많이 사용되지는 않지만, 특정 요소가 이벤트를 가로채야 할 때 유용하다.
 - 예를 들어, 특정 요소에서 이벤트가 발생했을 때, 부모 요소에서 이벤트를 처리하기 전에 먼저 특정 요소에서 이벤트를 처리해야 할 경우에 사용된다.
-19:T16ad,
+1a:T16ad,
 ## 세션과 쿠키의 개념
 
 ### 세션(session)
@@ -258,7 +489,7 @@ res.cookie('username', 'john', { maxAge: 900000, httpOnly: true });
 
 - 세션(Session): 민감한 데이터나 일시적으로 관리해야 하는 데이터, 서버에서 관리가 필요한 데이터를 저장.
 - 쿠키(Cookie): 사용자의 브라우저에서 저장하는 간단하고 가벼운 데이터를 저장, 사용자의 설정 값, 지속적인 추적, 개인화 데이터에 적합.
-1a:T1494,
+1b:T1494,
 ### React Parallel Routes와 View Transitions API
 
 웹뷰 개발시 AOS에서 뒤로가기 버튼을 누르면 모달이 닫히지 않고, 앱이 종료되거나 웹뷰가 닫히는 이슈가 생길 수 있다.
@@ -417,7 +648,7 @@ View Transitions API 대해서는 다음에 작성하는걸로하고,, 위처럼
 이런 식으로 모달을 구현하면 좀 더 앱스러운 UX를 제공할 수 있다.
 뒤로가기시에도 모달이 닫히고, URL도 변경되기 때문에 사용자가 뒤로가기 버튼을 눌렀을 때 모달이 닫히는 동작을 자연스럽게 처리할 수 있다.
 
-1b:T3de5,
+1c:T3de5,
 ### 들어가며
 단순한 스터디에서 시작했지만, 예비창업패키지에도 선정되며 아주 작은 스타트업처럼 운영하게 된 스터디를 회고하며 느낀 점과 배운 점을 정리해보려 한다.
 
@@ -785,7 +1016,7 @@ lighthouse 점수를 최대한 높이기 위해 노력했고, 실제로도 검�
 25년도 지원사업은 아쉽게도 떨어졌다. 낮은 진입장벽, 데이터 수집 한계, 구조가 비슷한 플랫폼에 손익분기 달성 실패, 낮은 재방문 주기 등이 이유였다.
 
 현재 내부에서는 다양한 의견들이 오가고있다. 아무래도 프로젝트를 유지하는데는 비용적인 문제가 가장 크기때문에, 수익모델 개선, 다른 신사업 아이템들을 고민하고 있다.
-1c:T1750,
+1d:T1750,
 ### 딥링크
 - 웹링크 URL이 사용자를 특정 웹사이트로 이동시키는 것처럼, 딥링크는 사용자를 특정 앱이나 앱의 원하는 화면으로 이동하도록 유도하는 링크이다.
 
@@ -986,7 +1217,7 @@ export const linkingConfig: LinkingOptions<NavigationProps> = {
 - 앱이 처음 실행될 때 : `getInitialURL`을 이용해 딥링크 처리
 - 앱이 백그라운드 -> 포그라운드 전환될 때 : `subscribe`에 `Appstate`를 이용해 딥링크 처리
 - 앱이 실행중일 때 : `subscribe`에 `Linking`을 이용해 딥링크 처리
-1d:T6a2,
+1e:T6a2,
 웹 페이지가 현재 사용자에게 보이는지 아닌지를 확인하는 방법이 있다.
 
 `document.visibilityState`를 사용하면 페이지가 현재 사용자에게 보이는지 아닌지를 확인할 수 있다.
@@ -1035,7 +1266,7 @@ export default useVisibilityChange;
 ```
 
 웹 페이지 이탈을 감지할 수 있고, 모바일 웹뷰에서 앱의 백그라운드 상태나 전환을 감지할 수 있다.
-1e:Taca,
+1f:Taca,
 사내 프로젝트를 진행하면서 IOS 웹뷰에서 안전 영역을 설정하는 방법에 대해 알게되었다.
 
 아이폰 X 부터는 디스플레이에 노치 디자인이 적용되고, 하단에는 물리 버튼이 사라지고 제스처로 대체되었다.
@@ -1132,7 +1363,7 @@ export default function RootLayout({
 ```
 
 위와 같이 overflow 만 hidden 처리하여 해결하였다.
-1f:T1359,
+20:T1359,
 monorepo를 사용해 패키지들을 분리하는 과정에서 이슈를 확인했다.
 
 번들링 하지않고, 패키지들을 `index.ts`에서 직접 내보내 사용했을 때, 사용하지 않는 코드들도 함께 포함되는 문제가 있었다.
@@ -1295,7 +1526,7 @@ utils에서 내보내는 함수 중 프로젝트별로 사용하는곳과 사용
 
 rollup 설정에 대해서 아직 완벽하게 이해하지는 못했으며, 내가 의도한대로 작동하는지도 조금 확신이 들지 않지만 이번 기회에 조금 더 깊게 공부해보고 계속해서 확인해보며 수정해나가야겠다.
 개인적으로는 최적화해 나가는 과정이 매우 재밌었던 작업이었다!
-20:Ta2c,
+21:Ta2c,
 최근 rollup으로 패키지를 만드는 과정에서 cjs와 esm에 대해 알게되었다.
 
 ### Module
@@ -1370,152 +1601,7 @@ console.log(lib.name) // lib
 - [kakao blog](https://tech.kakao.com/2023/10/19/commonjs-esm-migration/)
 - [CJS](https://nodejs.org/api/modules.html)
 - [ESM](https://nodejs.org/api/esm.html)
-21:T1101,
-자바스크립트에서 원시타입(primitive data type)은 변경 불가능한(immutable)한 값이다.
-
-- Boolean
-- String
-- Number
-- undefined
-- null
-- Symbol
-
-변경이 불가능하다라는 뜻은 메모리 영역에서의 변경이 불가능하다는 뜻이며, 재할당은 가능하다.
-
----
-
-원시타입 이외의 모든 값은 Object(객체)이다. 객체는 변경 가능한(mutable)한 값이다.
-객체는 변경 가능한(mutable)값이기 때문에 새로운 값을 다시 만들 필요없이 직접 변경이 가능하다.
-
-```javascript
-let string = "hello";
-string = "world";
-```
-string 변수에 "hello"라는 문자열을 할당하고, 다시 "world"라는 문자열을 할당했다. 이때, 첫번째 문자열은 메모리에서 사라지고, 새로운 문자열이 메모리에 할당된다.
-
-```javascript
-let string = "hello";
-let string2 = string.slice(0, 3);
-
-// string = "hello"
-// string2 = "hel"
-```
-string 변수에 "hello"라는 문자열을 할당하고, string2 변수에 string 변수의 문자열을 복사하여 할당했다. 이때, string 변수의 문자열은 변경되지 않는다.
-
----
-
-```javascript
-let arr = [];
-
-let arr2 = arr.push(1);
-
-// arr = [1]
-```
-
-배열은 객체이기 때문에 변경이 가능하다. 위의 코드에서 arr.push(1)을 통해 arr 배열에 1이라는 원소가 추가되었다. 이때, arr 배열은 변경된다.
-복사본을 리턴하는 메소드가 아닌 push, pop, shift, unshift, splice 등의 메소드는 원본 배열을 변경한다.
-
-```javascript
-let object = {
-  name: "been",
-};
-
-let object2 = object;
-
-object2.name = "been2";
-
-console.log(object.name); // been2
-```
-
-객체는 변경이 가능하기 때문에 object2 변수에 object 변수를 할당하고, object2.name을 변경하면 object.name도 변경된다.
-object도 동시에 변경되는 이유는 object2에 object를 할당할 때, object2는 object의 메모리 주소를 참조하기 때문이다.
-
-object에서 불변성을 유지하는 방법은 새로운 객체를 생성하여 값을 할당하는 방법이다.
-
----
-
-### 불변성을 유지하는 방법
-- Spread Operator(es6)
-- Object.assign()
-- Array.concat()
-- Array.slice()
-- Array.map()
-- Array.filter()
-- Array.reduce()
-...등
-
-```javascript
-let object = {
-  name: "been",
-};
-
-let object2 = {
-  ...object,
-  name: "been2",
-};
-
-console.log(object.name); // been
-```
-
-object2에 object를 복사하여 새로운 객체를 생성하고, name을 변경하였다. 이때, object는 변경되지 않는다.
-
----
-
-### 리액트에서 불변성을 지키는 이유
-
-리액트를 사용해 개발을 할 때 useState 등을 사용해 상태를 관리 할 때 push, pop, shift, unshift 등의 메소드를 사용하지 않고,
-새로운 배열을 만들어서 상태를 변경하며 자연스럽게 불변성을 지키며 개발을 했다.
-
-리액트에서는 상태값을 업데이트 할 때 얕은비교를 수행해 이전 상태(참조값)와 새로운 상태(참조값)를 비교 한다.
-새로운 참조값을 가진 Object를 생성하므로 이전 참조값에 영향을 주지 않는다.
-
-1. 불변성을 지키면 상태값을 업데이트 할 때 이전 상태와 새로운 상태를 비교하여 변경된 부분만 업데이트 하기 때문에 성능적으로 이점이 있다.
-2. 상태가 의도치않게 변경되는 것을 막을 수 있고, 사이드 이펙트를 사전에 방지하고 예측 가능한 코드를 작성할 수 있다.
-
-- 상태 업데이트
-```javascript
-const [state, setState] = useState(1);
-
-// 불변성을 지키지 않은 상태 업데이트
-  state = 2;
-  setState(state);
-
-// 불변성을 지킨 상태 업데이트
-  setState(2);
-```
-
-- 배열
-```javascript
-const [state, setState] = useState([1, 2, 3]);
-
-// 불변성을 지키지 않은 상태 업데이트
-  state.push(4);
-  setState(state);
-
-// 불변성을 지킨 상태 업데이트
-  setState([...state, 4]);
-```
-
-- 객체
-```javascript
-const [state, setState] = useState({
-  name: "been",
-  age: 32,
-});
-
-// 불변성을 지키지 않은 상태 업데이트
-  state.name = "been2";
-  setState(state);
-
-// 불변성을 지킨 상태 업데이트
-  setState({
-    ...state,
-    name: "been2",
-  });
-```
-
-이처럼 리액트로 개발을 할 때 불변성을 유지함으로써 안정성을 유지하고 성능을 향상시킬 수 있다.
-9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L17",null,{"isPagination":true,"posts":{"posts":[{"content":"$18","data":{"title":"이벤트 버블링과 이벤트 캡처링","date":"$D2025-05-23T00:00:00.000Z","description":"이벤트 버블링과 이벤트 캡처링에 대한 이해","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"event-bubble-capture"},{"content":"$19","data":{"title":"세션과 쿠키","date":"$D2025-05-13T00:00:00.000Z","description":"세션과 쿠키의 개념과 차이점","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"session-cookie"},{"content":"$1a","data":{"title":"React Parallel Routes","date":"$D2025-04-14T00:00:00.000Z","description":"AOS 웹뷰에서 뒤로가기시 모달을 닫으려면?","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-parallel-routes"},{"content":"$1b","data":{"title":"2년간 스터디하며 배운것들","date":"$D2025-03-18T00:00:00.000Z","description":"2년간의 스터디를 회고하며 느낀 점과 배운 점","category":"til","titleImage":"/assets/postIcon/til.webp"},"slug":"study-remind"},{"content":"$1c","data":{"title":"React Native Deep Linking (2)","date":"$D2025-02-03T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"rn-deep-link-2"},{"content":"$1d","data":{"title":"document.visibilityState","date":"$D2024-12-06T00:00:00.000Z","description":"document.visibilityState를 이용한 페이지의 상태를 확인하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"visibilityState"},{"content":"$1e","data":{"title":"IOS 웹뷰에서 safe area 설정하기","date":"$D2024-07-02T00:00:00.000Z","description":"IOS 웹뷰에서 safe area 를 설정하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"webview-safe-area"},{"content":"$1f","data":{"title":"rollup으로 번들링하는 과정","date":"$D2024-03-09T00:00:00.000Z","description":"처음 rollup으로 번들링하는 과정에서 겪은 문제들과 해결방법","category":"javaScript","titleImage":"/assets/postIcon/rollup-logo.svg"},"slug":"rollup"},{"content":"$20","data":{"title":"cjs와 esm","date":"$D2024-03-07T00:00:00.000Z","description":"rollup으로 번들링하는 과정에서 알게된 cjs와 esm의 차이점에 대해","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"module-system"},{"content":"$21","data":{"title":"리액트에서 불변성을 지키는 이유","date":"$D2024-02-25T00:00:00.000Z","description":"리액트에서 불변성을 지키는 이유","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-immutable"}],"total":45},"page":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (41)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}]]]}]]}]
+9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L17",null,{"isPagination":true,"posts":{"posts":[{"content":"$18","data":{"title":"svg 파일을 rollup 으로 번들링하기","date":"$D2025-05-26T00:00:00.000Z","description":"svg 파일을 rollup 으로 번들링해 React 컴포넌트로 사용하기","category":"javaScript","titleImage":"/assets/postIcon/rollup-logo.svg"},"slug":"rollup-svg"},{"content":"$19","data":{"title":"이벤트 버블링과 이벤트 캡처링","date":"$D2025-05-23T00:00:00.000Z","description":"이벤트 버블링과 이벤트 캡처링에 대한 이해","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"event-bubble-capture"},{"content":"$1a","data":{"title":"세션과 쿠키","date":"$D2025-05-13T00:00:00.000Z","description":"세션과 쿠키의 개념과 차이점","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"session-cookie"},{"content":"$1b","data":{"title":"React Parallel Routes","date":"$D2025-04-14T00:00:00.000Z","description":"AOS 웹뷰에서 뒤로가기시 모달을 닫으려면?","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-parallel-routes"},{"content":"$1c","data":{"title":"2년간 스터디하며 배운것들","date":"$D2025-03-18T00:00:00.000Z","description":"2년간의 스터디를 회고하며 느낀 점과 배운 점","category":"til","titleImage":"/assets/postIcon/til.webp"},"slug":"study-remind"},{"content":"$1d","data":{"title":"React Native Deep Linking (2)","date":"$D2025-02-03T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"rn-deep-link-2"},{"content":"$1e","data":{"title":"document.visibilityState","date":"$D2024-12-06T00:00:00.000Z","description":"document.visibilityState를 이용한 페이지의 상태를 확인하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"visibilityState"},{"content":"$1f","data":{"title":"IOS 웹뷰에서 safe area 설정하기","date":"$D2024-07-02T00:00:00.000Z","description":"IOS 웹뷰에서 safe area 를 설정하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"webview-safe-area"},{"content":"$20","data":{"title":"rollup으로 번들링하는 과정","date":"$D2024-03-09T00:00:00.000Z","description":"처음 rollup으로 번들링하는 과정에서 겪은 문제들과 해결방법","category":"javaScript","titleImage":"/assets/postIcon/rollup-logo.svg"},"slug":"rollup"},{"content":"$21","data":{"title":"cjs와 esm","date":"$D2024-03-07T00:00:00.000Z","description":"rollup으로 번들링하는 과정에서 알게된 cjs와 esm의 차이점에 대해","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"module-system"}],"total":46},"page":"$undefined"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (42)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}]]]}]]}]
 12:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 d:null
 16:{"metadata":[["$","title","0",{"children":"Been blog"}],["$","meta","1",{"name":"description","content":"Been dev-note"}],["$","meta","2",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","3",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","link","4",{"rel":"canonical","href":"https://wonbeenna.github.io"}],["$","meta","5",{"property":"og:title","content":"Been blog"}],["$","meta","6",{"property":"og:description","content":"Been dev-note"}],["$","meta","7",{"property":"og:url","content":"https://wonbeenna.github.io"}],["$","meta","8",{"property":"og:site_name","content":"Been blog"}],["$","meta","9",{"property":"og:locale","content":"ko_KR"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","24",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}]],"error":null,"digest":"$undefined"}

@@ -14,13 +14,345 @@ f:I[4911,[],"AsyncMetadataOutlet"]
 :HL["/_next/static/media/47cbc4e2adbc5db9-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/css/e539936c7dc6b882.css","style"]
 :HL["/_next/static/css/e7c7294f242bce08.css","style"]
-0:{"P":null,"b":"nb0nDyCPZMTUE2B8F7fpv","p":"","c":["","page","5"],"i":false,"f":[[["",{"children":["page",{"children":[["page","5","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e7c7294f242bce08.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","5","d"],["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",["$","$La",null,{"children":"$Lb"}],null,["$","$Lc",null,{"children":["$Ld","$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","PeyUQ3kkz_o0sHb82cv5-",{"children":[["$","$L11",null,{"children":"$L12"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$13","$undefined"],"s":false,"S":true}
+0:{"P":null,"b":"T39Mvz6c8SIi7W1th-g-L","p":"","c":["","page","5"],"i":false,"f":[[["",{"children":["page",{"children":[["page","5","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e7c7294f242bce08.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","5","d"],["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",["$","$La",null,{"children":"$Lb"}],null,["$","$Lc",null,{"children":["$Ld","$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","Vl61HS__aREE6ZdIyCELx",{"children":[["$","$L11",null,{"children":"$L12"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$13","$undefined"],"s":false,"S":true}
 14:"$Sreact.suspense"
 15:I[4911,[],"AsyncMetadata"]
 b:["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"promise":"$@16"}]}]
 17:I[1114,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","848","static/chunks/app/page/%5Bpage%5D/page-3d16974de746edb8.js"],"default"]
 e:null
-18:T1f48,
+18:T2721,
+**[유동균님의 강의](https://inf.run/4zeg)를 보며 정리한 글 입니다.**
+
+---
+
+### 1\. 이미지 지연(lazy) 로딩
+
+<img src="/assets/blog/javaScript/web-optimization-2-1.png" width="100%" alt="post image"/>
+
+예제에서 네트워크를 6메가비트로 맞춰놓았다.
+
+제일 먼저 사용자에게 보여져야할 동영상이 이미지 보다 더 늦게 다운로드 되는 부분을 동영상이 먼저 다운로드 되도록 수정해야한다.
+
+-   이미지를 빠르게 다운로드
+-   **이미지를 나중에 다운로드, 동영상 먼저 다운로드**
+
+두번째 방법을 사용해 수정(image lazy)
+
+이미지를 필요할때(나중에, 보여지기 직전에) 로드되도록 해야한다.
+
+스크롤이 이미지가 있는 곳에 도달하면 이미지를 로드하고, 그렇지 않으면 보이지 않도록 해야하는데,
+
+이 방법은 사용자가 매번 스크롤을 할 때마다 이벤트함수가 호출되는 단점이 있다.
+
+이 문제를 해결하려면 **IntersectionObserver**로 해결할 수 있다. 즉 화면에 특정 이미지가 들어올 때만 함수를 호출하게 된다.
+
+[https://developer.mozilla.org/ko/docs/Web/API/Intersection\_Observer\_API](https://developer.mozilla.org/ko/docs/Web/API/Intersection_Observer_API)
+
+```js
+const observer = new IntersectionObserver(callback, options)
+observer.observe(element객체)
+```
+
+```js
+    const imgRef = useRef(null)
+
+   useEffect(() => {
+      const options = {}
+      const callback = () => {
+         console.log('callback')
+      }
+      const observer = new IntersectionObserver(callback, options)
+
+      observer.observe(imgRef.current)
+   }, [])
+
+
+   return (
+      <div className="Card text-center">
+         <img src={props.image} ref={imgRef} />
+         <div className="p-5 font-semibold text-gray-700 text-xl md:text-lg lg:text-xl keep-all">
+            {props.children}
+         </div>
+      </div>
+   )
+}
+```
+
+<img src="/assets/blog/javaScript/web-optimization-2-2.png" width="100%" alt="post image"/>
+
+스크롤을 내려 이미지가 **보이거나 사라질때** 콘솔이 찍힌다.
+
+이미지가 보이는 그 순간에만 로드하려면 callback 함수에 entries와 observer객체를 넘겨주면 된다.
+
+```js
+useEffect(() => {
+   const options = {}
+   const callback = (entries, observer) => {
+      entries.forEach(entry => {
+         if(entry.isIntersecting){
+            console.log('is Intersecting')
+         }
+      })
+   }
+   const observer = new IntersectionObserver(callback, options)
+
+   observer.observe(imgRef.current)
+}, [])
+```
+
+<img src="/assets/blog/javaScript/web-optimization-2-3.png" width="100%" alt="post image"/>
+
+위와는 다르게 화면안에 이미지가 **보일 때만** 콘솔이 찍힌다.
+
+```js
+    const imgRef = useRef(null)
+
+    useEffect(() => {
+        const options = {}
+        const callback = (entries, observer) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    console.log('is Intersecting', entry.target.dataset.src)
+                    entry.target.src = entry.target.dataset.src
+                    // 이미지가 들어오면 더이상 감시하지 않음
+                    observer.unobserve(entry.target)
+                }
+            })
+        }
+        const observer = new IntersectionObserver(callback, options)
+        // 이미지를 넣음
+        observer.observe(imgRef.current)
+    }, [])
+
+
+    return (
+        <div className="Card text-center">
+            <img data-src={props.image} ref={imgRef}/>
+            <div className="p-5 font-semibold text-gray-700 text-xl md:text-lg lg:text-xl keep-all">
+                {props.children}
+            </div>
+        </div>
+    )
+}
+```
+
+<img src="/assets/blog/javaScript/web-optimization-2-4.png" width="100%" alt="post image"/>
+
+동영상을 먼저 로드하고, 이미지를 불러옴
+
+---
+
+### 2\. 이미지 사이즈 최적화
+
+위에서 지연로딩을 사용해 이미지를 불러오는 타이밍을 조절했지만 그래도 이미지 자체의 용량이 크다면 불러오는 속도가 느려질 수 밖에 없다.
+
+이미지 포맷, 확장자 종류
+
+- JPG를 **WEBP**(구글에서 나온 이미지 포맷, JPG에 비해서 화질이높고 용량이 낮음)로 변경,
+
+* 꼭 WEBP로 할필요는 없다 (**WEBP, WEBM**은 현재 잘 쓰지 않는다) 현재 지원하지않는 브라우저도 있음
+
+**picture** 태그로 이미지 분기(나중에 자세하게 배워보자)
+
+```html
+<picture>
+   <source  data-srcset={props.webp} type='image/webp'/>
+   <img data-src={props.image} ref={imgRef}/>
+</picture>
+```
+
+이미지 포맷은 [https://squoosh.app/](https://squoosh.app/) 를 사용했다.
+
+<img src="/assets/blog/javaScript/web-optimization-2-5.png" width="100%" alt="post image"/>
+
+예제에서 브라우저에 보일 크기는 300 x 300 이므로 **x2**를해 600 x 600으로 포맷
+
+이미지가 9.74MB에서 **21.9KB**로 줄었다.
+
+---
+
+### 3\. 동영상 사이즈 최적화
+
+동영상이 메인 컨텐츠가 아닌 경우 적합
+
+동영상도 **WEBM**으로 포맷
+
+```html
+<video
+   className="absolute translateX--1/2 h-screen max-w-none min-w-screen -z-1 bg-black min-w-full min-h-screen"
+   autoPlay
+   loop
+   muted
+>
+   <source src={video_webm} type='video/webm' />
+   <source src={video} type='video/mp4' />
+</video>
+```
+
+---
+
+### 4\. 폰트 최적화
+
+폰트도 리소스라 네트워크를 통해 받아온다.
+
+- 웹 폰트의 문제점
+
+**FOUT**(Flash of Unstyled Text) = 폰트를 다운로드 하기 전에는 **기본폰트로 컨텐츠**를 보여줌
+
+**FOIT**(Flash of Invisible Text) = 폰트가 다운로드 되기 전에는 **컨텐츠를 보여주지 않음**
+
+1. 폰트 적용 시점 컨트롤
+
+-   font-display 사용
+    \- auto : 브라우저 기본 동작
+    \- block : FOIT (timeout = 3s)
+    \- swap : FOUT
+    \- fallback : FOIT (timeout = 0.1s) 0.1초 후에도 불러오지 못하면 **기본 폰트 유지**, 이후에 캐시
+    \- optional : FOIT (timeout = 0.1s) 이후 네트워크 상태에 따라 **기본폰트로 유지할지 웹폰트를 적용할지 결정**, 이후에 캐시
+
+```css
+@font-face {
+	font-family: BMYEONSUNG;
+	src: url('./assets/fonts/BMYEONSUNG.ttf');
+	font-display: swap;
+}​
+```
+
+<img src="/assets/blog/javaScript/web-optimization-2-6.gif" width="100%" alt="post image"/>
+
+-   fontfaceobserver 라이브러리를 사용해 시각적인 효과
+
+```css
+@font-face {
+   font-family: BMYEONSUNG;
+   src: url('./assets/fonts/BMYEONSUNG.ttf');
+   font-display: block;
+}
+```
+
+```js
+const [isFontLoaded, setIsFontLoaded] = useState(false)
+
+const font = new FontFaceObserver('BMYEONSUNG');
+
+useEffect(() => {
+   font.load().then(function () {
+      console.log('BMYEONSUNG has loaded');
+      setIsFontLoaded(true)
+   });
+}, [])
+
+return (
+    <div className="..." style={{opacity: isFontLoaded ? 1 : 0, transition: 'opacity 0.3s ease'}} >
+        <div className="...">
+            {...}
+        </div>
+    </div>
+)
+```
+
+2. 폰트 사이즈 줄이기
+
+폰트 포멧 사이트 [https://transfonter.org/](https://transfonter.org/)
+
+- 웹폰트 포맷 사용 (파일 크기 = EOT > TTF/OTF > WOFF > WOFF2)
+
+```css
+@font-face {
+   font-family: BMYEONSUNG;
+       /* 로컬에 폰트가 있으면 바로 적용*/
+   src: local('BMYEONSUNG'),
+       url('./assets/fonts/BMYEONSUNG.woff2') format('woff2'),
+       /* 지원하지 않는 브라우저 대응 */
+       url('./assets/fonts/BMYEONSUNG.woff') format('woff'),
+       url('./assets/fonts/BMYEONSUNG.ttf') format('truetype');
+   font-display: block;
+}
+```
+
+- local 폰트 사용
+
+- **Subset** 사용
+
+필요한 글자만 가져와서 사용 "ABCDEFGHIJKLMNOPQR"
+
+<img src="/assets/blog/javaScript/web-optimization-2-7.png" width="100%" alt="post image"/>
+
+변환하지 않은 폰트는 포함되지 않음
+
+- **Unicode Range** 적용
+
+```css
+@font-face {
+   font-family: BMYEONSUNG;
+        /* 로컬에 폰트가 있으면 바로 적용*/
+   src: url('./assets/fonts/subset-BMYEONSUNG.woff2') format('woff2'),
+        /* 지원하지 않는 브라우저 대응 */
+        url('./assets/fonts/subset-BMYEONSUNG.woff') format('woff'),
+        url('./assets/fonts/BMYEONSUNG.ttf') format('truetype');
+   font-display: block;
+   unicode-range: U+0041;
+}
+```
+
+<img src="/assets/blog/javaScript/web-optimization-2-8.png" width="100%" alt="post image"/>
+
+Subset은 렌더링 하는 텍스트에 폰트가 필요하지 않아도 폰트를 로드하지만 unicode-range를 사용하면 폰트가 필요하지 않으면 로드하지 않는다
+
+- data-uri로 변환
+
+Base64 encode 해 불러오는 방식
+
+- **Preload**
+
+해당하는 페이지에 폰트가 필요하다는 것을 HTML에 작성
+
+```html
+<link rel="preload" href="BMYEONSUNG.woff2" as="font" type="font/woff2" crossorigin>
+```
+
+<img src="/assets/blog/javaScript/web-optimization-2-9.png" width="100%" alt="post image"/>
+
+CSS가 로드되기 전에 폰트가 먼저 로드됨
+
+---
+
+### 5\. 캐시 최적화
+
+웹 브라우저는 크게 메모리 캐시, 디스크 캐시 두가지로 캐싱한다.
+
+**메모리 캐시는 RAM**에 저장, **디스크 캐시는 file로 데이터**를 저장
+
+- Cache-Control
+
+브라우저 이미지 요청 -> 서버
+
+서버 -> 브라우저에 이미지(캐시) 보냄
+
+* 서버에서 설정이 필요
+
+-   no-cache : 캐시를 사용하기 전에 서버에서 검사 후 사용 결정
+-   no-store : 캐시 사용 안함
+-   public : 모든 환경에서 사용
+-   private : 브라우저 환경에서만 캐시 사용, 외부 캐시 서버에서는 사용 불가
+-   max-age : 캐시의 유효시간
+
+- Node
+
+```js
+const header = {
+    setHeaders: (res, path) => {
+    	if(path.endsWith('.html')){
+        	res.setHeader('Cache-Control', no-cache)
+        } else if(path.endsWith('.js') || path.endsWith('css') || path.endsWith('.webp')){
+        	res.setHeader('Cache-Control', 'public, max-age=...'
+        } else {
+        	res.setHeader('Cache-Control', 'no-store')
+        }
+    },
+}
+```
+19:T1f48,
 **[유동균님의 강의](https://www.inflearn.com/course/%EC%9B%B9-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EB%A6%AC%EC%95%A1%ED%8A%B8-1)를 보며 정리한 글 입니다.**
 
 ---
@@ -268,7 +600,7 @@ useEffect(() => {
 주의할점은 이미지는 모듈과 다르게 필요할 때 마다 그때그때 매번 보내기 때문에
 
 사용하는 이미지에 캐시가 제대로 걸려있는지 확인할 필요가 있다.
-19:T2416,
+1a:T2416,
 
 ####
 **[Svelte vs React: Ending the Debate](https://massivepixel.io/blog/svelte-vs-react/ "Svelte vs React: Ending the Debate")를 읽으며 정리한 글입니다.**
@@ -421,7 +753,7 @@ GZIPPED(압축된) 버전의 리액트는 **42.2KB**(ReactDOM포함), 스벨트�
 하지만 스벨트는 아직 갈 길이 멀다. 지금까지는 인터넷 연결이 낮거나, 블로그, 포트폴리오 등 단순히 개인 웹사이트를 만드는 단일 페이지 애플리케이션을 구축하는데 사용하는 것이 좋다.
 
 또 큰 회사들의 기술 스택을 스벨트로 교체하기에는 많은 시간이 필요할 것이며 스벨트의 개발자들의 수요 또한 거의 없다.
-1a:T1085,
+1b:T1085,
 # 렌더링 최적화
 
 ### 1\. 컴포넌트를 맵핑할때는 key값으로 Index를 사용하지 말자
@@ -568,7 +900,7 @@ useMemo는 리턴되는 값을 memoize 시키는 반면에, useCallback은 함�
     {...}
   }, [users]);
 ```
-1b:T1f82,
+1c:T1f82,
 [리액트 문서](https://beta.reactjs.org/)를 정독하며 정리한 글
 영어문서라 조금 힘들었다...
 
@@ -823,7 +1155,7 @@ function FilterableProductTable({ products }) {
 ```
 
 
-1c:T1c8d,
+1d:T1c8d,
 ## React Hook
 
 React로 개발할 땐 클래스형 컴포넌트 보다 React 16.8 부터 도입된 Hook 기반 함수형 컴포넌트를 더 선호하여 개발하는 것 같다.
@@ -1060,7 +1392,7 @@ function useEffect(cb, depArray) {
 [Deep dive: How do React hooks really work?](https://www.netlify.com/blog/2019/03/11/deep-dive-how-do-react-hooks-really-work/)
 
 [Getting Closure on React Hooks](https://rinae.dev/posts/getting-closure-on-react-hooks-summary)
-9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L17",null,{"isPagination":true,"posts":{"posts":[{"content":"$18","data":{"title":"웹성능 최적화(1)","date":"$D2022-01-01T00:00:00.000Z","description":"웹성능 최적화1","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"web-optimization"},{"content":"$19","data":{"title":"스벨트와 리액트","date":"$D2021-12-12T00:00:00.000Z","description":"스벨트와 리액트에 대해 정리한 글","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-react"},{"content":"$1a","data":{"title":"React 처럼 생각하기(2)","date":"$D2021-12-12T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"thinking-in-react-2"},{"content":"$1b","data":{"title":"React 처럼 생각하기","date":"$D2021-11-20T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"thinking-in-react"},{"content":"$1c","data":{"title":"React Hook의 동작","date":"$D2021-11-07T00:00:00.000Z","description":"React Hook의 동작에 대해","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-hook"}],"total":45},"page":"5"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (41)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}]]]}]]}]
+9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L17",null,{"isPagination":true,"posts":{"posts":[{"content":"$18","data":{"title":"웹성능 최적화(2)","date":"$D2022-01-03T00:00:00.000Z","description":"웹성능 최적화2","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"web-optimization-2"},{"content":"$19","data":{"title":"웹성능 최적화(1)","date":"$D2022-01-01T00:00:00.000Z","description":"웹성능 최적화1","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"web-optimization"},{"content":"$1a","data":{"title":"스벨트와 리액트","date":"$D2021-12-12T00:00:00.000Z","description":"스벨트와 리액트에 대해 정리한 글","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-react"},{"content":"$1b","data":{"title":"React 처럼 생각하기(2)","date":"$D2021-12-12T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"thinking-in-react-2"},{"content":"$1c","data":{"title":"React 처럼 생각하기","date":"$D2021-11-20T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"thinking-in-react"},{"content":"$1d","data":{"title":"React Hook의 동작","date":"$D2021-11-07T00:00:00.000Z","description":"React Hook의 동작에 대해","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-hook"}],"total":46},"page":"5"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (42)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}]]]}]]}]
 12:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 d:null
 16:{"metadata":[["$","title","0",{"children":"Been blog - 5"}],["$","meta","1",{"name":"description","content":"Been dev-note - 5"}],["$","meta","2",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","3",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","link","4",{"rel":"canonical","href":"https://wonbeenna.github.io/page/5"}],["$","meta","5",{"property":"og:title","content":"Been blog - 5"}],["$","meta","6",{"property":"og:description","content":"Been dev-note - 5"}],["$","meta","7",{"property":"og:url","content":"https://wonbeenna.github.io/page/5"}],["$","meta","8",{"property":"og:site_name","content":"Been blog"}],["$","meta","9",{"property":"og:locale","content":"ko_KR"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 5"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 5"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","24",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}]],"error":null,"digest":"$undefined"}
