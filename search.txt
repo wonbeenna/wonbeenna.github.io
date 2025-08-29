@@ -1,24 +1,272 @@
 1:"$Sreact.fragment"
-2:I[9243,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-2026af6fce535623.js"],""]
-3:I[881,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-2026af6fce535623.js"],"Providers"]
-4:I[6874,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","974","static/chunks/app/page-db833fa3fc4df86a.js"],""]
-5:I[3063,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-2026af6fce535623.js"],"Image"]
-6:I[1186,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-2026af6fce535623.js"],"default"]
-7:I[7555,[],""]
-8:I[1295,[],""]
-a:I[9665,[],"MetadataBoundary"]
-c:I[9665,[],"OutletBoundary"]
-f:I[4911,[],"AsyncMetadataOutlet"]
-11:I[9665,[],"ViewportBoundary"]
-13:I[6614,[],""]
+2:I[1402,["619","static/chunks/619-ba102abea3e3d0e4.js","239","static/chunks/239-c2117d3ee033cea8.js","177","static/chunks/app/layout-e509d1a31c7f333f.js"],""]
+3:I[6300,["619","static/chunks/619-ba102abea3e3d0e4.js","239","static/chunks/239-c2117d3ee033cea8.js","177","static/chunks/app/layout-e509d1a31c7f333f.js"],"Providers"]
+4:I[2619,["619","static/chunks/619-ba102abea3e3d0e4.js","239","static/chunks/239-c2117d3ee033cea8.js","974","static/chunks/app/page-210b2dff0315fedd.js"],""]
+5:I[1356,["619","static/chunks/619-ba102abea3e3d0e4.js","239","static/chunks/239-c2117d3ee033cea8.js","177","static/chunks/app/layout-e509d1a31c7f333f.js"],"Image"]
+6:I[379,["619","static/chunks/619-ba102abea3e3d0e4.js","239","static/chunks/239-c2117d3ee033cea8.js","177","static/chunks/app/layout-e509d1a31c7f333f.js"],"default"]
+7:I[9766,[],""]
+8:I[8924,[],""]
+a:I[4431,[],"OutletBoundary"]
+c:I[5278,[],"AsyncMetadataOutlet"]
+e:I[4431,[],"ViewportBoundary"]
+10:I[4431,[],"MetadataBoundary"]
+11:"$Sreact.suspense"
+13:I[7150,[],""]
 :HL["/_next/static/media/47cbc4e2adbc5db9-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/css/e539936c7dc6b882.css","style"]
 :HL["/_next/static/css/e7c7294f242bce08.css","style"]
-0:{"P":null,"b":"T39Mvz6c8SIi7W1th-g-L","p":"","c":["","search"],"i":false,"f":[[["",{"children":["search",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e7c7294f242bce08.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["search",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",["$","$La",null,{"children":"$Lb"}],null,["$","$Lc",null,{"children":["$Ld","$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","dSdIVgmvpk-UGnlh-N5Bm",{"children":[["$","$L11",null,{"children":"$L12"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$13","$undefined"],"s":false,"S":true}
-14:I[4885,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","959","static/chunks/app/search/page-dca43b7125597792.js"],"default"]
-41:"$Sreact.suspense"
-42:I[4911,[],"AsyncMetadata"]
-15:T1840,
+0:{"P":null,"b":"iWTXvzrkASeYQ5K5Setq_","p":"","c":["","search"],"i":false,"f":[[["",{"children":["search",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e7c7294f242bce08.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["search",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",null,["$","$La",null,{"children":["$Lb",["$","$Lc",null,{"promise":"$@d"}]]}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$Le",null,{"children":"$Lf"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L10",null,{"children":["$","div",null,{"hidden":true,"children":["$","$11",null,{"fallback":null,"children":"$L12"}]}]}]]}],false]],"m":"$undefined","G":["$13",[]],"s":false,"S":true}
+14:I[3385,["619","static/chunks/619-ba102abea3e3d0e4.js","239","static/chunks/239-c2117d3ee033cea8.js","959","static/chunks/app/search/page-694fea43c11cd5c2.js"],"default"]
+15:T1a7b,
+## 웹 접근성이란?
+
+웹 접근성이란 장애가 있는 사람을 포함해 모든 사용자가 동등하게 웹에 접근하고 이용할 수 있도록 보장하는 것을 의미
+
+더 많은 사용자에게 도달할 수 있고, 성능 최적화, 사용자 경험(UX)을 개선하며, 검색엔진 최적화(SEO)에도 긍정적인 효과가 있음
+
+웹 접근성은 “특정 집단(장애인)”이 아닌 모든 사람을 위한 기본 설계 원칙
+
+## 시멘틱 마크업
+
+[mdn](https://developer.mozilla.org/ko/docs/Glossary/Semantics)
+
+div와 span 대신 header, main, nav, article, section, footer와 같은 시맨틱 태그 활용.
+
+버튼은 반드시 `<button>` 태그를 사용. (div에 onClick 대신)
+
+```html
+<!-- X -->
+<div onclick="submitForm()">제출</div>
+
+<!-- O -->
+<button type="submit">제출</button>
+```
+
+## 대체 텍스트
+
+이미지에는 항상 alt 속성을 제공
+
+장식용 이미지는 alt=""로 설정하여 스크린 리더가 읽지 않도록 함
+
+```html
+    <img src="logo.png" alt="pass 로고" />
+```
+
+## 상호작용 요소 목록
+
+상호작용 요소 중 하나를 포함하는 요소 안에는 또 다른 상호작용 요소를 넣을 수 없다
+
+```html
+    <!-- X -->
+    <a href="/">
+      <Button>확인</Button>
+    </a>
+
+    <!-- X -->
+    <button>
+      시설관리
+      <button>
+        x
+      </button>
+    </button>
+```
+
+- `<a>`
+- `<audio>`
+- `<button>`
+- `<details>`
+- `<embed>`
+- `<iframe>`
+- `<img>`
+- `<input>`
+- `<keygen>`
+- `<label>`
+- `<menu>`
+- `<object>`
+- `<select>`
+- `<textarea>`
+- `<video>`
+
+## a 태그와 button 태그
+
+라우팅시에는 `<a>` 태그 사용
+
+`<a>` 태그: 웹 표준상 “다른 리소스로 이동”을 의미 → 페이지 이동, 라우팅에 적합
+
+`<button>` 태그: 현재 페이지 내에서 특정 동작(폼 제출, 모달 열기 등)을 실행하는 요소
+
+```jsx
+// react-router-dom
+
+// O
+<Link to="/profile">프로필</Link>
+
+// X
+<button onClick={() => navigate('/profile')}>프로필</button>
+```
+
+시맨틱 태그에 따라 마우스 오른쪽 버튼을 클릭했을때 나타나는 컨텍스트 메뉴가 다르다
+
+<div style={{
+    display: 'flex',
+    gap: '16px',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    alignItems: 'center',
+}}>
+    <img style={{
+        width: 250,
+        height: 300
+    }} src="/assets/blog/javascript/a-tag.png" alt="a 태그 컨텍스트 메뉴" />
+    <img style={{
+        width: 250,
+        height: 300
+    }} src="/assets/blog/javascript/button-tag.png" alt="button 태그 컨텍스트 메뉴" />
+</div>
+
+```html
+<a> 태그
+<button> 태그
+```
+
+## ARIA
+
+ARIA (Accessible Rich Internet Applications)는 웹 애플리케이션을 보조기기(스크린리더 등)에서도 이해할 수 있도록 돕는 속성들의 모음
+
+HTML의 시맨틱 태그만으로는 표현하기 어려운 상태, 역할, 속성을 전달할 때 사용
+
+👉 ARIA는 보완 수단, HTML 기본 시맨틱 요소로 표현할 수 있다면 ARIA보다 태그를 우선 사용하는 게 원칙
+
+### 주요 구성 요소
+
+- role
+요소의 역할을 정의 (button, switch, dialog, tab 등)
+
+- aria-속성
+상태나 설명을 보조기기에 전달 (aria-checked, aria-hidden, aria-expanded, aria-describedby 등)
+
+### 예시
+
+```jsx
+    <button
+        type="button"
+        role="switch"
+        aria-checked={checked}
+        disabled={disabled}
+        onClick={handleCheckedClick}
+        {...rest}
+    >
+    {...}
+    </button>
+```
+
+1. role="switch"
+
+HTML에는 토글 스위치(Switch)라는 시맨틱 태그가 존재하지 않음
+
+role="switch"를 주면, 스크린리더는 “스위치”로 읽고, 켜짐/꺼짐 상태를 인지할 수 있음
+
+2. aria-checked=checked
+
+스위치의 현재 상태를 전달
+
+true → “켜짐(on)”, false → “꺼짐(off)” 으로 읽어줌
+
+스크린리더 사용자는 버튼의 현재 상태를 바로 알 수 있음
+
+3. disabled=disabled
+
+네이티브 HTML 속성. 버튼이 비활성화되어 있음을 알려줌
+
+스크린리더는 “비활성화됨”이라고 읽어줌
+
+4. onClick=handleCheckedClick
+
+스위치를 토글하는 이벤트 핸들러
+
+보조기기 사용자도 키보드 Enter / Space로 조작할 수 있음 (버튼의 기본 기능)
+
+
+---
+
+## 키보드 접근성
+
+- 모든 기능은 키보드만으로 사용 가능해야 함 (Tab, Shift+Tab, Enter, Space, 화살표 등)
+- 포커스 순서는 시각적/논리적 순서와 일치해야 함
+- `tabindex`는 0 또는 -1만 사용 (양수 사용 금지)
+
+```html
+    <!-- 비대화형 요소에 포커스 필요할 때만 -->
+    <div tabindex="-1" id="result" aria-live="polite"></div>
+```
+
+## 포커스 표시와 스타일
+
+- 포커스는 항상 **보이게** 해야 함 (outline 제거 금지)
+- `:focus-visible`로 키보드 사용자에게만 뚜렷한 포커스 제공
+
+```css
+    button:focus-visible,
+    a:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 2px;
+    }
+```
+
+## 링크 텍스트
+
+- 링크 텍스트만으로 목적 이해 가능해야 함 (“여기”, “더보기” 지양)
+- 동일한 텍스트가 여러 곳이면 시각적으로 같아도 **접근성 이름**은 구분
+
+```html
+    <a href="/docs" aria-label="문서 센터 바로가기">문서</a>
+    <a href="/pricing" aria-label="요금제 안내 바로가기">문서</a>
+```
+
+## 폼과 에러 처리
+
+- 모든 입력은 `<label for>`로 연결
+- 힌트/에러 메시지는 `aria-describedby`로 묶어 읽히게 함
+- 유효성 검사는 실시간 제공 + 제출 시 요약 제공
+
+```html
+    <label for="email">이메일</label>
+    <input id="email" name="email" type="email" aria-describedby="email-hint email-err" required>
+    <p id="email-hint">회사 이메일 형식 권장</p>
+    <p id="email-err" class="visually-hidden" role="alert"></p>
+
+    <script>
+        const input = document.getElementById('email');
+        const err = document.getElementById('email-err');
+        input.addEventListener('invalid', () => { err.textContent = '올바른 이메일 주소를 입력'; });
+    </script>
+```
+
+## 헤딩 구조
+
+- `<h1>`은 페이지 당 하나, 이후 순차적으로 `<h2>`, `<h3>`…
+- 시각적 크기 조절은 CSS로, 헤딩 레벨은 건드리지 않기
+
+```html
+    <h1>제품</h1>
+    <h2>개요</h2>
+    <h3>주요 기능</h3>
+```
+
+## 모달/다이얼로그
+
+- 열릴 때 포커스 모달 안으로 이동, 닫히면 트리거로 복귀
+- 배경은 스크린리더/탭 탐색에서 제외 (`aria-modal="true"`)
+- 제목/설명 연결
+
+```html
+<div role="dialog" aria-modal="true" aria-labelledby="dlg-title" aria-describedby="dlg-desc">
+    <h2 id="dlg-title">설정</h2>
+    <p id="dlg-desc">알림 설정을 변경</p>
+    <button type="button">저장</button>
+</div>
+```
+16:T1840,
 개발 진행중 다양한 svg 파일을 컴포넌트로 변환하여 사용해야할 필요가 있다.
 매번 svg 파일을 컴포넌트로 변환하는 작업도 번거롭고, 변환 과정에서 실수로 svg 파일을 잘못 수정하는 경우도 있다.
 또, 아이콘은 상황에따라 색상, 크기, 회전 등을 변경해야하는 경우가 많다.
@@ -249,7 +497,7 @@ function App() {
     </div>
   );
 }
-```16:T1760,
+```17:T1760,
 ## 이벤트 버블링(Event Bubbling)과 이벤트 캡처링(Event Capturing)
 
 ### 이벤트 전파(Event Propagation)이란?
@@ -396,7 +644,7 @@ document.querySelector('ul').addEventListener('click', (e) => {
 
 - 일반적으로 많이 사용되지는 않지만, 특정 요소가 이벤트를 가로채야 할 때 유용하다.
 - 예를 들어, 특정 요소에서 이벤트가 발생했을 때, 부모 요소에서 이벤트를 처리하기 전에 먼저 특정 요소에서 이벤트를 처리해야 할 경우에 사용된다.
-17:T16ad,
+18:T16ad,
 ## 세션과 쿠키의 개념
 
 ### 세션(session)
@@ -487,7 +735,7 @@ res.cookie('username', 'john', { maxAge: 900000, httpOnly: true });
 
 - 세션(Session): 민감한 데이터나 일시적으로 관리해야 하는 데이터, 서버에서 관리가 필요한 데이터를 저장.
 - 쿠키(Cookie): 사용자의 브라우저에서 저장하는 간단하고 가벼운 데이터를 저장, 사용자의 설정 값, 지속적인 추적, 개인화 데이터에 적합.
-18:T1494,
+19:T1494,
 ### React Parallel Routes와 View Transitions API
 
 웹뷰 개발시 AOS에서 뒤로가기 버튼을 누르면 모달이 닫히지 않고, 앱이 종료되거나 웹뷰가 닫히는 이슈가 생길 수 있다.
@@ -646,7 +894,7 @@ View Transitions API 대해서는 다음에 작성하는걸로하고,, 위처럼
 이런 식으로 모달을 구현하면 좀 더 앱스러운 UX를 제공할 수 있다.
 뒤로가기시에도 모달이 닫히고, URL도 변경되기 때문에 사용자가 뒤로가기 버튼을 눌렀을 때 모달이 닫히는 동작을 자연스럽게 처리할 수 있다.
 
-19:T3de5,
+1a:T3de5,
 ### 들어가며
 단순한 스터디에서 시작했지만, 예비창업패키지에도 선정되며 아주 작은 스타트업처럼 운영하게 된 스터디를 회고하며 느낀 점과 배운 점을 정리해보려 한다.
 
@@ -1014,7 +1262,7 @@ lighthouse 점수를 최대한 높이기 위해 노력했고, 실제로도 검�
 25년도 지원사업은 아쉽게도 떨어졌다. 낮은 진입장벽, 데이터 수집 한계, 구조가 비슷한 플랫폼에 손익분기 달성 실패, 낮은 재방문 주기 등이 이유였다.
 
 현재 내부에서는 다양한 의견들이 오가고있다. 아무래도 프로젝트를 유지하는데는 비용적인 문제가 가장 크기때문에, 수익모델 개선, 다른 신사업 아이템들을 고민하고 있다.
-1a:T1750,
+1b:T1750,
 ### 딥링크
 - 웹링크 URL이 사용자를 특정 웹사이트로 이동시키는 것처럼, 딥링크는 사용자를 특정 앱이나 앱의 원하는 화면으로 이동하도록 유도하는 링크이다.
 
@@ -1215,7 +1463,7 @@ export const linkingConfig: LinkingOptions<NavigationProps> = {
 - 앱이 처음 실행될 때 : `getInitialURL`을 이용해 딥링크 처리
 - 앱이 백그라운드 -> 포그라운드 전환될 때 : `subscribe`에 `Appstate`를 이용해 딥링크 처리
 - 앱이 실행중일 때 : `subscribe`에 `Linking`을 이용해 딥링크 처리
-1b:T6a2,
+1c:T6a2,
 웹 페이지가 현재 사용자에게 보이는지 아닌지를 확인하는 방법이 있다.
 
 `document.visibilityState`를 사용하면 페이지가 현재 사용자에게 보이는지 아닌지를 확인할 수 있다.
@@ -1264,7 +1512,7 @@ export default useVisibilityChange;
 ```
 
 웹 페이지 이탈을 감지할 수 있고, 모바일 웹뷰에서 앱의 백그라운드 상태나 전환을 감지할 수 있다.
-1c:Taca,
+1d:Taca,
 사내 프로젝트를 진행하면서 IOS 웹뷰에서 안전 영역을 설정하는 방법에 대해 알게되었다.
 
 아이폰 X 부터는 디스플레이에 노치 디자인이 적용되고, 하단에는 물리 버튼이 사라지고 제스처로 대체되었다.
@@ -1361,7 +1609,7 @@ export default function RootLayout({
 ```
 
 위와 같이 overflow 만 hidden 처리하여 해결하였다.
-1d:T1359,
+1e:T1359,
 monorepo를 사용해 패키지들을 분리하는 과정에서 이슈를 확인했다.
 
 번들링 하지않고, 패키지들을 `index.ts`에서 직접 내보내 사용했을 때, 사용하지 않는 코드들도 함께 포함되는 문제가 있었다.
@@ -1524,7 +1772,7 @@ utils에서 내보내는 함수 중 프로젝트별로 사용하는곳과 사용
 
 rollup 설정에 대해서 아직 완벽하게 이해하지는 못했으며, 내가 의도한대로 작동하는지도 조금 확신이 들지 않지만 이번 기회에 조금 더 깊게 공부해보고 계속해서 확인해보며 수정해나가야겠다.
 개인적으로는 최적화해 나가는 과정이 매우 재밌었던 작업이었다!
-1e:Ta2c,
+1f:Ta2c,
 최근 rollup으로 패키지를 만드는 과정에서 cjs와 esm에 대해 알게되었다.
 
 ### Module
@@ -1599,7 +1847,7 @@ console.log(lib.name) // lib
 - [kakao blog](https://tech.kakao.com/2023/10/19/commonjs-esm-migration/)
 - [CJS](https://nodejs.org/api/modules.html)
 - [ESM](https://nodejs.org/api/esm.html)
-1f:T1101,
+20:T1101,
 자바스크립트에서 원시타입(primitive data type)은 변경 불가능한(immutable)한 값이다.
 
 - Boolean
@@ -1744,7 +1992,7 @@ const [state, setState] = useState({
 ```
 
 이처럼 리액트로 개발을 할 때 불변성을 유지함으로써 안정성을 유지하고 성능을 향상시킬 수 있다.
-20:Tcc7,
+21:Tcc7,
 로컬 개발환경에서 API 요청시 CORS 에러로 API 사용이 어려울 수 있습니다.
 
 이 글은 Vite로 구성된 로컬 개발환경에서 CORS 문제를 해결하는 방식을 작성합니다.
@@ -1843,7 +2091,7 @@ export default ({ mode }) => {
 2. 프록시는 `changeOption` 에 의하여 HTTP 요청 헤더의 Host 값을 `https://example.com` 으로 변경
 3. 프록시는 최종적으로 이 요청을 `https://example.com` 라는 URL로 `target` 서버에 전달
 
-21:T12dc,
+22:T12dc,
 ## 바벨이란?
 바벨은 자바스크립트 컴파일러이다.
 사실 자세히 보면 컴파일러보다는 트랜스파일러에 가깝다.
@@ -2027,7 +2275,7 @@ module.exports = {
 js 확장자로 끝나는 모든 파일에 babel-loader를 적용한다.
 또 node_modules 디렉토리는 제외한다.
 
-22:T2f94,
+23:T2f94,
 ## 웹팩(기본)배경
 - 웹팩은 모던 javascript 어플리케이션을 위한 정적 모듈 번들러이다. 번들러는 웹팩 이외에도 다양한게 있는데 (rollup , esbuild , vite , parcel 등) 웹팩이 가장 오래되었기도하고 많이 사용하고 있기 때문에 이번 기회에 배워보기로 했다.
 
@@ -2460,7 +2708,7 @@ module.exports = {
 하지만 기본적인 웹팩으로 설정되어있고, 직접 커스텀하려면 eject를 해야한다.
 
 이번 기회에 웹팩의 원리와 기본적인 사용방법을 알아보았다.
-23:Te9a,
+24:Te9a,
 ### React Native geolocation
 
 사이드 프로젝트에 위치정보를 받아와야 하는 기능이 필요해 지오로케이션을 받아 오도록 했다.
@@ -2587,7 +2835,7 @@ const MyApp = () => {
 다음 포스팅에서는 받아온 위치정보를 webview로 넘겨주는 방법에 대해 알아보자!
 
 
-24:T9c4,
+25:T9c4,
 ### 딥링크
 - 딥링크는 모바일에서 특정 페이지에 도달 할 수 있는 링크를 의미한다.
 - 웹이나 sns등 링크를 클릭했을때 해당 어플리케이션 앱으로 바로 이동하는데, 이런 방식을 모바일 딥링크라 하고 특정한 앱 스크린으로 이동하는 것
@@ -2685,7 +2933,7 @@ useEffect(() => {
   return () => Linking.removeAllListeners('url');
 }, [])
 ```
-25:T2147,
+26:T2147,
 이전에 [스벨트킷으로 블로그 만들어보기](https://wonbeenna.github.io/blog/javaScript/svelte-blog) 에서 svelte kit으로 블로그를 만들었었다.
 
 그때는 svelte 공부겸 블로그를 만들었지만, 업무에서 주로 사용하는 스택인 react와 next.js를 사용하여 블로그를 만들어보려고 한다.
@@ -3034,7 +3282,7 @@ npm i @giscus/react
 
 
 
-26:T6ae,
+27:T6ae,
 JSON 웹 토큰(JWT)
 
 일반적으로 **헤더.페이로드.서명** 으로 구성되어 있다.
@@ -3093,7 +3341,7 @@ token을 split해 1번째 데이터에 해당하는 부분을 가져온 다음
 node에서 지원하는 Buffer 객체를 사용해 바이너리로 변환
 
 base64로 인코딩한 후 JSON으로 파싱한다
-27:Tfb3,
+28:Tfb3,
 얼마전 기업과제를 진행했다. Audio 객체를 이용한 음악 재생이었다.
 
 https://developer.mozilla.org/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API
@@ -3222,7 +3470,7 @@ progressbar를 클릭했을 때는 해당 위치부터 audio를 재생해야했�
 - e.currentTarget.offsetWidth = progressbar의 전체 너비
 
 
-28:Te25,
+29:Te25,
 ### 디바운싱과 쓰로틀링
 
 
@@ -3331,7 +3579,7 @@ hook이 실행되면 lastRan과 현재시간을 비교한다.
 
 
 
-29:Tc4f,
+2a:Tc4f,
 ## GraphQL 사용
 
 Apollo client를 사용합니다.
@@ -3471,7 +3719,7 @@ const ORDER_QUERY = gql`
 
 
 
-2a:Tc85,
+2b:Tc85,
 대기열 → 캐싱 → DNS → 라우팅 → ARP → 초기연결 → 컨텐츠 다운로드 → 브라우저 렌더링
 
 이런 과정을 비캡슐화, 캡슐화 과정을 거침
@@ -3565,7 +3813,7 @@ const ORDER_QUERY = gql`
 - transform, opacity 등(GPU가 관여하는 속성) 변경일 때 **1 -> 2 -> 5**
 
 따라서 transform, opacity 등(GPU가 관여하는 속성)을 사용하는게 가장 빠르고 끊김없이 보여줄 수 있다.
-2b:T1a75,
+2c:T1a75,
 인증방식에는 대표적으로 두가지가 있다.
 
 제일 많이 사용하는 세션 방식과 토큰 방식
@@ -3790,7 +4038,7 @@ export const getServerSideProps = withAuth();
 
 {...}
 ```
-2c:Tdf0,
+2d:Tdf0,
 예전에 하다가 중단된 프로젝트를 다시 시작해 보려고 새 레포로 마이그레이션 하는 과정에서
 
 패키지 버전도 올리고, 다른 기술을 찾아보다가 예전부터 써보고싶었던 tailwindcss를 써보기로 했다.
@@ -3931,7 +4179,7 @@ module.exports = {
   Save changes
 </button>
 ```
-2d:T7a1,
+2e:T7a1,
 자바스크립트의 함수는 호출될 때, 매개변수 이외에 `arguments` 객체와 `this`를 암묵적으로 전달 받는다.
 
 - Java의 `this` 는 인스턴스 자신을 가르키는 참조변수
@@ -3990,7 +4238,7 @@ module.exports = {
 - 일반 함수 → 화살표 함수
 - 생성자 함수 → class
 - 객체 메서드 → 객체 메서드 축약형
-2e:T1aed,
+2f:T1aed,
 ```shell
 npm create svelte@latest my-app
 cd my-app
@@ -4251,7 +4499,7 @@ rss도 위와 동일하다.
 
 그래도 앞으론 리액트를 더 공부 할 것이다. 먹고 살려면 ㅎㅎ
 
-2f:T9de,
+30:T9de,
 
 얼마전 해외 블로그를 구경하다가 이런 글을 보았다.
 
@@ -4349,7 +4597,7 @@ Nothing was returned from render. This usually means a return statement is missi
 이런 에러를 만난 적이 많았는데, 위와 관련된 것이 아닌가 생각 된다.
 
 조금 더 생각하면서 개발하자
-30:Tff5,
+31:Tff5,
 예전부터 궁금했었던 부분이었다.
 
 **useCallback**과 **useMemo** hook은 함수와 값을 메모이제이션 해주는 역할을 한다.
@@ -4471,7 +4719,7 @@ useMemo와 useCallback은 초기 렌더링에는 쓸모가 없다. 오히려 초
 [https://beta.reactjs.org/reference/react/useMemo#usage](https://beta.reactjs.org/reference/react/useMemo#usage)
 
 [https://www.developerway.com/posts/how-to-use-memo-use-callback](https://www.developerway.com/posts/how-to-use-memo-use-callback)
-31:T84a,
+32:T84a,
 ### fireEvent를 userEvent로 바꿔보기
 
 ```shell
@@ -4549,7 +4797,7 @@ const checkboxLabel = (
   </span>
 );
 ```
-32:Tff3,
+33:Tff3,
 ### * Mock Service Worker
 
 백엔드에서 데이터를 가져오는 부분을 테스트
@@ -4713,7 +4961,7 @@ const Type = ({orderType}) => {
 
 export default Type;
 ```
-33:T1633,
+34:T1633,
 ### * Jest - Facebook에서 만든 테스팅 프레임 워크.
 
 주로 단위 (unit) 테스트를 위해 사용.
@@ -4946,7 +5194,7 @@ test('Prevent -,+ button from being pressed when the on/off button is clicked', 
   on/off
 </button>
 ```
-34:Tfe7,
+35:Tfe7,
 ### 1\. Utility Type
 
 ```typescript
@@ -5141,7 +5389,7 @@ aria-hidden="true"
 
 [https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-35:Tc67,
+36:Tc67,
 이번에 스터디를 하면서 처음 스토리북을 써보게 되었다.
 
 [https://storybook.js.org/](https://storybook.js.org/)
@@ -5258,7 +5506,7 @@ Default.args = {
 작성한 디자인 시스템을 기반으로 이번주부터 직접 개발에 들어가게된다.
 
 어떤점이 좋은지 차이가있는지 경험해보는 좋은 기회가 될거같다.
-36:Td1c,
+37:Td1c,
 Nextjs에서 styled-components를 사용하면 서버상에서 html을 불러온 뒤, hydrate과정에서 js를 입혀 스타일이 적용된다.
 
 이때 초기 페이지 로딩시 사용자가 보게 되는 화면은, 스타일링이 전혀 적용되지않은 html문서를 잠깐 보게 되는 문제가 있다.
@@ -5364,7 +5612,7 @@ return {
 ```
 
 <img src="/assets/blog/javaScript/next-styled-component(1).png" width="100%" alt="post image"/>
-37:Te30,
+38:Te30,
 프로젝트를 진행하면서, 프로필 페이지에 유저정보와 포인트, 펫정보, 관심사 등 세로로 길게~~배치된 UI, 각각의 정보들을 서버에서 데이터를 하나하나 받아와 보여줘야 했다.
 
 처음엔 아무생각없이 진행했다.
@@ -5462,7 +5710,7 @@ ref에 사용자의 view가 도달하면 userKeywords를 요청해 데이터를 
 또 무한스크롤도 구현해 볼 수 있다. 페이지의 맨 마지막 요소에 도달했을 때, 요청하는 페이지 쿼리를 ++ 하면 쉽게 구현할 수 있다.
 
 다른 필요한 페이지에 적용해봐야겠다!
-38:T1130,
+39:T1130,
 
 이번 새로운 프로젝트에 사용하게 된 react-hook-form과 씨름하면서 정리해본 ref와 react-hook-form의 간단한 원리에 대해 정리해보자.
 
@@ -5572,7 +5820,7 @@ const Input = forwardRef(function Input(props, ref) {
 ---
 
 ref는 특정 DOM에 접근해 애니메이션을 이용할때만 주로 사용했었는데, 이번 기회에 조금 더 자세하게 들여다 본것 같다.🤔
-39:T18c7,
+3a:T18c7,
 이번에 유지보수하면서 진행했던 TTS (Text-to-Speech)
 
 단어의 발음을 읽어주도록 해야했다.
@@ -5785,7 +6033,7 @@ const requestAudioFile = async (e) => {
 ```
 
 new Audio 오디오 객체를 이용해 오디오소스가 들어올때, 오디오를 만들고 재생시켰다.
-3a:Tf2b,
+3b:Tf2b,
 **[유동균님의 강의](https://www.inflearn.com/course/%EC%9B%B9-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EB%A6%AC%EC%95%A1%ED%8A%B8-1)를 보며 정리한 글 입니다.**
 
 ---
@@ -5901,7 +6149,7 @@ a -> A가 아웃풋이다 라고 할때, 다음번에 또 a가 들어오면 로�
 그렇다고 무지성으로 쓰는건 좋지 않다.
 
 메모이제이션이 불필요한 함수에 적용하는건 오히려 메모리 낭비가 될 수 있다.
-3b:T2721,
+3c:T2721,
 **[유동균님의 강의](https://inf.run/4zeg)를 보며 정리한 글 입니다.**
 
 ---
@@ -6233,7 +6481,7 @@ const header = {
     },
 }
 ```
-3c:T1f48,
+3d:T1f48,
 **[유동균님의 강의](https://www.inflearn.com/course/%EC%9B%B9-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EB%A6%AC%EC%95%A1%ED%8A%B8-1)를 보며 정리한 글 입니다.**
 
 ---
@@ -6481,7 +6729,7 @@ useEffect(() => {
 주의할점은 이미지는 모듈과 다르게 필요할 때 마다 그때그때 매번 보내기 때문에
 
 사용하는 이미지에 캐시가 제대로 걸려있는지 확인할 필요가 있다.
-3d:T2416,
+3e:T2416,
 
 ####
 **[Svelte vs React: Ending the Debate](https://massivepixel.io/blog/svelte-vs-react/ "Svelte vs React: Ending the Debate")를 읽으며 정리한 글입니다.**
@@ -6634,7 +6882,7 @@ GZIPPED(압축된) 버전의 리액트는 **42.2KB**(ReactDOM포함), 스벨트�
 하지만 스벨트는 아직 갈 길이 멀다. 지금까지는 인터넷 연결이 낮거나, 블로그, 포트폴리오 등 단순히 개인 웹사이트를 만드는 단일 페이지 애플리케이션을 구축하는데 사용하는 것이 좋다.
 
 또 큰 회사들의 기술 스택을 스벨트로 교체하기에는 많은 시간이 필요할 것이며 스벨트의 개발자들의 수요 또한 거의 없다.
-3e:T1085,
+3f:T1085,
 # 렌더링 최적화
 
 ### 1\. 컴포넌트를 맵핑할때는 key값으로 Index를 사용하지 말자
@@ -6781,7 +7029,7 @@ useMemo는 리턴되는 값을 memoize 시키는 반면에, useCallback은 함�
     {...}
   }, [users]);
 ```
-3f:T1f82,
+40:T1f82,
 [리액트 문서](https://beta.reactjs.org/)를 정독하며 정리한 글
 영어문서라 조금 힘들었다...
 
@@ -7036,7 +7284,7 @@ function FilterableProductTable({ products }) {
 ```
 
 
-40:T1c8d,
+41:T1c8d,
 ## React Hook
 
 React로 개발할 땐 클래스형 컴포넌트 보다 React 16.8 부터 도입된 Hook 기반 함수형 컴포넌트를 더 선호하여 개발하는 것 같다.
@@ -7273,10 +7521,9 @@ function useEffect(cb, depArray) {
 [Deep dive: How do React hooks really work?](https://www.netlify.com/blog/2019/03/11/deep-dive-how-do-react-hooks-really-work/)
 
 [Getting Closure on React Hooks](https://rinae.dev/posts/getting-closure-on-react-hooks-summary)
-9:["$","section",null,{"children":["$","$L14",null,{"posts":{"posts":[{"content":"$15","data":{"title":"svg 파일을 rollup 으로 번들링하기","date":"$D2025-05-26T00:00:00.000Z","description":"svg 파일을 rollup 으로 번들링해 React 컴포넌트로 사용하기","category":"javaScript","titleImage":"/assets/postIcon/rollup-logo.svg"},"slug":"rollup-svg"},{"content":"$16","data":{"title":"이벤트 버블링과 이벤트 캡처링","date":"$D2025-05-23T00:00:00.000Z","description":"이벤트 버블링과 이벤트 캡처링에 대한 이해","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"event-bubble-capture"},{"content":"$17","data":{"title":"세션과 쿠키","date":"$D2025-05-13T00:00:00.000Z","description":"세션과 쿠키의 개념과 차이점","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"session-cookie"},{"content":"$18","data":{"title":"React Parallel Routes","date":"$D2025-04-14T00:00:00.000Z","description":"AOS 웹뷰에서 뒤로가기시 모달을 닫으려면?","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-parallel-routes"},{"content":"$19","data":{"title":"2년간 스터디하며 배운것들","date":"$D2025-03-18T00:00:00.000Z","description":"2년간의 스터디를 회고하며 느낀 점과 배운 점","category":"til","titleImage":"/assets/postIcon/til.webp"},"slug":"study-remind"},{"content":"$1a","data":{"title":"React Native Deep Linking (2)","date":"$D2025-02-03T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"rn-deep-link-2"},{"content":"$1b","data":{"title":"document.visibilityState","date":"$D2024-12-06T00:00:00.000Z","description":"document.visibilityState를 이용한 페이지의 상태를 확인하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"visibilityState"},{"content":"$1c","data":{"title":"IOS 웹뷰에서 safe area 설정하기","date":"$D2024-07-02T00:00:00.000Z","description":"IOS 웹뷰에서 safe area 를 설정하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"webview-safe-area"},{"content":"$1d","data":{"title":"rollup으로 번들링하는 과정","date":"$D2024-03-09T00:00:00.000Z","description":"처음 rollup으로 번들링하는 과정에서 겪은 문제들과 해결방법","category":"javaScript","titleImage":"/assets/postIcon/rollup-logo.svg"},"slug":"rollup"},{"content":"$1e","data":{"title":"cjs와 esm","date":"$D2024-03-07T00:00:00.000Z","description":"rollup으로 번들링하는 과정에서 알게된 cjs와 esm의 차이점에 대해","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"module-system"},{"content":"$1f","data":{"title":"리액트에서 불변성을 지키는 이유","date":"$D2024-02-25T00:00:00.000Z","description":"리액트에서 불변성을 지키는 이유","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-immutable"},{"content":"$20","data":{"title":"Vite proxy 설정","date":"$D2024-01-18T00:00:00.000Z","description":"Vite 로컬환경에서 CORS 문제 해결하기","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"vite-proxy"},{"content":"$21","data":{"title":"바벨 사용해보기","date":"$D2023-12-01T00:00:00.000Z","description":"바벨 기본 동작과 사용방법","category":"javaScript","titleImage":"/assets/postIcon/babel-icon.svg"},"slug":"babel"},{"content":"$22","data":{"title":"웹팩 기본 사용법 (1)","date":"$D2023-11-30T00:00:00.000Z","description":"처음 접해보는 웹팩의 원리와 기본 사용 방법","category":"javaScript","titleImage":"/assets/postIcon/webpack-icon.svg"},"slug":"webpack-1"},{"content":"$23","data":{"title":"React Native geolocation","date":"$D2023-10-25T00:00:00.000Z","description":"React Native 위치정보 받아오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"rn-geolocation"},{"content":"$24","data":{"title":"React Native Deep Linking","date":"$D2023-10-17T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"rn-deep-link"},{"content":"$25","data":{"title":"Next.js 블로그 만들기","date":"$D2023-10-09T00:00:00.000Z","description":"Next.js로 블로그 만들기","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-blog"},{"content":"$26","data":{"title":"jwt 토큰 decode 하기","date":"$D2023-08-31T00:00:00.000Z","description":"jwt 토큰 decode 함수","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"jwt-decode"},{"content":"$27","data":{"title":"Audio객체를 이용한 음악 재생","date":"$D2023-05-27T00:00:00.000Z","description":"Audio객체를 사용한 기업 과제 구현","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"audio"},{"content":"$28","data":{"title":"디바운싱과 쓰로틀링","date":"$D2023-05-13T00:00:00.000Z","description":"디바운싱과 쓰로틀링의 차이를 구분하고 hook으로 구현","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"debouce-throttle"},{"content":"$29","data":{"title":"GraphQl 써보기(1)","date":"$D2023-04-29T00:00:00.000Z","description":"GraphQl, Apollo Client를 사용","category":"javaScript","titleImage":"/assets/postIcon/graphql.svg"},"slug":"graphql-1"},{"content":"$2a","data":{"title":"브라우저에 url을 검색하면?","date":"$D2023-02-25T00:00:00.000Z","description":"사내 스터디","category":"study","titleImage":"/assets/postIcon/javascript.webp"},"slug":"browser"},{"content":"$2b","data":{"title":"Next.js middleware와 getServerSideProps","date":"$D2023-02-22T00:00:00.000Z","description":"세션방식의 로그인 인증, middleware와 getServerSideProps를 사용해 구현한 기록","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-middleware"},{"content":"$2c","data":{"title":"Nextjs에서 tailwind 써보기","date":"$D2023-02-18T00:00:00.000Z","description":"공식문서 보면서 tailwind 써보기","category":"javaScript","titleImage":"/assets/postIcon/tailwind-css-icon.webp"},"slug":"tailwindcss"},{"content":"$2d","data":{"title":"JavaScript this","date":"$D2023-02-02T00:00:00.000Z","description":"사내 스터디 this","category":"study","titleImage":"/assets/postIcon/javascript.webp"},"slug":"this"},{"content":"$2e","data":{"title":"스벨트킷으로 블로그 만들어보기","date":"$D2023-01-30T00:00:00.000Z","description":"스벨트킷으로 블로그 만든 과정을 정리","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-blog"},{"content":"\n### Provider 테스팅 해보기\n\n```js\nrender(<Options optionType=\"scoops\" />, {wrapper: OrderDetailsProvider});\n```\n\n테스트 wrapper에 Provider로 감싸주면 된다.\n\n여기서는 redux나 recoil 등 다른 라이브러리도 가능\n\n---\n\n전역적으로도 사용이 가능\n\n```js\nimport {render} from '@testing-library/react';\nimport {OrderDetailsProvider} from '../contexts/OrderDetails';\n\nconst renderWithContext = (ui, options) => render(ui, {wrapper: OrderDetailsProvider, ...options});\n\nexport * from '@testing-library/react';\n\nexport {renderWithContext as render};\n```\n","data":{"title":"리액트 테스팅(4)","date":"$D2023-01-02T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-4"},{"content":"$2f","data":{"title":"리액트 조건부 렌더링에 대한 생각","date":"$D2022-12-29T00:00:00.000Z","description":"해외 블로그를 보며 정리한 조건부 렌더링에 대한 생각","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"conditional-rendering"},{"content":"$30","data":{"title":"useCallback, useMemo 무조건 좋은가?","date":"$D2022-12-28T00:00:00.000Z","description":"useCallback과 useMemo에 대한 생각 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"usecallback-and-usememo"},{"content":"$31","data":{"title":"리액트 테스팅(3)","date":"$D2022-12-26T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-3"},{"content":"$32","data":{"title":"리액트 테스팅(2)","date":"$D2022-12-14T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-2"},{"content":"$33","data":{"title":"리액트 테스팅(1)","date":"$D2022-12-10T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-1"},{"content":"$34","data":{"title":"6주간 스터디하며 배운것들","date":"$D2022-10-21T00:00:00.000Z","description":"6주간 진행한 스터디에서 얻은 것들","category":"til","titleImage":"/assets/postIcon/til.webp"},"slug":"study"},{"content":"$35","data":{"title":"Storybook 써보기","date":"$D2022-10-11T00:00:00.000Z","description":"스터디 하면서 처음 써본 Storybook","category":"javaScript","titleImage":"/assets/postIcon/storybook.webp"},"slug":"storybook"},{"content":"$36","data":{"title":"Next.js styled-component 적용 문제에 대해(_document.tsx)","date":"$D2022-08-22T00:00:00.000Z","description":"next.js와 styled-component 사용시 발생한 에러","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-styled-component"},{"content":"$37","data":{"title":"IntersectionObserver로 데이터 요청해보기","date":"$D2022-05-04T00:00:00.000Z","description":"IntersectionObserver를 활용해 스크롤 위치에서 데이터 불러오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"intersectionObserver"},{"content":"\n\n####\n**bundle-analyzer**는 빌드된 파일을 트리맵 형식으로 종류와 크기를 보여준다.\n\nnext에서 제공하는 bundle-analyzer\n\nnext.config.js\n\n```javascript\nconst withBundleAnalyzer = require('@next/bundle-analyzer')({\n  enabled: process.env.ANALYZE === 'true'\n})\n\nmodule.exports = withBundleAnalyzer({\n  compress: true,\n  webpack(config, {webpack}) {\n    const prod = process.env.NODE_ENV === 'production'\n    const plugins = [...config.plugins]\n    return {\n      ...config,\n      mode: prod ? 'production' : 'development',\n      devtool: prod ? 'hidden-source-map' : 'eval',\n      plugins\n    }\n  }\n})\n```\n\npackage.json / script\n\n```\n\"build\": \"ANALYZE=true next build\",\n```\n\n<img src=\"/assets/blog/javaScript/bundle-analyzer.png\" width=\"100%\" alt=\"bundle-analyzer\"/>\n\n\n이런식으로 html이 실행된다.\n\n서버와 클라이언트 두개의 창이 실행되는데 클라이언트 부분인 사용자에게 직접 보여질 부분이라, 서버 부분보다는 클라이언트 부분을 줄이는게 더 효과적이라고 한다.\n\n아이콘으로 쓰일 이미지를 두개쓰기싫어 svg를 컴포넌트화시켜 props로 색상을 변경시키게 했는데, 용량이 꽤 크다고 나왔다 거슬린다 🤔\n\n줄일수있는 방법을 찾아봐야겠다.\n\n또 나중에 최종 배포때는 번들된 JS 파일을 gz로 압축시켜 브라우저 쪽으로 보내주는 방법도 있다고 하는데, 나중에 시도해봐야겠다.\n","data":{"title":"next/bundle-analyzer","date":"$D2022-02-22T00:00:00.000Z","description":"next/bundle-analyzer로 번들 크기 확인하기","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-bundle-analyzer"},{"content":"$38","data":{"title":"리액트 ref 와 forwardRef (with. react-hook-form)","date":"$D2022-02-09T00:00:00.000Z","description":"react-hook-form 라이브러리와 ref의 동작","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"ref-forwardRef"},{"content":"$39","data":{"title":"Speechsynthesis & Google TTS","date":"$D2022-01-22T00:00:00.000Z","description":"프로젝트 진행하며 경험해본 Speechsynthesis & Google TTS","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"Speechsynthesis"},{"content":"$3a","data":{"title":"웹성능 최적화(3)","date":"$D2022-01-04T00:00:00.000Z","description":"웹성능 최적화3","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"web-optimization-3"},{"content":"$3b","data":{"title":"웹성능 최적화(2)","date":"$D2022-01-03T00:00:00.000Z","description":"웹성능 최적화2","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"web-optimization-2"},{"content":"$3c","data":{"title":"웹성능 최적화(1)","date":"$D2022-01-01T00:00:00.000Z","description":"웹성능 최적화1","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"web-optimization"},{"content":"$3d","data":{"title":"스벨트와 리액트","date":"$D2021-12-12T00:00:00.000Z","description":"스벨트와 리액트에 대해 정리한 글","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-react"},{"content":"$3e","data":{"title":"React 처럼 생각하기(2)","date":"$D2021-12-12T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"thinking-in-react-2"},{"content":"$3f","data":{"title":"React 처럼 생각하기","date":"$D2021-11-20T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"thinking-in-react"},{"content":"$40","data":{"title":"React Hook의 동작","date":"$D2021-11-07T00:00:00.000Z","description":"React Hook의 동작에 대해","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-hook"}],"total":46}}]}]
-b:["$","$41",null,{"fallback":null,"children":["$","$L42",null,{"promise":"$@43"}]}]
-e:null
-12:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-d:null
-43:{"metadata":[["$","title","0",{"children":"Been blog search"}],["$","meta","1",{"name":"description","content":"Been dev-note search"}],["$","meta","2",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","3",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","link","4",{"rel":"canonical","href":"https://wonbeenna.github.io/search"}],["$","meta","5",{"property":"og:title","content":"Been blog - search"}],["$","meta","6",{"property":"og:description","content":"Been dev-note - search"}],["$","meta","7",{"property":"og:url","content":"https://wonbeenna.github.io"}],["$","meta","8",{"property":"og:site_name","content":"Been blog"}],["$","meta","9",{"property":"og:locale","content":"ko_KR"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - search"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - search"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","24",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}]],"error":null,"digest":"$undefined"}
-10:{"metadata":"$43:metadata","error":null,"digest":"$undefined"}
+9:["$","section",null,{"children":["$","$L14",null,{"posts":{"posts":[{"content":"$15","data":{"title":"웹 접근성 (A11y)","date":"$D2025-08-29T00:00:00.000Z","description":"웹 접근성(A11y)에 대한 이해와 실천 방법","category":"study","titleImage":"/assets/postIcon/javascript.webp"},"slug":"a11y"},{"content":"$16","data":{"title":"svg 파일을 rollup 으로 번들링하기","date":"$D2025-05-26T00:00:00.000Z","description":"svg 파일을 rollup 으로 번들링해 React 컴포넌트로 사용하기","category":"javaScript","titleImage":"/assets/postIcon/rollup-logo.svg"},"slug":"rollup-svg"},{"content":"$17","data":{"title":"이벤트 버블링과 이벤트 캡처링","date":"$D2025-05-23T00:00:00.000Z","description":"이벤트 버블링과 이벤트 캡처링에 대한 이해","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"event-bubble-capture"},{"content":"$18","data":{"title":"세션과 쿠키","date":"$D2025-05-13T00:00:00.000Z","description":"세션과 쿠키의 개념과 차이점","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"session-cookie"},{"content":"$19","data":{"title":"React Parallel Routes","date":"$D2025-04-14T00:00:00.000Z","description":"AOS 웹뷰에서 뒤로가기시 모달을 닫으려면?","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-parallel-routes"},{"content":"$1a","data":{"title":"2년간 스터디하며 배운것들","date":"$D2025-03-18T00:00:00.000Z","description":"2년간의 스터디를 회고하며 느낀 점과 배운 점","category":"til","titleImage":"/assets/postIcon/til.webp"},"slug":"study-remind"},{"content":"$1b","data":{"title":"React Native Deep Linking (2)","date":"$D2025-02-03T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"rn-deep-link-2"},{"content":"$1c","data":{"title":"document.visibilityState","date":"$D2024-12-06T00:00:00.000Z","description":"document.visibilityState를 이용한 페이지의 상태를 확인하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"visibilityState"},{"content":"$1d","data":{"title":"IOS 웹뷰에서 safe area 설정하기","date":"$D2024-07-02T00:00:00.000Z","description":"IOS 웹뷰에서 safe area 를 설정하는 방법","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"webview-safe-area"},{"content":"$1e","data":{"title":"rollup으로 번들링하는 과정","date":"$D2024-03-09T00:00:00.000Z","description":"처음 rollup으로 번들링하는 과정에서 겪은 문제들과 해결방법","category":"javaScript","titleImage":"/assets/postIcon/rollup-logo.svg"},"slug":"rollup"},{"content":"$1f","data":{"title":"cjs와 esm","date":"$D2024-03-07T00:00:00.000Z","description":"rollup으로 번들링하는 과정에서 알게된 cjs와 esm의 차이점에 대해","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"module-system"},{"content":"$20","data":{"title":"리액트에서 불변성을 지키는 이유","date":"$D2024-02-25T00:00:00.000Z","description":"리액트에서 불변성을 지키는 이유","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-immutable"},{"content":"$21","data":{"title":"Vite proxy 설정","date":"$D2024-01-18T00:00:00.000Z","description":"Vite 로컬환경에서 CORS 문제 해결하기","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"vite-proxy"},{"content":"$22","data":{"title":"바벨 사용해보기","date":"$D2023-12-01T00:00:00.000Z","description":"바벨 기본 동작과 사용방법","category":"javaScript","titleImage":"/assets/postIcon/babel-icon.svg"},"slug":"babel"},{"content":"$23","data":{"title":"웹팩 기본 사용법 (1)","date":"$D2023-11-30T00:00:00.000Z","description":"처음 접해보는 웹팩의 원리와 기본 사용 방법","category":"javaScript","titleImage":"/assets/postIcon/webpack-icon.svg"},"slug":"webpack-1"},{"content":"$24","data":{"title":"React Native geolocation","date":"$D2023-10-25T00:00:00.000Z","description":"React Native 위치정보 받아오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"rn-geolocation"},{"content":"$25","data":{"title":"React Native Deep Linking","date":"$D2023-10-17T00:00:00.000Z","description":"React Native Deep Linking 연결","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"rn-deep-link"},{"content":"$26","data":{"title":"Next.js 블로그 만들기","date":"$D2023-10-09T00:00:00.000Z","description":"Next.js로 블로그 만들기","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-blog"},{"content":"$27","data":{"title":"jwt 토큰 decode 하기","date":"$D2023-08-31T00:00:00.000Z","description":"jwt 토큰 decode 함수","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"jwt-decode"},{"content":"$28","data":{"title":"Audio객체를 이용한 음악 재생","date":"$D2023-05-27T00:00:00.000Z","description":"Audio객체를 사용한 기업 과제 구현","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"audio"},{"content":"$29","data":{"title":"디바운싱과 쓰로틀링","date":"$D2023-05-13T00:00:00.000Z","description":"디바운싱과 쓰로틀링의 차이를 구분하고 hook으로 구현","category":"javaScript","titleImage":"/assets/postIcon/javascript.webp"},"slug":"debouce-throttle"},{"content":"$2a","data":{"title":"GraphQl 써보기(1)","date":"$D2023-04-29T00:00:00.000Z","description":"GraphQl, Apollo Client를 사용","category":"javaScript","titleImage":"/assets/postIcon/graphql.svg"},"slug":"graphql-1"},{"content":"$2b","data":{"title":"브라우저에 url을 검색하면?","date":"$D2023-02-25T00:00:00.000Z","description":"사내 스터디","category":"study","titleImage":"/assets/postIcon/javascript.webp"},"slug":"browser"},{"content":"$2c","data":{"title":"Next.js middleware와 getServerSideProps","date":"$D2023-02-22T00:00:00.000Z","description":"세션방식의 로그인 인증, middleware와 getServerSideProps를 사용해 구현한 기록","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-middleware"},{"content":"$2d","data":{"title":"Nextjs에서 tailwind 써보기","date":"$D2023-02-18T00:00:00.000Z","description":"공식문서 보면서 tailwind 써보기","category":"javaScript","titleImage":"/assets/postIcon/tailwind-css-icon.webp"},"slug":"tailwindcss"},{"content":"$2e","data":{"title":"JavaScript this","date":"$D2023-02-02T00:00:00.000Z","description":"사내 스터디 this","category":"study","titleImage":"/assets/postIcon/javascript.webp"},"slug":"this"},{"content":"$2f","data":{"title":"스벨트킷으로 블로그 만들어보기","date":"$D2023-01-30T00:00:00.000Z","description":"스벨트킷으로 블로그 만든 과정을 정리","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-blog"},{"content":"\n### Provider 테스팅 해보기\n\n```js\nrender(<Options optionType=\"scoops\" />, {wrapper: OrderDetailsProvider});\n```\n\n테스트 wrapper에 Provider로 감싸주면 된다.\n\n여기서는 redux나 recoil 등 다른 라이브러리도 가능\n\n---\n\n전역적으로도 사용이 가능\n\n```js\nimport {render} from '@testing-library/react';\nimport {OrderDetailsProvider} from '../contexts/OrderDetails';\n\nconst renderWithContext = (ui, options) => render(ui, {wrapper: OrderDetailsProvider, ...options});\n\nexport * from '@testing-library/react';\n\nexport {renderWithContext as render};\n```\n","data":{"title":"리액트 테스팅(4)","date":"$D2023-01-02T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-4"},{"content":"$30","data":{"title":"리액트 조건부 렌더링에 대한 생각","date":"$D2022-12-29T00:00:00.000Z","description":"해외 블로그를 보며 정리한 조건부 렌더링에 대한 생각","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"conditional-rendering"},{"content":"$31","data":{"title":"useCallback, useMemo 무조건 좋은가?","date":"$D2022-12-28T00:00:00.000Z","description":"useCallback과 useMemo에 대한 생각 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"usecallback-and-usememo"},{"content":"$32","data":{"title":"리액트 테스팅(3)","date":"$D2022-12-26T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-3"},{"content":"$33","data":{"title":"리액트 테스팅(2)","date":"$D2022-12-14T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-2"},{"content":"$34","data":{"title":"리액트 테스팅(1)","date":"$D2022-12-10T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-1"},{"content":"$35","data":{"title":"6주간 스터디하며 배운것들","date":"$D2022-10-21T00:00:00.000Z","description":"6주간 진행한 스터디에서 얻은 것들","category":"til","titleImage":"/assets/postIcon/til.webp"},"slug":"study"},{"content":"$36","data":{"title":"Storybook 써보기","date":"$D2022-10-11T00:00:00.000Z","description":"스터디 하면서 처음 써본 Storybook","category":"javaScript","titleImage":"/assets/postIcon/storybook.webp"},"slug":"storybook"},{"content":"$37","data":{"title":"Next.js styled-component 적용 문제에 대해(_document.tsx)","date":"$D2022-08-22T00:00:00.000Z","description":"next.js와 styled-component 사용시 발생한 에러","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-styled-component"},{"content":"$38","data":{"title":"IntersectionObserver로 데이터 요청해보기","date":"$D2022-05-04T00:00:00.000Z","description":"IntersectionObserver를 활용해 스크롤 위치에서 데이터 불러오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"intersectionObserver"},{"content":"\n\n####\n**bundle-analyzer**는 빌드된 파일을 트리맵 형식으로 종류와 크기를 보여준다.\n\nnext에서 제공하는 bundle-analyzer\n\nnext.config.js\n\n```javascript\nconst withBundleAnalyzer = require('@next/bundle-analyzer')({\n  enabled: process.env.ANALYZE === 'true'\n})\n\nmodule.exports = withBundleAnalyzer({\n  compress: true,\n  webpack(config, {webpack}) {\n    const prod = process.env.NODE_ENV === 'production'\n    const plugins = [...config.plugins]\n    return {\n      ...config,\n      mode: prod ? 'production' : 'development',\n      devtool: prod ? 'hidden-source-map' : 'eval',\n      plugins\n    }\n  }\n})\n```\n\npackage.json / script\n\n```\n\"build\": \"ANALYZE=true next build\",\n```\n\n<img src=\"/assets/blog/javaScript/bundle-analyzer.png\" width=\"100%\" alt=\"bundle-analyzer\"/>\n\n\n이런식으로 html이 실행된다.\n\n서버와 클라이언트 두개의 창이 실행되는데 클라이언트 부분인 사용자에게 직접 보여질 부분이라, 서버 부분보다는 클라이언트 부분을 줄이는게 더 효과적이라고 한다.\n\n아이콘으로 쓰일 이미지를 두개쓰기싫어 svg를 컴포넌트화시켜 props로 색상을 변경시키게 했는데, 용량이 꽤 크다고 나왔다 거슬린다 🤔\n\n줄일수있는 방법을 찾아봐야겠다.\n\n또 나중에 최종 배포때는 번들된 JS 파일을 gz로 압축시켜 브라우저 쪽으로 보내주는 방법도 있다고 하는데, 나중에 시도해봐야겠다.\n","data":{"title":"next/bundle-analyzer","date":"$D2022-02-22T00:00:00.000Z","description":"next/bundle-analyzer로 번들 크기 확인하기","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-bundle-analyzer"},{"content":"$39","data":{"title":"리액트 ref 와 forwardRef (with. react-hook-form)","date":"$D2022-02-09T00:00:00.000Z","description":"react-hook-form 라이브러리와 ref의 동작","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"ref-forwardRef"},{"content":"$3a","data":{"title":"Speechsynthesis & Google TTS","date":"$D2022-01-22T00:00:00.000Z","description":"프로젝트 진행하며 경험해본 Speechsynthesis & Google TTS","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"Speechsynthesis"},{"content":"$3b","data":{"title":"웹성능 최적화(3)","date":"$D2022-01-04T00:00:00.000Z","description":"웹성능 최적화3","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"web-optimization-3"},{"content":"$3c","data":{"title":"웹성능 최적화(2)","date":"$D2022-01-03T00:00:00.000Z","description":"웹성능 최적화2","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"web-optimization-2"},{"content":"$3d","data":{"title":"웹성능 최적화(1)","date":"$D2022-01-01T00:00:00.000Z","description":"웹성능 최적화1","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"web-optimization"},{"content":"$3e","data":{"title":"스벨트와 리액트","date":"$D2021-12-12T00:00:00.000Z","description":"스벨트와 리액트에 대해 정리한 글","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-react"},{"content":"$3f","data":{"title":"React 처럼 생각하기(2)","date":"$D2021-12-12T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"thinking-in-react-2"},{"content":"$40","data":{"title":"React 처럼 생각하기","date":"$D2021-11-20T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"thinking-in-react"},{"content":"$41","data":{"title":"React Hook의 동작","date":"$D2021-11-07T00:00:00.000Z","description":"React Hook의 동작에 대해","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-hook"}],"total":47}}]}]
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+42:I[622,[],"IconMark"]
+d:{"metadata":[["$","title","0",{"children":"Been blog search"}],["$","meta","1",{"name":"description","content":"Been dev-note search"}],["$","meta","2",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","3",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","link","4",{"rel":"canonical","href":"https://wonbeenna.github.io/search"}],["$","meta","5",{"property":"og:title","content":"Been blog - search"}],["$","meta","6",{"property":"og:description","content":"Been dev-note - search"}],["$","meta","7",{"property":"og:url","content":"https://wonbeenna.github.io"}],["$","meta","8",{"property":"og:site_name","content":"Been blog"}],["$","meta","9",{"property":"og:locale","content":"ko_KR"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - search"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - search"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","24",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","$L42","26",{}]],"error":null,"digest":"$undefined"}
+12:"$d:metadata"
