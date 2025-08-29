@@ -1,26 +1,101 @@
 1:"$Sreact.fragment"
-2:I[9243,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-2026af6fce535623.js"],""]
-3:I[881,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-2026af6fce535623.js"],"Providers"]
-4:I[6874,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","848","static/chunks/app/page/%5Bpage%5D/page-3d16974de746edb8.js"],""]
-5:I[3063,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-2026af6fce535623.js"],"Image"]
-6:I[1186,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-2026af6fce535623.js"],"default"]
-7:I[7555,[],""]
-8:I[1295,[],""]
-a:I[9665,[],"MetadataBoundary"]
-c:I[9665,[],"OutletBoundary"]
-f:I[4911,[],"AsyncMetadataOutlet"]
-11:I[9665,[],"ViewportBoundary"]
-13:I[6614,[],""]
+2:I[1402,["619","static/chunks/619-ba102abea3e3d0e4.js","239","static/chunks/239-c2117d3ee033cea8.js","177","static/chunks/app/layout-e509d1a31c7f333f.js"],""]
+3:I[6300,["619","static/chunks/619-ba102abea3e3d0e4.js","239","static/chunks/239-c2117d3ee033cea8.js","177","static/chunks/app/layout-e509d1a31c7f333f.js"],"Providers"]
+4:I[2619,["619","static/chunks/619-ba102abea3e3d0e4.js","239","static/chunks/239-c2117d3ee033cea8.js","848","static/chunks/app/page/%5Bpage%5D/page-210b2dff0315fedd.js"],""]
+5:I[1356,["619","static/chunks/619-ba102abea3e3d0e4.js","239","static/chunks/239-c2117d3ee033cea8.js","177","static/chunks/app/layout-e509d1a31c7f333f.js"],"Image"]
+6:I[379,["619","static/chunks/619-ba102abea3e3d0e4.js","239","static/chunks/239-c2117d3ee033cea8.js","177","static/chunks/app/layout-e509d1a31c7f333f.js"],"default"]
+7:I[9766,[],""]
+8:I[8924,[],""]
+a:I[4431,[],"OutletBoundary"]
+c:I[5278,[],"AsyncMetadataOutlet"]
+e:I[4431,[],"ViewportBoundary"]
+10:I[4431,[],"MetadataBoundary"]
+11:"$Sreact.suspense"
+13:I[7150,[],""]
 :HL["/_next/static/media/47cbc4e2adbc5db9-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/css/e539936c7dc6b882.css","style"]
 :HL["/_next/static/css/e7c7294f242bce08.css","style"]
-0:{"P":null,"b":"T39Mvz6c8SIi7W1th-g-L","p":"","c":["","page","4"],"i":false,"f":[[["",{"children":["page",{"children":[["page","4","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e7c7294f242bce08.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","4","d"],["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",["$","$La",null,{"children":"$Lb"}],null,["$","$Lc",null,{"children":["$Ld","$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","3WH3RwFwsViepKqZMssY7",{"children":[["$","$L11",null,{"children":"$L12"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$13","$undefined"],"s":false,"S":true}
-14:"$Sreact.suspense"
-15:I[4911,[],"AsyncMetadata"]
-b:["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"promise":"$@16"}]}]
-17:I[1114,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","848","static/chunks/app/page/%5Bpage%5D/page-3d16974de746edb8.js"],"default"]
-e:null
-18:Tff3,
+0:{"P":null,"b":"iWTXvzrkASeYQ5K5Setq_","p":"","c":["","page","4"],"i":false,"f":[[["",{"children":["page",{"children":[["page","4","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e7c7294f242bce08.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","4","d"],["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",null,["$","$La",null,{"children":["$Lb",["$","$Lc",null,{"promise":"$@d"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$Le",null,{"children":"$Lf"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L10",null,{"children":["$","div",null,{"hidden":true,"children":["$","$11",null,{"fallback":null,"children":"$L12"}]}]}]]}],false]],"m":"$undefined","G":["$13",[]],"s":false,"S":true}
+14:I[4879,["619","static/chunks/619-ba102abea3e3d0e4.js","239","static/chunks/239-c2117d3ee033cea8.js","848","static/chunks/app/page/%5Bpage%5D/page-210b2dff0315fedd.js"],"default"]
+15:T84a,
+### fireEvent를 userEvent로 바꿔보기
+
+```shell
+npm i @testing-library/user-event
+```
+
+```js
+test('Checkbox enables button on first click and disableds on second click', async () => {
+  const user = userEvent.setup();
+
+  render(<SummaryForm />);
+
+  const checkbox = screen.getByRole('checkbox', {
+    name: /terms and conditions/i
+  });
+  const confirmButton = screen.getByRole('button', {
+    name: /confirm order/i
+  });
+
+  await user.click(checkbox);
+  expect(confirmButton).toBeEnabled();
+
+  await user.click(checkbox);
+  expect(confirmButton).toBeDisabled();
+});
+```
+
+async/await 으로 비동기 처리해주지 않으면, expect가 먼저 실행되기 때문에 오류가 발생한다
+
+---
+
+### Screen 메소드들 써보기
+
+```js
+test('popover responds to hover', async () => {
+  const user = userEvent.setup();
+
+  render(<SummaryForm />);
+
+  // popover starts out hidden
+  const nullPopover = screen.queryByText(/no ice cream will actually be delivered/i);
+  expect(nullPopover).not.toBeInTheDocument();
+
+  // popover appears on mouseover of checkbox label
+  const termsAndConditions = screen.getByText(/terms and conditions/i);
+  await user.hover(termsAndConditions);
+  const popover = screen.getByText(/no ice cream will actually be delivered/i);
+  expect(popover).toBeInTheDocument();
+
+  // popover disappears when we mouse out
+  await user.unhover(termsAndConditions);
+  expect(popover).not.toBeInTheDocument();
+});
+```
+
+- get : 요소 조회시 나타날 것으로 예상되는 경우 -> 일치하는 요소가 없으면 Error를 반환
+
+- query : 요소가 존재하는지 확인하는 경우 -> 일치하는 요소가 없으면 null을 반환
+
+- find : 요소가 비동기적으로 표시될 수 있는 경우인지
+
+```js
+const popover = (
+  <Popover id="popover-basic">
+    <Popover.Body>No ice cream will actually be delivered</Popover.Body>
+  </Popover>
+);
+
+const checkboxLabel = (
+  <span>
+    I agree to
+    <OverlayTrigger trigger={['hover', 'focus']} placement="right" overlay={popover}>
+      <span style={{color: 'blue'}}>Terms and Conditions</span>
+    </OverlayTrigger>
+  </span>
+);
+```
+16:Tff3,
 ### * Mock Service Worker
 
 백엔드에서 데이터를 가져오는 부분을 테스트
@@ -184,7 +259,7 @@ const Type = ({orderType}) => {
 
 export default Type;
 ```
-19:T1633,
+17:T1633,
 ### * Jest - Facebook에서 만든 테스팅 프레임 워크.
 
 주로 단위 (unit) 테스트를 위해 사용.
@@ -417,7 +492,7 @@ test('Prevent -,+ button from being pressed when the on/off button is clicked', 
   on/off
 </button>
 ```
-1a:Tfe7,
+18:Tfe7,
 ### 1\. Utility Type
 
 ```typescript
@@ -612,7 +687,7 @@ aria-hidden="true"
 
 [https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-1b:Tc67,
+19:Tc67,
 이번에 스터디를 하면서 처음 스토리북을 써보게 되었다.
 
 [https://storybook.js.org/](https://storybook.js.org/)
@@ -729,7 +804,7 @@ Default.args = {
 작성한 디자인 시스템을 기반으로 이번주부터 직접 개발에 들어가게된다.
 
 어떤점이 좋은지 차이가있는지 경험해보는 좋은 기회가 될거같다.
-1c:Td1c,
+1a:Td1c,
 Nextjs에서 styled-components를 사용하면 서버상에서 html을 불러온 뒤, hydrate과정에서 js를 입혀 스타일이 적용된다.
 
 이때 초기 페이지 로딩시 사용자가 보게 되는 화면은, 스타일링이 전혀 적용되지않은 html문서를 잠깐 보게 되는 문제가 있다.
@@ -835,7 +910,7 @@ return {
 ```
 
 <img src="/assets/blog/javaScript/next-styled-component(1).png" width="100%" alt="post image"/>
-1d:Te30,
+1b:Te30,
 프로젝트를 진행하면서, 프로필 페이지에 유저정보와 포인트, 펫정보, 관심사 등 세로로 길게~~배치된 UI, 각각의 정보들을 서버에서 데이터를 하나하나 받아와 보여줘야 했다.
 
 처음엔 아무생각없이 진행했다.
@@ -933,7 +1008,7 @@ ref에 사용자의 view가 도달하면 userKeywords를 요청해 데이터를 
 또 무한스크롤도 구현해 볼 수 있다. 페이지의 맨 마지막 요소에 도달했을 때, 요청하는 페이지 쿼리를 ++ 하면 쉽게 구현할 수 있다.
 
 다른 필요한 페이지에 적용해봐야겠다!
-1e:T1130,
+1c:T1130,
 
 이번 새로운 프로젝트에 사용하게 된 react-hook-form과 씨름하면서 정리해본 ref와 react-hook-form의 간단한 원리에 대해 정리해보자.
 
@@ -1043,7 +1118,7 @@ const Input = forwardRef(function Input(props, ref) {
 ---
 
 ref는 특정 DOM에 접근해 애니메이션을 이용할때만 주로 사용했었는데, 이번 기회에 조금 더 자세하게 들여다 본것 같다.🤔
-1f:T18c7,
+1d:T18c7,
 이번에 유지보수하면서 진행했던 TTS (Text-to-Speech)
 
 단어의 발음을 읽어주도록 해야했다.
@@ -1256,124 +1331,10 @@ const requestAudioFile = async (e) => {
 ```
 
 new Audio 오디오 객체를 이용해 오디오소스가 들어올때, 오디오를 만들고 재생시켰다.
-20:Tf2b,
-**[유동균님의 강의](https://www.inflearn.com/course/%EC%9B%B9-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EB%A6%AC%EC%95%A1%ED%8A%B8-1)를 보며 정리한 글 입니다.**
-
----
-
-### 1\. Layout Shift
-
-원인
-
-1\. 사이즈가 정해져 있지 않은 이미지
-
-2\. 사이즈가 정해져 있지 않은 광고
-
-3\. 동적으로 삽입된 콘텐츠
-
-4\. Web font (FOIT, FOUT)
-
-<img src="/assets/blog/javaScript/web-optimization-3-1.png" width="100%" alt="post image"/>
-
-여러 이미지를 로드할 때, 먼저 불러온 이미지 자리를 나중에 불러온 이미지가 밀어내게 되면서 레이아웃 변경이 계속 발생한다.
-
-```js
-<ImageWrap>
-  <Image />
-</ImageWrap>
-```
-
-이때 Wrap에 고정값을 정해주고 Image는 그 값을 따라가기만 하면 된다. 여기서는 16:9 비율로 지정하기 위해 9 / 16 = 56.25%로 높이를 잡고 Image를 그 안에 넣는 방식으로 했다.
-
-<img src="/assets/blog/javaScript/web-optimization-3-2.png" width="100%" alt="post image"/>
-
-컨텐츠가 새로 들어오면서 기존 컨텐츠를 밀어내지 않도록 컨텐츠를 그려줄 곳에 미리 자리를 만들어 놓는것이다.
-
----
-
-### 2\. React-lazyload
-
-```shell
-npm i react-lazyload
-```
-
-강의에서는 라이브러리를 사용했지만, 다음엔 스스로 구현해 포스팅해야겠다.
-
-스크롤이벤트를 사용하는 것 같다.
-
----
-
-### 3\. useSelect 렌더링 문제
-
-<img src="/assets/blog/javaScript/web-optimization-3-3.png" width="100%" alt="post image"/>
-
-리액트 dev-tool에서 Highlight updates ... 를 체크해 컴포넌트가 렌더링되는걸 확인할 수 있다.
-
-useSelector는 dispatch로 Redux Store가 변경되면 구독하고 있는 컴포넌트에 state가 변경되었다고 알려준다.
-
-그럼 컴포넌트에서는 기존 state와 업데이트된 state를 비교해 값이 다르면 다시 렌더링 하게 된다.
-
-여기서 비교하는 방식은 useSelector의 리턴값을 비교하는데
-
-```js
-const { modalVisible, bgColor, src, alt } = useSelector(state => ({
-  modalVisible: state.modalVisible,
-  bgColor: state.bgColor,
-  src: state.src,
-  alt: state.alt,
-}));
-```
-
-리턴값을 오브젝트 형식으로 작성하면, 값을 생성할 때 마다 새로운 오브젝트를 만들기 때문에 매번 새롭게 렌더링하게 된다.
-
-```js
-const modalVisible = useSelector(state => state.modalVisible)
-const bgColor = useSelector(state => state.bgColor)
-const src = useSelector(state => state.src)
-const alt = useSelector(state => state.alt)
-```
-
-오브젝트를 새롭게 만들지 않도록 state를 쪼개고 새로운 Equality Function을 사용해야한다.
-
-```js
-const { modalVisible, bgColor, src, alt } = useSelector(state => ({
-  modalVisible: state.modalVisible,
-  bgColor: state.bgColor,
-  src: state.src,
-  alt: state.alt,
-}), shallowEqual);
-```
-
----
-
-### 4\. Redux Reselect
-
-state의 값들을 가지고 가공해야되는 값이 있을 때 useSelector내부에서 가공해 값을 준다.
-
-```js
-const selectFilteredPhotos = createSelector([select값], (select값) => (가공할 결과를 리턴)
-const photos = useSelector(selectFilteredPhotos)
-```
-
-또 메모이제이션 방식을 통해 값을 비교하므로 불필요한 계산도 없애준다.
-
-select값이 같은 값으로 들어오면 미리 캐싱해둔 값과 비교해 값이 변하지 않으면 그대로 리턴한다.
-
----
-
-### 5\. Memoization 적용
-
-인풋에 따라 아웃풋에 나오는 값에 대해서 미리 저장해 놓는 기법이다.
-
-a -> A가 아웃풋이다 라고 할때, 다음번에 또 a가 들어오면 로직을 일일히 실행하지않고 저장해둔 값 A를 바로 리턴하게 된다.
-
-순수함수만 가능
-
-그렇다고 무지성으로 쓰는건 좋지 않다.
-
-메모이제이션이 불필요한 함수에 적용하는건 오히려 메모리 낭비가 될 수 있다.
-9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L17",null,{"isPagination":true,"posts":{"posts":[{"content":"$18","data":{"title":"리액트 테스팅(2)","date":"$D2022-12-14T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-2"},{"content":"$19","data":{"title":"리액트 테스팅(1)","date":"$D2022-12-10T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-1"},{"content":"$1a","data":{"title":"6주간 스터디하며 배운것들","date":"$D2022-10-21T00:00:00.000Z","description":"6주간 진행한 스터디에서 얻은 것들","category":"til","titleImage":"/assets/postIcon/til.webp"},"slug":"study"},{"content":"$1b","data":{"title":"Storybook 써보기","date":"$D2022-10-11T00:00:00.000Z","description":"스터디 하면서 처음 써본 Storybook","category":"javaScript","titleImage":"/assets/postIcon/storybook.webp"},"slug":"storybook"},{"content":"$1c","data":{"title":"Next.js styled-component 적용 문제에 대해(_document.tsx)","date":"$D2022-08-22T00:00:00.000Z","description":"next.js와 styled-component 사용시 발생한 에러","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-styled-component"},{"content":"$1d","data":{"title":"IntersectionObserver로 데이터 요청해보기","date":"$D2022-05-04T00:00:00.000Z","description":"IntersectionObserver를 활용해 스크롤 위치에서 데이터 불러오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"intersectionObserver"},{"content":"\n\n####\n**bundle-analyzer**는 빌드된 파일을 트리맵 형식으로 종류와 크기를 보여준다.\n\nnext에서 제공하는 bundle-analyzer\n\nnext.config.js\n\n```javascript\nconst withBundleAnalyzer = require('@next/bundle-analyzer')({\n  enabled: process.env.ANALYZE === 'true'\n})\n\nmodule.exports = withBundleAnalyzer({\n  compress: true,\n  webpack(config, {webpack}) {\n    const prod = process.env.NODE_ENV === 'production'\n    const plugins = [...config.plugins]\n    return {\n      ...config,\n      mode: prod ? 'production' : 'development',\n      devtool: prod ? 'hidden-source-map' : 'eval',\n      plugins\n    }\n  }\n})\n```\n\npackage.json / script\n\n```\n\"build\": \"ANALYZE=true next build\",\n```\n\n<img src=\"/assets/blog/javaScript/bundle-analyzer.png\" width=\"100%\" alt=\"bundle-analyzer\"/>\n\n\n이런식으로 html이 실행된다.\n\n서버와 클라이언트 두개의 창이 실행되는데 클라이언트 부분인 사용자에게 직접 보여질 부분이라, 서버 부분보다는 클라이언트 부분을 줄이는게 더 효과적이라고 한다.\n\n아이콘으로 쓰일 이미지를 두개쓰기싫어 svg를 컴포넌트화시켜 props로 색상을 변경시키게 했는데, 용량이 꽤 크다고 나왔다 거슬린다 🤔\n\n줄일수있는 방법을 찾아봐야겠다.\n\n또 나중에 최종 배포때는 번들된 JS 파일을 gz로 압축시켜 브라우저 쪽으로 보내주는 방법도 있다고 하는데, 나중에 시도해봐야겠다.\n","data":{"title":"next/bundle-analyzer","date":"$D2022-02-22T00:00:00.000Z","description":"next/bundle-analyzer로 번들 크기 확인하기","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-bundle-analyzer"},{"content":"$1e","data":{"title":"리액트 ref 와 forwardRef (with. react-hook-form)","date":"$D2022-02-09T00:00:00.000Z","description":"react-hook-form 라이브러리와 ref의 동작","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"ref-forwardRef"},{"content":"$1f","data":{"title":"Speechsynthesis & Google TTS","date":"$D2022-01-22T00:00:00.000Z","description":"프로젝트 진행하며 경험해본 Speechsynthesis & Google TTS","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"Speechsynthesis"},{"content":"$20","data":{"title":"웹성능 최적화(3)","date":"$D2022-01-04T00:00:00.000Z","description":"웹성능 최적화3","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"web-optimization-3"}],"total":46},"page":"4"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (42)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}]]]}]]}]
-12:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-d:null
-16:{"metadata":[["$","title","0",{"children":"Been blog - 4"}],["$","meta","1",{"name":"description","content":"Been dev-note - 4"}],["$","meta","2",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","3",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","link","4",{"rel":"canonical","href":"https://wonbeenna.github.io/page/4"}],["$","meta","5",{"property":"og:title","content":"Been blog - 4"}],["$","meta","6",{"property":"og:description","content":"Been dev-note - 4"}],["$","meta","7",{"property":"og:url","content":"https://wonbeenna.github.io/page/4"}],["$","meta","8",{"property":"og:site_name","content":"Been blog"}],["$","meta","9",{"property":"og:locale","content":"ko_KR"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 4"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 4"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","24",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}]],"error":null,"digest":"$undefined"}
-10:{"metadata":"$16:metadata","error":null,"digest":"$undefined"}
+9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L14",null,{"isPagination":true,"posts":{"posts":[{"content":"$15","data":{"title":"리액트 테스팅(3)","date":"$D2022-12-26T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-3"},{"content":"$16","data":{"title":"리액트 테스팅(2)","date":"$D2022-12-14T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-2"},{"content":"$17","data":{"title":"리액트 테스팅(1)","date":"$D2022-12-10T00:00:00.000Z","description":"jest와 react-testing-library","category":"javaScript","titleImage":"/assets/postIcon/test.webp"},"slug":"react-testing-1"},{"content":"$18","data":{"title":"6주간 스터디하며 배운것들","date":"$D2022-10-21T00:00:00.000Z","description":"6주간 진행한 스터디에서 얻은 것들","category":"til","titleImage":"/assets/postIcon/til.webp"},"slug":"study"},{"content":"$19","data":{"title":"Storybook 써보기","date":"$D2022-10-11T00:00:00.000Z","description":"스터디 하면서 처음 써본 Storybook","category":"javaScript","titleImage":"/assets/postIcon/storybook.webp"},"slug":"storybook"},{"content":"$1a","data":{"title":"Next.js styled-component 적용 문제에 대해(_document.tsx)","date":"$D2022-08-22T00:00:00.000Z","description":"next.js와 styled-component 사용시 발생한 에러","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-styled-component"},{"content":"$1b","data":{"title":"IntersectionObserver로 데이터 요청해보기","date":"$D2022-05-04T00:00:00.000Z","description":"IntersectionObserver를 활용해 스크롤 위치에서 데이터 불러오기","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"intersectionObserver"},{"content":"\n\n####\n**bundle-analyzer**는 빌드된 파일을 트리맵 형식으로 종류와 크기를 보여준다.\n\nnext에서 제공하는 bundle-analyzer\n\nnext.config.js\n\n```javascript\nconst withBundleAnalyzer = require('@next/bundle-analyzer')({\n  enabled: process.env.ANALYZE === 'true'\n})\n\nmodule.exports = withBundleAnalyzer({\n  compress: true,\n  webpack(config, {webpack}) {\n    const prod = process.env.NODE_ENV === 'production'\n    const plugins = [...config.plugins]\n    return {\n      ...config,\n      mode: prod ? 'production' : 'development',\n      devtool: prod ? 'hidden-source-map' : 'eval',\n      plugins\n    }\n  }\n})\n```\n\npackage.json / script\n\n```\n\"build\": \"ANALYZE=true next build\",\n```\n\n<img src=\"/assets/blog/javaScript/bundle-analyzer.png\" width=\"100%\" alt=\"bundle-analyzer\"/>\n\n\n이런식으로 html이 실행된다.\n\n서버와 클라이언트 두개의 창이 실행되는데 클라이언트 부분인 사용자에게 직접 보여질 부분이라, 서버 부분보다는 클라이언트 부분을 줄이는게 더 효과적이라고 한다.\n\n아이콘으로 쓰일 이미지를 두개쓰기싫어 svg를 컴포넌트화시켜 props로 색상을 변경시키게 했는데, 용량이 꽤 크다고 나왔다 거슬린다 🤔\n\n줄일수있는 방법을 찾아봐야겠다.\n\n또 나중에 최종 배포때는 번들된 JS 파일을 gz로 압축시켜 브라우저 쪽으로 보내주는 방법도 있다고 하는데, 나중에 시도해봐야겠다.\n","data":{"title":"next/bundle-analyzer","date":"$D2022-02-22T00:00:00.000Z","description":"next/bundle-analyzer로 번들 크기 확인하기","category":"javaScript","titleImage":"/assets/postIcon/Nextjs.svg"},"slug":"next-bundle-analyzer"},{"content":"$1c","data":{"title":"리액트 ref 와 forwardRef (with. react-hook-form)","date":"$D2022-02-09T00:00:00.000Z","description":"react-hook-form 라이브러리와 ref의 동작","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"ref-forwardRef"},{"content":"$1d","data":{"title":"Speechsynthesis & Google TTS","date":"$D2022-01-22T00:00:00.000Z","description":"프로젝트 진행하며 경험해본 Speechsynthesis & Google TTS","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"Speechsynthesis"}],"total":47},"page":"4"}],"$L1e"]}]
+1e:["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (42)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (3)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}]]]}]
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+1f:I[622,[],"IconMark"]
+d:{"metadata":[["$","title","0",{"children":"Been blog - 4"}],["$","meta","1",{"name":"description","content":"Been dev-note - 4"}],["$","meta","2",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","3",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","link","4",{"rel":"canonical","href":"https://wonbeenna.github.io/page/4"}],["$","meta","5",{"property":"og:title","content":"Been blog - 4"}],["$","meta","6",{"property":"og:description","content":"Been dev-note - 4"}],["$","meta","7",{"property":"og:url","content":"https://wonbeenna.github.io/page/4"}],["$","meta","8",{"property":"og:site_name","content":"Been blog"}],["$","meta","9",{"property":"og:locale","content":"ko_KR"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 4"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 4"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","24",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","$L1f","26",{}]],"error":null,"digest":"$undefined"}
+12:"$d:metadata"

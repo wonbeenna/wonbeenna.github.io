@@ -1,26 +1,139 @@
 1:"$Sreact.fragment"
-2:I[9243,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-2026af6fce535623.js"],""]
-3:I[881,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-2026af6fce535623.js"],"Providers"]
-4:I[6874,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","848","static/chunks/app/page/%5Bpage%5D/page-3d16974de746edb8.js"],""]
-5:I[3063,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-2026af6fce535623.js"],"Image"]
-6:I[1186,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","177","static/chunks/app/layout-2026af6fce535623.js"],"default"]
-7:I[7555,[],""]
-8:I[1295,[],""]
-a:I[9665,[],"MetadataBoundary"]
-c:I[9665,[],"OutletBoundary"]
-f:I[4911,[],"AsyncMetadataOutlet"]
-11:I[9665,[],"ViewportBoundary"]
-13:I[6614,[],""]
+2:I[1402,["619","static/chunks/619-ba102abea3e3d0e4.js","239","static/chunks/239-c2117d3ee033cea8.js","177","static/chunks/app/layout-e509d1a31c7f333f.js"],""]
+3:I[6300,["619","static/chunks/619-ba102abea3e3d0e4.js","239","static/chunks/239-c2117d3ee033cea8.js","177","static/chunks/app/layout-e509d1a31c7f333f.js"],"Providers"]
+4:I[2619,["619","static/chunks/619-ba102abea3e3d0e4.js","239","static/chunks/239-c2117d3ee033cea8.js","848","static/chunks/app/page/%5Bpage%5D/page-210b2dff0315fedd.js"],""]
+5:I[1356,["619","static/chunks/619-ba102abea3e3d0e4.js","239","static/chunks/239-c2117d3ee033cea8.js","177","static/chunks/app/layout-e509d1a31c7f333f.js"],"Image"]
+6:I[379,["619","static/chunks/619-ba102abea3e3d0e4.js","239","static/chunks/239-c2117d3ee033cea8.js","177","static/chunks/app/layout-e509d1a31c7f333f.js"],"default"]
+7:I[9766,[],""]
+8:I[8924,[],""]
+a:I[4431,[],"OutletBoundary"]
+c:I[5278,[],"AsyncMetadataOutlet"]
+e:I[4431,[],"ViewportBoundary"]
+10:I[4431,[],"MetadataBoundary"]
+11:"$Sreact.suspense"
+13:I[7150,[],""]
 :HL["/_next/static/media/47cbc4e2adbc5db9-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/css/e539936c7dc6b882.css","style"]
 :HL["/_next/static/css/e7c7294f242bce08.css","style"]
-0:{"P":null,"b":"T39Mvz6c8SIi7W1th-g-L","p":"","c":["","page","5"],"i":false,"f":[[["",{"children":["page",{"children":[["page","5","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e7c7294f242bce08.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","5","d"],["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",["$","$La",null,{"children":"$Lb"}],null,["$","$Lc",null,{"children":["$Ld","$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","Vl61HS__aREE6ZdIyCELx",{"children":[["$","$L11",null,{"children":"$L12"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$13","$undefined"],"s":false,"S":true}
-14:"$Sreact.suspense"
-15:I[4911,[],"AsyncMetadata"]
-b:["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"promise":"$@16"}]}]
-17:I[1114,["874","static/chunks/874-39484d5feff3b265.js","766","static/chunks/766-b650f0278a972ad4.js","848","static/chunks/app/page/%5Bpage%5D/page-3d16974de746edb8.js"],"default"]
-e:null
-18:T2721,
+0:{"P":null,"b":"iWTXvzrkASeYQ5K5Setq_","p":"","c":["","page","5"],"i":false,"f":[[["",{"children":["page",{"children":[["page","5","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e539936c7dc6b882.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/e7c7294f242bce08.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","$L2",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-LFDRQZPCBN"}],["$","$L2",null,{"id":"google-analytics","children":"\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n \n          gtag('config', 'G-LFDRQZPCBN');\n        "}],["$","body",null,{"suppressHydrationWarning":true,"className":"__className_518cef","children":["$","$L3",null,{"children":[["$","header",null,{"className":"sticky top-0 z-10 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01","children":["$","section",null,{"className":"m-auto flex h-full max-w-[970px] items-center justify-between","children":[["$","div",null,{"className":"flex items-center gap-[20px]","children":[["$","$L4",null,{"href":"/","children":["$","$L5",null,{"className":"h-[56px] w-[60px]","src":"/assets/icons/been-logo.svg","width":60,"height":56,"priority":true,"alt":"logo"}]}],["$","div",null,{"className":"flex items-center gap-[20px]","children":["$","$L4",null,{"href":"/about","children":"About"}]}]]}],["$","$L6",null,{}]]}]}],["$","main",null,{"className":"mx-auto my-0 max-w-[970px] p-[16px]","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"flex items-center justify-center pb-[16px] text-center text-[14px] text-gray600","children":"Copyright © Been."}]]}]}]]}]]}],{"children":["page",["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["page","5","d"],["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9",null,["$","$La",null,{"children":["$Lb",["$","$Lc",null,{"promise":"$@d"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$Le",null,{"children":"$Lf"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L10",null,{"children":["$","div",null,{"hidden":true,"children":["$","$11",null,{"fallback":null,"children":"$L12"}]}]}]]}],false]],"m":"$undefined","G":["$13",[]],"s":false,"S":true}
+14:I[4879,["619","static/chunks/619-ba102abea3e3d0e4.js","239","static/chunks/239-c2117d3ee033cea8.js","848","static/chunks/app/page/%5Bpage%5D/page-210b2dff0315fedd.js"],"default"]
+15:Tf2b,
+**[유동균님의 강의](https://www.inflearn.com/course/%EC%9B%B9-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EB%A6%AC%EC%95%A1%ED%8A%B8-1)를 보며 정리한 글 입니다.**
+
+---
+
+### 1\. Layout Shift
+
+원인
+
+1\. 사이즈가 정해져 있지 않은 이미지
+
+2\. 사이즈가 정해져 있지 않은 광고
+
+3\. 동적으로 삽입된 콘텐츠
+
+4\. Web font (FOIT, FOUT)
+
+<img src="/assets/blog/javaScript/web-optimization-3-1.png" width="100%" alt="post image"/>
+
+여러 이미지를 로드할 때, 먼저 불러온 이미지 자리를 나중에 불러온 이미지가 밀어내게 되면서 레이아웃 변경이 계속 발생한다.
+
+```js
+<ImageWrap>
+  <Image />
+</ImageWrap>
+```
+
+이때 Wrap에 고정값을 정해주고 Image는 그 값을 따라가기만 하면 된다. 여기서는 16:9 비율로 지정하기 위해 9 / 16 = 56.25%로 높이를 잡고 Image를 그 안에 넣는 방식으로 했다.
+
+<img src="/assets/blog/javaScript/web-optimization-3-2.png" width="100%" alt="post image"/>
+
+컨텐츠가 새로 들어오면서 기존 컨텐츠를 밀어내지 않도록 컨텐츠를 그려줄 곳에 미리 자리를 만들어 놓는것이다.
+
+---
+
+### 2\. React-lazyload
+
+```shell
+npm i react-lazyload
+```
+
+강의에서는 라이브러리를 사용했지만, 다음엔 스스로 구현해 포스팅해야겠다.
+
+스크롤이벤트를 사용하는 것 같다.
+
+---
+
+### 3\. useSelect 렌더링 문제
+
+<img src="/assets/blog/javaScript/web-optimization-3-3.png" width="100%" alt="post image"/>
+
+리액트 dev-tool에서 Highlight updates ... 를 체크해 컴포넌트가 렌더링되는걸 확인할 수 있다.
+
+useSelector는 dispatch로 Redux Store가 변경되면 구독하고 있는 컴포넌트에 state가 변경되었다고 알려준다.
+
+그럼 컴포넌트에서는 기존 state와 업데이트된 state를 비교해 값이 다르면 다시 렌더링 하게 된다.
+
+여기서 비교하는 방식은 useSelector의 리턴값을 비교하는데
+
+```js
+const { modalVisible, bgColor, src, alt } = useSelector(state => ({
+  modalVisible: state.modalVisible,
+  bgColor: state.bgColor,
+  src: state.src,
+  alt: state.alt,
+}));
+```
+
+리턴값을 오브젝트 형식으로 작성하면, 값을 생성할 때 마다 새로운 오브젝트를 만들기 때문에 매번 새롭게 렌더링하게 된다.
+
+```js
+const modalVisible = useSelector(state => state.modalVisible)
+const bgColor = useSelector(state => state.bgColor)
+const src = useSelector(state => state.src)
+const alt = useSelector(state => state.alt)
+```
+
+오브젝트를 새롭게 만들지 않도록 state를 쪼개고 새로운 Equality Function을 사용해야한다.
+
+```js
+const { modalVisible, bgColor, src, alt } = useSelector(state => ({
+  modalVisible: state.modalVisible,
+  bgColor: state.bgColor,
+  src: state.src,
+  alt: state.alt,
+}), shallowEqual);
+```
+
+---
+
+### 4\. Redux Reselect
+
+state의 값들을 가지고 가공해야되는 값이 있을 때 useSelector내부에서 가공해 값을 준다.
+
+```js
+const selectFilteredPhotos = createSelector([select값], (select값) => (가공할 결과를 리턴)
+const photos = useSelector(selectFilteredPhotos)
+```
+
+또 메모이제이션 방식을 통해 값을 비교하므로 불필요한 계산도 없애준다.
+
+select값이 같은 값으로 들어오면 미리 캐싱해둔 값과 비교해 값이 변하지 않으면 그대로 리턴한다.
+
+---
+
+### 5\. Memoization 적용
+
+인풋에 따라 아웃풋에 나오는 값에 대해서 미리 저장해 놓는 기법이다.
+
+a -> A가 아웃풋이다 라고 할때, 다음번에 또 a가 들어오면 로직을 일일히 실행하지않고 저장해둔 값 A를 바로 리턴하게 된다.
+
+순수함수만 가능
+
+그렇다고 무지성으로 쓰는건 좋지 않다.
+
+메모이제이션이 불필요한 함수에 적용하는건 오히려 메모리 낭비가 될 수 있다.
+16:T2721,
 **[유동균님의 강의](https://inf.run/4zeg)를 보며 정리한 글 입니다.**
 
 ---
@@ -352,7 +465,7 @@ const header = {
     },
 }
 ```
-19:T1f48,
+17:T1f48,
 **[유동균님의 강의](https://www.inflearn.com/course/%EC%9B%B9-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EB%A6%AC%EC%95%A1%ED%8A%B8-1)를 보며 정리한 글 입니다.**
 
 ---
@@ -600,7 +713,7 @@ useEffect(() => {
 주의할점은 이미지는 모듈과 다르게 필요할 때 마다 그때그때 매번 보내기 때문에
 
 사용하는 이미지에 캐시가 제대로 걸려있는지 확인할 필요가 있다.
-1a:T2416,
+18:T2416,
 
 ####
 **[Svelte vs React: Ending the Debate](https://massivepixel.io/blog/svelte-vs-react/ "Svelte vs React: Ending the Debate")를 읽으며 정리한 글입니다.**
@@ -753,7 +866,7 @@ GZIPPED(압축된) 버전의 리액트는 **42.2KB**(ReactDOM포함), 스벨트�
 하지만 스벨트는 아직 갈 길이 멀다. 지금까지는 인터넷 연결이 낮거나, 블로그, 포트폴리오 등 단순히 개인 웹사이트를 만드는 단일 페이지 애플리케이션을 구축하는데 사용하는 것이 좋다.
 
 또 큰 회사들의 기술 스택을 스벨트로 교체하기에는 많은 시간이 필요할 것이며 스벨트의 개발자들의 수요 또한 거의 없다.
-1b:T1085,
+19:T1085,
 # 렌더링 최적화
 
 ### 1\. 컴포넌트를 맵핑할때는 key값으로 Index를 사용하지 말자
@@ -900,7 +1013,7 @@ useMemo는 리턴되는 값을 memoize 시키는 반면에, useCallback은 함�
     {...}
   }, [users]);
 ```
-1c:T1f82,
+1a:T1f82,
 [리액트 문서](https://beta.reactjs.org/)를 정독하며 정리한 글
 영어문서라 조금 힘들었다...
 
@@ -1155,7 +1268,7 @@ function FilterableProductTable({ products }) {
 ```
 
 
-1d:T1c8d,
+1b:T1c8d,
 ## React Hook
 
 React로 개발할 땐 클래스형 컴포넌트 보다 React 16.8 부터 도입된 Hook 기반 함수형 컴포넌트를 더 선호하여 개발하는 것 같다.
@@ -1392,8 +1505,10 @@ function useEffect(cb, depArray) {
 [Deep dive: How do React hooks really work?](https://www.netlify.com/blog/2019/03/11/deep-dive-how-do-react-hooks-really-work/)
 
 [Getting Closure on React Hooks](https://rinae.dev/posts/getting-closure-on-react-hooks-summary)
-9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L17",null,{"isPagination":true,"posts":{"posts":[{"content":"$18","data":{"title":"웹성능 최적화(2)","date":"$D2022-01-03T00:00:00.000Z","description":"웹성능 최적화2","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"web-optimization-2"},{"content":"$19","data":{"title":"웹성능 최적화(1)","date":"$D2022-01-01T00:00:00.000Z","description":"웹성능 최적화1","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"web-optimization"},{"content":"$1a","data":{"title":"스벨트와 리액트","date":"$D2021-12-12T00:00:00.000Z","description":"스벨트와 리액트에 대해 정리한 글","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-react"},{"content":"$1b","data":{"title":"React 처럼 생각하기(2)","date":"$D2021-12-12T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"thinking-in-react-2"},{"content":"$1c","data":{"title":"React 처럼 생각하기","date":"$D2021-11-20T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"thinking-in-react"},{"content":"$1d","data":{"title":"React Hook의 동작","date":"$D2021-11-07T00:00:00.000Z","description":"React Hook의 동작에 대해","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-hook"}],"total":46},"page":"5"}],["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (42)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (2)"}]}]]]}]]}]
-12:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-d:null
-16:{"metadata":[["$","title","0",{"children":"Been blog - 5"}],["$","meta","1",{"name":"description","content":"Been dev-note - 5"}],["$","meta","2",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","3",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","link","4",{"rel":"canonical","href":"https://wonbeenna.github.io/page/5"}],["$","meta","5",{"property":"og:title","content":"Been blog - 5"}],["$","meta","6",{"property":"og:description","content":"Been dev-note - 5"}],["$","meta","7",{"property":"og:url","content":"https://wonbeenna.github.io/page/5"}],["$","meta","8",{"property":"og:site_name","content":"Been blog"}],["$","meta","9",{"property":"og:locale","content":"ko_KR"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 5"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 5"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","24",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}]],"error":null,"digest":"$undefined"}
-10:{"metadata":"$16:metadata","error":null,"digest":"$undefined"}
+9:["$","section",null,{"className":"flex flex-col-reverse md:relative md:flex-row","children":[["$","$L14",null,{"isPagination":true,"posts":{"posts":[{"content":"$15","data":{"title":"웹성능 최적화(3)","date":"$D2022-01-04T00:00:00.000Z","description":"웹성능 최적화3","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"web-optimization-3"},{"content":"$16","data":{"title":"웹성능 최적화(2)","date":"$D2022-01-03T00:00:00.000Z","description":"웹성능 최적화2","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"web-optimization-2"},{"content":"$17","data":{"title":"웹성능 최적화(1)","date":"$D2022-01-01T00:00:00.000Z","description":"웹성능 최적화1","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"web-optimization"},{"content":"$18","data":{"title":"스벨트와 리액트","date":"$D2021-12-12T00:00:00.000Z","description":"스벨트와 리액트에 대해 정리한 글","category":"javaScript","titleImage":"/assets/postIcon/svelte-icon.webp"},"slug":"svelte-react"},{"content":"$19","data":{"title":"React 처럼 생각하기(2)","date":"$D2021-12-12T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"thinking-in-react-2"},{"content":"$1a","data":{"title":"React 처럼 생각하기","date":"$D2021-11-20T00:00:00.000Z","description":"리액트 문서 보며 정리","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"thinking-in-react"},{"content":"$1b","data":{"title":"React Hook의 동작","date":"$D2021-11-07T00:00:00.000Z","description":"React Hook의 동작에 대해","category":"javaScript","titleImage":"/assets/postIcon/logo192.webp"},"slug":"react-hook"}],"total":47},"page":"5"}],"$L1c"]}]
+1c:["$","ul",null,{"className":"relative top-0 flex h-fit min-w-fit flex-row flex-wrap gap-[20px] py-[20px] pl-0 md:sticky md:top-[100px] md:flex-col md:flex-nowrap md:py-0 md:pl-[30px]","children":[["$","h2",null,{"className":"hidden text-[18px] font-bold md:inline","children":"Category"}],[["$","li","javaScript",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/javaScript","children":"javaScript (42)"}]}],["$","li","study",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/study","children":"study (3)"}]}],["$","li","til",{"children":["$","$L4",null,{"className":"text-gray700","href":"/blog/til","children":"til (2)"}]}]]]}]
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+1d:I[622,[],"IconMark"]
+d:{"metadata":[["$","title","0",{"children":"Been blog - 5"}],["$","meta","1",{"name":"description","content":"Been dev-note - 5"}],["$","meta","2",{"name":"google-site-verification","content":"BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U"}],["$","meta","3",{"name":"naver-site-verification","content":"58945b2bbe2fe86252fa8c7b204b40f6019920e9"}],["$","link","4",{"rel":"canonical","href":"https://wonbeenna.github.io/page/5"}],["$","meta","5",{"property":"og:title","content":"Been blog - 5"}],["$","meta","6",{"property":"og:description","content":"Been dev-note - 5"}],["$","meta","7",{"property":"og:url","content":"https://wonbeenna.github.io/page/5"}],["$","meta","8",{"property":"og:site_name","content":"Been blog"}],["$","meta","9",{"property":"og:locale","content":"ko_KR"}],["$","meta","10",{"property":"og:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","11",{"property":"og:image:width","content":"800"}],["$","meta","12",{"property":"og:image:height","content":"600"}],["$","meta","13",{"property":"og:image:alt","content":"Been blog"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Been blog - 5"}],["$","meta","17",{"name":"twitter:description","content":"Been dev-note - 5"}],["$","meta","18",{"name":"twitter:image","content":"https://wonbeenna.github.io/favicon.png"}],["$","meta","19",{"name":"twitter:image:width","content":"800"}],["$","meta","20",{"name":"twitter:image:height","content":"600"}],["$","meta","21",{"name":"twitter:image:alt","content":"Been blog"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"192x192"}],["$","link","23",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","24",{"rel":"icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png","sizes":"32x32","type":"image/png"}],["$","$L1d","26",{}]],"error":null,"digest":"$undefined"}
+12:"$d:metadata"
