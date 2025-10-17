@@ -1,15 +1,16 @@
-import { Roboto } from 'next/font/google';
+import React from 'react';
+import localFont from 'next/font/local';
 import Layout from '@/layout/Layout';
 import '../styles/tailwind.css';
 import { Metadata } from 'next';
 import { defaultMetadata, defaultOpenGraph } from '@/utils/metadata';
 import Script from 'next/script';
 import { Providers } from '@/app/providers';
-import React from 'react';
 
-const inter = Roboto({
-  weight: ['300', '400', '500', '700', '900'],
-  subsets: ['latin']
+const pretendard = localFont({
+  src: '../fonts/PretendardVariable.woff2',
+  display: 'swap',
+  weight: '45 920'
 });
 
 export const metadata: Metadata = {
@@ -30,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           gtag('config', 'G-LFDRQZPCBN');
         `}
       </Script>
-      <body suppressHydrationWarning className={inter.className}>
+      <body suppressHydrationWarning className={pretendard.className}>
         <Providers>
           <Layout>{children}</Layout>
         </Providers>
