@@ -27,11 +27,7 @@ const Page = async () => {
     limit: '-1'
   });
 
-  return (
-    <section>
-      <SearchPostListContainer posts={posts as Posts} />
-    </section>
-  );
+  return <SearchPostListContainer posts={posts as Posts} />;
 };
 
 export default Page;

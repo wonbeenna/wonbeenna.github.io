@@ -27,10 +27,10 @@ const SearchPostListContainer = ({ posts }: SearchPostListContainerProps) => {
   }, [search]);
 
   return (
-    <>
+    <section>
       <SearchInput />
       {searchPosts && <PostList posts={searchPosts as Posts} />}
-    </>
+    </section>
   );
 };
 
