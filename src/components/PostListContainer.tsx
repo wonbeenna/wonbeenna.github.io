@@ -10,9 +10,10 @@ interface PostListContainerProps {
   page?: string;
   limit?: string;
   search?: string;
+  isPagination?: boolean;
 }
 
-const PostListContainer = async ({ category, limit, page, search }: PostListContainerProps) => {
+const PostListContainer = async ({ category, limit, page, search, isPagination = true }: PostListContainerProps) => {
   const categories = getCategories();
   const posts = getAllPost(
     {
@@ -25,7 +26,7 @@ const PostListContainer = async ({ category, limit, page, search }: PostListCont
 
   return (
     <section className="flex flex-col-reverse md:relative md:flex-row">
-      <PostList isPagination posts={posts as Posts} page={page} />
+      <PostList posts={posts as Posts} page={page} isPagination={isPagination} />
       <Category categories={categories} currentCategory={category} />
     </section>
   );
