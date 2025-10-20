@@ -1,6 +1,6 @@
 import React from 'react';
 import Nav from '@/layout/Nav';
-import NavButtons from '@/components/NavButtons';
+import NavButtons from '@/components/common/NavButtons';
 
 const Header = () => {
   return (

@@ -3,32 +3,13 @@ import fs from 'fs';
 import { promisify } from 'util';
 import matter from 'gray-matter';
 import { getSerialize } from '@/utils/sirialize';
+import { CompiledPost, Frontmatter, PostMetaData } from '@/types/post';
 
 const readFileAsync = promisify(fs.readFile);
 const statAsync = promisify(fs.stat);
 const readdirAsync = promisify(fs.readdir);
 
 export const POSTS_PATH = path.join(process.cwd(), '_posts');
-
-type Frontmatter = {
-  title: string;
-  date: string | Date;
-  category?: string;
-  [key: string]: any;
-};
-
-type PostMetaData = {
-  slug: string;
-  data: Frontmatter;
-  modifiedTimeMs: number;
-};
-
-type CompiledPost = {
-  content: React.ReactElement;
-  frontmatter: Frontmatter;
-};
-
-type PagingOption = { page?: string; limit?: string };
 
 const isDevelopmentMode = process.env.NODE_ENV !== 'production';
 
@@ -121,47 +102,18 @@ const getPostMetaList = async (): Promise<PostMetaData[]> => {
   return postMetaCache!.metaDataList;
 };
 
-export const getAllPost = async (
-  paging: PagingOption = { page: '1', limit: '10' },
-  category?: string,
-  searchKeyword?: string
-) => {
-  const postMetaList = await getPostMetaList();
-
-  const currentPage = Number(paging.page ?? '1') || 1;
-  const limitPerPage = Number(paging.limit ?? '10') || 10;
-
-  let filteredPosts = postMetaList;
+export const getAllPost = async (searchKeyword: string = '') => {
+  let filteredPosts = await getPostMetaList();
 
   if (searchKeyword && searchKeyword.trim()) {
     const searchRegExp = new RegExp(escapeRegExpCharacters(searchKeyword.trim()), 'i');
     filteredPosts = filteredPosts.filter((post) => searchRegExp.test(String(post.data?.title ?? '')));
   }
 
-  if (category && category.trim()) {
-    filteredPosts = filteredPosts.filter((post) => String(post.data?.category ?? '') === category);
-  }
-
   const totalCount = filteredPosts.length;
 
-  if (String(limitPerPage) === '-1') {
-    return {
-      posts: filteredPosts.map((post) => ({
-        slug: post.slug,
-        data: post.data
-      })),
-      total: totalCount
-    };
-  }
-
-  const offset = (currentPage - 1) * limitPerPage;
-  const paginatedPosts = filteredPosts.slice(offset, offset + limitPerPage).map((post) => ({
-    slug: post.slug,
-    data: post.data
-  }));
-
   return {
-    posts: paginatedPosts,
+    posts: filteredPosts,
     total: totalCount
   };
 };

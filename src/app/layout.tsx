@@ -7,6 +7,8 @@ import { defaultMetadata, defaultOpenGraph } from '@/utils/metadata';
 import Script from 'next/script';
 import { Providers } from '@/app/providers';
 
+export const dynamic = 'force-static';
+
 const pretendard = localFont({
   src: '../fonts/PretendardVariable.woff2',
   display: 'swap',

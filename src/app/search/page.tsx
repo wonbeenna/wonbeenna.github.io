@@ -1,11 +1,8 @@
-import { Posts } from '@/app/page';
 import React from 'react';
 import { getAllPost } from '@/utils/getPost';
 import { Metadata } from 'next';
 import { defaultMetadata, defaultOpenGraph } from '@/utils/metadata';
-import SearchPostListContainer from '@/components/SearchPostListContainer';
-
-export const dynamic = 'force-static';
+import SearchPostListContainer from '@/components/search/SearchPostListContainer';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
@@ -22,12 +19,9 @@ export const metadata: Metadata = {
 };
 
 const Page = async () => {
-  const posts = await getAllPost({
-    page: '1',
-    limit: '-1'
-  });
+  const posts = await getAllPost();
 
-  return <SearchPostListContainer posts={posts as Posts} />;
+  return <SearchPostListContainer posts={posts} />;
 };
 
 export default Page;

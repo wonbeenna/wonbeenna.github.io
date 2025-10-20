@@ -1,6 +1,6 @@
 import { getAllPost } from '@/utils/getPost';
 
-type GroupedMonth = {
+export type GroupedMonth = {
   monthNumber: number;
   posts: Array<{
     slug: string;
@@ -10,13 +10,13 @@ type GroupedMonth = {
   }>;
 };
 
-type GroupedYear = {
+export type GroupedYear = {
   yearNumber: number;
   months: GroupedMonth[];
 };
 
 export const getPostsGroupedByYearMonth = async (): Promise<GroupedYear[]> => {
-  const { posts } = await getAllPost({ page: '1', limit: '-1' });
+  const { posts } = await getAllPost();
 
   const normalizedPosts = posts.map(
     (
@@ -48,7 +48,7 @@ export const getPostsGroupedByYearMonth = async (): Promise<GroupedYear[]> => {
 
   for (const post of normalizedPosts) {
     const yearNumber = post.date.getFullYear();
-    const monthNumber = post.date.getMonth() + 1; // 0-based → 1-based
+    const monthNumber = post.date.getMonth() + 1;
 
     if (!yearMap.has(yearNumber)) {
       yearMap.set(yearNumber, new Map<number, GroupedMonth>());
