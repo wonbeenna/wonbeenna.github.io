@@ -69,7 +69,7 @@ const buildPostMetaIndex = async (): Promise<PostMetaData[]> => {
         slug,
         data: frontmatter,
         modifiedTimeMs: fileStat.mtimeMs
-      } as PostMetaData;
+      };
     })
   );
 

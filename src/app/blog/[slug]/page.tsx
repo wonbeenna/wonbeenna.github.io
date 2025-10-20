@@ -48,11 +48,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
   return (
     <div className="prose w-full max-w-none">
-      <PostCardHeader
-        title={data.data.title as string}
-        description={data.data.description as string}
-        date={data.data.date as string}
-      />
+      <PostCardHeader title={data.data.title} description={data.data.description} date={data.data.date} />
       <Contents component={data.content} />
       <ContentsPage prevPost={data.prevPost} nextPost={data.nextPost} />
       <Comment />
