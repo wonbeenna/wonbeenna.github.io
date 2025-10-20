@@ -5,6 +5,7 @@ import PostList from '@/components/search/PostList';
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Posts } from '@/types/post';
+import Section from '@/components/common/Section';
 
 interface SearchPostListContainerProps {
   posts: Posts;
@@ -27,10 +28,10 @@ const SearchPostListContainer = ({ posts }: SearchPostListContainerProps) => {
   }, [search]);
 
   return (
-    <section>
+    <Section>
       <SearchInput />
       {searchPosts && <PostList posts={searchPosts} />}
-    </section>
+    </Section>
   );
 };
 

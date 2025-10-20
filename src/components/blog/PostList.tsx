@@ -27,14 +27,14 @@ const PostList = ({ groupedYears }: PostListProps) => {
                       {monthNames[monthGroup.monthNumber - 1]}
                     </div>
 
-                    <ul className="space-y-2  sm:space-y-2  sm:pl-6">
+                    <ul className="space-y-2 sm:space-y-2 sm:pl-6">
                       {monthGroup.posts.map((postItem) => {
                         return (
                           <li key={postItem.slug} className="flex flex-wrap items-center justify-between gap-2">
                             <div className="flex min-w-0 items-center gap-2">
                               <Link
                                 href={`/blog/${postItem.slug}`}
-                                className=" font-semibold tracking-tight transition-colors hover:text-primaryColor"
+                                className="text-xl font-semibold tracking-tight text-black transition-colors hover:text-primaryColor md:text-2xl"
                               >
                                 {postItem.title}
                               </Link>

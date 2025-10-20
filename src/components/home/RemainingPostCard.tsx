@@ -8,19 +8,22 @@ interface RemainingPostCardProps {
 
 const RemainingPostCard = ({ post }: RemainingPostCardProps) => {
   const postDate = formatDateForHumanLong(post.data?.date ?? new Date());
+  const iso = new Date(post.data?.date ?? new Date()).toISOString();
 
   return (
-    <Link href={`/blog/${post.slug}`}>
-      <article className="group transition-colors hover:text-primaryColor">
+    <article>
+      <Link href={`/blog/${post.slug}`} className="group block transition-colors">
         <div className="mb-2 text-sm text-gray500">
-          <time dateTime={new Date(post.data?.date ?? new Date()).toISOString()}>{postDate}</time>
+          <time dateTime={iso}>{postDate}</time>
         </div>
 
-        <h3 className="text-2xl font-extrabold leading-tight tracking-tight">{post.data?.title}</h3>
+        <h3 className="text-2xl font-extrabold leading-tight tracking-tight text-black transition-colors group-hover:text-primaryColor">
+          {post.data?.title}
+        </h3>
 
-        {post.data?.description && <p className="mt-2 text-gray600">{post.data.description}</p>}
-      </article>
-    </Link>
+        {post.data?.description && <p className="mt-2 text-gray600 transition-colors">{post.data.description}</p>}
+      </Link>
+    </article>
   );
 };
 

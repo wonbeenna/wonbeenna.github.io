@@ -107,4 +107,5 @@
     .dark .btn-learn-more:active {
         background: theme('colors.darkGray01');
     }
+
 }

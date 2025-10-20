@@ -3,6 +3,7 @@ import { getAllPost } from '@/utils/getPost';
 import Section from '@/components/common/Section';
 import FeaturedPostCard from '@/components/home/FeaturedPostCard';
 import RemainingPostList from '@/components/home/RemainingPostList';
+import Title from '@/components/common/Title';
 
 const BlogSection = async () => {
   const { posts } = await getAllPost({ limit: 7 });
@@ -13,7 +14,7 @@ const BlogSection = async () => {
   return (
     <Section>
       <Link href="/blog" className="inline-block">
-        <h1 className=" text-5xl font-extrabold tracking-tight text-gray900">BLOG</h1>
+        <Title className="mb-10 text-5xl" title="BLOG" />
       </Link>
 
       <FeaturedPostCard post={featuredPost} />

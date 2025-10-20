@@ -1,4 +1,3 @@
-import React from 'react';
 import { getAllPost } from '@/utils/getPost';
 import { Metadata } from 'next';
 import { defaultMetadata, defaultOpenGraph } from '@/utils/metadata';

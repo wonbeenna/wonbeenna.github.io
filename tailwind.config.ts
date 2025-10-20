@@ -13,6 +13,8 @@ const config: Config = {
       primaryGradient05: '#ec3d43',
       primaryColorLight: '#5598de',
 
+      bannerBg: '#d9e8f6',
+
       white: '#ffffff',
       black: '#333333',
 

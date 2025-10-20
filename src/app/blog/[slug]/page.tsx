@@ -4,8 +4,10 @@ import PostCardHeader from '@/components/blog/PostCardHeader';
 import ContentsPage from '@/components/blog/ContentsPage';
 import Comment from '@/components/blog/Comment';
 import { defaultMetadata } from '@/utils/metadata';
+import Section from '@/components/common/Section';
+import { Metadata } from 'next';
 
-export const generateMetadata = async ({ params }: { params: Promise<{ slug: string }> }) => {
+export const generateMetadata = async ({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> => {
   const { slug } = await params;
   const data = await getPost(slug);
 
@@ -47,12 +49,14 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const data = await getPost(slug);
 
   return (
-    <div className="prose w-full max-w-none">
-      <PostCardHeader title={data.data.title} description={data.data.description} date={data.data.date} />
-      <Contents component={data.content} />
-      <ContentsPage prevPost={data.prevPost} nextPost={data.nextPost} />
-      <Comment />
-    </div>
+    <Section>
+      <div className="prose w-full max-w-none">
+        <PostCardHeader title={data.data.title} description={data.data.description} date={data.data.date} />
+        <Contents component={data.content} />
+        <ContentsPage prevPost={data.prevPost} nextPost={data.nextPost} />
+        <Comment />
+      </div>
+    </Section>
   );
 };
 
