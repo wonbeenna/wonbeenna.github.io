@@ -22,7 +22,7 @@ export const generateMetadata = async ({ params }: { params: Promise<{ page: str
 };
 
 export const generateStaticParams = async () => {
-  const posts = getAllPost({
+  const posts = await getAllPost({
     page: '1',
     limit: '-1'
   });

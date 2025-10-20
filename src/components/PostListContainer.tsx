@@ -14,8 +14,8 @@ interface PostListContainerProps {
 }
 
 const PostListContainer = async ({ category, limit, page, search, isPagination = true }: PostListContainerProps) => {
-  const categories = getCategories();
-  const posts = getAllPost(
+  const categories = await getCategories();
+  const posts = await getAllPost(
     {
       page: page || '1',
       limit: limit || '10'

@@ -7,9 +7,9 @@ export const dynamic = 'force-static';
 const defaultUrl = process.env.NEXT_PUBLIC_BASE_URL;
 const pageRoutes = [`${defaultUrl}`, `${defaultUrl}/about`];
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const categories = getCategories();
-  const posts = getAllPost({
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const categories = await getCategories();
+  const posts = await getAllPost({
     page: '1',
     limit: '-1'
   });

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 };
 
 const Page = async () => {
-  const posts = getAllPost({
+  const posts = await getAllPost({
     page: '1',
     limit: '-1'
   });

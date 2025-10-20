@@ -11,12 +11,12 @@ interface ContentsPageProps {
   prevPost?: {
     slug: string;
     title: string;
-    category: string;
+    category?: string;
   };
   nextPost?: {
     slug: string;
     title: string;
-    category: string;
+    category?: string;
   };
 }
 
