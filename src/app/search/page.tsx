@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 };
 
 const Page = async () => {
-  const posts = await getAllPost();
+  const posts = await getAllPost({ limit: -1 });
 
   return <SearchPostListContainer posts={posts} />;
 };

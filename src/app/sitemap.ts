@@ -7,7 +7,7 @@ const defaultUrl = process.env.NEXT_PUBLIC_BASE_URL;
 const pageRoutes = [`${defaultUrl}`, `${defaultUrl}/blog`, `${defaultUrl}/about`];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const posts = await getAllPost();
+  const posts = await getAllPost({ limit: -1 });
 
   const defaultRoutes: MetadataRoute.Sitemap = pageRoutes.map((route) => {
     return {

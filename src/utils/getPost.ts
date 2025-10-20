@@ -102,19 +102,67 @@ const getPostMetaList = async (): Promise<PostMetaData[]> => {
   return postMetaCache!.metaDataList;
 };
 
-export const getAllPost = async (searchKeyword: string = '') => {
+type PagingOption = {
+  page?: number | string;
+  limit?: number | string;
+};
+
+export const getAllPost = async (pagingOrSearchKeyword?: PagingOption | string, optionalSearchKeyword?: string) => {
+  let paging: PagingOption = { page: 1, limit: 10 };
+  let searchKeyword: string = '';
+
+  if (typeof pagingOrSearchKeyword === 'string') {
+    searchKeyword = pagingOrSearchKeyword;
+  } else if (typeof pagingOrSearchKeyword === 'object' && pagingOrSearchKeyword !== null) {
+    paging = { ...paging, ...pagingOrSearchKeyword };
+    searchKeyword = optionalSearchKeyword ?? '';
+  }
+
   let filteredPosts = await getPostMetaList();
 
   if (searchKeyword && searchKeyword.trim()) {
     const searchRegExp = new RegExp(escapeRegExpCharacters(searchKeyword.trim()), 'i');
-    filteredPosts = filteredPosts.filter((post) => searchRegExp.test(String(post.data?.title ?? '')));
+    filteredPosts = filteredPosts.filter((post) => {
+      return searchRegExp.test(String(post.data?.title ?? ''));
+    });
   }
 
   const totalCount = filteredPosts.length;
 
+  const pageNumberRaw = Number(paging.page ?? 1);
+  const limitNumberRaw = Number(paging.limit ?? 10);
+
+  const pageNumber = Number.isFinite(pageNumberRaw) && pageNumberRaw > 0 ? pageNumberRaw : 1;
+  const limitNumber = Number.isFinite(limitNumberRaw) ? limitNumberRaw : 10;
+
+  if (limitNumber === -1) {
+    return {
+      posts: filteredPosts,
+      total: totalCount,
+      page: pageNumber,
+      limit: limitNumber,
+      totalPages: 1,
+      hasPreviousPage: pageNumber > 1,
+      hasNextPage: false
+    };
+  }
+
+  const offset = (pageNumber - 1) * limitNumber;
+  const paginatedPosts = filteredPosts.slice(offset, offset + limitNumber);
+
+  const totalPages = limitNumber > 0 ? Math.max(1, Math.ceil(totalCount / limitNumber)) : 1;
+
+  const hasPreviousPage = pageNumber > 1;
+  const hasNextPage = offset + paginatedPosts.length < totalCount;
+
   return {
-    posts: filteredPosts,
-    total: totalCount
+    posts: paginatedPosts,
+    total: totalCount,
+    page: pageNumber,
+    limit: limitNumber,
+    totalPages: totalPages,
+    hasPreviousPage: hasPreviousPage,
+    hasNextPage: hasNextPage
   };
 };
 

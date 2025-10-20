@@ -1,7 +1,7 @@
 'use client';
 
 import SearchInput from '@/components/search/SearchInput';
-import PostList from '@/components/PostList';
+import PostList from '@/components/search/PostList';
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Posts } from '@/types/post';

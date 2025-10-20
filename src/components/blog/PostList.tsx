@@ -1,20 +1,6 @@
 import Link from 'next/link';
 import { GroupedYear } from '@/utils/groupPostsByYearMonth';
-
-const monthNames = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December'
-];
+import { monthNames } from '@/constants/monthNames';
 
 interface PostListProps {
   groupedYears: GroupedYear[];
@@ -48,7 +34,7 @@ const PostList = ({ groupedYears }: PostListProps) => {
                             <div className="flex min-w-0 items-center gap-2">
                               <Link
                                 href={`/blog/${postItem.slug}`}
-                                className=" font-semibold tracking-tight transition-colors hover:text-primaryGradient02"
+                                className=" font-semibold tracking-tight transition-colors hover:text-primaryColor"
                               >
                                 {postItem.title}
                               </Link>

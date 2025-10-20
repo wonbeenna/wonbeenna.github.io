@@ -11,6 +11,7 @@ const config: Config = {
       primaryGradient03: '#5598de',
       primaryGradient04: '#f65aad',
       primaryGradient05: '#ec3d43',
+      primaryColorLight: '#5598de',
 
       white: '#ffffff',
       black: '#333333',

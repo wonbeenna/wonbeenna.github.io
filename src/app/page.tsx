@@ -1,6 +1,5 @@
-import React from 'react';
-import PostListContainer from '@/components/PostListContainer';
+import BlogSection from '@/components/home/BlogSection';
 
 export default async function Home() {
-  return <PostListContainer />;
+  return <BlogSection />;
 }

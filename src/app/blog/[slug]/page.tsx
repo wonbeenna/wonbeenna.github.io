@@ -33,7 +33,7 @@ export const generateMetadata = async ({ params }: { params: Promise<{ slug: str
 };
 
 export const generateStaticParams = async () => {
-  const posts = await getAllPost();
+  const posts = await getAllPost({ limit: -1 });
 
   return posts.posts.map((post) => {
     return {

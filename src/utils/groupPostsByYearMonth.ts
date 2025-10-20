@@ -16,7 +16,7 @@ export type GroupedYear = {
 };
 
 export const getPostsGroupedByYearMonth = async (): Promise<GroupedYear[]> => {
-  const { posts } = await getAllPost();
+  const { posts } = await getAllPost({ limit: -1 });
 
   const normalizedPosts = posts.map(
     (
