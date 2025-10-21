@@ -4,26 +4,22 @@ import { defaultMetadata, defaultOpenGraph } from '@/utils/metadata';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Been blog blog archive',
-  description: 'Been dev-note blog archive',
+  title: 'Been blog search',
+  description: 'Been dev-note search',
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/blog`
+    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/search`
   },
   openGraph: {
     ...defaultOpenGraph,
-    title: 'Been blog - blog archive',
-    description: 'Been dev-note - blog archive'
+    title: 'Been blog - search',
+    description: 'Been dev-note - search'
   }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <WaveBanner
-        title="Blog Archive"
-        description="I've been writing blog posts since I became a front-end developer."
-        type="blog"
-      />
+      <WaveBanner title="Search" type="search" />
       {children}
     </>
   );

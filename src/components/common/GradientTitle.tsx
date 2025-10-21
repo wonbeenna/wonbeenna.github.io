@@ -1,6 +1,6 @@
 import { cn } from '@/utils/cn';
 
-export type TextGradientType = 'frontend' | 'blog' | 'about' | 'post';
+export type TextGradientType = 'frontend' | 'blog' | 'about' | 'post' | 'search';
 
 interface GradientTextProps {
   children: React.ReactNode;
@@ -15,7 +15,9 @@ export default function GradientText({ children, type = 'frontend', className }:
     blog: 'bg-[linear-gradient(108deg,theme(colors.primaryGradient01),theme(colors.primaryGradient02)_33%,theme(colors.primaryGradient03)_66%,theme(colors.primaryColor))]',
     about:
       'bg-[linear-gradient(108deg,theme(colors.primaryGradient04),theme(colors.primaryGradient03)_33%,theme(colors.primaryGradient05)_66%,theme(colors.primaryGradient02))]',
-    post: 'bg-[linear-gradient(108deg,theme(colors.primaryGradient03),theme(colors.primaryGradient02)_40%,theme(colors.primaryColor)_80%)]'
+    post: 'bg-[linear-gradient(108deg,theme(colors.primaryGradient03),theme(colors.primaryGradient02)_40%,theme(colors.primaryColor)_80%)]',
+    search:
+      'bg-[linear-gradient(108deg,theme(colors.primaryGradient02),theme(colors.primaryGradient03)_50%,theme(colors.primaryColor)_90%)]'
   };
 
   const sizeClass = type === 'post' ? 'text-5xl' : 'text-7xl';

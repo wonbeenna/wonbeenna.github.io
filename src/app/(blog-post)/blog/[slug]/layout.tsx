@@ -53,7 +53,7 @@ export default async function Layout({
 
   return (
     <PostProvider value={data}>
-      <WaveBanner title={data.data.title} type="post" description={data.data.description || ''} date={data.data.date} />
+      <WaveBanner title={data.data.title} type="post" description={data.data.description} date={data.data.date} />
       {children}
     </PostProvider>
   );

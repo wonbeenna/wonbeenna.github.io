@@ -3,7 +3,7 @@ import useFormatDate from '@/hooks/useFormatDate';
 
 export type WaveBannerProps = React.HTMLAttributes<HTMLElement> & {
   title: string;
-  description: string;
+  description?: string;
   date?: string | Date;
   type?: TextGradientType;
 };
@@ -21,7 +21,7 @@ export default function WaveBanner({ title, description, className, type, date, 
             </div>
           )}
           <GradientTitle type={type}>{title}</GradientTitle>
-          <p className="mt-4 text-lg text-gray900 dark:text-gray300">{description}</p>
+          {description && <p className="mt-4 text-lg text-gray900 dark:text-gray300">{description}</p>}
         </div>
       </section>
       <svg
