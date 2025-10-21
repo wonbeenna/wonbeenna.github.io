@@ -10,47 +10,54 @@ const NavButtons = () => {
   const [currentTheme, setCurrentTheme] = useState<string | undefined>(undefined);
 
   useEffect(() => {
-    const currentTheme = theme === 'system' ? systemTheme : theme;
-
-    setCurrentTheme(currentTheme);
-  }, [theme]);
+    const resolved = theme === 'system' ? systemTheme : theme;
+    setCurrentTheme(resolved);
+  }, [theme, systemTheme]);
 
   return (
     <div className="flex items-center gap-[12px]">
-      <Link href="/search">
+      <Link href="/search" aria-label="Search">
         <Image
           src={currentTheme === 'dark' ? `/assets/icons/search-light.svg` : `/assets/icons/search.svg`}
           width={22}
           height={22}
           priority
-          alt="search"
+          alt=""
         />
       </Link>
-      <Link href={'https://github.com/wonbeenna'} target="_blank" rel="noopener noreferrer">
+
+      <Link href="https://github.com/wonbeenna" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
         <Image
           src={currentTheme === 'dark' ? `/assets/icons/github-light.svg` : `/assets/icons/github.svg`}
           width={22}
           height={22}
           priority
-          alt="github"
+          alt=""
         />
       </Link>
-      <Link href={'mailto:nwbnwb@naver.com'}>
+
+      <Link href="mailto:nwbnwb@naver.com" aria-label="Email">
         <Image
           src={currentTheme === 'dark' ? `/assets/icons/mail-light.svg` : `/assets/icons/mail.svg`}
           width={26}
           height={26}
           priority
-          alt="email"
+          alt=""
         />
       </Link>
-      <button onClick={() => (theme == 'dark' ? setTheme('light') : setTheme('dark'))}>
+
+      <button
+        type="button"
+        onClick={() => (theme === 'dark' ? setTheme('light') : setTheme('dark'))}
+        aria-label="Toggle theme"
+        className="rounded-md p-1 transition hover:bg-gray100 dark:hover:bg-darkGray01"
+      >
         <Image
           src={currentTheme === 'dark' ? `/assets/icons/sun.svg` : `/assets/icons/moon.svg`}
           width={22}
           height={22}
           priority
-          alt="theme"
+          alt=""
         />
       </button>
     </div>
