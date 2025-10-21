@@ -1,14 +1,13 @@
 import Link from 'next/link';
 import { PostMetaData } from '@/types/post';
-import { formatDateForHumanLong } from '@/utils/formatDateForHumanLong';
+import useFormatDate from '@/hooks/useFormatDate';
 
 interface FeaturedPostCardProps {
   post: PostMetaData;
 }
 
 const FeaturedPostCard = ({ post }: FeaturedPostCardProps) => {
-  const featuredDate = formatDateForHumanLong(post.data?.date ?? new Date());
-  const iso = new Date(post.data?.date ?? new Date()).toISOString();
+  const { postDate, iso } = useFormatDate(post.data.date);
 
   return (
     <section className="md:grid-cols-2 md:items-center">
@@ -18,7 +17,7 @@ const FeaturedPostCard = ({ post }: FeaturedPostCardProps) => {
             <span aria-hidden="true" className="mr-1">
               🕊️
             </span>
-            <time dateTime={iso}>{featuredDate}</time>
+            <time dateTime={iso}>{postDate}</time>
           </div>
 
           <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-black transition-colors group-hover:text-primaryColor">

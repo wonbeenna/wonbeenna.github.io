@@ -4,7 +4,7 @@ export type Frontmatter = {
   description?: string;
   date: string | Date;
   category?: string;
-  path?: string;
+  slug?: string;
 };
 
 export type PostMetaData = {

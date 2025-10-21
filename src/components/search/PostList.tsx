@@ -8,16 +8,9 @@ interface PostListProps {
 const PostList = ({ posts }: PostListProps) => {
   return (
     <div className="flex flex-1 flex-col">
-      <ol className="relative mx-0 my-[20px] flex w-full  flex-col gap-[40px] p-0">
+      <ol className="relative mx-0 my-5 flex w-full flex-col p-0">
         {posts.posts.map((post) => (
-          <PostCard
-            key={post.slug}
-            title={post.data.title}
-            titleImage={post.data.titleImage}
-            description={post.data.description}
-            date={post.data.date}
-            path={post.slug}
-          />
+          <PostCard key={post.slug} slug={post.slug} {...post.data} />
         ))}
       </ol>
     </div>
