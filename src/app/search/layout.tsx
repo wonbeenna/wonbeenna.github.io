@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <WaveBanner title="Search" type="search" />
+      <WaveBanner title="Search" type="search" description="Search blog posts by title keywords." />
       {children}
     </>
   );
