@@ -8,6 +8,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         type="frontend"
         description="Hello, I&#39;m Been! A passionate front-end developer from South Korea, fascinated by photography and an
             avid reader."
+        size="large"
       />
       {children}
     </>

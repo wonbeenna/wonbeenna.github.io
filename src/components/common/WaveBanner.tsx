@@ -1,4 +1,4 @@
-import GradientTitle, { TextGradientType } from '@/components/common/GradientTitle';
+import GradientTitle, { TextGradientSize, TextGradientType } from '@/components/common/GradientTitle';
 import useFormatDate from '@/hooks/useFormatDate';
 
 export type WaveBannerProps = React.HTMLAttributes<HTMLElement> & {
@@ -6,9 +6,10 @@ export type WaveBannerProps = React.HTMLAttributes<HTMLElement> & {
   description?: string;
   date?: string | Date;
   type?: TextGradientType;
+  size?: TextGradientSize;
 };
 
-export default function WaveBanner({ title, description, className, type, date, ...rest }: WaveBannerProps) {
+export default function WaveBanner({ title, description, className, type, date, size, ...rest }: WaveBannerProps) {
   const { postDate, iso } = useFormatDate(date);
 
   return (
@@ -20,7 +21,9 @@ export default function WaveBanner({ title, description, className, type, date, 
               <time dateTime={iso}>{postDate}</time>
             </div>
           )}
-          <GradientTitle type={type}>{title}</GradientTitle>
+          <GradientTitle type={type} size={size}>
+            {title}
+          </GradientTitle>
           {description && <p className="mt-4 text-lg text-gray900 dark:text-gray300">{description}</p>}
         </div>
       </section>

@@ -13,9 +13,9 @@ const Nav = ({ mobile = false, onNavigate }: NavProps) => {
   const pathname = usePathname();
 
   const navItems = [
-    { href: '/blog', label: 'Blog' }
-    // { href: '/about', label: 'About' },
-    // { href: '/photo', label: 'Photo' }
+    { href: '/blog', label: 'Blog' },
+    { href: '/about', label: 'About' },
+    { href: '/photo', label: 'Photo' }
   ];
 
   return (
