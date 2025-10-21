@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import { defaultMetadata, defaultOpenGraph } from '@/utils/metadata';
 import Section from '@/components/common/Section';
-import WaveBanner from '@/components/common/WaveBanner';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
@@ -18,12 +17,7 @@ export const metadata: Metadata = {
 };
 
 const Page = async () => {
-  return (
-    <>
-      <WaveBanner title="About" description="" type="about" />
-      <Section>about</Section>
-    </>
-  );
+  return <Section>about</Section>;
 };
 
 export default Page;

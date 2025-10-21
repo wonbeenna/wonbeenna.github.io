@@ -1,7 +1,6 @@
-import BlogSection from '@/components/home/BlogSection';
 import WaveBanner from '@/components/common/WaveBanner';
 
-export default async function Home() {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <WaveBanner
@@ -10,7 +9,7 @@ export default async function Home() {
         description="Hello, I&#39;m Been! A passionate front-end developer from South Korea, fascinated by photography and an
             avid reader."
       />
-      <BlogSection />
+      {children}
     </>
   );
 }

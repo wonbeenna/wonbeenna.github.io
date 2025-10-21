@@ -1,11 +1,8 @@
+import WaveBanner from '@/components/common/WaveBanner';
 import { getAllPost, getPost } from '@/utils/getPost';
-import Contents from '@/components/blog/Contents';
-import PostCardHeader from '@/components/blog/PostCardHeader';
-import ContentsPage from '@/components/blog/ContentsPage';
-import Comment from '@/components/blog/Comment';
-import { defaultMetadata } from '@/utils/metadata';
-import Section from '@/components/common/Section';
+import PostProvider from '@/provider/PostProvider';
 import { Metadata } from 'next';
+import { defaultMetadata } from '@/utils/metadata';
 
 export const generateMetadata = async ({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> => {
   const { slug } = await params;
@@ -44,20 +41,20 @@ export const generateStaticParams = async () => {
   });
 };
 
-const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
+export default async function Layout({
+  children,
+  params
+}: {
+  children: React.ReactNode;
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
   const data = await getPost(slug);
 
   return (
-    <Section>
-      <div className="prose w-full max-w-none">
-        <PostCardHeader title={data.data.title} description={data.data.description} date={data.data.date} />
-        <Contents component={data.content} />
-        <ContentsPage prevPost={data.prevPost} nextPost={data.nextPost} />
-        <Comment />
-      </div>
-    </Section>
+    <PostProvider value={data}>
+      <WaveBanner title={data.data.title} type="post" description={data.data.description || ''} date={data.data.date} />
+      {children}
+    </PostProvider>
   );
-};
-
-export default Page;
+}

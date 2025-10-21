@@ -14,12 +14,12 @@ const Nav = () => {
   ];
 
   return (
-    <div className="flex items-center gap-5">
+    <div className="flex items-center gap-4">
       <Link href="/">
         <Image className="size-[38px]" src="/assets/icons/logo.png" width={38} height={38} priority alt="logo" />
       </Link>
 
-      <nav className="flex items-center gap-5">
+      <nav className="flex items-center">
         {navItems.map((item) => {
           const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
 

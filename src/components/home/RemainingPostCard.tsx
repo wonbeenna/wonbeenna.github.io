@@ -1,14 +1,13 @@
 import Link from 'next/link';
 import { PostMetaData } from '@/types/post';
-import { formatDateForHumanLong } from '@/utils/formatDateForHumanLong';
+import useFormatDate from '@/hooks/useFormatDate';
 
 interface RemainingPostCardProps {
   post: PostMetaData;
 }
 
 const RemainingPostCard = ({ post }: RemainingPostCardProps) => {
-  const postDate = formatDateForHumanLong(post.data?.date ?? new Date());
-  const iso = new Date(post.data?.date ?? new Date()).toISOString();
+  const { postDate, iso } = useFormatDate(post.data.date);
 
   return (
     <article>
@@ -18,7 +17,7 @@ const RemainingPostCard = ({ post }: RemainingPostCardProps) => {
         </div>
 
         <h3 className="text-2xl font-extrabold leading-tight tracking-tight text-black transition-colors group-hover:text-primaryColor">
-          {post.data?.title}
+          {post.data.title}
         </h3>
 
         {post.data?.description && <p className="mt-2 text-gray600 transition-colors">{post.data.description}</p>}

@@ -5,7 +5,7 @@ import '../styles/tailwind.css';
 import { Metadata } from 'next';
 import { defaultMetadata, defaultOpenGraph } from '@/utils/metadata';
 import Script from 'next/script';
-import { Providers } from '@/app/providers';
+import { ThemeProvider } from '@/provider/ThemeProvider';
 
 export const dynamic = 'force-static';
 
@@ -34,9 +34,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         `}
       </Script>
       <body suppressHydrationWarning className={pretendard.className}>
-        <Providers>
+        <ThemeProvider>
           <Layout>{children}</Layout>
-        </Providers>
+        </ThemeProvider>
       </body>
     </html>
   );

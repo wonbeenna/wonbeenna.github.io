@@ -22,3 +22,9 @@ export type CompiledPost = {
   content: React.ReactElement;
   frontmatter: Frontmatter;
 };
+
+export type ContentPost = {
+  slug: string;
+  title: string;
+  category?: string;
+};
