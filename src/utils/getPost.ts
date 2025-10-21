@@ -1,63 +1,31 @@
 import path from 'path';
-import fs from 'fs';
-import { promisify } from 'util';
+import fs from 'fs/promises';
 import matter from 'gray-matter';
 import { getSerialize } from '@/utils/sirialize';
-import { CompiledPost, Frontmatter, PostMetaData } from '@/types/post';
-
-const readFileAsync = promisify(fs.readFile);
-const statAsync = promisify(fs.stat);
-const readdirAsync = promisify(fs.readdir);
+import type { CompiledPost, Frontmatter, PostMetaData } from '@/types/post';
 
 export const POSTS_PATH = path.join(process.cwd(), '_posts');
 
-const isDevelopmentMode = process.env.NODE_ENV !== 'production';
+const isMdxFile = (fileName: string): boolean => /\.mdx?$/i.test(fileName);
 
-let postMetaCache: {
-  metaDataList: PostMetaData[];
-  directorySignature: string;
-} | null = null;
-
-const compiledPostCache = new Map<string, { compiledPost: CompiledPost; modifiedTimeMs: number }>();
-
-const isMdxFile = (fileName: string): boolean => {
-  return /\.mdx?$/.test(fileName);
+const parseDateToTimestamp = (value: string | Date): number => {
+  const t = new Date(value).getTime();
+  return Number.isFinite(t) ? t : 0;
 };
 
-const parseDateToTimestamp = (dateValue: string | Date): number => {
-  const timestamp = new Date(dateValue).getTime();
-  return Number.isFinite(timestamp) ? timestamp : 0;
-};
-
-const escapeRegExpCharacters = (text: string): string => {
-  return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-};
-
-const sortByDateDescending = (a: PostMetaData, b: PostMetaData): number => {
-  return parseDateToTimestamp(b.data.date) - parseDateToTimestamp(a.data.date);
-};
-
-const computeDirectorySignature = async (): Promise<string> => {
-  const fileNames = (await readdirAsync(POSTS_PATH)).filter(isMdxFile);
-  const fileSignatures = await Promise.all(
-    fileNames.map(async (fileName) => {
-      const fileStat = await statAsync(path.join(POSTS_PATH, fileName));
-      return `${fileName}:${fileStat.mtimeMs}`;
-    })
-  );
-  return fileSignatures.sort().join('|');
-};
+const sortByDateDescending = (a: PostMetaData, b: PostMetaData): number =>
+  parseDateToTimestamp(b.data.date) - parseDateToTimestamp(a.data.date);
 
 const buildPostMetaIndex = async (): Promise<PostMetaData[]> => {
-  const fileNames = (await readdirAsync(POSTS_PATH)).filter(isMdxFile);
+  const fileNames = (await fs.readdir(POSTS_PATH)).filter(isMdxFile);
 
-  const metaDataList = await Promise.all(
+  const metas = await Promise.all(
     fileNames.map(async (fileName) => {
       const fullPath = path.join(POSTS_PATH, fileName);
-      const [fileContent, fileStat] = await Promise.all([readFileAsync(fullPath), statAsync(fullPath)]);
+      const [buf, stat] = await Promise.all([fs.readFile(fullPath), fs.stat(fullPath)]);
 
-      const { data } = matter(fileContent);
-      const slug = fileName.replace(/\.mdx?$/, '');
+      const { data } = matter(buf);
+      const slug = fileName.replace(/\.mdx?$/i, '');
 
       const frontmatter: Frontmatter = {
         ...data,
@@ -68,144 +36,92 @@ const buildPostMetaIndex = async (): Promise<PostMetaData[]> => {
       return {
         slug,
         data: frontmatter,
-        modifiedTimeMs: fileStat.mtimeMs
-      };
+        modifiedTimeMs: stat.mtimeMs
+      } as PostMetaData;
     })
   );
 
-  metaDataList.sort(sortByDateDescending);
-  return metaDataList;
+  metas.sort(sortByDateDescending);
+  return metas;
 };
 
-const ensurePostMetaIndex = async (): Promise<PostMetaData[]> => {
-  const directorySignature = await computeDirectorySignature();
+const escapeRegExpCharacters = (text: string): string => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
-  if (!postMetaCache || postMetaCache.directorySignature !== directorySignature) {
-    const metaDataList = await buildPostMetaIndex();
-    postMetaCache = { metaDataList, directorySignature };
-  }
-
-  return postMetaCache.metaDataList;
-};
-
-const getPostMetaList = async (): Promise<PostMetaData[]> => {
-  if (isDevelopmentMode) {
-    return ensurePostMetaIndex();
-  }
-
-  if (!postMetaCache) {
-    const metaDataList = await buildPostMetaIndex();
-    const directorySignature = await computeDirectorySignature();
-    postMetaCache = { metaDataList, directorySignature };
-  }
-
-  return postMetaCache!.metaDataList;
-};
-
-type PagingOption = {
-  page?: number | string;
-  limit?: number | string;
-};
+type PagingOption = { page?: number | string; limit?: number | string };
 
 export const getAllPost = async (pagingOrSearchKeyword?: PagingOption | string, optionalSearchKeyword?: string) => {
+  const metaList = await buildPostMetaIndex();
+
   let paging: PagingOption = { page: 1, limit: 10 };
-  let searchKeyword: string = '';
+  let searchKeyword = '';
 
   if (typeof pagingOrSearchKeyword === 'string') {
     searchKeyword = pagingOrSearchKeyword;
-  } else if (typeof pagingOrSearchKeyword === 'object' && pagingOrSearchKeyword !== null) {
+  } else if (pagingOrSearchKeyword && typeof pagingOrSearchKeyword === 'object') {
     paging = { ...paging, ...pagingOrSearchKeyword };
     searchKeyword = optionalSearchKeyword ?? '';
   }
 
-  let filteredPosts = await getPostMetaList();
+  let filtered = metaList;
 
-  if (searchKeyword && searchKeyword.trim()) {
-    const searchRegExp = new RegExp(escapeRegExpCharacters(searchKeyword.trim()), 'i');
-    filteredPosts = filteredPosts.filter((post) => {
-      return searchRegExp.test(String(post.data?.title ?? ''));
-    });
+  if (searchKeyword.trim()) {
+    const reg = new RegExp(escapeRegExpCharacters(searchKeyword.trim()), 'i');
+    filtered = filtered.filter((post) => reg.test(String(post.data?.title ?? '')));
   }
 
-  const totalCount = filteredPosts.length;
+  const total = filtered.length;
 
   const pageNumberRaw = Number(paging.page ?? 1);
   const limitNumberRaw = Number(paging.limit ?? 10);
+  const page = Number.isFinite(pageNumberRaw) && pageNumberRaw > 0 ? pageNumberRaw : 1;
+  const limit = Number.isFinite(limitNumberRaw) ? limitNumberRaw : 10;
 
-  const pageNumber = Number.isFinite(pageNumberRaw) && pageNumberRaw > 0 ? pageNumberRaw : 1;
-  const limitNumber = Number.isFinite(limitNumberRaw) ? limitNumberRaw : 10;
-
-  if (limitNumber === -1) {
+  if (limit === -1) {
     return {
-      posts: filteredPosts,
-      total: totalCount,
-      page: pageNumber,
-      limit: limitNumber,
+      posts: filtered,
+      total,
+      page,
+      limit,
       totalPages: 1,
-      hasPreviousPage: pageNumber > 1,
+      hasPreviousPage: page > 1,
       hasNextPage: false
     };
   }
 
-  const offset = (pageNumber - 1) * limitNumber;
-  const paginatedPosts = filteredPosts.slice(offset, offset + limitNumber);
+  const offset = (page - 1) * limit;
+  const posts = filtered.slice(offset, offset + limit);
 
-  const totalPages = limitNumber > 0 ? Math.max(1, Math.ceil(totalCount / limitNumber)) : 1;
-
-  const hasPreviousPage = pageNumber > 1;
-  const hasNextPage = offset + paginatedPosts.length < totalCount;
+  const totalPages = limit > 0 ? Math.max(1, Math.ceil(total / limit)) : 1;
 
   return {
-    posts: paginatedPosts,
-    total: totalCount,
-    page: pageNumber,
-    limit: limitNumber,
-    totalPages: totalPages,
-    hasPreviousPage: hasPreviousPage,
-    hasNextPage: hasNextPage
+    posts,
+    total,
+    page,
+    limit,
+    totalPages,
+    hasPreviousPage: page > 1,
+    hasNextPage: offset + posts.length < total
   };
 };
 
 export const getPost = async (slug: string) => {
-  const postMetaList = await getPostMetaList();
-
-  const postIndex = postMetaList.findIndex((postMetaData) => postMetaData.slug === slug);
-
-  if (postIndex === -1) {
+  const metaList = await buildPostMetaIndex();
+  const index = metaList.findIndex((m) => m.slug === slug);
+  if (index === -1) {
     throw new Error(`Post not found: ${slug}`);
   }
 
-  const previousPostMeta = postMetaList[postIndex + 1];
-  const nextPostMeta = postMetaList[postIndex - 1];
+  const previousPostMeta = metaList[index + 1];
+  const nextPostMeta = metaList[index - 1];
 
   const postFilePath = path.join(POSTS_PATH, `${slug}.mdx`);
-  const postStat = await statAsync(postFilePath);
-  const currentModifiedTime = postStat.mtimeMs;
+  const sourceBuffer = await fs.readFile(postFilePath);
+  const { content, frontmatter } = await getSerialize(sourceBuffer);
 
-  const cachedPost = compiledPostCache.get(slug);
-  let compiledPost: CompiledPost;
-
-  if (cachedPost && cachedPost.modifiedTimeMs === currentModifiedTime) {
-    compiledPost = cachedPost.compiledPost;
-  } else {
-    const sourceBuffer = await readFileAsync(postFilePath);
-    const { content, frontmatter } = await getSerialize(sourceBuffer);
-
-    compiledPost = {
-      content,
-      frontmatter: frontmatter as Frontmatter
-    };
-
-    compiledPostCache.set(slug, {
-      compiledPost,
-      modifiedTimeMs: currentModifiedTime
-    });
-
-    if (!isDevelopmentMode && compiledPostCache.size > 200) {
-      const firstKey = compiledPostCache.keys().next().value as string;
-      compiledPostCache.delete(firstKey);
-    }
-  }
+  const compiledPost: CompiledPost = {
+    content,
+    frontmatter: frontmatter as Frontmatter
+  };
 
   return {
     content: compiledPost.content,
