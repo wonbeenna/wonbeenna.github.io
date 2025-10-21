@@ -6,7 +6,7 @@ import type { CompiledPost, Frontmatter, PostMetaData } from '@/types/post';
 
 export const POSTS_PATH = path.join(process.cwd(), '_posts');
 
-const isMdxFile = (fileName: string): boolean => /\.mdx?$/i.test(fileName);
+const isMdxFile = (name: string): boolean => /\.mdx?$/i.test(name);
 
 const parseDateToTimestamp = (value: string | Date): number => {
   const t = new Date(value).getTime();
@@ -16,33 +16,69 @@ const parseDateToTimestamp = (value: string | Date): number => {
 const sortByDateDescending = (a: PostMetaData, b: PostMetaData): number =>
   parseDateToTimestamp(b.data.date) - parseDateToTimestamp(a.data.date);
 
-const buildPostMetaIndex = async (): Promise<PostMetaData[]> => {
-  const fileNames = (await fs.readdir(POSTS_PATH)).filter(isMdxFile);
+async function listMdxPathsRecursively(rootDir: string): Promise<string[]> {
+  const out: string[] = [];
 
-  const metas = await Promise.all(
-    fileNames.map(async (fileName) => {
-      const fullPath = path.join(POSTS_PATH, fileName);
-      const [buf, stat] = await Promise.all([fs.readFile(fullPath), fs.stat(fullPath)]);
+  async function walk(absDir: string): Promise<void> {
+    const entries = await fs.readdir(absDir, { withFileTypes: true });
+    for (const entry of entries) {
+      const abs = path.join(absDir, entry.name);
+      if (entry.isDirectory()) {
+        await walk(abs);
+      } else if (isMdxFile(entry.name)) {
+        out.push(abs);
+      }
+    }
+  }
 
-      const { data } = matter(buf);
-      const slug = fileName.replace(/\.mdx?$/i, '');
+  await walk(rootDir);
+  return out;
+}
 
-      const frontmatter: Frontmatter = {
-        ...data,
-        title: data?.title ?? '',
-        date: data?.date ?? 0
-      };
+const buildIndexAndPathMap = async (): Promise<{
+  metaList: PostMetaData[];
+  pathMap: Record<string, string>;
+}> => {
+  const filePaths = await listMdxPathsRecursively(POSTS_PATH);
 
-      return {
-        slug,
-        data: frontmatter,
-        modifiedTimeMs: stat.mtimeMs
-      } as PostMetaData;
-    })
-  );
+  const pathMap: Record<string, string> = {};
+  const metaList: PostMetaData[] = [];
 
-  metas.sort(sortByDateDescending);
-  return metas;
+  for (const abs of filePaths) {
+    const base = path.basename(abs);
+    const slug = base.replace(/\.mdx?$/i, '');
+
+    if (pathMap[slug]) {
+      throw new Error(
+        [
+          `Duplicate post slug detected: "${slug}"`,
+          `- ${pathMap[slug]}`,
+          `- ${abs}`,
+          `\nSlug is derived from filename only. Make filenames unique across subfolders.`
+        ].join('\n')
+      );
+    }
+
+    pathMap[slug] = abs;
+
+    const [buf, stat] = await Promise.all([fs.readFile(abs), fs.stat(abs)]);
+    const { data } = matter(buf);
+
+    const frontmatter: Frontmatter = {
+      ...data,
+      title: data?.title ?? '',
+      date: data?.date ?? 0
+    };
+
+    metaList.push({
+      slug,
+      data: frontmatter,
+      modifiedTimeMs: stat.mtimeMs
+    });
+  }
+
+  metaList.sort(sortByDateDescending);
+  return { metaList, pathMap };
 };
 
 const escapeRegExpCharacters = (text: string): string => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -50,7 +86,7 @@ const escapeRegExpCharacters = (text: string): string => text.replace(/[.*+?^${}
 type PagingOption = { page?: number | string; limit?: number | string };
 
 export const getAllPost = async (pagingOrSearchKeyword?: PagingOption | string, optionalSearchKeyword?: string) => {
-  const metaList = await buildPostMetaIndex();
+  const { metaList } = await buildIndexAndPathMap();
 
   let paging: PagingOption = { page: 1, limit: 10 };
   let searchKeyword = '';
@@ -105,7 +141,8 @@ export const getAllPost = async (pagingOrSearchKeyword?: PagingOption | string, 
 };
 
 export const getPost = async (slug: string) => {
-  const metaList = await buildPostMetaIndex();
+  const { metaList, pathMap } = await buildIndexAndPathMap();
+
   const index = metaList.findIndex((m) => m.slug === slug);
   if (index === -1) {
     throw new Error(`Post not found: ${slug}`);
@@ -114,8 +151,8 @@ export const getPost = async (slug: string) => {
   const previousPostMeta = metaList[index + 1];
   const nextPostMeta = metaList[index - 1];
 
-  const postFilePath = path.join(POSTS_PATH, `${slug}.mdx`);
-  const sourceBuffer = await fs.readFile(postFilePath);
+  const absFilePath = pathMap[slug];
+  const sourceBuffer = await fs.readFile(absFilePath);
   const { content, frontmatter } = await getSerialize(sourceBuffer);
 
   const compiledPost: CompiledPost = {
