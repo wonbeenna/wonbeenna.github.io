@@ -108,4 +108,8 @@
         background: theme('colors.darkGray01');
     }
 
+    .shape-outside {
+        float: right;
+        shape-outside: polygon(37% 0%, 0% 0%, 100% 0%, 100% 100%, 6% 100%, 9% 97%, 12% 94%, 20% 86%, 24% 83%, 29% 63%, 16% 59%, 9% 50%, 10% 39%, 20% 30%, 30% 20%, 33% 15%)
+    }
 }
