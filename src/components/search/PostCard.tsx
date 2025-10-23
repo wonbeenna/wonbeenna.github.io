@@ -18,7 +18,7 @@ const PostCard = ({ title, date, slug, category }: PostCardProps) => {
           <p className="text-[14px] text-gray700 transition-colors">{category}</p>
 
           <h3 className="text-xl font-extrabold leading-tight tracking-tight text-black transition-colors group-hover:text-primaryColor">
-            <Link href={`/blog/${slug}`}>{title}</Link>
+            {title}
           </h3>
 
           <time dateTime={iso} className="text-[14px] text-gray700">

@@ -2,7 +2,7 @@
 title: Next.js styled-component 적용 문제에 대해(_document.tsx)
 date: 2022-08-22
 description: next.js와 styled-component 사용시 발생한 에러
-category: javaScript
+category: next
 titleImage: /assets/postIcon/Nextjs.svg
 ---
 
@@ -75,7 +75,7 @@ export default MyDocument
 
 \_document.tsx 파일을 위처럼 작성해 주면 된다.
 
-위 코드는 초기 서버측에서 페이지를 불러올 때 스타일을 입혀 불러오도록 설정하는 코드다.
+위 코드는 초기 서버측에서 페이지를 불러올 때 스타일을 입혀 불러오도록 설정하는 코드다.
 
 getInitialProps에서 받아온 ctx에서 renderPage객체를 찾아 볼 수 있는데, renderPage는 CSS-in-JS라이브러리를 커스텀할 때 만 사용하라고 공식문서에 나와있다.
 

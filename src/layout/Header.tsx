@@ -82,7 +82,7 @@ const Header = () => {
       <section className="m-auto flex h-full max-w-[970px] items-center justify-between">
         <div className="flex items-center gap-3">
           <Link href="/" aria-label="Home">
-            <Image className="size-[38px]" src="/assets/icons/logo.png" width={38} height={38} priority alt="logo" />
+            <Image className="size-[38px]" src="/assets/images/logo.png" width={38} height={38} priority alt="logo" />
           </Link>
 
           <div className="hidden sm:flex">
