@@ -29,7 +29,7 @@ export const defaultOpenGraph = {
   locale: 'ko_KR',
   images: [
     {
-      url: '/favicon.png',
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/assets/images/logo.png`,
       width: 800,
       height: 600,
       alt: 'Been blog'
