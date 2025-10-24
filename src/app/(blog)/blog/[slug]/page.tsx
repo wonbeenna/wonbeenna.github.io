@@ -52,7 +52,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     <>
       <WaveBanner title={data.data.title} type="post" description={data.data.description} date={data.data.date} />
       <Section>
-        <div className="prose w-full max-w-none">
+        <div className="prose flex w-full max-w-none flex-col">
           <Contents component={data.content} />
           <ContentsPage prevPost={data.prevPost} nextPost={data.nextPost} />
           <Comment />

@@ -1,7 +1,5 @@
 import WaveBanner from '@/components/common/WaveBanner';
 import Section from '@/components/common/Section';
-import Folder from '@/components/photo/Folder';
-import Image from 'next/image';
 
 const mockImages = [
   {
@@ -40,18 +38,18 @@ const Page = ({}: PageProps) => {
         <div className="text-center">
           <p>Photography gallery is under construction. Please check back later! 😶‍🌫️</p>
 
-          <Folder
-            items={mockImages.map((image, i) => (
-              <Image
-                key={image.src}
-                width={300}
-                height={300}
-                src={image.src}
-                alt={image.alt}
-                className="size-full rounded-lg object-cover"
-              />
-            ))}
-          />
+          {/*<Folder*/}
+          {/*  items={mockImages.map((image, i) => (*/}
+          {/*    <Image*/}
+          {/*      key={image.src}*/}
+          {/*      width={300}*/}
+          {/*      height={300}*/}
+          {/*      src={image.src}*/}
+          {/*      alt={image.alt}*/}
+          {/*      className="size-full rounded-lg object-cover"*/}
+          {/*    />*/}
+          {/*  ))}*/}
+          {/*/>*/}
         </div>
       </Section>
     </>
