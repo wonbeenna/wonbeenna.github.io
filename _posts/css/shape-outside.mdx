@@ -1,0 +1,38 @@
+---
+title: shape-outside와 polygon 함수
+date: 2025-10-24
+description: CSS의 shape-outside 속성과 polygon 함수를 사용하여 이미지 모양에 맞게 텍스트를 감싸는 방법
+category: css
+titleImage: /assets/postIcon/css.webp
+---
+
+## shape-outside
+기본적으로 HTML 요소는 사각형의 박스모델을 가지고 있다. CSS의 shape-outside를 사용하면 사각형이 아닌 다양한 도형의 모양으로 박스모델을 정의할 수 있게 된다.
+
+### 기본 사용방법
+
+shape-outside 속성은 float 속성과 함께 사용되어야 한다. shape-outside 속성에 도형을 정의하면, 해당 도형의 외곽선을 따라 텍스트가 감싸지게 된다.
+
+```css
+.shape {
+  float: left; /* float 속성을 사용해야 shape-outside가 적용 */
+  width: 200px;
+  height: 200px;
+  shape-outside: circle(50%); /* 원형 모양으로 텍스트 감싸기 */
+  clip-path: circle(50%); /* 요소 자체도 원형으로 자르기 */
+  margin-right: 20px; /* 텍스트와의 간격 */
+}
+```
+
+
+<div>
+    <img src="/assets/postIcon/css.webp" alt="CSS Shape Outside Example" style={{
+        float: 'left',
+        width: '200px',
+        height: '200px',
+        shapeOutside: 'circle(50%)',
+    }} />
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+</div>
