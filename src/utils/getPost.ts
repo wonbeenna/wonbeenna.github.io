@@ -81,31 +81,12 @@ const buildIndexAndPathMap = async (): Promise<{
   return { metaList, pathMap };
 };
 
-const escapeRegExpCharacters = (text: string): string => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-
 type PagingOption = { page?: number | string; limit?: number | string };
 
-export const getAllPost = async (pagingOrSearchKeyword?: PagingOption | string, optionalSearchKeyword?: string) => {
+export const getAllPost = async (paging: PagingOption) => {
   const { metaList } = await buildIndexAndPathMap();
 
-  let paging: PagingOption = { page: 1, limit: 10 };
-  let searchKeyword = '';
-
-  if (typeof pagingOrSearchKeyword === 'string') {
-    searchKeyword = pagingOrSearchKeyword;
-  } else if (pagingOrSearchKeyword && typeof pagingOrSearchKeyword === 'object') {
-    paging = { ...paging, ...pagingOrSearchKeyword };
-    searchKeyword = optionalSearchKeyword ?? '';
-  }
-
-  let filtered = metaList;
-
-  if (searchKeyword.trim()) {
-    const reg = new RegExp(escapeRegExpCharacters(searchKeyword.trim()), 'i');
-    filtered = filtered.filter((post) => reg.test(String(post.data?.title ?? '')));
-  }
-
-  const total = filtered.length;
+  const total = metaList.length;
 
   const pageNumberRaw = Number(paging.page ?? 1);
   const limitNumberRaw = Number(paging.limit ?? 10);
@@ -114,10 +95,10 @@ export const getAllPost = async (pagingOrSearchKeyword?: PagingOption | string, 
 
   if (limit === -1) {
     return {
-      posts: filtered,
       total,
       page,
       limit,
+      posts: metaList,
       totalPages: 1,
       hasPreviousPage: page > 1,
       hasNextPage: false
@@ -125,7 +106,7 @@ export const getAllPost = async (pagingOrSearchKeyword?: PagingOption | string, 
   }
 
   const offset = (page - 1) * limit;
-  const posts = filtered.slice(offset, offset + limit);
+  const posts = metaList.slice(offset, offset + limit);
 
   const totalPages = limit > 0 ? Math.max(1, Math.ceil(total / limit)) : 1;
 
@@ -144,6 +125,7 @@ export const getPost = async (slug: string) => {
   const { metaList, pathMap } = await buildIndexAndPathMap();
 
   const index = metaList.findIndex((m) => m.slug === slug);
+
   if (index === -1) {
     throw new Error(`Post not found: ${slug}`);
   }
