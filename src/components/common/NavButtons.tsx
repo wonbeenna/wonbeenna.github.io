@@ -22,7 +22,7 @@ const NavButtons = () => {
           width={22}
           height={22}
           priority
-          alt=""
+          alt="검색페이지로 이동"
         />
       </Link>
 
@@ -32,7 +32,7 @@ const NavButtons = () => {
           width={22}
           height={22}
           priority
-          alt=""
+          alt="GitHub링크로 이동"
         />
       </Link>
 
@@ -42,7 +42,7 @@ const NavButtons = () => {
           width={26}
           height={26}
           priority
-          alt=""
+          alt="이메일보내기"
         />
       </Link>
 
@@ -57,7 +57,7 @@ const NavButtons = () => {
           width={22}
           height={22}
           priority
-          alt=""
+          alt={currentTheme === 'dark' ? '라이트모드로 변경하는 버튼' : '다크모드로 변경하는 버튼'}
         />
       </button>
     </div>
