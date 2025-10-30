@@ -41,13 +41,18 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-tailwindcss": "^3.17.5",
+    "exif-reader": "^2.0.2",
+    "fast-glob": "^3.3.3",
     "gh-pages": "^6.2.0",
     "globals": "^15.13.0",
+    "nanoid": "^5.1.6",
     "postcss-nesting": "^13.0.1",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.7.1",
     "rehype-prism-plus": "^2.0.0",
     "remark-gfm": "^4.0.0",
+    "sharp": "^0.34.4",
+    "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.41.0"
   }
