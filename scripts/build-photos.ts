@@ -7,7 +7,7 @@ import exifReader, { Exif } from 'exif-reader';
 import { customAlphabet } from 'nanoid';
 import { PhotoItem } from '@/types/photo';
 
-const SOURCE_DIR = path.resolve(process.cwd(), '../public/assets/blog/javaScript');
+const SOURCE_DIR = path.resolve(process.cwd(), '../public/assets/photos-origin');
 const OUTPUT_DIR = path.resolve(process.cwd(), '../public/assets/photos');
 const OUTPUT_JSON_PATH = path.join(OUTPUT_DIR, 'photos.json');
 
@@ -85,12 +85,12 @@ const extractSemanticMeta = (exifMeta: Exif) => {
 };
 
 const readImageMetadata = async (buffer: Buffer) => {
-  const meta = await sharp(buffer).metadata();
+  const meta = await sharp(buffer).rotate().metadata();
 
   let exifMeta: Exif | {};
-
   try {
-    exifMeta = meta.exif ? exifReader(meta.exif) : {};
+    const originalMeta = await sharp(buffer).metadata();
+    exifMeta = originalMeta.exif ? exifReader(originalMeta.exif) : {};
   } catch {
     exifMeta = {};
   }
@@ -119,7 +119,8 @@ const processOneImage = async (relativePathFromSource: string): Promise<PhotoIte
 
   for (const targetWidth of TARGET_WIDTHS) {
     const effectiveWidth = Math.min(targetWidth, width);
-    const pipeline = sharp(buffer).resize({ width: effectiveWidth, withoutEnlargement: true });
+
+    const pipeline = sharp(buffer).rotate().resize({ width: effectiveWidth, withoutEnlargement: true });
 
     const avifOut = path.join(outputDir, `${fileStem}-${targetWidth}.avif`);
     const webpOut = path.join(outputDir, `${fileStem}-${targetWidth}.webp`);
