@@ -11,12 +11,13 @@ export type Formats = {
 
 export type PhotoItem = {
   id: string;
+  title?: string;
   src: string;
   width: number;
   height: number;
-  title?: string;
-  date?: Date | string;
-  location?: string;
-  lensModel?: string;
+  alt?: string;
   formats: Formats;
+  location?: string;
+  date?: string;
+  tags?: PhotoTag[];
 };

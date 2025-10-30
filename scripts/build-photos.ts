@@ -5,7 +5,6 @@ import fg from 'fast-glob';
 import sharp from 'sharp';
 import exifReader, { Exif } from 'exif-reader';
 import { customAlphabet } from 'nanoid';
-import { PhotoItem } from '@/types/photo';
 
 const SOURCE_DIR = path.resolve(process.cwd(), '../public/assets/blog/javaScript');
 const OUTPUT_DIR = path.resolve(process.cwd(), '../public/assets/photos');
@@ -17,9 +16,25 @@ const AVIF_QUALITY = 60;
 
 const nanoid = customAlphabet('1234567890abcdefghijklmnopqrstuvwxyz', 10);
 
+type PhotoRecord = {
+  id: string;
+  src: string;
+  width: number;
+  height: number;
+  title?: string;
+  date?: Date | string;
+  location?: string;
+  lensModel?: string;
+  formats: {
+    avif: string[];
+    webp: string[];
+    original: string;
+  };
+};
+
 type PhotoJson = {
   total: number;
-  photos: PhotoItem[];
+  photos: PhotoRecord[];
 };
 
 const toPublicRelativePath = (absPath: string): string => {
@@ -30,8 +45,8 @@ const removeExtension = (filename: string): string => {
   return filename.replace(/\.[^.]+$/, '');
 };
 
-const loadExistingPhotoMap = async (): Promise<Map<string, PhotoItem>> => {
-  const map = new Map<string, PhotoItem>();
+const loadExistingPhotoMap = async (): Promise<Map<string, PhotoRecord>> => {
+  const map = new Map<string, PhotoRecord>();
 
   if (!fsSync.existsSync(OUTPUT_JSON_PATH)) {
     return map;
@@ -98,7 +113,7 @@ const readImageMetadata = async (buffer: Buffer) => {
   return { meta, exifMeta };
 };
 
-const processOneImage = async (relativePathFromSource: string): Promise<PhotoItem | null> => {
+const processOneImage = async (relativePathFromSource: string): Promise<PhotoRecord | null> => {
   const absoluteSourcePath = path.join(SOURCE_DIR, relativePathFromSource);
   const baseName = path.basename(relativePathFromSource);
   const fileStem = removeExtension(baseName);
@@ -158,8 +173,8 @@ const processOneImage = async (relativePathFromSource: string): Promise<PhotoIte
   };
 };
 
-const mergeAndSortRecords = (existingMap: Map<string, PhotoItem>, newRecords: PhotoItem[]): PhotoItem[] => {
-  const merged = new Map<string, PhotoItem>();
+const mergeAndSortRecords = (existingMap: Map<string, PhotoRecord>, newRecords: PhotoRecord[]): PhotoRecord[] => {
+  const merged = new Map<string, PhotoRecord>();
 
   for (const [baseName, record] of existingMap) {
     merged.set(baseName, record);
@@ -200,7 +215,7 @@ const main = async (): Promise<void> => {
     return;
   }
 
-  const newRecords: PhotoItem[] = [];
+  const newRecords: PhotoRecord[] = [];
 
   for (const rel of sourceFiles) {
     const baseName = path.basename(rel);
