@@ -3,7 +3,7 @@ import fsSync from 'fs';
 import path from 'path';
 import fg from 'fast-glob';
 import sharp from 'sharp';
-import exifReader from 'exif-reader';
+import exifReader, { Exif } from 'exif-reader';
 import { customAlphabet } from 'nanoid';
 
 const SOURCE_DIR = path.resolve(process.cwd(), '../public/assets/blog/javaScript');
@@ -22,8 +22,9 @@ type PhotoRecord = {
   width: number;
   height: number;
   title?: string;
-  date?: string;
+  date?: Date | string;
   location?: string;
+  lensModel?: string;
   formats: {
     avif: string[];
     webp: string[];
@@ -82,44 +83,33 @@ const findSourceImages = async (): Promise<string[]> => {
   return entries;
 };
 
-const extractSemanticMeta = (exifMeta: any, fallbackTitle: string) => {
-  const title =
-    exifMeta?.xmp?.['dc:title']?.[0] ||
-    exifMeta?.exif?.ImageDescription ||
-    exifMeta?.iptc?.headline ||
-    fallbackTitle.replace(/[_-]/g, ' ');
+const extractSemanticMeta = (exifMeta: Exif) => {
+  const date = exifMeta?.Image?.DateTime;
 
-  const rawDate =
-    exifMeta?.exif?.DateTimeOriginal ||
-    exifMeta?.exif?.CreateDate ||
-    exifMeta?.iptc?.dateCreated ||
-    exifMeta?.xmp?.CreateDate;
+  const latitude = exifMeta?.GPSInfo?.GPSLatitude;
+  const longitude = exifMeta?.GPSInfo?.GPSLongitude;
+  const latRef = exifMeta?.GPSInfo?.GPSLatitudeRef || 'N';
+  const lonRef = exifMeta?.GPSInfo?.GPSLongitudeRef || 'E';
+  const location =
+    latitude && longitude
+      ? `${latitude[0]}°${latitude[1]}'${latitude[2]}" ${latRef}, ${longitude[0]}°${longitude[1]}'${longitude[2]}" ${lonRef}`
+      : undefined;
+  const lensModel = exifMeta?.Photo?.LensModel;
 
-  const date = (() => {
-    if (!rawDate) {
-      return undefined;
-    }
-    const value = Array.isArray(rawDate) ? rawDate[0] : rawDate;
-    const dt = new Date(value);
-    return Number.isFinite(dt.getTime()) ? dt.toISOString().slice(0, 10) : String(value);
-  })();
-
-  const city = exifMeta?.iptc?.city;
-  const subLoc = exifMeta?.iptc?.['sub-location'];
-  const country = exifMeta?.iptc?.country_or_primary_location_name;
-  const location = [subLoc, city, country].filter(Boolean).join(', ') || undefined;
-
-  return { title, date, location };
+  return { date, location, lensModel };
 };
 
 const readImageMetadata = async (buffer: Buffer) => {
   const meta = await sharp(buffer).metadata();
-  let exifMeta: any = {};
+
+  let exifMeta: Exif | {};
+
   try {
     exifMeta = meta.exif ? exifReader(meta.exif) : {};
   } catch {
     exifMeta = {};
   }
+
   return { meta, exifMeta };
 };
 
@@ -134,7 +124,7 @@ const processOneImage = async (relativePathFromSource: string): Promise<PhotoRec
   const width = meta.width ?? 0;
   const height = meta.height ?? 0;
   const id = `${fileStem}-${nanoid()}`;
-  const { title, date, location } = extractSemanticMeta(exifMeta, fileStem);
+  const { date, location, lensModel } = extractSemanticMeta(exifMeta as Exif);
 
   const outputDir = path.join(OUTPUT_DIR, fileStem);
   await fs.mkdir(outputDir, { recursive: true });
@@ -168,12 +158,13 @@ const processOneImage = async (relativePathFromSource: string): Promise<PhotoRec
 
   return {
     id,
-    src: representativeSrc,
     width,
     height,
-    title,
     date,
     location,
+    lensModel,
+    title: fileStem,
+    src: representativeSrc,
     formats: {
       avif: avifPaths,
       webp: webpPaths,
