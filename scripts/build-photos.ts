@@ -6,14 +6,14 @@ import sharp from 'sharp';
 import exifReader, { Exif } from 'exif-reader';
 import { customAlphabet } from 'nanoid';
 import { PhotoItem } from '@/types/photo';
+import { format, isDate } from 'date-fns';
 
 const SOURCE_DIR = path.resolve(process.cwd(), '../public/assets/photos-origin');
 const OUTPUT_DIR = path.resolve(process.cwd(), '../public/assets/photos');
 const OUTPUT_JSON_PATH = path.join(OUTPUT_DIR, 'photos.json');
 
-const TARGET_WIDTHS = [800, 1200, 1600];
+const MASTER_LONG_EDGE = 2560;
 const WEBP_QUALITY = 80;
-const AVIF_QUALITY = 60;
 
 const nanoid = customAlphabet('1234567890abcdefghijklmnopqrstuvwxyz', 10);
 
@@ -28,6 +28,14 @@ const toPublicRelativePath = (absPath: string): string => {
 
 const removeExtension = (filename: string): string => {
   return filename.replace(/\.[^.]+$/, '');
+};
+
+const toISODate = (date?: Date): string | undefined => {
+  if (isDate(date)) {
+    return format(date, 'yyyy-MM-dd');
+  }
+
+  return undefined;
 };
 
 const loadExistingPhotoMap = async (): Promise<Map<string, PhotoItem>> => {
@@ -52,130 +60,148 @@ const loadExistingPhotoMap = async (): Promise<Map<string, PhotoItem>> => {
 
     console.log(`📦 캐시 로드: ${map.size}건`);
   } catch (err) {
-    console.warn('⚠️ 기존 JSON 파싱 실패, 무시함:', err);
+    console.warn('⚠️ 기존 JSON 파싱 실패:', err);
   }
 
   return map;
 };
 
 const findSourceImages = async (): Promise<string[]> => {
-  const patterns = ['**/*.{jpg,jpeg,png,webp,tif,tiff,heic,avif}'];
-  const entries = await fg(patterns, {
+  const entries = await fg(['**/*.{jpg,jpeg,png,webp,tif,tiff,heic,avif}'], {
     cwd: SOURCE_DIR,
     onlyFiles: true,
     caseSensitiveMatch: false
   });
+
   return entries;
 };
 
 const extractSemanticMeta = (exifMeta: Exif) => {
-  const date = exifMeta?.Image?.DateTime;
-
-  const latitude = exifMeta?.GPSInfo?.GPSLatitude;
-  const longitude = exifMeta?.GPSInfo?.GPSLongitude;
-  const latRef = exifMeta?.GPSInfo?.GPSLatitudeRef || 'N';
-  const lonRef = exifMeta?.GPSInfo?.GPSLongitudeRef || 'E';
-  const location =
-    latitude && longitude
-      ? `${latitude[0]}°${latitude[1]}'${latitude[2]}" ${latRef}, ${longitude[0]}°${longitude[1]}'${longitude[2]}" ${lonRef}`
-      : undefined;
+  const date = toISODate(exifMeta?.Image?.DateTime);
+  const cameraMake = exifMeta?.Image?.Make;
+  const cameraModel = exifMeta?.Image?.Model;
   const lensModel = exifMeta?.Photo?.LensModel;
-
-  return { date, location, lensModel };
-};
-
-const readImageMetadata = async (buffer: Buffer) => {
-  const meta = await sharp(buffer).rotate().metadata();
-
-  let exifMeta: Exif | {};
-  try {
-    const originalMeta = await sharp(buffer).metadata();
-    exifMeta = originalMeta.exif ? exifReader(originalMeta.exif) : {};
-  } catch {
-    exifMeta = {};
-  }
-
-  return { meta, exifMeta };
-};
-
-const processOneImage = async (relativePathFromSource: string): Promise<PhotoItem | null> => {
-  const absoluteSourcePath = path.join(SOURCE_DIR, relativePathFromSource);
-  const baseName = path.basename(relativePathFromSource);
-  const fileStem = removeExtension(baseName);
-
-  const buffer = await fs.readFile(absoluteSourcePath);
-  const { meta, exifMeta } = await readImageMetadata(buffer);
-
-  const width = meta.width ?? 0;
-  const height = meta.height ?? 0;
-  const id = `${fileStem}-${nanoid()}`;
-  const { date, location, lensModel } = extractSemanticMeta(exifMeta as Exif);
-
-  const outputDir = path.join(OUTPUT_DIR, fileStem);
-  await fs.mkdir(outputDir, { recursive: true });
-
-  const avifPaths: string[] = [];
-  const webpPaths: string[] = [];
-
-  for (const targetWidth of TARGET_WIDTHS) {
-    const effectiveWidth = Math.min(targetWidth, width);
-
-    const pipeline = sharp(buffer).rotate().resize({ width: effectiveWidth, withoutEnlargement: true });
-
-    const avifOut = path.join(outputDir, `${fileStem}-${targetWidth}.avif`);
-    const webpOut = path.join(outputDir, `${fileStem}-${targetWidth}.webp`);
-
-    if (fsSync.existsSync(avifOut) && fsSync.existsSync(webpOut)) {
-      console.log(`  ⏩ 변환 스킵(${targetWidth}px): 이미 존재`);
-    } else {
-      await Promise.all([
-        pipeline.clone().toFormat('avif', { quality: AVIF_QUALITY }).toFile(avifOut),
-        pipeline.clone().toFormat('webp', { quality: WEBP_QUALITY }).toFile(webpOut)
-      ]);
-      console.log(`  ✅ 변환 완료(${targetWidth}px)`);
-    }
-
-    avifPaths.push(toPublicRelativePath(avifOut));
-    webpPaths.push(toPublicRelativePath(webpOut));
-  }
-
-  const representativeSrc = webpPaths[webpPaths.length - 1];
-  const originalPublicPath = toPublicRelativePath(absoluteSourcePath);
+  const iso = exifMeta?.Photo?.ISOSpeedRatings;
+  const aperture = exifMeta?.Photo?.ApertureValue;
+  const shutterSpeed = exifMeta?.Photo?.ShutterSpeedValue;
 
   return {
-    id,
-    width,
-    height,
     date,
-    location,
-    lensModel,
-    title: fileStem,
-    src: representativeSrc,
-    formats: {
-      avif: avifPaths,
-      webp: webpPaths,
-      original: originalPublicPath
+    cameraSettings: {
+      cameraMake,
+      cameraModel,
+      lensModel,
+      iso,
+      shutterSpeed,
+      aperture
     }
   };
 };
 
-const mergeAndSortRecords = (existingMap: Map<string, PhotoItem>, newRecords: PhotoItem[]): PhotoItem[] => {
-  const merged = new Map<string, PhotoItem>();
+const readExifFromOriginal = async (buffer: Buffer): Promise<Exif | {}> => {
+  try {
+    const meta = await sharp(buffer).metadata();
+    if (meta.exif) {
+      return exifReader(meta.exif);
+    } else {
+      return {};
+    }
+  } catch {
+    return {};
+  }
+};
 
-  for (const [baseName, record] of existingMap) {
-    merged.set(baseName, record);
+const processOneImage = async (relativePathFromSource: string): Promise<PhotoItem | null> => {
+  const absSource = path.join(SOURCE_DIR, relativePathFromSource);
+  const baseName = path.basename(relativePathFromSource);
+  const fileStem = removeExtension(baseName);
+
+  const buffer = await fs.readFile(absSource);
+
+  const exifMeta = (await readExifFromOriginal(buffer)) as Exif;
+  const { date, cameraSettings } = extractSemanticMeta(exifMeta);
+
+  const oriented = sharp(buffer).rotate().withMetadata();
+  const meta = await oriented.metadata();
+  const width = meta.width ?? 0;
+  const height = meta.height ?? 0;
+
+  const id = `${fileStem}-${nanoid()}`;
+  const outputDir = path.join(OUTPUT_DIR, fileStem);
+  await fs.mkdir(outputDir, { recursive: true });
+
+  const isLandscape = width >= height;
+  const targetWidth = isLandscape ? Math.min(width, MASTER_LONG_EDGE) : undefined;
+  const targetHeight = !isLandscape ? Math.min(height, MASTER_LONG_EDGE) : undefined;
+
+  const masterOut = path.join(outputDir, `${fileStem}.webp`);
+
+  const blurBuf = await oriented.clone().resize(16).blur(5).toFormat('webp', { quality: 40 }).toBuffer();
+  const blurDataURL = `data:image/webp;base64,${blurBuf.toString('base64')}`;
+
+  let resizeWidth = 0;
+  let resizeHeight = 0;
+
+  if (fsSync.existsSync(masterOut)) {
+    console.log(`⏩ 스킵: 이미 존재`);
+  } else {
+    const imageInfo = await oriented
+      .clone()
+      .resize({
+        width: targetWidth,
+        height: targetHeight,
+        withoutEnlargement: true
+      })
+      .toFormat('webp', { quality: WEBP_QUALITY })
+      .toFile(masterOut);
+
+    resizeWidth = imageInfo.width;
+    resizeHeight = imageInfo.height;
+
+    console.log(`✅ 변환 완료: ${path.basename(masterOut)} (${MASTER_LONG_EDGE}px 기준)`);
   }
 
+  const masterPublic = toPublicRelativePath(masterOut);
+  const originalPublic = toPublicRelativePath(absSource);
+
+  const record: PhotoItem = {
+    id,
+    date,
+    cameraSettings,
+    title: fileStem,
+    formats: {
+      blurDataURL,
+      webp: masterPublic,
+      original: originalPublic
+    },
+    meta: {
+      width,
+      height,
+      resizeWidth,
+      resizeHeight
+    }
+  };
+
+  return record;
+};
+
+const mergeAndSortRecords = (existing: Map<string, PhotoItem>, newRecords: PhotoItem[]): PhotoItem[] => {
+  const merged = new Map(existing);
+
   for (const record of newRecords) {
-    const baseName = path.basename(record.formats.original || '');
-    if (baseName) {
-      merged.set(baseName, record);
+    const base = path.basename(record.formats.original);
+    if (base) {
+      merged.set(base, record);
     }
   }
 
-  const result = Array.from(merged.values());
-  result.sort((a, b) => String(b.date ?? '').localeCompare(String(a.date ?? '')));
-  return result;
+  const list = Array.from(merged.values());
+
+  list.sort((a, b) => {
+    return String(b.date).localeCompare(String(a.date));
+  });
+
+  return list;
 };
 
 const main = async (): Promise<void> => {
@@ -184,54 +210,57 @@ const main = async (): Promise<void> => {
   console.log('OUTPUT_DIR:', OUTPUT_DIR);
 
   if (!fsSync.existsSync(SOURCE_DIR)) {
-    console.error('❌ 입력 폴더가 없습니다. 경로를 확인하세요.');
+    console.error('❌ 입력 폴더가 없습니다.');
     process.exit(1);
   }
 
   await fs.mkdir(OUTPUT_DIR, { recursive: true });
 
-  const existingMap = await loadExistingPhotoMap();
-  const sourceFiles = await findSourceImages();
+  const existing = await loadExistingPhotoMap();
+  const sources = await findSourceImages();
 
-  console.log(`🔎 발견한 원본 수: ${sourceFiles.length}`);
+  console.log(`🔎 원본 이미지 수: ${sources.length}`);
 
-  if (sourceFiles.length === 0) {
-    console.log('ℹ️ 폴더가 비었습니다.');
+  if (sources.length === 0) {
     await fs.writeFile(OUTPUT_JSON_PATH, JSON.stringify({ total: 0, photos: [] }, null, 2), 'utf-8');
+    console.log('ℹ️ 폴더가 비었습니다.');
     return;
   }
 
-  const newRecords: PhotoItem[] = [];
+  const records: PhotoItem[] = [];
 
-  for (const rel of sourceFiles) {
-    const baseName = path.basename(rel);
+  for (const rel of sources) {
+    const base = path.basename(rel);
 
-    if (existingMap.has(baseName)) {
-      console.log(`⏩ 스킵: ${baseName}`);
-      newRecords.push(existingMap.get(baseName)!);
+    if (existing.has(base)) {
+      console.log(`⏩ 스킵: ${base}`);
+      const exist = existing.get(base);
+      if (exist) {
+        records.push(exist);
+      }
       continue;
     }
 
-    console.log('🖼️ 처리:', baseName);
+    console.log('🖼️ 처리:', base);
 
     try {
-      const record = await processOneImage(rel);
-      if (record) {
-        newRecords.push(record);
+      const rec = await processOneImage(rel);
+      if (rec) {
+        records.push(rec);
       }
     } catch (err: any) {
-      console.error('⚠️ 처리 실패:', baseName, err?.message || err);
+      console.error('⚠️ 처리 실패:', base, err?.message || err);
     }
   }
 
-  const finalList = mergeAndSortRecords(existingMap, newRecords);
-  const json: PhotoJson = { total: finalList.length, photos: finalList };
+  const final = mergeAndSortRecords(existing, records);
+  const json: PhotoJson = { total: final.length, photos: final };
 
   await fs.writeFile(OUTPUT_JSON_PATH, JSON.stringify(json, null, 2), 'utf-8');
-  console.log(`✅ 완료. JSON 갱신 → ${OUTPUT_JSON_PATH}`);
+  console.log(`✅ 완료 → ${OUTPUT_JSON_PATH}`);
 };
 
 main().catch((err) => {
-  console.error('💥 스크립트 실패:', err);
+  console.error('💥 실패:', err);
   process.exit(1);
 });

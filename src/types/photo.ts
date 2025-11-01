@@ -1,22 +1,30 @@
-export type PhotoTag =
-  | { type: 'category'; value: string }
-  | { type: 'year'; value: number }
-  | { type: 'camera'; value: string };
-
 export type Formats = {
-  avif: string[];
-  webp: string[];
+  webp: string;
   original: string;
+  blurDataURL: string;
+};
+
+export type Meta = {
+  width: number;
+  height: number;
+  resizeWidth?: number;
+  resizeHeight?: number;
+};
+
+export type CameraSettings = {
+  cameraMake?: string;
+  cameraModel?: string;
+  lensModel?: string;
+  aperture?: number;
+  iso?: number;
+  shutterSpeed?: number;
 };
 
 export type PhotoItem = {
   id: string;
-  src: string;
-  width: number;
-  height: number;
   title?: string;
-  date?: Date | string;
-  location?: string;
-  lensModel?: string;
+  date?: string;
+  meta: Meta;
   formats: Formats;
+  cameraSettings?: CameraSettings;
 };

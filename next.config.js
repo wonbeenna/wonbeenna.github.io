@@ -5,8 +5,8 @@ const nextConfig = {
   output: 'export',
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   images: {
-    formats: ['image/avif', 'image/webp'],
-    unoptimized: true,
+    qualities: [75, 80, 90, 100],
+    formats: ['image/webp'],
     remotePatterns: [
       {
         protocol: 'https',

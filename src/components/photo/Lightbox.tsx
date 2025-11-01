@@ -36,10 +36,10 @@ const Lightbox = ({ photo, onClose, onPrev, onNext }: LightboxProps) => {
       >
         <div className="relative overflow-hidden rounded-2xl bg-black">
           <Image
-            src={photo.src}
-            alt={photo.alt || photo.title || photo.id}
-            width={photo.width}
-            height={photo.height}
+            src={photo.formats.webp || photo.formats.original}
+            alt={photo.title || photo.id}
+            width={photo.meta.width}
+            height={photo.meta.height}
             sizes="100vw"
             className="block h-auto max-h-[85vh] w-full object-contain"
             priority
