@@ -78,7 +78,7 @@ const Masonry: React.FC<MasonryProps> = ({ photos, onTileClick, gap = 16 }) => {
                   loading="lazy"
                   placeholder={hasBlur ? 'blur' : 'empty'}
                   blurDataURL={item.formats.blurDataURL}
-                  sizes="(min-width:1500px) 20vw, (min-width:1200px) 25vw, (min-width:900px) 33vw, (min-width:600px) 50vw, 100vw"
+                  sizes="(min-width:1200px) 25vw, (min-width:900px) 33vw, (min-width:600px) 50vw, 100vw"
                   decoding="async"
                 />
               </div>
