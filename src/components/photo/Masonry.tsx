@@ -63,7 +63,7 @@ const Masonry: React.FC<MasonryProps> = ({ photos, onTileClick, gap = 16 }) => {
             key={item.id}
             data-key={item.id}
             type="button"
-            className="group absolute box-content transition-transform duration-200 will-change-transform hover:-translate-y-1 focus:outline-none focus-visible:-translate-y-1 focus-visible:ring-2 focus-visible:ring-black/20 focus-visible:ring-offset-2"
+            className="group absolute box-content rounded-2xl transition-transform duration-200 will-change-transform hover:-translate-y-1 focus:outline-none focus-visible:-translate-y-1 focus-visible:ring-2 focus-visible:ring-black/20 focus-visible:ring-offset-2"
             style={{ left: item.x, top: item.y, width: item.w, height: item.h }}
             onClick={() => onTileClick?.(item.index)}
             aria-label={alt}

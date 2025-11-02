@@ -31,13 +31,17 @@ const toPublicRelativePath = (absPath: string): string => {
 const removeExtension = (filename: string): string => filename.replace(/\.[^.]+$/, '');
 
 const toISODate = (date?: Date): string | undefined => {
-  if (isDate(date)) return format(date, 'yyyy-MM-dd');
+  if (isDate(date)) {
+    return format(date, 'yyyy-MM-dd');
+  }
   return undefined;
 };
 
 const loadExistingPhotoMap = async (): Promise<Map<string, PhotoItem>> => {
   const map = new Map<string, PhotoItem>();
-  if (!fsSync.existsSync(OUTPUT_JSON_PATH)) return map;
+  if (!fsSync.existsSync(OUTPUT_JSON_PATH)) {
+    return map;
+  }
 
   try {
     const jsonText = await fs.readFile(OUTPUT_JSON_PATH, 'utf-8');

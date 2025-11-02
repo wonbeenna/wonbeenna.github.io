@@ -1,5 +1,6 @@
 import BlogSection from '@/components/home/BlogSection';
 import WaveBanner from '@/components/common/WaveBanner';
+import PhotoSection from '@/components/home/PhotoSection';
 
 export default async function Home() {
   return (
@@ -12,6 +13,7 @@ export default async function Home() {
         size="large"
       />
       <BlogSection />
+      <PhotoSection />
     </>
   );
 }
