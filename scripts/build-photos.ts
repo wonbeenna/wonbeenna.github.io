@@ -210,7 +210,7 @@ const main = async (): Promise<void> => {
 
   if (sources.length === 0) {
     await fs.writeFile(OUTPUT_JSON_PATH, JSON.stringify({ total: 0, photos: [] }, null, 2), 'utf-8');
-    console.log('ℹ폴더가 비었습니다.');
+    console.log('폴더가 비었습니다.');
     return;
   }
 
@@ -232,7 +232,7 @@ const main = async (): Promise<void> => {
       const rec = await processOneImage(rel);
       if (rec) records.push(rec);
     } catch (err: any) {
-      console.error('⚠처리 실패:', base, err?.message || err);
+      console.error('처리 실패:', base, err?.message || err);
     }
   }
 
