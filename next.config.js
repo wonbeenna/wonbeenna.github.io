@@ -5,6 +5,8 @@ const nextConfig = {
   output: 'export',
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   images: {
+    loader: 'custom',
+    loaderFile: './src/lib/my-image-loader.ts',
     qualities: [75, 80, 90, 100],
     formats: ['image/webp'],
     remotePatterns: [

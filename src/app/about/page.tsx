@@ -30,7 +30,7 @@ const Page = async () => {
         <div className="mx-auto max-w-5xl">
           <article className="prose prose-lg max-w-none dark:prose-invert">
             <Image
-              src="/assets/images/me.webp"
+              src="/assets/images/me.png"
               alt="Been profile"
               priority
               width={420}

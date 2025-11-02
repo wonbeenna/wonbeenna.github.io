@@ -56,6 +56,51 @@ const Lightbox = ({ photo, onClose, onPrev, onNext }: LightboxProps) => {
             </span>
             <IconButton label="닫기" onClick={onClose} position="top-right" />
           </div>
+
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 p-3 transition-opacity duration-200">
+            <div className="text-left text-white drop-shadow">
+              <div
+                className="pointer-events-none absolute inset-x-0 bottom-0 w-fit rounded-2xl bg-gradient-to-t from-black/50 via-black/10 p-3 transition-opacity duration-200"
+                aria-label="사진 정보"
+              >
+                <dl className="grid gap-1 text-sm text-white drop-shadow">
+                  <div className="grid grid-cols-[4rem,1fr] items-baseline gap-2">
+                    <dt className="opacity-80">카메라</dt>
+                    <dd className="truncate font-medium">
+                      {[photo?.cameraSettings?.cameraMake, photo?.cameraSettings?.cameraModel]
+                        .filter(Boolean)
+                        .join(' ') || '-'}
+                    </dd>
+                  </div>
+
+                  <div className="grid grid-cols-[4rem,1fr] items-baseline gap-2">
+                    <dt className="opacity-80">렌즈</dt>
+                    <dd className="truncate font-medium">{photo?.cameraSettings?.lensModel || '-'}</dd>
+                  </div>
+
+                  <div className="grid grid-cols-[4rem,1fr] items-baseline gap-2">
+                    <dt className="opacity-80">조리개</dt>
+                    <dd className="font-medium">{photo?.cameraSettings?.aperture || '-'}</dd>
+                  </div>
+
+                  <div className="grid grid-cols-[4rem,1fr] items-baseline gap-2">
+                    <dt className="opacity-80">셔터</dt>
+                    <dd className="font-medium">{photo?.cameraSettings?.shutterSpeed || '-'}</dd>
+                  </div>
+
+                  <div className="grid grid-cols-[4rem,1fr] items-baseline gap-2">
+                    <dt className="opacity-80">ISO</dt>
+                    <dd className="font-medium">{photo?.cameraSettings?.iso ?? '-'}</dd>
+                  </div>
+
+                  <div className="grid grid-cols-[4rem,1fr] items-baseline gap-2">
+                    <dt className="opacity-80">촬영일</dt>
+                    <dd className="font-medium">{photo?.date || '-'}</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
         </div>
       </motion.div>
     </motion.div>

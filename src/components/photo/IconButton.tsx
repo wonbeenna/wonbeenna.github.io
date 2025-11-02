@@ -9,7 +9,7 @@ interface IconButtonProps {
 const IconButton = ({ label, onClick, position }: IconButtonProps) => {
   const classes = position === 'left' ? 'justify-start' : position === 'right' ? 'justify-end' : 'justify-end';
   return (
-    <div className={cn('flex w-full', classes)}>
+    <div className={cn('flex', classes)}>
       <button
         onClick={(e) => {
           e.stopPropagation();

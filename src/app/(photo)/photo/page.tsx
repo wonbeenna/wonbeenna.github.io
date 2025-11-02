@@ -1,12 +1,12 @@
 'use client';
 
 import { useCallback, useEffect, useState } from 'react';
-import Tile from '@/components/photo/Tile';
 import Section from '@/components/common/Section';
 import WaveBanner from '@/components/common/WaveBanner';
 import PHOTOS from '../../../../public/assets/photos/photos.json';
 import { AnimatePresence } from 'framer-motion';
 import Lightbox from '@/components/photo/Lightbox';
+import Masonry from '@/components/photo/Masonry';
 
 export default function PhotoGallery() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -47,12 +47,7 @@ export default function PhotoGallery() {
       />
 
       <Section>
-        <div className="columns-1 gap-4 [column-fill:_balance] sm:columns-2 lg:columns-3 2xl:columns-4">
-          {PHOTOS.photos.map((photo, i) => (
-            <Tile key={photo.id} photo={photo} onClick={() => open(i)} />
-          ))}
-        </div>
-
+        <Masonry photos={PHOTOS.photos} onTileClick={open} />
         <AnimatePresence>
           {activeIndex !== null && (
             <Lightbox photo={PHOTOS.photos[activeIndex]} onClose={close} onPrev={goPrev} onNext={goNext} />

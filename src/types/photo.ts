@@ -15,9 +15,9 @@ export type CameraSettings = {
   cameraMake?: string;
   cameraModel?: string;
   lensModel?: string;
-  aperture?: number;
+  aperture?: string;
   iso?: number;
-  shutterSpeed?: number;
+  shutterSpeed?: string;
 };
 
 export type PhotoItem = {
