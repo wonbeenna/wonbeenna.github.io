@@ -29,13 +29,7 @@ const Lightbox = ({ photo, onClose, onPrev, onNext }: LightboxProps) => {
       role="dialog"
       aria-modal="true"
     >
-      <motion.div
-        className="relative w-full max-w-6xl"
-        initial={{ scale: 0.98, y: 8, opacity: 0 }}
-        animate={{ scale: 1, y: 0, opacity: 1 }}
-        exit={{ scale: 0.98, y: 8, opacity: 0 }}
-        transition={{ type: 'spring', stiffness: 200, damping: 24 }}
-      >
+      <div className="relative w-full max-w-6xl">
         <div className="relative overflow-hidden rounded-2xl bg-black">
           <Image
             src={photo.formats.webp || photo.formats.original}
@@ -79,7 +73,7 @@ const Lightbox = ({ photo, onClose, onPrev, onNext }: LightboxProps) => {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </motion.div>
   );
 };

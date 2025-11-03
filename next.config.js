@@ -7,14 +7,7 @@ const nextConfig = {
   images: {
     loader: 'custom',
     loaderFile: './src/lib/my-image-loader.ts',
-    qualities: [75, 80, 90, 100],
-    formats: ['image/webp'],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**'
-      }
-    ]
+    remotePatterns: [{ protocol: 'https', hostname: '**' }]
   }
 };
 

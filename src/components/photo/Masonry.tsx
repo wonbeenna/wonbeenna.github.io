@@ -1,5 +1,5 @@
-import React, { useMemo } from 'react';
-import NextImage from 'next/image';
+import { useMemo } from 'react';
+import Image from 'next/image';
 import type { PhotoItem } from '@/types/photo';
 import useMedia from '@/hooks/useMedia';
 import useMeasure from '@/hooks/useMeasure';
@@ -71,7 +71,7 @@ const Masonry = ({ photos, onTileClick, gap = 16 }: MasonryProps) => {
           >
             <div className="relative size-full overflow-hidden rounded-2xl duration-200">
               <div className="absolute inset-0 transform-gpu transition-transform duration-300 will-change-transform group-hover:scale-[1.03]">
-                <NextImage
+                <Image
                   src={src}
                   alt={alt}
                   fill

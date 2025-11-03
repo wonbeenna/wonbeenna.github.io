@@ -145,7 +145,7 @@ const processOneImage = async (relativePathFromSource: string): Promise<PhotoIte
 
     const imageInfo = await oriented
       .clone()
-      .resize({ width: effective, withoutEnlargement: true })
+      .resize({ width: effective, height: effective, fit: 'inside', withoutEnlargement: true })
       .toFormat('webp', { quality: WEBP_QUALITY })
       .toFile(out);
     console.log(`변환: ${path.basename(out)}`);
