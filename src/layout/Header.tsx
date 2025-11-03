@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import Nav from '@/layout/Nav';
 import NavButtons from '@/components/common/NavButtons';
 import { cn } from '@/utils/cn';
+import { useTheme } from 'next-themes';
 
 const MOBILE_BREAKPOINT_PX = 640;
 
@@ -15,6 +16,13 @@ const Header = () => {
   const pathname = usePathname();
   const menuRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
+  const { systemTheme, theme, setTheme } = useTheme();
+  const [currentTheme, setCurrentTheme] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    const resolved = theme === 'system' ? systemTheme : theme;
+    setCurrentTheme(resolved);
+  }, [theme, systemTheme]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -104,10 +112,19 @@ const Header = () => {
           aria-controls="mobile-menu"
         >
           <Image
-            src={isOpen ? '/assets/icons/close.svg' : '/assets/icons/menu.svg'}
+            src={
+              isOpen
+                ? currentTheme === 'dark'
+                  ? '/assets/icons/close-light.svg'
+                  : '/assets/icons/close.svg'
+                : currentTheme === 'dark'
+                  ? '/assets/icons/menu-light.svg'
+                  : '/assets/icons/menu.svg'
+            }
             width={24}
             height={24}
             alt="menu"
+            className={cn(theme === 'dark' ? 'fill-white' : 'fill-black')}
           />
         </button>
       </section>
