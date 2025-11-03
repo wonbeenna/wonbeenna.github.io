@@ -1,0 +1,1 @@
+export const IMAGE_SIZES = [640, 960, 1280, 1600, 1920, 2560];

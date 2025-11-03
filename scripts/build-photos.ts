@@ -8,12 +8,12 @@ import { customAlphabet } from 'nanoid';
 import { format, isDate } from 'date-fns';
 import type { PhotoItem } from '@/types/photo';
 import { formatAperture, formatShutterSpeed } from '@/utils/exifFormat';
+import { IMAGE_SIZES } from '@/constants/imageSize';
 
 const SOURCE_DIR = path.resolve(process.cwd(), '../public/assets/photos-origin');
 const OUTPUT_DIR = path.resolve(process.cwd(), '../public/assets/photos');
 const OUTPUT_JSON_PATH = path.join(OUTPUT_DIR, 'photos.json');
 
-const TARGET_WIDTHS = [640, 960, 1280, 1600, 1920, 2560];
 const MASTER_LONG_EDGE = 2560;
 const WEBP_QUALITY = 80;
 
@@ -50,7 +50,9 @@ const loadExistingPhotoMap = async (): Promise<Map<string, PhotoItem>> => {
     if (Array.isArray(parsed.photos)) {
       for (const record of parsed.photos) {
         const baseName = path.basename(record.formats.original || '');
-        if (baseName) map.set(baseName, record);
+        if (baseName) {
+          map.set(baseName, record);
+        }
       }
     }
     console.log(`캐시 로드: ${map.size}건`);
@@ -132,7 +134,7 @@ const processOneImage = async (relativePathFromSource: string): Promise<PhotoIte
 
   const longEdge = Math.max(width, height);
 
-  for (const target of TARGET_WIDTHS) {
+  for (const target of IMAGE_SIZES) {
     const effective = Math.min(target, longEdge, MASTER_LONG_EDGE);
 
     const out = path.join(outputDir, `${fileStem}-${effective}.webp`);
@@ -183,7 +185,9 @@ const mergeAndSortRecords = (existing: Map<string, PhotoItem>, newRecords: Photo
 
   for (const record of newRecords) {
     const base = path.basename(record.formats.original || '');
-    if (base) merged.set(base, record);
+    if (base) {
+      merged.set(base, record);
+    }
   }
 
   const list = Array.from(merged.values());
@@ -222,7 +226,9 @@ const main = async (): Promise<void> => {
     if (existing.has(base)) {
       console.log(`스킵(캐시): ${base}`);
       const exist = existing.get(base);
-      if (exist) records.push(exist);
+      if (exist) {
+        records.push(exist);
+      }
       continue;
     }
 
@@ -230,7 +236,9 @@ const main = async (): Promise<void> => {
 
     try {
       const rec = await processOneImage(rel);
-      if (rec) records.push(rec);
+      if (rec) {
+        records.push(rec);
+      }
     } catch (err: any) {
       console.error('처리 실패:', base, err?.message || err);
     }

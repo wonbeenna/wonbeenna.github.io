@@ -18,23 +18,23 @@ interface MasonryProps {
   gap?: number;
 }
 
-const Masonry: React.FC<MasonryProps> = ({ photos, onTileClick, gap = 16 }) => {
+const Masonry = ({ photos, onTileClick, gap = 16 }: MasonryProps) => {
   const columns = useMedia(['(min-width:1200px)', '(min-width:900px)', '(min-width:600px)'], [4, 3, 2], 1);
 
   const [containerRef, { width: containerWidth }] = useMeasure<HTMLDivElement>();
 
   const { grid, containerHeight } = useMemo(() => {
     if (!containerWidth) {
-      return { grid: [] as GridItem[], containerHeight: 0 };
+      return { grid: [], containerHeight: 0 };
     }
 
     const colHeights = new Array(columns).fill(0);
     const totalGaps = (columns - 1) * gap;
     const columnWidth = (containerWidth - totalGaps) / columns;
 
-    const computed: GridItem[] = photos.map((p, index) => {
-      const rw = p.meta.resizeWidth ?? p.meta.width ?? 1;
-      const rh = p.meta.resizeHeight ?? p.meta.height ?? 1;
+    const computed: GridItem[] = photos.map((photo, index) => {
+      const rw = photo.meta.resizeWidth ?? photo.meta.width ?? 1;
+      const rh = photo.meta.resizeHeight ?? photo.meta.height ?? 1;
       const aspect = rw > 0 ? rh / rw : 1;
       const h = columnWidth * aspect;
 
@@ -44,10 +44,11 @@ const Masonry: React.FC<MasonryProps> = ({ photos, onTileClick, gap = 16 }) => {
 
       colHeights[col] += h + gap;
 
-      return { ...p, x, y, w: columnWidth, h, index };
+      return { ...photo, x, y, w: columnWidth, h, index };
     });
 
     const height = Math.max(0, ...colHeights) - gap;
+
     return { grid: computed, containerHeight: height };
   }, [columns, photos, containerWidth, gap]);
 
