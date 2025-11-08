@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Section from '@/components/common/Section';
 import WaveBanner from '@/components/common/WaveBanner';
 import PHOTOS from '../../../../public/assets/photos/photos.json';
@@ -11,13 +11,10 @@ import Masonry from '@/components/photo/Masonry';
 export default function PhotoGallery() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const open = useCallback((idx: number) => setActiveIndex(idx), []);
-  const close = useCallback(() => setActiveIndex(null), []);
-  const goPrev = useCallback(
-    () => setActiveIndex((i) => (i == null ? i : (i - 1 + PHOTOS.total) % PHOTOS.total)),
-    [PHOTOS.total]
-  );
-  const goNext = useCallback(() => setActiveIndex((i) => (i == null ? i : (i + 1) % PHOTOS.total)), [PHOTOS.total]);
+  const open = (idx: number) => setActiveIndex(idx);
+  const close = () => setActiveIndex(null);
+  const goPrev = () => setActiveIndex((i) => (i == null ? i : (i - 1 + PHOTOS.total) % PHOTOS.total));
+  const goNext = () => setActiveIndex((i) => (i == null ? i : (i + 1) % PHOTOS.total));
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
