@@ -1,15 +1,15 @@
 import { Metadata } from 'next';
 
 export const defaultMetadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://wonbeenna.github.io'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL!),
   title: 'Been blog',
   description: 'Been dev-note',
   alternates: {
     canonical: process.env.NEXT_PUBLIC_BASE_URL
   },
   other: {
-    ['google-site-verification']: 'BirkRt7C7FYMLW96RbXad2EtPdcl0-_ti9xCRkCHa5U',
-    ['naver-site-verification']: '58945b2bbe2fe86252fa8c7b204b40f6019920e9'
+    ['google-site-verification']: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS!,
+    ['naver-site-verification']: process.env.NEXT_PUBLIC_NAVER_ANALYTICS!
   },
   icons: {
     icon: [

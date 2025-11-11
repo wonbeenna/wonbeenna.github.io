@@ -26,7 +26,7 @@ const NavButtons = () => {
         />
       </Link>
 
-      <Link href="https://github.com/wonbeenna" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <Link href={process.env.NEXT_PUBLIC_BASE_URL!} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
         <Image
           src={currentTheme === 'dark' ? `/assets/icons/github-light.svg` : `/assets/icons/github.svg`}
           width={22}
