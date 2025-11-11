@@ -13,12 +13,12 @@ export default function PhotoGallery() {
 
   const open = (idx: number) => setActiveIndex(idx);
   const close = () => setActiveIndex(null);
-  const goPrev = () => setActiveIndex((i) => (i == null ? i : (i - 1 + PHOTOS.total) % PHOTOS.total));
-  const goNext = () => setActiveIndex((i) => (i == null ? i : (i + 1) % PHOTOS.total));
+  const goPrev = () => setActiveIndex((i) => (i === null ? i : (i - 1 + PHOTOS.total) % PHOTOS.total));
+  const goNext = () => setActiveIndex((i) => (i === null ? i : (i + 1) % PHOTOS.total));
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
-      if (activeIndex == null) {
+      if (activeIndex === null) {
         return;
       }
       if (e.key === 'Escape') {
