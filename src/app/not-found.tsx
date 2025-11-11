@@ -1,6 +1,7 @@
 import WaveBanner from '@/components/common/WaveBanner';
 import { Metadata } from 'next';
 import { defaultMetadata, defaultOpenGraph } from '@/utils/metadata';
+import BlogSection from '@/components/home/BlogSection';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
@@ -17,6 +18,8 @@ export default async function NotFound() {
   return (
     <>
       <WaveBanner title="Not Found" type="error" description="The page you are looking for does not exist." />
+
+      <BlogSection />
     </>
   );
 }

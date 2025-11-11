@@ -12,7 +12,7 @@ const RemainingPostCard = ({ post }: RemainingPostCardProps) => {
   return (
     <article>
       <Link href={`/blog/${post.slug}`} className="group block transition-colors">
-        <div className="mb-2 text-sm text-gray500">
+        <div className="mb-2 text-sm text-gray700">
           <time dateTime={iso}>{postDate}</time>
         </div>
 
@@ -20,7 +20,7 @@ const RemainingPostCard = ({ post }: RemainingPostCardProps) => {
           {post.data.title}
         </h3>
 
-        {post.data?.description && <p className="mt-2 text-gray600 transition-colors">{post.data.description}</p>}
+        {post.data?.description && <p className="mt-2 text-gray800 transition-colors">{post.data.description}</p>}
       </Link>
     </article>
   );

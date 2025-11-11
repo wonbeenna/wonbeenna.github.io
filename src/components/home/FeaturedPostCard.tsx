@@ -13,7 +13,7 @@ const FeaturedPostCard = ({ post }: FeaturedPostCardProps) => {
     <section className="md:grid-cols-2 md:items-center">
       <Link href={`/blog/${post.slug}`} className="group block">
         <div>
-          <div className="mb-2 text-sm text-gray500">
+          <div className="mb-2 text-sm text-gray700">
             <span aria-hidden="true" className="mr-1">
               🕊️
             </span>
@@ -25,7 +25,7 @@ const FeaturedPostCard = ({ post }: FeaturedPostCardProps) => {
           </h2>
 
           {post.data?.description && (
-            <p className="mt-3 text-lg leading-relaxed text-gray600 transition-colors">{post.data.description}</p>
+            <p className="mt-3 text-lg leading-relaxed text-gray800 transition-colors">{post.data.description}</p>
           )}
         </div>
       </Link>
