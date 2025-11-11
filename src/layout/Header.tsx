@@ -18,7 +18,7 @@ const Header = () => {
   const pathname = usePathname();
   const menuRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
-  const { systemTheme, theme, setTheme } = useTheme();
+  const { systemTheme, theme } = useTheme();
   const [currentTheme, setCurrentTheme] = useState<string | undefined>(undefined);
 
   useBodyOverflowHidden({ isOpen });
@@ -120,7 +120,7 @@ const Header = () => {
             width={24}
             height={24}
             alt="menu"
-            className={cn(theme === 'dark' ? 'fill-white' : 'fill-black')}
+            className={cn(currentTheme === 'dark' ? 'fill-white' : 'fill-black')}
           />
         </button>
       </section>

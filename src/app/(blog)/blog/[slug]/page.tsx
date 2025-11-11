@@ -5,33 +5,19 @@ import Section from '@/components/common/Section';
 import WaveBanner from '@/components/common/WaveBanner';
 import { getAllPost, getPost } from '@/utils/getPost';
 import { Metadata } from 'next';
-import { defaultMetadata } from '@/utils/metadata';
+import { buildMetadata } from '@/utils/metadata';
 
 export const generateMetadata = async ({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> => {
   const { slug } = await params;
   const data = await getPost(slug);
 
-  return {
-    ...defaultMetadata,
-    title: `Been blog - ${data.data.title}`,
-    description: data.data.description,
-    alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/blog/${slug}`
-    },
-    openGraph: {
-      title: `Been blog - ${data.data.title}`,
-      description: data.data.description,
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/blog/${slug}`,
-      images: [
-        {
-          url: `${process.env.NEXT_PUBLIC_BASE_URL}${data.data.titleImage}`,
-          width: 800,
-          height: 600,
-          alt: data.data.title
-        }
-      ]
-    }
-  };
+  return buildMetadata({
+    title: data.data.title,
+    description: data.data.description ?? '',
+    path: `/blog/${slug}`,
+    imagesPath: data.data.titleImage,
+    faviconPath: '/blog'
+  });
 };
 
 export const generateStaticParams = async () => {

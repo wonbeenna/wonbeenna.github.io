@@ -4,21 +4,15 @@ import Title from '@/components/common/Title';
 import Section from '@/components/common/Section';
 import WaveBanner from '@/components/common/WaveBanner';
 import { Metadata } from 'next';
-import { defaultMetadata, defaultOpenGraph } from '@/utils/metadata';
+import { buildMetadata } from '@/utils/metadata';
 
-export const metadata: Metadata = {
-  ...defaultMetadata,
-  title: 'Been blog blog archive',
-  description: 'Been dev-note blog archive',
-  alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/blog`
-  },
-  openGraph: {
-    ...defaultOpenGraph,
-    title: 'Been blog - blog archive',
-    description: 'Been dev-note - blog archive'
-  }
-};
+export const metadata: Metadata = buildMetadata({
+  title: 'blog archive',
+  description: 'blog archive',
+  path: '/blog',
+  imagesPath: '/blog-favicon.png',
+  faviconPath: '/blog'
+});
 
 export default async function BlogArchivePage() {
   const groupedYears = await getPostsGroupedByYearMonth();

@@ -26,13 +26,53 @@ export const defaultOpenGraph = {
   siteName: 'Been blog',
   url: process.env.NEXT_PUBLIC_BASE_URL,
   type: 'website',
-  locale: 'ko_KR',
-  images: [
-    {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/assets/images/logo.png`,
-      width: 800,
-      height: 600,
-      alt: 'Been blog'
-    }
-  ]
+  locale: 'ko_KR'
+};
+
+interface BuildMetadataParams {
+  title: string;
+  description: string;
+  path: string;
+  imagesPath?: string;
+  faviconPath?: string;
+}
+
+export const buildMetadata = ({
+  title,
+  description,
+  path,
+  imagesPath = '/assets/images/logo.png',
+  faviconPath
+}: BuildMetadataParams): Metadata => {
+  return {
+    ...defaultMetadata,
+    title: `Been blog - ${title}`,
+    description: `Been dev-note - ${description}`,
+    alternates: {
+      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}${path}`
+    },
+    openGraph: {
+      ...defaultOpenGraph,
+      title: `Been blog - ${title}`,
+      description: `Been dev-note - ${description}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}${path}`,
+      images: [
+        {
+          url: `${process.env.NEXT_PUBLIC_BASE_URL}${imagesPath}`,
+          width: 800,
+          height: 600,
+          alt: 'Been blog'
+        }
+      ]
+    },
+    ...(faviconPath && {
+      icons: {
+        icon: [
+          { url: `${faviconPath}-favicon.ico`, sizes: 'any' },
+          { url: `${faviconPath}-favicon.png`, sizes: '32x32', type: 'image/png' }
+        ],
+        apple: [{ url: `${faviconPath}-favicon.png`, sizes: '32x32', type: 'image/png' }]
+      }
+    })
+  };
 };

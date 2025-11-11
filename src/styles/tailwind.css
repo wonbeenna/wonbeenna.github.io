@@ -49,7 +49,7 @@
         position: absolute;
         inset: 0;
         border-radius: inherit;
-        background: theme('colors.primaryColorLight');
+        background: theme('colors.primaryGradient03');
         box-shadow:
                 0 0 0 2px theme('colors.gray300'),
                 0 0.625em 0 0 theme('colors.gray100');
@@ -84,7 +84,7 @@
     }
 
     .btn-learn-more:focus-visible {
-        outline: 2px solid theme('colors.primaryColorLight');
+        outline: 2px solid theme('colors.primaryGradient03');
         outline-offset: 3px;
     }
 

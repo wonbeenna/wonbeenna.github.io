@@ -1,22 +1,16 @@
 import Section from '@/components/common/Section';
 import WaveBanner from '@/components/common/WaveBanner';
 import { Metadata } from 'next';
-import { defaultMetadata, defaultOpenGraph } from '@/utils/metadata';
+import { buildMetadata } from '@/utils/metadata';
 import Image from 'next/image';
 
-export const metadata: Metadata = {
-  ...defaultMetadata,
-  title: 'Been blog about',
-  description: 'Been dev-note about',
-  alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/about`
-  },
-  openGraph: {
-    ...defaultOpenGraph,
-    title: 'Been blog - about',
-    description: 'Been dev-note - about'
-  }
-};
+export const metadata: Metadata = buildMetadata({
+  title: 'about',
+  description: 'about',
+  path: '/about',
+  imagesPath: '/about-favicon.png',
+  faviconPath: '/about'
+});
 
 const Page = async () => {
   return (
