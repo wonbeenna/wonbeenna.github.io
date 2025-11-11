@@ -1,6 +1,6 @@
 import { cn } from '@/utils/cn';
 
-export type TextGradientType = 'frontend' | 'blog' | 'about' | 'post' | 'search' | 'photo';
+export type TextGradientType = 'frontend' | 'blog' | 'about' | 'post' | 'search' | 'photo' | 'error';
 export type TextGradientSize = 'small' | 'medium' | 'large';
 
 interface GradientTextProps {
@@ -21,7 +21,9 @@ export default function GradientText({ children, type = 'frontend', className, s
     search:
       'bg-[linear-gradient(108deg,theme(colors.primaryGradient02),theme(colors.primaryGradient03)_50%,theme(colors.primaryColor)_90%)]',
     photo:
-      'bg-[linear-gradient(120deg,theme(colors.primaryGradient02),theme(colors.primaryGradient03)_30%,theme(colors.primaryGradient04)_65%,theme(colors.primaryGradient05)_90%)]'
+      'bg-[linear-gradient(120deg,theme(colors.primaryGradient02),theme(colors.primaryGradient03)_30%,theme(colors.primaryGradient04)_65%,theme(colors.primaryGradient05)_90%)]',
+    error:
+      'bg-[linear-gradient(108deg,theme(colors.primaryGradient05),theme(colors.primaryGradient05)_33%,theme(colors.primaryGradient04)_66%,theme(colors.primaryGradient05))]'
   };
 
   const sizeClass = {
