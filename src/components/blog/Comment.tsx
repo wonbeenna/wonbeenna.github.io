@@ -13,9 +13,9 @@ const Comment = () => {
       <Giscus
         id="comments"
         repo="wonbeenna/wonbeenna.github.io"
-        repoId="R_kgDOKY4BEA="
+        repoId={process.env.NEXT_PUBLIC_GISCUS_REPO_ID!}
         category="Announcements"
-        categoryId="DIC_kwDOKY4BEM4CZuWW"
+        categoryId={process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID!}
         mapping="og:title"
         term="Welcome to @giscus/react component!"
         reactionsEnabled="1"
