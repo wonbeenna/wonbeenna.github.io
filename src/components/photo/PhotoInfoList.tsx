@@ -5,7 +5,7 @@ interface PhotoInfoListProps {
 }
 
 const PhotoInfoList = ({ children }: PhotoInfoListProps) => {
-  return <dl className="grid gap-1 text-sm text-white drop-shadow">{children}</dl>;
+  return <dl className="grid gap-1 text-sm">{children}</dl>;
 };
 
 export default PhotoInfoList;

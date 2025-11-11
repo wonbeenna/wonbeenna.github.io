@@ -8,6 +8,8 @@ import Nav from '@/layout/Nav';
 import NavButtons from '@/components/common/NavButtons';
 import { cn } from '@/utils/cn';
 import { useTheme } from 'next-themes';
+import useBodyOverflowHidden from '@/hooks/useBodyOverflowHidden';
+import useKeyDown from '@/hooks/useKeyDown';
 
 const MOBILE_BREAKPOINT_PX = 640;
 
@@ -18,6 +20,14 @@ const Header = () => {
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const { systemTheme, theme, setTheme } = useTheme();
   const [currentTheme, setCurrentTheme] = useState<string | undefined>(undefined);
+
+  useBodyOverflowHidden({ isOpen });
+
+  useKeyDown({
+    onEscape: () => {
+      setIsOpen(false);
+    }
+  });
 
   useEffect(() => {
     const resolved = theme === 'system' ? systemTheme : theme;
@@ -37,16 +47,6 @@ const Header = () => {
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
-
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        setIsOpen(false);
-      }
-    };
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -69,7 +69,6 @@ const Header = () => {
   }, [isOpen]);
 
   useEffect(() => {
-    document.body.style.overflow = isOpen ? 'hidden' : '';
     const el = menuRef.current;
     if (el) {
       if (isOpen) {
@@ -80,9 +79,6 @@ const Header = () => {
         el.setAttribute('aria-hidden', 'true');
       }
     }
-    return () => {
-      document.body.style.overflow = '';
-    };
   }, [isOpen]);
 
   return (
