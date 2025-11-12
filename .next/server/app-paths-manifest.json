@@ -1,0 +1,12 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/(home)/page": "app/(home)/page.js",
+  "/(blog)/blog/page": "app/(blog)/blog/page.js",
+  "/(blog)/blog/[slug]/page": "app/(blog)/blog/[slug]/page.js",
+  "/(photo)/photo/page": "app/(photo)/photo/page.js",
+  "/about/page": "app/about/page.js",
+  "/search/page": "app/search/page.js"
+}
