@@ -2,6 +2,7 @@ import WaveBanner from '@/components/common/WaveBanner';
 import { Metadata } from 'next';
 import { buildMetadata } from '@/utils/metadata';
 import PhotoContainer from '@/components/photo/PhotoContainer';
+import { getPhotos } from '@/utils/getPhotos';
 
 export const metadata: Metadata = buildMetadata({
   title: 'photo archive',
@@ -11,7 +12,9 @@ export const metadata: Metadata = buildMetadata({
   faviconPath: '/photo'
 });
 
-export default function PhotoGallery() {
+export default async function PhotoGallery() {
+  const data = await getPhotos();
+
   return (
     <>
       <WaveBanner
@@ -19,7 +22,7 @@ export default function PhotoGallery() {
         type="photo"
         description="A collection of my photography works and visual stories captured through my lens."
       />
-      <PhotoContainer />
+      <PhotoContainer photos={data.photos} total={data.total} />
     </>
   );
 }
