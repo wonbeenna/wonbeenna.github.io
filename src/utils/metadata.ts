@@ -68,10 +68,10 @@ export const buildMetadata = ({
     ...(faviconPath && {
       icons: {
         icon: [
-          { url: `${faviconPath}-favicon.ico`, sizes: 'any' },
-          { url: `${faviconPath}-favicon.png`, sizes: '32x32', type: 'image/png' }
+          { url: `/favicon/${faviconPath}-favicon.ico`, sizes: 'any' },
+          { url: `/favicon/${faviconPath}-favicon.png`, sizes: '32x32', type: 'image/png' }
         ],
-        apple: [{ url: `${faviconPath}-favicon.png`, sizes: '32x32', type: 'image/png' }]
+        apple: [{ url: `/favicon/${faviconPath}-favicon.png`, sizes: '32x32', type: 'image/png' }]
       }
     })
   };

@@ -7,7 +7,7 @@ export const metadata: Metadata = buildMetadata({
   title: 'photo archive',
   description: 'photo archive',
   path: '/photo',
-  imagesPath: '/photo-favicon.png',
+  imagesPath: '/favicon/photo-favicon.png',
   faviconPath: '/photo'
 });
 
@@ -19,7 +19,6 @@ export default function PhotoGallery() {
         type="photo"
         description="A collection of my photography works and visual stories captured through my lens."
       />
-
       <PhotoContainer />
     </>
   );
