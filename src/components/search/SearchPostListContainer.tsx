@@ -1,36 +1,39 @@
 'use client';
 
+import { useMemo, useState } from 'react';
+import Fuse from 'fuse.js';
 import SearchInput from '@/components/search/SearchInput';
 import PostList from '@/components/search/PostList';
-import React, { useEffect, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
-import { Posts } from '@/types/post';
 import Section from '@/components/common/Section';
+import { Posts } from '@/types/post';
 
 interface SearchPostListContainerProps {
   posts: Posts;
 }
 
 const SearchPostListContainer = ({ posts }: SearchPostListContainerProps) => {
-  const [searchPosts, setSearchPosts] = useState<Posts | null>(null);
-  const searchParams = useSearchParams();
-  const search = searchParams.get('search');
+  const [query, setQuery] = useState<string>('');
 
-  useEffect(() => {
-    if (search) {
-      const searchReg = new RegExp(search, 'i');
+  const fuse = useMemo(() => {
+    return new Fuse(posts.posts, {
+      keys: ['data.title', 'data.category', 'data.description'],
+      threshold: 0.4
+    });
+  }, [posts]);
 
-      setSearchPosts({
-        posts: posts.posts.filter((post) => searchReg.test(post.data.title)),
-        total: posts.posts.length
-      });
+  const filteredPosts = useMemo(() => {
+    if (!query.trim()) {
+      return posts.posts;
     }
-  }, [search]);
+
+    const results = fuse.search(query.trim());
+    return results.map((r) => r.item);
+  }, [query, fuse, posts]);
 
   return (
     <Section>
-      <SearchInput />
-      {searchPosts && <PostList posts={searchPosts} />}
+      <SearchInput value={query} onChange={setQuery} />
+      {query && <PostList posts={{ posts: filteredPosts, total: posts.total }} />}
     </Section>
   );
 };
