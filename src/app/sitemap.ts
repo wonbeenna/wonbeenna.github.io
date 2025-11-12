@@ -4,7 +4,13 @@ import { MetadataRoute } from 'next';
 export const dynamic = 'force-static';
 
 const defaultUrl = process.env.NEXT_PUBLIC_BASE_URL;
-const pageRoutes = [`${defaultUrl}`, `${defaultUrl}/blog`, `${defaultUrl}/about`, `${defaultUrl}/search`];
+const pageRoutes = [
+  `${defaultUrl}`,
+  `${defaultUrl}/blog`,
+  `${defaultUrl}/about`,
+  `${defaultUrl}/search`,
+  `${defaultUrl}/photo`
+];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await getAllPost({ limit: -1 });
