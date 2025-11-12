@@ -1,19 +1,14 @@
-'use client';
-
-import React, { useEffect, useState } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useTheme } from 'next-themes';
 
-const NavButtons = () => {
-  const { systemTheme, theme, setTheme } = useTheme();
-  const [currentTheme, setCurrentTheme] = useState<string | undefined>(undefined);
+interface NavButtonsProps {
+  theme?: string;
+  setTheme: Dispatch<SetStateAction<string>>;
+  currentTheme?: string;
+}
 
-  useEffect(() => {
-    const resolved = theme === 'system' ? systemTheme : theme;
-    setCurrentTheme(resolved);
-  }, [theme, systemTheme]);
-
+const NavButtons = ({ theme, setTheme, currentTheme }: NavButtonsProps) => {
   return (
     <div className="flex items-center gap-[12px]">
       <Link href="/search" aria-label="Search">

@@ -18,7 +18,7 @@ const Header = () => {
   const pathname = usePathname();
   const menuRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
-  const { systemTheme, theme } = useTheme();
+  const { systemTheme, theme, setTheme } = useTheme();
   const [currentTheme, setCurrentTheme] = useState<string | undefined>(undefined);
 
   useBodyOverflowHidden({ isOpen });
@@ -95,7 +95,7 @@ const Header = () => {
         </div>
 
         <div className="hidden sm:flex">
-          <NavButtons />
+          <NavButtons theme={theme} setTheme={setTheme} currentTheme={currentTheme} />
         </div>
 
         <button
@@ -135,7 +135,7 @@ const Header = () => {
       >
         <Nav mobile onNavigate={() => setIsOpen(false)} />
         <div className="my-3">
-          <NavButtons />
+          <NavButtons theme={theme} setTheme={setTheme} currentTheme={currentTheme} />
         </div>
       </div>
     </header>
