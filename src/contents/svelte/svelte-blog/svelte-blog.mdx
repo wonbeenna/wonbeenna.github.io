@@ -1,0 +1,268 @@
+---
+title: 스벨트킷으로 블로그 만들어보기
+date: 2023-01-30
+description: 스벨트킷으로 블로그 만든 과정을 정리
+category: svelte
+titleImage: /assets/postIcon/svelte-icon.webp
+---
+
+```shell
+npm create svelte@latest my-app
+cd my-app
+npm install
+npm run dev
+```
+
+SSG 정적 페이지를 구성하는 어댑터
+```shell
+npm i -D @sveltejs/adapter-static
+```
+---
+svelte.config.js
+```js
+import adapter from '@sveltejs/adapter-static';
+
+export default {
+  kit: {
+    adapter: adapter()
+  }
+};
+```
+---
+src/routes/+layout.js
+```js
+// This can be false if you're using a fallback (i.e. SPA mode)
+export const prerender = true;
+```
+---
+
+### 레이아웃 구성
+
+```js
+<script>
+	import Header from '$lib/components/Layout/Header.svelte';
+	import Footer from '$lib/components/Layout/Footer.svelte';
+
+	export let data;
+</script>
+
+<Header />
+    <main>
+		<slot />
+    </main>
+<Footer />
+```
+slot에 스벨트 페이지들이 렌더되게 된다.
+
+스벨트킷은 넥스트와 비슷하게 routes에서 라우팅이 된다.
+
+---
+
+### 데이터 가져오기
+
+src/routes/+page.svelte
+```js
+<script>
+	import Pagination from '$lib/components/Posts/Pagination.svelte';
+	import '$lib/styles/_main.scss';
+	import PostList from '$lib/components/Posts/PostList.svelte';
+	import Category from '$lib/components/Posts/Category.svelte';
+	import { MetaTags } from 'svelte-meta-tags';
+	import { seoMeta, seoOg } from '$lib/config';
+	export let data;
+</script>
+
+<MetaTags {...seoMeta} openGraph={{ ...seoOg }} />
+
+<h1>Blog</h1>
+
+<Category categories={data.categories} />
+
+<PostList posts={data} />
+
+<Pagination currentPage={1} totalPosts={data.total} />
+
+```
++page.js는 페이지와 연결된 로드 함수이며, 데이터를 로드한 다음 페이지가 로드된 데이터를 넘겨 받아 렌더링한다.
+SSR, CSR 모두 렌더링 할 수 있다.
+
++page.server.js 는 항상 서버측에서 로드가 실행된다.
+
+또 src/routes/api 는 독립적인 API 경로이며 페이지와 연결되지 않는다.
+
+src/routes/+page.server.js
+```js
+import { postsPerPage } from '$lib/config';
+import fetchPosts from '$lib/utils/fetchPosts';
+
+export const load = async ({ fetch }) => {
+	const options = {
+		limit: postsPerPage
+	};
+	const { posts } = await fetchPosts(options);
+
+	return { posts, total, categories };
+};
+
+```
+
+src/routes/api 에서 만든 fetchPosts 함수를 사용해
+
+페이지 진입시 5개의 포스트를 먼저 가져왔다.
+
+---
+
+src/lib/_posts에 각 게시글인 마크다운 파일들을 만들었다.
+```js
+import { postsPerPage } from '$lib/config';
+
+const fetchPosts = async () => {
+	const posts = await Promise.all(
+		Object.entries(import.meta.glob('/src/lib/_posts/**/*.md')).map(async ([path, resolver]) => {
+			const { metadata } = await resolver();
+			const slug = path.split('/').pop()?.slice(0, -3);
+			return { ...metadata, slug };
+		})
+	);
+
+	sortedPosts = sortedPosts.map((post) => ({
+		slug: post.slug,
+		title: post.title,
+		description: post.description,
+		category: post.category,
+		titleImage: post.titleImage,
+		date: new Intl.DateTimeFormat('ko-KR').format(new Date(post.date))
+	}));
+
+	return {
+		posts: sortedPosts
+	};
+};
+
+export default fetchPosts;
+```
+
+마크다운 파일들을 가져오는 함수
+
+```markdown
+---
+title: 스벨트킷으로 블로그 만들기
+date: 2023-01-30
+description: 스벨트킷으로 블로그 만든 과정을 정리
+category: javaScript
+titleImage: /postIcon/svelte-icon.webp
+---
+```
+
+
+위에 작성된 title, date, description... 들이 metadata가 된다.
+
+---
+
+```js
+import { error } from '@sveltejs/kit';
+
+export const load = async ({ params }) => {
+	try {
+		const post = await import(`../../../../lib/_posts/${params.category}/${params.post}.md`);
+
+		return {
+			PostContent: post.default.render().html,
+			meta: {
+				...post.metadata,
+				date: new Intl.DateTimeFormat('ko-KR').format(new Date(post.metadata.date)),
+				slug: params.post
+			}
+		};
+	} catch (err) {
+		throw error(404, err);
+	}
+};
+
+```
+src/routes/blog/[category]/[post] 진입시 load 함수의 context.params를 통해 해당 게시글을 가져온다.
+
+---
+
+### sitemap, rss 만들기
+
+src/sitemap.xml/+server.ts
+
+```js
+import fetchPosts from '$lib/utils/fetchPosts';
+
+export const prerender = true;
+
+export const GET = async () => {
+	const { posts } = await fetchPosts({ limit: -1 });
+	const links = posts.map(
+		(p) => `
+    <url>
+      <loc>https://wonbeenna.github.io/blog/${p.category}/${p.slug}</loc>
+      <lastmod>${new Date(p.date).toISOString()}</lastmod>
+      <priority>1.0</priority>
+    </url>
+  `
+	);
+	const xml = `
+    <?xml version="1.0" encoding="UTF-8"?>
+    <urlset
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+      xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+      xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+      xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
+      xmlns:pagemap="http://www.google.com/schemas/sitemap-pagemap/1.0"
+      xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    >
+        <url>
+            <loc>https://wonbeenna.github.io/</loc>
+            <priority>1.0</priority>
+        </url>
+
+        <url>
+            <loc>https://wonbeenna.github.io/about</loc>
+            <priority>1.0</priority>
+        </url>
+
+    ${links.join('')}
+    </urlset>
+  `.trim();
+	return new Response(xml, { headers: { 'Content-Type': 'text/xml; charset=utf-8' } });
+};
+```
+
+GET 메소드를 사용해 서버에서 빌드시 sitemap.xml을 생성
+
+rss도 위와 동일하다.
+
+---
+
+### 마치며
+
+최근에 스벨트를 공부해보는 기회가있어, 스벨트킷을 사용해 간단한 블로그를 만들어 봤다.
+
+아직 깊게 사용해보진 못했지만, 먼저 리액트와 비교했을 때 코드량이 많이 줄어든 느낌이다.
+
+- 프레임워크는 코드량이 적을 수록 속도가 빠르다고 들었다.
+
+- 순수한 native가 가장 좋다.
+
+- 아무리 좋은 프레임워크라도 vanilla js를 따라갈 수는 없다.
+
+그런 면에서 virtual DOM을 사용하지 않는 스벨트가 가장 빠를 것이다. 하지만 최적화는 개발자의 몫..
+
+- 스벨트는 런타임이 아닌 컴파일러에 가깝기 때문에 실제 실행 가능한 vanilla js를 만들어 준다.
+
+리액트였으면 useState니 뭐니~ 상태 관리니~ 했을 것 같은데 스벨트는 변수 하나만 선언하면 가능했다.
+
+- 리액트에 hook, jsx, context, use함수 등 규칙들이 필요없었고, 오로지 html, css, js로 개발할 수 있다.
+
+요즘 많이 핫하고 뜨는 프레임워크라고 해서 정보들이 많을줄 알았는데 생각보다 더 정보가 없었다.
+
+구글링을 해도 스벨트 관련된 정보들이 많진 않았다. 거의 공식블로그를 많이 참고했다.
+
+그래도 앞으론 리액트를 더 공부 할 것이다. 먹고 살려면 ㅎㅎ
+

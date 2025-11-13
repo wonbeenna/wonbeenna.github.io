@@ -1,4 +1,9 @@
-const withMDX = require('@next/mdx')();
+const createMDX = require('@next/mdx')({
+  options: {
+    remarkPlugins: ['remark-gfm'],
+    rehypePlugins: ['rehype-prism-plus']
+  }
+});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -12,4 +17,4 @@ const nextConfig = {
   }
 };
 
-module.exports = withMDX(nextConfig);
+module.exports = createMDX(nextConfig);

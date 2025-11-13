@@ -1,0 +1,85 @@
+---
+title: 리액트 테스팅(3)
+date: 2022-12-26
+description: jest와 react-testing-library
+category: react
+titleImage: /assets/postIcon/test.webp
+---
+
+### fireEvent를 userEvent로 바꿔보기
+
+```shell
+npm i @testing-library/user-event
+```
+
+```js
+test('Checkbox enables button on first click and disableds on second click', async () => {
+  const user = userEvent.setup();
+
+  render(<SummaryForm />);
+
+  const checkbox = screen.getByRole('checkbox', {
+    name: /terms and conditions/i
+  });
+  const confirmButton = screen.getByRole('button', {
+    name: /confirm order/i
+  });
+
+  await user.click(checkbox);
+  expect(confirmButton).toBeEnabled();
+
+  await user.click(checkbox);
+  expect(confirmButton).toBeDisabled();
+});
+```
+
+async/await 으로 비동기 처리해주지 않으면, expect가 먼저 실행되기 때문에 오류가 발생한다
+
+---
+
+### Screen 메소드들 써보기
+
+```js
+test('popover responds to hover', async () => {
+  const user = userEvent.setup();
+
+  render(<SummaryForm />);
+
+  // popover starts out hidden
+  const nullPopover = screen.queryByText(/no ice cream will actually be delivered/i);
+  expect(nullPopover).not.toBeInTheDocument();
+
+  // popover appears on mouseover of checkbox label
+  const termsAndConditions = screen.getByText(/terms and conditions/i);
+  await user.hover(termsAndConditions);
+  const popover = screen.getByText(/no ice cream will actually be delivered/i);
+  expect(popover).toBeInTheDocument();
+
+  // popover disappears when we mouse out
+  await user.unhover(termsAndConditions);
+  expect(popover).not.toBeInTheDocument();
+});
+```
+
+- get : 요소 조회시 나타날 것으로 예상되는 경우 -> 일치하는 요소가 없으면 Error를 반환
+
+- query : 요소가 존재하는지 확인하는 경우 -> 일치하는 요소가 없으면 null을 반환
+
+- find : 요소가 비동기적으로 표시될 수 있는 경우인지
+
+```js
+const popover = (
+  <Popover id="popover-basic">
+    <Popover.Body>No ice cream will actually be delivered</Popover.Body>
+  </Popover>
+);
+
+const checkboxLabel = (
+  <span>
+    I agree to
+    <OverlayTrigger trigger={['hover', 'focus']} placement="right" overlay={popover}>
+      <span style={{color: 'blue'}}>Terms and Conditions</span>
+    </OverlayTrigger>
+  </span>
+);
+```

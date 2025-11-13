@@ -1,0 +1,123 @@
+---
+title: 웹성능 최적화(3)
+date: 2022-01-04
+description: 웹성능 최적화3
+category: javaScript
+titleImage: /assets/postIcon/react.webp
+---
+
+**[유동균님의 강의](https://www.inflearn.com/course/%EC%9B%B9-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EB%A6%AC%EC%95%A1%ED%8A%B8-1)를 보며 정리한 글 입니다.**
+
+---
+
+### 1\. Layout Shift
+
+원인
+
+1\. 사이즈가 정해져 있지 않은 이미지
+
+2\. 사이즈가 정해져 있지 않은 광고
+
+3\. 동적으로 삽입된 콘텐츠
+
+4\. Web font (FOIT, FOUT)
+
+<img src="/assets/blog/javaScript/web-optimization-3-1.png" width="100%" alt="post image"/>
+
+여러 이미지를 로드할 때, 먼저 불러온 이미지 자리를 나중에 불러온 이미지가 밀어내게 되면서 레이아웃 변경이 계속 발생한다.
+
+```js
+<ImageWrap>
+  <Image />
+</ImageWrap>
+```
+
+이때 Wrap에 고정값을 정해주고 Image는 그 값을 따라가기만 하면 된다. 여기서는 16:9 비율로 지정하기 위해 9 / 16 = 56.25%로 높이를 잡고 Image를 그 안에 넣는 방식으로 했다.
+
+<img src="/assets/blog/javaScript/web-optimization-3-2.png" width="100%" alt="post image"/>
+
+컨텐츠가 새로 들어오면서 기존 컨텐츠를 밀어내지 않도록 컨텐츠를 그려줄 곳에 미리 자리를 만들어 놓는것이다.
+
+---
+
+### 2\. React-lazyload
+
+```shell
+npm i react-lazyload
+```
+
+강의에서는 라이브러리를 사용했지만, 다음엔 스스로 구현해 포스팅해야겠다.
+
+스크롤이벤트를 사용하는 것 같다.
+
+---
+
+### 3\. useSelect 렌더링 문제
+
+<img src="/assets/blog/javaScript/web-optimization-3-3.png" width="100%" alt="post image"/>
+
+리액트 dev-tool에서 Highlight updates ... 를 체크해 컴포넌트가 렌더링되는걸 확인할 수 있다.
+
+useSelector는 dispatch로 Redux Store가 변경되면 구독하고 있는 컴포넌트에 state가 변경되었다고 알려준다.
+
+그럼 컴포넌트에서는 기존 state와 업데이트된 state를 비교해 값이 다르면 다시 렌더링 하게 된다.
+
+여기서 비교하는 방식은 useSelector의 리턴값을 비교하는데
+
+```js
+const { modalVisible, bgColor, src, alt } = useSelector(state => ({
+  modalVisible: state.modalVisible,
+  bgColor: state.bgColor,
+  src: state.src,
+  alt: state.alt,
+}));
+```
+
+리턴값을 오브젝트 형식으로 작성하면, 값을 생성할 때 마다 새로운 오브젝트를 만들기 때문에 매번 새롭게 렌더링하게 된다.
+
+```js
+const modalVisible = useSelector(state => state.modalVisible)
+const bgColor = useSelector(state => state.bgColor)
+const src = useSelector(state => state.src)
+const alt = useSelector(state => state.alt)
+```
+
+오브젝트를 새롭게 만들지 않도록 state를 쪼개고 새로운 Equality Function을 사용해야한다.
+
+```js
+const { modalVisible, bgColor, src, alt } = useSelector(state => ({
+  modalVisible: state.modalVisible,
+  bgColor: state.bgColor,
+  src: state.src,
+  alt: state.alt,
+}), shallowEqual);
+```
+
+---
+
+### 4\. Redux Reselect
+
+state의 값들을 가지고 가공해야되는 값이 있을 때 useSelector내부에서 가공해 값을 준다.
+
+```js
+const selectFilteredPhotos = createSelector([select값], (select값) => (가공할 결과를 리턴)
+const photos = useSelector(selectFilteredPhotos)
+```
+
+또 메모이제이션 방식을 통해 값을 비교하므로 불필요한 계산도 없애준다.
+
+select값이 같은 값으로 들어오면 미리 캐싱해둔 값과 비교해 값이 변하지 않으면 그대로 리턴한다.
+
+---
+
+### 5\. Memoization 적용
+
+인풋에 따라 아웃풋에 나오는 값에 대해서 미리 저장해 놓는 기법이다.
+
+a -> A가 아웃풋이다 라고 할때, 다음번에 또 a가 들어오면 로직을 일일히 실행하지않고 저장해둔 값 A를 바로 리턴하게 된다.
+
+순수함수만 가능
+
+그렇다고 무지성으로 쓰는건 좋지 않다.
+
+메모이제이션이 불필요한 함수에 적용하는건 오히려 메모리 낭비가 될 수 있다.

@@ -1,0 +1,374 @@
+---
+title: 2년간 스터디하며 배운것들
+date: 2025-03-18
+description: 2년간의 스터디를 회고하며 느낀 점과 배운 점
+category: til
+titleImage: /assets/postIcon/til.webp
+---
+
+### 들어가며
+단순한 스터디에서 시작했지만, 예비창업패키지에도 선정되며 아주 작은 스타트업처럼 운영하게 된 스터디를 회고하며 느낀 점과 배운 점을 정리해보려 한다.
+
+우리팀은 초기에 9명정도로 구성되었고, 팀장은 대학생이었으며, 나머지 구성원의 대부분이 직장인이었다.
+
+기획자, 디자이너, 백엔드, 프론트 등 다양한 역할을 담당하는 팀원들이 모여 협업을 진행했으며, 거의 스타트업과 유사한 형태로 운영되었다.
+
+2년간 휴일을 제외하고는 매주 빠짐없이 1회씩 정기 회의를 진행하였다.
+
+---
+
+초기 FE는 nx를 이용하여 monorepo로 구성하였다.
+
+Next.js을 이용하여 웹뷰기반의 앱을 구성하였고, 앱은 react-native로 빌드해 배포하였다.
+
+---
+
+### 웹뷰는 불편했다
+웹뷰에서의 제약들이 너무 많다고 느껴졌다.
+- 디바이스의 GPS를 받아와 사용자의 위치를 웹뷰로 전송하여 웹뷰에서 해당 위치를 기반으로 병원들을 검색하기도 했고, 해당 위치를 마커로 그리기도 했다.
+
+
+또한 앱에서 받은 권한들을 웹뷰로 전달하기 위한 모든 과정들이 개발자 측면에서 너무 불편하게 다가왔다.
+<img src="/assets/blog/javaScript/web-react-native.png" width="100%" alt="리액트와 리액트네이티브 차이"/>
+이미지 출처 : [toss](https://toss.tech/article/react-native-2024)
+- 앱 로딩 속도와 페이지 전환 속도에 있어서도, 앱에 비해 웹뷰는 네트워크가 조금만 느려진다거나, html, css, js를 모두 다운받아야 하기 때문에 사용자입장에서 앱이 굉장히 느리게 느껴졌다.
+- 배포 방식과 비용적인 측면
+    - 초기 MVP를 만들기 위해서는 웹뷰가 좋지만, 이후에 보다 정교한 앱을 만들기 위해서는 웹뷰는 적합하지 않다고 느꼈다.
+    - 웹뷰는 별도의 도메인 비용과 호스팅비용이 따로 들기 때문에, 장기적으로 봤을때 앱을 배포하기 위해서는 웹뷰를 사용하기보다는 앱을 개발하는 것이 더 효율적이라고 느껴졌다.
+    - 웹보다는 앱서비스가 주력이었다.
+
+---
+
+### React Native로의 전환
+웹뷰를 과감히 버리고, 새롭게 react-native로 앱을 개발하기로 했다.
+
+다행히 이전회사에서 react-native로 몇가지 앱을 개발해본 경험도있었고, 개인적으로 앱 개발에 대해 관심이 많았기 때문에, react-native로의 전환은 큰 어려움이 없었다.
+몇가지 기억나는 점들을 정리해보자면
+- 특히 지도 이슈가 컸다. 카카오, 네이버 지도의 공식 SDK가 부재했고, 지원 가능한 라이브러리는 대부분 업데이트가 중단된 상태였다. 그 중 한분의 라이브러리를 https://github.com/mym0404/react-native-naver-map 를 사용하기로 했다.
+    - 해당 라이브러리는 v2 이상은 react-native에 새로운아키텍처만 지원하였고, v1은 클러스터를 지원하지 않아 클러스터만 따로 구현하기로 했다.
+    - 클러스터를 어떤식으로 구현할지 서치해보다가 k-means알고리즘을 사용한 react-native-maps 라이브러리에서 클러스터링을 구현한 것을 보고, 해당 라이브러리를 참고하여 클러스터를 구현하였다.
+```typescript
+export const kMeansClustering = (
+  points: { latitude: number; longitude: number }[],
+  k: number,
+  maxIterations: number = 100,
+  mergeDistance: number = 500, // 병합 거리 (미터)
+): { latitude: number; longitude: number; points: { latitude: number; longitude: number }[] }[] => {
+  if (points.length === 0 || k <= 0) {
+    throw new Error('Invalid input: No points or invalid number of clusters.');
+  }
+
+  // 초기 중심점 랜덤 선택
+  const centroids = Array.from(new Set(points))
+    .sort(() => Math.random() - 0.5)
+    .slice(0, k)
+    .map(point => ({
+      latitude: point.latitude,
+      longitude: point.longitude,
+    }));
+
+  let clusters: { latitude: number; longitude: number; points: { latitude: number; longitude: number }[] }[] = [];
+  let iteration = 0;
+
+  while (iteration < maxIterations) {
+    // 클러스터 초기화
+    clusters = centroids.map(centroid => ({
+      ...centroid,
+      points: [],
+    }));
+
+    // 각 포인트를 가장 가까운 중심점에 할당
+    points.forEach(point => {
+      let closestIndex = 0;
+      let minDistance = Infinity;
+
+      centroids.forEach((centroid, index) => {
+        const distance = calculateDistance(point.latitude, point.longitude, centroid.latitude, centroid.longitude);
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestIndex = index;
+        }
+      });
+
+      clusters[closestIndex].points.push(point);
+    });
+
+    // 빈 클러스터 처리 (재배치)
+    clusters.forEach((cluster, index) => {
+      if (cluster.points.length === 0) {
+        const largestCluster = clusters.reduce((max, current) =>
+          current.points.length > max.points.length ? current : max,
+        );
+        const pointToMove = largestCluster.points.pop();
+        if (pointToMove) {
+            clusters[index].points.push(pointToMove);
+        }
+      }
+    });
+
+    // 새로운 중심점 계산
+    const newCentroids = clusters.map(cluster => {
+      const count = cluster.points.length;
+      if (count === 0) {
+          return cluster;  // 빈 클러스터는 기존 중심 유지
+      }
+
+      const avgLat = cluster.points.reduce((sum, point) => sum + point.latitude, 0) / count;
+      const avgLon = cluster.points.reduce((sum, point) => sum + point.longitude, 0) / count;
+
+      return { latitude: avgLat, longitude: avgLon };
+    });
+
+    // 중심점 업데이트
+    centroids.splice(0, centroids.length, ...newCentroids);
+
+    iteration++;
+  }
+
+  // 클러스터의 포인트가 1개인 경우 처리
+  clusters = clusters.map(cluster => {
+    if (cluster.points.length === 1) {
+      const singlePoint = cluster.points[0];
+      const nearbyPoints = points.filter(point => {
+        const distance = calculateDistance(
+          singlePoint.latitude,
+          singlePoint.longitude,
+          point.latitude,
+          point.longitude,
+        );
+        return distance <= mergeDistance && point !== singlePoint;
+      });
+
+      // 주변 포인트 추가
+      cluster.points.push(...nearbyPoints);
+
+      // 병합 후 중심점 재계산
+      cluster.latitude = cluster.points.reduce((sum, point) => sum + point.latitude, 0) / cluster.points.length;
+      cluster.longitude = cluster.points.reduce((sum, point) => sum + point.longitude, 0) / cluster.points.length;
+    }
+    return cluster;
+  });
+
+  return clusters;
+};
+```
+`1. 초기 중심점(Centroids) 설정`
+- 입력받은 포인트 중 랜덤으로 k개의 중심점을 선택
+
+`2. 포인트 할당`
+- 각 포인트를 가장 가까운 중심점에 할당
+
+`3. 빈 클러스터 처리`
+- 특정 중심점에 아무 포인트도 할당되지 않는 경우가 발생할 수 있기때문에, 가장 큰 클러스터에서 포인트를 하나 가져와서 빈 클러스터에 배치
+
+`4. 중심점 재계산`
+- 각 클러스터의 중심점 위치를 클러스터에 속한 포인트들의 평균 좌표로 다시 계산
+
+`5. 반복`
+- 중심점 위치가 거의 변하지 않을 때까지 또는 최대 반복 횟수까지 이 과정을 반복
+
+`6. 포인트가 1개인 클러스터 처리`
+- 클러스터에 포인트가 하나뿐인 경우, 일정 거리 내 다른 포인트를 추가
+
+---
+
+### 스크롤 애니메이션
+<img src="/assets/blog/javaScript/medical-animation.gif" width="300px" alt="스크롤 애니메이션"/>
+
+```typescript jsx
+  const scrollY = useSharedValue(0);
+  const { top, right, left, bottom } = useSafeAreaInsets();
+  const viewRef = useRef<FlatList>(null);
+
+  const scrollHandler = useAnimatedScrollHandler({
+    onScroll: event => {
+      scrollY.value = event.contentOffset.y;
+    },
+  });
+
+  const petWrapperStyle = useAnimatedStyle(() => {
+    const translateY = interpolate(scrollY.value, [0, 100], [0, -100], Extrapolation.CLAMP);
+    const opacity = interpolate(scrollY.value, [0, 100], [1, 0], Extrapolation.CLAMP);
+    const height = interpolate(scrollY.value, [0, 180], [180, 0], Extrapolation.CLAMP);
+
+    return {
+      transform: [{ translateY: translateY }],
+      opacity,
+      height: withTiming(height, {
+        duration: 50,
+      }),
+      overflow: 'hidden',
+      useNativeDriver: true,
+    };
+  });
+
+<>
+      <Animated.View
+        style={[
+          styles.petWrapper,
+          petWrapperStyle,
+          {
+            paddingTop: top,
+            paddingLeft: left,
+            paddingRight: right,
+          },
+        ]}
+      >
+        {...}
+      </Animated.View>
+
+      <View style={{ backgroundColor: color.white['500'] }}>
+        {...}
+      </View>
+
+      <Animated.FlatList
+        ref={viewRef}
+        scrollEventThrottle={16}
+        onScroll={scrollHandler}
+        contentContainerStyle={[styles.listWrapper]}
+        data={hospitalData}
+        keyExtractor={keyExtractor}
+        renderItem={renderItem}
+        stickyHeaderHiddenOnScroll={false}
+        ListHeaderComponent={
+          ...
+        }
+        ListFooterComponent={
+          ...
+        }
+        onEndReached={loadMore}
+        onEndReachedThreshold={0.5}
+        ListEmptyComponent={
+          ...
+        }
+      />
+    </>
+```
+위와 같은 구조에서 스크롤을 내렸을때
+```typescript jsx
+      <View style={{ backgroundColor: color.white['500'] }}>
+        {...}
+      </View>
+```
+
+해당 컴포넌트만 최상단으로 배치하고 나머지는 사라지게 하는 작업이 필요했다.
+
+먼저, useSharedValue(0)을 사용하여 스크롤 위치를 실시간으로 추적하고, 스크롤이 발생할 때마다 scrollHandler가 호출되면서, 현재의 스크롤 값을 scrollY.value에 저장했다.
+
+저장된 scrollY에 따라 사라지게 해야하는 컴포넌트의 스타일을 useAnimatedStyle을 사용하여 애니메이션 효과를 주었다.
+
+```typescript jsx
+  const petWrapperStyle = useAnimatedStyle(() => {
+    const translateY = interpolate(scrollY.value, [0, 100], [0, -100], Extrapolation.CLAMP);
+    const opacity = interpolate(scrollY.value, [0, 100], [1, 0], Extrapolation.CLAMP);
+    const height = interpolate(scrollY.value, [0, 180], [180, 0], Extrapolation.CLAMP);
+
+    return {
+      transform: [{ translateY: translateY }],
+      opacity,
+      height: withTiming(height, {
+        duration: 50,
+      }),
+      overflow: 'hidden',
+      useNativeDriver: true,
+    };
+  });
+```
+
+react-native-reanimated의 interpolate를 사용하여 스크롤 위치에 따라 translateY, opacity, height를 조정하였다.
+
+- translateY: 스크롤이 0 ~ 100일 때 위로 최대 -100만큼 이동.
+- opacity: 스크롤이 0 ~ 100일 때 투명도가 1 → 0으로 변화.
+- height: 스크롤이 0 ~ 180일 때 높이가 180 → 0으로 줄어듬.
+
+결과적으로, 사용자가 위로 스크롤하면, 영역은 점점 위로 이동하며 투명하게 사라지고 높이도 축소된다.
+
+### 1차 MVP 배포와 예비창업패키지 선정
+병원지도, 병원상세페이지, 가격정보와 리뷰 등을 제공하는 앱을 개발하여 1차 MVP를 배포하였다.
+
+이때 예비창업패키지에 선정되었고, 약 5천만원 이상의 지원금을 받을 수 있었다.
+
+해당금액은 마케팅, 인건비, 서버비용, 기타 작업 툴 비용 등으로 사용되었다.
+
+---
+
+### 예비창업패키지 이후: 2차, 3차 업데이트
+시간이 지날수록 9명 정도에서 시작했던 팀원은 5명까지 줄게되었다. 나는 계속 퇴근 후 파트로 작업을 했고, 풀타임으로 작업을 하실 인원들이 새로 합류하신 시기이기도 했다.
+
+1차 때보다는 좀 더 창업의 형태로 바뀌었고 다른 구성원들의 책임감과 몰입도가 더 필요했던 시기였던것 같다.
+
+2차와 3차에는 앱의 디자인을 리뉴얼하고, 로그인과 유저의 펫정보 등록, 진료별로 병원을 검색할 수 있는 리스트, 네이버 스마트스토어를 이용한 상품판매, 병원예약 등 많은 기능들을 추가하게 되었다.
+
+<div style={{
+    display: 'flex',
+    justifyContent: 'space-between',
+}}>
+    <div>
+        <h3>as-is</h3>
+        <img src="/assets/blog/javaScript/old-main.png" alt="구 메인페이지"/>
+    </div>
+    <div>
+        <h3>to-be</h3>
+        <img src="/assets/blog/javaScript/new-main.png" alt="새로운 메인페이지"/>
+    </div>
+</div>
+
+---
+
+### SEO를 위한 웹사이트
+2, 3차 업데이트를 진행하면서 마케팅에 필요한 웹사이트가 필요했다.
+
+웹사이트는 앱내에 기능 중 몇가지만 제공하기로 했고, 검색엔진에 노출되는 것과, 마케팅을 위한 랜딩페이지로 사용하기로 했다.
+
+Next.js로 돌아가서 개발하는데 SEO에 최대한 초점을 맞추어 작업을 진행했다.
+
+<img src="/assets/blog/javaScript/lighthouse.png" alt="lighthouse 점수"/>
+
+이때 아마 SEO에 대한 관심이 많이 생겼던것 같다. meta 태그와 og 태그, sitemap.xml, robots.txt 등을 설정하고, SSR과 SSG를 적절히 사용하여 페이지를 구성하였다.
+
+lighthouse 점수를 최대한 높이기 위해 노력했고, 실제로도 검색엔진에 잘 노출되는지 확인하기위해 구글 서치콘솔, 네이버 서치어드바이저에 등록하여 확인하였고, 구글 애널리틱스와 태그매니저를 이용하여 방문자 수와 페이지뷰 등을 확인할 수 있었다.
+
+---
+
+### 2년의 과정 속에서 얻은 것과 아쉬운 점
+작은 스터디로 시작한 모임이 이렇게 긴 시간동안 지속되는게 쉽지 않다는걸 알고있다. 이전에도 비슷한 스터디를 많이 해봤지만, 여러 사정들로 인해 중간에 흐지부지되거나, 팀원들이 바뀌는 경우가 많았다.
+
+하지만, 팀원들 서로가 각자의 위치에서 최선을 다하고, 서로를 존중하며 배려하는 모습이 너무 좋았다. 특히, 팀원들이 각자의 역할을 충실히 수행하고, 서로의 의견을 존중하며 협업하는 모습이 인상적이었다.
+
+기술적 성장은 물론이고 비즈니스 관점에서도 많은 것을 배울 수 있었다.
+
+<div style={{
+    display: 'flex',
+    width: '100%',
+}}>
+    <div style={{
+        display: 'flex',
+        width: '100%',
+        flex: 1
+    }}>
+        <img src="/assets/blog/javaScript/gift-1.JPG" width='50%' alt="선물1"/>
+        <img src="/assets/blog/javaScript/gift-2.JPG" width='50%' alt="선물2"/>
+    </div>
+    <div style={{
+        display: 'flex',
+        width: '100%',
+        flex: 1
+    }}>
+        <img src="/assets/blog/javaScript/gift-3.JPG" width='50%' alt="선물3"/>
+        <img src="/assets/blog/javaScript/gift-4.JPG" width='50%' alt="선물4"/>
+    </div>
+</div>
+
+<p>매년 명절마다 과일을 보내주시는 팀장님</p>
+
+
+
+아쉬웠던 점은 초반에 기술 스택 선택에 대한 검증과, 아무래도 팀원들 모두 퇴근 후 빠듯한 시간에 작업을 하다보니, 깊게 나누지 못한 리뷰나 회고 등 이었다.
+
+앞으로는 스터디를 진행하는 과정동안 기술적인 회고와 이슈 기록, 고민했던 부분들을 정리하는 시간을 가질 것이다.
+
+---
+
+25년도 지원사업은 아쉽게도 떨어졌다. 낮은 진입장벽, 데이터 수집 한계, 구조가 비슷한 플랫폼에 손익분기 달성 실패, 낮은 재방문 주기 등이 이유였다.
+
+현재 내부에서는 다양한 의견들이 오가고있다. 아무래도 프로젝트를 유지하는데는 비용적인 문제가 가장 크기때문에, 수익모델 개선, 다른 신사업 아이템들을 고민하고 있다.

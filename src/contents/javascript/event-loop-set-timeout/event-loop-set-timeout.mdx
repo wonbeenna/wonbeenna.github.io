@@ -1,0 +1,207 @@
+---
+title: 이벤트루프와 setTimeout
+date: 2025-11-08
+description: 자바스크립트의 이벤트 루프와 setTimeout 함수의 오차
+category: javaScript
+titleImage: /assets/postIcon/javascript.webp
+---
+
+자바스크립트는 싱글 스레드 언어로, 한번에 하나의 작업만 처리할 수 있다.
+스레드는 프로세스가 실행되는 단위인데, 말그대로 스레드가 하나만 존재하기 때문에, 일을 처리하는 도중에 다른 일을 처리할 수 없다.
+그런데, 실제 웹에서는 수많은 작업들이 동시에 진행되는것 처럼 보인다.
+
+이러한 동시성 문제를 해결하기 위해 자바스크립트는 이벤트 루프(Event Loop)라는 메커니즘을 사용한다.
+
+---
+
+## 자바스크립트 엔진
+자바스크립트 엔진은 크게 콜 스택(Call Stack), 힙(Heap), 콜백 큐(Callback Queue)로 구성된다.
+
+- 콜 스택: 현재 실행 중인 함수들이 쌓이는 곳
+- 힙: 동적으로 할당된 메모리가 저장되는 곳
+- 콜백 큐: 비동기 작업이 완료된 후 실행될 콜백 함수들이 대기하는 곳
+    - 태스트(매크로) 큐 : 일반적인 콜백 함수들이 대기하는 큐 (예: setTimeout, setInterval)
+    - 마이크로태스크 큐 : 프로미스의 then/catch/finally 콜백과 같은 마이크로태스크가 대기하는 큐 (예: Promise.then, MutationObserver)
+    - 애니메이션 프레임 : requestAnimationFrame 콜백이 대기하는 큐
+- 이벤트 루프: 콜 스택과 콜백 큐를 감시하며, 콜 스택이 비어있을 때 콜백 큐에서 함수를 꺼내 콜 스택에 넣는 역할
+
+## 이벤트 루프 작동 원리
+1. 콜스택이 비어있는지 확인
+2. 마이크로태스크 큐에 대기중인 작업이 있는지 확인하고, 있으면 모두 콜스택에 추가
+3. requestAnimationFrame 실행
+4. 렌더 작업 수행
+5. 매크로큐에서 작업을 하나 꺼내 콜스택에 추가
+6. 1~5 과정을 반복
+
+```javascript
+console.log("sync 1");
+
+setTimeout(() => console.log("timeout"), 0);
+
+Promise.resolve()
+  .then(() => console.log("micro 1"))
+  .then(() => console.log("micro 2"));
+
+console.log("sync 2");
+```
+
+위 코드를 실행하면 다음과 같은 순서로 출력된다.
+
+```
+sync 1
+sync 2
+micro 1
+micro 2
+timeout
+```
+
+<img src="/assets/blog/javaScript/event-loop.gif" width="100%" alt="post image"/>
+[이미지 출처](https://dev.to/lydiahallie/javascript-visualized-promises-async-await-5gke)
+
+### async/await
+async/await는 프로미스를 더 쉽게 다룰 수 있도록 해주는 문법이다.
+async 함수는 항상 프로미스를 반환하며, await 키워드는 프로미스가 해결될 때까지 함수의 실행을 일시 중지시킨다.
+
+```javascript
+async function asyncFunction() {
+  console.log("async start");
+  await Promise.resolve();
+  console.log("async end");
+}
+
+console.log("sync 1");
+asyncFunction();
+console.log("sync 2");
+```
+
+위 코드를 실행하면 다음과 같은 순서로 출력된다.
+
+```
+sync 1
+async start
+sync 2
+async end
+```
+
+1. "sync 1"이 출력된다.
+2. asyncFunction이 호출되고, "async start"가 출력된다.
+3. await Promise.resolve()에서 함수 실행이 일시 중지되고, 제어가 호출한 곳으로 돌아간다.
+4. "sync 2"가 출력된다.
+5. 프로미스가 해결되면, asyncFunction의 실행이 재개되고 "async end"가 출력된다.
+
+---
+
+## setTimeout의 오차
+setTimeout 함수는 지정된 시간 후에 콜백 함수를 실행하도록 예약한다. 하지만, 이 시간이 정확히 지켜지지는 않는다.
+이는 자바스크립트의 이벤트 루프와 관련이 있다.
+
+```javascript
+function measureTimeoutDelay(delay = 1000, count = 5) {
+  let expected = performance.now() + delay;
+
+  for (let i = 0; i < count; i++) {
+    setTimeout(() => {
+      const now = performance.now();
+      console.log(`✅ 요청: +${delay}ms, 실제: +${(now - expected).toFixed(2)}ms`);
+      expected += delay;
+    }, expected - performance.now());
+  }
+}
+
+measureTimeoutDelay(1000, 5);
+```
+
+위 코드는 1초 간격으로 5번의 setTimeout을 설정하고, 실제 실행 시간과 예상 시간의 차이를 출력한다.
+실행 결과는 다음과 같다.
+
+```
+✅ 요청: +1000ms, 실제: +0.30ms
+✅ 요청: +1000ms, 실제: +-999.50ms
+✅ 요청: +1000ms, 실제: +-1999.40ms
+✅ 요청: +1000ms, 실제: +-2999.40ms
+✅ 요청: +1000ms, 실제: +-3999.40ms
+```
+
+시간이 지나면서 오차가 누적되고 있다. 이는 이벤트 루프가 콜 스택이 비어있을 때만 콜백을 실행하기 때문에, 다른 작업이 많아지면 지연될 수 있기 때문이다.
+또 다른 요인으로는 브라우저의 최소 타이머 지연 시간이 있다. 대부분의 브라우저는 4ms 이상의 최소 지연 시간을 적용한다. 하지만 반드시 이 시간에 실행될 것을 보장하지 않는다.
+콜 스택이 이미 비어있는 상태라 하더라도 이벤트 루프가 다른 큐들을 체크하는 시간과 이동하는 시간을 고려한다면 오차가 발생할 수밖에 없다.
+
+### 정확한 타이머 사용
+1. 보정 타이머 사용 : setTimeout을 반복적으로 호출할 때, 이전 실행 시간을 기준으로 다음 실행 시간을 계산하여 오차를 줄인다.
+```javascript
+function accurateInterval(callback, interval = 1000) {
+  let expected = performance.now() + interval;
+
+  function step() {
+    const drift = performance.now() - expected;
+    callback(drift);
+
+    expected += interval;
+    setTimeout(step, Math.max(0, interval - drift));
+  }
+
+  setTimeout(step, interval);
+}
+
+accurateInterval((drift) => {
+  console.log(`실행! 드리프트: ${drift.toFixed(2)}ms`);
+}, 1000);
+```
+```
+실행! 드리프트: 1.40ms
+실행! 드리프트: 0.80ms
+실행! 드리프트: 1.30ms
+실행! 드리프트: 1.00ms
+실행! 드리프트: 1.30ms
+실행! 드리프트: 0.50ms
+```
+
+2. requestAnimationFrame 사용 : 애니메이션이나 UI 업데이트에 대해서는 requestAnimationFrame을 사용하여 브라우저의 렌더링 주기에 맞춰 실행한다.
+```javascript
+function animationTimer(interval = 1000, callback) {
+  let last = performance.now();
+
+  function loop(now) {
+    if (now - last >= interval) {
+      callback();
+      last = now;
+    }
+    requestAnimationFrame(loop);
+  }
+
+  requestAnimationFrame(loop);
+}
+
+animationTimer(1000, () => console.log("1초!"));
+```
+
+3. Web Workers 사용 : 백그라운드에서 작업을 처리하여 메인 스레드의 부하를 줄인다.
+```javascript
+// worker.js
+self.onmessage = (e) => {
+  const { interval } = e.data;
+  function tick() {
+    self.postMessage("tick");
+    setTimeout(tick, interval);
+  }
+  tick();
+};
+
+// main.js
+const worker = new Worker('worker.js');
+worker.postMessage({ interval: 1000 });
+worker.onmessage = (e) => {
+  console.log(e.data); // "tick"
+};
+```
+
+---
+
+## 마치며
+자바스크립트의 이벤트 루프에 대해서 이해하고 있는 것이 비동기 작업을 처리하는데 큰 도움이 될것같다.
+특히 이러한 작업들이 어떻게 우선순위를 가지는지, 그리고 setTimeout과 같은 타이머 함수들이 어떻게 동작하는지 이해하는것이 중요하다.
+setTImeout과 setInterval은 자바스크립트에서 비동기 작업을 처리고 타이머로 사용할 수 있지만, 이벤트 루프의 특성상 정확한 타이밍을 보장하지는 않는다.
+따라서, 정확한 타이머가 필요한 경우에는 보정 타이머, requestAnimationFrame, Web Workers 등의 대안을 고려하는 것이 좋다.
+
+
+

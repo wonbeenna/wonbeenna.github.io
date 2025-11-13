@@ -1,0 +1,136 @@
+---
+title: Audio객체를 이용한 음악 재생
+date: 2023-05-27
+description: Audio객체를 사용한 기업 과제 구현
+category: react
+titleImage: /assets/postIcon/react.webp
+---
+
+얼마전 기업과제를 진행했다. Audio 객체를 이용한 음악 재생이었다.
+
+https://developer.mozilla.org/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API
+
+## Audio 객체
+웹에서 음악을 재생하기 위해서는 new Audio 객체를 생성하거나, `<audio>` 태그를 사용해 Audio 객체를 가져올 수도 있다.
+
+Audio 객체는 음악을 재생하고, 일시정지하고, 음악의 길이를 구하는 등의 기능을 제공한다.
+
+Audio 객체는 다음과 같이 생성한다.
+
+```jsx
+let audio = new Audio(url);
+```
+
+```jsx
+<audio src={url} />;
+```
+
+과제를 제출하고 알게 되었는데, new Audio 객체를 사용하면 화면 밖에서도 audio를 다룰 수 있기때문에 `audio`태그를 사용할 필요가 없었다.
+
+둘중 하나만 사용해 Audio를 다룰 수 있는 객체를 가져오면 된다.
+
+```javascript
+let audio = document.querySelector('audio');
+audio.play();
+audio.pause();
+```
+
+과제에서는 new Audio를 사용해 구현 하였다.
+```jsx
+  useEffect(() => {
+    setAudio(new Audio(url));
+}, [url, setAudio]);
+```
+먼저 server에서 받아온 Url을 state에 담아 주었고
+
+```jsx
+  useEffect(() => {
+    if (audio && isPlaying) {
+        audio?.play();
+    }
+}, [audio, isPlaying]);
+```
+
+리스트에서 음악을 선택하면 `isPlaying`이 true가 되고, `audio`가 생성되면 `audio.play()`를 실행한다.
+
+재생과 일시정지도 추가가 되어야 했다.
+
+```jsx
+const handlePlayButton = () => {
+    if (audio?.paused) {
+        return audio.play();
+    }
+    return audio?.pause();
+}
+```
+음악이 정지중일땐 play, 음악이 재생중일땐 pause를 실행한다.
+
+---
+
+음악이 재샐중일때 progress bar도 구현이 필요했다.
+
+```jsx
+const [rangeValue, setRange] = useState<number>(0);
+const [currentTime, setCurrentTime] = useState<string>('00:00');
+const [duration, setDuration] = useState<string>('00:00');
+
+<progress
+    className="progress"
+    value={Math.floor(rangeValue)}
+    max="100"
+    aria-valuemin={0}
+    aria-valuemax={100}
+    aria-valuenow={Math.floor(rangeValue)}
+    onClick={handleChangeProgressRange}
+/>
+```
+
+`rangeValue`는 progress bar의 value값을 나타내고, `currentTime`는 현재 재생중인 시간을 나타낸다.
+
+`duration`는 음악의 전체 길이를 나타낸다.
+
+재생시간과 음악의 전체 길이가 `00:00`으로 표시되었어야했기 때문에 format함수를 만들었고, eventListener를 통해 재생시간과 음악의 전체 길이를 구했다.
+
+```js
+export const getMusicTimeFormat = (time = 0) => {
+  let minutes = Math.floor((time % 3600) / 60)
+    .toString()
+    .padStart(2, '0');
+  let seconds = Math.floor(time % 60)
+    .toString()
+    .padStart(2, '0');
+
+  return minutes + ':' + seconds;
+};
+```
+```jsx
+  useEffect(() => {
+    audio?.addEventListener('timeupdate', () => {
+        setDuration(getMusicTimeFormat(audio.duration || 0));
+        setCurrentTime(getMusicTimeFormat(audio.currentTime));
+        setRange((audio?.currentTime / audio?.duration || 0) * 100);
+    });
+}, [audio]);
+````
+
+`timeupdate`이벤트는 음악이 재생중일때마다 발생한다.
+
+```js
+  const handleChangeProgressRange = (e: React.MouseEvent<HTMLProgressElement>) => {
+    if (audio) {
+        let clickPosition = e.pageX - e.currentTarget.offsetLeft;
+        let clickedValue = (clickPosition * e.currentTarget.max) / e.currentTarget.offsetWidth;
+        audio.currentTime = (parseInt(String(clickedValue), 10) / 100) * audio.duration;
+        setRange(parseInt(String(clickedValue), 10));
+    }
+};
+```
+progressbar를 클릭했을 때는 해당 위치부터 audio를 재생해야했다.
+`clickPosition`은 progressbar를 클릭한 위치를 나타내고, `clickedValue`는 progressbar의 value값을 나타낸다.
+
+- e.pageX = 브라우저 상의 마우스 클릭 위치
+- e.currentTarget.offsetLeft = progressbar의 x축(왼쪽) 위치
+- e.currentTarget.max = progressbar의 최대값
+- e.currentTarget.offsetWidth = progressbar의 전체 너비
+
+

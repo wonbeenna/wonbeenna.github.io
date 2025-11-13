@@ -1,0 +1,256 @@
+---
+title: 웹 접근성 (A11y)
+date: 2025-08-29
+description: 웹 접근성(A11y)에 대한 이해와 실천 방법
+category: study
+titleImage: /assets/postIcon/javascript.webp
+---
+
+## 웹 접근성이란?
+
+웹 접근성이란 장애가 있는 사람을 포함해 모든 사용자가 동등하게 웹에 접근하고 이용할 수 있도록 보장하는 것을 의미
+
+더 많은 사용자에게 도달할 수 있고, 성능 최적화, 사용자 경험(UX)을 개선하며, 검색엔진 최적화(SEO)에도 긍정적인 효과가 있음
+
+웹 접근성은 “특정 집단(장애인)”이 아닌 모든 사람을 위한 기본 설계 원칙
+
+## 시멘틱 마크업
+
+[mdn](https://developer.mozilla.org/ko/docs/Glossary/Semantics)
+
+div와 span 대신 header, main, nav, article, section, footer와 같은 시맨틱 태그 활용.
+
+버튼은 반드시 `<button>` 태그를 사용. (div에 onClick 대신)
+
+```html
+<!-- X -->
+<div onclick="submitForm()">제출</div>
+
+<!-- O -->
+<button type="submit">제출</button>
+```
+
+## 대체 텍스트
+
+이미지에는 항상 alt 속성을 제공
+
+장식용 이미지는 alt=""로 설정하여 스크린 리더가 읽지 않도록 함
+
+```html
+    <img src="logo.png" alt="pass 로고" />
+```
+
+## 상호작용 요소 목록
+
+상호작용 요소 중 하나를 포함하는 요소 안에는 또 다른 상호작용 요소를 넣을 수 없다
+
+```html
+    <!-- X -->
+    <a href="/">
+      <Button>확인</Button>
+    </a>
+
+    <!-- X -->
+    <button>
+      시설관리
+      <button>
+        x
+      </button>
+    </button>
+```
+
+- `<a>`
+- `<audio>`
+- `<button>`
+- `<details>`
+- `<embed>`
+- `<iframe>`
+- `<img>`
+- `<input>`
+- `<keygen>`
+- `<label>`
+- `<menu>`
+- `<object>`
+- `<select>`
+- `<textarea>`
+- `<video>`
+
+## a 태그와 button 태그
+
+라우팅시에는 `<a>` 태그 사용
+
+`<a>` 태그: 웹 표준상 “다른 리소스로 이동”을 의미 → 페이지 이동, 라우팅에 적합
+
+`<button>` 태그: 현재 페이지 내에서 특정 동작(폼 제출, 모달 열기 등)을 실행하는 요소
+
+```jsx
+// react-router-dom
+
+// O
+<Link to="/profile">프로필</Link>
+
+// X
+<button onClick={() => navigate('/profile')}>프로필</button>
+```
+
+시맨틱 태그에 따라 마우스 오른쪽 버튼을 클릭했을때 나타나는 컨텍스트 메뉴가 다르다
+
+<div style={{
+    display: 'flex',
+    gap: '16px',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    alignItems: 'center',
+}}>
+    <img style={{
+        width: 250,
+        height: 300
+    }} src="/assets/blog/javaScript/a-tag.png" alt="a 태그 컨텍스트 메뉴" />
+    <img style={{
+        width: 250,
+        height: 300
+    }} src="/assets/blog/javaScript/button-tag.png" alt="button 태그 컨텍스트 메뉴" />
+</div>
+
+```html
+<a> 태그
+<button> 태그
+```
+
+## ARIA
+
+ARIA (Accessible Rich Internet Applications)는 웹 애플리케이션을 보조기기(스크린리더 등)에서도 이해할 수 있도록 돕는 속성들의 모음
+
+HTML의 시맨틱 태그만으로는 표현하기 어려운 상태, 역할, 속성을 전달할 때 사용
+
+👉 ARIA는 보완 수단, HTML 기본 시맨틱 요소로 표현할 수 있다면 ARIA보다 태그를 우선 사용하는 게 원칙
+
+### 주요 구성 요소
+
+- role
+요소의 역할을 정의 (button, switch, dialog, tab 등)
+
+- aria-속성
+상태나 설명을 보조기기에 전달 (aria-checked, aria-hidden, aria-expanded, aria-describedby 등)
+
+### 예시
+
+```jsx
+    <button
+        type="button"
+        role="switch"
+        aria-checked={checked}
+        disabled={disabled}
+        onClick={handleCheckedClick}
+        {...rest}
+    >
+    {...}
+    </button>
+```
+
+1. role="switch"
+
+HTML에는 토글 스위치(Switch)라는 시맨틱 태그가 존재하지 않음
+
+role="switch"를 주면, 스크린리더는 “스위치”로 읽고, 켜짐/꺼짐 상태를 인지할 수 있음
+
+2. aria-checked=checked
+
+스위치의 현재 상태를 전달
+
+true → “켜짐(on)”, false → “꺼짐(off)” 으로 읽어줌
+
+스크린리더 사용자는 버튼의 현재 상태를 바로 알 수 있음
+
+3. disabled=disabled
+
+네이티브 HTML 속성. 버튼이 비활성화되어 있음을 알려줌
+
+스크린리더는 “비활성화됨”이라고 읽어줌
+
+4. onClick=handleCheckedClick
+
+스위치를 토글하는 이벤트 핸들러
+
+보조기기 사용자도 키보드 Enter / Space로 조작할 수 있음 (버튼의 기본 기능)
+
+
+---
+
+## 키보드 접근성
+
+- 모든 기능은 키보드만으로 사용 가능해야 함 (Tab, Shift+Tab, Enter, Space, 화살표 등)
+- 포커스 순서는 시각적/논리적 순서와 일치해야 함
+- `tabindex`는 0 또는 -1만 사용 (양수 사용 금지)
+
+```html
+    <!-- 비대화형 요소에 포커스 필요할 때만 -->
+    <div tabindex="-1" id="result" aria-live="polite"></div>
+```
+
+## 포커스 표시와 스타일
+
+- 포커스는 항상 **보이게** 해야 함 (outline 제거 금지)
+- `:focus-visible`로 키보드 사용자에게만 뚜렷한 포커스 제공
+
+```css
+    button:focus-visible,
+    a:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 2px;
+    }
+```
+
+## 링크 텍스트
+
+- 링크 텍스트만으로 목적 이해 가능해야 함 (“여기”, “더보기” 지양)
+- 동일한 텍스트가 여러 곳이면 시각적으로 같아도 **접근성 이름**은 구분
+
+```html
+    <a href="/docs" aria-label="문서 센터 바로가기">문서</a>
+    <a href="/pricing" aria-label="요금제 안내 바로가기">문서</a>
+```
+
+## 폼과 에러 처리
+
+- 모든 입력은 `<label for>`로 연결
+- 힌트/에러 메시지는 `aria-describedby`로 묶어 읽히게 함
+- 유효성 검사는 실시간 제공 + 제출 시 요약 제공
+
+```html
+    <label for="email">이메일</label>
+    <input id="email" name="email" type="email" aria-describedby="email-hint email-err" required>
+    <p id="email-hint">회사 이메일 형식 권장</p>
+    <p id="email-err" class="visually-hidden" role="alert"></p>
+
+    <script>
+        const input = document.getElementById('email');
+        const err = document.getElementById('email-err');
+        input.addEventListener('invalid', () => { err.textContent = '올바른 이메일 주소를 입력'; });
+    </script>
+```
+
+## 헤딩 구조
+
+- `<h1>`은 페이지 당 하나, 이후 순차적으로 `<h2>`, `<h3>`…
+- 시각적 크기 조절은 CSS로, 헤딩 레벨은 건드리지 않기
+
+```html
+    <h1>제품</h1>
+    <h2>개요</h2>
+    <h3>주요 기능</h3>
+```
+
+## 모달/다이얼로그
+
+- 열릴 때 포커스 모달 안으로 이동, 닫히면 트리거로 복귀
+- 배경은 스크린리더/탭 탐색에서 제외 (`aria-modal="true"`)
+- 제목/설명 연결
+
+```html
+<div role="dialog" aria-modal="true" aria-labelledby="dlg-title" aria-describedby="dlg-desc">
+    <h2 id="dlg-title">설정</h2>
+    <p id="dlg-desc">알림 설정을 변경</p>
+    <button type="button">저장</button>
+</div>
+```

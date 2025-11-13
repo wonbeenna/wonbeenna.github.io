@@ -1,0 +1,191 @@
+---
+title: 바벨 사용해보기
+date: 2023-12-01
+description: 바벨 기본 동작과 사용방법
+category: javaScript
+titleImage: /assets/postIcon/babel-icon.svg
+---
+
+## 바벨이란?
+바벨은 자바스크립트 컴파일러이다.
+사실 자세히 보면 컴파일러보다는 트랜스파일러에 가깝다.
+
+자바스크립트를 자바스크립트로 변환해야하는 이유가 뭘까?
+
+자바스크립트는 크롬, 파이어폭스, 사파리, 익스플로러 등 다양한 브라우저에서 사용되는데, 각 브라우저마다 자바스크립트 엔진이 다르다.
+이러한 자바스크립트 엔진은 자바스크립트 코드를 실행하기 위해 자바스크립트 코드를 기계어로 변환하는데, 이 변환 과정에서 각 브라우저마다 다른 방식으로 변환한다.
+이러한 이유로 자바스크립트 코드를 작성할 때는 크로스 브라우징 이슈를 고려해야 한다. 바벨은 이러한 크로스 브라우징 이슈를 해결하기 위해 사용한다.
+
+---
+
+### 컴파일러
+컴파일러란 소스코드를 입력받아 그것을 다른 프로그래밍 언어로 옮기는 것을 말한다.
+예를들어 자바스크립트로 작성한 고급 프로그래밍 언어를 컴퓨터가 이해할 수 있는 어셈블리어로 변환하는 것이다.
+
+### 트랜스파일러
+트랜스파일러란 소스코드를 입력받아 그것을 같은 프로그래밍 언어(유사한 언어)의 다른 버전으로 옮기는 것을 말한다.
+
+---
+
+## 바벨의 동작
+바벨은 ECMAScript2015+ 버전의 코드를 하위 버전의 코드로 변환한다.
+이렇게 변환된 코드는 IE11을 포함한 구형 브라우저에서도 동작한다.
+
+바벨은 세 단계로 빌드를 진행한다.
+1. 파싱(Parsing) : 코드를 읽어서 추상 구문 트리 AST(Abstract Syntax Tree)로 변환한다.
+2. 변환(Transformation) : AST를 원하는 형태로 변환한다.
+3. 출력(Printing) : 변환된 AST를 코드로 출력한다.
+
+먼저 바벨을 설치한다
+```shell
+npm install -D @babel/core @babel/cli
+```
+
+```javascript
+const alert = msg => window.alert(msg);
+```
+
+위 코드를 바벨로 변환하면 아무런 변화가 없다.
+
+```shell
+npx babel app.js
+```
+
+```javascript
+const alert = msg => window.alert(msg);
+```
+
+---
+
+### 바벨 플러그인
+@babel/plugin-transform-block-scoping 플러그인을 사용해보자.
+
+```shell
+npm install -D @babel/plugin-transform-block-scoping
+```
+
+먼저 root 디렉토리에 babel.config.js 파일을 생성하고
+
+```javascript
+// babel.config.js
+    module.exports = {
+        plugins: [
+            '@babel/plugin-transform-block-scoping'
+        ]
+    }
+```
+
+```javascript
+const alert = msg => window.alert(msg);
+```
+
+위 코드를 바벨로 변환하면 아래와 같이 변환된다.
+
+```javascript
+var alert = msg => window.alert(msg);
+```
+
+위 플러그인은 const, let 키워드를 var 키워드로 변환한다.
+
+---
+
+arrow function과 strict mode를 사용해보자.
+
+```shell
+npm install -D @babel/plugin-transform-arrow-functions @babel/plugin-transform-strict-mode
+```
+
+위 코드를 바벨로 변환하면 아래와 같이 변환된다.
+
+```javascript
+"use strict";
+
+var alert = function alert(msg) {
+  return window.alert(msg);
+};
+```
+
+---
+
+### 바벨 프리셋
+바벨 프리셋은 바벨 플러그인을 모아놓은 것이다.
+
+위 세가지 플러그인은 아래 프리셋에 모두 포함되어 있다.
+
+```shell
+npm install -D @babel/preset-env
+```
+
+```javascript
+// babel.config.js
+    module.exports = {
+        presets: [
+            '@babel/preset-env'
+        ]
+    }
+```
+
+```javascript
+const alert = msg => window.alert(msg);
+```
+
+위 코드를 바벨로 변환하면 아래와 같이 변환된다.
+
+```javascript
+"use strict";
+
+var alert = function alert(msg) {
+  return window.alert(msg);
+};
+```
+
+추가로 각 프리셋들은 옵션들을 제공하는데
+
+```javascript
+// babel.config.js
+    module.exports = {
+        presets: [
+            [
+                '@babel/preset-env',
+                {
+                    targets: {
+                        chrome: '79',
+                        ie: '11'
+                    },
+                    useBuiltIns: 'usage',
+                    corejs: {
+                        version: 2
+                    }
+                }
+            ]
+        ]
+    }
+```
+위처럼 지원하는 브라우저의 버전을 설정하거나, 폴리필을 사용할지 설정할 수 있다.
+
+---
+
+### 웹팩과 통합
+바벨은 직접 사용하진 않고 웹팩과 같은 모듈 번들러와 통합해서 사용한다.
+
+```shell
+npm install -D babel-loader
+```
+
+```javascript
+// webpack.config.js
+module.exports = {
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader'
+            }
+        ]
+    }
+}
+```
+js 확장자로 끝나는 모든 파일에 babel-loader를 적용한다.
+또 node_modules 디렉토리는 제외한다.
+
