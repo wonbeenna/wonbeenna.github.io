@@ -3,9 +3,8 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
 import Nav from '@/layout/Nav';
-import NavButtons from '@/components/common/NavButtons';
+import NavButtons from '@/layout/NavButtons';
 import { cn } from '@/utils/cn';
 import { useTheme } from 'next-themes';
 import useBodyOverflowHidden from '@/hooks/useBodyOverflowHidden';
@@ -15,7 +14,6 @@ const MOBILE_BREAKPOINT_PX = 640;
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();
   const menuRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const { systemTheme, theme, setTheme } = useTheme();
@@ -43,10 +41,6 @@ const Header = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
-  useEffect(() => {
-    setIsOpen(false);
-  }, [pathname]);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -135,7 +129,12 @@ const Header = () => {
       >
         <Nav mobile onNavigate={() => setIsOpen(false)} />
         <div className="my-3">
-          <NavButtons theme={theme} setTheme={setTheme} currentTheme={currentTheme} />
+          <NavButtons
+            theme={theme}
+            setTheme={setTheme}
+            currentTheme={currentTheme}
+            onNavigate={() => setIsOpen(false)}
+          />
         </div>
       </div>
     </header>

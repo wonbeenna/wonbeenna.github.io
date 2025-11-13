@@ -4,6 +4,12 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/utils/cn';
 
+const navItems = [
+  { href: '/blog', label: 'Blog' },
+  { href: '/about', label: 'About' },
+  { href: '/photo', label: 'Photo' }
+];
+
 interface NavProps {
   mobile?: boolean;
   onNavigate?: () => void;
@@ -11,12 +17,6 @@ interface NavProps {
 
 const Nav = ({ mobile = false, onNavigate }: NavProps) => {
   const pathname = usePathname();
-
-  const navItems = [
-    { href: '/blog', label: 'Blog' },
-    { href: '/about', label: 'About' },
-    { href: '/photo', label: 'Photo' }
-  ];
 
   return (
     <nav className={cn('flex items-center', mobile && 'flex-col gap-3 py-4')} aria-label="Primary navigation">
@@ -27,7 +27,7 @@ const Nav = ({ mobile = false, onNavigate }: NavProps) => {
           <Link
             key={item.href}
             href={item.href}
-            onClick={onNavigate}
+            onNavigate={onNavigate}
             className={cn(
               'rounded-md px-3 py-1.5 text-lg transition-colors md:text-base',
               isActive
