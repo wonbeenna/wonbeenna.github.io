@@ -4,6 +4,7 @@ const withMDX = require('@next/mdx')();
 const nextConfig = {
   output: 'export',
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+  reactCompiler: true,
   images: {
     loader: 'custom',
     loaderFile: './src/lib/my-image-loader.ts',
