@@ -62,18 +62,22 @@ const Header = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isOpen]);
 
-  useEffect(() => {
-    const el = menuRef.current;
-    if (el) {
-      if (isOpen) {
-        el.removeAttribute('inert');
-        el.setAttribute('aria-hidden', 'false');
-      } else {
-        el.setAttribute('inert', '');
-        el.setAttribute('aria-hidden', 'true');
+  const handleCloseMenu = () => {
+    if (!menuRef.current) {
+      return;
+    }
+
+    const activeElement = document.activeElement as HTMLElement | null;
+
+    if (activeElement !== null && menuRef.current.contains(activeElement)) {
+      activeElement.blur();
+      if (buttonRef.current !== null) {
+        buttonRef.current.focus();
       }
     }
-  }, [isOpen]);
+
+    setIsOpen(false);
+  };
 
   return (
     <header className="sticky top-0 z-50 mx-auto my-0 h-[56px] border-b border-b-gray200 bg-white px-[24px] py-0 dark:bg-darkBg01">
@@ -122,19 +126,16 @@ const Header = () => {
       <div
         id="mobile-menu"
         ref={menuRef}
+        aria-hidden={isOpen ? 'false' : 'true'}
         className={cn(
           'absolute left-0 right-0 top-[56px] flex flex-col items-center overflow-hidden border-b border-gray200 bg-white transition-all duration-300 dark:bg-darkBg01 sm:hidden',
           isOpen ? 'max-h-[420px] opacity-100' : 'max-h-0 opacity-0'
         )}
+        inert={!isOpen}
       >
-        <Nav mobile onNavigate={() => setIsOpen(false)} />
+        <Nav mobile onNavigate={handleCloseMenu} />
         <div className="my-3">
-          <NavButtons
-            theme={theme}
-            setTheme={setTheme}
-            currentTheme={currentTheme}
-            onNavigate={() => setIsOpen(false)}
-          />
+          <NavButtons theme={theme} setTheme={setTheme} currentTheme={currentTheme} onNavigate={handleCloseMenu} />
         </div>
       </div>
     </header>
