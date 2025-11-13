@@ -1,1 +1,0 @@
-(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,87307,t=>{"use strict";var c=t.i(43476),e=t.i(51360);t.s(["default",0,({children:t,className:s,...i})=>(0,c.jsx)("section",{className:(0,e.cn)("mx-auto my-0 max-w-[970px] p-4 pb-40",s),...i,children:t})])}]);
