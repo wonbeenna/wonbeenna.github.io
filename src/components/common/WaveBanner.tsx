@@ -9,7 +9,7 @@ export type WaveBannerProps = React.HTMLAttributes<HTMLElement> & {
   size?: TextGradientSize;
 };
 
-export default function WaveBanner({ title, description, className, type, date, size, ...rest }: WaveBannerProps) {
+export default function WaveBanner({ title, description, type, date, size, ...rest }: WaveBannerProps) {
   const { postDate, iso } = useFormatDate(date);
 
   return (

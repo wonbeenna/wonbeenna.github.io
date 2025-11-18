@@ -1,7 +1,7 @@
 import '../../styles/prism.css';
-import { JSXElementConstructor, ReactElement } from 'react';
+import { ReactElement } from 'react';
 
-const Contents = (props: { component: ReactElement<unknown, string | JSXElementConstructor<any>> }) => {
+const Contents = (props: { component: ReactElement }) => {
   return <section>{props.component}</section>;
 };
 
