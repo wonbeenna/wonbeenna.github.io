@@ -239,8 +239,8 @@ const main = async (): Promise<void> => {
       if (rec) {
         records.push(rec);
       }
-    } catch (err: any) {
-      console.error('처리 실패:', base, err?.message || err);
+    } catch (err) {
+      console.error('처리 실패:', base, err);
     }
   }
 
