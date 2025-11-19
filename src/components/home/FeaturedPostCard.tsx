@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import { PostMetaData } from '@/types/post';
 import useFormatDate from '@/hooks/useFormatDate';
+import { GetAllPostItem } from '@/types/post';
 
 interface FeaturedPostCardProps {
-  post: PostMetaData;
+  post: GetAllPostItem;
 }
 
 const FeaturedPostCard = ({ post }: FeaturedPostCardProps) => {

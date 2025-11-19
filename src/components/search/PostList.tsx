@@ -1,8 +1,8 @@
 import PostCard from '@/components/search/PostCard';
-import { Posts } from '@/types/post';
+import { GetAllPostResult } from '@/types/post';
 
 interface PostListProps {
-  posts: Posts;
+  posts: GetAllPostResult;
 }
 
 const PostList = ({ posts }: PostListProps) => {

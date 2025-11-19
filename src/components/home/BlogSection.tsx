@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getAllPost } from '@/utils/getPost';
+import { getAllPost } from '@/utils/getPosts';
 import Section from '@/components/common/Section';
 import FeaturedPostCard from '@/components/home/FeaturedPostCard';
 import RemainingPostList from '@/components/home/RemainingPostList';

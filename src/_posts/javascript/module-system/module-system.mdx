@@ -1,0 +1,82 @@
+export const metadata = {
+  title: 'cjs와 esm',
+  date: '2024-03-07',
+  description: 'rollup으로 번들링하는 과정에서 알게된 cjs와 esm의 차이점에 대해',
+  category: 'javaScript',
+  titleImage: '/assets/postIcon/javascript.webp',
+}
+
+최근 rollup으로 패키지를 만드는 과정에서 cjs와 esm에 대해 알게되었다.
+
+### Module
+자바스크립트의 모듈은 크게 CommonJS와 ES Module로 나뉜다.
+애플리케이션의 규모가 커지면 커질수록 모듈화가 필요해지는데, 이때 모듈화를 위해 사용되는 것이 바로 CommonJS와 ES Module이다.
+
+CommonJS는 Node.js에서 사용되는 모듈 시스템이며 (12버전 이후 부터는 두가지 모두 사용) 정확하게는 표준 시스템은 아니다,
+ES6 이후에 ES Module이 등장하면서 표준 시스템이 되었고, 우리가 흔히 사용하는 `import`와 `export`의 키워드를 사용해 모듈을 효율적으로 불러와 사용할 수 있는게 바로 ES Module이다.
+
+그러나 아직까지도 node.js의 CJS가 많이 사용되고 있으므로, 우리가 흔히 사용하는 라이브러리들은 보통 두가지의 모듈 시스템을 모두 지원할 수 있도록 만든다.
+
+---
+
+### cjs와 esm의 차이점
+
+#### cjs
+```javascript
+// lib.js
+module.exports = {
+  name: 'lib'
+}
+```
+
+```javascript
+// index.js
+const lib = require('./lib')
+console.log(lib.name) // lib
+```
+
+#### esm
+```javascript
+// lib.js
+export default {
+  name: 'lib'
+}
+```
+
+```javascript
+// index.js
+import lib from './lib'
+console.log(lib.name) // lib
+```
+
+위의 예시에서 보듯이, cjs는 `module.exports`를 사용하여 모듈을 내보내고, `require`를 사용하여 모듈을 불러온다.
+반면에 esm은 `export`를 사용하여 모듈을 내보내고, `import`를 사용하여 모듈을 불러온다.
+
+- CJS는 동기적으로 동작하고, ESM은 비동기적으로 동작한다.
+- CJS는 빌드 타임에 정적 분석을 적용하기 어렵고, 런타임에서만 모둘 관계를 파악할 수 있다.
+- ESM은 빌드 단계에서 정적 분석을 통해 의존 관계를 파악할 수 있다.
+- CJS는 Tree-shaking이 어렵지만 ESM은 Tree-shaking이 가능하다.
+
+---
+
+### 파일 구분
+
+`.js` 파일이 CJS인지 ESM인지 구분하는 방법은 다음과 같다.
+
+- package.json의 type 필드를 사용한다.
+```json
+{
+  "type": "module"
+}
+```
+`.js`의 파일은 package.json의 type 필드에 따라 결정되는데
+- type이 module이면 ESM, commonjs이면 CJS로 인식한다. (default는 commonjs)
+- `.cjs`는 commonjs로 인식하고, `.mjs`는 ESM으로 인식한다.
+
+
+---
+참고
+- [toss blog](https://toss.tech/article/commonjs-esm-exports-field)
+- [kakao blog](https://tech.kakao.com/2023/10/19/commonjs-esm-migration/)
+- [CJS](https://nodejs.org/api/modules.html)
+- [ESM](https://nodejs.org/api/esm.html)

@@ -1,21 +1,20 @@
-import Contents from '@/components/blog/Contents';
+import React from 'react';
 import ContentsPage from '@/components/blog/ContentsPage';
 import Comment from '@/components/blog/Comment';
 import Section from '@/components/common/Section';
-import { type CompiledPost, ContentPost } from '@/types/post';
-import React from 'react';
+import { AdjacentPost } from '@/types/post';
 
 interface BlogDetailContainerProps {
-  content: CompiledPost['content'];
-  prevPost?: ContentPost;
-  nextPost?: ContentPost;
+  children: React.ReactNode;
+  prevPost?: AdjacentPost;
+  nextPost?: AdjacentPost;
 }
 
-const BlogDetailContainer = ({ content, prevPost, nextPost }: BlogDetailContainerProps) => {
+const BlogDetailContainer = ({ children, prevPost, nextPost }: BlogDetailContainerProps) => {
   return (
     <Section>
       <div className="prose flex w-full max-w-none flex-col">
-        <Contents component={content} />
+        {children}
         <ContentsPage prevPost={prevPost} nextPost={nextPost} />
         <Comment />
       </div>

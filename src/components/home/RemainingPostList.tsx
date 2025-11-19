@@ -1,8 +1,8 @@
 import RemainingPostCard from '@/components/home/RemainingPostCard';
-import { PostMetaData } from '@/types/post';
+import { GetAllPostItem } from '@/types/post';
 
 interface RemainingPostListProps {
-  posts: PostMetaData[];
+  posts: GetAllPostItem[];
 }
 
 const RemainingPostList = ({ posts }: RemainingPostListProps) => {

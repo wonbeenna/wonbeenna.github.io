@@ -1,4 +1,4 @@
-import { getAllPost } from '@/utils/getPost';
+import { getAllPost } from '@/utils/getPosts';
 
 export type GroupedMonth = {
   monthNumber: number;

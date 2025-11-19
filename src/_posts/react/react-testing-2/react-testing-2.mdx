@@ -1,0 +1,171 @@
+export const metadata = {
+  title: '리액트 테스팅(2)',
+  date: '2022-12-14',
+  description: 'jest와 react-testing-library',
+  category: 'react',
+  titleImage: '/assets/postIcon/test.webp',
+};
+
+### * Mock Service Worker
+
+백엔드에서 데이터를 가져오는 부분을 테스트
+
+- MSW 작동 방식
+
+브라우저에 서비스 워커를 등록해 외부로 나가는 네트워크 리퀘스트를 감지
+
+요청을 실제 서버로 갈 때 중간에 가로채 MSW 클라이언트 사이드 라이브러리로 보내고, 등록된 핸들러에서 요청을 처리한 후 모의 응답을 보낸다.
+
+---
+
+### * jest를 사용한 node와 통합하기
+
+```shell
+npm install msw --save
+```
+
+- 핸들러 생성하기
+
+```js
+import {rest} from 'msw';
+
+export const handlers = [
+  rest.get('http://localhost:5000/products', (req, res, ctx) => {
+    return res(
+      ctx.json([
+        {
+          name: 'America',
+          imagePath: '/images/america.jpeg'
+        },
+        {
+          name: 'England',
+          imagePath: '/images/england.jpeg'
+        }
+      ])
+    );
+  }),
+  rest.get('http://localhost:5000/options', (req, res, ctx) => {
+    return res(
+      ctx.json([
+        {
+          name: 'Insurance'
+        },
+        {
+          name: 'Dinner'
+        }
+      ])
+    );
+  })
+];
+```
+
+- mocking 서버 생성하기
+
+```js
+import {setupServer} from 'msw/node';
+import {handlers} from './handlers';
+
+export const server = setupServer(...handlers);
+```
+
+- setupTest.js에 서버 생성
+
+```js
+// jest-dom adds custom jest matchers for asserting on DOM nodes.
+// allows you to do things like:
+// expect(element).toHaveTextContent(/react/i)
+// learn more: https://github.com/testing-library/jest-dom
+import '@testing-library/jest-dom';
+
+import {server} from './mocks/server';
+
+beforeAll(() => server.listen()); // 테스트 시작 전에 서버 listen
+afterEach(() => server.resetHandlers()); // 테스트 중 다른 테스트에 영향이 가지 않도록
+afterAll(() => server.close()); // 테스트 후 서버를 클린업
+```
+
+- 테스트 코드 작성
+
+```js
+import {server} from '../../../mocks/server';
+import Type from '../Type';
+import {rest} from 'msw';
+import {render, screen} from '@testing-library/react';
+
+test('displays product images from server', async () => {
+  render(<Type orderType="products" />);
+
+  // 서버에서 받아온 이미지
+  const productImages = await screen.findAllByRole('img', {
+    name: /product$/i
+  });
+  expect(productImages).toHaveLength(2);
+
+  const altText = productImages.map((element) => element.alt);
+  expect(altText).toEqual(['America product', 'England product']);
+});
+
+test('fetch option information from server', async () => {
+  render(<Type orderType="options" />);
+
+  const optionCheckboxes = await screen.findAllByRole('checkbox');
+
+  expect(optionCheckboxes).toHaveLength(2);
+});
+
+test('when fetching product datas, face an error', async () => {
+  // 서버에 대한 에러 확인
+  server.resetHandlers(
+    rest.get('http://localhost:5000/products', (req, res, ctx) => {
+      return res(ctx.status(500));
+    })
+  );
+
+  render(<Type orderType="products" />);
+
+  const errorBanner = await screen.findByTestId('error-banner');
+  expect(errorBanner).toHaveTextContent('에러가 발생했습니다.');
+});
+```
+
+- 컴포넌트
+
+```js
+import React, {useEffect, useState} from 'react';
+import axios from 'axios';
+import Products from './Products';
+import ErrorBanner from '../../components/ErrorBanner';
+import Options from './Options';
+
+const Type = ({orderType}) => {
+  const [items, setItems] = useState([]);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    loadItems(orderType);
+  }, [orderType]);
+
+  const loadItems = async (orderType) => {
+    try {
+      const response = await axios.get(`http://localhost:5000/${orderType}`);
+      setItems(response.data);
+    } catch (error) {
+      setError(true);
+    }
+  };
+
+  const ItemComponents = orderType === 'products' ? Products : Options;
+
+  const optionItems = items.map((item) => {
+    return <ItemComponents key={item.name} name={item.name} imagePath={item.imagePath} />;
+  });
+
+  if (error) {
+    return <ErrorBanner message="에러가 발생했습니다." />;
+  }
+
+  return <div>{optionItems}</div>;
+};
+
+export default Type;
+```

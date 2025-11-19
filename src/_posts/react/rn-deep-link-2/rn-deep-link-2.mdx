@@ -1,0 +1,208 @@
+export const metadata = {
+  title: 'React Native Deep Linking (2)',
+  date: '2025-02-03',
+  description: 'React Native Deep Linking 연결',
+  category: 'react',
+  titleImage: '/assets/postIcon/react.webp',
+};
+
+### 딥링크
+- 웹링크 URL이 사용자를 특정 웹사이트로 이동시키는 것처럼, 딥링크는 사용자를 특정 앱이나 앱의 원하는 화면으로 이동하도록 유도하는 링크이다.
+
+### 딥링크 유형
+<div>
+    <img style={{
+        margin: 0
+    }} src="/assets/blog/javaScript/deep-link-2.png" width="100%" alt="post image"/>
+    <p style={{
+        margin: 0,
+        textAlign: "center"
+    }}>[출처 tosspayments](https://docs.tosspayments.com/resources/glossary/deep-link)</p>
+</div>
+
+- 딥링크는 AOS, IOS 모두 사용할 수 있고, 커스텀 스킴은 `앱 링크`, `URI 스킴`으로 불리기도 한다.
+
+### 딥링크 구현
+- 진행중인 사이드프로젝트에서는 SEO를 위한 웹사이트와 앱을 연결하기 위해 딥링크를 구현하였다.
+
+## 1. 웹에서 앱으로 이동
+
+```tsx
+const useAppOpen = () => {
+  const [appOpened, setAppOpened] = useState(false);
+  const { os } = useFetchCookie();
+  const router = useRouter();
+
+  useVisibilityChange({
+    onVisible: () => setAppOpened(true),
+    onHidden: () => setAppOpened(false),
+  });
+
+  const handleAppOpen = ({ appScheme }: { appScheme: string }) => {
+    router.replace(
+      os === 'ios'
+        ? `${APP_SCHEME}${appScheme}`
+        : `intent://${appScheme}#Intent;scheme=myapp;package=com.myapp.app;end;`,
+    );
+
+    setTimeout(() => {
+      if (!appOpened) {
+        window.location.href =
+          os === 'ios' ? APPLE_STORE_URL : GOOGLE_PLAY_STORE_URL;
+      }
+    }, 500);
+  };
+
+  return {
+    handleAppOpen,
+  };
+};
+
+export default useAppOpen;
+```
+웹에서는 우선 `os`를 저장했고, `os`별로 다른 경로를 지정했다.
+
+ios 에서는 `myapp://`로 바로 `Deep Link`를 이용해 이동하고, aos에서는 `intent://`로 시작하는 `Intent스킴`을 사용해 서로 다른 경로를 사용하고 있다.
+
+그리고 딥링크에 앱이 열리지 않으면 `setTimeout`을 이용해 앱스토어로 이동하도록 구현했다.
+
+`setTimeout`을 사용한 이유는 앱이 설치되어 있다면, 브라우저는 즉시 앱을 실행하고, 반대로 앱이 설치되지 않으면 아무런 변화도 일어나지 않는다.
+이 상태를 감지하기위해서 500ms의 시간동안 앱이 실행되지 않는다면 앱스토어로 이동하는 방식으로 구현했다.
+
+## 2. 앱에서 링크 이동
+
+### AOS
+
+```xml
+// android/app/src/main/AndroidManifest.xml
+
+    <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="myapp" />
+    </intent-filter>
+```
+위 경로에서 `scheme`을 `myapp`로 지정해주면 된다.
+
+### IOS
+
+```
+// ios/MyApp/Info.plist
+
+<key>CFBundleURLTypes</key>
+<array>
+    <dict>
+        <key>CFBundleURLName</key>
+        <string>com.myapp.app</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>myapp</string>
+        </array>
+    </dict>
+</array>
+```
+
+`CFBundleURLSchemes`에 `myapp`을 추가해주면 된다.
+
+
+---
+
+### react-navigation
+
+현재 프로젝트에서는 `@react-navigation/native` 라이브러리를 사용하고 있어서, `NavigationContainer`에서 지원하는 `linking props`사용해 딥링크를 구현했다.
+
+```tsx
+// App.tsx
+
+{...}
+<NavigationContainer
+  linking={linkingConfig}
+  ref={navigationRef}
+  {...}
+>
+    {...}
+</NavigationContainer>
+{...}
+
+```
+
+```tsx
+// ../linkingConfig.ts
+
+export const linkingConfig: LinkingOptions<NavigationProps> = {
+  prefixes: ['myapp://'],
+  config: {
+    screens: {
+      [RootNavigatorName.rootTab]: {
+        screens: {
+          [TabNavigatorName.HOME_TAB]: {
+            path: 'open',
+            screens: {
+              [StackNavigatorName.HOME_SCREEN]: '',
+            },
+          },
+          [TabNavigatorName.ECOMMERCE_TAB]: {
+            path: 'ecommerce',
+            screens: {
+              [StackNavigatorName.ECOMMERCE_SCREEN]: '',
+            },
+          },
+        },
+      },
+      [StackNavigatorName.AUTH_ONBOARDING_SCREEN]: 'onboarding',
+      [StackNavigatorName.AUTH_SCREEN]: 'auth',
+    },
+  },
+  {...}
+};
+```
+먼저 `prefixes`에 `myapp://`을 추가해주고, `screens`에 각 스크린에 등록한 경로들을 `path`로 지정해주면 된다.
+
+```tsx
+  async getInitialURL() {
+    const url = await Linking.getInitialURL();
+
+    if (url) {
+      const redirectUrl = await handleGetUserInfo();
+      return redirectUrl || url;
+    }
+  },
+```
+`getInitialURL`을 이용해 앱이 처음 실행될 때, 딥링크를 처리할 수 있도록 구현했다.
+여기서 `handleGetUserInfo` 함수는 앱이 딥링크를 통해 진입했을 경우 스플래쉬스크린을 거치지않아, 사용자 정보를 가져와 로그인 여부를 확인하는 함수이다.
+
+```tsx
+  subscribe(listener) {
+    const onReceiveURL = async (event: { url: any }) => {
+      if (event.url) {
+        const redirectUrl = await handleGetUserInfo();
+        listener(redirectUrl || event.url);
+      }
+    };
+
+    const linkingListener = Linking.addEventListener('url', onReceiveURL);
+    const appStateListener = AppState.addEventListener('change', async nextAppState => {
+      if (nextAppState === 'active') {
+        const url = await Linking.getInitialURL();
+
+        if (url) {
+          const redirectUrl = await handleGetUserInfo();
+          listener(redirectUrl || url);
+        }
+      }
+    });
+
+    return () => {
+      linkingListener.remove();
+      appStateListener.remove();
+    };
+  },
+```
+`subscribe`를 이용해 앱이 실행중일 때, 딥링크를 처리할 수 있도록 구현했다.
+
+---
+
+- 앱이 처음 실행될 때 : `getInitialURL`을 이용해 딥링크 처리
+- 앱이 백그라운드 -> 포그라운드 전환될 때 : `subscribe`에 `Appstate`를 이용해 딥링크 처리
+- 앱이 실행중일 때 : `subscribe`에 `Linking`을 이용해 딥링크 처리

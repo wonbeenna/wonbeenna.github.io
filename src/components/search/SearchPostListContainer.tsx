@@ -5,10 +5,10 @@ import Fuse from 'fuse.js';
 import SearchInput from '@/components/search/SearchInput';
 import PostList from '@/components/search/PostList';
 import Section from '@/components/common/Section';
-import { Posts } from '@/types/post';
+import { GetAllPostResult } from '@/types/post';
 
 interface SearchPostListContainerProps {
-  posts: Posts;
+  posts: GetAllPostResult;
 }
 
 const SearchPostListContainer = ({ posts }: SearchPostListContainerProps) => {

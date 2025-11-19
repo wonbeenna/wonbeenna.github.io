@@ -1,0 +1,129 @@
+export const metadata = {
+  title: 'useCallback, useMemo 무조건 좋은가?',
+  date: '2022-12-28',
+  description: 'useCallback과 useMemo에 대한 생각 정리',
+  category: 'react',
+  titleImage: '/assets/postIcon/react.webp',
+};
+
+예전부터 궁금했었던 부분이었다.
+
+**useCallback**과 **useMemo** hook은 함수와 값을 메모이제이션 해주는 역할을 한다.
+
+그렇다면 **무조건 쓰기만하면** 성능상 이점을 가져갈 수 있을까?
+
+리액트는 아래 세가지인 경우 렌더링을 발생시킨다.
+
+**\- state 변경이 있을 때**
+
+**\- props 변경이 있을 때**
+
+**\- 부모 컴포넌트가 업데이트 될 때 모든 자식 컴포넌트**
+
+이때 불필요한 렌더링을 막기위해 useCallback과 useMemo를 사용하지만, 최적화에는 항상 비용이 따른다.
+
+---
+
+```javascript
+import {useState} from "react";
+import Count from "./Count";
+
+function App() {
+    const [count, setCount] = useState(1);
+
+    const handleClick = () => {
+        setCount(prevCount => prevCount + 1)
+    }
+
+    return (
+        <div>
+            <h1>{count}</h1>
+            <div>
+                <Count onClick={handleClick} />
+            </div>
+        </div>
+    );
+}
+
+export default App;
+```
+
+위와 같은 코드에서 App에 state가 변경되기 때문에 Count도 렌더링 될것이다.
+
+<img src="/assets/blog/javaScript/use.gif" width="100%" alt="post image"/>
+
+부모컴포넌트의 state가 변경되었고,
+
+handleClick() 함수의 참조 동일성이 일치하지 않아 리렌더링 되고있다.
+
+```javascript
+import React from 'react';
+
+function Count(props) {
+    console.log('CountRender')
+    return (
+        <div>
+            <button onClick={props.onClick}>Click</button>
+        </div>
+    );
+}
+
+export default React.memo(Count);
+```
+
+자식 컴포넌트에 React.memo로 감싸주면 props를 비교할 것이다.
+
+이때 props onClick은 App에서 메모이제이션이 되지않아 여전히 리렌더링이 발생한다.
+
+```javascript
+const handleClick = useCallback(() => {
+    setCount(prevCount => prevCount + 1)
+}, [])
+```
+
+useCallback으로 감싸주면 handleClick은 메모이제이션되어 새로 생성되지않고, props로 전달되기 때문에 리렌더링이 발생하지 않는다.
+
+<img src="/assets/blog/javaScript/use(1).gif" width="100%" alt="post image"/>
+
+---
+
+리액트에서 이야기하는 useMemo는 매렌더링마다 고비용 연산을 피하기 위해 사용한다고 하지만, 고비용에 대한 이야기에 대해서는 자세하게 나와있지 않다.
+
+리액트에서 이야기하는 고비용 연산은 하위 렌더트리들을 렌더링하는 연산을 이야기 하는 것이고, 이러한 경우가 아니라면 거의 대부분 useMemo를 사용하지 않아도 된다.
+
+---
+
+```javascript
+const Component = () => {
+
+  const fetch = useCallback(() => {
+    console.log('fetch');
+  }, []);
+
+  useEffect(() => {
+    fetch();
+  }, [fetch]);
+
+  {...}
+};
+```
+
+useMemo와 useCallback은 초기 렌더링에는 쓸모가 없다. 오히려 초기 렌더링에 useMemo와 useCallback이 값을 저장하는 행위는 오히려 성능을 저하시킬 수 있다는 것을 생각하자.
+
+위와같은 코드에서 fetch가 변경되어야 useCallback을 사용하는 것이 의미가 있다.
+
+---
+
+앱이 점점 커지고 모든 값이나 함수에 useMemo와 useCallback을 사용한다면 오히려 앱이 느려지는 원인이 될 수 있다.
+
+[https://ko.reactjs.org/docs/optimizing-performance.html#avoid-reconciliation](https://ko.reactjs.org/docs/optimizing-performance.html#avoid-reconciliation)
+
+단순한 값이나 함수를 메모이제이션 하는것 보다는 앱 설계 단계부터 리렌더링이 발생할 수 있는 부분을 생각하고, 리렌더링이 발생하는 특정 부분에서만 메모이제이션을 사용하는게 앱을 최적화 하는데 더 좋을 것이다.
+
+단순한 값이나 함수를 메모이제이션 하는건 오히려 더 느려질 뿐만 아니라, 성능에 미미하게 영향을 끼칠것이다.
+
+참고:
+
+[https://beta.reactjs.org/reference/react/useMemo#usage](https://beta.reactjs.org/reference/react/useMemo#usage)
+
+[https://www.developerway.com/posts/how-to-use-memo-use-callback](https://www.developerway.com/posts/how-to-use-memo-use-callback)

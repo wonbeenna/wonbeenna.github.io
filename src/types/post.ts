@@ -1,30 +1,54 @@
-export type Frontmatter = {
+import React from 'react';
+
+export type ContentPostMetadata = {
   title: string;
-  titleImage?: string;
-  description?: string;
-  date: string | Date;
+  description: string;
+  date: string;
   category?: string;
-  slug?: string;
+  titleImage?: string;
 };
 
-export type PostMetaData = {
+export type ContentPostModule = {
+  default: React.ComponentType;
+  metadata: ContentPostMetadata;
+};
+
+export type CategoryAndSlug = {
   slug: string;
-  data: Frontmatter;
-  modifiedTimeMs: number;
+  category: string;
 };
 
-export interface Posts {
-  posts: PostMetaData[];
-  total: number;
+export type AdjacentPost = {
+  slug: string;
+  title: string;
+  category?: string;
+};
+
+export type ContentPostModuleWithAdjacent = ContentPostModule & {
+  prevPost?: AdjacentPost;
+  nextPost?: AdjacentPost;
+};
+
+export interface ContentPostMeta extends CategoryAndSlug {
+  metadata: ContentPostMetadata;
 }
 
-export type CompiledPost = {
-  content: React.ReactElement;
-  frontmatter: Frontmatter;
+export type PagingOption = {
+  page?: number | string;
+  limit?: number | string;
 };
 
-export type ContentPost = {
+export type GetAllPostItem = {
   slug: string;
-  title: string;
-  category?: string;
+  data: ContentPostMetadata;
+};
+
+export type GetAllPostResult = {
+  posts: GetAllPostItem[];
+  total: number;
+  page?: number;
+  limit?: number;
+  totalPages?: number;
+  hasPreviousPage?: boolean;
+  hasNextPage?: boolean;
 };

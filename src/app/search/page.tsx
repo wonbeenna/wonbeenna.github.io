@@ -1,4 +1,4 @@
-import { getAllPost } from '@/utils/getPost';
+import { getAllPost } from '@/utils/getPosts';
 import SearchPostListContainer from '@/components/search/SearchPostListContainer';
 import { Metadata } from 'next';
 import { buildMetadata } from '@/utils/metadata';

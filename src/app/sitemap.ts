@@ -1,4 +1,4 @@
-import { getAllPost } from '@/utils/getPost';
+import { getAllPost } from '@/utils/getPosts';
 import { MetadataRoute } from 'next';
 
 export const dynamic = 'force-static';

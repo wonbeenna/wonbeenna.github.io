@@ -1,0 +1,104 @@
+export const metadata = {
+    title: 'IOS 웹뷰에서 safe area 설정하기',
+    date: '2024-07-02',
+    description: 'IOS 웹뷰에서 safe area 를 설정하는 방법',
+    category: 'javaScript',
+    titleImage: '/assets/postIcon/javascript.webp'
+};
+
+사내 프로젝트를 진행하면서 IOS 웹뷰에서 안전 영역을 설정하는 방법에 대해 알게되었다.
+
+아이폰 X 부터는 디스플레이에 노치 디자인이 적용되고, 하단에는 물리 버튼이 사라지고 제스처로 대체되었다.
+
+이로 인해 기존의 웹뷰에서는 노치 디자인과 하단의 제스처 영역을 고려해야 한다.
+
+첫번째로 웹내에서 safe area 영역을 설정하는 방법은 아래와 같다.
+
+```css
+padding-top: env(safe-area-inset-top);
+padding-right: env(safe-area-inset-right);
+padding-left: env(safe-area-inset-left);
+padding-bottom: env(safe-area-inset-bottom);
+```
+
+위와 같이 설정하면 IOS 웹뷰에서는 safe area 영역을 설정할 수 있다.
+
+적용하고 개발자 도구로 확인해보니 해당 영역만큼 padding 이 적용되어 있었다.
+
+---
+
+두번째로 safe area 영역을 무시하고 전체 화면을 사용하려면
+
+```html
+<meta name="viewport" content="viewport-fit=cover" />
+```
+
+위와 같이 설정하면 safe area 영역을 무시하고 전체 화면을 사용할 수 있다.
+
+프로젝트는 Next.js 로 개발되어 layout 에 해당 meta 태그를 추가하여 해결하였다.
+
+```tsx
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'title',
+    description: 'description',
+    other: {
+    viewport:
+        'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover',
+    }
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body>
+        <main>{children}</main>
+      </body>
+    </html>
+  );
+}
+```
+
+추가로 핀치줌을 막기 위해 `maximum-scale=1.0`과 `user-scalable=0`을 설정하였다.
+
+---
+
+위 작업을 하면서 기존 모달 컴포넌트에서 모달이 열렸을 때 뒤 스크롤을 막으려고 아래와 같은 코드를 작성하였는데,
+
+```tsx
+  useEffect(() => {
+      document.body.style.cssText = `
+            position: fixed;
+            top: -${window.scrollY}px;
+            overflow: hidden;
+            width: 100%;
+        `;
+
+      return () => {
+        const scrollY = document.body.style.top;
+        document.body.style.cssText = '';
+        window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
+      };
+  }, []);
+```
+
+웹뷰내에서 모달이 열렸을 때 `fixed` 속성으로 인해 웹뷰에서 safe area 영역만큼 모달이 밀리는 현상이 발생했다.
+
+```tsx
+  useEffect(() => {
+      document.body.style.cssText = `
+            overflow: hidden;
+        `;
+
+      return () => {
+        document.body.style.cssText = '';
+      };
+  }, []);
+```
+
+위와 같이 overflow 만 hidden 처리하여 해결하였다.

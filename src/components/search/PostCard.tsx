@@ -1,9 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { Frontmatter } from '@/types/post';
 import useFormatDate from '@/hooks/useFormatDate';
+import { ContentPostMetadata } from '@/types/post';
 
-interface PostCardProps extends Frontmatter {}
+interface PostCardProps extends ContentPostMetadata {
+  slug: string;
+}
 
 const PostCard = ({ title, date, slug, category }: PostCardProps) => {
   const { postDate, iso } = useFormatDate(date);

@@ -1,0 +1,124 @@
+export const metadata = {
+  title: 'Storybook 써보기',
+  date: '2022-10-11',
+  description: '스터디 하면서 처음 써본 Storybook',
+  category: 'react',
+  titleImage: '/assets/postIcon/storybook.webp',
+};
+
+이번에 스터디를 하면서 처음 스토리북을 써보게 되었다.
+
+[https://storybook.js.org/](https://storybook.js.org/)
+
+
+스토리북은 디자인 시스템을 구축하고자하는 개발자들을 위해 제작되었다.
+
+**디자인 시스템은 왜 사용하는 걸까?**
+
+개발자 입장에서 가장 큰 이유는 디자이너, 프로젝트 매니저 등 팀 구성원과의 협업인것 같다.
+
+각 분야의 지식 차이를 줄이고 공통적으로 바라보는 것(UI)을 통해 생산성을 높일 수 있다.
+
+**디자인 시스템이 뭔데?**
+
+<img src="/assets/blog/javaScript/storybook.webp" width="100%" alt="post image"/>
+
+내가 생각하기에 디자인 시스템이란 하나의 프로덕트를 만드는데 있어서 디자인 적인 가이드 라인 및 디자인 원칙 = 색상, 아이콘, 타이포그래피 등 을 체계적으로 관리하고 문서화하는것 이라 생각한다.
+
+이것을 문서화하는데 도와주는 도구가 바로 스토리북이다.
+
+---
+
+우리는 먼저 공통적으로 사용되는 컴포넌트와, 자주 쓰이게 될만한 컴포넌트들을 작성하기로 시작했다.
+
+```shell
+npx storybook init
+```
+
+본인이 사용하고자하는 프레임워크를 설치하고 위 명령어를 터미널에 입력하면 알아서 설치된다 
+
+```shell
+yarn storybook
+```
+
+로 시작하면 6006포트로 실행된다
+
+/src/components/Chip.tsx
+
+```js
+{...}
+
+const Chip = ({
+  adornments = "#",
+  label = "Chip",
+  color = "basic",
+  variants,
+  outlined,
+  onDelete,
+}: ChipProps) => {
+  const props = { color, variants, outlined };
+
+  return (
+    <StyledChip {...props}>
+      {adornments && <StyledChipAdornments>{adornments}</StyledChipAdornments>}
+      <StyledChipLabel {...props}>{label}</StyledChipLabel>
+      {onDelete && (
+        <CancelIconBtn value={label} onClick={onDelete}>
+          <StyledCancelIcon aria-hidden {...props} />
+        </CancelIconBtn>
+      )}
+    </StyledChip>
+  );
+};
+
+export default Chip;
+
+{...}
+```
+
+배포 후 우리가 실제로 사용할 컴포넌트다
+
+다양한 색상으로 받기위해
+
+```ts
+export type Color = "basic" | "active" | "danger" | "warning";
+```
+
+을 작성했다.
+
+<img src="/assets/blog/javaScript/storybook.gif" width="100%" alt="post image"/>
+
+/src/stories/Chip.stories.tsx
+
+```tsx
+import { Meta, Story } from "@storybook/react";
+import React from "react";
+import { Chip, ChipProps } from "../../../components/Chip";
+
+export default {
+  title: "Components/Chip",
+  component: Chip,
+} as Meta;
+
+export const Default: Story<ChipProps> = (args) => {
+  return <Chip {...args} />;
+};
+```
+
+여기서 우리가 만든 컴포넌트들을 문서화 할 수 있다
+
+args을 넣어줄 수 있는데, 스토리북에서는 자동으로 설정해준다.
+
+```js
+Default.args = {
+  color: "active",
+};
+```
+
+로 직접 정의할 수도 있다.
+
+우리는 npm으로 배포해 사용하기로 했다. 다음엔 배포과정과 빌드과정을 정리해야겠다.
+
+작성한 디자인 시스템을 기반으로 이번주부터 직접 개발에 들어가게된다.
+
+어떤점이 좋은지 차이가있는지 경험해보는 좋은 기회가 될거같다.

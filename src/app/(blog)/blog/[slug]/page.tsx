@@ -1,42 +1,51 @@
+import React from 'react';
 import WaveBanner from '@/components/common/WaveBanner';
-import { getAllPost, getPost } from '@/utils/getPost';
-import { Metadata } from 'next';
-import { buildMetadata } from '@/utils/metadata';
+import '@/styles/prism.css';
+import { getAllSlugs, importPostModuleBySlug } from '@/utils/getPosts';
 import BlogDetailContainer from '@/components/blog/BlogDetailContainer';
+import { buildMetadata } from '@/utils/metadata';
+import { Metadata } from 'next';
+
+interface PageProps {
+  params: Promise<{
+    slug: string;
+  }>;
+}
 
 export const generateMetadata = async ({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> => {
   const { slug } = await params;
-  const data = await getPost(slug);
+  const { metadata } = await importPostModuleBySlug(slug);
 
   return buildMetadata({
-    title: data.data.title,
-    description: data.data.description ?? '',
+    title: metadata.title,
+    description: metadata.description ?? '',
     path: `/blog/${slug}`,
-    imagesPath: data.data.titleImage,
+    imagesPath: metadata.titleImage,
     faviconPath: '/blog'
   });
 };
 
-export const generateStaticParams = async () => {
-  const posts = await getAllPost({ limit: -1 });
+export async function generateStaticParams() {
+  const slugList = await getAllSlugs();
 
-  return posts.posts.map((post) => {
+  return slugList.map((slug) => {
     return {
-      slug: post.slug
+      slug
     };
   });
-};
+}
 
-const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
+export default async function Page({ params }: PageProps) {
   const { slug } = await params;
-  const data = await getPost(slug);
+
+  const { default: Post, metadata, prevPost, nextPost } = await importPostModuleBySlug(slug);
 
   return (
     <>
-      <WaveBanner title={data.data.title} type="post" description={data.data.description} date={data.data.date} />
-      <BlogDetailContainer content={data.content} prevPost={data.prevPost} nextPost={data.nextPost} />
+      <WaveBanner title={metadata.title} type="post" description={metadata.description} date={metadata.date} />
+      <BlogDetailContainer prevPost={prevPost} nextPost={nextPost}>
+        <Post />
+      </BlogDetailContainer>
     </>
   );
-};
-
-export default Page;
+}

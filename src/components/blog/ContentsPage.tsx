@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ContentPost } from '@/types/post';
+import { AdjacentPost } from '@/types/post';
 
 interface PageLinkProps {
   href: string;
@@ -9,8 +9,8 @@ interface PageLinkProps {
 }
 
 interface ContentsPageProps {
-  prevPost?: ContentPost;
-  nextPost?: ContentPost;
+  prevPost?: AdjacentPost;
+  nextPost?: AdjacentPost;
 }
 
 const PageLink = ({ href, title, align = 'left' }: PageLinkProps) => {
